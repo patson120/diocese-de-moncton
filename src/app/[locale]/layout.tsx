@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Language } from '@/types';
 
 
 const geistSans = localFont({
@@ -32,7 +33,7 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as Language)) {
     notFound();
   }
 
