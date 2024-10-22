@@ -8,7 +8,7 @@ export default function About() {
         <div className='flex flex-col h-screen justify-center items-center'>
             <p className=''>{t('title')}</p>
             <p className='my-5'>Une petite description de cette page </p>
-            <Link href='../' className='text-blue-600'>Retour à la page d'accueil</Link>
+            <Link href='../' className='text-blue-600'>Retour à la page d&apos;accueil</Link>
         </div>
     )
 }
