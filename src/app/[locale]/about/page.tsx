@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
-export default function page() {
+export default function About() {
     const t = useTranslations("About")
     return (
         <div className='h-screen w-full justify-center items-center'>
