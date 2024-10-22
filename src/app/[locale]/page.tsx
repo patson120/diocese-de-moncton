@@ -54,22 +54,8 @@ export default function Home() {
       </main>
 
       <section>
-        <div className="relative h-10 w-10 overflow-hidden">
-          <Image
-            // className="dark:invert"
-            src="/img/campost.jpg"
-            alt="Campost logo"
-            fill
-            // Make the image display full width
-            style={{
-              objectFit: "cover"
-            }}
-          />
-        </div>
-      </section>
-
-      <section>
         <div className="w-22"> <LocalSwitcher /> </div>
+        <h1>Diocèse de Moncton</h1>
         <p>{t('hello')}</p>
       </section>
 

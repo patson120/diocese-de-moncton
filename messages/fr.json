@@ -1,5 +1,8 @@
 {
     "Index": {
         "hello": "Bonjour tout le monde"
+    },
+    "About":{
+        "title": "Page à propos"
     }
 }
