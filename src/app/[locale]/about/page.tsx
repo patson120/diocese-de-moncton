@@ -1,12 +1,14 @@
 import { useTranslations } from 'next-intl'
 import React from 'react'
+import {Link} from '@/i18n/routing';
 
 export default function About() {
     const t = useTranslations("About")
     return (
-        <div className='h-screen w-full justify-center items-center'>
-            <p className=' text-center mt-60'>{t('title')}</p>
-            <p className='mt-5 text-center'>Une petite description de cette page </p>
+        <div className='flex flex-col h-screen justify-center items-center'>
+            <p className=''>{t('title')}</p>
+            <p className='my-5'>Une petite description de cette page </p>
+            <Link href='../' className='text-blue-600'>Retour à la page d'accueil</Link>
         </div>
     )
 }
