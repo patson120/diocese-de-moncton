@@ -31,7 +31,7 @@ export default function About() {
             }
 
             // MARKER
-            const { Marker } = await google.maps.importLibrary("marker") as any //as google.maps.MarkerLibrary
+            const { Marker } = await google.maps.importLibrary("marker") as google.maps.MarkerLibrary
 
             const options: google.maps.MapOptions = {
                 center: locationInMap,
