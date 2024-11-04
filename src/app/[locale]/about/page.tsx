@@ -46,6 +46,8 @@ export default function About() {
                 position: locationInMap,
                 map: map
             })
+            console.log(marker);
+            
         }
 
         // 
