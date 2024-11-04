@@ -13,6 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         
         primary: '#940D02',
+        yelloColor: '#DBB91A'
       },
     },
   },
