@@ -16,7 +16,7 @@ export default function Home() {
       <Link href={`/about`} className='text-blue-600'>About</Link>
       <div className="bg-white p-10">
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="font-bold text-3xl text-black">Actualités</h1>
+          <h1 className="font-bold text-lg md:text-3xl text-black">Actualités</h1>
           <button
             onClick={() => console.log("Actualités plus")}
             className="text-black font-medium border-none bg-transparent"
@@ -31,10 +31,10 @@ export default function Home() {
 
         <div className="mt-20" />
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="font-bold text-3xl text-black">Calendrier évènements</h1>
+          <h1 className="font-bold text-lg md:text-3xl text-black">Calendrier évènements</h1>
           <button
             onClick={() => console.log("Evènement plus")}
-            className="text-black font-medium border-none bg-transparent"
+            className="text-black font-medium border-none bg-transparent whitespace-nowrap"
             type="button">Voir plus</button>
         </div>
 
@@ -46,9 +46,9 @@ export default function Home() {
         </div>
 
         <div className="mt-20" />
-        <h1 className="font-bold text-3xl text-black mb-3">Trouver une paroisse</h1>
+        <h1 className="font-bold text-lg md:text-3xl text-black mb-3">Trouver une paroisse</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100"></div>
+          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg bg-gray-100"></div>
           <div className="col-span-3 md:col-span-1 flex flex-col gap-3">
             <ParoisseItem />
             <ParoisseItem />
