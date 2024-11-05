@@ -21,8 +21,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Archidiocèse de Moncton",
-  description: "Archidiocèse de Moncton",
+  title: "Diocèse de Moncton",
+  description: "Diocèse de Moncton",
 };
 
 export default async function RootLayout({

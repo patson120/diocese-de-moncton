@@ -59,7 +59,7 @@ export default function Footer() {
           <h2 className='font-medium text-sm text-gray-400 uppercase'>Contacts</h2>
           <ul className='space-y-4 text-xs text-gray-500'>
             <li>
-              <Link href="https://www.google.com/maps/place/224+Rue+St.+George/@46.0907117,-64.7817855,17z/data=!4m7!3m6!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!4b1!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">224 St-George, Moncton, N.-B. E1C 0V1</Link>
+              <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">224 St-George, Moncton, NB. E1C 0V1</Link>
             </li>
             <li>
               <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
