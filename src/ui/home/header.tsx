@@ -110,12 +110,10 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-
             </nav>
         </header>
     )
 }
-
 
 const SubmenuItem = ({menu} : {menu: MenuType}) => {
     return (
