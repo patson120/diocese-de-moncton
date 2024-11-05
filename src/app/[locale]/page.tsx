@@ -131,7 +131,7 @@ export default function Home() {
             <p className='text-gray-500 text-base'>Abonnez-vous à notre newsletter pour obtenir les <br />nouveautés sur l&lsquo;église.</p>
           </div>
           <div className='flex items-center space-x-2'>
-            <input type="email" placeholder="Votre adresse email" className="border border-gray-200 p-2 rounded-md w-full" />
+            <input type="email" placeholder="Votre adresse email" className="border-2 border-gray-200 p-2 rounded-lg w-full" />
             <Button
               title="Je m&lsquo;abonne"
               handleClick={() => { }}
