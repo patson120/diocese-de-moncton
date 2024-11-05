@@ -1,6 +1,8 @@
+import { MenuType } from "@/types"
+
 export const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = 'AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVWyJnYlg'
 
-export const archidiocese = [
+export const archidiocese: MenuType[] = [
     {
         id: 1,
         image: '',
@@ -66,7 +68,7 @@ export const archidiocese = [
     },
 ]
 
-export const actualites = [
+export const actualites: MenuType[] = [
     {
         id: 1,
         image: '',
@@ -90,7 +92,7 @@ export const actualites = [
     }
 ]
 
-export const sacrements = [
+export const sacrements: MenuType[] = [
     {
         id: 1,
         image: '',
@@ -142,7 +144,7 @@ export const sacrements = [
     }
 ]
 
-export const mouvements = [
+export const mouvements: MenuType[] = [
     {
         id: 1,
         image: '',
@@ -209,7 +211,7 @@ export const mouvements = [
     }
 ]
 
-export const ressources = [
+export const ressources: MenuType[] = [
     {
         id: 1,
         image: '',

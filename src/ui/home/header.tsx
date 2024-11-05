@@ -5,10 +5,11 @@ import React, { useState } from 'react'
 import ButtonIcon from './button-icon'
 import Button from './button'
 import { actualites, archidiocese, mouvements, ressources, sacrements } from '@/constants'
+import { MenuType } from '@/types'
 
 export default function Header() {
 
-    const [menus, setMenus] = useState<{ [key: string]: any }[]>([])
+    const [menus, setMenus] = useState<MenuType[]>([])
 
     const onMouseEvent = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, type: string): void => {
         const submenu = document.querySelector('#submenu') as HTMLDivElement
@@ -116,7 +117,7 @@ export default function Header() {
 }
 
 
-const SubmenuItem = ({ menu }: { [key: string]: any }) => {
+const SubmenuItem = ({menu} : {menu: MenuType}) => {
     return (
         <div className='flex justify-start items-center space-x-4 text-black'>
             <div className='h-[60px] w-[80px] rounded-lg bg-red-50 overflow-hidden relative'>
@@ -130,8 +131,8 @@ const SubmenuItem = ({ menu }: { [key: string]: any }) => {
                 /> */}
             </div>
             <div>
-                <h4 className='text-sm font-semibold'>{menu['title']}</h4>
-                <p className='text-xs text-gray-500 line-clamp-2'>{menu['description']}</p>
+                <h4 className='text-sm font-semibold'>{menu.title}</h4>
+                <p className='text-xs text-gray-500 line-clamp-2'>{menu.description}</p>
             </div>
         </div>
     )
