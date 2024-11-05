@@ -3,8 +3,8 @@ import React from 'react'
 export default function EventItem() {
     return (
         <div className='p-2 md:p-3 rounded-lg flex flex-row justify-between items-center text-black border border-gray-200 divide-x divide'>
-            <div className='pl-3 text-primary text-center flex-col justify-center items-center'>
-                <p className='font-extrabold text-lg'>08</p>
+            <div className='px-1 md:pl-3 text-primary text-center flex-col justify-center items-center'>
+                <p className='font-extrabold text-sm md:text-lg'>08</p>
                 <p className='text-xs'>Sept</p>
             </div>
             <div className='pl-2 md:pl-3'>

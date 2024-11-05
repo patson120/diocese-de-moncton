@@ -11,11 +11,11 @@ import { useTranslations } from "next-intl";
 export default function Home() {
   const t = useTranslations("Index")
   return (
-    <main className="flex flex-col justify-center items-center">
-      <div className="w-20"> <LocalSwitcher /> </div>
+    <main className="bg-white">
+      {/* <div className="w-20"> <LocalSwitcher /> </div>
       <p className="mt-5">{t('hello')}</p>
-      <Link href={`/about`} className='text-blue-600'>About</Link>
-      <div className="bg-white p-10">
+      <Link href="/about" className='text-blue-600'>About</Link> */}
+      <div className="px-4 md:p-10">
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Actualités</h1>
           <button
@@ -64,10 +64,10 @@ export default function Home() {
         </section>
         <div className="mt-16" />
       </div>
-      <section className='px-10 py-20 w-full bg-yellow-50 text-black'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-          <div className='col-span-full md:col-span-2 rounded-xl bg-yellow-500  px-10 py-8'>
-            <span className='font- uppercase text-sm text-gray-600'>Message de l&lsquo;archevêque</span>
+      <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-yellow-50 text-black'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
+          <div className='col-span-full md:col-span-2 rounded-xl bg-yellow-500 px-5 md:px-10 py-5 md:py-8'>
+            <span className='uppercase text-sm text-gray-600'>Message de l&lsquo;archevêque</span>
             <h1 className='text-lg md:text-2xl font-bold mb-3'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
             <p className='text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae unde harum nulla qui quae ratione. Facilis veniam maiores laboriosam nam sit unde libero officia ratione iure nobis, voluptate autem quos perferendis odit quaerat consequatur voluptatibus! Dolore ipsum earum sunt rerum eos commodi, facere adipisci nesciunt quasi pariatur incidunt, illo cumque! <br /> <br />
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate aspernatur numquam amet quibusdam maxime ea ullam sapiente possimus. Animi, expedita. A, cupiditate consequuntur! Laboriosam quo vero rerum quae animi? Harum itaque libero unde! Pariatur soluta temporibus quaerat id illum.</p>
@@ -76,12 +76,12 @@ export default function Home() {
               <Button
                 title='Voir plus'
                 handleClick={() => { }}
-                containerStyle='bg-white font-semibold'
+                containerStyle='bg-white font-semibold text-xs md:text-normal'
               />
               <Button
                 title='Voir tous les messages'
                 handleClick={() => { }}
-                containerStyle='bg-transparent border border-black font-semibold'
+                containerStyle='bg-transparent border border-black text-xs md:text-normal font-semibold'
               />
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='px-10 py-20 w-full bg-white'>
+      <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-white'>
         <div className='grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden'>
           <div className='h-72 bg-gray-200 relative'>
             {/* <Image
@@ -110,7 +110,7 @@ export default function Home() {
                     }}
                 /> */}
           </div>
-          <div className='bg-yellow-50 px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
+          <div className='bg-yellow-50 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
             <div>
               <h1 className='text-lg md:text-2xl font-bold mb-2'>Soutenez notre mission</h1>
               <p>Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
@@ -119,21 +119,21 @@ export default function Home() {
               <Button
                 title="Faire un don maintenant"
                 handleClick={() => { }}
-                containerStyle="px-6 text-medium bg-primary text-white"
+                containerStyle="px-3 md:px-6 text-sm md:text-normal text-medium bg-primary text-white"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className='px-10 py-20 w-full bg-gray-100'>
-        <div className='flex justify-between'>
+      <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-gray-100'>
+        <div className='flex flex-col md:flex-row justify-between gap-3'>
           <div className='text-black'>
             <h3 className='text-xl font-bold'>Newsletter</h3>
-            <p className='text-gray-500 text-base'>Abonnez-vous à notre newsletter pour obtenir les <br />nouveautés sur l&lsquo;église</p>
+            <p className='text-gray-500 text-base'>Abonnez-vous à notre newsletter pour obtenir les <br />nouveautés sur l&lsquo;église.</p>
           </div>
           <div className='flex items-center space-x-2'>
-            <input type="email" placeholder="Votre adresse email" className="border-2 border-gray-300 p-2 rounded-md w-full" />
+            <input type="email" placeholder="Votre adresse email" className="border border-gray-200 p-2 rounded-md w-full" />
             <Button
               title="Je m&lsquo;abonne"
               handleClick={() => { }}
