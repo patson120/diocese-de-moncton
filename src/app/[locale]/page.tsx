@@ -1,15 +1,13 @@
 'use client'
-import { Link } from '@/i18n/routing';
 import Actualite from "@/ui/home/actualite";
 import Button from '@/ui/home/button';
 import ButtonIcon from "@/ui/home/button-icon";
 import EventItem from "@/ui/home/event-item";
 import ParoisseItem from "@/ui/home/paroisse-item";
-import LocalSwitcher from "@/ui/navbar/LocalSwitcher";
-import { useTranslations } from "next-intl";
 
 export default function Home() {
-  const t = useTranslations("Index")
+  // const t = useTranslations("Index")
+
   return (
     <main className="bg-white">
       {/* <div className="w-20"> <LocalSwitcher /> </div>
