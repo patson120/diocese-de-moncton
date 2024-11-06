@@ -13,30 +13,42 @@ export default function Header() {
 
     const onMouseEvent = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, type: string): void => {
         const submenu = document.querySelector('#submenu') as HTMLDivElement
-        if (submenu) {
-            switch (type) {
-                case 'archidiocese':
-                    setMenus([...archidiocese])
-                    break;
-                case 'sacrements':
-                    setMenus([...sacrements])
-                    break;
-                case 'actualites':
-                    setMenus([...actualites])
-                    break;
-                case 'mouvements':
-                    setMenus([...mouvements])
-                    break;
-                case 'ressources':
-                    setMenus([...ressources])
-                    break;
 
-                default:
-                    break;
-            }
-            // submenu.classList.toggle("hidden")
-            submenu.classList.replace("hidden", 'block')
+        switch (type) {
+            case 'archidiocese':
+                setMenus([...archidiocese])
+                break;
+            case 'sacrements':
+                setMenus([...sacrements])
+                break;
+            case 'actualites':
+                setMenus([...actualites])
+                break;
+            case 'mouvements':
+                setMenus([...mouvements])
+                break;
+            case 'ressources':
+                setMenus([...ressources])
+                break;
+
+            default:
+                alert('Unknown')
+                setMenus([])
+                break;
         }
+        if (submenu.classList.contains("hidden")) {
+            submenu.classList.toggle("hidden")
+        }
+
+    }
+
+    const onMouseEnter = () => {
+        document.querySelector('#submenu')?.classList.remove("hidden")
+    }
+    const onMouseLeave = () => {
+        setTimeout(() => {
+            document.querySelector('#submenu')?.classList.add("hidden")
+        }, 300);
     }
 
     return (
@@ -55,7 +67,7 @@ export default function Header() {
                 </ul>
                 <div className='w-32 h-7 bg-gray-300 rounded-md'></div>
             </nav>
-            <nav className='px-5 md:px-10 py-4 flex justify-between relative'>
+            <nav className='px-5 md:px-10 py-4 flex justify-between relative border-b border-gray-100 z-20'>
                 <div className='relative w-20 h-8 bg-gray-200 rounded-md'>
                     {/* <Image
                     alt="Image de la l'actualité"
@@ -67,7 +79,7 @@ export default function Header() {
                 /> */}
                 </div>
                 <ul className='flex justify-center items-center space-x-4 text-xs text-gray-500'>
-                    <li><Link href="/">Accueil</Link></li>
+                    <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-bold'><Link href="/">Accueil</Link></li>
                     <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Archidiocèse</li>
                     <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Sacréments</li>
                     <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Actualités</li>
@@ -81,8 +93,8 @@ export default function Header() {
                         containerStyle='bg-primary px-4 py-1 text-sm'
                     />
                 </div>
-                <div id='submenu' className='hidden transition-all rounded-b-xl overflow-hidden absolute top-full left-0 right-0 z-50 mx-10'>
-                    <div className='bg-white flex'>
+                <div  id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full left-0 right-0 z-10 px-10 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
+                    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex'>
                         <div className='w-72 p-6 bg-red-50'>
                             <div className='relative h-36 w-full bg-white rounded-lg overflow-hidden'>
                                 {/* <Image
@@ -116,7 +128,7 @@ export default function Header() {
     )
 }
 
-const SubmenuItem = ({menu} : {menu: MenuType}) => {
+const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     return (
         <div className='flex justify-start items-center space-x-4 text-black'>
             <div className='h-[60px] w-[80px] rounded-lg bg-red-50 overflow-hidden relative'>
@@ -130,8 +142,8 @@ const SubmenuItem = ({menu} : {menu: MenuType}) => {
                 /> */}
             </div>
             <div>
-                <h4 className='text-sm font-semibold'>{menu.title}</h4>
-                <p className='text-xs text-gray-500 line-clamp-2'>{menu.description}</p>
+                <h4 className='text-xs font-semibold'>{menu.title}</h4>
+                <p className='text-[10px] text-gray-500 line-clamp-2'>{menu.description}</p>
             </div>
         </div>
     )
