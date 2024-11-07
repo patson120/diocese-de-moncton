@@ -10,7 +10,7 @@ import { Link } from '@/i18n/routing';
 import { Loader } from "@googlemaps/js-api-loader";
 import { NEXT_PUBLIC_GOOGLE_MAPS_API_KEY } from '@/constants';
 
-export default function About() {
+export default function Page() {
     const t = useTranslations("About")
 
 

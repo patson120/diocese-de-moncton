@@ -1,5 +1,5 @@
 
-import { formatDateToLocal } from '@/lib/utils'
+import { formatDateToLocal } from '@/_lib/utils'
 
 export default function Actualite() {
     
