@@ -67,7 +67,7 @@ export default function Header() {
                 </ul>
                 <div className='w-32 h-7 bg-gray-300 rounded-md'></div>
             </nav>
-            <nav className='px-5 md:px-10 py-4 flex justify-between relative border-b border-gray-100 z-20'>
+            <nav className='px-5 md:px-10 py-4 flex justify-between relative'>
                 <div className='relative w-20 h-8 bg-gray-200 rounded-md'>
                     {/* <Image
                     alt="Image de la l'actualité"
@@ -111,7 +111,7 @@ export default function Header() {
                             <Button
                                 title='En savoir plus'
                                 handleClick={() => { }}
-                                containerStyle='bg-primary w-full font-bold text-sm'
+                                containerStyle='bg-primary w-full font-bold text-sm text-white'
                             />
                         </div>
                         <div className='w-full p-6'>

@@ -1,13 +1,11 @@
 'use client'
+import { Link } from "@/i18n/routing";
 import Actualite from "@/ui/home/actualite";
-import Button from '@/ui/home/button';
-import ButtonIcon from "@/ui/home/button-icon";
 import EventItem from "@/ui/home/event-item";
-import Header from "@/ui/home/header";
 import Hero from "@/ui/home/hero-setion";
-import Newsletter from "@/ui/home/newsletter";
 import ParoisseItem from "@/ui/home/paroisse-item";
-import Footer from "@/ui/shared/footer";
+import Button from '@/ui/shared/button';
+import ButtonIcon from "@/ui/shared/button-icon";
 
 export default function Home() {
   // const t = useTranslations("Index")
@@ -17,8 +15,6 @@ export default function Home() {
       {/* <div className="w-20"> <LocalSwitcher /> </div>
       <p className="mt-5">{t('hello')}</p>
       <Link href="/about" className='text-blue-600'>About</Link> */}
-      {/* Header */}
-      <Header />
 
       {/* Hero section */}
       <Hero />
@@ -32,10 +28,14 @@ export default function Home() {
             type="button">Voir plus</button>
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          <Actualite />
-          <Actualite />
-          <Actualite />
-          <Actualite />
+          {
+            [1, 2, 3, 4].map((item) => (
+              <Link key={item} href="/actualite" className='text-blue-600'>
+                <Actualite />
+              </Link>
+            ))
+          }
+
         </div>
 
         <div className="mt-20" />
@@ -133,12 +133,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter */}
-      <Newsletter />
-      
-      {/* Footer */}
-      <Footer />
     </main>
   );
 }

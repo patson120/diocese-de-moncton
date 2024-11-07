@@ -7,6 +7,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Language } from '@/types';
+import Header from '@/ui/shared/header';
+import Newsletter from '@/ui/shared/newsletter';
+import Footer from '@/ui/shared/footer';
 
 
 const geistSans = localFont({
@@ -47,7 +50,16 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}>
         <NextIntlClientProvider messages={messages}>
           <main>
+            {/* Header */}
+            <Header />
+
             {children}
+
+            {/* Newsletter */}
+            <Newsletter />
+
+            {/* Footer */}
+            <Footer />
           </main>
         </NextIntlClientProvider>
       </body>
