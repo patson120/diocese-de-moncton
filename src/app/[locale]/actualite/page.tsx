@@ -6,11 +6,11 @@ import React from 'react'
 export default function Page() {
   return (
     <>
-      <div className='px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
+      <div className='px-5 md:px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
         <div className="flex justify-between ">
         </div>
       </div>
-      <section className='px-10' >
+      <section className='px-5 md:px-10' >
         <div className='grid grid-cols-1 lg:grid-cols-6 gap-5 lg:gap-10 py-4 lg:py-8'>
           <div className='col-span-full lg:col-span-4'>
             <div className='h-96 rounded-lg bg-gray-100'></div>
