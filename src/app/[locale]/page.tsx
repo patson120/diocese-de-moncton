@@ -22,10 +22,11 @@ export default function Home() {
       <div className="px-4 md:p-10">
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Actualités</h1>
-          <button
-            onClick={() => console.log("Actualités plus")}
-            className="text-black font-medium border-none bg-transparent"
-            type="button">Voir plus</button>
+          <ButtonIcon
+            title="Voir plus"
+            handleClick={() => console.log("Actualités plus")}
+            containerStyle="text-black font-medium border-none bg-transparent"
+          />
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
@@ -41,10 +42,11 @@ export default function Home() {
         <div className="mt-20" />
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Calendrier évènements</h1>
-          <button
-            onClick={() => console.log("Evènement plus")}
-            className="text-black font-medium border-none bg-transparent whitespace-nowrap"
-            type="button">Voir plus</button>
+          <ButtonIcon
+            title="Voir plus"
+            handleClick={() => console.log("Evènement plus")}
+            containerStyle="text-black font-medium border-none bg-transparent whitespace-nowrap"
+          />
         </div>
 
         <section className="grid gap-4 grid-cols-1 md:grid-cols-2">
@@ -72,6 +74,7 @@ export default function Home() {
         </section>
         <div className="mt-16" />
       </div>
+      
       <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-yellow-50 text-black'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
           <div className='col-span-full md:col-span-2 rounded-xl bg-yellow-500 px-5 md:px-10 py-5 md:py-8'>
