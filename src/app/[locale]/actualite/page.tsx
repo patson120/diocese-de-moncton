@@ -11,8 +11,8 @@ export default function Page() {
         </div>
       </div>
       <section className='px-10' >
-        <div className='grid grid-cols-6 gap-10 py-8'>
-          <div className='col-span-4'>
+        <div className='grid grid-cols-1 lg:grid-cols-6 gap-5 lg:gap-10 py-4 lg:py-8'>
+          <div className='col-span-full lg:col-span-4'>
             <div className='h-96 rounded-lg bg-gray-100'></div>
             <div className='flex flex-col space-y-3'>
               <div className='flex justify-between pt-4'>
@@ -30,7 +30,7 @@ export default function Page() {
               <p className='text-sm text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit eos fugiat et vitae, commodi enim, quisquam sint sapiente fuga inventore labore eligendi pariatur velit earum neque. Eum voluptatum omnis accusamus asperiores quidem. Distinctio, culpa est? Fuga velit eius deleniti blanditiis, nobis minima, dolores ipsum reiciendis, animi quae officia consequuntur.</p>
             </div>
           </div>
-          <div className='col-span-2 mb-10'>
+          <div className='col-span-full lg:col-span-2 mb-10'>
             <h1 className='text-lg font-extrabold mb-2'>Articles relatifs</h1>
             {
               [1, 2, 3, 4].map((item) => (
