@@ -30,8 +30,8 @@ export default function Page() {
               <p className='text-sm text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit eos fugiat et vitae, commodi enim, quisquam sint sapiente fuga inventore labore eligendi pariatur velit earum neque. Eum voluptatum omnis accusamus asperiores quidem. Distinctio, culpa est? Fuga velit eius deleniti blanditiis, nobis minima, dolores ipsum reiciendis, animi quae officia consequuntur.</p>
             </div>
           </div>
-          <div className='col-span-full lg:col-span-2 mb-10'>
-            <h1 className='text-lg font-extrabold mb-2'>Articles relatifs</h1>
+          <div className='col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10'>
+            <h1 className='text-lg font-extrabold'>Articles relatifs</h1>
             {
               [1, 2, 3, 4].map((item) => (
                 <Link key={item} href="#" className='text-blue-600'>
