@@ -31,7 +31,7 @@ export default function Home() {
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
             [1, 2, 3, 4].map((item) => (
-              <Link key={item} href="/actualite" className='text-blue-600'>
+              <Link key={item} href="/actualite/1" className='text-blue-600'>
                 <Actualite />
               </Link>
             ))
