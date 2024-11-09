@@ -16,7 +16,7 @@ export default function Newsletter() {
             <Button
               title="Je m&lsquo;abonne"
               handleClick={() => { }}
-              containerStyle="px-3 md:px-6 text-medium bg-primary text-white"
+              containerStyle="px-3 md:px-6 rounded-lg py-2 text-medium bg-primary text-white"
             />
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function Button({ handleClick, title, containerStyle }: Props) {
         <button
             onClick={handleClick}
             type="button"
-            className={`px-3 py-2 whitespace-nowrap rounded-lg text-center ${containerStyle} `}
+            className={`px-3 whitespace-nowrap text-center ${containerStyle} `}
         >
             {title}
         </button>

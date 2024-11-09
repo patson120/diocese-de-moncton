@@ -19,6 +19,6 @@ export default function Actualite() {
             <h4 className='text-sm font-bold line-clamp-2'>Quel est la problème avec l&apos;aide médicale à mourir(A )</h4>
             <p className='line-clamp-2 text-xs text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis.</p>
             <p className='text-gray-400 text-xs'>Publié le {formatDateToLocal((new Date()).toISOString())}</p>
-        </div >
+        </div>
     )
 }

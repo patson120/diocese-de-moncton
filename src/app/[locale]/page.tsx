@@ -61,10 +61,15 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg bg-gray-100"></div>
           <div className="col-span-3 md:col-span-1 flex flex-col gap-3">
-            <ParoisseItem />
-            <ParoisseItem />
-            <ParoisseItem />
-            <ParoisseItem />
+            
+            {
+              [1, 2, 3, 4].map((item) => (
+                <Link key={item} href="/paroisse/1">
+                  <ParoisseItem />
+                </Link>
+              ))
+            }
+            
             <ButtonIcon
               title="Voir toutes les 23 paroisses"
               handleClick={() => { }}
