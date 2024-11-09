@@ -112,7 +112,13 @@ export default function Page() {
                         </div>
                     </div>
                     <div className="col-span-2 pt-4">
-                        <div className="h-32 bg-gray-100 rounded-lg sticky top-5"></div>
+                        <div className="bg-gray-100 rounded-lg sticky top-5 p-5">
+                            <Button
+                                title="Contacter la paroisse"
+                                handleClick={() => console.log("Contacter la paroisse")}
+                                containerStyle="w-full py-2 text-white bg-primary rounded-lg"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
