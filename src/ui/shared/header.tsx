@@ -90,10 +90,10 @@ export default function Header() {
                     <ButtonIcon
                         title='Faire un don'
                         handleClick={() => { }}
-                        containerStyle='bg-primary px-4 py-1 text-sm'
+                        containerStyle='bg-primary text-white px-4 py-1 text-sm'
                     />
                 </div>
-                <div  id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full left-0 right-0 z-10 px-10 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
+                <div  id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full left-0 right-0 z-50 px-10 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
                     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex'>
                         <div className='w-72 p-6 bg-red-50'>
                             <div className='relative h-36 w-full bg-white rounded-lg overflow-hidden'>

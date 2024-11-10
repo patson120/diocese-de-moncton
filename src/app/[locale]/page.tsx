@@ -22,11 +22,13 @@ export default function Home() {
       <div className="px-4 md:p-10">
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Actualités</h1>
-          <ButtonIcon
-            title="Voir plus"
-            handleClick={() => console.log("Actualités plus")}
-            containerStyle="text-black font-medium border-none bg-transparent"
-          />
+          <Link href="/actualite">
+            <ButtonIcon
+              title="Voir plus"
+              handleClick={() => { }}
+              containerStyle="px-3 py-1 font-medium border-none bg-transparent"
+            />
+          </Link>
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
@@ -42,11 +44,13 @@ export default function Home() {
         <div className="mt-20" />
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Calendrier évènements</h1>
-          <ButtonIcon
-            title="Voir plus"
-            handleClick={() => console.log("Evènement plus")}
-            containerStyle="text-black font-medium border-none bg-transparent whitespace-nowrap"
-          />
+          <Link href='/evenement' >
+            <ButtonIcon
+              title="Voir plus"
+              handleClick={() => console.log("Evènement plus")}
+              containerStyle="px-3 py-1 font-medium border-none bg-transparent"
+            />
+          </Link>
         </div>
 
         <section className="grid gap-4 grid-cols-1 md:grid-cols-2">
@@ -72,12 +76,13 @@ export default function Home() {
                 </Link>
               ))
             }
-
-            <ButtonIcon
-              title="Voir toutes les 23 paroisses"
-              handleClick={() => { }}
-              containerStyle="mt-4 text-medium"
-            />
+            <Link href="/paroisse">
+              <ButtonIcon
+                title="Voir toutes les 23 paroisses"
+                handleClick={() => { }}
+                containerStyle="px-3 py-2 w-full bg-primary text-white mt-4 text-medium"
+              />
+            </Link>
           </div>
         </section>
         <div className="mt-16" />
@@ -95,12 +100,12 @@ export default function Home() {
               <Button
                 title='Voir plus'
                 handleClick={() => { }}
-                containerStyle='bg-white font-semibold text-xs md:text-normal'
+                containerStyle='bg-white p-2 rounded-lg font-semibold text-xs md:text-normal'
               />
               <Button
                 title='Voir tous les messages'
                 handleClick={() => { }}
-                containerStyle='bg-transparent border border-black text-xs md:text-normal font-semibold'
+                containerStyle='bg-transparent p-2 rounded-lg border border-black text-xs md:text-normal font-semibold'
               />
             </div>
           </div>
@@ -138,7 +143,7 @@ export default function Home() {
               <Button
                 title="Faire un don maintenant"
                 handleClick={() => { }}
-                containerStyle="px-3 md:px-6 text-sm md:text-normal text-medium bg-primary text-white"
+                containerStyle="px-3 md:px-6 py-2 rounded-lg text-sm md:text-normal text-medium bg-primary text-white"
               />
             </div>
           </div>
