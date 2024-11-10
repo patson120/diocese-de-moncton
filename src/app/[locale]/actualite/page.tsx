@@ -39,7 +39,7 @@ export default function Page() {
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
             [1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <Link key={item} href="/actualite/1" className='text-blue-600'>
+              <Link key={item} href="/actualite/1">
                 <Actualite />
               </Link>
             ))
