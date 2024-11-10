@@ -50,10 +50,13 @@ export default function Home() {
         </div>
 
         <section className="grid gap-4 grid-cols-1 md:grid-cols-2">
-          <EventItem />
-          <EventItem />
-          <EventItem />
-          <EventItem />
+          {
+            [1, 2, 3, 4].map((item) => (
+              <Link key={item} href="/evenement/1" className='text-blue-600'>
+                <EventItem />
+              </Link>
+            ))
+          }
         </section>
 
         <div className="mt-20" />
@@ -61,7 +64,7 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg bg-gray-100"></div>
           <div className="col-span-3 md:col-span-1 flex flex-col gap-3">
-            
+
             {
               [1, 2, 3, 4].map((item) => (
                 <Link key={item} href="/paroisse/1">
@@ -69,7 +72,7 @@ export default function Home() {
                 </Link>
               ))
             }
-            
+
             <ButtonIcon
               title="Voir toutes les 23 paroisses"
               handleClick={() => { }}

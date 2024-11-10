@@ -111,7 +111,7 @@ export default function Header() {
                             <Button
                                 title='En savoir plus'
                                 handleClick={() => { }}
-                                containerStyle='bg-primary w-full font-bold text-sm text-white'
+                                containerStyle='bg-primary py-2 rounded-lg w-full font-bold text-sm text-white'
                             />
                         </div>
                         <div className='w-full p-6'>
