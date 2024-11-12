@@ -12,8 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         
-        primary: '#940D02',
-        yelloColor: '#DBB91A'
+        primary: "var(--primary)",
+        yelloColor: '#D8B148',
+        yellow100: '#FDFAF3'
       },
     },
   },

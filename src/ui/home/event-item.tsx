@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function EventItem() {
     return (
-        <div className='p-2 md:p-3 rounded-lg flex flex-row justify-between items-center text-black border border-gray-200 divide-x hover:bg-red-50 '>
+        <div className='p-2 md:p-3 rounded-lg flex flex-row justify-between items-center text-black border border-gray-200 divide-x hover:bg-[#EEDEE1] '>
             <div className='w-10 text-primary text-center flex-col justify-center items-center '>
                 <p className='font-extrabold text-sm md:text-lg'>08</p>
                 <p className='text-xs'>Sept</p>

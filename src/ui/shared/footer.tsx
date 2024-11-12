@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -7,14 +8,14 @@ export default function Footer() {
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 '>
         <div className='space-y-3'>
           <div className='relative h-20 rounded-xl overflow-hidden bg-gray-100'>
-            {/* <Image
-                    alt="Image de la l'actualité"
-                    src="/assets/img/campost.jpg"
-                    fill
-                    style={{
-                        objectFit: 'cover'
-                    }}
-                /> */}
+            <Image
+              alt="Logo du diocèse de moncton"
+              src="/logo_diomoncton.png"
+              fill
+              style={{
+                objectFit: 'cover'
+              }}
+            />
           </div>
           <p className='text-xs text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora explicabo fugiat corporis.</p>
         </div>

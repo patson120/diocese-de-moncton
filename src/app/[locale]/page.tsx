@@ -88,9 +88,9 @@ export default function Home() {
         <div className="mt-16" />
       </div>
 
-      <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-yellow-50 text-black'>
+      <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-yellow100 text-black'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
-          <div className='col-span-full md:col-span-2 rounded-xl bg-yellow-500 px-5 md:px-10 py-5 md:py-8'>
+          <div className='col-span-full md:col-span-2 rounded-xl bg-yelloColor px-5 md:px-10 py-5 md:py-8'>
             <span className='uppercase text-sm text-gray-600'>Message de l&lsquo;archevêque</span>
             <h1 className='text-lg md:text-2xl font-bold mb-3'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
             <p className='text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae unde harum nulla qui quae ratione. Facilis veniam maiores laboriosam nam sit unde libero officia ratione iure nobis, voluptate autem quos perferendis odit quaerat consequatur voluptatibus! Dolore ipsum earum sunt rerum eos commodi, facere adipisci nesciunt quasi pariatur incidunt, illo cumque! <br /> <br />
@@ -134,7 +134,7 @@ export default function Home() {
                     }}
                 /> */}
           </div>
-          <div className='bg-yellow-50 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
+          <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
             <div>
               <h1 className='text-lg md:text-2xl font-bold mb-2'>Soutenez notre mission</h1>
               <p>Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
