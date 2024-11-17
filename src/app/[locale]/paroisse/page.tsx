@@ -1,5 +1,6 @@
 
 'use client'
+import { paroisses } from '@/constants'
 import ParoisseItem from '@/ui/home/paroisse-item'
 import ButtonIcon from '@/ui/shared/button-icon'
 import React from 'react'
@@ -28,8 +29,8 @@ export default function Page() {
                                 <Filter />
                             </div>
                             {
-                                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(item => (
-                                    <ParoisseItem key={item} />
+                                [...paroisses, ...paroisses].map((item, index) => (
+                                    <ParoisseItem key={index} data={item} />
                                 ))
                             }
                         </div>
