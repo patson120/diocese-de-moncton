@@ -88,12 +88,9 @@ export default function Page() {
                 <SearchBar />
 
                 <div className='mt-2' />
-
                 <div className='w-1/2 mx-auto flex flex-col justify-center'>
                     {/* filter */}
                     <Filter />
-
-
                     <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Moi de septembre</h3>
                     <div className='flex flex-col gap-4'>
                         {
@@ -104,7 +101,6 @@ export default function Page() {
                             ))
                         }
                     </div>
-
                     <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Moi de octobre</h3>
                     <div className='flex flex-col gap-4'>
                         {
@@ -114,7 +110,6 @@ export default function Page() {
                         }
                     </div>
 
-
                     {/* Pagination */}
                     <div className='flex justify-center mt-12'>
                         <div className='flex gap-3'>
@@ -122,9 +117,7 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-
             </section>
-
         </main>
     )
 }
@@ -149,7 +142,6 @@ const Filter = () => {
                     <option value="novembre">Novembre</option>
                     <option value="decembre">Décembre</option>
                 </select>
-
                 <select id="categorie" name="categorie" className="border border-gray-100 outline-primary outline-offset-1 px-3 py-2 rounded-lg w-full">
                     <option value="" disabled>Par catégorie</option>
                     <option value="actualite">Actualité</option>
@@ -166,8 +158,8 @@ const SearchBar = () => {
             <div className='w-1/2'>
                 <input type="text" placeholder="Rechercher un évènement"
                     className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
-        text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
-          placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
+                    text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+                    placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
             </div>
         </div>
     )
