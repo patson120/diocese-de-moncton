@@ -2,7 +2,7 @@
 import { news, paroisses } from "@/constants";
 import { Link } from "@/i18n/routing";
 import EventItem from "@/ui/home/event-item";
-import Hero from "@/ui/home/hero-setion";
+import Hero from "@/ui/home/hero-section";
 import ParoisseItem from "@/ui/home/paroisse-item";
 import Actualite from "@/ui/shared/actualite";
 import Button from '@/ui/shared/button';

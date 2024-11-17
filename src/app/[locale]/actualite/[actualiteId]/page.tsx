@@ -17,8 +17,8 @@ export default function Page() {
           <div className='col-span-full lg:col-span-4'>
             <div className='h-96 relative rounded-lg overflow-hidden bg-gray-100'>
               <Image
-                alt={news[3].title}
-                src={news[3].image}
+                alt={news[2].title}
+                src={news[2].image}
                 fill
                 style={{ objectFit: 'cover' }}
               />
