@@ -1,6 +1,8 @@
 
 'use client'
+import { paroisses } from "@/constants";
 import Button from "@/ui/shared/button";
+import Image from "next/image";
 
 
 export default function Page() {
@@ -9,16 +11,16 @@ export default function Page() {
             {/* Hero section */}
             <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
                 {/* Hero image */}
-                {/* <Image
-                    alt="Image de la l'actualité"
-                    src="/assets/img/campost.jpg"
+                <Image
+                    alt="hero section background image"
+                    src="/assets/img/hero-image-2.png"
                     fill
                     style={{
-                    objectFit: 'cover',
-                    height: '100%',
-                    width: '100%'
+                        objectFit: 'cover',
+                        height: '100%',
+                        width: '100%'
                     }}
-                /> */}
+                />
                 <div className='absolute top-0 left-0 right-0 bottom-0 flex items-start pt-10 bg-black bg-opacity-40'>
 
                     <div className="flex items-end gap-10 px-5 md:px-10">
@@ -26,19 +28,19 @@ export default function Page() {
                             <Button
                                 title="Retour"
                                 handleClick={() => console.log("Retour")}
-                                containerStyle="text-white text-sm bg-gray-100 rounded-full px-3 py-1"
+                                containerStyle="text-gray-300 px-0 text-sm"
                             />
                             <div className="relative h-60 w-80 translate-y-14 bg-gray-100">
-                                {/* <Image
+                                <Image
                                     alt="Image de la l'actualité"
-                                    src="/assets/img/campost.jpg"
+                                    src="/assets/img/paroisse-detail.png"
                                     fill
                                     style={{
                                         objectFit: 'cover',
                                         height: '100%',
                                         width: '100%'
                                     }}
-                                /> */}
+                                />
                             </div>
                         </div>
                         <div>
@@ -88,22 +90,21 @@ export default function Page() {
                         <div>
                             <div className="flex flex-wrap gap-4">
                                 {
-                                    [1, 2, 3].map(item => (
-                                        <div key={item}>
-                                            <div className="h-32 w-48 rounded-md bg-gray-100">
-                                                {/* <Image
-                                                     alt="Image de la paroisse"
-                                                     src={`/assets/img/paroisse${item}.jpg`}
-                                                     fill
-                                                     style={{
-                                                     objectFit: 'cover',
-                                                     height: '80px',
-                                                     width: '80px',
-                                                     borderRadius: '50%',
-                                                     }}
-                                                 /> */}
+                                    paroisses.slice(0, 2).map((item, index) => (
+                                        <div key={index}>
+                                            <div className="h-32 w-48 relative overflow-hidden rounded-md bg-gray-100">
+                                                <Image
+                                                    alt="Image de la paroisse"
+                                                    src={item.image}
+                                                    fill
+                                                    style={{
+                                                        objectFit: 'cover',
+                                                        height: '100%',
+                                                        width: '100%'
+                                                    }}
+                                                />
                                             </div>
-                                            <h3 className="font-extrabold text-xs mt-3 mb-1">Saint-François-de-Sales</h3>
+                                            <h3 className="font-extrabold text-xs mt-3 mb-1">{item.title}</h3>
                                             <p className="text-xs text-gray-500">Rogersville</p>
                                         </div>
                                     ))

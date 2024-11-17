@@ -24,3 +24,12 @@ export type ParoisseType = {
     tel: string;
     image: string;
 }
+
+export type EventType = {
+    jour: string;
+    heure: string;
+    mois: string;
+    lieu: string;
+    title: string;
+    type: string;
+}

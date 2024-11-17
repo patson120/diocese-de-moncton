@@ -1,6 +1,7 @@
+import { events } from '@/constants'
 import { Link } from '@/i18n/routing'
 import EventItem from '@/ui/home/event-item'
-import Actualite from '@/ui/shared/actualite'
+import Image from 'next/image'
 
 export default function Page() {
     return (
@@ -8,23 +9,78 @@ export default function Page() {
             {/* Hero section */}
             <section className='h-[25vh] md:h-[50vh] w-full bg-gray-100'>
                 <div className='w-full h-full grid grid-cols-6'>
-                    <div className='w-full h-full relative border-r-2 border-gray-50 '>
-                        {/* <Image
-                    alt="Image de la l'actualité"
-                    src="/assets/img/campost.jpg"
-                    fill
-                    style={{
-                    objectFit: 'cover',
-                    height: '100%',
-                    width: '100%'
-                    }}
-                /> */}
+                    <div className='w-full h-full relative overflow-hidden border-r border-gray-50 '>
+                        <Image
+                            alt="Hero image 1"
+                            src="/assets/img/hero-1.png"
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                                height: '100%',
+                                width: '100%'
+                            }}
+                        />
                     </div>
-                    <div className='w-full h-full relative border-r-2 border-gray-50'></div>
-                    <div className='w-full h-full relative border-r-2 border-gray-50'></div>
-                    <div className='w-full h-full relative border-r-2 border-gray-50'></div>
-                    <div className='w-full h-full relative border-r-2 border-gray-50'></div>
-                    <div className='w-full h-full relative border-r-2 border-gray-50'></div>
+                    <div className='w-full h-full relative overflow-hidden border-r border-gray-50'>
+                        <Image
+                            alt="Hero image 1"
+                            src="/assets/img/hero-2.png"
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                                height: '100%',
+                                width: '100%'
+                            }}
+                        />
+                    </div>
+                    <div className='w-full h-full relative overflow-hidden border-r border-gray-50'>
+                        <Image
+                            alt="Hero image 1"
+                            src="/assets/img/hero-3.png"
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                                height: '100%',
+                                width: '100%'
+                            }}
+                        />
+                    </div>
+                    <div className='w-full h-full relative overflow-hidden border-r border-gray-50'>
+                        <Image
+                            alt="Hero image 1"
+                            src="/assets/img/hero-4.png"
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                                height: '100%',
+                                width: '100%'
+                            }}
+                        />
+                    </div>
+                    <div className='w-full h-full relative overflow-hidden border-r border-gray-50'>
+                        <Image
+                            alt="Hero image 1"
+                            src="/assets/img/hero-5.png"
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                                height: '100%',
+                                width: '100%'
+                            }}
+                        />
+                    </div>
+                    <div className='w-full h-full relative overflow-hidden border-gray-50'>
+                        <Image
+                            alt="Hero image 1"
+                            src="/assets/img/hero-6.png"
+                            fill
+                            style={{
+                                objectFit: 'cover',
+                                height: '100%',
+                                width: '100%'
+                            }}
+                        />
+                    </div>
                 </div>
             </section>
             <section className='px-5 md:px-10 pb-8'>
@@ -41,9 +97,9 @@ export default function Page() {
                     <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Moi de septembre</h3>
                     <div className='flex flex-col gap-4'>
                         {
-                            [1, 2, 3, 4].map((item) => (
-                                <Link key={item} href="/evenement/1" >
-                                    <EventItem />
+                            events.map((item, index) => (
+                                <Link key={index} href="/evenement/1" >
+                                    <EventItem data={item} />
                                 </Link>
                             ))
                         }

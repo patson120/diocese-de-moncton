@@ -1,5 +1,5 @@
 'use client'
-import { news, paroisses } from "@/constants";
+import { events, news, paroisses } from "@/constants";
 import { Link } from "@/i18n/routing";
 import EventItem from "@/ui/home/event-item";
 import Hero from "@/ui/home/hero-section";
@@ -57,9 +57,9 @@ export default function Home() {
 
         <section className="grid gap-4 grid-cols-1 md:grid-cols-2">
           {
-            [1, 2, 3, 4].map((item) => (
-              <Link key={item} href="/evenement/1" className='text-blue-600'>
-                <EventItem />
+            events.map((item, index) => (
+              <Link key={index} href="/evenement/1" className='text-blue-600'>
+                <EventItem data={item} />
               </Link>
             ))
           }

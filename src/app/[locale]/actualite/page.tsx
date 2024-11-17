@@ -3,6 +3,7 @@ import { formatDateToLocal } from '@/_lib/utils'
 import { news } from '@/constants'
 import { Link } from '@/i18n/routing'
 import Actualite from '@/ui/shared/actualite'
+import Image from 'next/image'
 
 export default function Page() {
   return (
@@ -10,16 +11,16 @@ export default function Page() {
       {/* Hero section */}
       <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
         {/* Hero image */}
-        {/* <Image
-            alt="Image de la l'actualité"
-            src="/assets/img/campost.jpg"
-            fill
-            style={{
-              objectFit: 'cover',
-              height: '100%',
-              width: '100%'
-            }}
-          /> */}
+        <Image
+          alt="hero section background image"
+          src="/assets/img/hero-image-2.png"
+          fill
+          style={{
+            objectFit: 'cover',
+            height: '100%',
+            width: '100%'
+          }}
+        />
         <div className='absolute top-0 left-0 right-0 bottom-0 flex justify-center items-start pt-10 bg-black bg-opacity-40'>
           <h1 className='w-1/2 text-white text-center font-extrabold text-xl md:text-3xl lg:text-5xl'>Découvrez toute notre actualité</h1>
         </div>
@@ -28,12 +29,12 @@ export default function Page() {
         {/* Search bar */}
         <SearchBar />
 
-        <div className='mt-2'/>
+        <div className='mt-2' />
         {/* filter */}
         <Filter />
 
         {/* Important post  */}
-        <div className='mt-8 mb-12'>  
+        <div className='mt-8 mb-12'>
           <ImportantPost />
         </div>
 
@@ -63,14 +64,16 @@ const ImportantPost = () => {
   return (
     <div className='w-full text-black  grid grid-cols-1 md:grid-cols-2 gap-5'>
       <div className='relative h-72 w-full rounded-xl overflow-hidden bg-gray-100'>
-        {/* <Image
-                    alt="Image de la l'actualité"
-                    src="/assets/img/campost.jpg"
-                    fill
-                    style={{
-                        objectFit: 'cover'
-                    }}
-                /> */}
+        <Image
+          alt="Image de la l'actualité"
+          src="/assets/img/new-4.png"
+          fill
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%'
+          }}
+        />
       </div>
       <div className='space-y-4'>
         <span className='text-sm font-semibold text-primary'>Diocèse</span>
@@ -107,7 +110,7 @@ const SearchBar = () => {
     <div className='flex justify-center items-center gap-2 -translate-y-6'>
       <div className='w-1/2'>
         <input type="text" placeholder="Rechercher un article..."
-        className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
+          className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
         text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
           placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
       </div>
