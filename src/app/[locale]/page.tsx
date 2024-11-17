@@ -1,14 +1,15 @@
 'use client'
+import { news } from "@/constants";
 import { Link } from "@/i18n/routing";
-import Actualite from "@/ui/shared/actualite";
 import EventItem from "@/ui/home/event-item";
 import Hero from "@/ui/home/hero-setion";
 import ParoisseItem from "@/ui/home/paroisse-item";
+import Actualite from "@/ui/shared/actualite";
 import Button from '@/ui/shared/button';
 import ButtonIcon from "@/ui/shared/button-icon";
 
 export default function Home() {
-  // const t = useTranslations("Index")
+  // const t = useTranslations("Index") 
 
   return (
     <main className="bg-white">
@@ -32,9 +33,9 @@ export default function Home() {
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
-            [1, 2, 3, 4].map((item) => (
-              <Link key={item} href="/actualite/1" className='text-blue-600'>
-                <Actualite />
+            news.map((item, index) => (
+              <Link key={index} href="/actualite/1" className='text-blue-600'>
+                <Actualite data={item} />
               </Link>
             ))
           }

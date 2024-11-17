@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export default function Page() {
@@ -10,7 +11,14 @@ export default function Page() {
             <section className="px-4 md:px-10">
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12 py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2'>
-                        <div className='h-96 rounded-lg bg-gray-100'></div>
+                        <div className='h-96 relative rounded-lg overflow-hidden bg-gray-100'>
+                            <Image
+                                alt="Image de détail de l'évènement"
+                                src="/assets/img/soupe-homard.png"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </div>
                     </div>
                     <div className='col-span-full lg:col-span-3'>
                         <div>
@@ -24,7 +32,7 @@ export default function Page() {
                             <p className='px-4 py-1 text-gray-500 rounded-full border border-gray-100'>Célébration</p>
                             <p className='px-4 py-1 text-gray-500 rounded-full border border-gray-100'>Communautaire</p>
                         </div>
-                        <hr className='my-2'/>
+                        <hr className='my-2' />
                         <div className='flex space-x-8 mt-4'>
                             <div>
                                 <div className='flex space-x-2'>
@@ -41,7 +49,7 @@ export default function Page() {
                                 <h1 className='text-sm font-extrabold'>16h00 à 18h00</h1>
                             </div>
                         </div>
-                        
+
                         <h1 className="text-lg font-extrabold text-black mt-10 mb-2">Lieu: <span className='text-base font-normal text-gray-600'>Pointe Sapin</span></h1>
                         {/* Map */}
                         <div className="h-80 w-full bg-gray-100 rounded-xl"></div>

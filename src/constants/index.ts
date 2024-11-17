@@ -1,4 +1,4 @@
-import { MenuType } from "@/types"
+import { ActualiteType, MenuType } from "@/types"
 
 export const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = 'AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVWyJnYlg'
 
@@ -180,7 +180,7 @@ export const mouvements: MenuType[] = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: ''
     },
-    
+
     {
         id: 6,
         image: '',
@@ -276,3 +276,35 @@ export const ressources: MenuType[] = [
         link: ''
     }
 ]
+
+// List of news
+export const news: ActualiteType[] = [
+    {
+        category: "Diocèse",
+        title: "Quel est le problème avec l’aide médicale à mourir (AMM)",
+        date: "Lundi 25 Octobre 2022",
+        image: "/assets/img/new-1.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        category: "Diocèse",
+        title: "Quête spéciale le 2-3 novembre 2024",
+        date: "Mardi 26 Octobre 2022",
+        image: "/assets/img/new-2.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        category: "Catéchèse",
+        title: "Mise à jour des tarifs diocésains pour les célébr...",
+        date: "Mardi 26 Octobre 2022",
+        image: "/assets/img/new-3.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        category: "Diocèse",
+        title: "Nominations ecclésiales pour le diocèse de Moncton",
+        date: "Mardi 26 Octobre 2022",
+        image: "/assets/img/new-4.png",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+];
