@@ -1,4 +1,4 @@
-import { ActualiteType, MenuType } from "@/types"
+import { ActualiteType, MenuType, ParoisseType } from "@/types"
 
 export const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = 'AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVWyJnYlg'
 
@@ -308,3 +308,30 @@ export const news: ActualiteType[] = [
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
     },
 ];
+
+export const paroisses: ParoisseType[] = [
+    {
+        title: "Immaculée-Conception",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-1.png"
+    },
+    {
+        title: "Saint-Anne",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-2.png"
+    },
+    {
+        title: "Saint-Baptiste",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-3.png"
+    },
+    {
+        title: "Notre Dame de Fatima",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-1.png"
+    },
+]

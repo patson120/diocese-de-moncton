@@ -1,5 +1,6 @@
 
 import { formatDateToLocal } from '@/_lib/utils'
+import { news } from '@/constants'
 import { Link } from '@/i18n/routing'
 import Actualite from '@/ui/shared/actualite'
 
@@ -38,9 +39,9 @@ export default function Page() {
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
-            [1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <Link key={item} href="/actualite/1">
-                <Actualite />
+            [...news, ...news].map((item, index) => (
+              <Link key={index} href="/actualite/1">
+                <Actualite data={item} />
               </Link>
             ))
           }

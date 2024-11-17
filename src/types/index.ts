@@ -17,3 +17,10 @@ export type ActualiteType = {
     image: string;
     description: string;
 }
+
+export type ParoisseType = {
+    title: string;
+    adresse: string;
+    tel: string;
+    image: string;
+}

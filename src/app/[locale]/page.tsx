@@ -1,5 +1,5 @@
 'use client'
-import { news } from "@/constants";
+import { news, paroisses } from "@/constants";
 import { Link } from "@/i18n/routing";
 import EventItem from "@/ui/home/event-item";
 import Hero from "@/ui/home/hero-setion";
@@ -7,6 +7,7 @@ import ParoisseItem from "@/ui/home/paroisse-item";
 import Actualite from "@/ui/shared/actualite";
 import Button from '@/ui/shared/button';
 import ButtonIcon from "@/ui/shared/button-icon";
+import Image from "next/image";
 
 export default function Home() {
   // const t = useTranslations("Index") 
@@ -71,9 +72,9 @@ export default function Home() {
           <div className="col-span-3 md:col-span-1 flex flex-col gap-3">
 
             {
-              [1, 2, 3, 4].map((item) => (
-                <Link key={item} href="/paroisse/1">
-                  <ParoisseItem />
+              paroisses.map((item, index) => (
+                <Link key={index} href="/paroisse/1">
+                  <ParoisseItem data={item} />
                 </Link>
               ))
             }
@@ -111,14 +112,21 @@ export default function Home() {
             </div>
           </div>
           <div className='col-span-full md:col-span-1 relative rounded-xl overflow-hidden bg-gray-200'>
-            {/* <Image
-                    alt="Image de la l'actualité"
-                    src="/assets/img/campost.jpg"
-                    fill
-                    style={{
-                        objectFit: 'cover'
-                    }}
-                /> */}
+            <Image
+              alt="Image de la l'actualité"
+              src="/assets/img/image.png"
+              fill
+              style={{
+                objectFit: 'cover'
+              }}
+            />
+
+            <div className="absolute bottom-0 left-0 right-0">
+              <div className="p-4">
+                <h3 className="text-white text-[12px] font-medium">Mgr Guy Desrochers</h3>
+                <p className=" text-white text-[9px]">Archevêque du diocèse de Moncton</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -126,14 +134,14 @@ export default function Home() {
       <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-white'>
         <div className='grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden'>
           <div className='h-72 bg-gray-200 relative'>
-            {/* <Image
-                    alt="Image de la l'actualité"
-                    src="/assets/img/campost.jpg"
-                    fill
-                    style={{
-                        objectFit: 'cover'
-                    }}
-                /> */}
+            <Image
+              alt="Faire un don maintenant"
+              src="/assets/img/make-gift.png"
+              fill
+              style={{
+                objectFit: 'cover'
+              }}
+            />
           </div>
           <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
             <div>

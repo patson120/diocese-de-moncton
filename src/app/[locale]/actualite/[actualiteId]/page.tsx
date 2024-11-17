@@ -2,6 +2,8 @@ import { Link } from '@/i18n/routing'
 import { formatDateToLocal } from '@/_lib/utils'
 import Actualite from '@/ui/shared/actualite'
 import React from 'react'
+import { news } from '@/constants'
+import Image from 'next/image'
 
 export default function Page() {
   return (
@@ -13,7 +15,14 @@ export default function Page() {
       <section className='px-5 md:px-10' >
         <div className='grid grid-cols-1 lg:grid-cols-6 gap-5 lg:gap-10 py-4 lg:py-8'>
           <div className='col-span-full lg:col-span-4'>
-            <div className='h-96 rounded-lg bg-gray-100'></div>
+            <div className='h-96 relative rounded-lg overflow-hidden bg-gray-100'>
+              <Image
+                alt={news[3].title}
+                src={news[3].image}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
             <div className='flex flex-col space-y-3'>
               <div className='flex justify-between pt-4'>
                 <span className='font-semibold text-primary'>Diocèse</span>
@@ -22,7 +31,7 @@ export default function Page() {
               <h1 className='text-2xl font-bold'>Quel est le problème avec l'aide médicale à mourir (AMM)? le 9 Octobre 19h</h1>
 
               <p className='text-sm text-gray-600'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia harum voluptas illo sint, nulla consequuntur veritatis officia voluptates, corporis minima, omnis optio dicta iste! Id ipsum itaque adipisci debitis maxime qui voluptates sed recusandae, alias ipsa harum, pariatur dolorum nobis vel cumque repudiandae reprehenderit! Ipsam hic doloremque rem totam facere?</p>
-              
+
               <p className='text-sm text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellat, eaque ab iusto quaerat cumque et nemo sit nam necessitatibus consectetur eveniet! Quis nostrum est itaque, delectus cupiditate molestias laboriosam. Optio incidunt sed dignissimos?</p>
               <p className='text-sm text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sequi iusto ex praesentium libero provident accusantium id perspiciatis enim aspernatur aliquam, fugiat blanditiis quos nemo deleniti totam sint sed dolores suscipit eum tempore at numquam a? Quidem dolor, sint consectetur, at impedit sed enim quis dolores aliquid est maxime, quisquam asperiores eligendi architecto iure adipisci facilis? Illum totam modi illo nihil exercitationem? Aspernatur cum esse suscipit eligendi, distinctio provident animi magnam quae soluta beatae fuga id hic, dolore pariatur iure.</p>
               <p className='text-sm text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptates.</p>
@@ -33,9 +42,9 @@ export default function Page() {
           <div className='col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10'>
             <h1 className='text-lg font-extrabold'>Articles relatifs</h1>
             {
-              [1, 2, 3, 4].map((item) => (
-                <Link key={item} href="#" className='text-blue-600'>
-                  <Actualite />
+              news.map((item, index) => (
+                <Link key={index} href="#" className='text-blue-600'>
+                  <Actualite data={item} />
                 </Link>
               ))
             }
