@@ -6,6 +6,7 @@ import ButtonIcon from './button-icon'
 import Button from './button'
 import { actualites, archidiocese, mouvements, ressources, sacrements } from '@/constants'
 import { MenuType } from '@/types'
+import Image from 'next/image'
 
 export default function Header() {
 
@@ -68,15 +69,15 @@ export default function Header() {
                 <div className='w-32 h-7 bg-gray-300 rounded-md'></div>
             </nav>
             <nav className='px-5 md:px-10 py-4 flex justify-between relative'>
-                <div className='relative w-20 h-8 bg-gray-200 rounded-md'>
-                    {/* <Image
-                    alt="Image de la l'actualité"
-                    src="/assets/img/campost.jpg"
-                    fill
-                    style={{
-                        objectFit: 'cover'
-                    }}
-                /> */}
+                <div className='relative w-20 h-9 rounded-md'>
+                    <Image
+                        alt="Logo diocèse de Moncton"
+                        src="/brand-logo.png"
+                        fill
+                        style={{
+                            objectFit: 'contain'
+                        }}
+                    />
                 </div>
                 <ul className='flex justify-center items-center space-x-4 text-xs text-gray-500'>
                     <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-bold'><Link href="/">Accueil</Link></li>
@@ -88,23 +89,23 @@ export default function Header() {
                 </ul>
                 <div className='flex'>
                     <ButtonIcon
-                        title='Faire un don'
+                        title='Contribuer à la mission'
                         handleClick={() => { }}
-                        containerStyle='bg-primary text-white px-4 py-1 text-sm'
+                        containerStyle='bg-transparent text-primary font-semibold border border-primary px-4 py-1 text-sm'
                     />
                 </div>
-                <div  id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full left-0 right-0 z-50 px-10 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
+                <div id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full left-0 right-0 z-50 px-10 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
                     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex'>
-                        <div className='w-72 p-6 bg-red-50'>
+                        <div className='w-72 p-6 bg-[#F9F4F5]'>
                             <div className='relative h-36 w-full bg-white rounded-lg overflow-hidden'>
-                                {/* <Image
-                                    alt="Image de la l'actualité"
-                                    src="/assets/img/campost.jpg"
+                                <Image
+                                    alt="Submenu banner"
+                                    src="/assets/img/submenu-banner.png"
                                     fill
                                     style={{
                                         objectFit: 'cover'
                                     }}
-                                /> */}
+                                />
                             </div>
                             <h3 className='text-base text-gray-600 font-bold mt-2'>Horaires de messe</h3>
                             <p className='text-xs text-gray-500 mt-2 mb-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
@@ -131,7 +132,7 @@ export default function Header() {
 const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     return (
         <div className='flex justify-start items-center space-x-4 text-black'>
-            <div className='h-[60px] w-[80px] rounded-lg bg-red-50 overflow-hidden relative'>
+            <div className='h-[60px] w-[80px] rounded-lg bg-[#F9F4F5] overflow-hidden relative'>
                 {/* <Image
                     alt=""
                     src="/assets/img/campost.jpg"

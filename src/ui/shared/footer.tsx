@@ -7,10 +7,10 @@ export default function Footer() {
     <footer className='px-5 md:px-10 py-10 md:py-20 w-full'>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 '>
         <div className='space-y-3'>
-          <div className='relative h-16 overflow-hidden'>
+          <div className='relative h-12 w-[100px] overflow-hidden'>
             <Image
               alt="Logo du diocèse de moncton"
-              src="/logo_diomoncton.png"
+              src="/brand-logo.png"
               fill
               style={{
                 objectFit: 'contain'

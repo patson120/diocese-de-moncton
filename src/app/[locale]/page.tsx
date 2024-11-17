@@ -43,7 +43,7 @@ export default function Home() {
 
         <div className="mt-20" />
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="font-bold text-lg md:text-3xl text-black">Calendrier évènements</h1>
+          <h1 className="font-bold text-lg md:text-3xl text-black">Nos évènements</h1>
           <Link href='/evenement' >
             <ButtonIcon
               title="Voir plus"
