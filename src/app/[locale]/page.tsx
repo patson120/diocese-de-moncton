@@ -1,13 +1,14 @@
 'use client'
 import { events, news, paroisses } from "@/constants";
 import { Link } from "@/i18n/routing";
-import EventItem from "@/ui/home/event-item";
-import Hero from "@/ui/home/hero-section";
-import ParoisseItem from "@/ui/home/paroisse-item";
-import Actualite from "@/ui/shared/actualite";
-import Button from '@/ui/shared/button';
-import ButtonIcon from "@/ui/shared/button-icon";
+import EventItem from "@/components/ui/home/event-item";
+import ParoisseItem from "@/components/ui/home/paroisse-item";
+import Actualite from "@/components/ui/shared/actualite";
+import ButtonIcon from "@/components/ui/shared/button-icon";
 import Image from "next/image";
+import { HeroSection } from "@/components/sections/hero";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   // const t = useTranslations("Index") 
@@ -19,7 +20,7 @@ export default function Home() {
       <Link href="/about" className='text-blue-600'>About</Link> */}
 
       {/* Hero section */}
-      <Hero />
+      <HeroSection />
 
       <div className="px-4 md:p-10">
         <div className="mb-3 flex justify-between items-center">
@@ -79,11 +80,10 @@ export default function Home() {
               ))
             }
             <Link href="/paroisse">
-              <ButtonIcon
-                title="Voir toutes les 23 paroisses"
-                handleClick={() => { }}
-                containerStyle="px-3 py-2 w-full bg-primary text-white mt-4 text-medium"
-              />
+              <Button onClick={() => { }} className="w-full ">
+                Voir toutes les 23 paroisses
+                <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
+              </Button>
             </Link>
           </div>
         </section>
@@ -92,7 +92,7 @@ export default function Home() {
 
       <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-yellow100 text-black'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
-          <div className='col-span-full md:col-span-2 rounded-xl bg-yelloColor px-5 md:px-10 py-5 md:py-8'>
+          <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-10 py-5 md:py-8'>
             <span className='uppercase text-sm text-gray-600'>Message de l&lsquo;archevêque</span>
             <h1 className='text-lg md:text-2xl font-bold mb-3'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
             <p className='text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae unde harum nulla qui quae ratione. Facilis veniam maiores laboriosam nam sit unde libero officia ratione iure nobis, voluptate autem quos perferendis odit quaerat consequatur voluptatibus! Dolore ipsum earum sunt rerum eos commodi, facere adipisci nesciunt quasi pariatur incidunt, illo cumque! <br /> <br />
@@ -100,15 +100,15 @@ export default function Home() {
 
             <div className='mt-8 flex flex-row space-x-2'>
               <Button
-                title='Voir plus'
-                handleClick={() => { }}
-                containerStyle='bg-white p-2 rounded-lg font-semibold text-xs md:text-normal'
-              />
+                variant="outline"
+                onClick={() => { }}
+                className='font-medium'
+              >Voir plus</Button>
               <Button
-                title='Voir tous les messages'
-                handleClick={() => { }}
-                containerStyle='bg-transparent p-2 rounded-lg border border-black text-xs md:text-normal font-semibold'
-              />
+                variant="outline"
+                onClick={() => { }}
+                className='bg-transparent hover:bg-transparent border-black font-semibold'
+              >Voir tous les messages</Button>
             </div>
           </div>
           <div className='col-span-full md:col-span-1 relative rounded-xl overflow-hidden bg-gray-200'>
@@ -149,11 +149,9 @@ export default function Home() {
               <p>Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
             </div>
             <div className='flex'>
-              <Button
-                title="Faire un don maintenant"
-                handleClick={() => { }}
-                containerStyle="px-3 md:px-6 py-2 rounded-lg text-sm md:text-normal text-medium bg-primary text-white"
-              />
+              <Button onClick={() => { }} className="">
+                Faire un don maintenant
+              </Button>
             </div>
           </div>
         </div>

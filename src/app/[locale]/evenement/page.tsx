@@ -1,6 +1,6 @@
 import { events } from '@/constants'
 import { Link } from '@/i18n/routing'
-import EventItem from '@/ui/home/event-item'
+import EventItem from '@/components/ui/home/event-item'
 import Image from 'next/image'
 
 export default function Page() {

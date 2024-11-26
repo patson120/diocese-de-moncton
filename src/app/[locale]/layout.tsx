@@ -4,28 +4,25 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Roboto, Inter } from 'next/font/google';
 import "./globals.css";
 import { Language } from '@/types';
-import Header from '@/ui/shared/header';
-import Newsletter from '@/ui/shared/newsletter';
-import Footer from '@/ui/shared/footer';
+import Header from '@/components/ui/shared/header';
+import Newsletter from '@/components/ui/shared/newsletter';
+import Footer from '@/components/ui/shared/footer';
 
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const roboto = Roboto({ 
+  subsets: ['latin'],
+  variable: '--font-roboto',
+  weight: ['300', '400', '500', '700', '900']
 });
 
 export const metadata: Metadata = {
-  title: "Diocèse de Moncton",
-  description: "Diocèse de Moncton",
+  title: 'Archidiocèse de Moncton',
+  description: "Site officiel de l'Archidiocèse de Moncton",
+  keywords: ['église', 'catholique', 'moncton', 'archidiocèse', 'paroisse', 'spiritualité'],
 };
 
 export default async function RootLayout({
@@ -47,7 +44,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased select-none`}>
+        className={`${inter.variable} ${roboto.variable} font-sans antialiased select-none`}>
         <NextIntlClientProvider messages={messages}>
           <main>
             {/* Header */}

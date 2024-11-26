@@ -1,12 +1,12 @@
 'use client'
 
-import Link from 'next/link'
-import React, { useState } from 'react'
-import ButtonIcon from './button-icon'
-import Button from './button'
 import { actualites, archidiocese, mouvements, ressources, sacrements } from '@/constants'
 import { MenuType } from '@/types'
 import Image from 'next/image'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button';
+import { Heart, Globe, ChevronDown } from "lucide-react";
 
 export default function Header() {
 
@@ -66,7 +66,13 @@ export default function Header() {
                         <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
                     </li>
                 </ul>
-                <div className='w-32 h-7 bg-gray-300 rounded-md'></div>
+                <div className=''>
+                    <Button variant="ghost" className='h-8 text-xs' onClick={() => { }}>
+                        <Globe className="mr-[5px] h-3 w-3" />
+                        Canada(français)
+                        <ChevronDown className="ml-1 h-4 w-4" />
+                    </Button>
+                </div>
             </nav>
             <nav className='px-5 md:px-10 py-4 flex justify-between relative'>
                 <div className='relative w-20 h-9 rounded-md'>
@@ -88,11 +94,10 @@ export default function Header() {
                     <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Ressources</li>
                 </ul>
                 <div className='flex'>
-                    <ButtonIcon
-                        title='Contribuer à la mission'
-                        handleClick={() => { }}
-                        containerStyle='bg-transparent text-primary font-semibold border border-primary px-4 py-1 text-sm'
-                    />
+                    <Button size="sm" variant="outline" className='border border-primary text-primary' onClick={() => { }}>
+                        <Heart className="mr-2 h-4 w-4 text-primary" />
+                        Contribuer à la mission
+                    </Button>
                 </div>
                 <div id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full left-0 right-0 z-50 px-10 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
                     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex'>
@@ -109,11 +114,9 @@ export default function Header() {
                             </div>
                             <h3 className='text-base text-gray-600 font-bold mt-2'>Horaires de messe</h3>
                             <p className='text-xs text-gray-500 mt-2 mb-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
-                            <Button
-                                title='En savoir plus'
-                                handleClick={() => { }}
-                                containerStyle='bg-primary py-2 rounded-lg w-full font-bold text-sm text-white'
-                            />
+                            <Button className='w-full' onClick={() => { }}>
+                                En savoir plus
+                            </Button>
                         </div>
                         <div className='w-full p-6'>
                             <div className='grid grid-cols-3 gap-5'>

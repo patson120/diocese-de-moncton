@@ -1,7 +1,7 @@
 
 'use client'
 import { paroisses } from "@/constants";
-import Button from "@/ui/shared/button";
+import Button from "@/components/ui/shared/button";
 import Image from "next/image";
 
 

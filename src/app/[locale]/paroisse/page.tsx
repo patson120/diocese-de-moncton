@@ -1,8 +1,8 @@
 
 'use client'
 import { paroisses } from '@/constants'
-import ParoisseItem from '@/ui/home/paroisse-item'
-import ButtonIcon from '@/ui/shared/button-icon'
+import ParoisseItem from '@/components/ui/home/paroisse-item'
+import ButtonIcon from '@/components/ui/shared/button-icon'
 import React from 'react'
 
 export default function Page() {

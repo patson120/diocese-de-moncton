@@ -2,7 +2,7 @@
 import { formatDateToLocal } from '@/_lib/utils'
 import { news } from '@/constants'
 import { Link } from '@/i18n/routing'
-import Actualite from '@/ui/shared/actualite'
+import Actualite from '@/components/ui/shared/actualite'
 import Image from 'next/image'
 
 export default function Page() {

@@ -1,6 +1,6 @@
 import { Link } from '@/i18n/routing'
 import { formatDateToLocal } from '@/_lib/utils'
-import Actualite from '@/ui/shared/actualite'
+import Actualite from '@/components/ui/shared/actualite'
 import React from 'react'
 import { news } from '@/constants'
 import Image from 'next/image'
