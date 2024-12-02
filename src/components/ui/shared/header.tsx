@@ -7,6 +7,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button';
 import { Heart, Globe, ChevronDown } from "lucide-react";
+import { LanguageSelector } from '@/components/language-selector'
 
 export default function Header() {
 
@@ -66,13 +67,7 @@ export default function Header() {
                         <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
                     </li>
                 </ul>
-                <div className=''>
-                    <Button variant="ghost" className='h-8 text-xs' onClick={() => { }}>
-                        <Globe className="mr-[5px] h-3 w-3" />
-                        Canada(français)
-                        <ChevronDown className="ml-1 h-4 w-4" />
-                    </Button>
-                </div>
+                <LanguageSelector />
             </nav>
             <nav className='px-5 md:px-10 py-4 flex justify-between relative'>
                 <div className='relative w-20 h-9 rounded-md'>

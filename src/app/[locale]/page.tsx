@@ -9,14 +9,14 @@ import Image from "next/image";
 import { HeroSection } from "@/components/sections/hero";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
-  // const t = useTranslations("Index") 
+  const t = useTranslations("Index") 
 
   return (
     <main className="bg-white">
-      {/* <div className="w-20"> <LocalSwitcher /> </div>
-      <p className="mt-5">{t('hello')}</p>
+      {/* <p className="mt-5">{t('hello')}</p>
       <Link href="/about" className='text-blue-600'>About</Link> */}
 
       {/* Hero section */}
