@@ -83,4 +83,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .container {
+    @apply max-w-screen-2xl mx-auto px-4 py-10;
+  }
 }

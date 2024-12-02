@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1548625149-fc4a29cf7092',
+    image: './assets/img/image 2.png',
     title: "Bienvenue à l'Archidiocèse de Moncton",
     description: 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.',
     cta: [
@@ -15,7 +15,7 @@ const slides = [
     ]
   },
   {
-    image: 'https://images.unsplash.com/photo-1601142634808-38923eb7c560',
+    image: './assets/img/hero-image-2.png',
     title: 'Participez à nos célébrations',
     description: 'Retrouvez les horaires des messes et des événements',
     cta: [{ text: 'Voir le calendrier', href: '/evenements' }]
@@ -62,8 +62,8 @@ export function HeroSection() {
             priority={index === 0}
           />
           <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex flex-col justify-between pt-20 pl-20 ">
-            <div className="container text-white w-1/2">
+          <div className="absolute inset-0 flex flex-col justify-between pt-20 container md:px-0 ">
+            <div className="text-white w-1/2">
               <p className='text-white text-[10px] font-garamond'>Réjoinez-nous dans notre mission spirituelle</p>
               <h1 className="font-garamond text-xl font-bold md:text-3xl">
                 {slide.title}

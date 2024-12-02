@@ -9,20 +9,44 @@ import Image from "next/image";
 import { HeroSection } from "@/components/sections/hero";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
+import { useState } from "react";
+
+
+// Import Map component dynamically to avoid SSR issues
+const Map = dynamic(() => import('@/components/map'), { ssr: false });
+
+const parishes = [
+  {
+    id: 1,
+    name: "Cathédrale Notre-Dame de l'Assomption",
+    address: '220 St George St, Moncton, NB E1C 1V8',
+    phone: '+1 506-857-4223',
+    email: 'cathedrale@diocesemoncton.ca',
+    website: 'https://www.cathedralemoncton.ca',
+    location: { lat: 46.0878, lng: -64.7782 }
+  },
+  {
+    id: 2,
+    name: 'Église Saint-Anselme',
+    address: '1014 Rue Amirault, Dieppe, NB E1A 1C9',
+    phone: '+1 506-382-8018',
+    email: 'stanselme@diocesemoncton.ca',
+    website: 'https://www.paroissestanselme.ca',
+    location: { lat: 46.0978, lng: -64.7482 }
+  }
+];
 
 export default function Home() {
-  const t = useTranslations("Index") 
+  // const t = useTranslations("Index") 
 
+  const [selectedParish, setSelectedParish] = useState(null);
   return (
     <main className="bg-white">
-      {/* <p className="mt-5">{t('hello')}</p>
-      <Link href="/about" className='text-blue-600'>About</Link> */}
-
-      {/* Hero section */}
+      
       <HeroSection />
 
-      <div className="px-4 md:p-10">
+      <div className="px-4 md:py-10 container md:px-0">
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Actualités</h1>
           <Link href="/actualite">
@@ -41,7 +65,6 @@ export default function Home() {
               </Link>
             ))
           }
-
         </div>
 
         <div className="mt-20" />
@@ -69,7 +92,13 @@ export default function Home() {
         <div className="mt-20" />
         <h1 className="font-bold text-lg md:text-3xl text-black mb-3">Trouver une paroisse</h1>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg bg-gray-100"></div>
+          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100">
+          <Map
+              parishes={parishes}
+              selectedParish={selectedParish}
+              onParishSelect={setSelectedParish}
+            />
+          </div>
           <div className="col-span-3 md:col-span-1 flex flex-col gap-3">
 
             {
@@ -90,8 +119,8 @@ export default function Home() {
         <div className="mt-16" />
       </div>
 
-      <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-yellow100 text-black'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
+      <section className='py-10 md:py-20 w-full bg-yellow100 text-black'>
+        <div className='container p-0 grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
           <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-10 py-5 md:py-8'>
             <span className='uppercase text-sm text-gray-600'>Message de l&lsquo;archevêque</span>
             <h1 className='text-lg md:text-2xl font-bold mb-3'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
@@ -131,8 +160,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='px-5 md:px-10 py-10 md:py-20 w-full bg-white'>
-        <div className='grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden'>
+      <section className='py-10 md:py-20 w-full bg-white'>
+        <div className='container p-0 grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden'>
           <div className='h-72 bg-gray-200 relative'>
             <Image
               alt="Faire un don maintenant"

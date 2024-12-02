@@ -54,30 +54,30 @@ export default function Header() {
     }
 
     return (
-        <header className=''>
-            <nav className='bg-gray-100 px-5 md:px-10 py-3 flex justify-between'>
-                <ul className='flex justify-center items-center space-x-3 text-[10px] text-gray-500'>
-                    <li>
-                        <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
-                    </li>
-                    <li>
-                        <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
-                    </li>
-                    <li>
-                        <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
-                    </li>
-                </ul>
-                <LanguageSelector />
+        <header className='relative'>
+            <nav className='py-1 bg-gray-100'>
+                <div className='container md:p-0 flex justify-between'>
+                    <ul className='flex justify-center items-center space-x-3 text-[10px] text-gray-500'>
+                        <li>
+                            <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
+                        </li>
+                        <li>
+                            <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
+                        </li>
+                        <li>
+                            <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
+                        </li>
+                    </ul>
+                    <LanguageSelector />
+                </div>
             </nav>
-            <nav className='px-5 md:px-10 py-4 flex justify-between relative'>
+            <nav className='container py-3 md:px-0 flex justify-between'>
                 <div className='relative w-20 h-9 rounded-md'>
                     <Image
                         alt="Logo diocèse de Moncton"
                         src="/brand-logo.png"
                         fill
-                        style={{
-                            objectFit: 'contain'
-                        }}
+                        style={{ objectFit: 'contain' }}
                     />
                 </div>
                 <ul className='flex justify-center items-center space-x-4 text-xs text-gray-500'>
@@ -94,7 +94,7 @@ export default function Header() {
                         Contribuer à la mission
                     </Button>
                 </div>
-                <div id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full left-0 right-0 z-50 px-10 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
+                <div id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full px-[8%] inset-0 z-50 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
                     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex'>
                         <div className='w-72 p-6 bg-[#F9F4F5]'>
                             <div className='relative h-36 w-full bg-white rounded-lg overflow-hidden'>

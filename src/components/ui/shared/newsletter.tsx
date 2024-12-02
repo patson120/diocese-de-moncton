@@ -5,8 +5,8 @@ import Button from './button'
 
 export default function Newsletter() {
   return (
-    <section className='px-5 md:px-10 py-8 md:py-10 w-full bg-[#FAFAFA]'>
-        <div className='flex flex-col md:flex-row justify-between gap-3'>
+    <section className='py-8 md:py-10 w-full bg-[#FAFAFA]'>
+        <div className='container p-0 flex flex-col md:flex-row justify-between gap-3'>
           <div className='text-black'>
             <h3 className='text-xl font-bold'>Newsletter</h3>
             <p className='text-gray-500 text-sm'>Abonnez-vous à notre newsletter pour obtenir les <br />nouveautés sur l&lsquo;église.</p>
