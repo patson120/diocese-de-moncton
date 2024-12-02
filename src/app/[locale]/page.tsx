@@ -40,7 +40,7 @@ const parishes = [
 export default function Home() {
   // const t = useTranslations("Index") 
 
-  const [selectedParish, setSelectedParish] = useState(null);
+  const [selectedParish, setSelectedParish] = useState<any>(null);
   return (
     <main className="bg-white">
       
