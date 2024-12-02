@@ -1,15 +1,15 @@
 'use client'
-import { events, news, paroisses } from "@/constants";
-import { Link } from "@/i18n/routing";
+import { HeroSection } from "@/components/sections/hero";
+import { Button } from "@/components/ui/button";
 import EventItem from "@/components/ui/home/event-item";
 import ParoisseItem from "@/components/ui/home/paroisse-item";
 import Actualite from "@/components/ui/shared/actualite";
 import ButtonIcon from "@/components/ui/shared/button-icon";
-import Image from "next/image";
-import { HeroSection } from "@/components/sections/hero";
-import { Button } from "@/components/ui/button";
+import { events, news, paroisses } from "@/constants";
+import { Link } from "@/i18n/routing";
 import { ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useState } from "react";
 
 

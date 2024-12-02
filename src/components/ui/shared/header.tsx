@@ -1,13 +1,13 @@
 'use client'
 
+import { LanguageSelector } from '@/components/language-selector'
+import { Button } from '@/components/ui/button'
 import { actualites, archidiocese, mouvements, ressources, sacrements } from '@/constants'
 import { MenuType } from '@/types'
+import { Heart } from "lucide-react"
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Button } from '@/components/ui/button';
-import { Heart, Globe, ChevronDown } from "lucide-react";
-import { LanguageSelector } from '@/components/language-selector'
 
 export default function Header() {
 
