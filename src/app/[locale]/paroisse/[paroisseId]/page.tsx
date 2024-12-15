@@ -2,7 +2,7 @@
 'use client'
 import { Button } from "@/components/ui/button";
 import { paroisses } from "@/constants";
-import { LocateFixed, LocateIcon, TimerIcon, UserCheck } from "lucide-react";
+import { MapPin, TimerIcon, UserCheck } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
@@ -156,7 +156,7 @@ export default function Page() {
 
                             <div className="pb-4 border-b-[1.5px] border-b-gray-200 space-y-2">
                                 <div className="flex items-center space-x-1">
-                                    <LocateFixed className="h-5 w-5 text-gray-500 cursor-pointer" />
+                                    <MapPin className="h-5 w-5 text-gray-500 cursor-pointer" />
                                     <h4 className="text-sm font-semibold">Coordonnées</h4>
                                 </div>
                                 <p className="text-xs">Adresse : 4049, Route 480, Acadieville</p>
@@ -164,7 +164,7 @@ export default function Page() {
 
                             <div className="pb-4 border-b-[1.5px] border-b-gray-200 space-y-2">
                                 <div className="flex items-center space-x-1">
-                                    <LocateFixed className="h-5 w-5 text-gray-500 cursor-pointer" />
+                                    <MapPin className="h-5 w-5 text-gray-500 cursor-pointer" />
                                     <h4 className="text-sm font-semibold">Secrétariat paroissial</h4>
                                 </div>
                                 <p className="text-xs">Adresse : 4049, Route 480 Acadieville NB E4Y 1Z3</p>
@@ -175,7 +175,7 @@ export default function Page() {
 
                             <div className="pb-4 space-y-2">
                                 <div className="flex items-center space-x-1">
-                                    <LocateFixed className="h-5 w-5 text-gray-500 cursor-pointer" />
+                                    <MapPin className="h-5 w-5 text-gray-500 cursor-pointer" />
                                     <h4 className="text-sm font-semibold">Catéchèse</h4>
                                 </div>
                                 <p className="text-xs">Téléphone : (506) 775-6744</p>

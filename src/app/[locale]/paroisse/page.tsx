@@ -5,7 +5,7 @@ import { paroisses } from '@/constants'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
-import { FilterIcon, Locate, Search } from 'lucide-react'
+import { FilterIcon, MapPin, Search } from 'lucide-react'
 import dynamic from "next/dynamic"
 
 // Import Map component dynamically to avoid SSR issues
@@ -35,7 +35,7 @@ export default function Page() {
     const [selectedParish, setSelectedParish] = useState<any>(null);
     return (
         <>
-            <div className='container py-0 my-10'>
+            <div className='container px-0 py-0 my-10'>
                 <div className='flex justify-center items-center gap-2 my-7'>
                     <div className='w-1/2 flex gap-2'>
                         <div className='relative flex-1'>
@@ -47,7 +47,7 @@ export default function Page() {
                             <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
                         </div>
                         <Button variant="secondary" className='bg-[#230105] text-[12px] text-white hover:bg-[#230105] ' onClick={() => { }}>
-                            <Locate className="mr-2 h-4 w-4 text-white" />
+                            <MapPin className="mr-2 h-4 w-4 text-white" />
                             Prendre ma position
                         </Button>
                     </div>

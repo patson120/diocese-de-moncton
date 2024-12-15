@@ -6,7 +6,7 @@ import ParoisseItem from "@/components/ui/home/paroisse-item";
 import Actualite from "@/components/ui/shared/actualite";
 import { events, news, paroisses } from "@/constants";
 import { Link } from "@/i18n/routing";
-import { ArrowRight, Locate, Search } from "lucide-react";
+import { ArrowRight, MapPin, Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -103,7 +103,7 @@ export default function Home() {
                   <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
                 </div>
                 <Button variant="secondary" className='bg-[#230105] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
-                  <Locate className="mr-2 h-4 w-4 text-white" />
+                  <MapPin className="mr-2 h-4 w-4 text-white" />
                   Prendre ma position
                 </Button>
               </div>
