@@ -1,8 +1,7 @@
-import { Link } from '@/i18n/routing'
 import { formatDateToLocal } from '@/_lib/utils'
 import Actualite from '@/components/ui/shared/actualite'
-import React from 'react'
 import { news } from '@/constants'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 
 export default function Page() {
@@ -12,7 +11,7 @@ export default function Page() {
         <div className="flex justify-between ">
         </div>
       </div>
-      <section className='px-5 md:px-10' >
+      <section className='container md:px-0 py-0' >
         <div className='grid grid-cols-1 lg:grid-cols-6 gap-5 lg:gap-10 py-4 lg:py-8'>
           <div className='col-span-full lg:col-span-4'>
             <div className='h-96 relative rounded-lg overflow-hidden bg-gray-100'>

@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import EventItem from "@/components/ui/home/event-item";
 import ParoisseItem from "@/components/ui/home/paroisse-item";
 import Actualite from "@/components/ui/shared/actualite";
-import ButtonIcon from "@/components/ui/shared/button-icon";
 import { events, news, paroisses } from "@/constants";
 import { Link } from "@/i18n/routing";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Locate, Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
@@ -39,22 +39,20 @@ const parishes = [
 
 export default function Home() {
   // const t = useTranslations("Index") 
+  const router = useRouter()
 
   const [selectedParish, setSelectedParish] = useState<any>(null);
   return (
     <main className="bg-white">
-      
       <HeroSection />
-
-      <div className="px-4 md:py-10 container md:px-0">
+      <div className="md:py-10 container md:px-0">
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Actualités</h1>
           <Link href="/actualite">
-            <ButtonIcon
-              title="Voir plus"
-              handleClick={() => { }}
-              containerStyle="px-3 py-1 font-medium border-none bg-transparent"
-            />
+            <Button variant='ghost' onClick={() => { }} className="p-0 text-xs hover:bg-transparent">
+              Voir plus
+              <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
+            </Button>
           </Link>
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -66,19 +64,16 @@ export default function Home() {
             ))
           }
         </div>
-
         <div className="mt-20" />
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-lg md:text-3xl text-black">Nos évènements</h1>
           <Link href='/evenement' >
-            <ButtonIcon
-              title="Voir plus"
-              handleClick={() => console.log("Evènement plus")}
-              containerStyle="px-3 py-1 font-medium border-none bg-transparent"
-            />
+            <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="p-0 text-xs hover:bg-transparent">
+              Voir plus
+              <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
+            </Button>
           </Link>
         </div>
-
         <section className="grid gap-4 grid-cols-1 md:grid-cols-2">
           {
             events.map((item, index) => (
@@ -92,12 +87,27 @@ export default function Home() {
         <div className="mt-20" />
         <h1 className="font-bold text-lg md:text-3xl text-black mb-3">Trouver une paroisse</h1>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100">
-          <Map
+          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100 relative">
+            <Map
               parishes={parishes}
               selectedParish={selectedParish}
               onParishSelect={setSelectedParish}
             />
+            <div className='w-full absolute top-4 left-0 right-0'>
+              <div className="px-5 w-[95%] flex gap-2">
+                <div className='relative flex-1'>
+                  <input type="text" placeholder="Entrez le code postale ou la ville..."
+                    className="w-full border border-gray-100 bg-gray-50 rounded-lg pr-3 pl-10 py-2
+                    text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+                    placeholder:text-xs sm:text-sm sm:leading-6 outline-none"/>
+                  <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
+                </div>
+                <Button variant="secondary" className='bg-[#230105] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
+                  <Locate className="mr-2 h-4 w-4 text-white" />
+                  Prendre ma position
+                </Button>
+              </div>
+            </div>
           </div>
           <div className="col-span-3 md:col-span-1 flex flex-col gap-3">
 

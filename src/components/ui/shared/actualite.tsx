@@ -18,7 +18,7 @@ export default function Actualite({ data }: { data: ActualiteType }) {
             <span className='text-sm font-medium text-primary'>{data.category}</span>
             <h4 className='text-sm font-bold line-clamp-2'>{data.title}</h4>
             <p className='line-clamp-2 text-xs text-gray-500'>{data.description}</p>
-            <p className='text-gray-400 text-xs'>Publié le {formatDateToLocal((new Date()).toISOString())}</p>
+            <p className='text-gray-400 text-[11px]'>Publié le {formatDateToLocal((new Date()).toISOString())}</p>
         </div>
     )
 }

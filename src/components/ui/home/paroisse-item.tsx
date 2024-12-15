@@ -15,9 +15,9 @@ export default function ParoisseItem({ data }: { data: ParoisseType }) {
                 />
             </div>
             <div>
-                <h4 className='text-sm font-semibold mb-2'>{data.title}</h4>
-                <p className='text-xs text-gray-500 line-clamp-1'>Adresse: {data.adresse}</p>
-                <span className='text-xs text-gray-400'>Tél.: {data.tel}</span>
+                <h4 className='text-xs font-semibold mb-2'>{data.title}</h4>
+                <p className='text-[10px] text-gray-500 line-clamp-1'>Adresse: {data.adresse}</p>
+                <span className='text-[10px] text-gray-400'>Tél.: {data.tel}</span>
             </div>
         </div>
     )

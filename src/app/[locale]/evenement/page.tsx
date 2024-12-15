@@ -1,7 +1,8 @@
-import { events } from '@/constants'
-import { Link } from '@/i18n/routing'
-import EventItem from '@/components/ui/home/event-item'
-import Image from 'next/image'
+import EventItem from '@/components/ui/home/event-item';
+import { events } from '@/constants';
+import { Link } from '@/i18n/routing';
+import { Search } from "lucide-react";
+import Image from 'next/image';
 
 export default function Page() {
     return (
@@ -83,12 +84,14 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <section className='px-5 md:px-10 pb-8'>
+
+            <div className='-translate-x-2'>
                 {/* Search bar */}
                 <SearchBar />
-
+            </div>
+            <section className='container p-0 pb-10'>
                 <div className='mt-2' />
-                <div className='w-1/2 mx-auto flex flex-col justify-center'>
+                <div className='w-2/3 mx-auto flex flex-col justify-center'>
                     {/* filter */}
                     <Filter />
                     <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Moi de septembre</h3>
@@ -155,11 +158,12 @@ const Filter = () => {
 const SearchBar = () => {
     return (
         <div className='flex justify-center items-center gap-2 -translate-y-6'>
-            <div className='w-1/2'>
+            <div className='w-1/2 relative'>
                 <input type="text" placeholder="Rechercher un évènement"
                     className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
                     text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
                     placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
+                <Search className="h-7 w-7 text-gray-300 absolute top-3 right-4 cursor-pointer" />
             </div>
         </div>
     )

@@ -1,10 +1,11 @@
+import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
 export default function Footer() {
+  const date = new Date()
   return (
-    <footer className='py-10 md:py-20'>
+    <footer className='py-10 md:pt-20'>
       <div className='container p-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 '>
         <div className='space-y-3'>
           <div className='relative h-12 w-[100px] overflow-hidden'>
@@ -69,6 +70,15 @@ export default function Footer() {
               <Link href="mailto:webmestre@diocesemoncton.ca">webmestre@diocesemoncton.ca</Link>
             </li>
           </ul>
+        </div>
+      </div>
+      <div className='container px-0 py-0 mt-10  flex flex-col md:flex-row md:justify-between space-y-2 '>
+        <p className='text-[11px] text-gray-400'>© {date.getFullYear()} Diocèse Moncton - Tous droits reservés</p>
+        <div className='flex justify-center items-center gap-4'>
+          <FacebookIcon className="h-4 w-4 text-gray-600" />
+          <TwitterIcon className="h-4 w-4 text-gray-600" />
+          <InstagramIcon className="h-4 w-4 text-gray-600" />
+          <YoutubeIcon className="h-4 w-4 text-gray-600" />
         </div>
       </div>
 
