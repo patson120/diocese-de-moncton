@@ -62,7 +62,7 @@ export default function Page() {
                                     <Calendar className="h-4 w-4 text-gray-400" />
                                     <label htmlFor="date" className='text-xs text-gray-500'>Date</label>
                                 </div>
-                                <h1 className='text-[11px] font-semibold'>Dimanche 29 Septembre</h1>
+                                <h1 className='text-[11px] font-semicold'>Dimanche 29 Septembre</h1>
                             </div>
                             <div className='space-y-1'>
                                 <div className='flex space-x-2'>
