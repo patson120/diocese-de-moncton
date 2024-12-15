@@ -1,9 +1,7 @@
-
 'use client'
 import ParoisseItem from '@/components/ui/home/paroisse-item'
 import { paroisses } from '@/constants'
 import { useState } from 'react'
-
 import { Button } from '@/components/ui/button'
 import { FilterIcon, MapPin, Search } from 'lucide-react'
 import dynamic from "next/dynamic"
