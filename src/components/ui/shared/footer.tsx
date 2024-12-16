@@ -67,7 +67,7 @@ export default function Footer() {
               <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
             </li>
             <li>
-              <Link href="mailto:webmestre@diocesemoncton.ca">webmestre@diocesemoncton.ca</Link>
+              <Link className='break-words' href="mailto:webmestre@diocesemoncton.ca">webmestre@diocesemoncton.ca</Link>
             </li>
           </ul>
         </div>
