@@ -3,7 +3,7 @@ import { formatDateToLocal } from '@/_lib/utils'
 import Actualite from '@/components/ui/shared/actualite'
 import { news } from '@/constants'
 import { Link } from '@/i18n/routing'
-import { FilterIcon, Search } from "lucide-react"
+import { Search, SlidersHorizontalIcon } from "lucide-react"
 import Image from 'next/image'
 
 export default function Page() {
@@ -91,7 +91,7 @@ const Filter = () => {
   return (
     <div className='flex justify-center items-center gap-2'>
       <div className='flex items-center space-x-2'>
-      <FilterIcon className="h-4 w-4 text-gray-600" />
+      <SlidersHorizontalIcon className="h-4 w-4 text-gray-600" />
         <label className='text-sm font-bold' htmlFor="filter">Filtrer les résultats</label>
         {/* <select id="date" name="date" className="border-2 border-gray-200 p-2 rounded-lg w-full">
               <option value="" disabled>Tous</option>

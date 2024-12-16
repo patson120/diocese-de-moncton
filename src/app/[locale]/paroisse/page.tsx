@@ -1,10 +1,10 @@
 'use client'
+import { Button } from '@/components/ui/button'
 import ParoisseItem from '@/components/ui/home/paroisse-item'
 import { paroisses } from '@/constants'
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { FilterIcon, MapPin, Search } from 'lucide-react'
+import { MapPin, Search, SlidersHorizontalIcon } from 'lucide-react'
 import dynamic from "next/dynamic"
+import { useState } from 'react'
 
 // Import Map component dynamically to avoid SSR issues
 const Map = dynamic(() => import('@/components/map'), { ssr: false });
@@ -80,7 +80,7 @@ const Filter = () => {
     return (
         <div className='flex flex-wrap items-center gap-2 !text-nowrap text-[10px]'>
             <div className='flex items-center space-x-2'>
-                <FilterIcon className="h-4 w-4 text-gray-600" />
+                <SlidersHorizontalIcon className="h-4 w-4 text-gray-600" />
                 <label className='font-bold' htmlFor="filter">Filtrer les résultats</label>
             </div>
             <label className='font-bold px-2 py-1 rounded-full bg-gray-100 cursor-pointer' htmlFor="tous">Tous</label>
