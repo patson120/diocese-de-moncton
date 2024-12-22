@@ -119,7 +119,7 @@ export default function Home() {
               ))
             }
             <Link href="/paroisse">
-              <Button onClick={() => { }} className="w-full ">
+              <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
                 Voir toutes les 23 paroisses
                 <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
               </Button>
@@ -131,22 +131,24 @@ export default function Home() {
 
       <section className='py-10 md:py-20 w-full bg-yellow100 text-black'>
         <div className='container p-0 grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
-          <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-10 py-5 md:py-8'>
-            <span className='uppercase text-sm text-gray-600'>Message de l&lsquo;archevêque</span>
-            <h1 className='text-lg md:text-2xl font-bold mb-3'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
-            <p className='text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae unde harum nulla qui quae ratione. Facilis veniam maiores laboriosam nam sit unde libero officia ratione iure nobis, voluptate autem quos perferendis odit quaerat consequatur voluptatibus! Dolore ipsum earum sunt rerum eos commodi, facere adipisci nesciunt quasi pariatur incidunt, illo cumque! <br /> <br />
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate aspernatur numquam amet quibusdam maxime ea ullam sapiente possimus. Animi, expedita. A, cupiditate consequuntur! Laboriosam quo vero rerum quae animi? Harum itaque libero unde! Pariatur soluta temporibus quaerat id illum.</p>
+          <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-10'>
+            <div>
+              <span className='uppercase text-gray-600'>Message de l&lsquo;archevêque</span>
+              <h1 className='text-xl md:text-2xl lg:text-4xl font-bold lg:font-extrabold'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
+            </div>
+            <p className='text-base lg:text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-            <div className='mt-8 flex flex-row space-x-2'>
+            <div className='flex flex-row space-x-2'>
               <Button
                 variant="outline"
                 onClick={() => { }}
-                className='font-medium'
+                className='font-medium text-sm md:text-base lg:text-xl'
               >Voir plus</Button>
               <Button
                 variant="outline"
                 onClick={() => { }}
-                className='bg-transparent hover:bg-transparent border-black font-semibold'
+                className='bg-transparent hover:bg-transparent border-black font-semibold text-sm md:text-base lg:text-xl'
               >Voir tous les messages</Button>
             </div>
           </div>
@@ -159,11 +161,10 @@ export default function Home() {
                 objectFit: 'cover'
               }}
             />
-
             <div className="absolute bottom-0 left-0 right-0">
               <div className="p-4">
-                <h3 className="text-white text-[12px] font-medium">Mgr Guy Desrochers</h3>
-                <p className=" text-white text-[9px]">Archevêque du diocèse de Moncton</p>
+                <h3 className="text-white text-sm md:text-lg lg:text-xl font-medium">Mgr Guy Desrochers</h3>
+                <p className=" text-white text-xs md:text-sm lg:text-lg">Archevêque du diocèse de Moncton</p>
               </div>
             </div>
           </div>
@@ -184,11 +185,11 @@ export default function Home() {
           </div>
           <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
             <div>
-              <h1 className='text-lg md:text-2xl font-bold mb-2'>Soutenez notre mission</h1>
-              <p>Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
+              <h1 className='text-xl md:text-2xl lg:text-4xl font-bold mb-2'>Soutenez notre mission</h1>
+              <p className="text-base md:text-lg lg:text-xl">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
             </div>
             <div className='flex'>
-              <Button onClick={() => { }} className="">
+              <Button onClick={() => { }} className="md:py-6 text-sm md:text-base lg:text-xl">
                 Faire un don maintenant
               </Button>
             </div>
