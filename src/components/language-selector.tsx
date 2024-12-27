@@ -36,9 +36,9 @@ export function LanguageSelector() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}>
             <div className='h-8 text-xs flex flex-row justify-center items-center'>
-              <Globe className="mr-[5px] h-3 w-3 md:h-5 md:w-5" />
-              <p className="text-xs md:text-sm lg:text-xl">Canada({ languages.find(l => l.code === localActive)?.name})</p>
-              <ChevronDown className="ml-1 h-4 w-4 md:h-7 md:w-7" />
+              <Globe className="mr-[5px] h-3 w-3 md:h-4 md:w-4" />
+              <p className="text-xs md:text-sm lg:text-sm xl:text-base">Canada({ languages.find(l => l.code === localActive)?.name})</p>
+              <ChevronDown className="ml-1 h-4 w-4 md:h-5 md:w-5" />
             </div>
           </motion.div>
         </Button>
@@ -50,7 +50,7 @@ export function LanguageSelector() {
             onClick={() => changeLanguage(lang.code)}
             className="flex items-center gap-2 cursor-pointer"
           >
-            <span className="text-xs md:text-sm lg:text-base">{lang.flag}</span>
+            <span className="text-xs md:text-sm xl:text-base">{lang.flag}</span>
             <span className="text-xs md:text-sm lg:text-xl">{lang.name}</span>
             {localActive === lang.code && (
               <motion.div
