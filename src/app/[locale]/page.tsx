@@ -134,9 +134,9 @@ export default function Home() {
           <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-10'>
             <div>
               <span className='uppercase text-gray-600'>Message de l&lsquo;archevêque</span>
-              <h1 className='text-xl md:text-2xl lg:text-4xl font-bold lg:font-extrabold'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
+              <h1 className='text-xl xl:text-3xl font-bold lg:font-extrabold'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
             </div>
-            <p className='text-base md:text-lg xl:text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br />
+            <p className='text-base md:text-lg xl:text-xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
             <div className='flex flex-row space-x-2'>
