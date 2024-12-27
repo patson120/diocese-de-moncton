@@ -130,7 +130,7 @@ export default function Header() {
 const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     return (
         <div className='flex justify-start items-center space-x-4 text-black'>
-            <div className='h-[60px] w-[80px] rounded-lg bg-[#F9F4F5] overflow-hidden relative'>
+            <div className='h-[60px] w-[60px] shrink-0 rounded-lg bg-[#F9F4F5] overflow-hidden relative'>
                 {/* <Image
                     alt=""
                     src="/assets/img/campost.jpg"
@@ -142,7 +142,7 @@ const SubmenuItem = ({ menu }: { menu: MenuType }) => {
             </div>
             <div>
                 <h4 className='text-xs md:text-sm xl:text-lg font-semibold lg:font-bold'>{menu.title}</h4>
-                <p className='text-xs md:text-sm xl:text-base text-gray-500 line-clamp-2'>{menu.description}</p>
+                <p className='text-xs md:text-sm text-gray-500 line-clamp-2'>{menu.description}</p>
             </div>
         </div>
     )

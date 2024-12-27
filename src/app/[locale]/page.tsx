@@ -47,7 +47,7 @@ export default function Home() {
       <HeroSection />
       <div className="md:py-10 container md:px-0">
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="font-bold text-lg md:text-3xl text-black">Actualités</h1>
+          <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black">Actualités</h1>
           <Link href="/actualite">
             <Button variant='ghost' onClick={() => { }} className="p-0 text-xs hover:bg-transparent">
               Voir plus
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
         <div className="mt-20" />
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="font-bold text-lg md:text-3xl text-black">Nos évènements</h1>
+          <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black">Nos évènements</h1>
           <Link href='/evenement' >
             <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="p-0 text-xs hover:bg-transparent">
               Voir plus
@@ -85,7 +85,7 @@ export default function Home() {
         </section>
 
         <div className="mt-20" />
-        <h1 className="font-bold text-lg md:text-3xl text-black mb-3">Trouver une paroisse</h1>
+        <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black mb-3">Trouver une paroisse</h1>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100 relative">
             <Map
@@ -136,7 +136,7 @@ export default function Home() {
               <span className='uppercase text-gray-600'>Message de l&lsquo;archevêque</span>
               <h1 className='text-xl md:text-2xl lg:text-4xl font-bold lg:font-extrabold'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
             </div>
-            <p className='text-base lg:text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br />
+            <p className='text-base md:text-lg xl:text-2xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
             <div className='flex flex-row space-x-2'>
@@ -186,10 +186,10 @@ export default function Home() {
           <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
             <div>
               <h1 className='text-xl md:text-2xl lg:text-4xl font-bold mb-2'>Soutenez notre mission</h1>
-              <p className="text-base md:text-lg lg:text-xl">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
+              <p className="text-base md:text-lg xl:text-xl">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
             </div>
             <div className='flex'>
-              <Button onClick={() => { }} className="md:py-6 text-sm md:text-base lg:text-xl">
+              <Button onClick={() => { }} className="md:py-6 text-sm md:text-base lg:text-lg xl:text-xl">
                 Faire un don maintenant
               </Button>
             </div>
