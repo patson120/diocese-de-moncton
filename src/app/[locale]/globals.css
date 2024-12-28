@@ -81,6 +81,7 @@
   }
 
   body {
+    font-family: 'Inter';
     @apply bg-background text-foreground;
   }
 
@@ -89,6 +90,35 @@
   }
 
   .max-margin{
-    @apply xl:px-28 ;
+    @apply xl:px-10 ;
+  }
+
+  .heading-1 {
+    @apply font-bold text-xl md:text-3xl xl:text-5xl text-[#1D0104] leading-[52.8px];
+  }
+  .heading-2 {
+    @apply font-bold text-lg md:text-2xl xl:text-4xl text-[#1D0104] leading-[39.6px];
+  }
+  .heading-3 {
+    @apply font-bold text-base md:text-xl xl:text-3xl text-[#1D0104] leading-[30px];
+  }
+  .heading-4 {
+    @apply font-bold text-sm md:text-lg xl:text-2xl text-[#1D0104] leading-[28.8px];
+  }
+  .heading-5 {
+    @apply font-bold text-xs md:text-base xl:text-[22px] text-[#1D0104] leading-[28.6px];
+  }
+
+  .body-1 {
+    @apply text-sm md:text-base xl:text-lg leading-[28px];
+  }
+  .body-2 {
+    @apply text-xs md:text-sm xl:text-base leading-[25px];
+  }
+  .body-3 {
+    @apply text-[10px] md:text-xs xl:text-sm leading-[19.6px];
+  }
+  .legend {
+    @apply text-[10px] md:text-xs;
   }
 }

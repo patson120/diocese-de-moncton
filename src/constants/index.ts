@@ -361,12 +361,12 @@ export const events: EventType[] = [
         title: "40e anniversaire du pape Jean Pa...",
         type: "Communautaire, Formation, Célébration"
     },
-    {
-        jour: "23",
-        heure: "14h00",
-        mois: "Sept",
-        lieu: "Au diocèse de Moncton",
-        title: "Monday the movies",
-        type: "Communautaire, Formation, Célébration"
-    },
+    // {
+    //     jour: "23",
+    //     heure: "14h00",
+    //     mois: "Sept",
+    //     lieu: "Au diocèse de Moncton",
+    //     title: "Monday the movies",
+    //     type: "Communautaire, Formation, Célébration"
+    // },
 ]

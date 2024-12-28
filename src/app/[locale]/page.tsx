@@ -47,10 +47,10 @@ export default function Home() {
       <HeroSection />
       <div className="container md:px- md:py-10 max-margin">
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black">Actualités</h1>
+          <h1 className="heading-3">Actualités</h1>
           <Link href="/actualite">
-            <Button variant='ghost' onClick={() => { }} className="p-0 text-xs md:text-sm xl:text-base font-bold hover:bg-transparent">
-            Voir toute l’actualité
+            <Button variant='ghost' onClick={() => { }} className="body-3 p-0 hover:bg-transparent">
+              Voir toute l’actualité
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
           </Link>
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
             news.map((item, index) => (
-              <Link key={index} href="/actualite/1" className='text-blue-600'>
+              <Link key={index} href="/actualite/1" className=''>
                 <Actualite data={item} />
               </Link>
             ))
@@ -66,18 +66,18 @@ export default function Home() {
         </div>
         <div className="mt-20" />
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black">Nos évènements</h1>
+          <h1 className="heading-3">Nos évènements</h1>
           <Link href='/evenement' >
-            <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="p-0 text-xs md:text-sm xl:text-base font-bold hover:bg-transparent">
-            Voir tous les évènements
+            <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="body-3 p-0 hover:bg-transparent">
+              Voir tous les évènements
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
           </Link>
         </div>
-        <section className="grid gap-4 grid-cols-1 md:grid-cols-2">
+        <section className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {
             events.map((item, index) => (
-              <Link key={index} href="/evenement/1" className='text-blue-600'>
+              <Link key={index} href="/evenement/1" className=''>
                 <EventItem data={item} />
               </Link>
             ))
@@ -85,7 +85,7 @@ export default function Home() {
         </section>
 
         <div className="mt-20" />
-        <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black mb-3">Trouver une paroisse</h1>
+        <h1 className="heading-1 mb-3">Trouver une paroisse</h1>
         <section className="grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12">
           <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100 relative">
             <Map
@@ -171,30 +171,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='py-10 md:py-20 w-full bg-white'>
-        <div className='container p-0 grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden'>
-          <div className='h-72 bg-gray-200 relative'>
-            <Image
-              alt="Faire un don maintenant"
-              src="/assets/img/make-gift.png"
-              fill
-              style={{
-                objectFit: 'cover'
-              }}
-            />
-          </div>
-          <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
-            <div>
-              <h1 className='text-xl md:text-2xl xl:text-4xl font-bold mb-2'>Soutenez notre mission</h1>
-              <p className="text-base xl:text-lg">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
+      <section className=' py-10 md:py-20 w-full bg-white'>
+        <div className="container max-margin py-0">
+          <div className='grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden'>
+            <div className='h-72 bg-gray-200 relative'>
+              <Image
+                alt="Faire un don maintenant"
+                src="/assets/img/make-gift.png"
+                fill
+                style={{
+                  objectFit: 'cover'
+                }}
+              />
             </div>
-            <div className='flex'>
-              <Button onClick={() => { }} className="md:py-6 text-sm md:text-base lg:text-lg xl:text-xl">
-                Faire un don maintenant
-              </Button>
+            <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
+              <div>
+                <h1 className='heading-1 mb-2'>Soutenez notre mission</h1>
+                <p className="text-base xl:text-lg">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
+              </div>
+              <div className='flex'>
+                <Button onClick={() => { }} className="md:py-6 text-sm md:text-base lg:text-lg xl:text-xl">
+                  Faire un don maintenant
+                </Button>
+              </div>
             </div>
-          </div>
-        </div>
+          </div></div>
       </section>
     </main>
   );

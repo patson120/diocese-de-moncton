@@ -4,18 +4,16 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
-import { Roboto, Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import "./globals.css";
 import { Language } from '@/types';
 import Header from '@/components/ui/shared/header';
 import Newsletter from '@/components/ui/shared/newsletter';
 import Footer from '@/components/ui/shared/footer';
 
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const roboto = Roboto({ 
+const inter = Inter({ 
   subsets: ['latin'],
-  variable: '--font-roboto',
+  variable: '--font-inter',
   weight: ['300', '400', '500', '700', '900']
 });
 
@@ -44,7 +42,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${inter.variable} ${roboto.variable} font-sans antialiased select-none`}>
+        className={`${inter.variable} font-inter antialiased select-none`}>
         <NextIntlClientProvider messages={messages}>
           <main>
             {/* Header */}
