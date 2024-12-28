@@ -87,4 +87,8 @@
   .container {
     @apply max-w-screen-2xl mx-auto px-4 py-10;
   }
+
+  .max-margin{
+    @apply xl:px-28 ;
+  }
 }

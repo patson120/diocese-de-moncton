@@ -45,12 +45,12 @@ export default function Home() {
   return (
     <main className="bg-white">
       <HeroSection />
-      <div className="md:py-10 container md:px-0">
+      <div className="container md:px- md:py-10 max-margin">
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black">Actualités</h1>
           <Link href="/actualite">
-            <Button variant='ghost' onClick={() => { }} className="p-0 text-xs hover:bg-transparent">
-              Voir plus
+            <Button variant='ghost' onClick={() => { }} className="p-0 text-xs md:text-sm xl:text-base font-bold hover:bg-transparent">
+            Voir toute l’actualité
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
           </Link>
@@ -68,8 +68,8 @@ export default function Home() {
         <div className="mb-3 flex justify-between items-center">
           <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black">Nos évènements</h1>
           <Link href='/evenement' >
-            <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="p-0 text-xs hover:bg-transparent">
-              Voir plus
+            <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="p-0 text-xs md:text-sm xl:text-base font-bold hover:bg-transparent">
+            Voir tous les évènements
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
           </Link>
@@ -86,7 +86,7 @@ export default function Home() {
 
         <div className="mt-20" />
         <h1 className="font-bold text-xl md:text-2xl xl:text-4xl text-black mb-3">Trouver une paroisse</h1>
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12">
           <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100 relative">
             <Map
               parishes={parishes}
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-3 md:col-span-1 flex flex-col gap-3">
+          <div className="col-span-3 md:col-span-1 flex flex-col gap-3 lg:gap-5">
 
             {
               paroisses.map((item, index) => (
@@ -130,7 +130,7 @@ export default function Home() {
       </div>
 
       <section className='py-10 md:py-20 w-full bg-yellow100 text-black'>
-        <div className='container p-0 grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6'>
+        <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12'>
           <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-10'>
             <div>
               <span className='uppercase text-gray-600'>Message de l&lsquo;archevêque</span>
@@ -185,8 +185,8 @@ export default function Home() {
           </div>
           <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
             <div>
-              <h1 className='text-xl md:text-2xl lg:text-4xl font-bold mb-2'>Soutenez notre mission</h1>
-              <p className="text-base md:text-lg xl:text-xl">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
+              <h1 className='text-xl md:text-2xl xl:text-4xl font-bold mb-2'>Soutenez notre mission</h1>
+              <p className="text-base xl:text-lg">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
             </div>
             <div className='flex'>
               <Button onClick={() => { }} className="md:py-6 text-sm md:text-base lg:text-lg xl:text-xl">
