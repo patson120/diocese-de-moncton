@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ParoisseItem({ data }: { data: ParoisseType }) {
     return (
         <div className='flex justify-start items-center space-x-4 text-black'>
-            <div className='h-[80px] w-[80px] rounded-lg bg-gray-100 overflow-hidden relative'>
+            <div className='h-[80px] w-[80px] shrink-0 rounded-lg bg-gray-100 overflow-hidden relative'>
                 <Image
                     alt={data.title}
                     src={data.image}

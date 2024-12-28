@@ -87,7 +87,7 @@ export default function Home() {
         <div className="mt-20" />
         <h1 className="heading-3 mb-3">Trouver une paroisse</h1>
         <section className="grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12">
-          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100 relative">
+          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-[16px] overflow-hidden bg-gray-50 relative">
             <Map
               parishes={parishes}
               selectedParish={selectedParish}
@@ -132,23 +132,24 @@ export default function Home() {
       <section className='py-10 md:py-20 w-full bg-yellow100 text-black'>
         <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12'>
           <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-10'>
-            <div>
-              <span className='uppercase text-gray-600'>Message de l&lsquo;archevêque</span>
-              <h1 className='text-xl xl:text-3xl font-bold lg:font-extrabold'>Mise à jour des tarifs diocésains pour les célébrations de funérailles et de mariages.</h1>
+            <div className="space-y-3">
+              <span className='heading-3 font-extrabold'>Message de l&lsquo;Archevêque</span>
+              <h1 className='heading-5'>“ Décret de suppression de la paroisse Saint-Timothée de Shemogue ”</h1>
             </div>
-            <p className='text-base md:text-lg xl:text-xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /> <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p className='body-2'>A tous ceux et celles qui liront les présentes, Graces et bénédictions dans le Seigneur.<br /> <br />
+            CONSIDERANT que le code de droit canonique donne à l’évêque diocésain le pouvoir d’ériger, supprimer ou de modifier les paroisses, après avoir entendu le conseil presbtéral et ce conformément au canon 515<br /> <br />
+            CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p>
 
             <div className='flex flex-row space-x-2'>
               <Button
                 variant="outline"
                 onClick={() => { }}
-                className='font-medium text-sm md:text-base lg:text-xl'
+                className='font-bold'
               >Voir plus</Button>
               <Button
                 variant="outline"
                 onClick={() => { }}
-                className='bg-transparent hover:bg-transparent border-black font-semibold text-sm md:text-base lg:text-xl'
+                className='bg-transparent hover:bg-transparent border-black font-bold'
               >Voir tous les messages</Button>
             </div>
           </div>
@@ -163,8 +164,8 @@ export default function Home() {
             />
             <div className="absolute bottom-0 left-0 right-0">
               <div className="p-4">
-                <h3 className="text-white text-sm md:text-lg lg:text-xl font-medium">Mgr Guy Desrochers</h3>
-                <p className=" text-white text-xs md:text-sm lg:text-lg">Archevêque du diocèse de Moncton</p>
+                <h3 className="text-white body-1 font-semibold">Mgr Guy Desrochers</h3>
+                <p className=" text-white body-2">Archevêque du diocèse de Moncton</p>
               </div>
             </div>
           </div>
@@ -186,11 +187,11 @@ export default function Home() {
             </div>
             <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
               <div>
-                <h1 className='heading-1 mb-2'>Soutenez notre mission</h1>
-                <p className="text-base xl:text-lg">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
+                <h1 className='heading-3 mb-2'>Soutenez notre mission</h1>
+                <p className="body-2">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
               </div>
               <div className='flex'>
-                <Button onClick={() => { }} className="md:py-6 text-sm md:text-base lg:text-lg xl:text-xl">
+                <Button onClick={() => { }} className="md:py-2 body-2">
                   Faire un don maintenant
                 </Button>
               </div>
