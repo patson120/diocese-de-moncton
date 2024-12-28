@@ -49,7 +49,7 @@ export default function Home() {
         <div className="mb-3 flex justify-between items-center">
           <h1 className="heading-3">Actualités</h1>
           <Link href="/actualite">
-            <Button variant='ghost' onClick={() => { }} className="body-3 p-0 hover:bg-transparent">
+            <Button variant='ghost' onClick={() => { }} className="body-3 font-semibold p-0 hover:bg-transparent">
               Voir toute l’actualité
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
@@ -68,7 +68,7 @@ export default function Home() {
         <div className="mb-3 flex justify-between items-center">
           <h1 className="heading-3">Nos évènements</h1>
           <Link href='/evenement' >
-            <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="body-3 p-0 hover:bg-transparent">
+            <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="body-3 font-semibold p-0 hover:bg-transparent">
               Voir tous les évènements
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
@@ -85,7 +85,7 @@ export default function Home() {
         </section>
 
         <div className="mt-20" />
-        <h1 className="heading-1 mb-3">Trouver une paroisse</h1>
+        <h1 className="heading-3 mb-3">Trouver une paroisse</h1>
         <section className="grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12">
           <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-lg overflow-hidden bg-gray-100 relative">
             <Map

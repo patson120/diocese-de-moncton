@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function EventItem({ data }: { data: EventType }) {
     return (
-        <div className='p-2 md:p-3 space-y-3 rounded-lg text-black border border-gray-200 hover:bg-[#EEDEE1] '>
+        <div className='p-2 md:p-3 space-y-3 rounded-[12px] text-black border border-gray-200 hover:bg-[#EEDEE1] '>
             <div className='flex flex-row justify-between items-center divide-x'>
                 <div className='w-[70px] text-center flex-col justify-center items-center '>
                     <p className='heading-4 font-extrabold text-primary'>{data.jour}</p>
