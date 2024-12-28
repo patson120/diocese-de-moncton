@@ -55,23 +55,25 @@ export default function Header() {
 
     return (
         <header className='relative'>
-            <nav className='py-1 bg-gray-100'>
-                <div className='container md:p-0 flex justify-between'>
-                    <ul className='flex justify-center items-center space-x-3 text-xs md:text-sm lg:text-sm text-gray-500'>
-                        <li>
-                            <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
-                        </li>
-                        <li>
-                            <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
-                        </li>
-                        <li>
-                            <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
-                        </li>
-                    </ul>
-                    <LanguageSelector />
-                </div>
-            </nav>
-            <nav className='container py-3 md:px-0 flex justify-between'>
+            <div className='bg-gray-100'>
+                <nav className='container max-margin py-1'>
+                    <div className='flex justify-between'>
+                        <ul className='flex justify-center items-center space-x-3 text-xs md:text-sm lg:text-sm text-gray-500'>
+                            <li>
+                                <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
+                            </li>
+                            <li>
+                                <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
+                            </li>
+                            <li>
+                                <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
+                            </li>
+                        </ul>
+                        <LanguageSelector />
+                    </div>
+                </nav>
+            </div>
+            <nav className='container max-margin py-3 flex justify-between'>
                 <div className='relative w-20 h-10 xl:w-32 xl:h-14 rounded-md'>
                     <Image
                         alt="Logo diocèse de Moncton"
@@ -80,16 +82,16 @@ export default function Header() {
                         style={{ objectFit: 'contain' }}
                     />
                 </div>
-                <ul className='flex justify-center items-center space-x-4 text-xs md:text-sm xl:text-base text-gray-500'>
-                    <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-bold'><Link href="/">Accueil</Link></li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Archidiocèse</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Sacréments</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Actualités</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Mouvements</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:font-bold'>Ressources</li>
+                <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
+                    <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
+                    <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
+                    <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
+                    <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li>
+                    <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
+                    <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Ressources</li>
                 </ul>
                 <div className='flex'>
-                    <Button variant="outline" className='border border-primary hover:text-primary text-primary text-xs md:text-sm xl:text-lg py-2' onClick={() => { }}>
+                    <Button variant="outline" className='border border-primary hover:text-primary text-primary body-3 font-extrabold py-2' onClick={() => { }}>
                         <Heart className="mr-2 h-4 w-4 xl:h-5 xl:w-5 text-primary" />
                         Contribuer à la mission
                     </Button>
@@ -107,9 +109,9 @@ export default function Header() {
                                     }}
                                 />
                             </div>
-                            <h3 className='text-base md:text-base xl:text-xl font-bold mt-2'>Horaires de messe</h3>
-                            <p className='text-xs md:text-sm xl:text-base text-gray-500 mt-2 mb-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
-                            <Button className='w-full text-xs md:text-sm xl:text-xl' onClick={() => { }}>
+                            <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
+                            <p className='body-3 text-gray-500 mt-2 mb-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
+                            <Button className='w-full body-2 xl:text-xl' onClick={() => { }}>
                                 En savoir plus
                             </Button>
                         </div>
@@ -130,7 +132,7 @@ export default function Header() {
 const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     return (
         <div className='flex justify-start items-center space-x-4 text-black'>
-            <div className='h-[60px] w-[60px] shrink-0 rounded-lg bg-[#F9F4F5] overflow-hidden relative'>
+            <div className='h-[60px] w-[60px] shrink-0 rounded-[12px] bg-[#F9F4F5] overflow-hidden relative'>
                 {/* <Image
                     alt=""
                     src="/assets/img/campost.jpg"
@@ -141,8 +143,8 @@ const SubmenuItem = ({ menu }: { menu: MenuType }) => {
                 /> */}
             </div>
             <div>
-                <h4 className='text-xs md:text-sm xl:text-lg font-semibold lg:font-bold'>{menu.title}</h4>
-                <p className='text-xs md:text-sm text-gray-500 line-clamp-2'>{menu.description}</p>
+                <h4 className='body-3 font-semibold lg:font-bold'>{menu.title}</h4>
+                <p className='legend text-gray-500 line-clamp-2'>{menu.description}</p>
             </div>
         </div>
     )
