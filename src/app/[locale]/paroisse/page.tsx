@@ -1,5 +1,5 @@
 'use client'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/shared/button'
 import ParoisseItem from '@/components/ui/home/paroisse-item'
 import { paroisses } from '@/constants'
 import { MapPin, Search, SlidersHorizontalIcon } from 'lucide-react'

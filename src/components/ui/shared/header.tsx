@@ -1,7 +1,7 @@
 'use client'
 
 import { LanguageSelector } from '@/components/language-selector'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/shared/button'
 import { actualites, archidiocese, mouvements, ressources, sacrements } from '@/constants'
 import { MenuType } from '@/types'
 import { Heart } from "lucide-react"

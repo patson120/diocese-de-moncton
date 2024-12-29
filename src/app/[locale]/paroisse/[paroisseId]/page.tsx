@@ -1,6 +1,6 @@
 
 'use client'
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/shared/button";
 import { paroisses } from "@/constants";
 import { MapPin, TimerIcon, UserCheck } from "lucide-react";
 import dynamic from "next/dynamic";
