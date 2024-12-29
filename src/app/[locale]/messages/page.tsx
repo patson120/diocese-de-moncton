@@ -24,7 +24,7 @@ export default function Page() {
                 />
                 <div className="absolute inset-0 bg-black/40">
                     <div className='container max-margin py-0 h-full flex flex-col justify-center items-center'>
-                        <div className='w-full h-full flex flex-col justify-between translate-y-10 md:translate-y-0 '>
+                        <div className='w-full h-full flex flex-col justify-between translate-y-7 md:translate-y-0 '>
                             <div className='' />
                             <div className='flex flex-col md:flex-row justify-start items-center gap-8 xl:gap-10'>
                                 <div className='h-64 w-64 shrink-0 relative overflow-hidden border-2 border-gray-400'>
