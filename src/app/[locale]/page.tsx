@@ -46,6 +46,28 @@ export default function Home() {
   return (
     <main className="bg-white">
       <HeroSection />
+      {/*  */}
+      <div className='container max-margin md:hidden w-full my-[40px]'>
+        <div className="bg-[#F9F4F5] rounded-xl overflow-hidden">
+          <div className='relative h-72 w-full bg-white overflow-hidden'>
+            <Image
+              alt="Submenu banner"
+              src="/assets/img/submenu-banner.png"
+              fill
+              style={{
+                objectFit: 'cover'
+              }}
+            />
+          </div>
+          <div className="p-5">
+            <h3 className='body-1 font-bold mt-2'>Horaires des messes</h3>
+            <p className='body-3 text-gray-500 mt-2 mb-8'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
+            <Button className='w-full body-2 xl:text-xl' onClick={() => { }}>
+              Voir les horaires
+            </Button>
+          </div>
+        </div>
+      </div>
       <div className="container md:px- md:py-10 max-margin">
         <div className="mb-3 flex justify-between items-center">
           <h1 className="heading-3">Actualités</h1>
