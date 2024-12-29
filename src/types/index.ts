@@ -33,3 +33,9 @@ export type EventType = {
     title: string;
     type: string;
 }
+
+export type MessageType = {
+    title: string;
+    date: string;
+    description: string;
+}

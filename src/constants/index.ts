@@ -1,4 +1,4 @@
-import { ActualiteType, EventType, MenuType, ParoisseType } from "@/types"
+import { ActualiteType, EventType, MenuType, MessageType, ParoisseType } from "@/types"
 
 export const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = 'AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVWyJnYlg'
 
@@ -369,4 +369,52 @@ export const events: EventType[] = [
     //     title: "Monday the movies",
     //     type: "Communautaire, Formation, Célébration"
     // },
+]
+
+export const messages: MessageType[] = [
+    {
+        title: "Décret de suppression de la paroisse Saint-Timothée de Shemogue",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Quête spéciale envers le relèvement financier du diocèse",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Nominations ecclésiales pour l'archidiocèse de Moncton",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Décret établissant les nouveaux tarifs diocésains pour les funérailles et les mar...",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Décret épiscopal rétablissant l'obligation d'assister à la messe dominicale",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Mise à jour de Mgr Desrochers sur l'état des poursuites contre l'archidiocèse, en...",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Mise à jour de Mgr Desrochers sur l'état des poursuites contre l'archidiocèse, en...",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Mise à jour de Mgr Desrochers sur l'état des poursuites contre l'archidiocèse, en...",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
+    {
+        title: "Mise à jour de Mgr Desrochers sur l'état des poursuites contre l'archidiocèse, en...",
+        date: "25 Jan 2025",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt reiciendis vero repudiandae eveniet, animi nisi odio totam ratione iste debitis."
+    },
 ]

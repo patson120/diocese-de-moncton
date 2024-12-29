@@ -151,11 +151,13 @@ export default function Home() {
                 onClick={() => { }}
                 className='font-bold'
               >En savoir plus</Button>
-              <Button
-                variant="outline"
-                onClick={() => { }}
-                className='bg-transparent hover:bg-transparent border-black font-bold'
-              >Voir tous les messages</Button>
+              <Link href="/messages">
+                <Button
+                  variant="outline"
+                  onClick={() => { }}
+                  className='bg-transparent hover:bg-transparent border-black font-bold'
+                >Voir tous les messages</Button>
+              </Link>
             </div>
           </div>
           <div className='md:order-last min-h-80 md:h-auto md:col-span-1 relative rounded-2xl overflow-hidden bg-gray-200'>
@@ -167,7 +169,7 @@ export default function Home() {
                 objectFit: 'cover'
               }}
             />
-            <div className="absolute inset-0 bg-black/40 md:bg-black/30 "/>
+            <div className="absolute inset-0 bg-black/40 md:bg-black/30 " />
             <div className="absolute bottom-0 left-0 right-0">
               <div className="p-4">
                 <h3 className="text-white body-1 font-semibold">Mgr Guy Desrochers</h3>

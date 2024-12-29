@@ -1,0 +1,93 @@
+
+import { messages } from '@/constants'
+import { Link } from '@/i18n/routing'
+import { MessageType } from '@/types'
+import { Calendar, SlidersHorizontalIcon } from "lucide-react"
+import Image from 'next/image'
+
+export default function Page() {
+    return (
+        <main>
+            {/* Hero section */}
+            <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
+                {/* Hero image */}
+                <Image
+                    alt="hero section background image"
+                    src="/assets/img/hero-image-2.png"
+                    fill
+                    style={{
+                        objectFit: 'cover',
+                        height: '100%',
+                        width: '100%'
+                    }}
+                />
+                <div className='absolute inset-0 flex justify-center items-start pt-10 bg-black bg-opacity-40'>
+                    <h1 className='w-1/2 heading-1 text-center text-white font-extrabold'>Découvrez toute notre actualité</h1>
+                </div>
+            </section>
+
+            <section className='container max-margin py-0 pb-10 md:pb-20'>
+
+                {/* filter */}
+                <Filter />
+
+                <div className='mt-10'>
+                    {/*  */}
+                </div>
+
+                <div className="grid gap-[34px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    {
+                        [...messages].map((item, index) => (
+                            <Link key={index} href="/messages/1" className=''>
+                                <MessageComp data={item} />
+                            </Link>
+                        ))
+                    }
+                </div>
+
+                {/* Pagination */}
+                <div className='flex justify-center mt-12'>
+                    <div className='flex gap-3'>
+                        <div className='w-40 h-8 rounded-md bg-gray-100'></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    )
+}
+
+const Filter = () => {
+    return (
+        <div className='flex justify-center items-center gap-2'>
+            <div className='flex items-center space-x-2'>
+                <SlidersHorizontalIcon className="h-4 w-4 text-gray-600" />
+                <label className='text-sm font-bold' htmlFor="filter">Filtrer les résultats</label>
+                {/* <select id="date" name="date" className="border-2 border-gray-200 p-2 rounded-lg w-full">
+              <option value="" disabled>Tous</option>
+              <option value="2023-01-01">Janvier 2023</option>
+              <option value="2023-02-01">Février 2023</option>
+              <option value="2023-03-01">Mars 2023</option>
+            </select> */}
+            </div>
+            <label className='text-sm font-bold px-3 py-1 rounded-full bg-gray-100 cursor-pointer' htmlFor="tous">Tous</label>
+            <label className='text-sm px-3 py-1 rounded-full border border-gray-100 cursor-pointer' htmlFor="catechese">Catéchèse</label>
+            <label className='text-sm px-3 py-1 rounded-full border border-gray-100 cursor-pointer' htmlFor="diocese">Diocèse</label>
+        </div>
+    )
+}
+
+
+const MessageComp = ({ data }: { data: MessageType }) => {
+    return (
+        <div className='border border-[#E5E5E5] rounded-xl flex flex-col gap-[10px] px-5 py-6'>
+            <div className='flex'>
+                <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
+                    <Calendar className="h-4 w-4 text-gray-600" />
+                    <span className='body-3'>Publié le {data.date}</span>
+                </div>
+            </div>
+            <h4 className='body-1 font-bold text-black line-clamp-2'>{data.title}</h4>
+            <p className='body-2 line-clamp-2 text-gray-500'>{data.description}</p>
+        </div>
+    )
+}
