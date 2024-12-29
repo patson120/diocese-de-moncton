@@ -64,19 +64,20 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-black/40">
               <div className='container max-margin py-0 h-full flex flex-col justify-center items-center'>
                 <div className='w-full h-full my-16 flex flex-col justify-between' >
-                  <div className="w-3/4 flex flex-col justify-between">
-                    <div className="w-3/4">
+                  <div className=' md:hidden' />
+                  <div className="w-full md:w-3/4 flex flex-col justify-between">
+                    <div className="w-full md:w-3/4 flex flex-col gap-3 md:gap-0">
                       <p className='legend text-white'>Réjoinez-nous dans notre mission spirituelle</p>
                       <h1 className="heading-1 font-extrabold text-white">
                         {slide.title}
                       </h1>
-                      <p className="body-1 text-white mt-4">{slide.description}</p>
-                      <div className='flex space-x-2'>
+                      <p className="body-1 text-white my-4">{slide.description}</p>
+                      <div className='flex flex-col md:flex-row gap-3 md:gap-2'>
                         {
                           slide.cta.map((cta, index) => (
                             <Button key={index} variant={`${index === 0 ? 'default' : 'outline'}`}
                               size="sm"
-                              className={`mt-8 ${index === 0 ? '' : 'text-black'} hover:bg-primary/90`}
+                              className={`md:mt-8 ${index === 0 ? '' : 'text-black'} hover:bg-primary/90`}
                               asChild
                             >
                               <a href={cta.href}>{cta.text}</a>
@@ -86,12 +87,12 @@ export function HeroSection() {
                       </div>
                     </div>
                   </div>
-                  <div className='flex flex-row justify-between'>
+                  <div className='hidden md:flex flex-row justify-between'>
                     <div className='flex space-x-4'>
                       <div className='h-24 w-24 shrink-0 relative rounded-md overflow-hidden'>
                         <Image
                           src="./assets/img/image.png"
-                          alt="Logo Archidiocèse de Moncton"
+                          alt="Photo de l&lsquo;évêque"
                           fill
                           style={{
                             objectFit: 'cover',
