@@ -58,7 +58,7 @@ export default function Home() {
         <div className="flex gap-4 overflow-x-scroll pb-6">
           {
             news.map((item, index) => (
-              <Link key={index} href="/actualite/1" className='min-w-[308px]'>
+              <Link key={index} href="/actualite/1" className='min-w-[280px] md:min-w-[308px]'>
                 <Actualite data={item} />
               </Link>
             ))
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="mt-10 lg:mt-20" />
         <h1 className="heading-3 mb-3">Trouver une paroisse</h1>
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12">
-          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-[16px] overflow-hidden bg-gray-50 relative">
+          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-2xl overflow-hidden bg-gray-50 relative">
             <Map
               parishes={parishes}
               selectedParish={selectedParish}
@@ -135,8 +135,8 @@ export default function Home() {
       </div>
 
       <section className='py-10 md:py-20 bg-yellow100'>
-        <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12'>
-          <div className='md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-4 md:gap-6 xl:gap-10'>
+        <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12'>
+          <div className='order-1 md:order-last md:col-span-2 rounded-2xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-4 md:gap-6 xl:gap-10'>
             <div className="space-y-1 lg:space-y-3">
               <span className='heading-3 font-extrabold'>Message de l&lsquo;Archevêque</span>
               <h1 className='heading-5'>“ Décret de suppression de la paroisse Saint-Timothée de Shemogue ”</h1>
@@ -158,7 +158,7 @@ export default function Home() {
               >Voir tous les messages</Button>
             </div>
           </div>
-          <div className='md:col-span-1 relative rounded-xl overflow-hidden bg-gray-200'>
+          <div className='md:order-last min-h-80 md:h-auto md:col-span-1 relative rounded-2xl overflow-hidden bg-gray-200'>
             <Image
               alt="Image de la l'archevèque"
               src="/assets/img/image.png"
@@ -167,6 +167,7 @@ export default function Home() {
                 objectFit: 'cover'
               }}
             />
+            <div className="absolute inset-0 bg-black/40 md:bg-black/30 "/>
             <div className="absolute bottom-0 left-0 right-0">
               <div className="p-4">
                 <h3 className="text-white body-1 font-semibold">Mgr Guy Desrochers</h3>
@@ -179,7 +180,7 @@ export default function Home() {
 
       <section className=' py-10 md:py-20 w-full bg-white'>
         <div className="container max-margin py-0">
-          <div className='grid grid-cols-1 md:grid-cols-2 rounded-xl overflow-hidden'>
+          <div className='grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden'>
             <div className='h-72 bg-gray-200 relative'>
               <Image
                 alt="Faire un don maintenant"
@@ -193,7 +194,7 @@ export default function Home() {
             <div className='bg-yellow100 px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>
               <div>
                 <h1 className='heading-3 mb-2'>Soutenez notre mission</h1>
-                <p className="body-2">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
+                <p className="body-2">Contribuez à la vie de notre communauté en faisant un don en ligne. Chaque geste compte!</p>
               </div>
               <div className='w-full md:w-auto flex'>
                 <Button onClick={() => { }} className="md:py-2 body-2 min-w-full">

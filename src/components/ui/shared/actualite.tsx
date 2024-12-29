@@ -7,7 +7,7 @@ export default function Actualite({ data }: { data: ActualiteType }) {
 
     return (
         <div className='w-full flex flex-col space-y-2'>
-            <div className='relative h-64 w-full rounded-[16px] overflow-hidden bg-gray-100'>
+            <div className='relative h-56 md:h-64 w-full rounded-2xl overflow-hidden bg-gray-100'>
                 <Image
                     alt={data.title}
                     src={data.image}
