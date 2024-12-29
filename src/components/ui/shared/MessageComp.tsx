@@ -15,5 +15,4 @@ const MessageComp = ({ data }: { data: MessageType }) => {
         </div>
     )
 }
-
 export default MessageComp

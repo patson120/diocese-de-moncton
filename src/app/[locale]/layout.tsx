@@ -42,7 +42,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${inter.variable} font-inter antialiased select-none`}>
+        className={`${inter.variable} ${inter.className} antialiased select-none`}>
         <NextIntlClientProvider messages={messages}>
           <main className='overflow-x-hidden'>
             {/* Header */}
