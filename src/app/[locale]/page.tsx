@@ -55,19 +55,19 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex gap-4 overflow-x-scroll pb-6">
           {
             news.map((item, index) => (
-              <Link key={index} href="/actualite/1" className=''>
+              <Link key={index} href="/actualite/1" className='min-w-[308px]'>
                 <Actualite data={item} />
               </Link>
             ))
           }
         </div>
-        <div className="mt-20" />
+        <div className="mt-10 lg:mt-20" />
         <div className="mb-3 flex justify-between items-center">
           <h1 className="heading-3">Nos évènements</h1>
-          <Link href='/evenement' >
+          <Link href='/evenement' className="hidden md:block" >
             <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="body-3 font-semibold p-0 hover:bg-transparent">
               Voir tous les évènements
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
@@ -83,10 +83,16 @@ export default function Home() {
             ))
           }
         </section>
+        <Link href='/evenement' className="block md:hidden mt-5" >
+          <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
+            Voir tous les évènements
+            <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
+          </Button>
+        </Link>
 
-        <div className="mt-20" />
+        <div className="mt-10 lg:mt-20" />
         <h1 className="heading-3 mb-3">Trouver une paroisse</h1>
-        <section className="grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12">
           <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-[16px] overflow-hidden bg-gray-50 relative">
             <Map
               parishes={parishes}
@@ -109,8 +115,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-span-3 md:col-span-1 flex flex-col gap-3 lg:gap-5">
-
+          <div className="col-span-3 md:col-span-1 flex flex-col gap-4 lg:gap-5">
             {
               paroisses.map((item, index) => (
                 <Link key={index} href="/paroisse/1">
@@ -126,26 +131,26 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <div className="mt-16" />
+        <div className="md:mt-16" />
       </div>
 
-      <section className='py-10 md:py-20 w-full bg-yellow100 text-black'>
+      <section className='py-10 md:py-20 bg-yellow100'>
         <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap:3 md:gap-6 lg:gap-10 xl:gap-12'>
-          <div className='col-span-full md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-10'>
-            <div className="space-y-3">
+          <div className='md:col-span-2 rounded-xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-4 md:gap-6 xl:gap-10'>
+            <div className="space-y-1 lg:space-y-3">
               <span className='heading-3 font-extrabold'>Message de l&lsquo;Archevêque</span>
               <h1 className='heading-5'>“ Décret de suppression de la paroisse Saint-Timothée de Shemogue ”</h1>
             </div>
             <p className='body-2'>A tous ceux et celles qui liront les présentes, Graces et bénédictions dans le Seigneur.<br /> <br />
-            CONSIDERANT que le code de droit canonique donne à l’évêque diocésain le pouvoir d’ériger, supprimer ou de modifier les paroisses, après avoir entendu le conseil presbtéral et ce conformément au canon 515<br /> <br />
-            CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p>
+              CONSIDERANT que le code de droit canonique donne à l’évêque diocésain le pouvoir d’ériger, supprimer ou de modifier les paroisses, après avoir entendu le conseil presbtéral et ce conformément au canon 515<br /> <br />
+              CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p>
 
-            <div className='flex flex-row space-x-2'>
+            <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
               <Button
                 variant="outline"
                 onClick={() => { }}
                 className='font-bold'
-              >Voir plus</Button>
+              >En savoir plus</Button>
               <Button
                 variant="outline"
                 onClick={() => { }}
@@ -153,9 +158,9 @@ export default function Home() {
               >Voir tous les messages</Button>
             </div>
           </div>
-          <div className='col-span-full md:col-span-1 relative rounded-xl overflow-hidden bg-gray-200'>
+          <div className='md:col-span-1 relative rounded-xl overflow-hidden bg-gray-200'>
             <Image
-              alt="Image de la l'actualité"
+              alt="Image de la l'archevèque"
               src="/assets/img/image.png"
               fill
               style={{
@@ -190,8 +195,8 @@ export default function Home() {
                 <h1 className='heading-3 mb-2'>Soutenez notre mission</h1>
                 <p className="body-2">Contribuez à la vie de notre communauté en faisant un don en ligne. <br />Chaque geste compte!</p>
               </div>
-              <div className='flex'>
-                <Button onClick={() => { }} className="md:py-2 body-2">
+              <div className='w-full md:w-auto flex'>
+                <Button onClick={() => { }} className="md:py-2 body-2 min-w-full">
                   Faire un don maintenant
                 </Button>
               </div>

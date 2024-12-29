@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className='py-10 md:pt-20 bg-[#231517] text-[#B5B5B5]'>
       <div className='container max-margin py-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 '>
         <div className='space-y-3'>
-          <div className='relative h-12 w-[100px] lg:h-20 lg:w-[180px] overflow-hidden'>
+          <div className='relative h-12 w-[100px] xl:h-16 xl:w-[150px] overflow-hidden'>
             <Image
               alt="Logo du diocèse de moncton"
               src="/brand-logo-1.png"
@@ -72,8 +72,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className='container max-margin py-0 mt-10  flex flex-col md:flex-row md:justify-between space-y-2 '>
-        <p className='body-3'>© {date.getFullYear()} Diocèse Moncton - Tous droits reservés</p>
+      <div className='container max-margin py-0 mt-10 flex flex-col md:flex-row md:justify-between gap-5 md:gap-3 '>
+        <p className='order-1 md:order-2 pt-1 body-3 text-center md:text-left'>© {date.getFullYear()} Diocèse Moncton - Tous droits reservés</p>
         <div className='flex justify-center items-center gap-4 lg:gap-6'>
           <FacebookIcon className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />
           <TwitterIcon className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />

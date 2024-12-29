@@ -44,9 +44,9 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} font-inter antialiased select-none`}>
         <NextIntlClientProvider messages={messages}>
-          <main>
+          <main className='overflow-x-hidden'>
             {/* Header */}
-            <Header />
+            {/* <Header /> */}
 
             {children}
 
