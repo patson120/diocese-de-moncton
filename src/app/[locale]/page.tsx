@@ -169,18 +169,18 @@ export default function Home() {
               CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p>
 
             <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
-              <Link href="/messages/1">
+              <Link href="/messages/1" className="">
                 <Button
                   variant="outline"
                   onClick={() => { }}
-                  className='font-bold'
+                  className='font-bold w-full'
                 >En savoir plus</Button>
               </Link>
               <Link href="/messages">
                 <Button
                   variant="outline"
                   onClick={() => { }}
-                  className='bg-transparent hover:bg-transparent border-black font-bold'
+                  className='w-full bg-transparent hover:bg-transparent border-black font-bold'
                 >Voir tous les messages</Button>
               </Link>
             </div>
