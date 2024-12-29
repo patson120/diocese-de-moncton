@@ -13,8 +13,8 @@ import { ArrowRight } from 'lucide-react'
                 </div>
             </div>
             <section className='container max-margin py-0' >
-                <div className='grid grid-cols-1 lg:grid-cols-6 gap-5 lg:gap-10 py-4 lg:py-8'>
-                    <div className='col-span-full lg:col-span-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-6 gap-5 lg:gap-10 xl:gap-16 py-4 lg:py-12 xl:pb-20'>
+                    <div className='col-span-full lg:col-span-4 pr-10 lg:pr-20 border-r border-b-[#E5E5E5]'>
                         <div className='flex flex-col space-y-3'>
                             <h1 className='heading-2 font-bold'>Décret de suppression de la paroisse Saint-Timothée de Shemogue</h1>
                             <p className='body-2 text-gray-600'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -27,7 +27,7 @@ import { ArrowRight } from 'lucide-react'
                     </div>
                     <div className='col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10'>
                         <h1 className='heading-3 font-extrabold'>Autres message</h1>
-                        <div className="hidden md:flex flex-col gap-4">
+                        <div className="hidden md:flex flex-col gap-4 lg:gap-6">
                             {
                                 messages.slice(0, 5).map((item, index) => (
                                     <Link key={index} href="/messages/1">
