@@ -138,7 +138,7 @@ export default function Home() {
       <section className='py-10 md:py-20 bg-yellow100'>
         <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12'>
           <div className='order-1 md:order-last md:col-span-2 rounded-2xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-4 md:gap-6 xl:gap-10'>
-            <div className="space-y-1 lg:space-y-3">
+            <div className="space-y-1 lg:space-y-2">
               <span className='heading-3 font-extrabold'>Message de l&lsquo;Archevêque</span>
               <h1 className='heading-5'>“ Décret de suppression de la paroisse Saint-Timothée de Shemogue ”</h1>
             </div>
@@ -147,11 +147,13 @@ export default function Home() {
               CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p>
 
             <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
-              <Button
-                variant="outline"
-                onClick={() => { }}
-                className='font-bold'
-              >En savoir plus</Button>
+              <Link href="/messages/1">
+                <Button
+                  variant="outline"
+                  onClick={() => { }}
+                  className='font-bold'
+                >En savoir plus</Button>
+              </Link>
               <Link href="/messages">
                 <Button
                   variant="outline"
@@ -180,7 +182,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Action de grace */}
       <ActionGrace />
     </main>

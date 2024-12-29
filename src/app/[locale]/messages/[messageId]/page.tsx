@@ -1,13 +1,11 @@
-import { formatDateToLocal } from '@/_lib/utils'
+'use client'
 import { Button } from '@/components/ui/shared/button'
-import Actualite from '@/components/ui/shared/actualite'
 import MessageComp from '@/components/ui/shared/MessageComp'
-import { messages, news } from '@/constants'
+import { messages } from '@/constants'
 import { Link } from '@/i18n/routing'
 import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
 
-export default function Page() {
+ const Page = () => {
     return (
         <>
             <div className='px-5 md:px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
@@ -59,3 +57,4 @@ export default function Page() {
         </>
     )
 }
+export default Page
