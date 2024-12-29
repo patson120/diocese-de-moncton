@@ -75,10 +75,10 @@ export default function Footer() {
       <div className='container max-margin py-0 mt-10 flex flex-col md:flex-row md:justify-between gap-5 md:gap-3 '>
         <p className='order-1 md:order-2 pt-1 body-3 text-center md:text-left'>© {date.getFullYear()} Diocèse Moncton - Tous droits reservés</p>
         <div className='md:order-2  flex justify-center items-center gap-4 lg:gap-6'>
-          <FacebookIcon className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />
-          <TwitterIcon className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />
-          <InstagramIcon className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />
-          <YoutubeIcon className="h-4 w-4 md:h-6 md:w-6 lg:h-7 lg:w-7" />
+          <FacebookIcon className="h-4 w-4 md:h-6 md:w-6" />
+          <TwitterIcon className="h-4 w-4 md:h-6 md:w-6" />
+          <InstagramIcon className="h-4 w-4 md:h-6 md:w-6" />
+          <YoutubeIcon className="h-4 w-4 md:h-6 md:w-6" />
         </div>
       </div>
 
