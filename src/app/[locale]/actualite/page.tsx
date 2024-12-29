@@ -36,14 +36,14 @@ export default function Page() {
         <Filter />
 
         {/* Important post  */}
-        <div className='mt-8 mb-12'>
+        <div className='mt-8 mb-8 md:mb-12'>
           <ImportantPost />
         </div>
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
             [...news, ...news].map((item, index) => (
-              <Link key={index} href="/actualite/1">
+              <Link key={index} href="/actualite/1" className=''>
                 <Actualite data={item} />
               </Link>
             ))
