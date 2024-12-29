@@ -27,7 +27,7 @@ export default function Page() {
                         <div className='w-full h-full flex flex-col justify-between translate-y-4 sm:translate-y-6 md:translate-y-0 '>
                             <div className='' />
                             <div className='flex flex-col md:flex-row justify-start items-center gap-8 xl:gap-10'>
-                                <div className='h-56 w-56 sm:h-64 sm:w-64 shrink-0 relative overflow-hidden border-2 border-gray-400'>
+                                <div className='h-52 w-52 sm:h-64 sm:w-64 shrink-0 relative overflow-hidden border-2 border-gray-400'>
                                     <Image
                                         src="/assets/img/image.png"
                                         alt="Photo de l&lsquo;évêque"
