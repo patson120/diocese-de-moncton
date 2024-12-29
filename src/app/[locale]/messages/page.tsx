@@ -22,9 +22,29 @@ export default function Page() {
                         width: '100%'
                     }}
                 />
-                <div className='className="absolute inset-0 bg-black/40"'>
+                <div className="absolute inset-0 bg-black/40">
                     <div className='container max-margin py-0 h-full flex flex-col justify-center items-center'>
-                        
+                        <div className='w-full h-full flex flex-col justify-between'>
+                            <div className='' />
+                            <div className='flex flex-col md:flex-row justify-start items-center gap-8 xl:gap-10'>
+                                <div className='h-64 w-64 shrink-0 relative overflow-hidden border-2 border-gray-400'>
+                                    <Image
+                                        src="/assets/img/image.png"
+                                        alt="Photo de l&lsquo;évêque"
+                                        fill
+                                        style={{
+                                            objectFit: 'cover',
+                                            height: '100%',
+                                            width: '100%'
+                                        }}
+                                    />
+                                </div>
+                                <div className='space-y-2 w-1/2'>
+                                    <h5 className='heading-2 text-white font-extrabold'>Communiqués du bureau de Mgr. Desrochers</h5>
+                                    <p className='body-2 text-gray-200 line-clamp-2'>Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

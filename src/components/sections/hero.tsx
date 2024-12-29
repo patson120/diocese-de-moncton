@@ -91,7 +91,7 @@ export function HeroSection() {
                     <div className='flex space-x-4'>
                       <div className='h-24 w-24 shrink-0 relative rounded-md overflow-hidden'>
                         <Image
-                          src="./assets/img/image.png"
+                          src="/assets/img/image.png"
                           alt="Photo de l&lsquo;évêque"
                           fill
                           style={{
