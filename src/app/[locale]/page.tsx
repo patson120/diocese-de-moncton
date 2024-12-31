@@ -131,7 +131,7 @@ export default function Home() {
                     placeholder:text-xs sm:text-sm sm:leading-6 outline-none"/>
                   <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
                 </div>
-                <Button variant="secondary" className='bg-[#230105] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
+                <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
                   <MapPin className="mr-2 h-4 w-4 text-white" />
                   Prendre ma position
                 </Button>

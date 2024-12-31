@@ -44,14 +44,14 @@ export default function Page() {
 
                             <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
                         </div>
-                        <Button variant="secondary" className='bg-[#230105] text-[12px] text-white hover:bg-[#230105] ' onClick={() => { }}>
+                        <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105] ' onClick={() => { }}>
                             <MapPin className="mr-2 h-4 w-4 text-white" />
                             Prendre ma position
                         </Button>
                     </div>
                 </div>
                 <div className='border-t border-gray-100'>
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4 h-[60vh]'>
+                    <div className='h-[60vh] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12 '>
                         <div className='col-span-1 flex flex-col gap-3 pb-3 overflow-y-scroll'>
                             <div className='sticky top-0 bg-white z-20 py-3'>
                                 <Filter />
@@ -79,13 +79,13 @@ export default function Page() {
 const Filter = () => {
     return (
         <div className='flex flex-wrap items-center gap-2 !text-nowrap text-[10px]'>
-            <div className='flex items-center space-x-2'>
+            <div className='flex items-center gap-[6px]'>
                 <SlidersHorizontalIcon className="h-4 w-4 text-gray-600" />
-                <label className='font-bold' htmlFor="filter">Filtrer les résultats</label>
+                <label className='font-bold xl:text-sm whitespace-nowrap' htmlFor="filter">Filtrer les résultats</label>
             </div>
-            <label className='font-bold px-2 py-1 rounded-full bg-gray-100 cursor-pointer' htmlFor="tous">Tous</label>
-            <label className='px-2 py-1 rounded-full border border-gray-100 cursor-pointer' htmlFor="catechese">En activité</label>
-            <label className='px-2 py-1 rounded-full border border-gray-100 cursor-pointer' htmlFor="diocese">Déjà fermé</label>
+            <label className='body-2 px-2 py-1 font-bold rounded-xl bg-[#1D0104] text-white cursor-pointer' htmlFor="tous">Tous</label>
+            <label className='body-2 px-2 py-1 rounded-xl border border-gray-100 cursor-pointer' htmlFor="catechese">En activité</label>
+            <label className='body-2 px-2 py-1 rounded-xl border border-gray-100 cursor-pointer' htmlFor="diocese">Fermées</label>
         </div>
     )
 }

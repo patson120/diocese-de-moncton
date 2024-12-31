@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/shared/button';
 
 export default function Newsletter() {
   return (
-    <section className='py-8 md:py-10 w-full bg-[#FAFAFA]'>
+    <section className='py-10 md:py-20 xl:py-24 w-full bg-[#FAFAFA]'>
       <div className='container max-margin py-0 flex flex-col md:flex-row justify-between gap-3'>
         <div className='text-black'>
           <h3 className='body-1 font-bold'>Newsletter</h3>
