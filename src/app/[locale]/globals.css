@@ -124,4 +124,7 @@
   .legend {
     @apply text-[10px] md:text-xs;
   }
+  .vertical-margin{
+    @apply py-10 md:py-20 xl:py-24
+  }
 }
