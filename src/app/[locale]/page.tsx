@@ -47,7 +47,7 @@ export default function Home() {
     <main className="bg-white">
       <HeroSection />
       {/*  */}
-      <div className='container max-margin md:hidden w-full my-[40px]'>
+      <div className='container max-margin md:hidden w-full sm:my-[30px]'>
         <div className="bg-[#F9F4F5] rounded-xl overflow-hidden">
           <div className='relative h-72 w-full bg-white overflow-hidden'>
             <Image
@@ -68,26 +68,28 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container md:px- md:py-10 max-margin">
-        <div className="mb-3 flex justify-between items-center">
-          <h1 className="heading-3">Actualités</h1>
-          <Link href="/actualite">
-            <Button variant='ghost' onClick={() => { }} className="body-3 font-semibold p-0 hover:bg-transparent">
-              Voir toute l’actualité
-              <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
-            </Button>
-          </Link>
+      <div className="container max-margin py-0">
+        <div className="vertical-margin">
+          <div className="mb-3 flex justify-between items-center">
+            <h1 className="heading-3">Actualités</h1>
+            <Link href="/actualite">
+              <Button variant='ghost' onClick={() => { }} className="body-3 font-semibold p-0 hover:bg-transparent">
+                Voir toute l’actualité
+                <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
+              </Button>
+            </Link>
+          </div>
+          <div className="flex gap-4 overflow-x-scroll pb-6">
+            {
+              news.map((item, index) => (
+                <Link key={index} href="/actualite/1" className='min-w-[280px] md:min-w-[308px]'>
+                  <Actualite data={item} />
+                </Link>
+              ))
+            }
+          </div>
         </div>
-        <div className="flex gap-4 overflow-x-scroll pb-6">
-          {
-            news.map((item, index) => (
-              <Link key={index} href="/actualite/1" className='min-w-[280px] md:min-w-[308px]'>
-                <Actualite data={item} />
-              </Link>
-            ))
-          }
-        </div>
-        <div className="mt-10 lg:mt-20" />
+        {/* <div className="mt-10 lg:mt-20"/> */}
         <div className="mb-3 flex justify-between items-center">
           <h1 className="heading-3">Nos évènements</h1>
           <Link href='/evenement' className="hidden md:block" >
@@ -113,58 +115,58 @@ export default function Home() {
           </Button>
         </Link>
 
-        <div className="mt-10 lg:mt-20" />
-        <h1 className="heading-3 mb-3">Trouver une paroisse</h1>
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12">
-          <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-2xl overflow-hidden bg-gray-50 relative">
-            <Map
-              parishes={parishes}
-              selectedParish={selectedParish}
-              onParishSelect={setSelectedParish}
-            />
-            <div className='w-full absolute top-4 left-0 right-0'>
-              <div className="px-5 w-[95%] flex gap-2">
-                <div className='relative flex-1'>
-                  <input type="text" placeholder="Entrez le code postale ou la ville..."
-                    className="w-full border border-gray-100 bg-gray-50 rounded-lg pr-3 pl-10 py-2
+        <div className="vertical-margin" >
+          <h1 className="heading-3 mb-3">Trouver une paroisse</h1>
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12">
+            <div className="h-96 md:h-auto col-span-3 md:col-span-2 rounded-2xl overflow-hidden bg-gray-50 relative">
+              <Map
+                parishes={parishes}
+                selectedParish={selectedParish}
+                onParishSelect={setSelectedParish}
+              />
+              <div className='w-full absolute top-4 left-0 right-0'>
+                <div className="px-5 w-[95%] flex gap-2">
+                  <div className='relative flex-1'>
+                    <input type="text" placeholder="Entrez le code postale ou la ville..."
+                      className="w-full border border-gray-100 bg-gray-50 rounded-lg pr-3 pl-10 py-2
                     text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
                     placeholder:text-xs sm:text-sm sm:leading-6 outline-none"/>
-                  <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
+                    <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
+                  </div>
+                  <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
+                    <MapPin className="md:mr-2 h-4 w-4 text-white" />
+                    Prendre ma position
+                  </Button>
                 </div>
-                <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
-                  <MapPin className="mr-2 h-4 w-4 text-white" />
-                  Prendre ma position
-                </Button>
               </div>
             </div>
-          </div>
-          <div className="col-span-3 md:col-span-1 flex flex-col gap-4 lg:gap-5">
-            {
-              paroisses.map((item, index) => (
-                <Link key={index} href="/paroisse/1">
-                  <ParoisseItem data={item} />
-                </Link>
-              ))
-            }
-            <Link href="/paroisse">
-              <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
-                Voir toutes les 23 paroisses
-                <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
-              </Button>
-            </Link>
-          </div>
-        </section>
-        <div className="md:mt-16" />
+            <div className="col-span-3 md:col-span-1 flex flex-col gap-4 lg:gap-5">
+              {
+                paroisses.map((item, index) => (
+                  <Link key={index} href="/paroisse/1">
+                    <ParoisseItem data={item} />
+                  </Link>
+                ))
+              }
+              <Link href="/paroisse">
+                <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
+                  Voir toutes les 23 paroisses
+                  <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
+                </Button>
+              </Link>
+            </div>
+          </section>
+        </ div>
       </div>
 
-      <section className='py-10 md:py-20 bg-yellow100'>
+      <section className='vertical-margin bg-yellow100 text-[#1D0104]'>
         <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12'>
-          <div className='order-1 md:order-last md:col-span-2 rounded-2xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-4 md:gap-6 xl:gap-10'>
+          <div className='order-1 md:order-last md:col-span-2 rounded-2xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-2 md:gap-4 xl:gap-7'>
             <div className="space-y-1 lg:space-y-2">
-              <span className='heading-3 font-extrabold'>Message de l&lsquo;Archevêque</span>
+              <span className='heading-3 font-extrabold '>Message de l&lsquo;Archevêque</span>
               <h1 className='heading-5'>“ Décret de suppression de la paroisse Saint-Timothée de Shemogue ”</h1>
             </div>
-            <p className='body-2'>A tous ceux et celles qui liront les présentes, Graces et bénédictions dans le Seigneur.<br /> <br />
+            <p className='body-2 leading-[25.9px]'>A tous ceux et celles qui liront les présentes, Graces et bénédictions dans le Seigneur.<br /> <br />
               CONSIDERANT que le code de droit canonique donne à l’évêque diocésain le pouvoir d’ériger, supprimer ou de modifier les paroisses, après avoir entendu le conseil presbtéral et ce conformément au canon 515<br /> <br />
               CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p>
 

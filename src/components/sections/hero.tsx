@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/shared/button';
+import { Search } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -10,7 +11,7 @@ const slides = [
     title: "Bienvenue à l'archidiocèse de Moncton",
     description: 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.',
     cta: [
-      { text: 'Trouver une paroisse', href: '/paroisses' },
+      { text: 'Trouver une paroisse', icon: true, href: '/paroisses' },
       { text: 'Voir nos évènements', href: '/evenements' }
     ]
   },
@@ -18,7 +19,7 @@ const slides = [
     image: './assets/img/hero-image-2.png',
     title: 'Trouvez une paroisse près de chez vous',
     description: 'Notre diocèse possède environ une vingtaine de paroisse partout à Moncton, trouvez la votre.',
-    cta: [{ text: 'Trouver une paroisser', href: '/paroisses' }]
+    cta: [{ text: 'Trouver une paroisser', icon: true, href: '/paroisses' }]
   },
   {
     image: './assets/img/hero-image-1.png',
@@ -78,8 +79,12 @@ export function HeroSection() {
                             <Button key={index} variant={`${index === 0 ? 'default' : 'outline'}`}
                               size="sm"
                               className={`md:mt-8 ${index === 0 ? '' : 'text-black'} hover:bg-primary/90`}
-                              asChild
+                            // asChild
                             >
+                              {
+                                cta.icon &&
+                                <Search className="mr-2 h-4 w-4 !text-white" />
+                              }
                               <a href={cta.href}>{cta.text}</a>
                             </Button>
                           ))

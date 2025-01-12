@@ -93,7 +93,7 @@
   }
 
   .max-margin {
-    @apply px-10 max-2xl:px-4;
+    @apply px-10 xl:px-10 max-2xl:px-4;
   }
 
   .heading-1 {
@@ -113,18 +113,18 @@
   }
 
   .body-1 {
-    @apply text-sm md:text-base xl:text-lg lg:leading-[28px];
+    @apply md:text-base xl:text-lg lg:leading-[28px];
   }
   .body-2 {
-    @apply text-xs md:text-sm xl:text-base lg:leading-[25px];
+    @apply text-base lg:leading-[25px];
   }
   .body-3 {
-    @apply text-[10px] md:text-xs xl:text-sm leading-[19.6px];
+    @apply md:text-xs xl:text-sm leading-[19.6px];
   }
   .legend {
     @apply text-[10px] md:text-xs;
   }
-  .vertical-margin{
-    @apply py-10 md:py-20 xl:py-24
+  .vertical-margin {
+    @apply py-6 md:py-20 xl:py-24;
   }
 }

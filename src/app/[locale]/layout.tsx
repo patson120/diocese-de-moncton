@@ -4,18 +4,13 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google';
+import { inter } from '@/app/fonts/fonts';
 import "./globals.css";
 import { Language } from '@/types';
 import Header from '@/components/ui/shared/header';
 import Newsletter from '@/components/ui/shared/newsletter';
 import Footer from '@/components/ui/shared/footer';
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['300', '400', '500', '700', '900']
-});
 
 export const metadata: Metadata = {
   title: 'Archidiocèse de Moncton',
@@ -42,7 +37,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`antialiased select-none`}>
+        className={`${inter.className} antialiased select-none`}>
         <NextIntlClientProvider messages={messages}>
           <main className='overflow-x-hidden'>
             {/* Header */}
