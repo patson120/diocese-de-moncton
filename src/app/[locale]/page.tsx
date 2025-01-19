@@ -62,9 +62,11 @@ export default function Home() {
           <div className="p-5">
             <h3 className='body-1 font-bold mt-2'>Horaires des messes</h3>
             <p className='body-3 text-gray-500 mt-2 mb-8'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
-            <Button className='w-full body-2 xl:text-xl' onClick={() => { }}>
-              Voir les horaires
-            </Button>
+            <Link href="/horaires-messes">
+              <Button className='w-full body-2 xl:text-xl' onClick={() => { }}>
+                Voir les horaires
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -79,7 +81,7 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-          <div className="flex gap-4 overflow-x-scroll h-scroll pb-6">
+          <div className="flex flex-row overflow-x-scroll lg:overflow-x-hidden gap-4 h-scroll pb-6">
             {
               news.map((item, index) => (
                 <Link key={index} href="/actualite/1" className='min-w-[280px] md:min-w-[308px]'>
@@ -135,7 +137,7 @@ export default function Home() {
                   </div>
                   <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
                     <MapPin className="md:mr-2 h-4 w-4 text-white" />
-                    Prendre ma position
+                    <span className='hidden md:flex'>Prendre ma position</span>
                   </Button>
                 </div>
               </div>

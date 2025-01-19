@@ -99,7 +99,7 @@ export default function Page() {
                         {
                             events.map((item, index) => (
                                 <Link key={index} href="/evenement/1" >
-                                    <EventItem data={item} />
+                                    <EventItem data={item} row />
                                 </Link>
                             ))
                         }
