@@ -1,12 +1,70 @@
+'use client'
 
 import { formatDateToLocal } from '@/_lib/utils'
-import Actualite from '@/components/ui/shared/actualite'
+import ActionGrace from '@/components/ui/shared/ActionGrace'
+import { Button } from '@/components/ui/shared/button'
 import { news } from '@/constants'
-import { Link } from '@/i18n/routing'
-import { Search, SlidersHorizontalIcon } from "lucide-react"
+import { Plus, Search } from "lucide-react"
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function Page() {
+  const [selectedHour, setSelectedHour] = useState<any>({})
+  const [hours, setHours] = useState([
+    {
+      id: 1,
+      hour: '09h00',
+      items: [
+        {
+          id: 1,
+          title: 'Dieppe (Ste-Thérèse de l’Enfant-Jésus)',
+        },
+        {
+          id: 2,
+          title: 'Rich.-Village (St-Antoine-de-Padoue)',
+        }
+      ]
+    },
+    {
+      id: 2,
+      hour: '09h15',
+      items: []
+    },
+    {
+      id: 3,
+      hour: '09h30',
+      items: [
+        {
+          id: 3,
+          title: 'Dieppe (Ste-Thérèse de l’Enfant-Jésus)',
+        },
+        {
+          id: 4,
+          title: 'Rich.-Village (St-Antoine-de-Padoue)',
+        }
+      ]
+    },
+    {
+      id: 4,
+      hour: '10h30',
+      items: []
+    },
+    {
+      id: 5,
+      hour: '11h00',
+      items: []
+    },
+    {
+      id: 6,
+      hour: '18h00',
+      items: []
+    },
+    {
+      id: 7,
+      hour: '18h30',
+      items: []
+    }
+  ])
   return (
     <main>
       {/* Hero section */}
@@ -22,8 +80,11 @@ export default function Page() {
             width: '100%'
           }}
         />
-        <div className='absolute inset-0 flex justify-center items-start pt-10 bg-black bg-opacity-40'>
-          <h1 className='w-1/2 heading-1 text-center text-white font-extrabold'>Découvrez toute notre actualité</h1>
+        <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-40'>
+          <div className='w-1/2 space-y-3'>
+            <h1 className='heading-1 text-center text-white font-extrabold'>Horaires des messes</h1>
+            <p className='body-2 text-center text-white'>Consultez l'horaire des messes pour chaque jour de la semaine !</p>
+          </div>
         </div>
       </section>
       <div className='container max-margin py-0 -translate-y-2'>
@@ -32,79 +93,78 @@ export default function Page() {
       </div>
       <section className='container max-margin py-0 pb-10 md:pb-20'>
 
+        <div className='mt-6 lg:mt-12'></div>
         {/* filter */}
         <Filter />
 
-        {/* Important post  */}
-        <div className='mt-8 mb-8 md:mb-12 xl:mb-24'>
-          <ImportantPost />
-        </div>
+        <div className="mt-8 lg:mt-16 flex flex-col justify-center items-center">
+          <div className='w-full md:w-1/2 flex flex-col gap-4'>
+            {
+              hours.map((item, index) => (
+                <div key={item.id}>
+                  <div className={`${selectedHour.id === item.id ? 'bg-[#F9F4F5]' : ''} rounded-[8px] h-12 border border-[#D9D9D9] p-3 flex justify-between items-center`}>
+                    <h1 className='body-1 font-bold'>{item.hour}</h1>
+                    <div>
+                      {
+                        (selectedHour.id !== item.id) &&
+                        <Button onClick={() => { setSelectedHour(item) }}
+                          size='sm'
+                          variant='ghost'
+                          className="pr-0">
+                          Voir
+                          <Plus className="ml-2 h-4 w-6" />
+                        </Button>
+                      }
+                      {
+                        (selectedHour.id === item.id) &&
+                        <Button onClick={() => { setSelectedHour({}) }}
+                          size='sm'
+                          variant='ghost'
+                          className="pr-0">
+                          Fermer
+                          <Plus className="ml-2 h-4 w-6 rotate-45" />
+                        </Button>
+                      }
 
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {
-            [...news, ...news].map((item, index) => (
-              <Link key={index} href="/actualite/1" className=''>
-                <Actualite data={item} />
-              </Link>
-            ))
-          }
-        </div>
-
-        {/* Pagination */}
-        <div className='flex justify-center mt-12'>
-          <div className='flex gap-3'>
-            <div className='w-40 h-8 rounded-md bg-gray-100'></div>
+                    </div>
+                  </div>
+                  {
+                    ((selectedHour.id === item.id) && (selectedHour?.items.length > 0) ) &&
+                    <ul className='my-3 ml-8 space-y-2'>
+                      {
+                        item.items.map((item, index) => (
+                          <li key={index} className='list-disc'>
+                            {item.title}
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  }
+                </div>
+              ))
+            }
           </div>
         </div>
+
       </section>
+      {/* Action de grace */}
+      <ActionGrace />
     </main>
   )
 }
 
-const ImportantPost = () => {
-  return (
-    <div className='w-full text-black  grid grid-cols-1 md:grid-cols-2 gap-5'>
-      <div className='relative h-72 xl:h-96 w-full rounded-2xl overflow-hidden bg-gray-100'>
-        <Image
-          alt="Image de la l'actualité"
-          src="/assets/img/new-4.png"
-          fill
-          style={{
-            objectFit: 'cover',
-            width: '100%',
-            height: '100%'
-          }}
-        />
-      </div>
-      <div className='space-y-4'>
-        <div>
-          <span className='legend font-bold text-primary'>Diocèse</span>
-          <h4 className='heading-3 line-clamp-2'>Quel est le problème avec l’aide médicale à mourir (AMM)? Le 9 octobre à 19h</h4>
-        </div>
-        <p className='body-2 line-clamp-6 text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure quae ut sunt reprehenderit qui eius, facere incidunt tempore similique aspernatur dolorum minima dolores odit harum id nesciunt libero doloribus beatae eos voluptates dolorem. Commodi non illo rem, eveniet molestias distinctio! Corporis repudiandae provident cum ut amet blanditiis eum exercitationem ipsam numquam nihil porro deleniti aut a impedit cupiditate, nostrum nam? Similique labore, laboriosam ipsam corporis perferendis neque unde mollitia, consectetur blanditiis saepe sequi velit tempore porro corrupti aut maxime molestiae. Ratione quae saepe provident quod asperiores expedita aspernatur atque delectus quo laboriosam necessitatibus quas odit, dolores culpa! Ducimus, ipsa!</p>
-        <p className='body-3 text-gray-400'>Publié le {formatDateToLocal((new Date()).toISOString())}</p>
-      </div>
-    </div >
-  )
-}
 
 const Filter = () => {
   return (
-    <div className='flex flex-col md:flex-row justify-center items-center gap-4'>
-      <div className='flex items-center space-x-2'>
-        <SlidersHorizontalIcon className="h-4 w-5 text-gray-600" />
-        <label className='text-sm font-bold whitespace-nowrap' htmlFor="filter">Filtrer les résultats</label>
-        {/* <select id="date" name="date" className="border-2 border-gray-200 p-2 rounded-lg w-full">
-              <option value="" disabled>Tous</option>
-              <option value="2023-01-01">Janvier 2023</option>
-              <option value="2023-02-01">Février 2023</option>
-              <option value="2023-03-01">Mars 2023</option>
-            </select> */}
-      </div>
+    <div className='flex flex-col md:flex-row justify-center items-start gap-4'>
       <div className='flex items-center flex-wrap gap-2'>
-        <label className='text-sm font-bold p-[10px] rounded-xl bg-[#1D0104] text-white cursor-pointer' htmlFor="tous">Tous</label>
-        <label className='text-sm p-[10px] rounded-xl border border-gray-100 cursor-pointer' htmlFor="catechese">Catéchèse</label>
-        <label className='text-sm p-[10px] rounded-xl border border-gray-100 cursor-pointer' htmlFor="diocese">Diocèse</label>
+        <label className='text-sm font-bold p-[10px] rounded-xl bg-[#1D0104] text-white cursor-pointer' htmlFor="dimanche">Dimanche</label>
+        <label className='text-sm p-[10px] rounded-xl bg-[#F5F5F5] cursor-pointer' htmlFor="lundi">Lundi</label>
+        <label className='text-sm p-[10px] rounded-xl bg-[#F5F5F5] cursor-pointer' htmlFor="mardi">Mardi</label>
+        <label className='text-sm p-[10px] rounded-xl bg-[#F5F5F5] cursor-pointer' htmlFor="mercredi">Mercredi</label>
+        <label className='text-sm p-[10px] rounded-xl bg-[#F5F5F5] cursor-pointer' htmlFor="jeudi">Jeudi</label>
+        <label className='text-sm p-[10px] rounded-xl bg-[#F5F5F5] cursor-pointer' htmlFor="vendredi">Vendredi</label>
+        <label className='text-sm p-[10px] rounded-xl bg-[#F5F5F5] cursor-pointer' htmlFor="samedi">Samedi</label>
       </div>
     </div>
   )

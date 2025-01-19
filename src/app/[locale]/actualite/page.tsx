@@ -22,7 +22,7 @@ export default function Page() {
             width: '100%'
           }}
         />
-        <div className='absolute inset-0 flex justify-center items-start pt-10 bg-black bg-opacity-40'>
+        <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-40'>
           <h1 className='w-1/2 heading-1 text-center text-white font-extrabold'>Découvrez toute notre actualité</h1>
         </div>
       </section>
