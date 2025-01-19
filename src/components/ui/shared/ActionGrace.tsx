@@ -2,8 +2,9 @@
 import Image from 'next/image'
 import React from 'react'
 import { Button } from './button'
+import { Link } from '@/i18n/routing'
 
- const ActionGrace = () => {
+const ActionGrace = () => {
     return (
         <section className=' py-10 md:py-20 w-full bg-white'>
             <div className="container max-margin py-0">
@@ -24,9 +25,11 @@ import { Button } from './button'
                             <p className="body-2 text-[#575757]">Contribuez à la vie de notre communauté en faisant un don en ligne. Chaque geste compte!</p>
                         </div>
                         <div className='w-full md:w-auto flex'>
-                            <Button onClick={() => { }} className="md:py-2 body-2 min-w-full">
-                                Faire un don maintenant
-                            </Button>
+                            <Link href="/faire-un-don">
+                                <Button onClick={() => { }} className="md:py-2 body-2 min-w-full">
+                                    Faire un don maintenant
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div></div>

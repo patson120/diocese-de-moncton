@@ -98,7 +98,7 @@ export default function Page() {
         <Filter />
 
         <div className="mt-8 lg:mt-16 flex flex-col justify-center items-center">
-          <div className='w-full md:w-1/2 flex flex-col gap-4'>
+          <div className='w-full md:w-3/4 lg:w-1/2 flex flex-col gap-4'>
             {
               hours.map((item, index) => (
                 <div key={item.id}>
