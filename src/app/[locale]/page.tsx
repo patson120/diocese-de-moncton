@@ -79,7 +79,7 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-          <div className="flex gap-4 overflow-x-scroll pb-6">
+          <div className="flex gap-4 overflow-x-scroll h-scroll pb-6">
             {
               news.map((item, index) => (
                 <Link key={index} href="/actualite/1" className='min-w-[280px] md:min-w-[308px]'>

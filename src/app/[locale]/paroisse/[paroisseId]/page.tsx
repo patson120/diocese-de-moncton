@@ -2,7 +2,7 @@
 'use client'
 import { Button } from "@/components/ui/shared/button";
 import { paroisses } from "@/constants";
-import { Play } from "lucide-react";
+import { Mail, MapPin, PhoneCall, Play } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
@@ -74,24 +74,41 @@ export default function Page() {
                                 <span className="text-sm font-extrabold">1897</span>
                             </div>
                         </div>
-
-                        <div className="flex flex-col">
+                        <div className="">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Heures des messes</h1>
-                            <div className="flex flex-col justify-start">
-                                <div className="flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
+                            <div className="flex flex-col gap-y-3">
+                                <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
                                     <p className="text-gray">Mardi</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">12h:00</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">15h:10</p>
                                 </div>
-                                <div className="flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
+                                <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
                                     <p className="text-gray">Mercredi</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">09h:00</p>
                                 </div>
-                                <div className="flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
+                                <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
                                     <p className="text-gray">Dimanche</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">08h:00</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">12h:00</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">17h:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="">
+                            <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Secrétariat paroissial</h1>
+                            <div className="space-y-2 mt-4 body-2">
+                                <div className="flex items-center gap-2">
+                                    <MapPin className="h-4 w-6 font-extrabold" />
+                                    <p className="text-gray">4049, Route 480 Acadieville NB E4Y 1Z3</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <PhoneCall className="h-4 w-6 font-extrabold" />
+                                    <p className="text-gray">(506) 775-2421</p>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Mail className="h-4 w-6 font-extrabold" />
+                                    <p className="text-gray">paracadi@live.ca</p>
                                 </div>
                             </div>
                         </div>

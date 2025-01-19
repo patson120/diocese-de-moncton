@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <footer className='bg-[#231517] '>
       <div className='py-10 md:pt-20'>
-        <div className='container max-margin py-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 '>
-          <div className='space-y-3 col-span-full md:col-span-1 pb-10 md:pb-0'>
-            <div className='relative h-12 w-[100px] xl:h-16 xl:w-[150px] overflow-hidden'>
+        <div className='container max-margin py-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 gap-y-8 md:gap-y-0 '>
+          <div className='space-y-3 col-span-full md:col-span-1 pb-4 md:pb-0'>
+            <div className='relative h-14 w-[150px] md:h-12 md:w-[100px] xl:h-16 xl:w-[150px] overflow-hidden'>
               <Image
                 alt="Logo du diocèse de moncton"
                 src="/brand-logo-1.png"
