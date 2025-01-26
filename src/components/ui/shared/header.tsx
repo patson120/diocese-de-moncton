@@ -55,7 +55,7 @@ export default function Header() {
 
     return (
         <header className='relative'>
-            <div className='bg-gray-100'>
+            <div className='bg-gray-100 test'>
                 <nav className='container max-margin py-1'>
                     <div className='flex justify-between'>
                         <ul className='flex justify-center items-center space-x-3 text-xs md:text-sm lg:text-sm text-gray-500'>
@@ -73,28 +73,70 @@ export default function Header() {
                     </div>
                 </nav>
             </div>
-            <nav className='container max-margin py-3 flex justify-between'>
-                <div className='relative w-20 h-10 xl:w-32 xl:h-14 rounded-md'>
-                    <Image
-                        alt="Logo diocèse de Moncton"
-                        src="/brand-logo.png"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                    />
+            <nav className='container max-margin py-3 relative'>
+                <div className='justify-between items-center hidden btn-menu'>
+                    <div className='relative shrink-0 w-20 h-14 xl:w-32 xl:h-14 rounded-md'>
+                        <Image
+                            alt="Logo diocèse de Moncton"
+                            src="/brand-logo.png"
+                            fill
+                            style={{ objectFit: 'contain' }}
+                        />
+                    </div>
+                    {/* Mobile menu button */}
+                    <div className='flex flex-col justify-center items-center'>
+                        <button
+                            onClick={() => { }}
+                            type="button"
+                            className="relative inline-flex items-center justify-center rounded-md p-2 pr-3 pb-0 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                            <span className="absolute -inset-0.5"></span>
+                            <span className="sr-only">Open main menu</span>
+
+                            {/* Icon when menu is closed. */}
+
+                            {/* Menu open: "hidden", Menu closed: "block" */}
+
+                            <svg className="block h-8 w-8" fill="none" viewBox="0 0 20 20" strokeWidth={1.8} stroke="currentColor" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+
+                            {/* Icon when menu is open. */}
+
+                            {/* Menu open: "block", Menu closed: "hidden" */}
+
+                            <svg className="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <label htmlFor="" className='font-bold'>Menu</label>
+                    </div>
                 </div>
-                <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
-                    <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
-                    <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Ressources</li>
-                </ul>
-                <div className='flex'>
-                    <Button variant="outline" className='border border-primary hover:text-primary text-primary body-3 font-extrabold py-2' onClick={() => { }}>
-                        <Heart className="mr-2 h-4 w-4 xl:h-5 xl:w-5 text-primary" />
-                        Contribuer à la mission
-                    </Button>
+                {/*  */}
+
+                <div className='flex justify-between h-menu'>
+                    <div className='relative shrink-0 w-20 h-10 xl:w-32 xl:h-14 rounded-md'>
+                        <Image
+                            alt="Logo diocèse de Moncton"
+                            src="/brand-logo.png"
+                            fill
+                            style={{ objectFit: 'contain' }}
+                        />
+                    </div>
+
+                    <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
+                        <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
+                        <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
+                        <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
+                        <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li>
+                        <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
+                        <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Ressources</li>
+                    </ul>
+                    <div className='flex'>
+                        <Button variant="outline" className='border border-primary hover:text-primary text-primary body-3 font-extrabold py-2' onClick={() => { }}>
+                            <Heart className="mr-2 h-4 w-4 xl:h-5 xl:w-5 text-primary" />
+                            Contribuer à la mission
+                        </Button>
+                    </div>
                 </div>
                 <div id='submenu' className='hidden transition-all border-t border-gray-100 overflow-hidden absolute top-full px-[8%] inset-0 z-50 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
                     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex'>

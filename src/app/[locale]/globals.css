@@ -139,3 +139,19 @@
   dark:[&::-webkit-scrollbar-track]:bg-neutral-700
   dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
 }
+
+
+@media (max-width: 1054px) {
+  .test {
+    @apply hidden;
+    border: 2px solid red;
+  }
+
+  .btn-menu {
+    @apply flex;
+  }
+
+  .h-menu{
+    @apply hidden
+  }
+}
