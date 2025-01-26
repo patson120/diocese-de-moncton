@@ -1,5 +1,6 @@
 
 'use client'
+import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
 import { paroisses } from "@/constants";
 import { Mail, MapPin, PhoneCall, Play } from "lucide-react";
@@ -32,7 +33,7 @@ export default function Page() {
                 <div className="flex justify-between ">
                 </div>
             </div>
-            <section className="container px-0 py-0">
+            <section className="container max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-14 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2 space-y-4'>
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
@@ -150,6 +151,9 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+
+            {/* Action de grace */}
+            <ActionGrace />
         </>
     )
 }

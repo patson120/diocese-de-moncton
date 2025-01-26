@@ -15,7 +15,8 @@ export default function Page() {
                 <div className="flex justify-between ">
                 </div>
             </div>
-            <section className="container px-0 py-0">
+            {/* container max-margin md:px-0 md:mx-0 */}
+            <section className="container max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-20 md:py-4 lg:py-8'>
                     <div className='hidden md:block col-span-full lg:col-span-2'>
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
@@ -27,7 +28,7 @@ export default function Page() {
                             />
                         </div>
                     </div>
-                    <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
+                    <div className=' col-span-full lg:col-span-3'>
                         <div>
                             <h1 className='heading-3 font-extrabold mb-4'>Faire un don</h1>
                             <p className='body-2 text-gray line-clamp-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

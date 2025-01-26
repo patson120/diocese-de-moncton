@@ -5,6 +5,7 @@ import { paroisses } from '@/constants'
 import { MapPin, Search, SlidersHorizontalIcon } from 'lucide-react'
 import dynamic from "next/dynamic"
 import { useState } from 'react'
+import { Link } from '@/i18n/routing'
 
 // Import Map component dynamically to avoid SSR issues
 const Map = dynamic(() => import('@/components/map'), { ssr: false });
@@ -58,7 +59,9 @@ export default function Page() {
                         </div>
                         {
                             [...paroisses, ...paroisses].map((item, index) => (
-                                <ParoisseItem key={index} data={item} />
+                                <Link key={index} href="/paroisse/1">
+                                    <ParoisseItem data={item} />
+                                </Link>
                             ))
                         }
                     </div>

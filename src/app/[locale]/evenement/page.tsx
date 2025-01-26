@@ -94,7 +94,7 @@ export default function Page() {
                 <div className='w-2/3 mx-auto flex flex-col justify-center'>
                     {/* filter */}
                     <Filter />
-                    <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Moi de septembre</h3>
+                    <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Mois de septembre</h3>
                     <div className='flex flex-col gap-4'>
                         {
                             events.map((item, index) => (
@@ -104,7 +104,7 @@ export default function Page() {
                             ))
                         }
                     </div>
-                    <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Moi de octobre</h3>
+                    <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Mois d'octobre</h3>
                     <div className='flex flex-col gap-4'>
                         {
                             [1, 2].map((item) => (

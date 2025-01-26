@@ -31,7 +31,7 @@ export default function Page() {
                 <div className="flex justify-between ">
                 </div>
             </div>
-            <section className="container px-0 py-0">
+            <section className="container  max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2'>
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
@@ -43,7 +43,7 @@ export default function Page() {
                             />
                         </div>
                     </div>
-                    <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
+                    <div className='col-span-full lg:col-span-3'>
                         <div>
                             <small className='text-gray'>Titre évènement</small>
                             <h1 className='heading-4 font-extrabold mb-4'>Grandir ensemble 2025</h1>
