@@ -3,10 +3,10 @@
 import { LanguageSelector } from '@/components/language-selector'
 import { Button } from '@/components/ui/shared/button'
 import { actualites, archidiocese, mouvements, ressources, sacrements } from '@/constants'
+import { Link } from '@/i18n/routing'
 import { MenuType } from '@/types'
 import { Heart } from "lucide-react"
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { useState } from 'react'
 
 export default function Header() {
@@ -173,9 +173,10 @@ export default function Header() {
 
 const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     return (
-        <div className='flex justify-start items-center space-x-4 text-black'>
-            <div className='h-[60px] w-[60px] shrink-0 rounded-[12px] bg-[#F9F4F5] overflow-hidden relative'>
-                {/* <Image
+        <Link href={menu.link}>
+            <div className='flex justify-start items-center space-x-4 text-black'>
+                <div className='h-[60px] w-[60px] shrink-0 rounded-[12px] bg-[#F9F4F5] overflow-hidden relative'>
+                    {/* <Image
                     alt=""
                     src="/assets/img/campost.jpg"
                     fill
@@ -183,11 +184,12 @@ const SubmenuItem = ({ menu }: { menu: MenuType }) => {
                         objectFit: 'cover'
                     }}
                 /> */}
+                </div>
+                <div>
+                    <h4 className='body-3 font-semibold lg:font-bold'>{menu.title}</h4>
+                    <p className='legend text-gray-500 line-clamp-2'>{menu.description}</p>
+                </div>
             </div>
-            <div>
-                <h4 className='body-3 font-semibold lg:font-bold'>{menu.title}</h4>
-                <p className='legend text-gray-500 line-clamp-2'>{menu.description}</p>
-            </div>
-        </div>
+        </Link>
     )
 }

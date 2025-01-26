@@ -8,7 +8,7 @@ export const archidiocese: MenuType[] = [
         image: '',
         title: 'Archevêque',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/archeveques'
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ export const archidiocese: MenuType[] = [
         image: '',
         title: 'Clergé',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/clerges'
     },
     {
         id: 5,
@@ -88,7 +88,7 @@ export const actualites: MenuType[] = [
         image: '',
         title: 'Archives',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/evenement'
     }
 ]
 
@@ -98,7 +98,7 @@ export const sacrements: MenuType[] = [
         image: '',
         title: 'Baptêmes',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/sacrements'
     },
     {
         id: 2,
