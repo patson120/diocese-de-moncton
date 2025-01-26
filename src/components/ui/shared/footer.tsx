@@ -60,9 +60,11 @@ export default function Footer() {
             <ul className='space-y-2 lg:space-y-4 body-3'>
               <li className='text-[#B5B5B5]'>Notre histoire</li>
               <li className='text-[#B5B5B5]'>Missions et valeurs</li>
-              <Link href="/clerges">
-                <li className='text-[#B5B5B5]'>Le Clergé</li>
-              </Link>
+
+              <li className='text-[#B5B5B5]'>
+                <Link href="/clerges">Le Clergé</Link>
+              </li>
+
             </ul>
           </div>
 

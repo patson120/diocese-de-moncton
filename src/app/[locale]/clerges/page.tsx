@@ -113,7 +113,7 @@ export default function Page() {
                             ))
                         }
                     </div>
-                    <div className='lg:flex lg:flex-row lg:overflow-x-scroll pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
+                    <div className='lg:flex lg:flex-row pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
                         {
                             items.map(item => (
                                 <div key={item.id} className='space-y-3 w-full' >
