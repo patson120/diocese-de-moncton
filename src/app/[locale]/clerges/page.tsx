@@ -100,7 +100,7 @@ export default function Page() {
             <section className='container max-margin py-0 pb-10 md:pb-20'>
                 <div>
                     <p className='body-2 text-gray mb-2'>Sélectionnez le profil recherché</p>
-                    <div className='mb-10 flex items-center gap-2'>
+                    <div className='mb-10 flex items-center flex-wrap gap-2'>
                         {
                             menus.map(menu => (
                                 <div key={menu.id}>
@@ -113,10 +113,10 @@ export default function Page() {
                             ))
                         }
                     </div>
-                    <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 lg:grid lg:gap-6 grid-cols-2 md:grid-cols-4 xl:grid-cols-5'>
+                    <div className='lg:flex lg:flex-row lg:overflow-x-scroll pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
                         {
                             items.map(item => (
-                                <div key={item.id} className='space-y-3'>
+                                <div key={item.id} className='space-y-3 w-full' >
                                     <div className='h-[240px] relative rounded-xl overflow-hidden'>
                                         <Image
                                             alt="Célébration de baptême"
@@ -134,7 +134,7 @@ export default function Page() {
                                     <div className="">
                                         <Link href="" className="body-3 font-semibold underline">
                                             Coordonnées
-                                        </Link>
+                                        </Link> 
                                     </div>
                                 </div>
                             ))
