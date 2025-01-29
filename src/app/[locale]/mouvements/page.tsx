@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/shared/button'
 import { Link } from '@/i18n/routing'
+import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 
 const mouvements = [
@@ -102,26 +103,31 @@ export default function Page() {
                 </div>
             </section>
 
-            <div className='mt-10 lg:mt-20'></div>
+            <div className='mt-6 md:mt-10 lg:mt-20'></div>
 
             <section className='container max-margin py-0 pb-10 md:pb-20'>
-                <h1 className='heading-3 font-extrabold mt-5 mb-10'>Liste des mouvements</h1>
+                <h1 className='heading-3 font-extrabold mt-5 mb-5 md:mb-10'>Liste des mouvements</h1>
 
-                <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div className="grid gap-3 md:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {
                         mouvements.map(mouvement => (
-                            <div key={mouvement.id} className='space-y-3'>
+                            <div key={mouvement.id} className='space-y-3 border rounded-xl p-3 md:p-6'>
                                 <div className='space-y-2'>
                                     <h1 className='heading-4 text-[#1D0104] font-bold'>{mouvement.title}</h1>
-                                    <p className='body-2 text-gray'>{mouvement.description}</p>
+                                    <p className='body-2 text-gray line-clamp-3'>{mouvement.description}</p>
                                 </div>
                                 <div className='pt-4'>
                                     <Link href="#" className="">
                                         <Button
-                                            variant="outline"
+                                            variant="ghost"
                                             onClick={() => { }}
-                                            className='font-bold border-[#1D0104] rounded-[8px]'
-                                        >En savoir plus</Button>
+                                            className='font-medium border-[#1D0104] rounded-[8px] p-0'
+                                        >
+                                            <div className='flex justify-center items-center'>
+                                                <span>En savoir plus</span>
+                                                <ChevronRight className="ml-1 h-5 w-5" />
+                                            </div>
+                                        </Button>
                                     </Link>
                                 </div>
                             </div>
