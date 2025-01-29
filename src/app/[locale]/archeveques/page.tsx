@@ -70,13 +70,12 @@ export default function Page() {
                                 style={{ objectFit: 'cover' }}
                             />
                         </div>
-
                     </div>
                     <div className='container max-margin px-4 md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <small className='text-gray uppercase'>Archevêque de Moncton</small>
                             <h1 className='heading-4 font-extrabold mb-4'>Son Excellence Monseigneur Guy Desrochers, C.Ss.R.</h1>
-                            <div className=" space-y-10">
+                            <div className="space-y-3 md:space-y-7 lg:space-y-10">
                                 <p className='body-2 text-gray'>Mgr Desrochers est né en 1956 dans le secteur de Hull à Gatineau (Québec). Après ses études secondaires, il est entré au collège Algonquin d’Ottawa où des études en beaux-arts et en art commercial l’ont préparé à travailler comme graphiste pendant sept ans au quotidien français d’Ottawa, Le Droit.</p>
                                 <p className='body-2 text-gray'>Sa vocation l’a ensuite conduit à la Congrégation du Très-Saint-Rédempteur (les Rédemptoristes) où il a été ordonné prêtre en 1989.</p>
                                 <p className='body-2 text-gray'>Après son ordination, il a collaboré à une mission d’évangélisation dans la région de Gaspé, au Québec. Il a ensuite servi pendant plusieurs années comme recteur de l’ancien monastère des Rédemptoristes à Aylmer-Gatineau, avant d’être nommé au Sanctuaire de Sainte-Anne-de-Beaupré.</p>
