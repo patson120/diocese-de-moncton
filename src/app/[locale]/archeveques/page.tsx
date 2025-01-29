@@ -90,7 +90,7 @@ export default function Page() {
             <section className="container max-margin py-0">
                 <div>
                     <h2 className='heading-3 text-gray-900 mb-6'>Archevêques précédents</h2>
-                    <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-0 lg:pb-8 lg:space-x-6 grid gap-6 lg:gap-0 grid-cols-2'>
+                    <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-0 lg:pb-8 lg:space-x-6 grid gap-3 md:gap-6 lg:gap-0 grid-cols-2'>
                         {
                             items.map(item => (
                                 <div key={item.id} className='space-y-3'>
