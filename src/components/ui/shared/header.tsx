@@ -266,7 +266,6 @@ export default function Header() {
                             <div className='border-t-2 border-gray-100 mt-3'></div>
                             <div className='mt-6'></div>
                             <h1 className='heading-5 text-2xl mb-4'>Menu</h1>
-
                             <Accordion type="single" collapsible className="w-full container max-margin py-0 pl-0">
                                 {sections.map((section, index) => (
                                     <AccordionItem key={index} value={`item-${index}`} className='border-none'>
@@ -288,10 +287,8 @@ export default function Header() {
                                     </AccordionItem>
                                 ))}
                             </Accordion>
-
                         </div>
-                        <div className='p-6 bg-[#F9F4F5] mb-10 mt-8 rounded-xl'>
-
+                        <div className='p-6 bg-[#F9F4F5] mb-10 mt-6 rounded-xl'>
                             <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
                             <p className='body-3 text-gray-500 mt-2 mb-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
                             <Button className='w-full body-2 xl:text-xl' onClick={() => { navigateTo('/horaires-messes') }}>
