@@ -88,7 +88,7 @@ export default function Header() {
     }
 
     const navigateTo = (link: string) => {
-        setIsOpen(prev => !prev)
+        document.querySelector('#submenu')?.classList.add("hidden")
         router.push(link)
     }
 
