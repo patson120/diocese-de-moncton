@@ -22,7 +22,7 @@ export const archidiocese: MenuType[] = [
         image: '',
         title: 'Catéchèse',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/catechese'
     },
     {
         id: 4,
@@ -43,21 +43,21 @@ export const archidiocese: MenuType[] = [
         image: '',
         title: 'Education de la foi de ...',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/eduction-de-la-foi'
     },
     {
         id: 7,
         image: '',
         title: 'Liturgie',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/liturgie'
     },
     {
         id: 8,
         image: '',
         title: 'Justice & solidarité',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/justice-solidarite'
     },
     {
         id: 9,

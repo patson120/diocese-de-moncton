@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
 
 
 export default function Page() {
@@ -174,6 +173,7 @@ export default function Page() {
                     <p className='body-2 text-gray'>Jésus a aimé les pauvres d’un amour privilégié, et son enseignement nous rappelle que chaque personne humaine est égale aux yeux de Dieu. En priant et en faisant confiance à l'Esprit, nous trouvons la force de persévérer dans notre engagement pour la justice et la solidarité.</p>
                 </div>
             </section>
+            <div className='mt-5 md:mt-10'></div>
         </main>
     )
 }
