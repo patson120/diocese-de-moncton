@@ -74,7 +74,7 @@ export default function Home() {
         <div className="vertical-margin">
           <div className="mb-3 flex justify-between items-center">
             <h1 className="heading-3">Actualités</h1>
-            <Link href="/actualite">
+            <Link href="/actualites">
               <Button variant='ghost' onClick={() => { }} className="body-3 font-semibold p-0 hover:bg-transparent">
                 Voir toute l’actualité
                 <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
@@ -84,7 +84,7 @@ export default function Home() {
           <div className="flex flex-row overflow-x-scroll lg:overflow-x-hidden gap-4 h-scroll pb-6">
             {
               news.map((item, index) => (
-                <Link key={index} href="/actualite/1" className='min-w-[280px] md:min-w-[308px]'>
+                <Link key={index} href="/actualites/1" className='min-w-[280px] md:min-w-[308px]'>
                   <Actualite data={item} />
                 </Link>
               ))

@@ -142,16 +142,22 @@
 
 
 @media (max-width: 1054px) {
-  .test {
+  #submenu {
+    @apply hidden;
+  }
+  .info-section {
     @apply hidden;
     border: 2px solid red;
   }
 
   .btn-menu {
-    @apply flex;
-  }
+    @apply flex h-[45px];
 
+  }
+  .mobile-menu {
+    @apply block
+  }
   .h-menu{
-    @apply hidden
+    @apply hidden;
   }
 }

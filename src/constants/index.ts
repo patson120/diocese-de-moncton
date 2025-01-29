@@ -74,14 +74,14 @@ export const actualites: MenuType[] = [
         image: '',
         title: 'Nouvelles',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/actualites'
     },
     {
         id: 2,
         image: '',
         title: 'Evènements',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/evenement'
     },
     {
         id: 3,
@@ -105,42 +105,42 @@ export const sacrements: MenuType[] = [
         image: '',
         title: 'Confirmations',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/sacrements'
     },
     {
         id: 3,
         image: '',
         title: 'Eucharisties',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/sacrements'
     },
     {
         id: 4,
         image: '',
         title: 'Reconcilliation',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/sacrements'
     },
     {
         id: 5,
         image: '',
         title: 'Mariages',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/sacrements'
     },
     {
         id: 6,
         image: '',
         title: 'Onction des malades',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/sacrements'
     },
     {
         id: 7,
         image: '',
         title: 'Ordre',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/sacrements'
     }
 ]
 
@@ -164,7 +164,7 @@ export const mouvements: MenuType[] = [
         image: '',
         title: 'Mouvements des fem...',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/mouvements'
     },
     {
         id: 4,
@@ -231,7 +231,7 @@ export const ressources: MenuType[] = [
         image: '',
         title: 'Horaires des messes',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/horaires-messes'
     },
     {
         id: 4,

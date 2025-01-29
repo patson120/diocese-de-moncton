@@ -10,6 +10,7 @@ import { Language } from '@/types';
 import Header from '@/components/ui/shared/header';
 import Newsletter from '@/components/ui/shared/newsletter';
 import Footer from '@/components/ui/shared/footer';
+import Navigation from '@/components/Navigation';
 
 
 export const metadata: Metadata = {
@@ -42,6 +43,7 @@ export default async function RootLayout({
           <main className='overflow-x-hiddens'>
             {/* Header */}
             <Header />
+            {/* <Navigation /> */}
 
             {children}
 
