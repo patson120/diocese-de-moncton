@@ -43,7 +43,7 @@ export default function Page() {
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {
             [...news, ...news].map((item, index) => (
-              <Link key={index} href="/actualite/1" className=''>
+              <Link key={index} href="/actualites/1" className=''>
                 <Actualite data={item} />
               </Link>
             ))
