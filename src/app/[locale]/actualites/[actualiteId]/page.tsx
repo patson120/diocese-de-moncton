@@ -43,7 +43,7 @@ export default function Page() {
             <div className="flex md:flex-col gap-4 overflow-x-scroll md:overflow-x-hidden pb-6 md:pb-0">
               {
                 news.map((item, index) => (
-                    <Link key={index} href="/actualite/1" className='min-w-[280px] md:min-w-[308px] lg:w-auto'>
+                    <Link key={index} href="/actualites/1" className='min-w-[280px] md:min-w-[308px] lg:w-auto'>
                     <Actualite data={item} />
                   </Link>
                 ))
