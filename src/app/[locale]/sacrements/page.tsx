@@ -28,7 +28,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <div className='mt-10 lg:mt-20'></div>
+            <div className='md:mt-10 lg:mt-20'></div>
 
             <section className='container max-margin py-0 pb-10 md:pb-20'>
 

@@ -59,7 +59,7 @@ export default function Page() {
                 <div className="flex justify-between ">
                 </div>
             </div>
-            <section className="container max-margin py-0">
+            <section className="md:container md:max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-14 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2 space-y-4'>
                         <div className='h-80 xl:h-[500px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
@@ -72,7 +72,7 @@ export default function Page() {
                         </div>
 
                     </div>
-                    <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
+                    <div className='container max-margin px-4 md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <small className='text-gray uppercase'>Archevêque de Moncton</small>
                             <h1 className='heading-4 font-extrabold mb-4'>Son Excellence Monseigneur Guy Desrochers, C.Ss.R.</h1>
@@ -87,7 +87,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <div className='mt-10 md:mt-20'></div>
+            <div className='md:mt-10 lg:mt-20'></div>
             <section className="container max-margin py-0">
                 <div>
                     <h2 className='heading-3 text-gray-900 mb-6'>Archevêques précédents</h2>
