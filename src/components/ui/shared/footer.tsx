@@ -26,7 +26,7 @@ export default function Footer() {
             <ul className='space-y-2 lg:space-y-4 body-3'>
               <li className='text-[#B5B5B5]'>Nouvelles diocésaines</li>
               <li className='text-[#B5B5B5]'>
-                <Link href="/evenement">Evènements à venir</Link>
+                <Link href="/evenements">Evènements à venir</Link>
               </li>
               <li className='text-[#B5B5B5]'>Archives</li>
             </ul>
@@ -36,7 +36,7 @@ export default function Footer() {
             <h2 className='font-medium text-xs md:text-sm xl:text-base text-white uppercase'>Paroisse</h2>
             <ul className='space-y-2 lg:space-y-4 body-3'>
               <li className='text-[#B5B5B5]'>
-                <Link href="/paroisse">Touver une Paroisse</Link>
+                <Link href="/paroisses">Touver une Paroisse</Link>
               </li>
               <li className='text-[#B5B5B5]'>
                 <Link href="/horaires-messes">Horaires des messes</Link>

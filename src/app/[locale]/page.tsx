@@ -94,7 +94,7 @@ export default function Home() {
         {/* <div className="mt-10 lg:mt-20"/> */}
         <div className="mb-3 flex justify-between items-center">
           <h1 className="heading-3">Nos évènements</h1>
-          <Link href='/evenement' className="hidden md:block" >
+          <Link href='/evenements' className="hidden md:block" >
             <Button variant='ghost' onClick={() => { router.push('/evenement') }} className="body-3 font-semibold p-0 hover:bg-transparent">
               Voir tous les évènements
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
@@ -104,13 +104,13 @@ export default function Home() {
         <section className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {
             events.map((item, index) => (
-              <Link key={index} href="/evenement/1" className=''>
+              <Link key={index} href="/evenements/1" className=''>
                 <EventItem data={item} />
               </Link>
             ))
           }
         </section>
-        <Link href='/evenement' className="block md:hidden mt-5" >
+        <Link href='/evenements' className="block md:hidden mt-5" >
           <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
             Voir tous les évènements
             <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
@@ -145,12 +145,12 @@ export default function Home() {
             <div className="col-span-3 md:col-span-1 flex flex-col gap-4 lg:gap-5">
               {
                 paroisses.map((item, index) => (
-                  <Link key={index} href="/paroisse/1">
+                  <Link key={index} href="/paroisses/1">
                     <ParoisseItem data={item} />
                   </Link>
                 ))
               }
-              <Link href="/paroisse">
+              <Link href="/paroisses">
                 <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
                   Voir toutes les 23 paroisses
                   <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />

@@ -81,14 +81,14 @@ export const actualites: MenuType[] = [
         image: '',
         title: 'Evènements',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/evenement'
+        link: '/evenements'
     },
     {
         id: 3,
         image: '',
         title: 'Archives',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/evenement'
+        link: '/evenements'
     }
 ]
 

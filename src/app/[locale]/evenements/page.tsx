@@ -98,7 +98,7 @@ export default function Page() {
                     <div className='flex flex-col gap-4'>
                         {
                             events.map((item, index) => (
-                                <Link key={index} href="/evenement/1" >
+                                <Link key={index} href="/evenements/1" >
                                     <EventItem data={item} row />
                                 </Link>
                             ))

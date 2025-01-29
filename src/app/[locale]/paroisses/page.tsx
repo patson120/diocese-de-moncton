@@ -59,7 +59,7 @@ export default function Page() {
                         </div>
                         {
                             [...paroisses, ...paroisses].map((item, index) => (
-                                <Link key={index} href="/paroisse/1">
+                                <Link key={index} href="/paroisses/1">
                                     <ParoisseItem data={item} />
                                 </Link>
                             ))
