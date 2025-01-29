@@ -41,7 +41,9 @@ export default function Footer() {
               <li className='text-[#B5B5B5]'>
                 <Link href="/horaires-messes">Horaires des messes</Link>
               </li>
-              <li className='text-[#B5B5B5]'>Equipe paroissiale</li>
+              <li className='text-[#B5B5B5]'>
+              <Link href="/clerges">Equipe paroissiale</Link>
+                </li>
             </ul>
           </div>
 

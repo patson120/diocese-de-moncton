@@ -140,7 +140,7 @@ export const sacrements: MenuType[] = [
         image: '',
         title: 'Ordre',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/sacrements'
+        link: '/ordre-sacrements'
     }
 ]
 
