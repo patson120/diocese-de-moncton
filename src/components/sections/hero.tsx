@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/shared/button';
+import { Link, useRouter } from '@/i18n/routing';
 import { Search } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -12,7 +13,7 @@ const slides = [
     description: 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.',
     cta: [
       { text: 'Trouver une paroisse', icon: true, href: '/paroisses' },
-      { text: 'Voir nos évènements', href: '/evenements' }
+      { text: 'Voir nos évènements', icon: false, href: '/evenements' }
     ]
   },
   {
@@ -25,12 +26,15 @@ const slides = [
     image: './assets/img/hero-image-1.png',
     title: 'Participez à nos activités',
     description: 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.',
-    cta: [{ text: 'Voir nos évènements', href: '/evenements' }]
+    cta: [
+      { text: 'Voir nos évènements', icon: false, href: '/evenements' },
+    ]
   }
 ];
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const router = useRouter()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -47,13 +51,17 @@ export function HeroSection() {
   //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   // };
 
+  const navigateTo = (link: string) => {
+    router.push(link);
+  }
+
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
       {
         slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100 z-50' : 'opacity-0 z-0'
               }`}>
             <Image
               src={slide.image}
@@ -75,17 +83,20 @@ export function HeroSection() {
                       <p className="body-1 text-white my-4">{slide.description}</p>
                       <div className='flex flex-col md:flex-row gap-3 md:gap-2'>
                         {
-                          slide.cta.map((cta, index) => (
+                          slides[index].cta.map((ct, index) => (
                             <Button key={index} variant={`${index === 0 ? 'default' : 'outline'}`}
                               size="sm"
-                              className={`md:mt-8 ${index === 0 ? '' : 'text-black'} hover:bg-primary/90`}
-                            // asChild
+                              className={`md:mt-8 ${index === 0 ? '' : 'text-black'} hover:bg-primary/90 !cursor-pointer`}
+                              asChild
+                              onClick={() => {navigateTo(ct.href)}}
                             >
-                              {
-                                cta.icon &&
-                                <Search className="mr-2 h-4 w-4 !text-white" />
-                              }
-                              <a href={cta.href}>{cta.text}</a>
+                              <div className='flex justify-center items-center'>
+                                {
+                                  ct.icon &&
+                                  <Search className="mr-2 h-4 w-4 !text-white" />
+                                }
+                                <span>{ct.text}</span>
+                              </div>
                             </Button>
                           ))
                         }
