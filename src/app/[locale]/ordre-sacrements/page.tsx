@@ -1,7 +1,6 @@
 'use client'
 
-import { Button } from '@/components/ui/shared/button'
-import { Link } from '@/i18n/routing'
+import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Page() {
@@ -47,8 +46,11 @@ export default function Page() {
                     </div>
                     <div className='col-span-full md:col-span-7 py-10 space-y-6'>
                         <div>
-                            <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements de l'Église catholique</h2>
-                            <p className='body-2 text-gray'>Les sacrements sont des signes visibles du don gratuit ( la grâce ) de Dieu, institués par le Christ et confiés à l’Eglise. Par les sacrements, le croyant entre et participe à la vie divine. Les sacrements manifestent toute notre existence, dans ses différentes étapes, appelées à être vécue dans le Christ.</p>
+                            <h2 className='heading-3 text-gray-900 mb-4'>Qu'est-ce que le sacrement de l'ordre ?</h2>
+                            <div className='space-y-3'>
+                                <p className='body-2 text-gray'>Le sacrement de l'ordre est l'un des sept sacrements de l'Église catholique. Il comporte trois degrés : l'épiscopat (évêque), le presbytérat (prêtre) et le diaconat (diacre)</p>
+                                <p className='body-2 text-gray'>Chacun de ces degrés confère une mission spécifique au service de l'Église et de la communauté chrétienne.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,39 +58,38 @@ export default function Page() {
                 <div className='mt-10 md:mt-20'></div>
                 <div className='space-y-6'>
                     <div className='w-full lg:w-1/2'>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements sont de trois ordres</h2>
-                        <p className='body-2 text-gray'>Tout sacrement comporte trois dimensions: un signe, ce que l'on voit, une parole, ce que l'on entend et un symbole, ce que le signe et la parole expriment.</p>
+                        <h2 className='heading-3 text-gray-900 mb-4'>Les trois degrés du sacrement de l'ordre</h2>
                     </div>
                     <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <div className='space-y-3'>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Les sacrements de l’initiation</h1>
-                                <p className='body-2 text-gray'>Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, </p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>Évêque</h1>
+                                <p className='body-2 text-gray'>Le ministère épiscopal remonte aux apôtres et perpétue leur mission pastorale. Le Pape est le premier parmi les évêques.</p>
                             </div>
                         </div>
                         <div className='space-y-3'>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Les sacrements de guérison</h1>
-                                <p className='body-2 text-gray'>Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, </p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>Prêtre</h1>
+                                <p className='body-2 text-gray'>Par l'ordination, le prêtre reçoit un pouvoir spécifique et une mission auprès de ses frères et sœurs dans la foi.</p>
                             </div>
                         </div>
                         <div className='space-y-3'>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Les sacrements d'engagement</h1>
-                                <p className='body-2 text-gray'>Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, </p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>Diacre</h1>
+                                <p className='body-2 text-gray'>Le diaconat est un ministère à part entière, axé sur le service et l'aide aux évêques dans les œuvres pastorales et sociales.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='mt-10 md:mt-20'></div>
                 <div>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements de l’initiation</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>Leurs roles</h2>
                     <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-3'>
                         <div className='space-y-3'>
                             <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
                                 <Image
-                                    alt="Célébration de baptême"
-                                    src="/assets/img/bapteme.png"
+                                    alt="Rôle"
+                                    src="/assets/img/role-1.png"
                                     fill
                                     style={{
                                         objectFit: 'cover',
@@ -97,105 +98,15 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>Le Baptême</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className='space-y-3'>
-                            <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
-                                <Image
-                                    alt="Célébration de baptême"
-                                    src="/assets/img/confirmation.png"
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        height: '100%',
-                                        width: '100%'
-                                    }}
-                                />
-                            </div>
-                            <h1 className='heading-4'>La Confirmation</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className='space-y-3'>
-                            <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
-                                <Image
-                                    alt="L'Eucharistie"
-                                    src="/assets/img/eucharistie.png"
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        height: '100%',
-                                        width: '100%'
-                                    }}
-                                />
-                            </div>
-                            <h1 className='heading-4'>L'Eucharistie</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div>
-                                <Link href="/messages/1" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            <h1 className='heading-4'>L'évêque, successeur des apôtres</h1>
+                            <p className='body-2 text-gray'>L'évêque est le véritable ministre pastoral dans l'Église. Son rôle remonte aux apôtres, les premiers témoins de Jésus. Le Pape, en tant qu'évêque de Rome, est le premier parmi les évêques et dirige le collège épiscopal.</p>
 
-                <div className='mt-10 md:mt-20'></div>
-                <div>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements de guérison</h2>
-                    <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-2'>
-                        <div className='space-y-3'>
-                            <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
-                                <Image
-                                    alt="reconciliation"
-                                    src="/assets/img/reconciliation.png"
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        height: '100%',
-                                        width: '100%'
-                                    }}
-                                />
-                            </div>
-                            <h1 className='heading-4'>La Réconciliation</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
-                            </div>
                         </div>
                         <div className='space-y-3'>
                             <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
                                 <Image
-                                    alt="L'onction des malades"
-                                    src="/assets/img/onction-des-malades.png"
+                                    alt="Rôle"
+                                    src="/assets/img/role-2.png"
                                     fill
                                     style={{
                                         objectFit: 'cover',
@@ -204,75 +115,53 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>L’onction des malades</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                            <h1 className='heading-4'>Le prêtre, ministre du Christ</h1>
+                            <p className='body-2 text-gray'>Être prêtre ne se limite pas à une fonction ou un ministère. Par le sacrement de l'ordre, le prêtre reçoit un pouvoir spécifique et une mission. Il agit in persona Christi (en la personne du Christ), servant humblement la communauté et administrant les sacrements.</p>
+
+                        </div>
+                        <div className='space-y-3'>
+                            <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
+                                <Image
+                                    alt="Rôle"
+                                    src="/assets/img/role-3.png"
+                                    fill
+                                    style={{
+                                        objectFit: 'cover',
+                                        height: '100%',
+                                        width: '100%'
+                                    }}
+                                />
                             </div>
+                            <h1 className='heading-4'>Le diacre, serviteur de l'Église</h1>
+                            <p className='body-2 text-gray'>Le diaconat est un ministère à part entière, ouvert aux célibataires et aux mariés. Les diacres mettent l'accent sur le service, aidant les évêques dans les œuvres pastorales et sociales. Leur ordination imprime un caractère sacramentel irrévocable.</p>
+
                         </div>
                     </div>
                 </div>
-                <div className='mt-10 md:mt-20'></div>
-                <div>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements d'engagement</h2>
-                    <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-2'>
-                        <div className='space-y-3'>
-                            <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
-                                <Image
-                                    alt="L’Ordre"
-                                    src="/assets/img/ordre.png"
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        height: '100%',
-                                        width: '100%'
-                                    }}
-                                />
-                            </div>
-                            <h1 className='heading-4'>L’Ordre</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
-                            </div>
-                        </div>
-                        <div className='space-y-3'>
-                            <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
-                                <Image
-                                    alt="Le Mariage"
-                                    src="/assets/img/le-mariage.png"
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        height: '100%',
-                                        width: '100%'
-                                    }}
-                                />
-                            </div>
-                            <h1 className='heading-4'>Le Mariage</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+            </section>
+            <div className='mt-8 md:mt-16'></div>
+            <section className='container max-margin py-0'>
+                <div className=''>
+                    <h2 className='heading-3 text-gray-900 mb-4'>Ressources</h2>
+                    <p className='body-2 text-gray'>Pour approfondir votre compréhension</p>
+                </div>
+                <div className='flex flex-row gap-3 items-center mt-5'>
+                    <a href='https://www.vatican.va/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
+                        <p>Site officiel du Vatican</p>
+                        <ArrowUpRight className="h-4 w-6" />
+                    </a>
+                    <a href='https://eglise.catholique.fr/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
+                        <p>Conférence des Evêques de France</p>
+                        <ArrowUpRight className="h-4 w-6" />
+                    </a>
+                </div>
+            </section>
+            <div className='mt-10 md:mt-20'></div>
+            <section className='container max-margin py-0'>
+                <div className='w-full lg:w-1/2'>
+                    <h2 className='heading-3 text-gray-900 mb-4'>Vous avez des questions ?</h2>
+                    <p className='body-2 text-gray'>Pour en savoir plus sur le sacrement de l'ordre ou pour discuter d'une vocation, contactez votre paroisse ou le service diocésain des vocations</p>
+
                 </div>
             </section>
         </main>
