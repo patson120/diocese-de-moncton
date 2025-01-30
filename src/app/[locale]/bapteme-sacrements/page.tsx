@@ -149,13 +149,12 @@ export default function Page() {
                     </a>
                 </div>
             </section>
-            
+
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>Vous avez des questions ?</h2>
                     <p className='body-2 text-gray'>Pour en savoir plus sur le sacrement de l'ordre ou pour discuter d'une vocation, contactez votre paroisse ou le service diocésain des vocations</p>
-
                 </div>
             </section>
         </main>

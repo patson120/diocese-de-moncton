@@ -43,7 +43,7 @@ export const archidiocese: MenuType[] = [
         image: '',
         title: 'Education de la foi de ...',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/eduction-de-la-foi'
+        link: '/education-de-la-foi'
     },
     {
         id: 7,
