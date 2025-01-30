@@ -149,6 +149,7 @@ export default function Page() {
                     </a>
                 </div>
             </section>
+            
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
