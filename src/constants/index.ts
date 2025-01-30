@@ -98,7 +98,7 @@ export const sacrements: MenuType[] = [
         image: '',
         title: 'Baptêmes',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/sacrements'
+        link: '/bapteme-sacrements'
     },
     {
         id: 2,
