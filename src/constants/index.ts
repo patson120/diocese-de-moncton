@@ -222,9 +222,9 @@ export const ressources: MenuType[] = [
     {
         id: 2,
         image: '',
-        title: 'Cimetères',
+        title: 'Cimetières',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/cimetiere'
     },
     {
         id: 3,
@@ -252,14 +252,14 @@ export const ressources: MenuType[] = [
         image: '',
         title: 'Chancellerie',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/chancellerie'
     },
     {
         id: 5,
         image: '',
         title: 'Tribunal matrimonial',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/tribunal-matrimonial'
     },
     {
         id: 6,
