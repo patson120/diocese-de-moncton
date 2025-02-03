@@ -1,16 +1,15 @@
 
+import { inter } from '@/app/fonts/fonts';
+import Footer from '@/components/ui/shared/footer';
+import Header from '@/components/ui/shared/header';
+import Newsletter from '@/components/ui/shared/newsletter';
+import { routing } from '@/i18n/routing';
+import { Language } from '@/types';
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
-import type { Metadata } from "next";
-import { inter } from '@/app/fonts/fonts';
-import "./globals.css";
-import { Language } from '@/types';
-import Header from '@/components/ui/shared/header';
-import Newsletter from '@/components/ui/shared/newsletter';
-import Footer from '@/components/ui/shared/footer';
-import Navigation from '@/components/Navigation';
+import "../globals.css";
 
 
 export const metadata: Metadata = {
@@ -40,7 +39,7 @@ export default async function RootLayout({
       <body
         className={`${inter.className} antialiased select-none`}>
         <NextIntlClientProvider messages={messages}>
-          <main className='overflow-x-hiddens'>
+          <main className='overflow-x-hidden'>
             {/* Header */}
             <Header />
             {/* <Navigation /> */}

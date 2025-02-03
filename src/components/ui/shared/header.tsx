@@ -19,7 +19,8 @@ import {
 const sections = [
     {
         title: "Accueil",
-        items: []
+        items: [],
+        page: '/'
     },
     {
         title: "Archidiocèse",
@@ -30,8 +31,10 @@ const sections = [
         items: [...sacrements]
     },
     {
-        title: "Actualités",
-        items: [...actualites]
+        title: "Evènements",
+        items: [],
+        // items: [...actualites]
+        page: '/evenements'
     },
     {
         title: "Mouvements",
@@ -175,7 +178,8 @@ export default function Header() {
                             <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
                             <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
                             <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
-                            <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li>
+                            <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/evenements">Evènements</Link></li>
+                            {/* <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li> */}
                             <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
                             <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Ressources</li>
                         </ul>
@@ -210,7 +214,7 @@ export default function Header() {
                                 </div>
                                 <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
                                 <p className='body-3 text-gray-500 mt-2 mb-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
-                                <Button className='w-full body-2 xl:text-xl'onClick={() => { navigateTo('/horaires-messes') }}>
+                                <Button className='w-full body-2 xl:text-xl' onClick={() => { navigateTo('/horaires-messes') }}>
                                     En savoir plus
                                 </Button>
                             </div>
@@ -269,7 +273,7 @@ export default function Header() {
                             <Accordion type="single" collapsible className="w-full container max-margin py-0 pl-0">
                                 {sections.map((section, index) => (
                                     <AccordionItem key={index} value={`item-${index}`} className='border-none'>
-                                        <AccordionTrigger onClick={() => { if (section.items?.length === 0) { navigateTo("/") } }}
+                                        <AccordionTrigger onClick={() => { if (section.items?.length === 0) { navigateTo(section?.page!) } }}
                                             className="text-lg hover:no-underline hover:text-primary group">
                                             <span className="flex items-center gap-2">
                                                 {section.title}

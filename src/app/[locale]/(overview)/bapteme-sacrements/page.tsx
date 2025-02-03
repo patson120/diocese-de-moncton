@@ -130,7 +130,7 @@ export default function Page() {
                     <h2 className='heading-3 text-gray-900 mb-4'>Ressources</h2>
                     <p className='body-2 text-gray'>Pour approfondir votre compréhension</p>
                 </div>
-                <div className='flex flex-row gap-3 items-center mt-5'>
+                <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                     <a href='#' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
                         <p>Introduction et historique</p>
                         <ArrowUpRight className="h-4 w-6" />

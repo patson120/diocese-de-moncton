@@ -31,40 +31,40 @@ export const archidiocese: MenuType[] = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: '/clerges'
     },
+    // {
+    //     id: 5,
+    //     image: '',
+    //     title: 'Pastorale jeunesse',
+    //     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    //     link: ''
+    // },
     {
         id: 5,
-        image: '',
-        title: 'Pastorale jeunesse',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
-    },
-    {
-        id: 6,
         image: '',
         title: 'Education de la foi de ...',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: '/education-de-la-foi'
     },
     {
-        id: 7,
+        id: 6,
         image: '',
         title: 'Liturgie',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: '/liturgie'
     },
     {
-        id: 8,
+        id: 7,
         image: '',
         title: 'Justice & solidarité',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: '/justice-solidarite'
     },
     {
-        id: 9,
+        id: 8,
         image: '',
         title: 'Catéchuménat',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        link: '/education-de-la-foi'
     },
 ]
 
@@ -105,35 +105,35 @@ export const sacrements: MenuType[] = [
         image: '',
         title: 'Confirmations',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/sacrements'
+        link: '/confirmation-sacrements'
     },
     {
         id: 3,
         image: '',
         title: 'Eucharisties',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/sacrements'
+        link: '/eucharistie-sacrements'
     },
     {
         id: 4,
         image: '',
         title: 'Reconcilliation',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/sacrements'
+        link: '/reconcilliation-sacrements'
     },
     {
         id: 5,
         image: '',
         title: 'Mariages',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/sacrements'
+        link: '/mariage-sacrements'
     },
     {
         id: 6,
         image: '',
         title: 'Onction des malades',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/sacrements'
+        link: '/onction-malade-sacrements'
     },
     {
         id: 7,
@@ -233,43 +233,43 @@ export const ressources: MenuType[] = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: '/horaires-messes'
     },
+    // {
+    //     id: 4,
+    //     image: '',
+    //     title: 'Conférence des éveq...',
+    //     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    //     link: ''
+    // },
+    // {
+    //     id: 5,
+    //     image: '',
+    //     title: 'Village des sources',
+    //     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    //     link: ''
+    // },
     {
         id: 4,
-        image: '',
-        title: 'Conférence des éveq...',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
-    },
-    {
-        id: 5,
-        image: '',
-        title: 'Village des sources',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
-    },
-    {
-        id: 6,
         image: '',
         title: 'Chancellerie',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: ''
     },
     {
-        id: 7,
+        id: 5,
         image: '',
         title: 'Tribunal matrimonial',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: ''
     },
     {
-        id: 8,
+        id: 6,
         image: '',
         title: 'Communauté féminin...',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         link: ''
     },
     {
-        id: 8,
+        id: 7,
         image: '',
         title: 'Communauté mascul...',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
