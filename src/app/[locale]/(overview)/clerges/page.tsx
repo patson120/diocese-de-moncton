@@ -110,7 +110,7 @@ export default function Page() {
                 <div>
                     <p className='body-2 text-gray mb-2'>Sélectionnez le profil recherché</p>
                     <Tabs defaultValue={menus[0].slug} className="space-y-4">
-                        <TabsList className='bg-white h-auto flex flex-row justify-start overflow-x-scroll gap-3 pb-4'>
+                        <TabsList className='bg-white h-auto flex flex-row justify-start overflow-x-scroll xl:overflow-x-hidden gap-3 pb-4'>
                             {
                                 menus.map((menu, index) => (
                                     <TabsTrigger
