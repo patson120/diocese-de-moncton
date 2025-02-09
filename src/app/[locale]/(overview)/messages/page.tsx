@@ -26,7 +26,7 @@ export default function Page() {
                     <div className='container max-margin py-0 h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-full flex flex-col justify-between translate-y-14 md:translate-y-0 '>
                             <div className='' />
-                            <div className='flex flex-col translate-y-[28%] md:translate-y-0 md:flex-row justify-start items-center gap-5 md:gap-8 xl:gap-10'>
+                            <div className='flex flex-col -translate-y- sm:-translate-y-3 md:translate-y-0 md:flex-row justify-start items-center gap-5 md:gap-8 xl:gap-10'>
                                 <div className='h-64 w-64 shrink-0 relative overflow-hidden border-2 border-gray-400'>
                                     <Image
                                         src="/assets/img/image.png"
@@ -41,7 +41,7 @@ export default function Page() {
                                 </div>
                                 <div className='space-y-2 lg:w-1/2'>
                                     <h5 className='heading-2 md:text-white font-extrabold'>Communiqués du bureau de Mgr. Desrochers</h5>
-                                    <p className='body-2 md:text-gray-200 line-clamp-3'>Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers</p>
+                                    <p className='body-2 md:text-gray-200'>Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers</p>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +49,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <div className='my-56 md:my-0' />
+            <div className='my-80 sm:my-56 md:my-0' />
 
             <section className='container max-margin py-0 pb-10 md:pb-20'>
 
