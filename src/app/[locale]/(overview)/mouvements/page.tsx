@@ -1,5 +1,6 @@
 'use client'
 
+import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Button } from '@/components/ui/shared/button'
 import { Link } from '@/i18n/routing'
 import { ChevronRight } from 'lucide-react'
@@ -83,35 +84,18 @@ export default function Page() {
     return (
         <main>
             {/* Hero section */}
-            <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
-                {/* Hero image */}
-                <Image
-                    alt="les mouvements"
-                    src="/assets/img/mouvements.png"
-                    fill
-                    style={{
-                        objectFit: 'cover',
-                        height: '100%',
-                        width: '100%'
-                    }}
-                />
-                <div className='absolute inset-0 flex justify-center items-start bg-black bg-opacity-40'>
-                    <div className='w-full h-full flex flex-col justify-center items-center'>
-                        <h1 className='heading-2 text-center text-white font-extrabold'>Les mouvements</h1>
-                        <p className='body-2 text-center text-white mt-3'>Retrouvez tous les mouvements du diocèse et les informations associées.</p>
-                    </div>
-                </div>
-            </section>
-
+            <HeroSectionSecond
+                image='/assets/img/mouvements.png'
+                title="Les mouvements"
+                subtitle="Retrouvez tous les mouvements du diocèse et les informations associées."
+            />
             <div className='mt-6 md:mt-10 lg:mt-20'></div>
-
             <section className='container max-margin py-0 pb-10 md:pb-20'>
                 <h1 className='heading-3 font-extrabold mt-5 mb-5 md:mb-10'>Liste des mouvements</h1>
-
                 <div className="grid gap-3 md:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {
                         mouvements.map(mouvement => (
-                            <div key={mouvement.id} className='space-y-3 border rounded-xl p-3 md:p-6'>
+                            <div key={mouvement.id} className='flex flex-col justify-between space-y-3 border rounded-xl p-3 md:p-6'>
                                 <div className='space-y-2'>
                                     <h1 className='heading-4 text-[#1D0104] font-bold'>{mouvement.title}</h1>
                                     <p className='body-2 text-gray line-clamp-3'>{mouvement.description}</p>
@@ -124,7 +108,7 @@ export default function Page() {
                                             className='font-medium border-[#1D0104] rounded-[8px] p-0'
                                         >
                                             <div className='flex justify-center items-center'>
-                                                <span>En savoir plus</span>
+                                                <span className='font-bold'>En savoir plus</span>
                                                 <ChevronRight className="ml-1 h-5 w-5" />
                                             </div>
                                         </Button>

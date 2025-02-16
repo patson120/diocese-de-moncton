@@ -91,8 +91,10 @@ export default function Header() {
     }
 
     const navigateTo = (link: string) => {
+        document.querySelector('#submenu')?.classList.add("hidden")
         setIsOpen(prev => !prev)
         router.push(link)
+        
     }
 
     return (
@@ -118,16 +120,14 @@ export default function Header() {
                 </div>
                 <nav className='container max-margin py-3 relative'>
                     <div className='justify-between items-center hidden btn-menu'>
-                        <div className='relative shrink-0 w-20 h-14 xl:w-32 xl:h-14 rounded-md'>
-                            <a href='/'>
-                                <Image
-                                    alt="Logo diocèse de Moncton"
-                                    src="/brand-logo.png"
-                                    fill
-                                    style={{ objectFit: 'contain' }}
-                                />
-                            </a>
-                        </div>
+                        <Link href='/' className='relative shrink-0 w-20 h-14 xl:w-32 xl:h-14 cursor-pointer'>
+                            <Image
+                                alt="Logo diocèse de Moncton"
+                                src="/brand-logo.png"
+                                fill
+                                style={{ objectFit: 'contain' }}
+                            />
+                        </Link>
                         {/* Mobile menu button */}
                         <div className='flex flex-col justify-center items-center'>
                             <button
@@ -165,14 +165,14 @@ export default function Header() {
                     {/*  */}
 
                     <div className='flex justify-between items-center h-menu'>
-                        <div className='relative shrink-0 w-20 h-10 xl:w-32 xl:h-14 rounded-md'>
+                        <Link href='/' className='relative shrink-0 w-20 h-10 xl:w-32 xl:h-14 cursor-pointer'>
                             <Image
                                 alt="Logo diocèse de Moncton"
                                 src="/brand-logo.png"
                                 fill
                                 style={{ objectFit: 'contain' }}
                             />
-                        </div>
+                        </Link>
 
                         <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
                             <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
@@ -213,7 +213,7 @@ export default function Header() {
                                     />
                                 </div>
                                 <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
-                                <p className='body-3 text-gray-500 mt-2 mb-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
+                                <p className='body-3 text-gray-500 mt-2 mb-4'>Découvrez les horaires des messes dans votre paroisse.</p>
                                 <Button className='w-full body-2 xl:text-xl' onClick={() => { navigateTo('/horaires-messes') }}>
                                     En savoir plus
                                 </Button>
@@ -294,7 +294,7 @@ export default function Header() {
                         </div>
                         <div className='p-6 bg-[#F9F4F5] mb-10 mt-6 rounded-xl'>
                             <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
-                            <p className='body-3 text-gray-500 mt-2 mb-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
+                            <p className='body-3 text-gray-500 mt-2 mb-6'>Découvrez les horaires des messes dans votre paroisse.</p>
                             <Button className='w-full body-2 xl:text-xl' onClick={() => { navigateTo('/horaires-messes') }}>
                                 En savoir plus
                             </Button>

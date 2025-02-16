@@ -33,7 +33,7 @@ export default function Page() {
                 <div className="flex justify-between ">
                 </div>
             </div>
-            <section className="container max-margin py-0">
+            <section className="md:container md:max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-14 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2 space-y-4'>
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
@@ -44,11 +44,11 @@ export default function Page() {
                                 style={{ objectFit: 'cover' }}
                             />
                         </div>
-                        <div className='flex gap-3'>
-                            <Button variant='outline' size="sm" onClick={() => { }} className="text-xs lg:text-sm">
+                        <div className='container max-margin md:w-full md:mx-0 md:px-0 py-0 flex gap-3'>
+                            <Button variant='outline' size="sm" onClick={() => { }} className="hidden md:flex text-xs lg:text-sm">
                                 Visiter le site internet
                             </Button>
-                            <Button variant='outline' size="sm" onClick={() => { }} className="text-xs lg:text-sm">
+                            <Button variant='outline' size="sm" onClick={() => { }} className="w-full md:w-auto text-xs lg:text-sm">
                                 <Play className="mr-2 h-4 w-6" />
                                 Voir la paroisse en vidéo
                             </Button>
@@ -61,16 +61,16 @@ export default function Page() {
                             <p className='body-2 text-gray line-clamp-2'>L’histoire d’Acadieville est étroitement liée à celle de Rogersville. Les premiers colons (vers 1871) étaient pour la plupart des constructeurs du chemin de fer « Intercolonial...</p>
                             <span className='font-bold cursor-pointer'>voir plus</span>
                         </div>
-                        <div className="flex gap-4 my-5 py-3 border-y border-y-[#E5E5E5]">
-                            <div className="flex">
+                        <div className="flex flex-wrap gap-4 my-5 py-3 border-y border-y-[#E5E5E5]">
+                            <div className="flex flex-nowrap">
                                 <span className="text-gray-500 text-sm mr-2">Etabli en</span>
                                 <span className="text-sm font-extrabold">1871</span>
                             </div>
-                            <div className="flex">
+                            <div className="flex flex-nowrap">
                                 <span className="text-gray-500 text-sm mr-2">Ordonné en</span>
                                 <span className="text-sm font-extrabold">1871</span>
                             </div>
-                            <div className="flex">
+                            <div className="flex flex-nowrap">
                                 <span className="text-gray-500 text-sm mr-2">Premier curé</span>
                                 <span className="text-sm font-extrabold">1897</span>
                             </div>
@@ -125,7 +125,7 @@ export default function Page() {
                         </div>
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses</h1>
                         <div>
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-nowrap overflow-x-scroll gap-4 pb-5">
                                 {
                                     paroisses.slice(0, 2).map((item, index) => (
                                         <div key={index}>

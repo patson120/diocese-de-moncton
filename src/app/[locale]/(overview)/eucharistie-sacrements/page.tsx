@@ -1,5 +1,6 @@
 'use client'
 
+import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 
@@ -7,26 +8,11 @@ export default function Page() {
     return (
         <main>
             {/* Hero section */}
-            <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
-                {/* Hero image */}
-                <Image
-                    alt="hero section clergés"
-                    src="/assets/img/sacrements.png"
-                    fill
-                    style={{
-                        objectFit: 'cover',
-                        height: '100%',
-                        width: '100%'
-                    }}
-                />
-                <div className='absolute inset-0 flex justify-center items-start bg-black bg-opacity-40'>
-                    <div className='w-full h-full flex flex-col justify-center items-center'>
-                        <h1 className='heading-2 text-center text-white font-extrabold'>L'Eucharistie, source et sommet de la vie chrétienne</h1>
-                        <p className='body-2 text-center text-white mt-3'>Le sacrement qui unit les fidèles au sacrifice du Christ</p>
-                    </div>
-                </div>
-            </section>
-
+            <HeroSectionSecond
+                image='/assets/img/sacrements.png'
+                title="L'Eucharistie, source et sommet de la vie chrétienne"
+                subtitle="Le sacrement qui unit les fidèles au sacrifice du Christ"
+            />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
@@ -143,13 +129,13 @@ export default function Page() {
                     <h2 className='heading-3 text-gray-900 mb-4'>Ressources</h2>
                     <p className='body-2 text-gray'>Pour approfondir votre compréhension</p>
                 </div>
-                <div className='flex flex-row gap-3 items-center mt-5'>
+                <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                     <a href='https://www.vatican.va/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p>Site officiel du Vatican</p>
+                        <p className='whitespace-nowrap'>Site officiel du Vatican</p>
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                     <a href='https://www.catechisme.fr/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p>Catéchèse sur l'eucharistie</p>
+                        <p className='whitespace-nowrap'>Catéchèse sur l'eucharistie</p>
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                 </div>

@@ -1,31 +1,17 @@
 'use client'
 
+import { HeroSectionSecond } from '@/components/sections/hero-second'
 import Image from 'next/image'
 
 export default function Page() {
     return (
         <main>
             {/* Hero section */}
-            <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
-                {/* Hero image */}
-                <Image
-                    alt="hero section sacrements"
-                    src="/assets/img/sacrements.png"
-                    fill
-                    style={{
-                        objectFit: 'cover',
-                        height: '100%',
-                        width: '100%'
-                    }}
-                />
-                <div className='absolute inset-0 flex justify-center items-start bg-black bg-opacity-40'>
-                    <div className='w-full h-full flex flex-col justify-center items-center'>
-                        <h1 className='heading-2 text-center text-white font-extrabold'>Le sacrement de la confirmation</h1>
-                        <p className='body-2 text-center text-white mt-3'>Recevoir l'Esprit-Saint et devenir un témoin du Christ</p>
-                    </div>
-                </div>
-            </section>
-
+            <HeroSectionSecond
+                image='/assets/img/sacrements.png'
+                title="Le sacrement de la confirmation"
+                subtitle="Recevoir l'Esprit-Saint et devenir un témoin du Christ."
+            />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
@@ -59,9 +45,9 @@ export default function Page() {
                             <h1 className='heading-4 font-extrabold mb-4'>Le sens de la confirmation</h1>
                             <div className='space-y-4'>
                                 <p className='body-2 text-gray'>La confirmation est comme un « contrat » avec Dieu. Le confirmant dit :
-                                « Oui, je crois en Toi, mon Dieu, donne-moi ton Esprit afin que je t’appartienne totalement, que je ne sois jamais séparé de toi, et que je sois ton témoin durant toute ma vie, de toute mon âme et de tout mon corps, en actes et en paroles, dans les bons et les mauvais jours. »</p>
+                                    « Oui, je crois en Toi, mon Dieu, donne-moi ton Esprit afin que je t’appartienne totalement, que je ne sois jamais séparé de toi, et que je sois ton témoin durant toute ma vie, de toute mon âme et de tout mon corps, en actes et en paroles, dans les bons et les mauvais jours. »</p>
                                 <p className='body-2 text-gray'>Et Dieu répond :
-                                « Moi aussi je crois en toi, mon enfant – et je vais te donner mon Esprit, oui, me donner moi-même à toi. »</p>
+                                    « Moi aussi je crois en toi, mon enfant – et je vais te donner mon Esprit, oui, me donner moi-même à toi. »</p>
                             </div>
                         </div>
                     </div>

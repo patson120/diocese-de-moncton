@@ -1,10 +1,12 @@
 'use client'
 
+import { HeroSectionSecond } from "@/components/sections/hero-second";
 import {
     Dialog,
     DialogContent,
     DialogDescription
 } from "@/components/ui/dialog";
+import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from 'next/image';
@@ -85,26 +87,11 @@ export default function Page() {
     return (
         <main>
             {/* Hero section */}
-            <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
-                {/* Hero image */}
-                <Image
-                    alt="hero section clergés"
-                    src="/assets/img/clerges.png"
-                    fill
-                    style={{
-                        objectFit: 'cover',
-                        height: '100%',
-                        width: '100%'
-                    }}
-                />
-                <div className='absolute inset-0 flex justify-center items-start bg-black bg-opacity-40'>
-                    <div className='w-full h-full flex flex-col justify-center items-center'>
-                        <h1 className='heading-2 text-center text-white font-extrabold'>Clergé</h1>
-                        <p className='body-2 text-center text-white mt-3'>Retrouvez tous les membres derrière notre diocèse</p>
-                    </div>
-                </div>
-            </section>
-
+            <HeroSectionSecond
+                image='/assets/img/clerges.png'
+                title="Clergé"
+                subtitle="Retrouvez tous les membres derrière notre diocèse"
+            />
             <div className='mt-10 lg:mt-20'></div>
             <section className='container max-margin py-0 pb-10 md:pb-20'>
                 <div>
@@ -158,6 +145,8 @@ export default function Page() {
 
                 </div>
             </section>
+            {/* Action de grace */}
+            <ActionGrace />
 
         </main>
     )

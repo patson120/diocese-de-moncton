@@ -61,7 +61,7 @@ export default function Home() {
           </div>
           <div className="p-5">
             <h3 className='body-1 font-bold mt-2'>Horaires des messes</h3>
-            <p className='body-3 text-gray-500 mt-2 mb-8'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus adipisci sed dicta est veritatis alias.</p>
+            <p className='body-3 text-gray-500 mt-2 mb-8'>Découvrez les horaires des messes dans votre paroisse.</p>
             <Link href="/horaires-messes">
               <Button className='w-full body-2 xl:text-xl' onClick={() => { }}>
                 Voir les horaires
@@ -76,7 +76,8 @@ export default function Home() {
             <h1 className="heading-3">Actualités</h1>
             <Link href="/actualites">
               <Button variant='ghost' onClick={() => { }} className="body-3 font-semibold p-0 hover:bg-transparent">
-                Voir toute l’actualité
+                <span className="hidden md:block whitespace-nowrap">Voir toute l’actualité</span>
+                <span className="md:hidden">Voir plus</span>
                 <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
               </Button>
             </Link>

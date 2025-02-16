@@ -1,5 +1,6 @@
 'use client'
 
+import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Button } from '@/components/ui/shared/button'
 import { Link } from '@/i18n/routing'
 import Image from 'next/image'
@@ -8,30 +9,13 @@ export default function Page() {
     return (
         <main>
             {/* Hero section */}
-            <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
-                {/* Hero image */}
-                <Image
-                    alt="hero section background image"
-                    src="/assets/img/sacrements.png"
-                    fill
-                    style={{
-                        objectFit: 'cover',
-                        height: '100%',
-                        width: '100%'
-                    }}
-                />
-                <div className='absolute inset-0 flex justify-center items-start bg-black bg-opacity-40'>
-                    <div className='w-full h-full flex flex-col justify-center items-center'>
-                        <h1 className='heading-2 text-center text-white font-extrabold'>Les sacrements</h1>
-                        <p className='body-2 text-center text-white mt-3'>Retrouvez tous les sacrements et les informations associées.</p>
-                    </div>
-                </div>
-            </section>
-
+            <HeroSectionSecond
+                image='/assets/img/sacrements.png'
+                title="Les sacrements"
+                subtitle="Retrouvez tous les sacrements et les informations associées."
+            />
             <div className='md:mt-10 lg:mt-20'></div>
-
             <section className='container max-margin py-0 pb-10 md:pb-20'>
-
                 <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-12">
                     <div className='hidden lg:block col-span-5 rounded-3xl overflow-hidden relative'>
                         <Image

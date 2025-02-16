@@ -50,10 +50,10 @@ export default function Page() {
                     </Button>
                 </div>
             </div>
-            <div className='my-10'/>
+            <div className='my-10' />
             <div className='border-t border-gray-100'>
-                <div className='h-[100vh] md:h-[50vh] lg:h-[60vh] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12 '>
-                    <div className='col-span-1 flex flex-col gap-3 pb-3 overflow-y-scroll'>
+                <div className='h-[100vh] md:h-[50vh] lg:h-[60vh] grid grid-cols-1 md:grid-cols-3 gap-4 gap-x-0 md:gap-6 lg:gap-10 xl:gap-12 '>
+                    <div className='col-span-1 flex flex-col gap-3 pb-3 overflow-y-scroll v-scroll pr-3'>
                         <div className='sticky top-0 bg-white z-20 py-3'>
                             <Filter />
                         </div>
@@ -83,7 +83,9 @@ const Filter = () => {
         <div className='flex flex-wrap items-center gap-2 !text-nowrap text-[10px]'>
             <div className='flex items-center gap-[6px]'>
                 <SlidersHorizontalIcon className="h-4 w-4 text-gray-600" />
-                <label className='font-bold xl:text-sm whitespace-nowrap' htmlFor="filter">Filtrer les résultats</label>
+                <label className='font-bold xl:text-sm whitespace-nowrap flex' htmlFor="filter">
+                    Filtrer <span className='hidden md:block ml-1'>les résultats</span>
+                </label>
             </div>
             <label className='body-2 px-2 py-1 font-bold rounded-xl bg-[#1D0104] text-white cursor-pointer' htmlFor="tous">Tous</label>
             <label className='body-2 px-2 py-1 rounded-xl border border-gray-100 cursor-pointer' htmlFor="catechese">En activité</label>

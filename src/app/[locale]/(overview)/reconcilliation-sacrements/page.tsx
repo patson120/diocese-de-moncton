@@ -1,30 +1,16 @@
 
+import { HeroSectionSecond } from '@/components/sections/hero-second'
 import Image from 'next/image'
 
 export default function Page() {
     return (
         <main>
             {/* Hero section */}
-            <section className='h-[25vh] md:h-[50vh] w-full relative bg-gray-200'>
-                {/* Hero image */}
-                <Image
-                    alt="hero sacrements"
-                    src="/assets/img/sacrements.png"
-                    fill
-                    style={{
-                        objectFit: 'cover',
-                        height: '100%',
-                        width: '100%'
-                    }}
-                />
-                <div className='absolute inset-0 flex justify-center items-start bg-black bg-opacity-40'>
-                    <div className='w-full h-full flex flex-col justify-center items-center'>
-                        <h1 className='heading-2 text-center text-white font-extrabold'>Le sacrement de pénitence et de réconciliation</h1>
-                        <p className='body-2 text-center text-white mt-3'>Un sacrement de guérison et de miséricorde</p>
-                    </div>
-                </div>
-            </section>
-
+            <HeroSectionSecond
+                image='/assets/img/sacrements.png'
+                title="Le sacrement de pénitence et de réconciliation"
+                subtitle="Un sacrement de guérison et de miséricorde"
+            />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>

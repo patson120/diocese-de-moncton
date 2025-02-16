@@ -23,7 +23,7 @@ export default function Page() {
           }}
         />
         <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-40'>
-          <h1 className='w-1/2 heading-1 text-center text-white font-extrabold'>Découvrez toute notre actualité</h1>
+          <h1 className='container max-margin py-0 md:w-1/2 heading-1 text-center text-white font-extrabold'>Découvrez toute notre actualité</h1>
         </div>
       </section>
       <div className='container max-margin py-0 -translate-y-2'>
@@ -40,7 +40,7 @@ export default function Page() {
           <ImportantPost />
         </div>
 
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
           {
             [...news, ...news].map((item, index) => (
               <Link key={index} href="/actualites/1" className=''>

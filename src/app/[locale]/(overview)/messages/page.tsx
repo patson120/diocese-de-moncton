@@ -26,7 +26,7 @@ export default function Page() {
                     <div className='container max-margin py-0 h-full flex flex-col justify-center items-center'>
                         <div className='w-full h-full flex flex-col justify-between translate-y-14 md:translate-y-0 '>
                             <div className='' />
-                            <div className='flex flex-col -translate-y- sm:-translate-y-3 md:translate-y-0 md:flex-row justify-start items-center gap-5 md:gap-8 xl:gap-10'>
+                            <div className='flex flex-col sm:-translate-y-3 md:translate-y-0 md:flex-row justify-start items-center gap-5 md:gap-8 xl:gap-10'>
                                 <div className='h-64 w-64 shrink-0 relative overflow-hidden border-2 border-gray-400'>
                                     <Image
                                         src="/assets/img/image.png"
@@ -49,7 +49,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <div className='my-80 sm:my-56 md:my-0' />
+            <div className='my-64 sm:my-56 md:my-0' />
 
             <section className='container max-margin py-0 pb-10 md:pb-20'>
 

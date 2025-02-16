@@ -11,10 +11,10 @@ export default function Page() {
         <div className="flex justify-between ">
         </div>
       </div>
-      <section className='container max-margin py-0' >
-        <div className='grid grid-cols-1 lg:grid-cols-6 gap-5 lg:gap-10 py-4 lg:py-8'>
+      <section className='md:container md:max-margin py-0' >
+        <div className='grid grid-cols-1 lg:grid-cols-6 md:gap-6 lg:gap-14 py-4 lg:py-8'>
           <div className='col-span-full lg:col-span-4'>
-            <div className='h-72 lg:h-96 xl:h-[560px] relative rounded-[18px] overflow-hidden bg-gray-100'>
+            <div className='h-72 lg:h-96 xl:h-[560px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
               <Image
                 alt={news[2].title}
                 src={news[2].image}
@@ -22,7 +22,7 @@ export default function Page() {
                 style={{ objectFit: 'cover' }}
               />
             </div>
-            <div className='flex flex-col space-y-3'>
+            <div className='container max-margin pt-4 md:pt-0 md:px-0 md:mx-0 flex flex-col space-y-3'>
               <div className='flex justify-between pt-4'>
                 <span className='body-3 font-semibold text-primary'>Diocèse</span>
                 <p className='text-gray-400 body-3'>Publié le {formatDateToLocal((new Date()).toISOString())}</p>
@@ -38,7 +38,7 @@ export default function Page() {
               <p className='body-2 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit eos fugiat et vitae, commodi enim, quisquam sint sapiente fuga inventore labore eligendi pariatur velit earum neque. Eum voluptatum omnis accusamus asperiores quidem. Distinctio, culpa est? Fuga velit eius deleniti blanditiis, nobis minima, dolores ipsum reiciendis, animi quae officia consequuntur.</p>
             </div>
           </div>
-          <div className='col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10'>
+          <div className='container max-margin py-0 md:px-0 md:mx-0 col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10'>
             <h1 className='heading-3 font-extrabold'>Articles relatifs</h1>
             <div className="flex md:flex-col gap-4 overflow-x-scroll md:overflow-x-hidden pb-6 md:pb-0">
               {
