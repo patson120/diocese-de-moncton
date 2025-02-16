@@ -31,10 +31,11 @@ export function LanguageSelector() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="px-0">
+        <Button variant="ghost" className="p-0">
           <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}>
+            // whileHover={{ scale: 1.1 }}
+            // whileTap={{ scale: 0.95 }}
+            >
             <div className='h-8 text-xs flex flex-row justify-center items-center'>
               <Globe className="mr-[5px] h-3 w-3 md:h-4 md:w-4" />
               <p className="text-xs md:text-sm lg:text-sm xl:text-base">Canada({ languages.find(l => l.code === localActive)?.name})</p>
@@ -43,15 +44,15 @@ export function LanguageSelector() {
           </motion.div>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-[180px]">
+      <DropdownMenuContent align="end" className="w-min">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
             className="flex items-center gap-2 cursor-pointer"
           >
-            <span className="text-xs md:text-sm xl:text-base">{lang.flag}</span>
-            <span className="text-xs md:text-sm lg:text-xl">{lang.name}</span>
+            <span className="body-2">{lang.flag}</span>
+            <span className="body-1">{lang.name}</span>
             {localActive === lang.code && (
               <motion.div
                 initial={{ scale: 0 }}

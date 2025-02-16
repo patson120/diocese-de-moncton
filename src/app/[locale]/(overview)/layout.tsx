@@ -41,7 +41,9 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <main className='overflow-x-hidden'>
             {/* Header */}
-            <Header />
+            <div className='mb-[130px]'>
+              <Header />
+            </div>
             {/* <Navigation /> */}
 
             {children}

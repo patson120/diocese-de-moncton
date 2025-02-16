@@ -94,135 +94,137 @@ export default function Header() {
         document.querySelector('#submenu')?.classList.add("hidden")
         setIsOpen(prev => !prev)
         router.push(link)
-        
+
     }
 
     return (
         <>
-            <header className='relative'>
-                <div className='bg-gray-100 info-section'>
-                    <nav className='container max-margin py-1'>
-                        <div className='flex justify-between'>
-                            <ul className='flex justify-center items-center space-x-3 text-xs md:text-sm lg:text-sm text-gray-500'>
-                                <li>
-                                    <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
-                                </li>
-                                <li>
-                                    <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
-                                </li>
-                                <li>
-                                    <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
-                                </li>
-                            </ul>
-                            <LanguageSelector />
-                        </div>
-                    </nav>
-                </div>
-                <nav className='container max-margin py-3 relative'>
-                    <div className='justify-between items-center hidden btn-menu'>
-                        <Link href='/' className='relative shrink-0 w-20 h-14 xl:w-32 xl:h-14 cursor-pointer'>
-                            <Image
-                                alt="Logo diocèse de Moncton"
-                                src="/brand-logo.png"
-                                fill
-                                style={{ objectFit: 'contain' }}
-                            />
-                        </Link>
-                        {/* Mobile menu button */}
-                        <div className='flex flex-col justify-center items-center'>
-                            <button
-                                onClick={() => { setIsOpen(prev => !prev) }}
-                                type="button"
-                                className="relative inline-flex items-center justify-center rounded-md p-2 pr-3 pb-0 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
-                                <span className="absolute -inset-0.5"></span>
-                                <span className="sr-only">Open main menu</span>
+            <header className='flex-1 flex-col fixed top-0 left-0 right-0 z-50 shadow-sm bg-white h-[130px]'>
+                <div className='relative'>
+                    <div className='bg-gray-100 info-sections'>
+                        <nav className='container max-margin py-1 overflow-x-hidden'>
+                            <div className='flex justify-between'>
+                                <ul className='flex justify-center items-center space-x-3 text-xs md:text-sm lg:text-sm text-gray-500'>
+                                    <li>
+                                        <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
+                                    </li>
+                                    <li className='info-section'>
+                                        <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
+                                    </li>
+                                    <li className='info-section'>
+                                        <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
+                                    </li>
+                                </ul>
+                                <LanguageSelector />
+                            </div>
+                        </nav>
+                    </div>
+                    <nav className='container max-margin py-3 relative'>
+                        <div className='justify-between items-center hidden btn-menu'>
+                            <Link href='/' className='relative shrink-0 w-20 h-14 xl:w-32 xl:h-14 cursor-pointer'>
+                                <Image
+                                    alt="Logo diocèse de Moncton"
+                                    src="/brand-logo.png"
+                                    fill
+                                    style={{ objectFit: 'contain' }}
+                                />
+                            </Link>
+                            {/* Mobile menu button */}
+                            <div className='flex flex-col justify-center items-center'>
+                                <button
+                                    onClick={() => { setIsOpen(prev => !prev) }}
+                                    type="button"
+                                    className="relative inline-flex items-center justify-center rounded-md p-2 pr-3 pb-0 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                                    <span className="absolute -inset-0.5"></span>
+                                    <span className="sr-only">Open main menu</span>
 
-                                {/* Icon when menu is closed. */}
+                                    {/* Icon when menu is closed. */}
 
-                                {/* Menu open: "hidden", Menu closed: "block" */}
+                                    {/* Menu open: "hidden", Menu closed: "block" */}
 
-                                <div className={`${isOpen ? 'hidden' : 'block'} justify-center items-center`}>
-                                    <svg className="h-8 w-8 ml-1" fill="none" viewBox="0 0 20 20" strokeWidth={1.8} stroke="currentColor" aria-hidden="true">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                    </svg>
-                                    <p className='font-bold text-center'>Menu</p>
-                                </div>
+                                    <div className={`${isOpen ? 'hidden' : 'block'} justify-center items-center`}>
+                                        <svg className="h-8 w-8 ml-1" fill="none" viewBox="0 0 20 20" strokeWidth={1.8} stroke="currentColor" aria-hidden="true">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                        </svg>
+                                        <p className='font-bold text-center'>Menu</p>
+                                    </div>
 
-                                {/* Icon when menu is open. */}
+                                    {/* Icon when menu is open. */}
 
-                                {/* Menu open: "block", Menu closed: "hidden" */}
+                                    {/* Menu open: "block", Menu closed: "hidden" */}
 
-                                {/* <div className={`${isOpen ? 'flex' : 'hidden'} justify-center items-center gap-2`}>
+                                    {/* <div className={`${isOpen ? 'flex' : 'hidden'} justify-center items-center gap-2`}>
                                     <p className='font-bold text-center'>Fermer</p>
                                     <svg className=" h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                 </div> */}
-                            </button>
-                        </div>
-
-                    </div>
-                    {/*  */}
-
-                    <div className='flex justify-between items-center h-menu'>
-                        <Link href='/' className='relative shrink-0 w-20 h-10 xl:w-32 xl:h-14 cursor-pointer'>
-                            <Image
-                                alt="Logo diocèse de Moncton"
-                                src="/brand-logo.png"
-                                fill
-                                style={{ objectFit: 'contain' }}
-                            />
-                        </Link>
-
-                        <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
-                            <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
-                            <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
-                            <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
-                            <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/evenements">Évènements</Link></li>
-                            {/* <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li> */}
-                            <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
-                            <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Ressources</li>
-                        </ul>
-                        <div className='flex'>
-                            <Button onClick={() => {
-                                document.querySelector('#submenu')?.classList.add("hidden")
-                                router.push("/faire-un-don")
-                            }}
-                                variant="outline" className='border border-primary hover:text-primary text-primary hover:bg-transparent bg-transparent body-3 font-extrabold py-2'>
-                                <Heart className="mr-2 h-4 w-4 xl:h-5 xl:w-5 text-primary" />
-                                Faire un don
-                            </Button>
-                            {/* Contribuer à la mission */}
-                        </div>
-                    </div>
-                </nav>
-
-                {/* Sous menu desktop  */}
-                <div id='submenu' className='hidden transition-all border-t border-gray-50 overflow-hidden absolute top-full inset-0 z-50 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
-                    <div className='container max-margin py-0'>
-                        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex '>
-                            <div className='w-72 lg:w-96 p-6 bg-[#F9F4F5]'>
-                                <div className='relative h-36 w-full bg-white rounded-lg overflow-hidden'>
-                                    <Image
-                                        alt="Submenu banner"
-                                        src="/assets/img/submenu-banner.png"
-                                        fill
-                                        style={{
-                                            objectFit: 'cover'
-                                        }}
-                                    />
-                                </div>
-                                <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
-                                <p className='body-3 text-gray-500 mt-2 mb-4'>Découvrez les horaires des messes dans votre paroisse.</p>
-                                <Button className='w-full body-2 xl:text-xl' onClick={() => { navigateTo('/horaires-messes') }}>
-                                    En savoir plus
-                                </Button>
+                                </button>
                             </div>
-                            <div className='w-full p-6'>
-                                <div className='grid grid-cols-3 gap-5'>
-                                    {
-                                        menus.map((menu, index) => <SubmenuItem key={index} menu={menu} />)
-                                    }
+
+                        </div>
+                        {/*  */}
+
+                        <div className='flex justify-between items-center h-menu'>
+                            <Link href='/' className='relative shrink-0 w-20 h-10 xl:w-32 xl:h-14 cursor-pointer'>
+                                <Image
+                                    alt="Logo diocèse de Moncton"
+                                    src="/brand-logo.png"
+                                    fill
+                                    style={{ objectFit: 'contain' }}
+                                />
+                            </Link>
+
+                            <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
+                                <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
+                                <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/evenements">Évènements</Link></li>
+                                {/* <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li> */}
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Ressources</li>
+                            </ul>
+                            <div className='flex'>
+                                <Button onClick={() => {
+                                    document.querySelector('#submenu')?.classList.add("hidden")
+                                    router.push("/faire-un-don")
+                                }}
+                                    variant="outline" className='border border-primary hover:text-primary text-primary hover:bg-transparent bg-transparent body-3 font-extrabold py-2'>
+                                    <Heart className="mr-2 h-4 w-4 xl:h-5 xl:w-5 text-primary" />
+                                    Faire un don
+                                </Button>
+                                {/* Contribuer à la mission */}
+                            </div>
+                        </div>
+                    </nav>
+
+                    {/* Sous menu desktop  */}
+                    <div id='submenu' className='hidden transition-all border-t border-gray-50 overflow-hidden absolute top-full inset-0 z-50 h-[85vh]' style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}>
+                        <div className='container max-margin py-0'>
+                            <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className='bg-white rounded-b-xl overflow-hidden flex '>
+                                <div className='w-72 lg:w-96 p-6 bg-[#F9F4F5]'>
+                                    <div className='relative h-36 w-full bg-white rounded-lg overflow-hidden'>
+                                        <Image
+                                            alt="Submenu banner"
+                                            src="/assets/img/submenu-banner.png"
+                                            fill
+                                            style={{
+                                                objectFit: 'cover'
+                                            }}
+                                        />
+                                    </div>
+                                    <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
+                                    <p className='body-3 text-gray-500 mt-2 mb-4'>Découvrez les horaires des messes dans votre paroisse.</p>
+                                    <Button className='w-full body-2 xl:text-xl' onClick={() => { navigateTo('/horaires-messes') }}>
+                                        En savoir plus
+                                    </Button>
+                                </div>
+                                <div className='w-full p-6'>
+                                    <div className='grid grid-cols-3 gap-5'>
+                                        {
+                                            menus.map((menu, index) => <SubmenuItem key={index} menu={menu} />)
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>
