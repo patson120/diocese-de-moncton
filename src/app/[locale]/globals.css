@@ -9,7 +9,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --yellow-color: 44 65% 56%;
-  --yellow-100:  42 71% 97%;
+  --yellow-100: 42 71% 97%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,6 +82,12 @@
     @apply border-border;
     font-family: 'Inter';
   }
+  div, p, li, span, input, select{
+    color: #1D0104;
+  }
+  label {
+    @apply text-gray;
+  }
 
   body {
     font-family: 'Inter';
@@ -129,15 +135,19 @@
   .heading-1 {
     @apply font-bold text-4xl xl:text-5xl text-[#1D0104] lg:leading-[39.6px] xl:leading-[52.8px];
   }
+
   .heading-2 {
     @apply font-bold text-3xl xl:text-4xl text-[#1D0104] lg:leading-[30px] xl:leading-[39.6px];
   }
+
   .heading-3 {
     @apply font-bold text-2xl xl:text-3xl text-[#1D0104] lg:leading-[28.8px] xl:leading-[30px];
   }
+
   .heading-4 {
     @apply font-bold text-2xl text-[#1D0104] lg:leading-[26px] xl:leading-[28.8px];
   }
+
   .heading-5 {
     @apply font-bold text-[22px] text-[#1D0104] lg:leading-[26px] xl:leading-[28.6px];
   }
@@ -145,9 +155,11 @@
   .body-1 {
     @apply text-lg lg:leading-[28px];
   }
+
   .body-2 {
     @apply lg:leading-[25px];
   }
+
   .body-3 {
     @apply text-sm leading-[19.6px];
   }
@@ -162,20 +174,13 @@
     @apply py-6 md:py-20 xl:py-24;
   }
 }
+
 .h-scroll {
-  @apply [&::-webkit-scrollbar]:h-2
-  [&::-webkit-scrollbar-track]:bg-gray-100
-  [&::-webkit-scrollbar-thumb]:bg-gray-300
-  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+  @apply [&::-webkit-scrollbar]:h-2 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
 }
 
 .v-scroll {
-  @apply [&::-webkit-scrollbar]:w-2
-  [&::-webkit-scrollbar-track]:bg-transparent
-  [&::-webkit-scrollbar-thumb]:bg-transparent
-  dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+  @apply [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-transparent dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
 }
 
 
@@ -183,6 +188,7 @@
   #submenu {
     @apply hidden;
   }
+
   .info-section {
     @apply hidden;
     border: 2px solid red;
@@ -192,10 +198,12 @@
     @apply flex h-[45px];
 
   }
+
   .mobile-menu {
     @apply block
   }
-  .h-menu{
+
+  .h-menu {
     @apply hidden;
   }
 }

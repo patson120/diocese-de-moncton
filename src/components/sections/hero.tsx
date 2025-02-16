@@ -95,7 +95,7 @@ export function HeroSection() {
                                   ct.icon &&
                                   <Search className="mr-2 h-4 w-4 !text-white" />
                                 }
-                                <span>{ct.text}</span>
+                                {ct.text}
                               </div>
                             </Button>
                           ))

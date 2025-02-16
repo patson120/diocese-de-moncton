@@ -10,15 +10,17 @@ export default function Page() {
 
     const router = useRouter()
     const types = ["Unique", "Mensuel", "En hommage"]
+    const typeComptes = ["Compte chèque", "Compte d'épargne"]
     const montants = ["20$", "50$", "100$", "250$", "Autre",]
     const choices = ["Oui", "Non",]
     const moyenPaiements = ["Virement bancaire", "Carte bancaire", "Interac", "Stripes",]
 
     const [step, setStep] = useState(1)
-    const [typeDon, setTypeDon] = useState(types[0])
-    const [montant, setMontant] = useState(montants[1])
-    const [moyen, setMoyen] = useState(moyenPaiements[0])
-    const [choice, setChoice] = useState(choices[1])
+    const [typeDon, setTypeDon] = useState<any>()
+    const [montant, setMontant] = useState<any>()
+    const [moyen, setMoyen] = useState<any>()
+    const [choice, setChoice] = useState<any>()
+    const [compte, setCompte] = useState<any>()
 
     return (
         <>
@@ -46,7 +48,7 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                    <div className='container max-margin col-span-full lg:col-span-3 py-10'>
+                    <div className='container max-margin h-screen overflow-y-scroll v-scroll col-span-full lg:col-span-3 py-10'>
                         <div className='flex justify-center items-center gap-20'>
                             <div className='flex-1 grid grid-cols-4 gap-2'>
                                 {
@@ -70,7 +72,6 @@ export default function Page() {
                             {step === 3 && <h1 className='body-3 font-extrabold mb-4'>3. Adresse</h1>}
                             {step === 4 && <h1 className='body-3 font-extrabold mb-4'>4. Paiement</h1>}
                         </div>
-
                         {
                             (step < 4) && (
                                 <div className='mt-8 w-2/3'>
@@ -109,6 +110,13 @@ export default function Page() {
                                                 }
                                             </div>
                                         </div>
+                                        {
+                                            (typeDon === "En hommage") &&
+                                            <div className=''>
+                                                <label className='inline-block mb-2' htmlFor="nom">Nom de la personne honorée</label>
+                                                <input type="text" placeholder="Entrez son nom" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                            </div>
+                                        }
                                         <div className='space-y-2'>
                                             <h4 className='body-2 text-gray'>Montant</h4>
                                             <div className='space-x-2 flex flex-wrap'>
@@ -140,20 +148,19 @@ export default function Page() {
                                 (step === 2) && (
                                     <>
                                         <div className=''>
-                                            <label className='inline-block font-semibold mb-2' htmlFor="nom">Nom</label>
+                                            <label className='inline-block mb-2' htmlFor="nom">Nom</label>
                                             <input type="text" placeholder="Entrez votre nom" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                         </div>
                                         <div className=''>
-                                            <label className='inline-block font-semibold mb-2' htmlFor="prenom">Téléphone</label>
+                                            <label className='inline-block mb-2' htmlFor="prenom">Téléphone</label>
                                             <input type="tel" placeholder="Entrez votre téléphone" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                         </div>
                                         <div className=''>
-                                            <label className='inline-block font-semibold mb-2' htmlFor="email">Courriel</label>
+                                            <label className='inline-block mb-2' htmlFor="email">Courriel</label>
                                             <input type="email" placeholder="Entrez votre adresse électronique" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                         </div>
                                     </>
                                 )
-
                             }
                             {
                                 (step === 3) && (
@@ -161,32 +168,31 @@ export default function Page() {
                                         <div className='space-y-5'>
                                             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                                                 <div className=''>
-                                                    <label className='inline-block font-semibold mb-2' htmlFor="nom">Pays</label>
+                                                    <label className='inline-block mb-2' htmlFor="pays">Pays</label>
                                                     <input type="text" placeholder="Entrez votre pays" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                                 </div>
                                                 <div className=''>
-                                                    <label className='inline-block font-semibold mb-2' htmlFor="prenom">Région</label>
+                                                    <label className='inline-block mb-2' htmlFor="region">Région</label>
                                                     <input type="text" placeholder="Entrez votre région" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                                 </div>
                                             </div>
                                             <div className=''>
-                                                <label className='inline-block font-semibold mb-2' htmlFor="email">Ville</label>
+                                                <label className='inline-block mb-2' htmlFor="ville">Ville</label>
                                                 <input type="text" placeholder="Entrez votre ville" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                             </div>
                                             <div className=''>
-                                                <label className='inline-block font-semibold mb-2' htmlFor="prenom">Code postal</label>
+                                                <label className='inline-block mb-2' htmlFor="code_postal">Code postal</label>
                                                 <input type="text" placeholder="Code postal" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                             </div>
                                         </div>
                                     </>
                                 )
                             }
-
                         </div>
                         {
                             (step === 4) && (
-                                <div className='space-y-2 mt-8'>
-                                    <h4 className='body-2 text-gray'>Choisir le moyen de paiement</h4>
+                                <div className="mt-8">
+                                    <h4 className='body-2 text-gray mb-2'>Choisir le moyen de paiement</h4>
                                     <div className='space-x-2 flex flex-wrap'>
                                         {
                                             moyenPaiements.map((item, index) => (
@@ -196,24 +202,98 @@ export default function Page() {
                                             ))
                                         }
                                     </div>
+                                    {
+                                        (moyen === moyenPaiements[0]) &&
+                                        <div className='w-full lg:w-2/3 space-y-6 mt-6'>
+                                            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="titulaire">Nom du titulaire du compte</label>
+                                                    <input type="text" placeholder="Nom du titulaire" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="numCompte">N° de compte</label>
+                                                    <input type="text" placeholder="N° de compte" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="num_banque">N° de banque</label>
+                                                    <input type="text" placeholder="N° de banque" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="num_transit">N° de transit</label>
+                                                    <input type="text" placeholder="N° de transit" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                            </div>
+                                            <div className='space-y-2'>
+                                                <h4 className='body-2 text-gray'>Type de compte</h4>
+                                                <div className='space-x-2 flex flex-wrap'>
+                                                    {
+                                                        typeComptes.map((item, index) => (
+                                                            <Button key={index} onClick={() => { setCompte(item) }} className={` ${item === compte ? 'bg-[#1D0104] text-white hover:bg-[#1D0104]' : 'bg-[#F5F5F5] text-gray hover:bg-[#F5F5F5]'} rounded-xl px-3 md:px-6 py-5 body-3`}>
+                                                                {item}
+                                                            </Button>
+                                                        ))
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    {
+                                        (moyen === moyenPaiements[1]) &&
+                                        <div className='w-full lg:w-2/3 space-y-6 mt-6'>
+                                            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="numCarte">Numéro de la carte</label>
+                                                    <input type="text" placeholder="XXXX XXXX XXXX XXXX" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="numCompte">N° de compte</label>
+                                                    <input type="text" placeholder="N° de compte" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="num_banque">CVC</label>
+                                                    <input type="text" placeholder="CVC" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                                <div className=''>
+                                                    <label className='inline-block mb-2' htmlFor="num_transit">Validité</label>
+                                                    <input type="text" placeholder="MM/AA" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    {
+                                        (moyen === moyenPaiements[0] || moyen === moyenPaiements[1]) &&
+                                        <div className='flex justify-start items-center space-x-2 mt-4'>
+                                            <input type="radio" className="border-2 border-gray-200 p-2 rounded-full" />
+                                            <label className='inline-block' htmlFor="frais">Couvrir les frais de transaction de 0.27 $.</label>
+                                        </div>
+                                    }
                                 </div>
                             )
                         }
-                        {/* {
-                            (step < 4) && ( */}
-                        <div className='w-full lg:w-2/3 mt-10 flex justify-between items-center'>
-                            <Button onClick={() => { setStep(prev => prev + 1) }} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
-                                Etape suivante
-                            </Button>
-                            {
-                                (step > 1) &&
-                                <Button variant='ghost' onClick={() => { setStep(prev => prev - 1) }} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
-                                    Retour
-                                </Button>
-                            }
-                        </div>
-                        {/* )
-                        } */}
+                        {
+                            (step < 4) && (
+                                <div className='w-full lg:w-2/3 mt-10 flex justify-between items-center'>
+                                    <Button onClick={() => { setStep(prev => prev + 1) }} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
+                                        Etape suivante
+                                    </Button>
+                                    {
+                                        (step > 1) &&
+                                        <Button variant='ghost' onClick={() => { setStep(prev => prev - 1) }} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
+                                            Retour
+                                        </Button>
+                                    }
+                                </div>
+                            )
+                        }
+                        {
+                            (step === 4) && (
+                                <div className='w-full lg:w-2/3 mt-10 flex justify-between items-center'>
+                                    <Button onClick={() => { }} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
+                                        Finaliser le paiement
+                                    </Button>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </section>

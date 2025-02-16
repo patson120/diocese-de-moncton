@@ -1,15 +1,30 @@
 'use client'
+import Breadcrumbs from '@/components/ui/breadcrumbs'
 import { Button } from '@/components/ui/shared/button'
 import MessageComp from '@/components/ui/shared/MessageComp'
 import { messages } from '@/constants'
 import { Link } from '@/i18n/routing'
 import { ArrowRight } from 'lucide-react'
 
- const Page = () => {
+const Page = () => {
     return (
         <>
-            <div className='px-5 md:px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
-                <div className="flex justify-between ">
+            <div className='flex justify-between items-center border-y border-y-gray-50 '>
+                <div className="container max-margin py-4 flex justify-between ">
+                    <Breadcrumbs
+                        breadcrumbs={[
+                            { label: 'Accueil', href: '/' },
+                            {
+                                label: 'Messages',
+                                href: '/messages',
+                            },
+                            {
+                                label: 'Décret de suppression de la paroisse Saint...',
+                                href: '',
+                                active: true,
+                            },
+                        ]}
+                    />
                 </div>
             </div>
             <section className='container max-margin py-0' >
