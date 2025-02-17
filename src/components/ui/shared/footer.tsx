@@ -9,15 +9,17 @@ export default function Footer() {
       <div className='py-10 md:pt-20'>
         <div className='container max-margin py-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 gap-y-8 md:gap-y-0 '>
           <div className='space-y-3 col-span-full md:col-span-1 pb-4 md:pb-0'>
-            <div className='relative h-14 w-[150px] md:h-12 md:w-[100px] xl:h-16 xl:w-[150px] overflow-hidden'>
-              <Image
-                alt="Logo du diocèse de moncton"
-                src="/brand-logo-1.png"
-                fill
-                style={{
-                  objectFit: 'contain'
-                }}
-              />
+            <div className='h-14 w-[150px] md:h-12 md:w-[100px] xl:h-16 xl:w-[150px] overflow-hidden'>
+              <div className='relative h-10 xl:h-14 w-[70px]'>
+                <Image
+                  alt="Logo du diocèse de moncton"
+                  src="/logo.jpeg"
+                  fill
+                  style={{
+                    objectFit: 'contain'
+                  }}
+                />
+              </div>
             </div>
             <p className='body-3 text-[#B5B5B5]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora explicabo fugiat corporis.</p>
           </div>
@@ -42,8 +44,8 @@ export default function Footer() {
                 <Link href="/horaires-messes">Horaires des messes</Link>
               </li>
               <li className='text-[#B5B5B5]'>
-              <Link href="/clerges">Equipe paroissiale</Link>
-                </li>
+                <Link href="/clerges">Equipe paroissiale</Link>
+              </li>
             </ul>
           </div>
 

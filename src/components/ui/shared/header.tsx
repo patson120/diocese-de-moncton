@@ -124,10 +124,11 @@ export default function Header() {
                     </div>
                     <nav className='container max-margin py-3 relative'>
                         <div className='justify-between items-center hidden btn-menu'>
-                            <Link href='/' className='relative shrink-0 w-20 h-14 xl:w-32 xl:h-14 cursor-pointer'>
+                            {/* <Link href='/' className='relative shrink-0 w-20 h-14 xl:w-32 xl:h-14 cursor-pointer'> */}
+                            <Link href='/' className='relative shrink-0 w-20 h-14 xl:h-14 cursor-pointer'>
                                 <Image
                                     alt="Logo diocèse de Moncton"
-                                    src="/brand-logo.png"
+                                    src="/logo.jpeg"
                                     fill
                                     style={{ objectFit: 'contain' }}
                                 />
@@ -169,10 +170,10 @@ export default function Header() {
                         {/*  */}
 
                         <div className='flex justify-between items-center h-menu'>
-                            <Link href='/' className='relative shrink-0 w-20 h-10 xl:w-32 xl:h-14 cursor-pointer'>
+                            <Link href='/' className='relative shrink-0 w-20 h-10 xl:h-14 cursor-pointer'>
                                 <Image
                                     alt="Logo diocèse de Moncton"
-                                    src="/brand-logo.png"
+                                    src="/logo.jpeg"
                                     fill
                                     style={{ objectFit: 'contain' }}
                                 />
