@@ -1,12 +1,12 @@
 
 import { formatDateToLocal } from '@/_lib/utils'
-import Actualite from '@/components/ui/shared/actualite'
-import { news } from '@/constants'
-import { Link } from '@/i18n/routing'
 import { Search, SlidersHorizontalIcon } from "lucide-react"
 import Image from 'next/image'
+import { Suspense } from 'react'
+import Actualites from './actualites'
+import { ActualitesSkeleton, shimmer } from '@/components/ui/shared/skeletons'
 
-export default function Page() {
+export default async function Page() {
   return (
     <main>
       {/* Hero section */}
@@ -40,22 +40,10 @@ export default function Page() {
           <ImportantPost />
         </div>
 
-        <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-          {
-            [...news, ...news].map((item, index) => (
-              <Link key={index} href="/actualites/1" className=''>
-                <Actualite data={item} />
-              </Link>
-            ))
-          }
-        </div>
+        <Suspense fallback={< ActualitesSkeleton items={8} />}>
+          <Actualites />
+        </Suspense>
 
-        {/* Pagination */}
-        <div className='flex justify-center mt-12'>
-          <div className='flex gap-3'>
-            <div className='w-40 h-8 rounded-md bg-gray-100'></div>
-          </div>
-        </div>
       </section>
     </main>
   )

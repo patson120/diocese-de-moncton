@@ -10,8 +10,10 @@ import { ArrowRight, MapPin, Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
+import { ActualitesSkeleton } from "@/components/ui/shared/skeletons";
+import RecentActualites from "@/components/recentActualites";
 
 
 // Import Map component dynamically to avoid SSR issues
@@ -82,15 +84,12 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-          <div className="flex flex-row overflow-x-scroll lg:overflow-x-hidden gap-4 h-scroll pb-6">
-            {
-              news.map((item, index) => (
-                <Link key={index} href="/actualites/1" className='min-w-[280px] md:min-w-[308px]'>
-                  <Actualite data={item} />
-                </Link>
-              ))
-            }
-          </div>
+
+          <Suspense fallback={< ActualitesSkeleton items={4} />}>
+            <RecentActualites />
+          </Suspense>
+
+          
         </div>
         {/* <div className="mt-10 lg:mt-20"/> */}
         <div className="mb-3 flex justify-between items-center">
