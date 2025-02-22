@@ -2,10 +2,14 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Button } from '@/components/ui/shared/button'
-import { Link } from '@/i18n/routing'
+import { Link, useRouter } from '@/i18n/routing'
 import Image from 'next/image'
 
 export default function Page() {
+    const router = useRouter()
+    const navigateTo = (link: string) => {
+        router.push(link)
+    }
     return (
         <main>
             {/* Hero section */}
@@ -137,13 +141,11 @@ export default function Page() {
                             <h1 className='heading-4'>Le Baptême</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                                <Button
+                                    variant="outline"
+                                    onClick={() => navigateTo("/bapteme-sacrements")}
+                                    className='font-bold border-[#1D0104] rounded-[8px] mt-3'
+                                >En savoir plus</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -162,13 +164,11 @@ export default function Page() {
                             <h1 className='heading-4'>La Confirmation</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                                <Button
+                                    variant="outline"
+                                    onClick={() => navigateTo("/confirmation-sacrements")}
+                                    className='font-bold border-[#1D0104] rounded-[8px] mt-3'
+                                >En savoir plus</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -187,13 +187,11 @@ export default function Page() {
                             <h1 className='heading-4'>L'Eucharistie</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
-                                <Link href="/messages/1" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                                <Button
+                                    variant="outline"
+                                    onClick={() => navigateTo("/eucharistie-sacrements")}
+                                    className='font-bold border-[#1D0104] rounded-[8px] mt-3'
+                                >En savoir plus</Button>
                             </div>
                         </div>
                     </div>
@@ -219,13 +217,11 @@ export default function Page() {
                             <h1 className='heading-4'>La Réconciliation</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                                <Button
+                                    variant="outline"
+                                    onClick={() => navigateTo("/reconcilliation-sacrements")}
+                                    className='font-bold border-[#1D0104] rounded-[8px] mt-3'
+                                >En savoir plus</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -244,13 +240,11 @@ export default function Page() {
                             <h1 className='heading-4'>L’onction des malades</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                                <Button
+                                    variant="outline"
+                                    onClick={() => navigateTo("/onction-malade-sacrements")}
+                                    className='font-bold border-[#1D0104] rounded-[8px] mt-3'
+                                >En savoir plus</Button>
                             </div>
                         </div>
                     </div>
@@ -275,13 +269,11 @@ export default function Page() {
                             <h1 className='heading-4'>L’Ordre</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                                <Button
+                                    variant="outline"
+                                    onClick={() => navigateTo("/ordre-sacrements")}
+                                    className='font-bold border-[#1D0104] rounded-[8px] mt-3'
+                                >En savoir plus</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -300,13 +292,11 @@ export default function Page() {
                             <h1 className='heading-4'>Le Mariage</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
-                                <Link href="#" className="mt-3">
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => { }}
-                                        className='font-bold border-[#1D0104] rounded-[8px]'
-                                    >En savoir plus</Button>
-                                </Link>
+                                <Button
+                                    variant="outline"
+                                    onClick={() => navigateTo("/mariage-sacrements")}
+                                    className='font-bold border-[#1D0104] rounded-[8px] mt-3'
+                                >En savoir plus</Button>
                             </div>
                         </div>
                     </div>

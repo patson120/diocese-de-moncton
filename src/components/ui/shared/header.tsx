@@ -182,7 +182,7 @@ export default function Header() {
                             <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
                                 <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
                                 <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
-                                <li onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
+                                <li onClick={()=> navigateTo("/sacrements")} onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
                                 <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/evenements">Évènements</Link></li>
                                 {/* <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li> */}
                                 <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
@@ -323,7 +323,7 @@ const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     }
     return (
         <div onClick={handleClick} className='cursor-pointer flex justify-start items-center space-x-4 text-black'>
-            <div className='h-[60px] w-[60px] flex justify-center items-center rounded-xl bg-[#F9F4F5] overflow-hidden '>
+            <div className='h-[60px] w-[60px] shrink-0 flex justify-center items-center rounded-xl bg-[#F9F4F5] overflow-hidden '>
                 <div className='h-[32px] w-[32px] shrink-0 relative'>
                     <Image
                         alt=""
