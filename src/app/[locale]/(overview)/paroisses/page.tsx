@@ -1,11 +1,10 @@
 'use client'
 import { Button } from '@/components/ui/shared/button'
-import ParoisseItem from '@/components/ui/home/paroisse-item'
-import { paroisses } from '@/constants'
+import { ParoisseItemSkeleton } from '@/components/ui/shared/skeletons'
 import { MapPin, Search, SlidersHorizontalIcon } from 'lucide-react'
 import dynamic from "next/dynamic"
-import { useState } from 'react'
-import { Link } from '@/i18n/routing'
+import { Suspense, useState } from 'react'
+import Paroisses from './paroisses'
 
 // Import Map component dynamically to avoid SSR issues
 const Map = dynamic(() => import('@/components/map'), { ssr: false });
@@ -46,7 +45,7 @@ export default function Page() {
                     </div>
                     <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105] ' onClick={() => { }}>
                         <MapPin className="md:mr-2 h-4 w-4 text-white" />
-                        <span className='hidden md:flex'>Prendre ma position</span>
+                        <span className='hidden md:flex text-white'>Prendre ma position</span>
                     </Button>
                 </div>
             </div>
@@ -57,13 +56,13 @@ export default function Page() {
                         <div className='sticky top-0 bg-white z-20 py-3'>
                             <Filter />
                         </div>
-                        {
-                            [...paroisses, ...paroisses].map((item, index) => (
-                                <Link key={index} href="/paroisses/1">
-                                    <ParoisseItem data={item} />
-                                </Link>
-                            ))
-                        }
+                        <Suspense fallback={<>{
+                            [1, 2, 3, 4, 5, 6, 7, 8].map(i => <span>
+                                <ParoisseItemSkeleton key={i} />
+                            </span>)
+                        }</>}>
+                            <Paroisses />
+                        </Suspense>
                     </div>
                     <div className='h-[50vh] md:h-auto col-span-2 bg-gray-100 overflow-hidden'>
                         <Map

@@ -12,8 +12,11 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Suspense, useState } from "react";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
-import { ActualitesSkeleton } from "@/components/ui/shared/skeletons";
+import { ActualitesSkeleton, EventItemSkeleton, MessageArchevequeSkeleton, ParoisseItemSkeleton } from "@/components/ui/shared/skeletons";
 import RecentActualites from "@/components/recentActualites";
+import RecentEvents from "@/components/recentEvents";
+import RecentParoisses from "@/components/recentParoisses";
+import MessageArcheveque from "@/components/message-archeveque";
 
 
 // Import Map component dynamically to avoid SSR issues
@@ -89,7 +92,6 @@ export default function Home() {
             <RecentActualites />
           </Suspense>
 
-          
         </div>
         {/* <div className="mt-10 lg:mt-20"/> */}
         <div className="mb-3 flex justify-between items-center">
@@ -101,15 +103,17 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-        <section className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {
-            events.map((item, index) => (
-              <Link key={index} href="/evenements/1" className=''>
-                <EventItem data={item} />
-              </Link>
-            ))
-          }
-        </section>
+
+        <Suspense fallback={
+          <section className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <EventItemSkeleton />
+            <EventItemSkeleton />
+            <EventItemSkeleton />
+          </section>
+        }>
+          <RecentEvents />
+        </Suspense>
+
         <Link href='/evenements' className="block md:hidden mt-5" >
           <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
             Voir tous les évènements
@@ -137,77 +141,28 @@ export default function Home() {
                   </div>
                   <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]' onClick={() => { }}>
                     <MapPin className="md:mr-2 h-4 w-4 text-white" />
-                    <span className='hidden md:flex'>Prendre ma position</span>
+                    <span className='hidden md:flex !text-white'>Prendre ma position</span>
                   </Button>
                 </div>
               </div>
             </div>
-            <div className="col-span-3 md:col-span-1 flex flex-col gap-4 lg:gap-5">
-              {
-                paroisses.map((item, index) => (
-                  <Link key={index} href="/paroisses/1">
-                    <ParoisseItem data={item} />
-                  </Link>
-                ))
-              }
-              <Link href="/paroisses">
-                <Button onClick={() => { }} className="w-full md:py-6 text-sm md:text-base lg:text-xl">
-                  Voir toutes les 23 paroisses
-                  <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
-                </Button>
-              </Link>
-            </div>
+
+            <Suspense fallback={
+              <section className="col-span-3 md:col-span-1 flex flex-col gap-4">
+                {
+                  [1, 2, 3, 4, 5].map(i => <ParoisseItemSkeleton key={i} />)
+                }
+              </section>
+            }>
+              <RecentParoisses />
+            </Suspense>
           </section>
         </ div>
       </div>
 
-      <section className='vertical-margin bg-yellow100 text-[#1D0104]'>
-        <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12'>
-          <div className='order-1 md:order-last md:col-span-2 rounded-2xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-2 md:gap-4 xl:gap-7'>
-            <div className="space-y-1 lg:space-y-2">
-              <span className='heading-3 font-extrabold '>Message de l&lsquo;Archevêque</span>
-              <h1 className='heading-5'>“ Décret de suppression de la paroisse Saint-Timothée de Shemogue ”</h1>
-            </div>
-            <p className='body-2 leading-[25.9px]'>A tous ceux et celles qui liront les présentes, Graces et bénédictions dans le Seigneur.<br /> <br />
-              CONSIDERANT que le code de droit canonique donne à l’évêque diocésain le pouvoir d’ériger, supprimer ou de modifier les paroisses, après avoir entendu le conseil presbtéral et ce conformément au canon 515<br /> <br />
-              CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p>
-
-            <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
-              <Link href="/messages/1" className="">
-                <Button
-                  variant="outline"
-                  onClick={() => { }}
-                  className='font-bold w-full'
-                >En savoir plus</Button>
-              </Link>
-              <Link href="/messages">
-                <Button
-                  variant="outline"
-                  onClick={() => { }}
-                  className='w-full bg-transparent hover:bg-transparent border-black font-bold'
-                >Voir tous les messages</Button>
-              </Link>
-            </div>
-          </div>
-          <div className='md:order-last min-h-80 md:h-auto md:col-span-1 relative rounded-2xl overflow-hidden bg-gray-200'>
-            <Image
-              alt="Image de la l'archevèque"
-              src="/assets/img/image.png"
-              fill
-              style={{
-                objectFit: 'cover'
-              }}
-            />
-            <div className="absolute inset-0 bg-black/40 md:bg-black/30 " />
-            <div className="absolute bottom-0 left-0 right-0">
-              <div className="p-4">
-                <h3 className="text-white body-1 font-semibold">Mgr Guy Desrochers</h3>
-                <p className=" text-white body-2">Archevêque du diocèse de Moncton</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Suspense fallback={ <MessageArchevequeSkeleton />}>
+        <MessageArcheveque />
+      </Suspense>
 
       {/* Action de grace */}
       <ActionGrace />
