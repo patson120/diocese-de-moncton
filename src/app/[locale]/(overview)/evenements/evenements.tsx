@@ -11,20 +11,31 @@ export default async function Evenements() {
     return (
         <>
             <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Mois de septembre</h3>
-            <div className='flex flex-col gap-4'>
-                {
-                    events.map((item, index) => (
-                        <>
-                            <Link key={index} href="/evenements/1" className='hidden md:block' >
+            {/* Desktop */}
+            <div className="hidden md:block">
+                <div className='flex flex-col gap-4'>
+                    {
+                        events.map((item, index) => (
+                            <Link key={index} href="/evenements/1" >
                                 <EventItem data={item} row />
                             </Link>
-                            <Link key={index} href="/evenements/1" className='md:hidden' >
+                        ))
+                    }
+                </div>
+            </div>
+            {/* Mobile */}
+            <div className="md:hidden">
+                <div className='flex flex-col gap-4'>
+                    {
+                        events.map((item, index) => (
+                            <Link key={index} href="/evenements/1" >
                                 <EventItem data={item} row={false} />
                             </Link>
-                        </>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </div>
+
             <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Mois d'octobre</h3>
             <div className='flex flex-col gap-4'>
                 {
@@ -40,7 +51,6 @@ export default async function Evenements() {
                     <div className='w-40 h-8 rounded-md bg-gray-100'></div>
                 </div>
             </div>
-
         </>
     )
 }

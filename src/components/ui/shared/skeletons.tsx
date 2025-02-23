@@ -22,7 +22,7 @@ export function ActualiteSkeleton() {
 export function ActualitesSkeleton({ items }: { items: number }) {
     let comps = []
     for (let i = 0; i < items; i++) {
-        comps.push(<ActualiteSkeleton />)
+        comps.push(<ActualiteSkeleton key={i} />)
     }
     return (
         <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
@@ -62,7 +62,7 @@ export function EventItemSkeleton() {
 export function EventsSkeleton({ items }: { items: number }) {
     let comps = []
     for (let i = 0; i < items; i++) {
-        comps.push(<EventItemSkeleton />)
+        comps.push(<EventItemSkeleton key={i} />)
     }
     return (
         <div className="flex flex-col gap-4">
