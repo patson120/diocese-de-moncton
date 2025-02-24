@@ -38,12 +38,12 @@ export async function fetchParoisses() {
 
 export async function fetchEvents() {
     try {
-        let url = `${BASE_URL}/proisses`;
+        let url = `${BASE_URL}/evenements`;
         let body = {}
         const headers = {}
 
         await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 10000); // 10 seconds timeout
+            setTimeout(() => resolve(true), 5000); // 5 seconds timeout
         },)
         return await fetchAPI(url, 'GET', headers, body);
 
