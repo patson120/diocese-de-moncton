@@ -17,7 +17,7 @@ export default async function Evenements() {
         <>
             <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Mois de septembre</h3>
             {/* Desktop */}
-            {/* <div className="hidden md:block">
+            <div className="hidden md:block">
                 <div className='flex flex-col gap-4'>
                     {
                         events.map((item, index) => (
@@ -27,9 +27,9 @@ export default async function Evenements() {
                         ))
                     }
                 </div>
-            </div> */}
+            </div>
             {/* Mobile */}
-            {/* <div className="md:hidden">
+            <div className="md:hidden">
                 <div className='flex flex-col gap-4'>
                     {
                         events.map((item, index) => (
@@ -39,23 +39,23 @@ export default async function Evenements() {
                         ))
                     }
                 </div>
-            </div> */}
+            </div>
 
-            {/* <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Mois d'octobre</h3>
+            <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Mois d'octobre</h3>
             <div className='flex flex-col gap-4'>
                 {
                     [1, 2].map((item) => (
                         <div key={item} className={`${shimmer} relative overflow-hidden shadow-sm h-16 border border-gray-100 bg-gray-200 rounded-md`}></div>
                     ))
                 }
-            </div> */}
+            </div>
 
             {/* Pagination */}
-            {/* <div className='flex justify-center mt-12'>
+            <div className='flex justify-center mt-12'>
                 <div className='flex gap-3'>
                     <div className='w-40 h-8 rounded-md bg-gray-100'></div>
                 </div>
-            </div> */}
+            </div>
         </>
     )
 }
