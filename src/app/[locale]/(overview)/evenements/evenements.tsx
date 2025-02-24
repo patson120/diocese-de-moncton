@@ -6,11 +6,6 @@ import { Link } from "@/i18n/routing";
 
 
 export default async function Evenements() {
-    // const data = await new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //         resolve(true);
-    //     }, 500);
-    // })
     const data = await fetchEvents();
     console.log({ data });
     return (
