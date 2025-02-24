@@ -38,7 +38,7 @@ export async function fetchParoisses() {
 
 export async function fetchEvents() {
     try {
-        let url = `${BASE_URL}/evenements`;
+        let url = `${BASE_URL}/proisses`;
         let body = {}
         const headers = {}
 
