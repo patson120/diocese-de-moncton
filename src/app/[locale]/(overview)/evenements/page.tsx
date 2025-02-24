@@ -95,7 +95,7 @@ export default function Page() {
                     {/* filter */}
                     <Filter />
                     <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
-                        <Evenements />
+                        {/* <Evenements /> */}
                     </Suspense>
                 </div>
             </section>
