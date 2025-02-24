@@ -8,9 +8,9 @@ export async function fetchActualites() {
         let body = {}
         const headers = {}
 
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 1000); // 4 seconds timeout
-        },)
+        // await new Promise((resolve, reject) => {
+        //     setTimeout(() => resolve(true), 1000); // 4 seconds timeout
+        // },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -25,9 +25,9 @@ export async function fetchParoisses() {
         let body = {}
         const headers = {}
 
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 1000); // 5 seconds timeout
-        },)
+        // await new Promise((resolve, reject) => {
+        //     setTimeout(() => resolve(true), 1000); // 5 seconds timeout
+        // },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -42,9 +42,9 @@ export async function fetchEvents() {
         let body = {}
         const headers = {}
 
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 3000); // 3 seconds timeout
-        },)
+        // await new Promise((resolve, reject) => {
+        //     setTimeout(() => resolve(true), 3000); // 3 seconds timeout
+        // },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -59,9 +59,9 @@ export async function fetchArcheveques() {
         let body = {}
         const headers = {}
 
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 1000); // 1 seconds timeout
-        },)
+        // await new Promise((resolve, reject) => {
+        //     setTimeout(() => resolve(true), 1000); // 1 seconds timeout
+        // },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
