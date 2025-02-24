@@ -11,7 +11,9 @@ export async function fetchActualites() {
         // await new Promise((resolve, reject) => {
         //     setTimeout(() => resolve(true), 1000); // 4 seconds timeout
         // },)
-        return await fetchAPI(url, 'GET', headers, body);
+        setTimeout( async () => {
+            return await fetchAPI(url, 'GET', headers, body);
+        }, 3000);
 
     } catch (error) {
         console.error('Database Error:', error);
