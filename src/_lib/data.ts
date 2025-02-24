@@ -43,7 +43,7 @@ export async function fetchEvents() {
         const headers = {}
 
         await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 5000); // 5 seconds timeout
+            setTimeout(() => resolve(true), 10000); // 10 seconds timeout
         },)
         return await fetchAPI(url, 'GET', headers, body);
 
