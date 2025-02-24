@@ -13,7 +13,7 @@ export async function fetchActualites() {
         // },)
         setTimeout( async () => {
             return await fetchAPI(url, 'GET', headers, body);
-        }, 3000);
+        }, 10000);
 
     } catch (error) {
         console.error('Database Error:', error);
