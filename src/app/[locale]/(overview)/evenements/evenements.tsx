@@ -1,4 +1,4 @@
-import { fetchEvents } from "@/_lib/data";
+import { fetchEvents, fetchParoisses } from "@/_lib/data";
 import EventItem from "@/components/ui/home/event-item";
 import { shimmer } from "@/components/ui/shared/skeletons";
 import { events } from "@/constants";
@@ -6,7 +6,7 @@ import { Link } from "@/i18n/routing";
 
 
 export default async function Evenements() {
-    const data = await fetchEvents()
+    const data = await fetchParoisses()
     console.log({ data });
     return (
         <>
