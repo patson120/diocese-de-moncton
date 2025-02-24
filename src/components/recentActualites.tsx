@@ -4,10 +4,8 @@ import Actualite from "./ui/shared/actualite";
 import { news } from "@/constants";
 
 export default async function RecentActualites() {
-    setTimeout(async () => {
-        const actualites = await fetchActualites()
-        console.log({ actualites });
-    }, 5000);
+    const actualites = await fetchActualites()
+    console.log({ actualites });
 
     return (
         <div className="flex flex-row overflow-x-scroll lg:overflow-x-hidden gap-4 h-scroll pb-6">

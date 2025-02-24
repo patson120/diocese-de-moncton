@@ -7,7 +7,9 @@ export async function fetchActualites() {
         let url = `${BASE_URL}/actualites`
         let body = {}
         const headers = {}
-
+        await new Promise((resolve, reject) => {
+            setTimeout(() => resolve(true), 10000); // 10 seconds timeout
+        })
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
