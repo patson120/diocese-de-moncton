@@ -5,8 +5,11 @@ import { Link } from "@/i18n/routing"
 
 
 export default async function Actualites() {
-    const actualites = await fetchActualites()
-    console.log({ actualites });
+
+    setTimeout(async () => {
+        const actualites = await fetchActualites()
+        console.log({ actualites });
+    }, 5000);
 
     return (
         <>

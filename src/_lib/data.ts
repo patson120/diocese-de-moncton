@@ -8,7 +8,6 @@ export async function fetchActualites() {
         let body = {}
         const headers = {}
 
-        await new Promise((resolve) => setTimeout(resolve, 10000)); // 10 seconds timeout
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {

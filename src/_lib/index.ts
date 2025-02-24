@@ -36,8 +36,8 @@ export const fetchAPI = async (url: string, method: string, headers: any, body: 
             })
         }        
         else {            
-            return await new Promise<any>((resolve, _) => {
-                resolve({ code: 521, message: error.message })
+            return await new Promise<any>((resolve, reject) => {
+                reject({ code: 521, message: error.message })
             })
         }
     }
