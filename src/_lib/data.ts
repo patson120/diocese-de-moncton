@@ -9,7 +9,7 @@ export async function fetchActualites() {
         const headers = {}
 
         await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 5000); // 5 seconds timeout
+            setTimeout(() => resolve(true), 4000); // 4 seconds timeout
         },)
         return await fetchAPI(url, 'GET', headers, body);
 
@@ -43,7 +43,7 @@ export async function fetchEvents() {
         const headers = {}
 
         await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 5000); // 5 seconds timeout
+            setTimeout(() => resolve(true), 3000); // 3 seconds timeout
         },)
         return await fetchAPI(url, 'GET', headers, body);
 
@@ -60,7 +60,7 @@ export async function fetchArcheveques() {
         const headers = {}
 
         await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 5000); // 5 seconds timeout
+            setTimeout(() => resolve(true), 1000); // 1 seconds timeout
         },)
         return await fetchAPI(url, 'GET', headers, body);
 
