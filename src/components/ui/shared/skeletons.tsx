@@ -19,6 +19,38 @@ export function ActualiteSkeleton() {
     );
 }
 
+export function ActualiteDetailSkeleton() {
+    return (
+        <div className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-4 shadow-sm col-span-full lg:col-span-4 h-min`}>
+            <div className='h-72 lg:h-96 xl:h-[560px] relative md:rounded-[18px] overflow-hidden bg-gray-50'>
+
+            </div>
+            <div className='container max-margin pt-4 md:pt-0 md:px-0 md:mx-0 flex flex-col space-y-5'>
+                <div className='flex justify-between pt-10'>
+                    <span className='h-3 w-1/3 rounded bg-gray-200 ' />
+                    <p className='h-3 w-1/4 rounded bg-gray-200' />
+                </div>
+                <h4 className='h-5 w-1/2 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 w-2/3 rounded bg-gray-200' />
+                <div className="pt-10"></div>
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 w-2/3 rounded bg-gray-200' />
+                <p className='h-3 w-1/3 rounded bg-gray-200' />
+
+            </div>
+        </div>
+    )
+}
+
 export function ActualitesSkeleton({ items }: { items: number }) {
     let comps = []
     for (let i = 0; i < items; i++) {
@@ -29,6 +61,20 @@ export function ActualitesSkeleton({ items }: { items: number }) {
             {
                 comps.map(item => item)
             }
+        </div>
+    );
+}
+
+export function RelativesActualitesSkeleton() {
+    return (
+        <div className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 shadow-sm container max-margin py-4 md:px-0 md:mx-0 col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10`}>
+            <h4 className='h-6 mx-4 w-2/3 rounded bg-gray-200' />
+            <div className="flex md:flex-col gap-4 overflow-x-scroll md:overflow-x-hidden pb-6 md:pb-0">
+                <ActualiteSkeleton />
+                <ActualiteSkeleton />
+                <ActualiteSkeleton />
+                <ActualiteSkeleton />
+            </div>
         </div>
     );
 }

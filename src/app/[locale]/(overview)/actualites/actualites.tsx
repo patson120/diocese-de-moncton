@@ -8,8 +8,6 @@ export default async function Actualites() {
 
     const actualites = await fetchActualites()
     console.log({ actualites });
-    setTimeout(async () => {
-    }, 5000);
 
     return (
         <>

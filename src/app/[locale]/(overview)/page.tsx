@@ -1,22 +1,18 @@
 'use client'
+import MessageArcheveque from "@/components/message-archeveque";
+import RecentActualites from "@/components/recentActualites";
+import RecentEvents from "@/components/recentEvents";
+import RecentParoisses from "@/components/recentParoisses";
 import { HeroSection } from "@/components/sections/hero";
+import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
-import EventItem from "@/components/ui/home/event-item";
-import ParoisseItem from "@/components/ui/home/paroisse-item";
-import Actualite from "@/components/ui/shared/actualite";
-import { events, news, paroisses } from "@/constants";
+import { ActualitesSkeleton, EventItemSkeleton, MessageArchevequeSkeleton, ParoisseItemSkeleton } from "@/components/ui/shared/skeletons";
 import { Link } from "@/i18n/routing";
 import { ArrowRight, MapPin, Search } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Suspense, useState } from "react";
-import ActionGrace from "@/components/ui/shared/ActionGrace";
-import { ActualitesSkeleton, EventItemSkeleton, MessageArchevequeSkeleton, ParoisseItemSkeleton } from "@/components/ui/shared/skeletons";
-import RecentActualites from "@/components/recentActualites";
-import RecentEvents from "@/components/recentEvents";
-import RecentParoisses from "@/components/recentParoisses";
-import MessageArcheveque from "@/components/message-archeveque";
 
 
 // Import Map component dynamically to avoid SSR issues

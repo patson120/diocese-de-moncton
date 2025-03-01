@@ -20,7 +20,7 @@ export async function fetchActualites() {
 
 export async function fetchParoisses() {
     try {
-        let url = `${BASE_URL}/proisses`
+        let url = `${BASE_URL}/paroisses`
         let body = {}
         const headers = {}
 
