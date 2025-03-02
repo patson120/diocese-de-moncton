@@ -178,8 +178,8 @@ export function MessageArchevequeSkeleton() {
 
 export function MessageSkeleton() {
     return (
-        <div className='border border-[#E5E5E5] rounded-xl flex flex-col gap-[10px] px-5 py-6 space-y-3'>
-            <div className={`${shimmer} relative overflow-hidden bg-gray-100 shadow-sm h-7 w-1/2 flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]`}>
+        <div className='border border-gray-50 rounded-xl flex flex-col gap-[10px] px-5 py-6 space-y-3'>
+            <div className={`${shimmer} relative overflow-hidden bg-gray-100 shadow-sm h-6 w-1/2 flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]`}>
             </div>
             <div className="space-y-2">
                 <p className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 shadow-sm h-3`} />
@@ -203,6 +203,48 @@ export function MessagesSkeleton({ items }: { items: number }) {
             {
                 comps.map(item => item)
             }
+        </div>
+    );
+}
+
+export function MessageDetailSkeleton() {
+    return (
+        <div className={`${shimmer} relative overflow-hidden rounded-xl p-4 col-span-full lg:col-span-4 pb-10 lg:pb-0 md:pr-10 lg:pr-20 border-b lg:border-r lg:border-gray-100 h-min`}>
+            <div className='container max-margin pt-4 md:pt-0 md:px-0 md:mx-0 flex flex-col space-y-5'>
+                <div className="space-y-3 pb-6">
+                    <h4 className='h-5 w-2/3 rounded bg-gray-200' />
+                    <h4 className='h-5 w-1/2 rounded bg-gray-200' />
+                </div>
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 w-2/3 rounded bg-gray-200' />
+                <div className="pt-10"></div>
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 rounded bg-gray-200' />
+                <p className='h-3 w-2/3 rounded bg-gray-200' />
+                <p className='h-3 w-1/3 rounded bg-gray-200' />
+
+            </div>
+        </div>
+    )
+}
+
+export function RelativesMessagesSkeleton() {
+    return (
+        <div className={`${shimmer} relative overflow-hidden container max-margin py-4 md:px-0 md:mx-0 col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10 pt-4 md:pt-0`}>
+            <h4 className='h-6 w-2/3 rounded bg-gray-100' />
+            <div className="flex md:flex-col gap-4 overflow-x-scroll md:overflow-x-hidden pb-6 md:pb-0">
+                <MessageSkeleton />
+                <MessageSkeleton />
+                <MessageSkeleton />
+                <MessageSkeleton />
+            </div>
         </div>
     );
 }
