@@ -6,12 +6,42 @@ import { Suspense } from 'react'
 import ActualiteDetail from './ActualiteDetail'
 import { ActualiteDetailSkeleton, RelativesActualitesSkeleton } from '@/components/ui/shared/skeletons'
 import RelativesActualite from './RelativesActualite'
+import Breadcrumbs from '@/components/ui/breadcrumbs'
+import { Button } from '@/components/ui/shared/button'
 
 export default function Page() {
   return (
     <>
-      <div className='px-5 md:px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
-        <div className="flex justify-between ">
+      <div className='flex justify-between items-center border-y border-y-gray-50 '>
+        <div className="container max-margin py-4 flex justify-between ">
+          <Breadcrumbs
+            breadcrumbs={[
+              { label: 'Accueil', href: '/' },
+              {
+                label: 'Actualités',
+                href: '/actualites',
+              },
+              {
+                label: 'Quel est le problème avec l’aide médicale...',
+                href: '',
+                active: true,
+              },
+            ]}
+          />
+          <div className='space-x-2'>
+            <Button
+              size={'sm'}
+              variant="outline"
+              className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+            >Article précédent
+            </Button>
+            <Button
+              size={'sm'}
+              variant="outline"
+              className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+            >Article suivant
+            </Button>
+          </div>
         </div>
       </div>
       <section className='md:container md:max-margin py-0' >
