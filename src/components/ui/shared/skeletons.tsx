@@ -175,3 +175,34 @@ export function MessageArchevequeSkeleton() {
         </section>
     )
 }
+
+export function MessageSkeleton() {
+    return (
+        <div className='border border-[#E5E5E5] rounded-xl flex flex-col gap-[10px] px-5 py-6 space-y-3'>
+            <div className={`${shimmer} relative overflow-hidden bg-gray-100 shadow-sm h-7 w-1/2 flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]`}>
+            </div>
+            <div className="space-y-2">
+                <p className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 shadow-sm h-3`} />
+                <p className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 shadow-sm h-3 w-1/3`} />
+            </div>
+            <div className="space-y-2">
+                <p className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 shadow-sm h-2`} />
+                <p className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 shadow-sm h-2 w-2/3`} />
+            </div>
+        </div>
+    )
+}
+
+export function MessagesSkeleton({ items }: { items: number }) {
+    let comps = []
+    for (let i = 0; i < items; i++) {
+        comps.push(<MessageSkeleton key={i} />)
+    }
+    return (
+        <div className="grid gap-6 md:gap-[34px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {
+                comps.map(item => item)
+            }
+        </div>
+    );
+}

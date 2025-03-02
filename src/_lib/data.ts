@@ -68,3 +68,20 @@ export async function fetchArcheveques() {
         throw new Error('Failed to fetch revenue data.');
     }
 }
+
+export async function fetchMessages() {
+    try {
+        let url = `${BASE_URL}/archeveques`;
+        let body = {}
+        const headers = {}
+
+        await new Promise((resolve, reject) => {
+            setTimeout(() => resolve(true), 4000); // 6 seconds timeout
+        },)
+        return await fetchAPI(url, 'GET', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch revenue data.');
+    }
+}

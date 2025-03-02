@@ -1,10 +1,10 @@
 
 import ActionGrace from '@/components/ui/shared/ActionGrace'
-import MessageComp from '@/components/ui/shared/MessageComp'
-import { messages } from '@/constants'
-import { Link } from '@/i18n/routing'
+import { MessagesSkeleton } from '@/components/ui/shared/skeletons'
 import { SlidersHorizontalIcon } from "lucide-react"
 import Image from 'next/image'
+import { Suspense } from 'react'
+import Messages from './messages'
 
 export default function Page() {
     return (
@@ -59,15 +59,9 @@ export default function Page() {
                 </div>
                 <div className='my-8 border-b border-b-[#E5E5E5]' />
 
-                <div className="grid gap-6 md:gap-[34px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                    {
-                        [...messages].map((item, index) => (
-                            <Link key={index} href="/messages/1" className=''>
-                                <MessageComp data={item} />
-                            </Link>
-                        ))
-                    }
-                </div>
+                <Suspense fallback={ <MessagesSkeleton items={9} /> }>
+                    <Messages />
+                </Suspense>
 
                 {/* Pagination */}
                 <div className='flex justify-center mt-12'>

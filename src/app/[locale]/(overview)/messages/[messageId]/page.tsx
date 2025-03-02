@@ -9,7 +9,7 @@ import { ArrowRight } from 'lucide-react'
 const Page = () => {
     return (
         <>
-            <div className='flex justify-between items-center border-y border-y-gray-50 '>
+            <div className='flex justify-between items-center border-y border-y-gray-100 '>
                 <div className="container max-margin py-4 flex justify-between ">
                     <Breadcrumbs
                         breadcrumbs={[
@@ -25,6 +25,20 @@ const Page = () => {
                             },
                         ]}
                     />
+                    <div className='space-x-2'>
+                        <Button
+                            size={'sm'}
+                            variant="outline"
+                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                        >Message précédent
+                        </Button>
+                        <Button
+                            size={'sm'}
+                            variant="outline"
+                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                        >Message suivant
+                        </Button>
+                    </div>
                 </div>
             </div>
             <section className='container max-margin py-0' >

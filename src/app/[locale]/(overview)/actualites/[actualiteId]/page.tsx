@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/shared/button'
 export default function Page() {
   return (
     <>
-      <div className='flex justify-between items-center border-y border-y-gray-50 '>
+      <div className='flex justify-between items-center border-y border-y-gray-100 '>
         <div className="container max-margin py-4 flex justify-between ">
           <Breadcrumbs
             breadcrumbs={[
