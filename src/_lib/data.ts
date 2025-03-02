@@ -85,3 +85,20 @@ export async function fetchMessages() {
         throw new Error('Failed to fetch revenue data.');
     }
 }
+
+export async function fetchMouvements() {
+    try {
+        let url = `${BASE_URL}/mouvements`;
+        let body = {}
+        const headers = {}
+
+        await new Promise((resolve, reject) => {
+            setTimeout(() => resolve(true), 4000); // 6 seconds timeout
+        },)
+        return await fetchAPI(url, 'GET', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch revenue data.');
+    }
+}
