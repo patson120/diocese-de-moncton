@@ -5,7 +5,7 @@ import { fetchArcheveques } from "@/_lib/data";
 
 export default async function MessageArcheveque() {
     const data = await fetchArcheveques()
-    console.info({ data });
+    // console.info({ data });
     
     return (
         <section className='vertical-margin bg-yellow100 text-[#1D0104]'>

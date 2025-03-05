@@ -7,9 +7,6 @@ export async function fetchActualites() {
         let url = `${BASE_URL}/actualites`
         let body = {}
         const headers = {}
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 4000); // 4 seconds timeout
-        })
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -23,10 +20,6 @@ export async function fetchParoisses() {
         let url = `${BASE_URL}/paroisses`
         let body = {}
         const headers = {}
-
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 3000); // 3 seconds timeout
-        },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -40,10 +33,6 @@ export async function fetchEvents() {
         let url = `${BASE_URL}/evenements`;
         let body = {}
         const headers = {}
-
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 2000); // 2 seconds timeout
-        },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -57,10 +46,6 @@ export async function fetchArcheveques() {
         let url = `${BASE_URL}/archeveques`;
         let body = {}
         const headers = {}
-
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 1000); // 1 seconds timeout
-        },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -74,10 +59,6 @@ export async function fetchMessages() {
         let url = `${BASE_URL}/archeveques`;
         let body = {}
         const headers = {}
-
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 4000); // 6 seconds timeout
-        },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
@@ -91,10 +72,6 @@ export async function fetchMouvements() {
         let url = `${BASE_URL}/mouvements`;
         let body = {}
         const headers = {}
-
-        await new Promise((resolve, reject) => {
-            setTimeout(() => resolve(true), 4000); // 6 seconds timeout
-        },)
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
