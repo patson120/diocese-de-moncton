@@ -1,5 +1,4 @@
 import { formatDateToLocal } from '@/_lib/utils'
-import { news } from '@/constants'
 import { TypeActualite } from '@/types'
 import Image from 'next/image'
 
@@ -8,8 +7,8 @@ export default async function ActualiteDetail({ actualite }: { actualite: TypeAc
         <div className='col-span-full lg:col-span-4'>
             <div className='h-72 lg:h-96 xl:h-[560px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                 <Image
-                    alt={news[2].title}
-                    src={news[2].image}
+                    alt='image'
+                    src={'/assets/img/new-1.png'}
                     fill
                     style={{ objectFit: 'cover' }}
                 />

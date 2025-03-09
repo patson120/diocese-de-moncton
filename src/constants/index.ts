@@ -279,6 +279,68 @@ export const ressources: MenuType[] = [
 ]
 
 
+export const paroisses: ParoisseType[] = [
+    {
+        title: "Immaculée-Conception",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-1.png"
+    },
+    {
+        title: "Saint-Anne",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-2.png"
+    },
+    {
+        title: "Saint-Baptiste",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-3.png"
+    },
+    {
+        title: "Notre Dame de Fatima",
+        adresse: "4049, Route 480 Acadieville NB E4Y 1Z3",
+        tel: "(506) 775-2421",
+        image: "/assets/img/paroisse-1.png"
+    },
+]
+
+export const events: EventType[] = [
+    {
+        jour: "08",
+        heure: "15h00",
+        mois: "Sept",
+        lieu: "Au diocèse de Moncton",
+        title: "Soupé au homard à pointe Sapin",
+        type: "Communautaire, Formation, Célébration"
+    },
+    {
+        jour: "14",
+        heure: "08h00",
+        mois: "Sept",
+        lieu: "Au diocèse de Moncton",
+        title: "Trending the soil, tending the sowe...",
+        type: "Communautaire, Formation, Célébration"
+    },
+    {
+        jour: "14",
+        heure: "10h00",
+        mois: "Sept",
+        lieu: "Au diocèse de Moncton",
+        title: "40e anniversaire du pape Jean Pa...",
+        type: "Communautaire, Formation, Célébration"
+    },
+    // {
+    //     jour: "23",
+    //     heure: "14h00",
+    //     mois: "Sept",
+    //     lieu: "Au diocèse de Moncton",
+    //     title: "Monday the movies",
+    //     type: "Communautaire, Formation, Célébration"
+    // },
+]
+
 export const messages: MessageType[] = [
     {
         title: "Décret de suppression de la paroisse Saint-Timothée de Shemogue",
