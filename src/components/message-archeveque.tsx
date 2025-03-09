@@ -23,14 +23,12 @@ export default async function MessageArcheveque() {
                         <Link href="/messages/1" className="">
                             <Button
                                 variant="outline"
-                                onClick={() => { }}
                                 className='font-bold w-full'
                             >En savoir plus</Button>
                         </Link>
                         <Link href="/messages">
                             <Button
                                 variant="outline"
-                                onClick={() => { }}
                                 className='w-full bg-transparent hover:bg-transparent border-black font-bold'
                             >Voir tous les messages</Button>
                         </Link>

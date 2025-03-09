@@ -1,13 +1,12 @@
-import { fetchEvents, fetchParoisses } from "@/_lib/data";
+import { fetchEvents } from "@/_lib/data";
 import EventItem from "@/components/ui/home/event-item";
 import { shimmer } from "@/components/ui/shared/skeletons";
-import { events } from "@/constants";
 import { Link } from "@/i18n/routing";
+import { TypeEvent } from "@/types";
 
 
 export default async function Evenements() {
-    const data = await fetchEvents();
-    console.log({ data });
+    const events: TypeEvent[] = await fetchEvents();
     return (
         <>
             <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Mois de septembre</h3>

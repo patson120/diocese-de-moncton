@@ -2,20 +2,13 @@
 
 import { useEffect, useRef } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
+import { Paroisse } from '@/types';
 
-interface Parish {
-  id: number;
-  name: string;
-  location: {
-    lat: number;
-    lng: number;
-  };
-}
 
 interface MapProps {
-  parishes: Parish[];
-  selectedParish: Parish | null;
-  onParishSelect: (parish: Parish) => void;
+  parishes: Paroisse[];
+  selectedParish: Paroisse | null;
+  onParishSelect: (parish: Paroisse) => void;
 }
 
 export default function Map({ parishes, selectedParish, onParishSelect }: MapProps) {
@@ -32,8 +25,8 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
     loader.load().then(() => {
       if (mapRef.current && !googleMapRef.current) {
         const map = new google.maps.Map(mapRef.current, {
-          center: { lat: 46.0878, lng: -64.7782 },
-          zoom: 13,
+          center: { lat: parseFloat(parishes[0].gps.split(";")[0]), lng: parseFloat(parishes[0].gps.split(";")[1])},
+          zoom: 12,
           styles: [
             {
               featureType: 'poi.business',
@@ -51,9 +44,9 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
         parishes.forEach((parish) => {
           const marker = new google.maps.Marker({
-            position: parish.location,
+            position: { lat: parseFloat(parish.gps.split(";")[0]), lng: parseFloat(parish.gps.split(";")[1]) },
             map,
-            title: parish.name,
+            title: parish.nom,
             animation: google.maps.Animation.DROP,
           });
 

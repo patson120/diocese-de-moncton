@@ -1,12 +1,21 @@
 
 import { formatDateToLocal } from '@/_lib/utils'
-import { Search, SlidersHorizontalIcon } from "lucide-react"
+import { ActualitesSkeleton } from '@/components/ui/shared/skeletons'
+import { SlidersHorizontalIcon } from "lucide-react"
 import Image from 'next/image'
 import { Suspense } from 'react'
 import Actualites from './actualites'
-import { ActualitesSkeleton, shimmer } from '@/components/ui/shared/skeletons'
+import SearchBar from './SearchBar'
 
-export default async function Page() {
+export default async function Page(props: {
+  searchParams?: Promise<{
+    query?: string;
+    page?: number;
+  }>
+}) {
+  const searchParams = await props.searchParams;
+  const query = searchParams?.query || '';
+  const currentPage = searchParams?.page || 1;
   return (
     <main>
       {/* Hero section */}
@@ -28,7 +37,7 @@ export default async function Page() {
       </section>
       <div className='container max-margin py-0 -translate-y-2'>
         {/* Search bar */}
-        <SearchBar />
+        <SearchBar placeholder={"Rechercher un actualité..."} />
       </div>
       <section className='container max-margin py-0 pb-10 md:pb-20'>
 
@@ -36,12 +45,12 @@ export default async function Page() {
         <Filter />
 
         {/* Important post  */}
-        <div className='mt-8 mb-8 md:mb-12 xl:mb-24'>
+        <div id='actualite-une' className='mt-8 mb-8 md:mb-12 xl:mb-24'>
           <ImportantPost />
         </div>
 
         <Suspense fallback={< ActualitesSkeleton items={8} />}>
-          <Actualites />
+          <Actualites currentPage={currentPage} query={query} />
         </Suspense>
 
       </section>
@@ -98,16 +107,3 @@ const Filter = () => {
   )
 }
 
-const SearchBar = () => {
-  return (
-    <div className='flex justify-center items-center -translate-y-6'>
-      <div className='w-full md:w-3/4 lg:w-1/2 relative'>
-        <input type="text" placeholder="Rechercher un article..."
-          className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
-        text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
-          placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
-        <Search className="h-7 w-7 text-gray-300 absolute top-3 right-4 cursor-pointer" />
-      </div>
-    </div>
-  )
-}

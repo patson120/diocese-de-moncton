@@ -1,13 +1,9 @@
-import React from 'react'
 import { formatDateToLocal } from '@/_lib/utils'
-import Image from 'next/image'
 import { news } from '@/constants'
-import { fetchActualites } from '@/_lib/data'
+import { TypeActualite } from '@/types'
+import Image from 'next/image'
 
-export default async function ActualiteDetail() {
-    const data = await fetchActualites()
-    console.log({ data });
-    
+export default async function ActualiteDetail({ actualite }: { actualite: TypeActualite }) {
     return (
         <div className='col-span-full lg:col-span-4'>
             <div className='h-72 lg:h-96 xl:h-[560px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
@@ -18,7 +14,7 @@ export default async function ActualiteDetail() {
                     style={{ objectFit: 'cover' }}
                 />
             </div>
-            <div className='container max-margin pt-4 md:pt-0 md:px-0 md:mx-0 flex flex-col space-y-3'>
+            {/* <div className='container max-margin pt-4 md:pt-0 md:px-0 md:mx-0 flex flex-col space-y-3'>
                 <div className='flex justify-between pt-4'>
                     <span className='body-3 font-semibold text-primary'>Diocèse</span>
                     <p className='text-gray-400 body-3'>Publié le {formatDateToLocal((new Date()).toISOString())}</p>
@@ -32,6 +28,16 @@ export default async function ActualiteDetail() {
                 <p className='body-2 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, voluptates.</p>
                 <p className='body-2 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ullam omnis natus tenetur provident quaerat qui explicabo eos amet in. Praesentium officiis inventore cum modi qui quidem fugiat eligendi aliquid ipsa sapiente ipsam repellat magni tenetur ea suscipit, quod voluptate iusto, quaerat consequatur minima rerum in. Magnam, est odio, earum illo at enim quaerat corrupti dicta fugit eaque libero ipsum. Impedit odio sapiente perferendis autem aperiam ullam sequi dolor tempora veniam, ipsa voluptatum consequuntur! Ad quos dignissimos eligendi tenetur repellendus minima autem esse animi, ullam voluptate ut eaque vitae culpa deleniti? Praesentium maiores vel dolore! Sunt vel obcaecati provident, ratione quisquam commodi, necessitatibus dolores quibusdam eligendi harum et quaerat? Sunt eum distinctio veritatis voluptas, necessitatibus placeat impedit quisquam ab corrupti!</p>
                 <p className='body-2 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit eos fugiat et vitae, commodi enim, quisquam sint sapiente fuga inventore labore eligendi pariatur velit earum neque. Eum voluptatum omnis accusamus asperiores quidem. Distinctio, culpa est? Fuga velit eius deleniti blanditiis, nobis minima, dolores ipsum reiciendis, animi quae officia consequuntur.</p>
+            </div> */}
+
+            <div className='container max-margin pt-4 md:pt-0 md:px-0 md:mx-0 flex flex-col space-y-3'>
+                <div className='flex justify-between pt-4'>
+                    <span className='body-3 font-semibold text-primary'>{actualite.categorie.intitule_fr}</span>
+                    <p className='text-gray-400 body-3'>Publié le {formatDateToLocal(actualite.date_publication)}</p>
+                </div>
+                <h1 className='heading-3 font-bold'>{actualite.titre_fr}</h1>
+
+                <p className='body-2 text-gray-600'>{actualite.description_fr}</p>
             </div>
         </div>
     )

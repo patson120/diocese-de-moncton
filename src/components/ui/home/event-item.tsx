@@ -7,7 +7,7 @@ export default function EventItem({ data, row }: { data: TypeEvent, row?: boolea
             <div className='flex flex-1 flex-row justify-between items-center divide-x'>
                 <div className='w-[70px] text-center flex-col justify-center items-center '>
                     <p className='heading-4 font-extrabold text-primary'>{formatDateToLocal((new Date(data.date_event)).toISOString()).split(" ")[0]}</p>
-                    <p className='body-1 text-primary'>{formatDateToLocal((new Date(data.date_event)).toISOString()).split(" ")[1]}</p>
+                    <p className='body-1 text-primary'>{formatDateToLocal((new Date(data.date_event)).toISOString()).split(" ")[1]} <span className='font-bold'>{formatDateToLocal((new Date(data.date_event)).toISOString()).split(" ")[2]}</span></p>
                 </div>
                 <div className='flex-1 pl-2 md:pl-3'>
                     <h3 className='body-2 font-extrabold'>{data.heure_event}</h3>

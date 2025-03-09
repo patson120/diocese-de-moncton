@@ -2,9 +2,9 @@ import { BASE_URL } from "@/constants";
 import { fetchAPI } from "@/_lib";
 
 
-export async function fetchActualites() {
+export async function fetchActualites(params: string = "") {
     try {
-        let url = `${BASE_URL}/actualites`
+        let url = `${BASE_URL}/actualites${params}`;        
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
@@ -15,9 +15,9 @@ export async function fetchActualites() {
     }
 }
 
-export async function fetchParoisses() {
+export async function fetchParoisses(params: string = "") {
     try {
-        let url = `${BASE_URL}/paroisses`
+        let url = `${BASE_URL}/paroisses${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
@@ -28,9 +28,9 @@ export async function fetchParoisses() {
     }
 }
 
-export async function fetchEvents() {
+export async function fetchEvents(params: string = "") {
     try {
-        let url = `${BASE_URL}/evenements`;
+        let url = `${BASE_URL}/evenements${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);

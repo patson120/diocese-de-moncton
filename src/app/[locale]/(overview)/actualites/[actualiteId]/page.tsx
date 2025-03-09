@@ -8,12 +8,26 @@ import { ActualiteDetailSkeleton, RelativesActualitesSkeleton } from '@/componen
 import RelativesActualite from './RelativesActualite'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
 import { Button } from '@/components/ui/shared/button'
+import { TypeActualite } from '@/types'
+import { fetchActualites } from '@/_lib/data'
 
-export default function Page() {
+export default async function Page(
+  props: {
+    params: Promise<{ actualiteId: string }>,
+    // searchParams?: Promise<{ query?: string; page?: number }>
+  }) {
+  const { actualiteId } = await props.params;
+
+  // const searchParams = await props.searchParams;
+  // const query = searchParams?.query || '';
+  // const currentPage = searchParams?.page || 1;
+  
+  
+  const actualite: TypeActualite = await fetchActualites(`/${actualiteId}`) 
   return (
     <>
       <div className='flex justify-between items-center border-y border-y-gray-100 '>
-        <div className="container max-margin py-4 flex justify-between ">
+        <div className="container max-margin py-3 flex justify-between items-center ">
           <Breadcrumbs
             breadcrumbs={[
               { label: 'Accueil', href: '/' },
@@ -22,7 +36,7 @@ export default function Page() {
                 href: '/actualites',
               },
               {
-                label: 'Quel est le problème avec l’aide médicale...',
+                label: actualite?.titre_fr ?? "",
                 href: '',
                 active: true,
               },
@@ -47,10 +61,10 @@ export default function Page() {
       <section className='md:container md:max-margin py-0' >
         <div className='grid grid-cols-1 lg:grid-cols-6 md:gap-6 lg:gap-14 py-4 lg:py-8'>
           <Suspense fallback={<ActualiteDetailSkeleton />} >
-            <ActualiteDetail />
+            <ActualiteDetail actualite={actualite} />
           </Suspense>
           <Suspense fallback={<RelativesActualitesSkeleton />} >
-            <RelativesActualite />
+            <RelativesActualite categorie_id={actualite.categorie_id} />
           </Suspense>
         </div>
       </section>

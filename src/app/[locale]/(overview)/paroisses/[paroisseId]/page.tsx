@@ -1,36 +1,49 @@
 
-'use client'
+import { fetchParoisses } from "@/_lib/data";
+import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
+
 import { Button } from "@/components/ui/shared/button";
-import { paroisses } from "@/constants";
+import MapSection from "@/components/ui/shared/MapSection";
+import { Link } from "@/i18n/routing";
+import { Paroisse } from "@/types";
 import { Mail, MapPin, PhoneCall, Play } from "lucide-react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useState } from "react";
-
-// Import Map component dynamically to avoid SSR issues
-const Map = dynamic(() => import('@/components/map'), { ssr: false });
-
-const parishes = [
-    {
-        id: 1,
-        name: "Cathédrale Notre-Dame de l'Assomption",
-        address: '220 St George St, Moncton, NB E1C 1V8',
-        phone: '+1 506-857-4223',
-        email: 'cathedrale@diocesemoncton.ca',
-        website: 'https://www.cathedralemoncton.ca',
-        location: { lat: 46.0878, lng: -64.7782 }
-    }
-];
 
 
-export default function Page() {
+export default async function Page(props: {
+    params: Promise<{ paroisseId: string }>,
+}) {
 
-    const [selectedParish, setSelectedParish] = useState<any>(null);
+    const { paroisseId } = await props.params;
+    const paroisse: Paroisse = await fetchParoisses(`/${paroisseId}`)
+    const paroisses: Paroisse[] = await fetchParoisses(`?type_paroisse_id=${paroisse.type_paroisse_id}`)
+
     return (
         <>
-            <div className='px-5 md:px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
-                <div className="flex justify-between ">
+            <div className='flex justify-between items-center border-y border-y-gray-100 '>
+                <div className="container max-margin py-3 flex justify-between items-center ">
+                    <Breadcrumbs 
+                        breadcrumbs={[
+                            { label: 'Accueil', href: '/' },
+                            {
+                                label: 'Paroisses',
+                                href: '/paroisses',
+                            },
+                            {
+                                label: paroisse?.nom ?? "",
+                                href: '',
+                                active: true,
+                            },
+                        ]}
+                    />
+                    <div className='space-x-2'>
+                        <Link href={paroisse.site_web} target="_blank">
+                            <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
+                                Visiter le site internet
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <section className="md:container md:max-margin py-0">
@@ -45,21 +58,25 @@ export default function Page() {
                             />
                         </div>
                         <div className='container max-margin md:w-full md:mx-0 md:px-0 py-0 flex gap-3'>
-                            <Button variant='outline' size="sm" onClick={() => { }} className="hidden md:flex text-xs lg:text-sm">
-                                Visiter le site internet
-                            </Button>
-                            <Button variant='outline' size="sm" onClick={() => { }} className="w-full md:w-auto text-xs lg:text-sm">
-                                <Play className="mr-2 h-4 w-6" />
-                                Voir la paroisse en vidéo
-                            </Button>
+                            <Link href={paroisse.site_web} target="_blank">
+                                <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
+                                    Visiter le site internet
+                                </Button>
+                            </Link>
+                            <Link href={paroisse.lien_youtube} target="_blank">
+                                <Button variant='outline' size="sm" className="w-full md:w-auto text-xs lg:text-sm">
+                                    <Play className="mr-2 h-4 w-6" />
+                                    Voir la paroisse en vidéo
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <small className='text-gray uppercase'>Unité pastorale</small>
-                            <h1 className='heading-4 font-extrabold mb-4'>Paroisse Immaculée-Conception / Acadieville</h1>
-                            <p className='body-2 text-gray line-clamp-2'>L’histoire d’Acadieville est étroitement liée à celle de Rogersville. Les premiers colons (vers 1871) étaient pour la plupart des constructeurs du chemin de fer « Intercolonial...</p>
-                            <span className='font-bold cursor-pointer'>voir plus</span>
+                            <h1 className='heading-4 font-extrabold mb-4'>{paroisse.nom}</h1>
+                            <p className='body-2 text-gray'>{paroisse.histoire}</p>
+                            {/* <span className='font-bold cursor-pointer'>voir plus</span> */}
                         </div>
                         <div className="flex flex-wrap gap-4 my-5 py-3 border-y border-y-[#E5E5E5]">
                             <div className="flex flex-nowrap">
@@ -101,15 +118,15 @@ export default function Page() {
                             <div className="space-y-2 mt-4 body-2">
                                 <div className="flex items-center gap-2">
                                     <MapPin className="h-4 w-6 font-extrabold" />
-                                    <p className="text-gray">4049, Route 480 Acadieville NB E4Y 1Z3</p>
+                                    <p className="text-gray">{paroisse.adresse}</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <PhoneCall className="h-4 w-6 font-extrabold" />
-                                    <p className="text-gray">(506) 775-2421</p>
+                                    <p className="text-gray">{paroisse.telephone}</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Mail className="h-4 w-6 font-extrabold" />
-                                    <p className="text-gray">paracadi@live.ca</p>
+                                    <p className="text-gray">{paroisse.email}</p>
                                 </div>
                             </div>
                         </div>
@@ -117,22 +134,18 @@ export default function Page() {
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Sur la carte</h1>
                         {/* Map */}
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
-                            <Map
-                                parishes={parishes}
-                                selectedParish={selectedParish}
-                                onParishSelect={setSelectedParish}
-                            />
+                            <MapSection paroisses={[paroisse]} />
                         </div>
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses</h1>
                         <div>
-                            <div className="flex flex-nowrap overflow-x-scroll gap-4 pb-5">
+                            <div className="flex flex-nowrap overflow-x-scroll xl:overflow-x-hidden gap-4 pb-5">
                                 {
-                                    paroisses.slice(0, 2).map((item, index) => (
-                                        <div key={index}>
-                                            <div className="h-32 w-48 relative overflow-hidden rounded-md bg-gray-100">
+                                    paroisses.slice(0, 4).map((item, index) => (
+                                        <Link href={`/paroisses/${item.id}`} key={index} className="max-w-48">
+                                            <div className="h-32 w-48 shrink-0 relative overflow-hidden rounded-md bg-gray-100">
                                                 <Image
-                                                    alt="Image de la paroisse"
-                                                    src={item.image}
+                                                    alt={`${paroisse.nom}`}
+                                                    src={'/assets/img/paroisse-1.png'}
                                                     fill
                                                     style={{
                                                         objectFit: 'cover',
@@ -141,9 +154,9 @@ export default function Page() {
                                                     }}
                                                 />
                                             </div>
-                                            <h3 className="font-extrabold text-xs mt-3 mb-1">{item.title}</h3>
-                                            <p className="text-xs text-gray-500">Rogersville</p>
-                                        </div>
+                                            <h3 className="font-extrabold text-xs mt-3 mb-1">{item.nom}</h3>
+                                            <p className="text-xs text-gray-500">{item.adresse}</p>
+                                        </Link>
                                     ))
                                 }
                             </div>

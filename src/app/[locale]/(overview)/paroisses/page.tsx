@@ -1,36 +1,17 @@
-'use client'
+
 import { Button } from '@/components/ui/shared/button'
 import { ParoisseItemSkeleton } from '@/components/ui/shared/skeletons'
 import { MapPin, Search, SlidersHorizontalIcon } from 'lucide-react'
 import dynamic from "next/dynamic"
 import { Suspense, useState } from 'react'
 import Paroisses from './paroisses'
+import { Paroisse } from '@/types'
+import { fetchParoisses } from '@/_lib/data'
+import MapSection from '@/components/ui/shared/MapSection'
 
-// Import Map component dynamically to avoid SSR issues
-const Map = dynamic(() => import('@/components/map'), { ssr: false });
 
-const parishes = [
-    {
-        id: 1,
-        name: "Cathédrale Notre-Dame de l'Assomption",
-        address: '220 St George St, Moncton, NB E1C 1V8',
-        phone: '+1 506-857-4223',
-        email: 'cathedrale@diocesemoncton.ca',
-        website: 'https://www.cathedralemoncton.ca',
-        location: { lat: 46.0878, lng: -64.7782 }
-    },
-    {
-        id: 2,
-        name: 'Église Saint-Anselme',
-        address: '1014 Rue Amirault, Dieppe, NB E1A 1C9',
-        phone: '+1 506-382-8018',
-        email: 'stanselme@diocesemoncton.ca',
-        website: 'https://www.paroissestanselme.ca',
-        location: { lat: 46.0978, lng: -64.7482 }
-    }
-];
-export default function Page() {
-    const [selectedParish, setSelectedParish] = useState<any>(null);
+export default async function Page() {
+    const paroisses: Paroisse[] = await fetchParoisses()
     return (
         <section className='container max-margin vertical-margin pt-5 mt-0'>
             <div className='flex justify-center items-center gap-2 my-7'>
@@ -43,7 +24,7 @@ export default function Page() {
 
                         <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
                     </div>
-                    <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105] ' onClick={() => { }}>
+                    <Button variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]'>
                         <MapPin className="md:mr-2 h-4 w-4 text-white" />
                         <span className='hidden md:flex text-white'>Prendre ma position</span>
                     </Button>
@@ -61,15 +42,12 @@ export default function Page() {
                                 <ParoisseItemSkeleton key={i} />
                             </span>)
                         }</>}>
-                            <Paroisses />
+                            <Paroisses paroisses={paroisses} />
                         </Suspense>
                     </div>
                     <div className='h-[50vh] md:h-auto col-span-2 bg-gray-100 overflow-hidden'>
-                        <Map
-                            parishes={parishes}
-                            selectedParish={selectedParish}
-                            onParishSelect={setSelectedParish}
-                        />
+                        
+                        <MapSection  paroisses={paroisses.slice(0, 4)} />
                     </div>
                 </div>
             </div>
