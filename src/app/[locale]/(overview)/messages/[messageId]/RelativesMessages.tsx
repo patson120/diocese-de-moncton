@@ -1,15 +1,14 @@
+
 import { fetchMessages } from '@/_lib/data'
 import { Button } from '@/components/ui/shared/button'
 import MessageComp from '@/components/ui/shared/MessageComp'
-import { messages } from '@/constants'
 import { Link } from '@/i18n/routing'
+import { Message } from '@/types'
 import { ArrowRight } from 'lucide-react'
-import React from 'react'
 
 export default async function RelativesMessages() {
     // Fetch messages data from API
-    const data = await fetchMessages()
-    console.log({ data });
+    const messages: Message[] = await fetchMessages()
     
     return (
         <div className='col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10 pt-4 md:pt-0'>
@@ -18,7 +17,7 @@ export default async function RelativesMessages() {
                 {
                     messages.slice(0, 5).map((item, index) => (
                         <Link key={index} href="/messages/1">
-                            <MessageComp data={item} />
+                            <MessageComp message={item} />
                         </Link>
                     ))
                 }
@@ -27,7 +26,7 @@ export default async function RelativesMessages() {
                 {
                     messages.slice(0, 3).map((item, index) => (
                         <Link key={index} href="/messages/1" className=''>
-                            <MessageComp data={item} />
+                            <MessageComp message={item} />
                         </Link>
                     ))
                 }

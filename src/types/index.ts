@@ -117,3 +117,23 @@ export type TypeActualite = {
     categorie: Categorie,
     motcles: string[]
 }
+
+export type Message = {
+    id: number;
+    message_fr: string;
+    message_en: string,
+    archeveque_id: number;
+    etat: number;
+    created_at: string;
+    updated_at: string;
+    message: string;
+    archeveque: Archeveque;
+}
+
+export type Archeveque = {
+    id: number;
+    name: string;
+    photo: string;
+    created_at: string;
+    updated_at: string;
+}
