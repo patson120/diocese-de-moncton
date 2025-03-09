@@ -1,15 +1,12 @@
 
-import Actualite from '@/components/ui/shared/actualite'
-import { news } from '@/constants'
-import { Link } from '@/i18n/routing'
-import { Suspense } from 'react'
-import ActualiteDetail from './ActualiteDetail'
-import { ActualiteDetailSkeleton, RelativesActualitesSkeleton } from '@/components/ui/shared/skeletons'
-import RelativesActualite from './RelativesActualite'
+import { fetchActualites } from '@/_lib/data'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
 import { Button } from '@/components/ui/shared/button'
+import { ActualiteDetailSkeleton, RelativesActualitesSkeleton } from '@/components/ui/shared/skeletons'
 import { TypeActualite } from '@/types'
-import { fetchActualites } from '@/_lib/data'
+import { Suspense } from 'react'
+import ActualiteDetail from './ActualiteDetail'
+import RelativesActualite from './RelativesActualite'
 
 export default async function Page(
   props: {
