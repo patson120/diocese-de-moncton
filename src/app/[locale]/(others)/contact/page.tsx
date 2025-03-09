@@ -96,11 +96,11 @@ export default function Page() {
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-4">Sur la carte</h1>
                         {/* Map */}
                         <div className="h-64 w-full bg-gray-100 rounded-xl overflow-hidden">
-                            <Map
+                            {/* <Map
                                 parishes={parishes}
                                 selectedParish={selectedParish}
                                 onParishSelect={setSelectedParish}
-                            />
+                            /> */}
                         </div>
 
 

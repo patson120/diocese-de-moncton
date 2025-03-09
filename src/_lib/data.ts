@@ -54,9 +54,9 @@ export async function fetchArcheveques() {
     }
 }
 
-export async function fetchMessages() {
+export async function fetchMessages(params: string = "") {
     try {
-        let url = `${BASE_URL}/archeveques`;
+        let url = `${BASE_URL}/mot_archeve${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
