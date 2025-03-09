@@ -1,13 +1,9 @@
 'use client'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
 import { Button } from '@/components/ui/shared/button'
-import MessageComp from '@/components/ui/shared/MessageComp'
-import { messages } from '@/constants'
-import { Link } from '@/i18n/routing'
-import { ArrowRight } from 'lucide-react'
+import { MessageDetailSkeleton, RelativesMessagesSkeleton } from '@/components/ui/shared/skeletons'
 import { Suspense } from 'react'
 import MessageDetail from './MessageDetail'
-import { MessageDetailSkeleton, RelativesMessagesSkeleton } from '@/components/ui/shared/skeletons'
 import RelativesMessages from './RelativesMessages'
 
 const Page = () => {
