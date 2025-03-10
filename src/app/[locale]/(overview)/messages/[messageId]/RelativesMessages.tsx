@@ -16,7 +16,7 @@ export default async function RelativesMessages() {
             <div className="hidden md:flex flex-col gap-4 lg:gap-6">
                 {
                     messages.slice(0, 5).map((item, index) => (
-                        <Link key={index} href="/messages/1">
+                        <Link key={index} href={`/messages/${item.id}`}>
                             <MessageComp message={item} />
                         </Link>
                     ))
@@ -25,7 +25,7 @@ export default async function RelativesMessages() {
             <div className="md:hidden flex flex-col gap-4">
                 {
                     messages.slice(0, 3).map((item, index) => (
-                        <Link key={index} href="/messages/1" className=''>
+                        <Link key={index} href={`/messages/${item.id}`}>
                             <MessageComp message={item} />
                         </Link>
                     ))
