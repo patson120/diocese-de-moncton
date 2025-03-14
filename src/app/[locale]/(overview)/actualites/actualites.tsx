@@ -33,7 +33,7 @@ export default async function Actualites({currentPage, query}: { currentPage: nu
 
             {/* Pagination */}
             <div className="mt-20 flex w-full justify-end">
-                <Pagination totalPages={totalPages} />
+                <Pagination totalPages={totalPages} target={"#actualite-une"} />
             </div>
         </>
     )

@@ -4,7 +4,16 @@ import { Suspense } from 'react';
 import Evenements from "./evenements";
 import { EventsSkeleton } from "@/components/ui/shared/skeletons";
 
-export default function Page() {
+export default async function Page(props: {
+    searchParams?: Promise<{
+        query?: string;
+        page?: number;
+    }>
+}) {
+
+    const searchParams = await props.searchParams;
+    const query = searchParams?.query || '';
+    const currentPage = searchParams?.page || 1;
     return (
         <main>
             {/* Hero section */}
@@ -95,7 +104,7 @@ export default function Page() {
                     {/* filter */}
                     <Filter />
                     <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
-                        <Evenements />
+                        <Evenements currentPage={currentPage} query={query} />
                     </Suspense>
                 </div>
             </section>

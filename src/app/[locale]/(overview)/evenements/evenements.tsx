@@ -1,12 +1,25 @@
 import { fetchEvents } from "@/_lib/data";
 import EventItem from "@/components/ui/home/event-item";
+import Pagination from "@/components/ui/shared/pagination";
 import { shimmer } from "@/components/ui/shared/skeletons";
 import { Link } from "@/i18n/routing";
 import { TypeEvent } from "@/types";
 
 
-export default async function Evenements() {
-    const events: TypeEvent[] = await fetchEvents();
+export default async function Evenements({ currentPage, query }: { currentPage: number, query: string }) {
+
+    const response = await fetchEvents(`?paginate=8&page=${currentPage}&titre_fr=${query}`)
+    const events: TypeEvent[] = response.data
+    const totalPages = response.last_page
+
+    if (!events) {
+        return (
+            <div>
+                <h1 className="text-center text-gray-400">Pas de données !</h1>
+            </div>
+        )
+    }
+
     return (
         <>
             <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Mois de septembre</h3>
@@ -24,30 +37,6 @@ export default async function Evenements() {
                     ))
                 }
             </div>
-            {/* Desktop */}
-            {/* <div className="hidden md:block">
-                <div className='flex flex-col gap-4'>
-                    {
-                        events.map((item, index) => (
-                            <Link key={index} href="/evenements/1" >
-                                <EventItem data={item} row />
-                            </Link>
-                        ))
-                    }
-                </div>
-            </div> */}
-            {/* Mobile */}
-            {/* <div className="md:hidden">
-                <div className='flex flex-col gap-4'>
-                    {
-                        events.map((item, index) => (
-                            <Link key={index} href="/evenements/1" >
-                                <EventItem data={item} row={false} />
-                            </Link>
-                        ))
-                    }
-                </div>
-            </div> */}
 
             <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Mois d'octobre</h3>
             <div className='flex flex-col gap-4'>
@@ -59,10 +48,8 @@ export default async function Evenements() {
             </div>
 
             {/* Pagination */}
-            <div className='flex justify-center mt-12'>
-                <div className='flex gap-3'>
-                    <div className='w-40 h-8 rounded-md bg-gray-100'></div>
-                </div>
+            <div className="mt-20 flex w-full justify-center">
+                <Pagination totalPages={totalPages} />
             </div>
         </>
     )
