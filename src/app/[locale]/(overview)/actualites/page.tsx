@@ -1,5 +1,4 @@
 
-import { formatDateToLocal } from '@/_lib/utils'
 import { ActualitesSkeleton } from '@/components/ui/shared/skeletons'
 import { SlidersHorizontalIcon } from "lucide-react"
 import Image from 'next/image'
@@ -44,12 +43,7 @@ export default async function Page(props: {
         {/* filter */}
         <Filter />
 
-        {/* Important post  */}
-        <div id='actualite-une' className='mt-8 mb-8 md:mb-12 xl:mb-24'>
-          <ImportantPost />
-        </div>
-
-        <Suspense fallback={< ActualitesSkeleton items={8} />}>
+        <Suspense fallback={<div className='mt-16'>< ActualitesSkeleton items={8} /></div>}>
           <Actualites currentPage={currentPage} query={query} />
         </Suspense>
 
@@ -58,32 +52,6 @@ export default async function Page(props: {
   )
 }
 
-const ImportantPost = () => {
-  return (
-    <div className='w-full text-black  grid grid-cols-1 md:grid-cols-2 gap-5'>
-      <div className='relative h-72 xl:h-96 w-full rounded-2xl overflow-hidden bg-gray-100'>
-        <Image
-          alt="Image de la l'actualité"
-          src="/assets/img/new-4.png"
-          fill
-          style={{
-            objectFit: 'cover',
-            width: '100%',
-            height: '100%'
-          }}
-        />
-      </div>
-      <div className='space-y-4'>
-        <div>
-          <span className='legend font-bold text-primary'>Diocèse</span>
-          <h4 className='heading-3 line-clamp-2'>Quel est le problème avec l’aide médicale à mourir (AMM)? Le 9 octobre à 19h</h4>
-        </div>
-        <p className='body-2 line-clamp-6 text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure quae ut sunt reprehenderit qui eius, facere incidunt tempore similique aspernatur dolorum minima dolores odit harum id nesciunt libero doloribus beatae eos voluptates dolorem. Commodi non illo rem, eveniet molestias distinctio! Corporis repudiandae provident cum ut amet blanditiis eum exercitationem ipsam numquam nihil porro deleniti aut a impedit cupiditate, nostrum nam? Similique labore, laboriosam ipsam corporis perferendis neque unde mollitia, consectetur blanditiis saepe sequi velit tempore porro corrupti aut maxime molestiae. Ratione quae saepe provident quod asperiores expedita aspernatur atque delectus quo laboriosam necessitatibus quas odit, dolores culpa! Ducimus, ipsa!</p>
-        <p className='body-3 text-gray-400'>Publié le {formatDateToLocal((new Date()).toISOString())}</p>
-      </div>
-    </div >
-  )
-}
 
 const Filter = () => {
   return (

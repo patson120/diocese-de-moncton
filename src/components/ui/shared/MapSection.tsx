@@ -8,6 +8,10 @@ const Map = dynamic(() => import('@/components/map'), { ssr: false });
 
 export default function MapSection({paroisses}: {paroisses: Paroisse[]}) {
     const [selectedParish, setSelectedParish] = useState<any>(null);
+    console.log({
+        paroisses
+    });
+    
     return (
         <Map
             parishes={paroisses}

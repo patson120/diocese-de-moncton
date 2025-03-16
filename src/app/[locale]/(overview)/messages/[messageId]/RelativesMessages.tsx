@@ -6,16 +6,14 @@ import { Link } from '@/i18n/routing'
 import { Message } from '@/types'
 import { ArrowRight } from 'lucide-react'
 
-export default async function RelativesMessages() {
-    // Fetch messages data from API
-    const messages: Message[] = await fetchMessages()
+export default async function RelativesMessages({messages}: {messages: Message[]}) {
     
     return (
         <div className='col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10 pt-4 md:pt-0'>
             <h1 className='heading-3 font-extrabold'>Autres message</h1>
             <div className="hidden md:flex flex-col gap-4 lg:gap-6">
                 {
-                    messages.slice(0, 5).map((item, index) => (
+                    messages.map((item, index) => (
                         <Link key={index} href={`/messages/${item.id}`}>
                             <MessageComp message={item} />
                         </Link>

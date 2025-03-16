@@ -1,26 +1,12 @@
 
 import { fetchEvents } from '@/_lib/data';
 import { formatDateToLocal } from '@/_lib/utils';
+import Breadcrumbs from '@/components/ui/breadcrumbs';
+import { Button } from '@/components/ui/shared/button';
 import MapSection from '@/components/ui/shared/MapSection';
 import { TypeEvent } from '@/types';
 import { Calendar, Timer } from 'lucide-react';
 import Image from 'next/image';
-
-
-// // Import Map component dynamically to avoid SSR issues
-// const Map = dynamic(() => import('@/components/map'), { ssr: false });
-
-// const parishes = [
-//     {
-//         id: 1,
-//         name: "Cathédrale Notre-Dame de l'Assomption",
-//         address: '220 St George St, Moncton, NB E1C 1V8',
-//         phone: '+1 506-857-4223',
-//         email: 'cathedrale@diocesemoncton.ca',
-//         website: 'https://www.cathedralemoncton.ca',
-//         location: { lat: 46.0878, lng: -64.7782 }
-//     }
-// ];
 
 
 export default async function Page(props: {
@@ -32,8 +18,36 @@ export default async function Page(props: {
 
     return (
         <>
-            <div className='px-5 md:px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
-                <div className="flex justify-between ">
+            <div className='flex justify-between items-center border-y border-y-gray-100 '>
+                <div className="container max-margin py-3 flex justify-between items-center ">
+                    <Breadcrumbs
+                        breadcrumbs={[
+                            { label: 'Accueil', href: '/' },
+                            {
+                                label: 'Evenements',
+                                href: '/evenements',
+                            },
+                            {
+                                label: event?.titre_fr ?? "",
+                                href: '',
+                                active: true,
+                            },
+                        ]}
+                    />
+                    <div className='space-x-2'>
+                        <Button
+                            size={'sm'}
+                            variant="outline"
+                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                        >Précédent
+                        </Button>
+                        <Button
+                            size={'sm'}
+                            variant="outline"
+                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                        >Suivant
+                        </Button>
+                    </div>
                 </div>
             </div>
             <section className="container  max-margin py-0">

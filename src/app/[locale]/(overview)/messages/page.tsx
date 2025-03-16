@@ -6,7 +6,19 @@ import Image from 'next/image'
 import { Suspense } from 'react'
 import Messages from './messages'
 
-export default function Page() {
+export default async function Page(
+    props: {
+        searchParams?: Promise<{
+            query?: string;
+            page?: number;
+        }>
+    }
+) {
+
+    const searchParams = await props.searchParams;
+    const query = searchParams?.query || '';
+    const currentPage = searchParams?.page || 1;
+
     return (
         <main>
             {/* Hero section */}
@@ -59,16 +71,11 @@ export default function Page() {
                 </div>
                 <div className='my-8 border-b border-b-[#E5E5E5]' />
 
-                <Suspense fallback={ <MessagesSkeleton items={9} /> }>
-                    <Messages />
+                <Suspense fallback={<MessagesSkeleton items={9} />}>
+                    <Messages currentPage={currentPage} />
                 </Suspense>
 
-                {/* Pagination */}
-                <div className='flex justify-center mt-12'>
-                    <div className='flex gap-3'>
-                        <div className='w-40 h-8 rounded-md bg-gray-100'></div>
-                    </div>
-                </div>
+                
             </section>
             {/* Action de grace */}
             <ActionGrace />

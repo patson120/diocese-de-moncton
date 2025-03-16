@@ -12,8 +12,17 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home(props: {
+  searchParams?: Promise<{
+    query?: string;
+    page?: number;
+  }>
+}) {
   // const t = useTranslations("Index") 
+
+  const searchParams = await props.searchParams;
+  const query = searchParams?.query || '';
+  const currentPage = searchParams?.page || 1;
   return (
     <main className="bg-white">
       <HeroSection />
@@ -80,14 +89,14 @@ export default function Home() {
           <RecentEvents />
         </Suspense>
 
-        <Link href='/evenements' className="block md:hidden mt-5" >
+        <Link id="evenements" href='/evenements' className="block md:hidden mt-5" >
           <Button className="w-full md:py-6 text-sm md:text-base lg:text-xl">
             Voir tous les évènements
             <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
           </Button>
         </Link>
 
-        <ParoisseSection />
+        <ParoisseSection query={query} />
       </div>
 
       <Suspense fallback={ <MessageArchevequeSkeleton />}>
