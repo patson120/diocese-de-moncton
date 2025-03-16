@@ -1,12 +1,11 @@
 "use client"
 
-import { MapPin, Search } from 'lucide-react'
-import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Button } from './button'
-import { useDebouncedCallback } from 'use-debounce'
-import { useSearchParams } from 'next/navigation'
 import { usePathname, useRouter } from '@/i18n/routing'
-import { getLocationOrigin } from 'next/dist/shared/lib/utils'
+import { MapPin, Search } from 'lucide-react'
+import { useSearchParams } from 'next/navigation'
+import { ChangeEvent, useEffect, useState } from 'react'
+import { useDebouncedCallback } from 'use-debounce'
+import { Button } from './button'
 
 export default function SearchParoisses() {
 

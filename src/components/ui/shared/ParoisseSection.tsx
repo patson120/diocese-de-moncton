@@ -9,6 +9,7 @@ import { ParoisseItemSkeleton } from './skeletons'
 export default async function ParoisseSection({ query}: { query: string}) {
     const response = await fetchParoisses(`?paginate=4&nom=${query}`)
     const paroisses: Paroisse[] = response.data
+
     
     return (
         <div className="vertical-margin" >

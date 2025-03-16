@@ -7,6 +7,7 @@ import { TypeActualite } from '@/types'
 import { Suspense } from 'react'
 import ActualiteDetail from './ActualiteDetail'
 import RelativesActualite from './RelativesActualite'
+import Buttons from './Buttons'
 
 export default async function Page(
   props: {
@@ -18,9 +19,12 @@ export default async function Page(
   // const searchParams = await props.searchParams;
   // const query = searchParams?.query || '';
   // const currentPage = searchParams?.page || 1;
-  
-  
-  const actualite: TypeActualite = await fetchActualites(`/${actualiteId}`) 
+
+
+  const actualite: TypeActualite = await fetchActualites(`/${actualiteId}`)
+  const response = await fetchActualites(`?paginate=4&page=1&categorie_id=${actualite.categorie_id}`)
+  const actualites = response.data
+  const total = response.total
   return (
     <>
       <div className='flex justify-between items-center border-y border-y-gray-100 '>
@@ -39,20 +43,7 @@ export default async function Page(
               },
             ]}
           />
-          <div className='space-x-2'>
-            <Button
-              size={'sm'}
-              variant="outline"
-              className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-            >Article précédent
-            </Button>
-            <Button
-              size={'sm'}
-              variant="outline"
-              className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-            >Article suivant
-            </Button>
-          </div>
+         <Buttons actualites={actualites} actualiteId={+actualiteId} />
         </div>
       </div>
       <section className='md:container md:max-margin py-0' >
@@ -61,7 +52,7 @@ export default async function Page(
             <ActualiteDetail actualite={actualite} />
           </Suspense>
           <Suspense fallback={<RelativesActualitesSkeleton />} >
-            <RelativesActualite categorie_id={actualite.categorie_id} />
+            <RelativesActualite actualites={actualites} />
           </Suspense>
         </div>
       </section>

@@ -8,6 +8,7 @@ import Paroisses from './paroisses'
 import { Paroisse } from '@/types'
 import { fetchParoisses } from '@/_lib/data'
 import MapSection from '@/components/ui/shared/MapSection'
+import Filter from './Filter'
 
 
 export default async function Page() {
@@ -46,27 +47,10 @@ export default async function Page() {
                         </Suspense>
                     </div>
                     <div className='h-[50vh] md:h-auto col-span-2 bg-gray-100 overflow-hidden'>
-                        
                         <MapSection  paroisses={paroisses.slice(0, 4)} />
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
-
-const Filter = () => {
-    return (
-        <div className='flex flex-wrap items-center gap-2 !text-nowrap text-[10px]'>
-            <div className='flex items-center gap-[6px]'>
-                <SlidersHorizontalIcon className="h-4 w-4 text-gray-600" />
-                <label className='font-bold xl:text-sm whitespace-nowrap flex' htmlFor="filter">
-                    Filtrer <span className='hidden md:block ml-1'>les résultats</span>
-                </label>
-            </div>
-            <label className='body-2 px-2 py-1 font-bold rounded-xl bg-[#1D0104] text-white cursor-pointer' htmlFor="tous">Tous</label>
-            <label className='body-2 px-2 py-1 rounded-xl border border-gray-100 cursor-pointer' htmlFor="catechese">En activité</label>
-            <label className='body-2 px-2 py-1 rounded-xl border border-gray-100 cursor-pointer' htmlFor="diocese">Fermées</label>
-        </div>
     )
 }

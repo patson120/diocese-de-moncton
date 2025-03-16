@@ -5,7 +5,6 @@ import Pagination from "@/components/ui/shared/pagination"
 import { Link } from "@/i18n/routing"
 import { TypeActualite } from "@/types"
 import Image from "next/image"
-import { act } from "react"
 
 
 export default async function Actualites({ currentPage, query }: { currentPage: number, query: string }) {
