@@ -1,8 +1,12 @@
 
-'use client'
 
+
+import { fetchArcheveques } from "@/_lib/data";
+import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
+import { Button } from "@/components/ui/shared/button";
 import { Link } from "@/i18n/routing";
+import { Archeveque } from "@/types";
 import Image from "next/image";
 
 const items = [
@@ -51,12 +55,37 @@ const items = [
 ]
 
 
-export default function Page() {
+export default async function Page() {
+    const archeveques: Archeveque[] = await fetchArcheveques();
 
     return (
         <>
-            <div className='px-5 md:px-10 py-2 h-12 bg-gray-20 border border-b-gray-200 bg-gray-100'>
-                <div className="flex justify-between ">
+            <div className='flex justify-between items-center border-y border-y-gray-100 '>
+                <div className="container max-margin py-4 flex justify-between ">
+                    <Breadcrumbs
+                        breadcrumbs={[
+                            { label: 'Accueil', href: '/' },
+                            {
+                                label: 'Archeveques',
+                                href: '/archeveques',
+                                active: true,
+                            },
+                        ]}
+                    />
+                    <div className='space-x-2'>
+                        <Button
+                            size={'sm'}
+                            variant="outline"
+                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                        >Evêque précédent
+                        </Button>
+                        <Button
+                            size={'sm'}
+                            variant="outline"
+                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                        >Evêque suivant
+                        </Button>
+                    </div>
                 </div>
             </div>
             <section className="md:container md:max-margin py-0">
@@ -74,7 +103,7 @@ export default function Page() {
                     <div className='container max-margin px-4 md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <small className='text-gray uppercase'>Archevêque de Moncton</small>
-                            <h1 className='heading-4 font-extrabold mb-4'>Son Excellence Monseigneur Guy Desrochers, C.Ss.R.</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{archeveques[0].name}</h1>
                             <div className="space-y-3 md:space-y-7 lg:space-y-10">
                                 <p className='body-2 text-gray'>Mgr Desrochers est né en 1956 dans le secteur de Hull à Gatineau (Québec). Après ses études secondaires, il est entré au collège Algonquin d’Ottawa où des études en beaux-arts et en art commercial l’ont préparé à travailler comme graphiste pendant sept ans au quotidien français d’Ottawa, Le Droit.</p>
                                 <p className='body-2 text-gray'>Sa vocation l’a ensuite conduit à la Congrégation du Très-Saint-Rédempteur (les Rédemptoristes) où il a été ordonné prêtre en 1989.</p>
@@ -92,12 +121,12 @@ export default function Page() {
                     <h2 className='heading-3 text-gray-900 mb-6'>Archevêques précédents</h2>
                     <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-0 lg:pb-8 lg:space-x-6 grid gap-3 md:gap-6 lg:gap-0 grid-cols-2'>
                         {
-                            items.map(item => (
+                            archeveques.slice(1,).map((item: Archeveque) => (
                                 <div key={item.id} className='space-y-3'>
                                     <div className='w-full lg:w-[240px] h-[240px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
                                         <Image
                                             alt="Célébration de baptême"
-                                            src={item.image}
+                                            src="/assets/img/archeveque-1.png"
                                             fill
                                             style={{
                                                 objectFit: 'cover',
@@ -106,8 +135,9 @@ export default function Page() {
                                             }}
                                         />
                                     </div>
-                                    <h1 className='body-2 font-bold'>{item.title}</h1>
-                                    <p className='body-2 text-gray'>{item.description}</p>
+                                    <h1 className='body-2 font-bold'>{item.name}</h1>
+                                    {/* <p className='body-2 text-gray'>{item.description}</p> */}
+                                    <p className='body-2 text-gray line-clamp-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cum?</p>
                                     <div className="">
                                         <Link href="" className="body-3 font-semibold underline">
                                             Voir biographie
