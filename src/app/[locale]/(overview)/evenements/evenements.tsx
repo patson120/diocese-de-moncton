@@ -1,4 +1,5 @@
 import { fetchEvents } from "@/_lib/data";
+import { formatDateToLocal } from "@/_lib/utils";
 import EventItem from "@/components/ui/home/event-item";
 import Pagination from "@/components/ui/shared/pagination";
 import { shimmer } from "@/components/ui/shared/skeletons";
@@ -14,7 +15,7 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
 
     if (!events) {
         return (
-            <div>
+            <div className="h-44 mt-10 rounded-lg border-2 border-gray-400 border-dashed border-spacing-4  flex justify-center items-center">
                 <h1 className="text-center text-gray-400">Pas de données !</h1>
             </div>
         )
@@ -22,11 +23,16 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
 
     return (
         <>
-            <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>Mois de septembre</h3>
             <div className='flex flex-col gap-4'>
                 {
                     events.map((item, index) => (
                         <div key={index}>
+                            {
+                                (true) &&
+                                <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>
+                                    Mois de {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR',  'long').split(" ")[1]}
+                                </h3>
+                            }
                             <Link href="/evenements/1" className="hidden md:block">
                                 <EventItem data={item} row />
                             </Link>
