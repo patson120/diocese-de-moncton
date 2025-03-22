@@ -7,7 +7,6 @@ import { Message } from "@/types";
 export default async function MessageArcheveque() {
     const response = await fetchMessages(`?paginate=1`)
     const message: Message = response.data[0] ;
-console.log(message);
 
     return (
         <section className='vertical-margin bg-yellow100 text-[#1D0104]'>

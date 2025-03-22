@@ -74,8 +74,6 @@ export default async function Page(
                 <Suspense fallback={<MessagesSkeleton items={9} />}>
                     <Messages currentPage={currentPage} />
                 </Suspense>
-
-                
             </section>
             {/* Action de grace */}
             <ActionGrace />

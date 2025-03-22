@@ -35,14 +35,15 @@ export default function SearchParoisses() {
                         setUserLatitude(position.coords.latitude);
                         setUserLongitude(position.coords.longitude);
                         setPositionError(null);
+
+                        const params = new URLSearchParams(searchParams)
+                        params.set('gps', `${position.coords.latitude};${position.coords.longitude}`)
+                        replace(`${pathname}?${params.toString()}#evenements`)
                     }
                     setIsLoading(false)
                 },
                 error =>{
-                    isActive && setPositionError(error.message)
-                    console.log({error});
-                    
-                    },
+                    isActive && setPositionError(error.message)},
                 { enableHighAccuracy: true, timeout: 5*60*60, maximumAge: 10000 }
             );
         }

@@ -15,6 +15,7 @@ import { Suspense } from "react";
 export default async function Home(props: {
   searchParams?: Promise<{
     query?: string;
+    gps?: string;
     page?: number;
   }>
 }) {
@@ -22,7 +23,8 @@ export default async function Home(props: {
 
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
-  const currentPage = searchParams?.page || 1;
+  const gps = searchParams?.gps || '';
+  
   return (
     <main className="bg-white">
       <HeroSection />
@@ -96,7 +98,7 @@ export default async function Home(props: {
           </Button>
         </Link>
 
-        <ParoisseSection query={query} />
+        <ParoisseSection query={query} gps={gps} />
       </div>
 
       <Suspense fallback={ <MessageArchevequeSkeleton />}>

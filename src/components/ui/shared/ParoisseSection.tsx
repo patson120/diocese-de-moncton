@@ -6,10 +6,9 @@ import MapSection from './MapSection'
 import SearchParoisses from './SearchParoisses'
 import { ParoisseItemSkeleton } from './skeletons'
 
-export default async function ParoisseSection({ query}: { query: string}) {
-    const response = await fetchParoisses(`?paginate=4&nom=${query}`)
+export default async function ParoisseSection({ query, gps}: { query: string, gps:string}) {
+    const response = await fetchParoisses(`?paginate=4&nom=${query}&gps=${gps}`)
     const paroisses: Paroisse[] = response.data
-
     
     return (
         <div className="vertical-margin" >

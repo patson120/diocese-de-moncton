@@ -34,6 +34,10 @@ export default function SearchComp() {
                     setUserLatitude(position.coords.latitude);
                     setUserLongitude(position.coords.longitude);
                     setPositionError(null);
+
+                    const params = new URLSearchParams(searchParams)
+                    params.set('gps', `${position.coords.latitude};${position.coords.longitude}`)
+                    replace(`${pathname}?${params.toString()}`)
                 }
                 setIsLoading(false)
             },

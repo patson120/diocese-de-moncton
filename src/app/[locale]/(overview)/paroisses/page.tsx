@@ -12,14 +12,16 @@ import SearchComp from './SearchComp'
 export default async function Page(props: {
     searchParams?: Promise<{
         query?: string;
+        gps?: string;
         page?: number;
     }>
 }) {
     const searchParams = await props.searchParams;
     const query = searchParams?.query || '';
+    const gps = searchParams?.gps || '';
 
     let paroisses: Paroisse[] = []
-    paroisses = await fetchParoisses(`?nom=${query}`)
+    paroisses = await fetchParoisses(`?nom=${query}&gps=${gps}`)
 
     return (
         <section className='container max-margin vertical-margin pt-5 mt-0'>
