@@ -11,8 +11,8 @@ const MessageComp = ({ message }: { message: Message }) => {
                     <span className='body-3'>Publié le {formatDateToLocal((new Date(message.created_at)).toISOString())}</span>
                 </div>
             </div>
-            <h4 className='body-1 font-bold text-black line-clamp-2'>{message.message_fr}</h4>
-            <p className='body-2 line-clamp-2 text-[#575757]'>{message.message}</p>
+            <h4 className='body-1 font-bold text-black line-clamp-2'>{message.titre_fr}</h4>
+            <p className='body-2 line-clamp-2 text-[#575757]'>{message.message_fr}</p>
         </div>
     )
 }

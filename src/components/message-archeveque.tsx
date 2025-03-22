@@ -5,8 +5,9 @@ import { Button } from "./ui/shared/button";
 import { Message } from "@/types";
 
 export default async function MessageArcheveque() {
-    const response = await fetchMessages(`?paginate=8`)
+    const response = await fetchMessages(`?paginate=1`)
     const message: Message = response.data[0] ;
+console.log(message);
 
     return (
         <section className='vertical-margin bg-yellow100 text-[#1D0104]'>
@@ -15,7 +16,7 @@ export default async function MessageArcheveque() {
                     <div className="space-y-1 lg:space-y-2">
                         <span className='heading-3 font-extrabold '>Message de l&lsquo;Archevêque</span>
                         {/* <h1 className='heading-5'>“ Décret de suppression de la paroisse Saint-Timothée de Shemogue ”</h1> */}
-                        <h1 className='heading-5'>{message.message_fr}</h1>
+                        <h1 className='heading-5'>{message.titre_fr}</h1>
                     </div>
                     {/* <p className='body-2 leading-[25.9px]'>A tous ceux et celles qui liront les présentes, Graces et bénédictions dans le Seigneur.<br /> <br />
                         CONSIDERANT que le code de droit canonique donne à l’évêque diocésain le pouvoir d’ériger, supprimer ou de modifier les paroisses, après avoir entendu le conseil presbtéral et ce conformément au canon 515<br /> <br />

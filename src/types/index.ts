@@ -120,6 +120,8 @@ export type TypeActualite = {
 
 export type Message = {
     id: number;
+    titre_fr: string;
+    titre_en: string,
     message_fr: string;
     message_en: string,
     archeveque_id: number;
