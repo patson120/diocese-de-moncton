@@ -21,7 +21,7 @@ export default function SearchBar({ placeholder }: { placeholder: string }) {
         else {
             params.delete('query')
         }
-        replace(`${pathname}?${params.toString()}`)
+        replace(`${pathname}?${params.toString()}#actualite-une`)
     }, 800)
 
     return (

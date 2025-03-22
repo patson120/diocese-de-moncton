@@ -6,7 +6,9 @@ import { Message } from '@/types'
 import React from 'react'
 
 export default async function Messages({ currentPage }: { currentPage: number }) {
-    const messages: Message[] = await fetchMessages(`?paginate=9&page=${currentPage}`)
+    const response = await fetchMessages(`?paginate=9&page=${currentPage}`)
+    const messages: Message[] = response.data
+    const totalPages = response.last_page
     return (
         <>
             <div className="grid gap-6 md:gap-[34px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -20,7 +22,7 @@ export default async function Messages({ currentPage }: { currentPage: number })
             </div>
             {/* Pagination */}
             <div className="mt-20 flex w-full justify-end">
-                <Pagination totalPages={3} />
+                <Pagination totalPages={totalPages} />
             </div>
         </>
     )

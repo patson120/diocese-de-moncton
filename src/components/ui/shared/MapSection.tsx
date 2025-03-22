@@ -7,11 +7,12 @@ import React, { useState } from 'react'
 const Map = dynamic(() => import('@/components/map'), { ssr: false });
 
 export default function MapSection({paroisses}: {paroisses: Paroisse[]}) {
-    const [selectedParish, setSelectedParish] = useState<any>(null);
+    const [selectedParish, setSelectedParish] = useState<Paroisse | null >(paroisses[0]);
+
     return (
         <Map
             parishes={paroisses}
-            selectedParish={selectedParish}
+            selectedParish={selectedParish!}
             onParishSelect={setSelectedParish}
         />
     )

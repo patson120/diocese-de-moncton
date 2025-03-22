@@ -7,7 +7,7 @@ export default async function Paroisses( {paroisses}: {paroisses: Paroisse[]}) {
         <>
             {
                 paroisses.map((item, index) => (
-                    <Link key={index} href={`/paroisses/${item.id}`}>
+                    <Link key={`${index}`} href={`/paroisses/${item.id}`}>
                         <ParoisseItem data={item} />
                     </Link>
                 ))

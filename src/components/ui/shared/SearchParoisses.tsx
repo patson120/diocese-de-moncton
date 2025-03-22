@@ -9,57 +9,57 @@ import { Button } from './button'
 
 export default function SearchParoisses() {
 
-    const searchParams = useSearchParams()
-    const pathname = usePathname()
-    const { replace } = useRouter()
+        const searchParams = useSearchParams()
+        const pathname = usePathname()
+        const { replace } = useRouter()
 
-    const handleSearch = useDebouncedCallback((event: ChangeEvent<HTMLInputElement>) => {
-        const value = event.target.value
-        const params = new URLSearchParams(searchParams)
-        if (value) { params.set('query', value) }
-        else { params.delete('query') }
-        replace(`${pathname}?${params.toString()}#evenements`)
-    }, 800)
+        const handleSearch = useDebouncedCallback((event: ChangeEvent<HTMLInputElement>) => {
+            const value = event.target.value
+            const params = new URLSearchParams(searchParams)
+            if (value) { params.set('query', value) }
+            else { params.delete('query') }
+            replace(`${pathname}?${params.toString()}#evenements`)
+        }, 800)
 
-    const [isActive, setIsActive] = useState(false)
-    const [userLatitude, setUserLatitude] = useState<number>()
-    const [userLongitude, setUserLongitude] = useState<number>()
-    const [positionError, setPositionError] = useState<any>()
-    const [isLoading, setIsLoading] = useState(false)
+        const [isActive, setIsActive] = useState(false)
+        const [userLatitude, setUserLatitude] = useState<number>()
+        const [userLongitude, setUserLongitude] = useState<number>()
+        const [positionError, setPositionError] = useState<any>()
+        const [isLoading, setIsLoading] = useState(false)
 
 
-    const fetchGeoPosition = () => {
-        navigator.geolocation.getCurrentPosition(
-            position => {
-                if (isActive) {
-                    setUserLatitude(position.coords.latitude);
-                    setUserLongitude(position.coords.longitude);
-                    setPositionError(null);
-                }
-                setIsLoading(false)
-            },
-            error =>{
-                 isActive && setPositionError(error.message)
-                console.log({error});
-                
+        const fetchGeoPosition = () => {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    if (isActive) {
+                        setUserLatitude(position.coords.latitude);
+                        setUserLongitude(position.coords.longitude);
+                        setPositionError(null);
+                    }
+                    setIsLoading(false)
                 },
-            { enableHighAccuracy: true, timeout: 5*60*60, maximumAge: 10000 }
-        );
-    }
-
-
-    // Récupération de la position géographique de l'utilisateur
-    useEffect(() => {
-        if (isActive) {
-            setIsLoading(true)
-            fetchGeoPosition()
+                error =>{
+                    isActive && setPositionError(error.message)
+                    console.log({error});
+                    
+                    },
+                { enableHighAccuracy: true, timeout: 5*60*60, maximumAge: 10000 }
+            );
         }
-        return () => setIsActive(false)
-    }, [isActive])
 
-    const getLocation = () => {
-        setIsActive(true)
-    }
+
+        // Récupération de la position géographique de l'utilisateur
+        useEffect(() => {
+            if (isActive) {
+                setIsLoading(true)
+                fetchGeoPosition()
+            }
+            return () => setIsActive(false)
+        }, [isActive])
+
+        const getLocation = () => {
+            setIsActive(true)
+        }
     return (
         <div className='w-full absolute top-4 left-0 right-0'>
             <div className="px-5 w-[95%] flex gap-2">

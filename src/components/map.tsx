@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { Loader } from '@googlemaps/js-api-loader';
 import { Paroisse } from '@/types';
+import { Loader } from '@googlemaps/js-api-loader';
+import { useEffect, useRef, useState } from 'react';
 
 
 interface MapProps {
@@ -15,8 +15,14 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
   const mapRef = useRef<HTMLDivElement>(null);
   const googleMapRef = useRef<google.maps.Map | null>(null);
   const markersRef = useRef<{ [key: number]: google.maps.Marker }>({});
+  let map: google.maps.Map;
+
+  const [first, setfirst] = useState<Paroisse>(selectedParish!)
+
 
   useEffect(() => {
+    setfirst(prev => ({ ...prev, ...parishes[0] }))
+
     const loader = new Loader({
       apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
       version: 'weekly',
@@ -24,8 +30,8 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
     loader.load().then(() => {
       if (mapRef.current && !googleMapRef.current) {
-        const map = new google.maps.Map(mapRef.current, {
-          center: { lat: parseFloat(parishes[0].gps.split(";")[0]), lng: parseFloat(parishes[0].gps.split(";")[1])},
+        map = new google.maps.Map(mapRef.current, {
+          center: { lat: parseFloat(first!.gps.split(";")[0]), lng: parseFloat(first!.gps.split(";")[1]) },
           zoom: 12,
           styles: [
             {
@@ -58,17 +64,43 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
         });
       }
     });
-  }, [parishes, onParishSelect]);
+
+
+
+  }, [parishes, onParishSelect, first?.gps]);
+
+  // useEffect(() => {
+  //   if (selectedParish && googleMapRef.current) {
+  //     const marker = markersRef.current[selectedParish.id];
+  //     if (marker) {
+  //       googleMapRef.current.panTo(marker.getPosition()!);
+  //       googleMapRef.current.setZoom(15);
+  //     }
+  //   }
+  // }, [selectedParish]);
 
   useEffect(() => {
-    if (selectedParish && googleMapRef.current) {
-      const marker = markersRef.current[selectedParish.id];
-      if (marker) {
+
+
+    if (first && googleMapRef.current) {
+      let marker = markersRef.current[first.id];
+      if (!marker) {
+        marker = new google.maps.Marker({
+          // position: { lat: parseFloat(first.gps.split(";")[0]), lng: parseFloat(first.gps.split(";")[1]) },
+          position: { lat: 0.667033, lng: 37.711689 },
+          map,
+          title: first.nom,
+          animation: google.maps.Animation.DROP,
+        });
+      }
+      else {
         googleMapRef.current.panTo(marker.getPosition()!);
         googleMapRef.current.setZoom(15);
       }
     }
-  }, [selectedParish]);
+    // console.info(first?.nom, first?.gps);
+
+  }, [first?.gps]);
 
   return <div ref={mapRef} className="h-full w-full" />;
 }

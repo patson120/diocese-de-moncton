@@ -5,8 +5,8 @@ import { Button } from "./ui/shared/button";
 import { Message } from "@/types";
 
 export default async function MessageArcheveque() {
-    const data: Message[] = await fetchMessages(`?paginate=8`)
-    const message = data[0];
+    const response = await fetchMessages(`?paginate=8`)
+    const message: Message = response.data[0] ;
 
     return (
         <section className='vertical-margin bg-yellow100 text-[#1D0104]'>
@@ -21,7 +21,7 @@ export default async function MessageArcheveque() {
                         CONSIDERANT que le code de droit canonique donne à l’évêque diocésain le pouvoir d’ériger, supprimer ou de modifier les paroisses, après avoir entendu le conseil presbtéral et ce conformément au canon 515<br /> <br />
                         CONSIDERANT que la paroisse saint-Timothée de Shemogue a été érigée canoniquement... </p> */}
 
-                    <p className='body-2 leading-[25.9px]'>{message.message}</p>
+                    <p className='body-2 leading-[25.9px]'>{message.message_fr}</p>
 
                     <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
                         <Link href={`/messages/${message.id}`}>
