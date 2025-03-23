@@ -23,7 +23,7 @@ export default async function Page(props: {
         <>
             <div className='flex justify-between items-center border-y border-y-gray-100 '>
                 <div className="container max-margin py-3 flex justify-between items-center ">
-                    <Breadcrumbs 
+                    <Breadcrumbs
                         breadcrumbs={[
                             { label: 'Accueil', href: '/' },
                             {
@@ -81,26 +81,33 @@ export default async function Page(props: {
                         <div className="flex flex-wrap gap-4 my-5 py-3 border-y border-y-[#E5E5E5]">
                             <div className="flex flex-nowrap">
                                 <span className="text-gray-500 text-sm mr-2">Etabli en</span>
-                                <span className="text-sm font-extrabold">1871</span>
+                                <span className="text-sm font-extrabold">{paroisse.etabli_le}</span>
                             </div>
                             <div className="flex flex-nowrap">
                                 <span className="text-gray-500 text-sm mr-2">Ordonné en</span>
-                                <span className="text-sm font-extrabold">1871</span>
+                                <span className="text-sm font-extrabold">{paroisse.ordonne_le}</span>
                             </div>
                             <div className="flex flex-nowrap">
                                 <span className="text-gray-500 text-sm mr-2">Premier curé</span>
-                                <span className="text-sm font-extrabold">1897</span>
+                                <span className="text-sm font-extrabold">{paroisse.premier_cure}</span>
                             </div>
                         </div>
                         <div className="">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Heures des messes</h1>
                             <div className="flex flex-col gap-y-3">
-                                <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
-                                    <p className="text-gray">Mardi</p>
-                                    <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">12h:00</p>
-                                    <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">15h:10</p>
-                                </div>
-                                <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
+                                {
+                                    paroisse.horaireparoisses.map((horaire) => (
+                                        <div key={`${horaire.id}-${paroisse.id}`} className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
+                                            <p className="text-gray">{horaire.jour}</p>
+                                            {
+                                                horaire.heure.split(';').map((heure, i) => (
+                                                    <p key={`${i}-${heure}`} className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">{heure}</p>
+                                                ))
+                                            }
+                                        </div>
+                                    ))
+                                }
+                                {/* <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
                                     <p className="text-gray">Mercredi</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">09h:00</p>
                                 </div>
@@ -109,7 +116,7 @@ export default async function Page(props: {
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">08h:00</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">12h:00</p>
                                     <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">17h:00</p>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

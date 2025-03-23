@@ -89,7 +89,11 @@ export type Paroisse = {
     created_at: string;
     updated_at: string;
     galerie: any[];
-    type: TypeParoisse
+    type: TypeParoisse;
+    horaireparoisses: Horaire[];
+    etabli_le: number | null,
+    ordonne_le: number | null,
+    premier_cure: number | null,
 }
 
 export type TypeParoisse = {
@@ -110,11 +114,11 @@ export type TypeActualite = {
     is_brouillon: number;
     is_planifier: number;
     date_planification: any;
-    description_fr: string,
-    description_en: string,
-    created_at: string,
-    updated_at: string,
-    categorie: Categorie,
+    description_fr: string;
+    description_en: string;
+    created_at: string;
+    updated_at: string;
+    categorie: Categorie;
     motcles: string[]
 }
 
@@ -136,6 +140,15 @@ export type Archeveque = {
     id: number;
     name: string;
     photo: string;
+    created_at: string;
+    updated_at: string;
+}
+
+export type Horaire = {
+    id: number;
+    paroisse_id: number;
+    jour: string;
+    heure: string;
     created_at: string;
     updated_at: string;
 }

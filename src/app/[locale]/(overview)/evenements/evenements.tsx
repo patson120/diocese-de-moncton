@@ -10,7 +10,6 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
     
     let events: TypeEvent[] = []
     const params = query ? `?paginate=8&page=${currentPage}&titre_fr=${query}` : `?paginate=8&page=${currentPage}`
-
     const response = await fetchEvents(params)
     events = response.data
     const totalPages = response.last_page    
