@@ -2,16 +2,18 @@ import { fetchEvents } from "@/_lib/data";
 import { formatDateToLocal } from "@/_lib/utils";
 import EventItem from "@/components/ui/home/event-item";
 import Pagination from "@/components/ui/shared/pagination";
-import { shimmer } from "@/components/ui/shared/skeletons";
 import { Link } from "@/i18n/routing";
 import { TypeEvent } from "@/types";
 
 
 export default async function Evenements({ currentPage, query }: { currentPage: number, query: string }) {
+    
+    let events: TypeEvent[] = []
+    const params = query ? `?paginate=8&page=${currentPage}&titre_fr=${query}` : `?paginate=8&page=${currentPage}`
 
-    const response = await fetchEvents(`?paginate=8&page=${currentPage}&titre_fr=${query}`)
-    const events: TypeEvent[] = response.data
-    const totalPages = response.last_page
+    const response = await fetchEvents(params)
+    events = response.data
+    const totalPages = response.last_page    
 
     if (!events) {
         return (
@@ -21,15 +23,23 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
         )
     }
 
+    const verifyDate = (item: TypeEvent,  index: number): boolean =>{
+        if(index < 0) return true
+        return (
+            formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR',  'long').split(" ")[1] !==
+            formatDateToLocal((new Date(events[index].date_event)).toISOString(), 'fr-FR',  'long').split(" ")[1]
+        )
+    }
+
     return (
         <>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 mt-6'>
                 {
                     events.map((item, index) => (
                         <div key={index}>
                             {
-                                (true) &&
-                                <h3 className='text-lg text-center font-extrabold mt-8 mb-4 border border-gray-200 rounded-md py-3'>
+                                (verifyDate(item, index-1)) &&
+                                <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>
                                     Mois de {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR',  'long').split(" ")[1]}
                                 </h3>
                             }
@@ -43,16 +53,7 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
                     ))
                 }
             </div>
-
-            <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>Mois d'octobre</h3>
-            <div className='flex flex-col gap-4'>
-                {
-                    [1, 2].map((item) => (
-                        <div key={item} className={`${shimmer} relative overflow-hidden shadow-sm h-16 border border-gray-100 bg-gray-200 rounded-md`}></div>
-                    ))
-                }
-            </div>
-
+            
             {/* Pagination */}
             <div className="mt-20 flex w-full justify-center">
                 <Pagination totalPages={totalPages} />

@@ -18,6 +18,8 @@ export async function fetchActualites(params: string = "") {
 export async function fetchParoisses(params: string = "") {
     try {
         let url = `${BASE_URL}/paroisses${params}`;
+        console.log(url);
+        
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
