@@ -7,7 +7,7 @@ import { SlidersHorizontalIcon } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-export default function Filter({categorie_id}: { categorie_id: number}) {
+export default function Filter({ data, categorie_id }: { data: Category[], categorie_id: number }) {
 
     const searchParams = useSearchParams()
     const pathname = usePathname()
@@ -21,14 +21,8 @@ export default function Filter({categorie_id}: { categorie_id: number}) {
         menu: "",
         created_at: "",
         updated_at: "",
-    }])
+    }, ...data ])
     const [seletedCategory, setSeletedCategory] = useState<Category>(categories[0])
-
-    const getCategories = async () => {
-        const response: Category[] = await fetchCategories()
-        if (categorie_id){ setSeletedCategory(response.find((cat) => cat.id === categorie_id)!)}
-        setCategories([categories[0],...response])
-    }
 
     const handleChangedCategory = (cat: Category) => {
         setSeletedCategory(cat)
@@ -36,8 +30,8 @@ export default function Filter({categorie_id}: { categorie_id: number}) {
     }
 
     useEffect(() => {
-        getCategories()
-    }, [])
+        if (categorie_id) { setSeletedCategory(data.find((cat) => cat.id === categorie_id)!) }
+    }, [categorie_id])
 
     const handleFilter = (cat: Category) => {
         const params = new URLSearchParams(searchParams)
@@ -48,7 +42,7 @@ export default function Filter({categorie_id}: { categorie_id: number}) {
         else {
             params.delete('categorie_id')
         }
-        
+
         replace(`${pathname}?${params.toString()}#actualite-une`)
     }
 

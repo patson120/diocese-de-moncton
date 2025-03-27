@@ -5,6 +5,8 @@ import { Suspense } from 'react'
 import Actualites from './actualites'
 import Filter from './Filter'
 import SearchBar from './SearchBar'
+import { Category } from '@/types'
+import { fetchCategories } from '@/_lib/data'
 
 export default async function Page(props: {
   searchParams?: Promise<{
@@ -17,6 +19,9 @@ export default async function Page(props: {
   const query = searchParams?.query || '';
   const categorie_id = searchParams?.categorie_id || '';
   const currentPage = searchParams?.page || 1;
+
+  // Fetch categories
+  const categories: Category[] = await fetchCategories()
   return (
     <main>
       {/* Hero section */}
@@ -44,7 +49,7 @@ export default async function Page(props: {
 
         {/* filter */}
         <div className='max-w-3xl mx-auto'>
-          <Filter categorie_id={Number(categorie_id)} />
+          <Filter data={categories} categorie_id={Number(categorie_id)} />
         </div>
 
         <Suspense fallback={<div className='mt-16'>< ActualitesSkeleton items={8} /></div>}>
