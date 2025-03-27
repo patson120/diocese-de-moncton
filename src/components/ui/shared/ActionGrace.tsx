@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image'
 import React from 'react'
 import { Button } from './button'
@@ -26,7 +25,7 @@ const ActionGrace = () => {
                         </div>
                         <div className='w-full md:w-auto flex'>
                             <Link href="/faire-un-don">
-                                <Button onClick={() => { }} className="md:py-2 body-2 min-w-full">
+                                <Button className="md:py-2 body-2 min-w-full">
                                     Faire un don maintenant
                                 </Button>
                             </Link>

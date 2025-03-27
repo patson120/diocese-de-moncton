@@ -107,19 +107,8 @@ export default async function Page(props: {
                                         </div>
                                     ))
                                 }
-                                {/* <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
-                                    <p className="text-gray">Mercredi</p>
-                                    <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">09h:00</p>
-                                </div>
-                                <div className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
-                                    <p className="text-gray">Dimanche</p>
-                                    <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">08h:00</p>
-                                    <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">12h:00</p>
-                                    <p className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">17h:00</p>
-                                </div> */}
                             </div>
                         </div>
-
                         <div className="">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Secrétariat paroissial</h1>
                             <div className="space-y-2 mt-4 body-2">
@@ -137,7 +126,6 @@ export default async function Page(props: {
                                 </div>
                             </div>
                         </div>
-
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Sur la carte</h1>
                         {/* Map */}
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">

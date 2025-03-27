@@ -6,9 +6,13 @@ import { TypeActualite } from "@/types"
 import ImportantPost from "./ImportantPost"
 
 
-export default async function Actualites({ currentPage, query }: { currentPage: number, query: string }) {
+export default async function Actualites({ currentPage, query, categorie_id }: { currentPage: number, query: string, categorie_id: string }) {
 
-    const response = await fetchActualites(`?paginate=8&page=${currentPage}&intitule=${query}`)
+    let params = `?paginate=8&page=${currentPage}`
+    if (query) { params = `${params}&intitule=${query}`}
+    if (Number(categorie_id) > 0){ params = `${params}&categorie_id=${categorie_id}`}
+    
+    const response = await fetchActualites(params)
     const actualites: TypeActualite[] = response.data
     const totalPages = response.last_page
 

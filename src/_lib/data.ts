@@ -4,29 +4,27 @@ import { fetchAPI } from "@/_lib";
 
 export async function fetchActualites(params: string = "") {
     try {
-        let url = `${BASE_URL}/actualites${params}`;        
+        let url = `${BASE_URL}/actualites${params}`; 
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch revenue data.');
+        throw new Error('Failed to fetch actualites data.');
     }
 }
 
 export async function fetchParoisses(params: string = "") {
     try {
-        let url = `${BASE_URL}/paroisses${params}`;
-        console.log(url);
-        
+        let url = `${BASE_URL}/paroisses${params}`;        
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
 
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch revenue data.');
+        throw new Error('Failed to fetch paroisses data.');
     }
 }
 
@@ -39,7 +37,7 @@ export async function fetchEvents(params: string = "") {
 
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch revenue data.');
+        throw new Error('Failed to fetch evenements data.');
     }
 }
 
@@ -52,7 +50,7 @@ export async function fetchArcheveques(params: string = "") {
 
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch revenue data.');
+        throw new Error('Failed to fetch archeveques data.');
     }
 }
 
@@ -65,7 +63,7 @@ export async function fetchMessages(params: string = "") {
 
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch revenue data.');
+        throw new Error('Failed to fetch mot_archeve data.');
     }
 }
 
@@ -78,6 +76,32 @@ export async function fetchMouvements() {
 
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to fetch revenue data.');
+        throw new Error('Failed to fetch mouvements data.');
+    }
+}
+
+
+export async function fetchCategories() {
+    try {
+        let url = `${BASE_URL}/categories`;
+        let body = {}
+        const headers = {}
+        return await fetchAPI(url, 'GET', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch categories data.');
+    }
+}
+
+export async function createDon(body: any) {
+    try {
+        let url = `${BASE_URL}/don`;
+        const headers = {}
+        return await fetchAPI(url, 'POST', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to create don data.');
     }
 }

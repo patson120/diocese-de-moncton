@@ -10,39 +10,6 @@ export type MenuType = {
     link: string;
 }
 
-// export type ActualiteType = {
-//     category: string;
-//     title: string;
-//     date: string;
-//     image: string;
-//     description: string;
-// }
-
-export type ParoisseType = {
-    title: string;
-    adresse: string;
-    tel: string;
-    image: string;
-}
-
-export type EventType = {
-    jour: string;
-    heure: string;
-    mois: string;
-    lieu: string;
-    title: string;
-    type: string;
-}
-
-export type MessageType = {
-    title: string;
-    date: string;
-    description: string;
-}
-
-
-/////////////////////////////////////////////////////////////
-
 export type TypeEvent = {
     id: number;
     paroisse_id: number;
@@ -59,10 +26,10 @@ export type TypeEvent = {
     created_at: string;
     updated_at: string;
     paroisse: Paroisse,
-    categorie: Categorie
+    categorie: Category
 }
 
-export type Categorie = {
+export type Category = {
     id: number;
     parent_id: number;
     intitule_fr: string;
@@ -118,7 +85,7 @@ export type TypeActualite = {
     description_en: string;
     created_at: string;
     updated_at: string;
-    categorie: Categorie;
+    categorie: Category;
     motcles: string[]
 }
 

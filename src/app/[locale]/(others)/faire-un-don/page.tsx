@@ -1,7 +1,9 @@
 'use client'
 
+import { createDon } from '@/_lib/data';
 import { Button } from '@/components/ui/shared/button';
 import { useRouter } from '@/i18n/routing';
+import { Description } from '@radix-ui/react-dialog';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -21,6 +23,25 @@ export default function Page() {
     const [moyen, setMoyen] = useState<any>()
     const [choice, setChoice] = useState<any>()
     const [compte, setCompte] = useState<any>()
+
+    const handleSubmit = async () => {
+        console.log("Submit...");
+        
+        const data = {
+            nom: "Test",
+            email: "test.email@gmail.com",
+            telephone: "237670993737",
+            type_don: "espèce",
+            montant: 200,
+            description: "description",
+        }
+
+        // Call api method
+        const response = await createDon(data)
+
+        console.log(response);
+        
+    }   
 
     return (
         <>
@@ -288,7 +309,7 @@ export default function Page() {
                         {
                             (step === 4) && (
                                 <div className='w-full lg:w-2/3 mt-10 flex justify-between items-center'>
-                                    <Button onClick={() => { }} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
+                                    <Button onClick={handleSubmit} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
                                         Finaliser le paiement
                                     </Button>
                                 </div>

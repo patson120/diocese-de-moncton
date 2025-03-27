@@ -1,20 +1,21 @@
 
 import { ActualitesSkeleton } from '@/components/ui/shared/skeletons'
-import { SlidersHorizontalIcon } from "lucide-react"
 import Image from 'next/image'
 import { Suspense } from 'react'
 import Actualites from './actualites'
-import SearchBar from './SearchBar'
 import Filter from './Filter'
+import SearchBar from './SearchBar'
 
 export default async function Page(props: {
   searchParams?: Promise<{
     query?: string;
     page?: number;
+    categorie_id?: string;
   }>
 }) {
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
+  const categorie_id = searchParams?.categorie_id || '';
   const currentPage = searchParams?.page || 1;
   return (
     <main>
@@ -42,10 +43,12 @@ export default async function Page(props: {
       <section className='container max-margin py-0 pb-10 md:pb-20'>
 
         {/* filter */}
-        <Filter />
+        <div className='max-w-3xl mx-auto'>
+          <Filter categorie_id={Number(categorie_id)} />
+        </div>
 
         <Suspense fallback={<div className='mt-16'>< ActualitesSkeleton items={8} /></div>}>
-          <Actualites currentPage={currentPage} query={query} />
+          <Actualites currentPage={currentPage} query={query} categorie_id={categorie_id} />
         </Suspense>
 
       </section>
