@@ -83,6 +83,8 @@ export type TypeActualite = {
     date_planification: any;
     description_fr: string;
     description_en: string;
+    prevId: number | null,
+    nextId: number | null,
     created_at: string;
     updated_at: string;
     categorie: Category;

@@ -1,30 +1,21 @@
 
 import { fetchActualites } from '@/_lib/data'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
-import { Button } from '@/components/ui/shared/button'
 import { ActualiteDetailSkeleton, RelativesActualitesSkeleton } from '@/components/ui/shared/skeletons'
 import { TypeActualite } from '@/types'
 import { Suspense } from 'react'
 import ActualiteDetail from './ActualiteDetail'
-import RelativesActualite from './RelativesActualite'
 import Buttons from './Buttons'
+import RelativesActualite from './RelativesActualite'
 
 export default async function Page(
   props: {
     params: Promise<{ actualiteId: string }>,
-    // searchParams?: Promise<{ query?: string; page?: number }>
   }) {
   const { actualiteId } = await props.params;
-
-  // const searchParams = await props.searchParams;
-  // const query = searchParams?.query || '';
-  // const currentPage = searchParams?.page || 1;
-
-
   const actualite: TypeActualite = await fetchActualites(`/${actualiteId}`)
   const response = await fetchActualites(`?paginate=4&page=1&categorie_id=${actualite.categorie_id}`)
   const actualites = response.data
-  const total = response.total
   return (
     <>
       <div className='flex justify-between items-center border-y border-y-gray-100 '>
@@ -43,7 +34,7 @@ export default async function Page(
               },
             ]}
           />
-         <Buttons actualites={actualites} actualiteId={+actualiteId} />
+         <Buttons actualite={actualite} />
         </div>
       </div>
       <section className='md:container md:max-margin py-0' >
