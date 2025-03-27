@@ -49,7 +49,7 @@ export default async function Page(props: {
 
         {/* filter */}
         <div className='max-w-3xl mx-auto'>
-          <Filter data={categories} categorie_id={Number(categorie_id)} />
+          <Filter categories={categories} categorie_id={Number(categorie_id)} />
         </div>
 
         <Suspense fallback={<div className='mt-16'>< ActualitesSkeleton items={8} /></div>}>

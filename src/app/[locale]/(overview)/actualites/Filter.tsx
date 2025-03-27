@@ -7,13 +7,13 @@ import { SlidersHorizontalIcon } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
-export default function Filter({ data, categorie_id }: { data: Category[], categorie_id: number }) {
+export default function Filter({ categories, categorie_id }: { categories: Category[], categorie_id: number }) {
 
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const { replace } = useRouter()
 
-    const categories = [
+    categories = [
         {
             id: 0,
             parent_id: 0,
@@ -23,7 +23,7 @@ export default function Filter({ data, categorie_id }: { data: Category[], categ
             created_at: "",
             updated_at: "",
         },
-        ...data
+        ...categories
     ]
     const [seletedCategory, setSeletedCategory] = useState<Category>(categories[0])
 
@@ -33,7 +33,7 @@ export default function Filter({ data, categorie_id }: { data: Category[], categ
     }
 
     useEffect(() => {
-        if (categorie_id) { setSeletedCategory(data.find((cat) => cat.id === categorie_id)!) }
+        if (categorie_id) { setSeletedCategory(categories.find((cat) => cat.id === categorie_id)!) }
     }, [categorie_id])
 
     const handleFilter = (cat: Category) => {
