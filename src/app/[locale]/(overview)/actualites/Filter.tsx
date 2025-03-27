@@ -13,15 +13,18 @@ export default function Filter({ data, categorie_id }: { data: Category[], categ
     const pathname = usePathname()
     const { replace } = useRouter()
 
-    const [categories, setCategories] = useState<Category[]>([{
-        id: 0,
-        parent_id: 0,
-        intitule_fr: "Tous",
-        intitule_en: "All",
-        menu: "",
-        created_at: "",
-        updated_at: "",
-    }, ...data ])
+    const categories = [
+        {
+            id: 0,
+            parent_id: 0,
+            intitule_fr: "Tous",
+            intitule_en: "All",
+            menu: "",
+            created_at: "",
+            updated_at: "",
+        },
+        ...data
+    ]
     const [seletedCategory, setSeletedCategory] = useState<Category>(categories[0])
 
     const handleChangedCategory = (cat: Category) => {
