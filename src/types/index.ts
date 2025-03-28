@@ -18,8 +18,8 @@ export type TypeEvent = {
     titre_en: string;
     heure_event: string;
     date_event: string;
-    prevId: number;
-    nextId: number;  
+    prevId: number | null;
+    nextId: number | null;
     lieu: string;
     gps: string;
     contact: string;
@@ -85,8 +85,8 @@ export type TypeActualite = {
     date_planification: any;
     description_fr: string;
     description_en: string;
-    prevId: number | null,
-    nextId: number | null,
+    prevId: number | null;
+    nextId: number | null;
     created_at: string;
     updated_at: string;
     categorie: Category;
@@ -100,6 +100,8 @@ export type Message = {
     message_fr: string;
     message_en: string,
     archeveque_id: number;
+    prevId: number | null;
+    nextId: number | null;
     etat: number;
     created_at: string;
     updated_at: string;

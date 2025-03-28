@@ -59,9 +59,7 @@ export default async function Page(props: {
                         </div>
                         <div className='flex flex-wrap gap-3 items-center font-light text-xs my-4'>
                             <label htmlFor="type_evenement" className='body-2 font-bold w-full md:w-auto'>Type évènement</label>
-                            <p className='px-4 py-3 text-gray text-sm rounded-xl border border-gray-100'>Formation</p>
-                            <p className='px-4 py-3 text-gray text-sm rounded-xl border border-gray-100'>Célébration</p>
-                            <p className='px-4 py-3 text-gray text-sm rounded-xl border border-gray-100'>Communautaire</p>
+                            <p className='px-4 py-3 text-gray text-sm rounded-xl border border-gray-100'>{event.categorie.intitule_fr}</p>
                         </div>
                         <div className='my-4 border-b border-b-[#E5E5E5]' />
                         <div className='flex flex-col md:flex-row gap-8 mt-4'>

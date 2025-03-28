@@ -6,6 +6,7 @@ import MessageDetail from './MessageDetail'
 import RelativesMessages from './RelativesMessages'
 import { Message } from '@/types'
 import { fetchMessages } from '@/_lib/data'
+import Buttons from './Buttons'
 
 export default async function Page(props: {
     params: Promise<{ messageId: string }>,
@@ -32,20 +33,7 @@ export default async function Page(props: {
                             },
                         ]}
                     />
-                    <div className='space-x-2'>
-                        <Button
-                            size={'sm'}
-                            variant="outline"
-                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        >Message précédent
-                        </Button>
-                        <Button
-                            size={'sm'}
-                            variant="outline"
-                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        >Message suivant
-                        </Button>
-                    </div>
+                    <Buttons message={message} />
                 </div>
             </div>
             <section className='container max-margin py-0' >
