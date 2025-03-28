@@ -1,15 +1,19 @@
+import { fetchCategories } from "@/_lib/data";
 import { EventsSkeleton } from "@/components/ui/shared/skeletons";
-import { Search } from "lucide-react";
+import { Category } from "@/types";
 import Image from 'next/image';
 import { Suspense } from 'react';
 import Evenements from "./evenements";
 import { Filter } from "./Filter";
+import SearchBar from "./SearchBar";
 
 
-  
+
 export default async function Page(props: {
     searchParams?: Promise<{
         query?: string;
+        categorie_id?: string;
+        month?: number;
         page?: number;
     }>
 }) {
@@ -17,6 +21,9 @@ export default async function Page(props: {
     const searchParams = await props.searchParams;
     const query = searchParams?.query || '';
     const currentPage = searchParams?.page || 1;
+
+    // Fetch categories
+    const categories: Category[] = await fetchCategories(`?menu=event`)
     return (
         <main>
             {/* Hero section */}
@@ -99,34 +106,23 @@ export default async function Page(props: {
 
             <div className='container max-margin py-0 -translate-y-6'>
                 {/* Search bar */}
-                <SearchBar />
+                <SearchBar placeholder={"Rechercher un évènement"} />
             </div>
             <section className='container max-margin pt-0 pb-10'>
                 <div className='mt-2' />
                 <div className='lg:w-2/3 mx-auto flex flex-col justify-center'>
                     {/* filter */}
-                    <Filter />
+                    <Filter categories={categories} />
                     <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
-                        <Evenements currentPage={currentPage} query={query} />
+                        <Evenements
+                            currentPage={currentPage}
+                            query={query}
+                            month={searchParams?.month || 0}
+                            categorie_id={searchParams?.categorie_id || ''}
+                        />
                     </Suspense>
                 </div>
             </section>
         </main>
-    )
-}
-
-
-
-const SearchBar = () => {
-    return (
-        <div className='flex justify-center items-center gap-2'>
-            <div className='w-full md:w-3/4 lg:w-1/2 relative'>
-                <input type="text" placeholder="Rechercher un évènement"
-                    className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
-                    text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
-                    placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
-                <Search className="h-7 w-7 text-gray-300 absolute top-3 right-4 cursor-pointer" />
-            </div>
-        </div>
     )
 }

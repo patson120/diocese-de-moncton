@@ -67,9 +67,9 @@ export async function fetchMessages(params: string = "") {
     }
 }
 
-export async function fetchMouvements() {
+export async function fetchMouvements(params: string = "") {
     try {
-        let url = `${BASE_URL}/mouvements`;
+        let url = `${BASE_URL}/mouvements${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
@@ -81,9 +81,9 @@ export async function fetchMouvements() {
 }
 
 
-export async function fetchCategories() {
+export async function fetchCategories(params: string = "") {
     try {
-        let url = `${BASE_URL}/categories`;
+        let url = `${BASE_URL}/categories${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);

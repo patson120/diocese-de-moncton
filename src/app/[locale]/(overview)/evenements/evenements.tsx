@@ -6,13 +6,25 @@ import { Link } from "@/i18n/routing";
 import { TypeEvent } from "@/types";
 
 
-export default async function Evenements({ currentPage, query }: { currentPage: number, query: string }) {
-    
+export default async function Evenements(
+    { currentPage, query, month, categorie_id }:
+        {
+            currentPage: number,
+            query: string,
+            month: number,
+            categorie_id: string,
+        }) {
+
     let events: TypeEvent[] = []
-    const params = query ? `?paginate=8&page=${currentPage}&titre_fr=${query}` : `?paginate=8&page=${currentPage}`
+    let params = `?paginate=8&page=${currentPage}`
+    if (query) { params = `${params}&intitule=${query}` }
+    if (month) { params = `${params}&month=${month}` }
+    if (categorie_id) { params = `${params}&categorie_id=${categorie_id}` }
+
+
     const response = await fetchEvents(params)
     events = response.data
-    const totalPages = response.last_page    
+    const totalPages = response.last_page
 
     if (!events) {
         return (
@@ -22,11 +34,11 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
         )
     }
 
-    const verifyDate = (item: TypeEvent,  index: number): boolean =>{
-        if(index < 0) return true
+    const verifyDate = (item: TypeEvent, index: number): boolean => {
+        if (index < 0) return true
         return (
-            formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR',  'long').split(" ")[1] !==
-            formatDateToLocal((new Date(events[index].date_event)).toISOString(), 'fr-FR',  'long').split(" ")[1]
+            formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1] !==
+            formatDateToLocal((new Date(events[index].date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1]
         )
     }
 
@@ -37,9 +49,9 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
                     events.map((item, index) => (
                         <div key={index}>
                             {
-                                (verifyDate(item, index-1)) &&
+                                (verifyDate(item, index - 1)) &&
                                 <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>
-                                    Mois de {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR',  'long').split(" ")[1]}
+                                    Mois de {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1]}
                                 </h3>
                             }
                             <Link href="/evenements/1" className="hidden md:block">
@@ -52,7 +64,7 @@ export default async function Evenements({ currentPage, query }: { currentPage: 
                     ))
                 }
             </div>
-            
+
             {/* Pagination */}
             <div className="mt-20 flex w-full justify-center">
                 <Pagination totalPages={totalPages} />

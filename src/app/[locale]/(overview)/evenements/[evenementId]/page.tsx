@@ -7,6 +7,7 @@ import MapSection from '@/components/ui/shared/MapSection';
 import { TypeEvent } from '@/types';
 import { Calendar, Timer } from 'lucide-react';
 import Image from 'next/image';
+import Buttons from './Buttons';
 
 
 export default async function Page(props: {
@@ -34,20 +35,8 @@ export default async function Page(props: {
                             },
                         ]}
                     />
-                    <div className='space-x-2'>
-                        <Button
-                            size={'sm'}
-                            variant="outline"
-                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        >Précédent
-                        </Button>
-                        <Button
-                            size={'sm'}
-                            variant="outline"
-                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        >Suivant
-                        </Button>
-                    </div>
+                    <Buttons event={event} />
+                    
                 </div>
             </div>
             <section className="container  max-margin py-0">

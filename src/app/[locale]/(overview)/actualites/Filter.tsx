@@ -50,7 +50,7 @@ export default function Filter({ categories, categorie_id }: { categories: Categ
     }
 
     return (
-        <div className='flex flex-col md:flex-row justify-center items-start gap-4'>
+        <div className='flex flex-col md:flex-row justify-center items-center gap-4'>
             <div className='flex items-center space-x-2'>
                 <SlidersHorizontalIcon className="h-4 w-5 text-gray-600" />
                 <label className='text-sm font-bold whitespace-nowrap' htmlFor="filter">Filtrer les résultats</label>

@@ -21,7 +21,7 @@ export default async function Page(props: {
   const currentPage = searchParams?.page || 1;
 
   // Fetch categories
-  const categories: Category[] = await fetchCategories()
+  const categories: Category[] = await fetchCategories(`?menu=nouvelle`)
   return (
     <main>
       {/* Hero section */}

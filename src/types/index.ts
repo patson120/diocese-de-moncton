@@ -18,6 +18,8 @@ export type TypeEvent = {
     titre_en: string;
     heure_event: string;
     date_event: string;
+    prevId: number;
+    nextId: number;  
     lieu: string;
     gps: string;
     contact: string;
@@ -25,8 +27,8 @@ export type TypeEvent = {
     description_en: string;
     created_at: string;
     updated_at: string;
-    paroisse: Paroisse,
-    categorie: Category
+    paroisse: Paroisse;
+    categorie: Category;
 }
 
 export type Category = {

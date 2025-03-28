@@ -8,8 +8,6 @@ export default function Buttons({ actualite }: { actualite: TypeActualite }) {
     const { push } = useRouter()
 
     const handleSearch = (i: number) => {
-        console.log(actualite);
-        
         if ( i > 0 && actualite.nextId ) push(`/actualites/${actualite.nextId}`)
         if (i < 0 && actualite.prevId )  push(`/actualites/${actualite.prevId}`)
     }
