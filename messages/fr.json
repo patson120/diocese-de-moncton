@@ -1,4 +1,10 @@
 {
+
+    "app": {
+        "news": "Actualités",
+        "events": "Nos évènements"
+    },
+    
     "Index": {
         "hello": "Bonjour tout le monde"
     },

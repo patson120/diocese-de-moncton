@@ -1,11 +1,34 @@
 "use client"
 
+import { usePathname, useRouter } from '@/i18n/routing'
 import { SlidersHorizontalIcon } from 'lucide-react'
-import React, { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
+import { useState } from 'react'
 
 export default function Filter() {
-    const filters = ['Tous', 'En activité', 'Fermées']
-    const [filter, setFilter] = useState('Tous')
+    const searchParams = useSearchParams()
+    const pathname = usePathname()
+    const { replace } = useRouter()
+
+
+    const filters = [
+        { label: 'Tous', value: null },
+        { label: 'En activité', value: 1 },
+        { label: 'Fermées', value: 0 },
+    ]
+    const [filter, setFilter] = useState(filters[0])
+
+    const handleUpdateStatut = (item: any) => {
+        setFilter(item)
+        const params = new URLSearchParams(searchParams)
+        if (item.label !== 'Tous') {
+            params.set('statut', `${item.value}`)
+        }
+        else {
+            params.delete('statut')
+        }
+        replace(`${pathname}?${params.toString()}`)
+    }
     return (
         <div className='flex flex-wrap items-center gap-2 !text-nowrap text-[10px]'>
             <div className='flex items-center gap-[6px]'>
@@ -16,7 +39,11 @@ export default function Filter() {
             </div>
             {
                 filters.map((item, index) => (
-                    <label key={index} onClick={()=>{setFilter(item)}} className={`body-2 px-2 py-1 rounded-xl cursor-pointer ${ item === filter ? "font-bold bg-[#1D0104] text-white": "border border-gray-100"} `}>{item}</label>
+                    <label key={index}
+                        onClick={() => handleUpdateStatut(item)}
+                        className={`body-2 px-2 py-1 rounded-xl cursor-pointer ${item.label === filter.label ? "font-bold bg-[#1D0104] text-white" : "border border-gray-100"} `}>
+                        {item.label}
+                    </label>
                 ))
             }
         </div>

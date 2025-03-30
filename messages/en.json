@@ -1,8 +1,12 @@
 {
+    "app": {
+        "news": "News",
+        "events": "Our Events"
+    },
     "Index": {
         "hello": "Hello world"
     },
-    "About":{
+    "About": {
         "title": "About page"
     }
 }

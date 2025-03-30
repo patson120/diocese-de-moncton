@@ -3,6 +3,7 @@ import MessageArcheveque from "@/components/message-archeveque";
 import RecentActualites from "@/components/recentActualites";
 import RecentEvents from "@/components/recentEvents";
 import { HeroSection } from "@/components/sections/hero";
+import Text from "@/components/Text";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
 import ParoisseSection from "@/components/ui/shared/ParoisseSection";
@@ -55,7 +56,7 @@ export default async function Home(props: {
       <div className="container max-margin py-0">
         <div className="vertical-margin">
           <div className="mb-3 flex justify-between items-center">
-            <h1 className="heading-3">Actualités</h1>
+            <h1 className="heading-3"><Text keyString={"news"} /></h1>
             <Link href="/actualites">
               <Button variant='ghost' className="body-3 font-semibold p-0 hover:bg-transparent">
                 <span className="hidden md:block whitespace-nowrap">Voir toute l’actualité</span>
@@ -72,7 +73,7 @@ export default async function Home(props: {
         </div>
         {/* <div className="mt-10 lg:mt-20"/> */}
         <div className="mb-3 flex justify-between items-center">
-          <h1 className="heading-3">Nos évènements</h1>
+          <h1 className="heading-3"><Text keyString={"events"} /></h1>
           <Link href='/evenements' className="hidden md:block" >
             <Button variant='ghost' className="body-3 font-semibold p-0 hover:bg-transparent">
               Voir tous les évènements

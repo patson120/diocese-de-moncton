@@ -105,3 +105,27 @@ export async function createDon(body: any) {
         throw new Error('Failed to create don data.');
     }
 }
+
+export async function subscribeToNewsletter(body: any) {
+    try {
+        let url = `${BASE_URL}/newsletter_emails`;
+        const headers = {}
+        return await fetchAPI(url, 'POST', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to subscribe');
+    }
+}
+
+export async function sendMessage(body: any) {
+    try {
+        let url = `${BASE_URL}/messages_contact`;
+        const headers = {}
+        return await fetchAPI(url, 'POST', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to send message');  
+    }
+}

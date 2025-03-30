@@ -13,15 +13,21 @@ export default async function Page(props: {
     searchParams?: Promise<{
         query?: string;
         gps?: string;
-        page?: number;
+        statut?: number;
     }>
 }) {
     const searchParams = await props.searchParams;
     const query = searchParams?.query || '';
     const gps = searchParams?.gps || '';
+    const statut = searchParams?.statut || undefined;
 
     let paroisses: Paroisse[] = []
-    paroisses = await fetchParoisses(`?nom=${query}&gps=${gps}`)
+    let params = '?'
+    if (query) params = `${params}&nom=${query}`
+    if (gps) params = `${params}&gps=${gps}`
+    if (statut) params = `${params}&statut=${statut}`
+
+    paroisses = await fetchParoisses(params)
 
     return (
         <section className='container max-margin vertical-margin pt-5 mt-0'>

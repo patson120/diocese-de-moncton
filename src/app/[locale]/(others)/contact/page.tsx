@@ -1,14 +1,16 @@
 
 'use client'
+import { sendMessage } from "@/_lib/data";
 import { Button } from "@/components/ui/shared/button";
 import { useRouter } from "@/i18n/routing";
-import { ArrowLeft, ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import { toast } from 'sonner';
 
 
 // Import Map component dynamically to avoid SSR issues
-const Map = dynamic(() => import('@/components/map'), { ssr: false });
+const Map = dynamic(() => import('@/components/map'), { ssr: false })
 
 const parishes = [
     {
@@ -24,10 +26,40 @@ const parishes = [
 
 
 export default function Page() {
-
     const router = useRouter()
 
+    const [isSending, setIsSending] = useState(false);
+    const [message, setMessage] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [sujet, setSujet] = useState('');
+    const [name, setName] = useState('');
+
     const [selectedParish, setSelectedParish] = useState<any>(null);
+
+    const handleSendMessage = async () => {
+        const response = await sendMessage({
+            nom: name,
+            email: email,
+            sujet: sujet,
+            message: message
+        })        
+        if (response.status === false) {
+            toast.error(JSON.stringify(response));
+        }
+        else {
+            // setIsSending(true)
+            setTimeout(() => {
+                setIsSending(false)
+                setMessage('')
+                setEmail('')
+                setPhone('')
+                setName('')
+            }, 2000)
+            toast.success('Votre message a été envoyé avec succès!')
+        }
+    };
+
     return (
         <>
             <section className="container max-margin py-0">
@@ -47,22 +79,26 @@ export default function Page() {
                             <div className="space-y-2">
                                 <div className=''>
                                     <label className='body-3 inline-block font-semibold mb-1' htmlFor="nom">Nom</label>
-                                    <input type="text" required placeholder="Entrez votre nom complet" className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
+                                    <input onChange={(e) => setName(e.target.value)} type="text" required placeholder="Entrez votre nom complet" className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
                                 </div>
                                 <div className=''>
                                     <label className='body-3 inline-block font-semibold mb-1' htmlFor="courriel">Courriel</label>
-                                    <input type="email" required placeholder="Entrez votre adresse électronique" className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
+                                    <input onChange={(e) => setEmail(e.target.value)} type="email" required placeholder="Entrez votre adresse électronique" className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
                                 </div>
-                                <div className=''>
+                                {/* <div className=''>
                                     <label className='body-3 inline-block font-semibold mb-1' htmlFor="telephone">Téléphone</label>
-                                    <input type="tel" required placeholder="Entrez votre numéro de téléphone" className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
+                                    <input  onChange={(e) => setPhone(e.target.value)} type="tel" required placeholder="Entrez votre numéro de téléphone" className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
+                                </div> */}
+                                <div className=''>
+                                    <label className='body-3 inline-block font-semibold mb-1' htmlFor="telephone">Sujet</label>
+                                    <input  onChange={(e) => setSujet(e.target.value)} type="tel" required placeholder="Entrez le sujet" className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
                                 </div>
                                 <div className=''>
                                     <label className='body-3 inline-block font-semibold mb-1' htmlFor="message">Votre message</label>
-                                    <textarea required placeholder="Ce que vous avez à dire" rows={4} className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
+                                    <textarea  onChange={(e) => setMessage(e.target.value)} required placeholder="Ce que vous avez à dire" rows={4} className="border-[1.5px] border-gray-200 bg-transparent p-2 rounded-lg w-full" />
                                 </div>
                             </div>
-                            <Button onClick={() => { }} className="w-full body-2">
+                            <Button onClick={handleSendMessage} className="w-full body-2">
                                 Envoyer le message
                             </Button>
                         </div>
