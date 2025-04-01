@@ -65,11 +65,9 @@ export default async function Home(props: {
               </Button>
             </Link>
           </div>
-
           <Suspense fallback={< ActualitesSkeleton items={4} />}>
             <RecentActualites />
           </Suspense>
-
         </div>
         {/* <div className="mt-10 lg:mt-20"/> */}
         <div className="mb-3 flex justify-between items-center">
@@ -81,7 +79,6 @@ export default async function Home(props: {
             </Button>
           </Link>
         </div>
-
         <Suspense fallback={
           <section className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <EventItemSkeleton />
@@ -91,14 +88,12 @@ export default async function Home(props: {
         }>
           <RecentEvents />
         </Suspense>
-
         <Link id="evenements" href='/evenements' className="block md:hidden mt-5" >
           <Button className="w-full md:py-6 text-sm md:text-base lg:text-xl">
             Voir tous les évènements
             <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
           </Button>
         </Link>
-
         <ParoisseSection query={query} gps={gps} />
       </div>
 
