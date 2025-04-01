@@ -1,4 +1,5 @@
 import { formatDateToLocal } from '@/_lib/utils'
+import Text from '@/components/Text'
 import { TypeActualite } from '@/types'
 import Image from 'next/image'
 
@@ -31,12 +32,12 @@ export default async function ActualiteDetail({ actualite }: { actualite: TypeAc
 
             <div className='container max-margin pt-4 md:pt-0 md:px-0 md:mx-0 flex flex-col space-y-3'>
                 <div className='flex justify-between pt-4'>
-                    <span className='body-3 font-semibold text-primary'>{actualite.categorie.intitule_fr}</span>
-                    <p className='text-gray-400 body-3'>Publié le {formatDateToLocal(actualite.date_publication)}</p>
+                    <span className='body-3 font-semibold text-primary'><Text labelEn={actualite.categorie.intitule_en} labelFr={actualite.categorie.intitule_fr} /></span>
+                    <p className='text-gray-400 body-3'><Text keyString="publier_le" /> {formatDateToLocal(actualite.date_publication)}</p>
                 </div>
-                <h1 className='heading-3 font-bold'>{actualite.titre_fr}</h1>
+                <h1 className='heading-3 font-bold'><Text labelEn={actualite.titre_en} labelFr={actualite.titre_fr} /></h1>
 
-                <p className='body-2 text-gray-600'>{actualite.description_fr}</p>
+                <p className='body-2 text-gray-600'><Text labelEn={actualite.description_en} labelFr={actualite.description_fr} /></p>
             </div>
         </div>
     )

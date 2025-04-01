@@ -1,7 +1,22 @@
 {
     "app": {
         "news": "News",
-        "events": "Our Events"
+        "events": "Our Events",
+        "adresse": "Address",
+        "phone": "Tel.",
+        "msg_archeveque": "Archbishop's message",
+        "publier_le": "Posted on",
+        "next_msg": "Next message",
+        "prev_msg": "Previous message",
+        "type_event": "Event type",
+        "heure": "Hour",
+        "lieu": "Location",
+        "lieu_map": "On the map",
+        "event_title": "Event title",
+        "filtrer_resultat": "Filter results",
+        "pas_de_donnees": "No data available",
+        "article_relatifs": "Related articles",
+        "autres_msg": "Other messages"
     },
     "Index": {
         "hello": "Hello world"

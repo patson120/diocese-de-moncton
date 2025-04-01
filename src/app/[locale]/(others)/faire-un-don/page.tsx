@@ -38,9 +38,7 @@ export default function Page() {
 
         // Call api method
         const response = await createDon(data)
-
         console.log(response);
-        
     }   
 
     return (

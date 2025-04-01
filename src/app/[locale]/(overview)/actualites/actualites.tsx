@@ -1,4 +1,5 @@
 import { fetchActualites } from "@/_lib/data"
+import Text from "@/components/Text"
 import Actualite from "@/components/ui/shared/actualite"
 import Pagination from "@/components/ui/shared/pagination"
 import { Link } from "@/i18n/routing"
@@ -19,7 +20,7 @@ export default async function Actualites({ currentPage, query, categorie_id }: {
     if (!actualites) {
         return (
             <div className="mt-10">
-                <h1 className="text-center text-gray-400">Pas de données !</h1>
+                <h1 className="text-center text-gray-400"><Text keyString="pas_de_donnees" /> !</h1>
             </div>
         )
     }

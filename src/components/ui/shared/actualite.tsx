@@ -25,7 +25,7 @@ export default function Actualite({ data }: { data: TypeActualite }) {
             <p className='body-2 line-clamp-2 text-[#575757]'>
                 <Text labelEn={data.description_en} labelFr={data.description_fr} />
             </p>
-            <p className='legend text-[#575757] text-xs md:text-sm'>Publié le {formatDateToLocal((new Date(data.date_publication)).toISOString())}</p>
+            <p className='legend text-[#575757] text-xs md:text-sm'><Text keyString='publier_le' /> {formatDateToLocal((new Date(data.date_publication)).toISOString())}</p>
         </div>
     )
 }

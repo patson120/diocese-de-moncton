@@ -2,7 +2,22 @@
 
     "app": {
         "news": "Actualités",
-        "events": "Nos évènements"
+        "events": "Nos évènements",
+        "adresse": "Adresse",
+        "phone": "Tél.",
+        "msg_archeveque": "Message de l'Archevêque",
+        "publier_le": "Publié le",
+        "next_msg": "Message suivant",
+        "prev_msg": "Message précédent",
+        "type_event": "Type évènement",
+        "heure": "Heure",
+        "lieu": "Lieu",
+        "lieu_map": "Sur la carte",
+        "event_title": "Titre évènement",
+        "filtrer_resultat": "Filtrer les résultats",
+        "pas_de_donnees": "Pas de donnees",
+        "article_relatifs": "Articles relatifs",
+        "autres_msg": "Autres messages"
     },
     
     "Index": {

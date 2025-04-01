@@ -1,5 +1,6 @@
 
 import { fetchMessages } from '@/_lib/data'
+import Text from '@/components/Text'
 import { Button } from '@/components/ui/shared/button'
 import MessageComp from '@/components/ui/shared/MessageComp'
 import { Link } from '@/i18n/routing'
@@ -10,7 +11,7 @@ export default async function RelativesMessages({messages}: {messages: Message[]
     
     return (
         <div className='col-span-full lg:col-span-2 flex flex-col space-y-4 mb-10 pt-4 md:pt-0'>
-            <h1 className='heading-3 font-extrabold'>Autres message</h1>
+            <h1 className='heading-3 font-extrabold'><Text keyString='autres_msg' /></h1>
             <div className="hidden md:flex flex-col gap-4 lg:gap-6">
                 {
                     messages.map((item, index) => (

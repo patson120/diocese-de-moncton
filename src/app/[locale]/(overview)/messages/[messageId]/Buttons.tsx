@@ -1,9 +1,9 @@
 'use client'
 
+import Text from '@/components/Text'
 import { Button } from '@/components/ui/shared/button'
 import { useRouter } from '@/i18n/routing'
-import { Message, TypeEvent } from '@/types'
-import React from 'react'
+import { Message } from '@/types'
 
 export default function Buttons({ message }: { message: Message }) {
     const { push } = useRouter()
@@ -19,15 +19,15 @@ export default function Buttons({ message }: { message: Message }) {
                 onClick={() => handleSearch(-1)}
                 size={'sm'}
                 variant="outline"
-                className={`${message.prevId ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}
-            >Message précédent
+                className={`${message.prevId ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
+                <Text keyString='prev_msg' />
             </Button>
             <Button
                 onClick={() => handleSearch(1)}
                 size={'sm'}
                 variant="outline"
-                className={`${message.nextId ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}
-            >Message suivant
+                className={`${message.nextId ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
+                    <Text keyString='next_msg' />
             </Button>
         </div>
     )

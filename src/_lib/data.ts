@@ -96,7 +96,7 @@ export async function fetchCategories(params: string = "") {
 
 export async function createDon(body: any) {
     try {
-        let url = `${BASE_URL}/don`;
+        let url = `${BASE_URL}/dons`;
         const headers = {}
         return await fetchAPI(url, 'POST', headers, body);
 

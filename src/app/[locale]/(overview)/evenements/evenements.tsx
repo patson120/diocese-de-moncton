@@ -1,5 +1,6 @@
 import { fetchEvents } from "@/_lib/data";
 import { formatDateToLocal } from "@/_lib/utils";
+import Text from "@/components/Text";
 import EventItem from "@/components/ui/home/event-item";
 import Pagination from "@/components/ui/shared/pagination";
 import { Link } from "@/i18n/routing";
@@ -29,7 +30,7 @@ export default async function Evenements(
     if (!events) {
         return (
             <div className="h-44 mt-10 rounded-lg border-2 border-gray-400 border-dashed border-spacing-4  flex justify-center items-center">
-                <h1 className="text-center text-gray-400">Pas de données !</h1>
+                <h1 className="text-center text-gray-400"><Text keyString="pas_de_donnees" /> !</h1>
             </div>
         )
     }
