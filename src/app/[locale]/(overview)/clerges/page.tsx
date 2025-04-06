@@ -167,7 +167,7 @@ export default function Page() {
 
 const Diacres = ( {membres}: { membres: Membre[]} ) => {
     const [open,  setOpen ] = useState(false)
-    const [selectedItem, setSelectedItem] = useState<Membre | null | undefined>()
+    const [selectedItem, setSelectedItem] = useState<Membre | undefined>()
     
     return <>
         <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
