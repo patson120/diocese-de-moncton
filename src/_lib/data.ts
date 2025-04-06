@@ -4,7 +4,7 @@ import { fetchAPI } from "@/_lib";
 
 export async function fetchActualites(params: string = "") {
     try {
-        let url = `${BASE_URL}/actualites${params}`; 
+        let url = `${BASE_URL}/actualites${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
@@ -17,7 +17,7 @@ export async function fetchActualites(params: string = "") {
 
 export async function fetchParoisses(params: string = "") {
     try {
-        let url = `${BASE_URL}/paroisses${params}`;        
+        let url = `${BASE_URL}/paroisses${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
@@ -126,6 +126,32 @@ export async function sendMessage(body: any) {
 
     } catch (error) {
         console.error('Database Error:', error);
-        throw new Error('Failed to send message');  
+        throw new Error('Failed to send message');
+    }
+}
+
+export async function fetchMembres() {
+    try {
+        let url = `${BASE_URL}/membres`;
+        const headers = {}
+        const body = {}
+        return await fetchAPI(url, 'GET', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch membres');
+    }
+}
+
+export async function fetchHoraireMesse() {
+    try {
+        let url = `${BASE_URL}/horaire_messes`;
+        const headers = {}
+        const body = {}
+        return await fetchAPI(url, 'GET', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch horaire messes');
     }
 }

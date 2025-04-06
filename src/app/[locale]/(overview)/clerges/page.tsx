@@ -1,5 +1,6 @@
 'use client'
 
+import { fetchMembres } from "@/_lib/data";
 import { HeroSectionSecond } from "@/components/sections/hero-second";
 import {
     Dialog,
@@ -9,8 +10,9 @@ import {
 import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Membre } from "@/types";
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const items = [
     {
@@ -83,6 +85,16 @@ const menus = [
 export default function Page() {
 
     const [selectedMenu, setSelectedMenu] = useState(menus[0])
+    const [membres, setMembres] = useState<Membre[]>([])
+
+    const getMembres = async () => {
+        const response: Membre[] = await fetchMembres()
+        setMembres(response)
+    }
+
+    useEffect(() => {
+        getMembres()
+    }, [])
 
     return (
         <main>
@@ -110,7 +122,7 @@ export default function Page() {
                             }
                         </TabsList>
                         <TabsContent value="diacres-permanents">
-                            <Diacres />
+                            <Diacres membres={membres} />
                         </TabsContent>
                         <TabsContent value="pretres-diocesains">
                             <Pretres />
@@ -153,18 +165,19 @@ export default function Page() {
 }
 
 
-const Diacres = () => {
-    const [open, setOpen] = useState(false)
-    const [selectedItem, setSelectedItem] = useState<any>({})
+const Diacres = ( {membres}: { membres: Membre[]} ) => {
+    const [open,  setOpen ] = useState(false)
+    const [selectedItem, setSelectedItem] = useState<Membre | null>()
+    
     return <>
-        <div className='lg:flex lg:flex-row pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
+        <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
             {
-                items.map(item => (
+                membres.map((item: Membre) => (
                     <div key={item.id} className='space-y-3 w-full' >
-                        <div className='h-[240px] relative rounded-xl overflow-hidden'>
+                        <div className='h-[240px] min-w-[240px] relative rounded-xl overflow-hidden'>
                             <Image
                                 alt="Célébration de baptême"
-                                src={item.image}
+                                src={items[0].image}
                                 fill
                                 style={{
                                     objectFit: 'cover',
@@ -173,8 +186,8 @@ const Diacres = () => {
                                 }}
                             />
                         </div>
-                        <h1 className='body-2 font-bold'>{item.title}</h1>
-                        <p className='body-2 text-gray'>{item.description}</p>
+                        <h1 className='body-2 font-bold'>{item.nom}</h1>
+                        <p className='body-2 text-gray'>{item.poste}</p>
                         <div className="">
                             <Button size={'sm'} variant={'link'} onClick={() => { setSelectedItem(item); setOpen(true) }} className="underline text-black px-0 ">
                                 Coordonnées
@@ -256,7 +269,7 @@ const DiacresDialog = ({
 }: {
     open: boolean;
     onOpenChange: (open: boolean) => void;
-    item?: any;
+    item?: Membre;
 }) => {
     return <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="w-full md:max-w-lg">
@@ -265,7 +278,7 @@ const DiacresDialog = ({
                     <div className='h-[160px] w-[160px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
                         <Image
                             alt="Célébration de baptême"
-                            src={item.image}
+                            src={items[0].image}
                             fill
                             style={{
                                 objectFit: 'cover',
@@ -276,8 +289,8 @@ const DiacresDialog = ({
                     </div>
                     <div className="flex-1 space-y-4">
                         <div className="mt-4">
-                            <h5 className='body-2 text-black font-bold'>{item.title}</h5>
-                            <p className='body-3'>{item.description}</p>
+                            <h5 className='body-2 text-black font-bold'>{item?.nom}</h5>
+                            <p className='body-3'>{item?.poste}</p>
                         </div>
                         <div>
                             <h5 className='body-2 text-black font-bold'>Coordonnées</h5>
@@ -319,7 +332,7 @@ const PretresDialog = ({
                             />
                         </div>
                         <div className="mb-3 mt-2">
-                            <h5 className='body-2 text-black font-bold'>{item.title}</h5>
+                            <h5 className='body-2 text-black font-bold'>{item.nom}</h5>
                             <p className='body-3'>En activité</p>
                         </div>
                         <div>

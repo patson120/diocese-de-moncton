@@ -125,3 +125,36 @@ export type Horaire = {
     created_at: string;
     updated_at: string;
 }
+
+
+export type Membre = {
+    id: number;
+    categorie_id: number;
+    image: string;
+    nom: string;
+    prenom: string;
+    poste: string;
+    coordonnees: string;
+    etat: number;
+    created_at: string;
+    updated_at: string;
+    categorie: Category;
+}
+
+export type HoraireMesse = {
+    id: number;
+    jour: string;
+    heure: string;
+    created_at: string;
+    updated_at: string;
+    activites: Activite[];
+}
+
+export type Activite = {
+    id: number;
+    horaire_messe_id: number;
+    intitule_fr: string;
+    intitule_en: string | null;
+    created_at: string;
+    updated_at: string;
+}

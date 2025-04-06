@@ -21,7 +21,7 @@ export default function Newsletter() {
     else {
       // toast(response.message)
       // hookToast({ title: response.message })
-      toast.error(response.message)
+      toast.error(`${JSON.stringify(response.message)}`)
     }
   }
 

@@ -18,6 +18,9 @@ export default function Page() {
     const moyenPaiements = ["Virement bancaire", "Carte bancaire", "Interac", "Stripes",]
 
     const [step, setStep] = useState(1)
+    const [name, setName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
     const [typeDon, setTypeDon] = useState<any>()
     const [montant, setMontant] = useState<any>()
     const [moyen, setMoyen] = useState<any>()
@@ -25,20 +28,30 @@ export default function Page() {
     const [compte, setCompte] = useState<any>()
 
     const handleSubmit = async () => {
-        console.log("Submit...");
-        
-        const data = {
-            nom: "Test",
-            email: "test.email@gmail.com",
-            telephone: "237670993737",
-            type_don: "espèce",
-            montant: 200,
-            description: "description",
-        }
 
-        // Call api method
-        const response = await createDon(data)
-        console.log(response);
+        const body = {
+            nom: name,
+            email: email,
+            telephone: phone,
+            pays: "Pays",
+            type_don: typeDon,
+            montant: montant,
+            recepteur_don: "La personne qui reçoit le don...",
+            description: "Description"
+        }
+     
+        // const data = {
+        //     nom: "Test",
+        //     email: "test.email@gmail.com",
+        //     telephone: "237670993737",
+        //     type_don: "espèce",
+        //     montant: 200,
+        //     description: "description",
+        // }
+
+        // // Call api method
+        // const response = await createDon(data)
+        // console.log(response);
     }   
 
     return (
@@ -168,15 +181,15 @@ export default function Page() {
                                     <>
                                         <div className=''>
                                             <label className='inline-block mb-2' htmlFor="nom">Nom</label>
-                                            <input type="text" placeholder="Entrez votre nom" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                            <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Entrez votre nom" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                         </div>
                                         <div className=''>
                                             <label className='inline-block mb-2' htmlFor="prenom">Téléphone</label>
-                                            <input type="tel" placeholder="Entrez votre téléphone" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                            <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Entrez votre téléphone" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                         </div>
                                         <div className=''>
                                             <label className='inline-block mb-2' htmlFor="email">Courriel</label>
-                                            <input type="email" placeholder="Entrez votre adresse électronique" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
+                                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Entrez votre adresse électronique" className="border-2 border-gray-200 p-2 rounded-xl w-full" />
                                         </div>
                                     </>
                                 )
