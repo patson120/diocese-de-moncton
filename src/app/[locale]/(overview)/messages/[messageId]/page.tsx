@@ -27,7 +27,7 @@ export default async function Page(props: {
                                 href: '/messages',
                             },
                             {
-                                label: `${message.message_fr.slice(0, 30)}...`,
+                                label: `${message.message_fr}...`,
                                 href: '',
                                 active: true,
                                 data: {
