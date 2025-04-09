@@ -1,11 +1,16 @@
 import { Link } from '@/i18n/routing';
 import { clsx } from 'clsx';
 import { ChevronRight } from 'lucide-react';
+import Text from '../Text';
 
 interface Breadcrumb {
   label: string;
   href: string;
   active?: boolean;
+  data?: {
+    labelEn: string;
+    labelFr: string;
+  };
 }
 
 export default function Breadcrumbs({
@@ -24,9 +29,13 @@ export default function Breadcrumbs({
               breadcrumb.active ? 'font-semibold' : 'text-gray', "flex justify-center items-center"
             )}
           >
-            <Link className='' href={breadcrumb.href}>{breadcrumb.label}</Link>
+            <Link className='' href={breadcrumb.href}>
+              {
+                breadcrumb.active ? <Text labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> : breadcrumb.label
+              }
+            </Link>
             {index < breadcrumbs.length - 1 ? (
-                <ChevronRight className="h-5 w-5 inline-block " />
+              <ChevronRight className="h-5 w-5 inline-block " />
             ) : null}
           </li>
         ))}

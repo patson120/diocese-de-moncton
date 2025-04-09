@@ -27,9 +27,13 @@ export default async function Page(props: {
                                 href: '/messages',
                             },
                             {
-                                label: message.message_fr.length > 30 ? `${message.message_fr.slice(0, 30)}...` : message.message_fr,
+                                label: `${message.message_fr.slice(0, 30)}...`,
                                 href: '',
                                 active: true,
+                                data: {
+                                    labelEn: `${message.message_en.slice(0, 30)}...`,
+                                    labelFr: `${message.message_fr.slice(0, 30)}...`,
+                                }
                             },
                         ]}
                     />

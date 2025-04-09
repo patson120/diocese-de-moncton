@@ -9,11 +9,17 @@ const MessageComp = ({ message }: { message: Message }) => {
             <div className='flex'>
                 <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
                     <Calendar className="h-4 w-4 text-gray-600" />
-                    <span className='body-3'><Text keyString="publier_le" /> {formatDateToLocal((new Date(message.created_at)).toISOString())}</span>
+                    <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString())}</span></div>
                 </div>
             </div>
-            <h4 className='body-1 font-bold text-black line-clamp-2'><Text labelFr={message.titre_fr} labelEn={message.titre_en} /></h4>
-            <p className='body-2 line-clamp-2 text-[#575757]'><Text labelFr={message.message_fr} labelEn={message.message_en} /></p>
+            <div className='body-1 font-bold text-black line-clamp-2'>
+                <Text labelFr={message.titre_fr} labelEn={message.titre_en} />
+            </div>
+            <div className='body-2 line-clamp-2 text-[#575757]'>
+                <Text labelFr={message.message_fr} labelEn={message.message_en} />
+            </div>
+            {/* <h4 className='body-1 font-bold text-black line-clamp-2'><Text labelFr={message.titre_fr} labelEn={message.titre_en} /></h4> */}
+            {/* <p className='body-2 line-clamp-2 text-[#575757]'><Text labelFr={message.message_fr} labelEn={message.message_en} /></p> */}
         </div>
     )
 }
