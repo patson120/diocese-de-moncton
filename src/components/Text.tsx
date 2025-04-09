@@ -1,7 +1,5 @@
 "use client";
 
-import DOMPurify from 'dompurify';
-import xss from "xss";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 import { HTMLContent } from "./html-content";
