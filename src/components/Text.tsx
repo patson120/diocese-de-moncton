@@ -1,8 +1,9 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import React from "react";
+import * as React from 'react';
 import { HTMLContent } from "./html-content";
+import { cva, VariantProps } from "class-variance-authority";
 
 interface TextProps {
   labelFr?: string;
@@ -10,18 +11,18 @@ interface TextProps {
   keyString?: string;
 }
 
-export default function Text({ labelFr, labelEn, keyString, }: TextProps) {
+const divVariants = cva("whitespace-nowrap",);
+
+export default function Text<T extends HTMLElement>({ labelFr, labelEn, keyString, className, ...props }:  TextProps & React.HTMLAttributes<T> ) {
   const t = useTranslations("app");
   const localActive = useLocale();
 
   if (keyString) {
-    return <span className="w-auto">{t(keyString)}</span>;
-    // return <HTMLContent html={t(keyString)} className="prose max-w-none" />
+    return <span {...props} className={`w-auto ${className}`}>{t(keyString)}</span>;
   }
   const label = localActive === "fr" ? labelFr : labelEn;
   if (label?.startsWith("\u003C")) {
-     return <HTMLContent html={label} className="prose max-w-none" />
+     return <HTMLContent html={label} className={`prose max-w-none ${className}`} />
   }
-  return <span>{label}</span>;
-  // return <HTMLContent html={label!} className="prose max-w-none" />
+  return <span {...props} className={`w-auto ${className}`}>{label}</span>;
 }
