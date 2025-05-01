@@ -1,12 +1,11 @@
+import { fetchMessages } from '@/_lib/data'
 import Breadcrumbs from '@/components/ui/breadcrumbs'
-import { Button } from '@/components/ui/shared/button'
 import { MessageDetailSkeleton, RelativesMessagesSkeleton } from '@/components/ui/shared/skeletons'
+import { Message } from '@/types'
 import { Suspense } from 'react'
+import Buttons from './Buttons'
 import MessageDetail from './MessageDetail'
 import RelativesMessages from './RelativesMessages'
-import { Message } from '@/types'
-import { fetchMessages } from '@/_lib/data'
-import Buttons from './Buttons'
 
 export default async function Page(props: {
     params: Promise<{ messageId: string }>,

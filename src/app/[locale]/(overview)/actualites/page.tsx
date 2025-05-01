@@ -9,12 +9,12 @@ import { Category } from '@/types'
 import { fetchCategories } from '@/_lib/data'
 
 export default async function Page(props: {
-  searchParams?: Promise<{
-    query?: string;
-    page?: number;
-    categorie_id?: string;
-  }>
-}) {
+    searchParams?: Promise<{
+      query?: string;
+      page?: number;
+      categorie_id?: string;
+    }>
+  }) {
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
   const categorie_id = searchParams?.categorie_id || '';
