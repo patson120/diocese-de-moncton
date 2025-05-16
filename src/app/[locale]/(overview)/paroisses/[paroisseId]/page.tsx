@@ -63,12 +63,12 @@ export default async function Page(props: {
                                     Visiter le site internet
                                 </Button>
                             </Link>
-                            <Link href={paroisse.lien_youtube} target="_blank">
+                            <a href={paroisse.lien_youtube} target="_blank">
                                 <Button variant='outline' size="sm" className="w-full md:w-auto text-xs lg:text-sm">
                                     <Play className="mr-2 h-4 w-6" />
                                     Voir la paroisse en vidéo
                                 </Button>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
@@ -98,7 +98,7 @@ export default async function Page(props: {
                                 {
                                     paroisse.horaireparoisses.map((horaire) => (
                                         <div key={`${horaire.id}-${paroisse.id}`} className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
-                                            <p className="text-gray">{horaire.jour}</p>
+                                            <p className="text-gray capitalize">{horaire.jour}</p>
                                             {
                                                 horaire.heure.split(';').map((heure, i) => (
                                                     <p key={`${i}-${heure}`} className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">{heure}</p>
@@ -159,7 +159,6 @@ export default async function Page(props: {
                     </div>
                 </div>
             </section>
-
             {/* Action de grace */}
             <ActionGrace />
         </>
