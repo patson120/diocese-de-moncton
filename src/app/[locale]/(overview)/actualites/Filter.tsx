@@ -1,6 +1,6 @@
 "use client"
 
-import { fetchCategories } from '@/_lib/data'
+import { cn } from '@/_lib/utils'
 import Text from '@/components/Text'
 import { usePathname, useRouter } from '@/i18n/routing'
 import { Category } from '@/types'
@@ -61,9 +61,11 @@ export default function Filter({ categories, categorie_id }: { categories: Categ
             <div className='flex items-center flex-wrap gap-2'>
                 {
                     categories.map((category, index) => (
-                        <label key={`${category.id}-${index}`} onClick={() => handleChangedCategory(category)} className={`text-sm p-[10px] rounded-xl cursor-pointer ${category.id === seletedCategory?.id ? "font-bold bg-[#1D0104] text-white" : "border border-gray-100"} `}>
-                            <Text labelEn={category.intitule_en} labelFr={category.intitule_fr} />
-                        </label>
+                        <div key={`${category.id}-${index}`} onClick={() => handleChangedCategory(category)} className={ cn('text-sm p-[10px] rounded-xl cursor-pointer',
+                            category.id === seletedCategory?.id ? "bg-[#1D0104]": "border border-gray-100"
+                        ) }>
+                            <Text className={ cn('', category.id === seletedCategory?.id ? "font-bold text-white": "")} labelEn={category.intitule_en} labelFr={category.intitule_fr} />
+                        </div>
                     ))
                 }
             </div>

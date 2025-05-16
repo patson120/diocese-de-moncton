@@ -24,7 +24,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
     setfirst(prev => ({ ...prev, ...parishes[0] }))
 
     const loader = new Loader({
-      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API || '',
       version: 'weekly',
     });
 

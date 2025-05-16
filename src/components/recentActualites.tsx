@@ -10,7 +10,7 @@ export default async function RecentActualites() {
         <div className="flex flex-row overflow-x-scroll lg:overflow-x-hidden xl:grid-cols-4 gap-4 h-scroll pb-6">
             {
                 actualites.map((item, index) => (
-                    <Link key={index} href="/actualites/1" className='min-w-[280px] md:min-w-[308px] xl:w-full'>
+                    <Link key={index} href={`/actualites/${item.id}`} className='min-w-[280px] md:min-w-[308px] xl:w-full'>
                         <Actualite data={item} />
                     </Link>
                 ))

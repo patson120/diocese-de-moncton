@@ -29,7 +29,7 @@ export default async function ImportantPost() {
                     <h4 className='heading-3 line-clamp-2'><Text labelEn={actualite.titre_en} labelFr={actualite.titre_fr} /></h4>
                 </div>
                 <p className='body-2 line-clamp-6 text-gray-500'><Text labelEn={actualite.description_en} labelFr={actualite.description_fr} /></p>
-                <p className='body-3 text-gray-400'><Text keyString='publier_le' /> {formatDateToLocal((new Date(actualite.date_publication)).toISOString())}</p>
+                <p className='body-3 text-gray-400'><Text keyString='publier_le' /> {formatDateToLocal((new Date(actualite?.date_publication ? actualite?.date_publication : actualite?.created_at)).toISOString())}</p>
             </div>
         </Link >
     )

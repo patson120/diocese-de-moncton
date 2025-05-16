@@ -4,7 +4,7 @@ import { fetchAPI } from "@/_lib";
 
 export async function fetchActualites(params: string = "") {
     try {
-        let url = `${BASE_URL}/actualites${params}`;
+        let url = `${BASE_URL}/actualites${params}&is_actif=1`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
