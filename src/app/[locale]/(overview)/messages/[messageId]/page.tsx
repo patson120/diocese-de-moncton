@@ -26,12 +26,12 @@ export default async function Page(props: {
                                 href: '/messages',
                             },
                             {
-                                label: `${message.message_fr}...`,
+                                label: "",
                                 href: '',
                                 active: true,
                                 data: {
-                                    labelEn: `${message.message_en.slice(0, 30)}...`,
-                                    labelFr: `${message.message_fr.slice(0, 30)}...`,
+                                    labelEn: `${message.titre_en.slice(0, 30)}...`,
+                                    labelFr: `${message.titre_fr.slice(0, 30)}...`,
                                 }
                             },
                         ]}

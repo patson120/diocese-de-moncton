@@ -19,7 +19,7 @@ export default async function MessageArcheveque() {
                         <h1 className='heading-3 font-extrabold mb-3'>
                             <Text keyString="msg_archeveque" />
                         </h1>
-                        <Text className='heading-5 text-2xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
+                        <Text className='heading-5 text-xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
                     </div>
                     <p className='body-2 leading-[25.9px]'>
                         <Text className="line-clamp-6" labelEn={message.message_en} labelFr={message.message_fr} />
