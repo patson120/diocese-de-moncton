@@ -12,7 +12,7 @@ export default async function Page(props: {
 }) {
     const { messageId } = await props.params;
     const message: Message = await fetchMessages(`/${messageId}`)
-    let messages: Message[] = await fetchMessages()
+    let messages: Message[] = await fetchMessages(`?etat=1`)
     messages = messages.filter(message => message.id !== Number(messageId))
     return (
         <>
@@ -30,8 +30,8 @@ export default async function Page(props: {
                                 href: '',
                                 active: true,
                                 data: {
-                                    labelEn: `${message.titre_en.slice(0, 30)}...`,
-                                    labelFr: `${message.titre_fr.slice(0, 30)}...`,
+                                    labelEn: message.titre_en.length > 30 ? `${message.titre_en.slice(0, 30)}...`: message.titre_en,
+                                    labelFr: message.titre_fr.length > 30 ? `${message.titre_fr.slice(0, 30)}...`: message.titre_fr
                                 }
                             },
                         ]}

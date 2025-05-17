@@ -31,7 +31,7 @@ export default function Breadcrumbs({
           >
             <Link className='' href={breadcrumb.href}>
               {
-                breadcrumb.active ? <Text labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> : breadcrumb.label
+                breadcrumb.active ? <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> : breadcrumb.label
               }
             </Link>
             {index < breadcrumbs.length - 1 ? (

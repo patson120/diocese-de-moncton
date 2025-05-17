@@ -6,7 +6,7 @@ import { Message } from '@/types'
 import React from 'react'
 
 export default async function Messages({ currentPage }: { currentPage: number }) {
-    const response = await fetchMessages(`?paginate=9&page=${currentPage}`)
+    const response = await fetchMessages(`?paginate=9&page=${currentPage}&etat=1`)
     const messages: Message[] = response.data
     const totalPages = response.last_page
     return (
