@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Button } from "./ui/shared/button";
 import { Message } from "@/types";
 import Text from "./Text";
+import { Calendar } from "lucide-react";
+import { formatDateToLocal } from "@/_lib/utils";
 
 export default async function MessageArcheveque() {
     const response = await fetchMessages(`?paginate=1&etat=1`)
@@ -17,11 +19,17 @@ export default async function MessageArcheveque() {
                         <h1 className='heading-3 font-extrabold mb-3'>
                             <Text keyString="msg_archeveque" />
                         </h1>
-                        <Text className='heading-5' labelEn={message.titre_en} labelFr={message.titre_fr} />
+                        <Text className='heading-5 text-2xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
                     </div>
                     <p className='body-2 leading-[25.9px]'>
-                        <Text labelEn={message.message_en} labelFr={message.message_fr} />
+                        <Text className="line-clamp-6" labelEn={message.message_en} labelFr={message.message_fr} />
                     </p>
+                    <div className='flex justify-end'>
+                        <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
+                            <Calendar className="h-4 w-4 text-gray-600" />
+                            <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString())}</span></div>
+                        </div>
+                    </div>
 
                     <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
                         <Link href={`/messages/${message.id}`}>
@@ -33,7 +41,7 @@ export default async function MessageArcheveque() {
                         <Link href="/messages">
                             <Button
                                 variant="outline"
-                                className='w-full bg-transparent hover:bg-transparent border-black font-bold'
+                                className='w-full bg-transparent hover:bg-transparent border-black font-bold '
                             >Voir tous les messages</Button>
                         </Link>
                     </div>
