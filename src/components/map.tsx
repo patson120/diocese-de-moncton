@@ -31,7 +31,10 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
     loader.load().then(() => {
       if (mapRef.current && !googleMapRef.current) {
         map = new google.maps.Map(mapRef.current, {
-          center: { lat: parseFloat(first!.gps.split(";")[0]), lng: parseFloat(first!.gps.split(";")[1]) },
+          center: { 
+            lat: first!.gps ? parseFloat(first!.gps.split(";")[0]) : 46.091091,
+            lng: first!.gps ? parseFloat(first!.gps.split(";")[1]) : -64.781880
+          },
           zoom: 12,
           styles: [
             {
@@ -50,7 +53,10 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
         parishes.forEach((parish) => {
           const marker = new google.maps.Marker({
-            position: { lat: parseFloat(parish.gps.split(";")[0]), lng: parseFloat(parish.gps.split(";")[1]) },
+            position: { 
+              lat: parish.gps ? parseFloat(parish.gps.split(";")[0]) : 46.091091, 
+              lng: parish.gps ? parseFloat(parish.gps.split(";")[1]) : -64.781880
+            },
             map,
             title: parish.nom,
             animation: google.maps.Animation.DROP,

@@ -55,10 +55,10 @@ export default async function Evenements(
                                     Mois de {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1]}
                                 </h3>
                             }
-                            <Link href="/evenements/1" className="hidden md:block">
+                            <Link href={`/evenements/${item.id}`} className="hidden md:block">
                                 <EventItem data={item} row />
                             </Link>
-                            <Link href="/evenements/1" className="md:hidden">
+                            <Link href={`/evenements/${item.id}`} className="md:hidden">
                                 <EventItem data={item} row={false} />
                             </Link>
                         </div>

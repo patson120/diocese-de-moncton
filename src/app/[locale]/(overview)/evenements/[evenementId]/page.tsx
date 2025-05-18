@@ -16,6 +16,7 @@ export default async function Page(props: {
 }) {
     const { evenementId } = await props.params;
     const event: TypeEvent = await fetchEvents(`/${evenementId}`)
+    
     // const paroisses: Paroisse[] = await fetchParoisses(`?type_paroisse_id=${paroisse.type_paroisse_id}`)
 
     return (
@@ -60,7 +61,7 @@ export default async function Page(props: {
                         </div>
                         <div className='flex flex-wrap gap-3 items-center font-light text-xs my-4'>
                             <label htmlFor="type_evenement" className='body-2 font-bold w-full md:w-auto'><Text keyString='type_event' /></label>
-                            <p className='px-4 py-3 text-gray text-sm rounded-xl border border-gray-100'>{event.categorie.intitule_fr}</p>
+                            <p className='px-4 py-3 text-gray text-sm rounded-xl border border-gray-100'>{event?.categorie?.intitule_fr}</p>
                         </div>
                         <div className='my-4 border-b border-b-[#E5E5E5]' />
                         <div className='flex flex-col md:flex-row gap-8 mt-4'>
@@ -74,7 +75,9 @@ export default async function Page(props: {
                             <div className='space-y-1'> 
                                 <div className='flex space-x-1'>
                                     <Timer className="h-5 w-5 text-gray-400" />
-                                    <label htmlFor="heure" className=' text-gray-500'><Text keyString='hour' /></label>
+                                    <label htmlFor="heure" className=' text-gray-500'>
+                                        <Text keyString='heure' />
+                                    </label>
                                 </div>
                                 <h1 className='text-base font-semibold'>{event.heure_event}</h1>
                             </div>
@@ -87,7 +90,9 @@ export default async function Page(props: {
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString='lieu_map' /></h1>
                         {/* Map */}
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
-                            <MapSection paroisses={[event.paroisse]} />
+                            {/**
+                             */}
+                             <MapSection paroisses={[event.paroisse]} />
                         </div>
                     </div>
                 </div>
