@@ -32,8 +32,8 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
       if (mapRef.current && !googleMapRef.current) {
         map = new google.maps.Map(mapRef.current, {
           center: { 
-            lat: first!.gps ? parseFloat(first!.gps.split(";")[0]) : 46.091091,
-            lng: first!.gps ? parseFloat(first!.gps.split(";")[1]) : -64.781880
+            lat: first ? parseFloat(first!.gps?.split(";")[0]) : 46.091091,
+            lng: first ? parseFloat(first!.gps?.split(";")[1]) : -64.781880
           },
           zoom: 12,
           styles: [
@@ -54,11 +54,11 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
         parishes.forEach((parish) => {
           const marker = new google.maps.Marker({
             position: { 
-              lat: parish.gps ? parseFloat(parish.gps.split(";")[0]) : 46.091091, 
-              lng: parish.gps ? parseFloat(parish.gps.split(";")[1]) : -64.781880
+              lat: parish?.gps ? parseFloat(parish?.gps.split(";")[0]) : 46.091091, 
+              lng: parish?.gps ? parseFloat(parish?.gps.split(";")[1]) : -64.781880
             },
             map,
-            title: parish.nom,
+            title: parish?.nom || '',
             animation: google.maps.Animation.DROP,
           });
 
@@ -66,7 +66,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
             onParishSelect(parish);
           });
 
-          markersRef.current[parish.id] = marker;
+          markersRef.current[parish?.id] = marker;
         });
       }
     });
@@ -104,9 +104,8 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
         googleMapRef.current.setZoom(15);
       }
     }
-    // console.info(first?.nom, first?.gps);
 
-  }, [first?.gps]);
+  }, [first?.gps!]);
 
   return <div ref={mapRef} className="h-full w-full" />;
 }
