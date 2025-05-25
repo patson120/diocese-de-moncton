@@ -140,7 +140,7 @@ export default async function Page(props: {
                                             <div className="h-32 w-48 shrink-0 relative overflow-hidden rounded-md bg-gray-100">
                                                 <Image
                                                     alt={`${paroisse.nom}`}
-                                                    src={'/assets/img/paroisse-1.png'}
+                                                    src={item.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.galerie[0].path}` : '/assets/img/paroisse-1.png'}
                                                     fill
                                                     style={{
                                                         objectFit: 'cover',
