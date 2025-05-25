@@ -8,7 +8,7 @@ export default function ParoisseItem({ data }: { data: Paroisse }) {
             <div className='h-[80px] w-[80px] shrink-0 rounded-lg bg-gray-100 overflow-hidden relative'>
                 <Image
                     alt={data.nom}
-                    src={'/assets/img/paroisse-1.png'}
+                    src={ data.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${data.galerie[0].path}` : '/assets/img/paroisse-1.png'}
                     fill
                     style={{
                         objectFit: 'cover'

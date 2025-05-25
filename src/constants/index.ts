@@ -1,7 +1,8 @@
 import {  MenuType } from "@/types"
 
 export const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = 'AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVWyJnYlg'
- export const BASE_URL = "https://diocese.wds-project.com/api"
+export const BASE_URL = "https://diocese.wds-project.com/api"
+
 
 export const archidiocese: MenuType[] = [
     {

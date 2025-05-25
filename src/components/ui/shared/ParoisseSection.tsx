@@ -7,9 +7,13 @@ import SearchParoisses from './SearchParoisses'
 import { ParoisseItemSkeleton } from './skeletons'
 
 export default async function ParoisseSection({ query, gps}: { query: string, gps:string}) {
-    const response = await fetchParoisses(`?paginate=4&nom=${query}&gps=${gps}`)
+
+    let params = '?paginate=4'
+    if (query) params += `&nom=${query}`
+    if (gps) params += `&gps=${gps}`
+    const response = await fetchParoisses(`${params}`)
     const paroisses: Paroisse[] = response.data
-    
+
     return (
         <div className="vertical-margin" >
             <h1 className="heading-3 mb-3">Trouver une paroisse</h1>

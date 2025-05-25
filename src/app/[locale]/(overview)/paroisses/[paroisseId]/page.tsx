@@ -52,7 +52,7 @@ export default async function Page(props: {
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
                                 alt="Image de détail de l'évènement"
-                                src="/assets/img/paroisse-detail.png"
+                                src={paroisse.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${paroisse.galerie[0].path}` : "/assets/img/paroisse-detail.png"}
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />

@@ -38,7 +38,9 @@ export default function SearchParoisses() {
 
                         const params = new URLSearchParams(searchParams)
                         params.set('gps', `${position.coords.latitude};${position.coords.longitude}`)
-                        replace(`${pathname}?${params.toString()}#evenements`)
+                        // params.set('gps', "48.8566;2.3522")
+                        // replace(`${pathname}?${params.toString()}#evenements`)
+                        replace(`${pathname}?${params.toString()}`)
                     }
                     setIsLoading(false)
                 },
