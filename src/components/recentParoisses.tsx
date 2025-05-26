@@ -8,7 +8,7 @@ export default function RecentParoisses({ paroisses, total }: { paroisses: Paroi
     return (
         <div className="col-span-3 md:col-span-1 flex flex-col justify-between gap-4 lg:gap-5">
             <div className="flex flex-col gap-4">
-                {
+                {  paroisses.length &&
                     paroisses.map((item, index) => (
                         <Link key={index} href={`/paroisses/${item.id}`}>
                             <ParoisseItem data={item} />

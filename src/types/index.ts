@@ -29,6 +29,7 @@ export type TypeEvent = {
     updated_at: string;
     paroisse: Paroisse;
     categorie: Category;
+    galerie: Image[];
 }
 
 export type Category = {

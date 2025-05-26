@@ -1,14 +1,13 @@
 
 import { fetchEvents } from '@/_lib/data';
 import { formatDateToLocal } from '@/_lib/utils';
+import Text from '@/components/Text';
 import Breadcrumbs from '@/components/ui/breadcrumbs';
-import { Button } from '@/components/ui/shared/button';
 import MapSection from '@/components/ui/shared/MapSection';
 import { TypeEvent } from '@/types';
 import { Calendar, Timer } from 'lucide-react';
 import Image from 'next/image';
 import Buttons from './Buttons';
-import Text from '@/components/Text';
 
 
 export default async function Page(props: {
@@ -47,7 +46,7 @@ export default async function Page(props: {
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
                                 alt={`${event.titre_fr}/${event.titre_en}`}
-                                src="/assets/img/event-details.png"
+                                src={event.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${event.galerie[0].path}` : "/assets/img/event-details.png"}
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
