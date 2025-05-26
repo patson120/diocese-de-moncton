@@ -14,7 +14,7 @@ export default async function ImportantPost() {
             <div className='relative h-72 xl:h-96 w-full rounded-2xl overflow-hidden bg-gray-100'>
                 <Image
                     alt={`${actualite.titre_fr}/${actualite.titre_en}`}
-                    src="/assets/img/new-4.png"
+                    src={actualite.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${actualite.galerie[0].path}` :"/assets/img/new-4.png"}
                     fill
                     style={{
                         objectFit: 'cover',
