@@ -12,7 +12,7 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
     if (query) params += `&nom=${query}`
     if (gps) params += `&gps=${gps}`
     const response = await fetchParoisses(`${params}`)
-    const paroisses: Paroisse[] = response.data
+    const paroisses: Paroisse[] = response.data || []
 
     return (
         <div className="vertical-margin" >

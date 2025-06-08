@@ -3,7 +3,7 @@
 import { usePathname, useRouter } from '@/i18n/routing'
 import { SlidersHorizontalIcon } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Filter() {
     const searchParams = useSearchParams()
@@ -12,7 +12,7 @@ export default function Filter() {
 
 
     const filters = [
-        { label: 'Tous', value: null },
+        { label: 'Tous', value: -1 },
         { label: 'En activité', value: 1 },
         { label: 'Fermées', value: 0 },
     ]
@@ -26,9 +26,14 @@ export default function Filter() {
         }
         else {
             params.delete('statut')
+            setTimeout(() => {
+                window.location.reload();
+            },1);
         }
         replace(`${pathname}?${params.toString()}`)
     }
+
+    
     return (
         <div className='flex flex-wrap items-center gap-2 !text-nowrap text-[10px]'>
             <div className='flex items-center gap-[6px]'>

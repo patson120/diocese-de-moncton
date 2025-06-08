@@ -19,7 +19,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
   const [first, setfirst] = useState<Paroisse>(selectedParish!)
 
-
+  
   useEffect(() => {
     setfirst(prev => ({ ...prev, ...parishes[0] }))
 
@@ -71,8 +71,6 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
       }
     });
 
-
-
   }, [parishes, onParishSelect, first?.gps]);
 
   // useEffect(() => {
@@ -92,8 +90,8 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
       let marker = markersRef.current[first.id];
       if (!marker) {
         marker = new google.maps.Marker({
-          // position: { lat: parseFloat(first.gps.split(";")[0]), lng: parseFloat(first.gps.split(";")[1]) },
-          position: { lat: 0.667033, lng: 37.711689 },
+          position: { lat: parseFloat(first.gps.split(";")[0]), lng: parseFloat(first.gps.split(";")[1]) },
+          // position: { lat: 0.667033, lng: 37.711689 },
           map,
           title: first.nom,
           animation: google.maps.Animation.DROP,

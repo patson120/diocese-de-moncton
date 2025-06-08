@@ -50,6 +50,12 @@ export default function SearchComp() {
         );
     }
 
+    const deletePosition = () => {
+        const params = new URLSearchParams(searchParams)
+        params.delete('gps')
+        replace(`${pathname}?${params.toString()}`)
+    }
+
 
     // Récupération de la position géographique de l'utilisateur
     useEffect(() => {
@@ -77,9 +83,15 @@ export default function SearchComp() {
 
                     <Search className="mr-2 h-4 w-4 text-gray-300 absolute top-3 left-3" />
                 </div>
-                <Button onClick={getLocation} variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]'>
+                <Button onClick={() => {
+                    if (searchParams.get('gps')?.toString()) { deletePosition() } 
+                    else { getLocation() }  
+                    }
+                    } variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]'>
                     <MapPin className="md:mr-2 h-4 w-4 text-white" />
-                    <span className='hidden md:flex text-white'>Prendre ma position</span>
+                    <span className='hidden md:flex text-white'>
+                        { searchParams.get('gps')?.toString() ? 'Annuler ma position' : 'Prendre ma position' }
+                    </span>
                 </Button>
             </div>
         </div>
