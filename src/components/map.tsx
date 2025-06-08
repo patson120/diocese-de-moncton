@@ -4,7 +4,6 @@ import { Paroisse } from '@/types';
 import { Loader } from '@googlemaps/js-api-loader';
 import { useEffect, useRef, useState } from 'react';
 
-
 interface MapProps {
   parishes: Paroisse[];
   selectedParish: Paroisse | null;
@@ -19,7 +18,6 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
   const [first, setfirst] = useState<Paroisse>(selectedParish!)
 
-  
   useEffect(() => {
     setfirst(prev => ({ ...prev, ...parishes[0] }))
 
@@ -85,13 +83,11 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
   useEffect(() => {
 
-
     if (first && googleMapRef.current) {
       let marker = markersRef.current[first.id];
       if (!marker) {
         marker = new google.maps.Marker({
           position: { lat: parseFloat(first.gps.split(";")[0]), lng: parseFloat(first.gps.split(";")[1]) },
-          // position: { lat: 0.667033, lng: 37.711689 },
           map,
           title: first.nom,
           animation: google.maps.Animation.DROP,

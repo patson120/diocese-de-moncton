@@ -7,6 +7,7 @@ import { Suspense } from 'react'
 import Filter from './Filter'
 import Paroisses from './paroisses'
 import SearchComp from './SearchComp'
+import { log } from 'console'
 
 
 export default async function Page(props: {

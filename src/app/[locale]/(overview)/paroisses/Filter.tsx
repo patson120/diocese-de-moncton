@@ -12,7 +12,7 @@ export default function Filter() {
 
 
     const filters = [
-        { label: 'Tous', value: -1 },
+        { label: 'Tous', value: null },
         { label: 'En activité', value: 1 },
         { label: 'Fermées', value: 0 },
     ]
@@ -26,13 +26,10 @@ export default function Filter() {
         }
         else {
             params.delete('statut')
-            setTimeout(() => {
-                window.location.reload();
-            },1);
         }
         replace(`${pathname}?${params.toString()}`)
+        // window.location.reload()
     }
-
     
     return (
         <div className='flex flex-wrap items-center gap-2 !text-nowrap text-[10px]'>
