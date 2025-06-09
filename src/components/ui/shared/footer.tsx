@@ -92,7 +92,7 @@ export default function Footer() {
         <div className='container max-margin py-6  flex flex-col md:flex-row md:justify-between gap-5 md:gap-3'>
           <div className='order-1 md:order-2 pt-1 '>
             <p className='body-3 text-center md:text-left text-[#B5B5B5]'>© {date.getFullYear()} Diocèse Moncton - Tous droits reservés</p>
-            <p className='body-3 text-center md:text-left text-[#B5B5B5] text-xs'>Développé par <a href="http://www.linkedin.com/in/hadriengayap/" target="_blank" rel="noopener noreferrer">Hadrien GAYAP</a>. E-mail: <a href="mailto:hadriengayap@gmail.com">hadriengayap@gmail.com</a> </p>
+            <p className='body-3 text-center md:text-left text-[#B5B5B5] text-xs'>Développé par <a href="http://www.linkedin.com/in/hadriengayap/" target="_blank" rel="noopener noreferrer">Acadie Intelligent Inc.</a>. E-mail: <a href="mailto:hadrien.gayap@acadieintelligent.ca">hadrien.gayap@acadieintelligent.ca</a> </p>
           </div>
           <div className='md:order-2  flex justify-center items-center gap-4 lg:gap-6'>
             <FacebookIcon className="h-4 w-4 md:h-6 md:w-6 !text-[#B5B5B5]" />
