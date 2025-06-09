@@ -13,9 +13,7 @@ const ActionGrace = () => {
                             alt="Faire un don maintenant"
                             src="/assets/img/make-gift.png"
                             fill
-                            style={{
-                                objectFit: 'cover'
-                            }}
+                            style={{objectFit: 'cover'}}
                         />
                     </div>
                     <div className='px-4 md:px-8 py-10 flex flex-col justify-center items-start text-black space-y-8'>

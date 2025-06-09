@@ -21,7 +21,7 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className='body-3 text-[#B5B5B5]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora explicabo fugiat corporis.</p>
+            <p className='body-3 text-[#B5B5B5]'>Site officiel de l'Archidiocèse de Moncton</p>
           </div>
           <div className='space-y-4'>
             <h2 className='font-medium text-xs md:text-sm xl:text-base text-white uppercase'>Actualités</h2>
