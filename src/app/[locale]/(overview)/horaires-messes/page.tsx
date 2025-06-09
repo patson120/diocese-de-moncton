@@ -1,32 +1,23 @@
-
+'use client'
 import { fetchHoraireMesse } from '@/_lib/data'
 import ActionGrace from '@/components/ui/shared/ActionGrace'
 import { HoraireMesse } from '@/types'
 import { Search } from "lucide-react"
 import Image from 'next/image'
 import HorairesSection from './HorairesSection'
+import { useEffect, useState } from 'react'
 
-export default async function Page() {
-  const horaires: HoraireMesse[] = await fetchHoraireMesse()  
+export default function Page() {
+  const [horaires, setHoraires] = useState<HoraireMesse[]>([])
 
-  // const [selectedHour, setSelectedHour] = useState<HoraireMesse | null>()
-  // const [hours, setHours] = useState<HoraireMesse[]>([])
-  // const [hoursCopy, setHoursCopy] = useState<HoraireMesse[]>([])
-  // const [day, setDay] = useState('')
+  const getHoraireMesses = async () => {
+    const response: HoraireMesse[] = await fetchHoraireMesse()
+    setHoraires(response)
+  }
 
-  // const getHoraireMesses = async () => {
-  //   const response: HoraireMesse[] = await fetchHoraireMesse()
-  //   setDay(response[0].jour)
-  //   setHoursCopy(response)
-  // }
-
-  // useEffect(() => {
-  //   getHoraireMesses()
-  // }, [])
-
-  // useEffect(() => {
-  //   setHours(hoursCopy.filter(h => h.jour === day))
-  // }, [day])
+  useEffect(() => {
+    getHoraireMesses()
+  }, [])
 
   return (
     <main>
@@ -57,9 +48,7 @@ export default async function Page() {
       <section className='container max-margin py-0 pb-10 md:pb-20'>
 
         <div className='mt-6 lg:mt-12'></div>
-        
-        <HorairesSection horaires={horaires} />
-
+         <HorairesSection horaires={horaires} />
       </section>
       {/* Action de grace */}
       <ActionGrace />
