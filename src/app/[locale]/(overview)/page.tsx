@@ -26,6 +26,8 @@ export default async function Home(props: {
   const query = searchParams?.query || '';
   const gps = searchParams?.gps || '';
   
+  
+  
   return (
     <main className="bg-white">
       <HeroSection />
