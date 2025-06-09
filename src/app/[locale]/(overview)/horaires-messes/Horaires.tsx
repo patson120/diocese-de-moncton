@@ -10,6 +10,12 @@ export default function Horaires({ horaires }: { horaires: HoraireMesse[]}) {
         <div className="mt-8 lg:mt-16 flex flex-col justify-center items-center">
             <div className='w-full md:w-3/4 lg:w-1/2 flex flex-col gap-4'>
                 {
+                    horaires.length === 0 &&
+                    <div>
+                        <p className='text-muted-foreground text-center'>Aucun horaire de messe disponible pour le moment.</p>
+                    </div>
+                }
+                {
                     horaires.map((item, index) => (
                         <div key={`${item.id}-${index}`}>
                             <div className={`${selectedHour?.id === item.id ? 'bg-[#F9F4F5]' : ''} rounded-[8px] h-12 border border-[#D9D9D9] p-3 flex justify-between items-center`}>
