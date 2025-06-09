@@ -1,10 +1,13 @@
 'use client';
 
+import { fetchMessages } from '@/_lib/data';
 import { Button } from '@/components/ui/shared/button';
 import { Link, useRouter } from '@/i18n/routing';
+import { Message } from '@/types';
 import { Search } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Text from '../Text';
 
 const slides = [
   {
@@ -36,6 +39,9 @@ export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter()
 
+  const [message, setMessage] = useState<Message | null>(null);
+
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -54,6 +60,15 @@ export function HeroSection() {
   const navigateTo = (link: string) => {
     router.push(link);
   }
+
+  useEffect(() => {
+    (
+      async () => {
+        const response = await fetchMessages(`?paginate=1&etat=1`)
+        setMessage(response.data[0]);
+      }
+    )();
+  }, []);
 
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
@@ -119,7 +134,13 @@ export function HeroSection() {
                       </div>
                       <div className='space-y-2 w-2/3'>
                         <h5 className='text-xs text-white font-extrabold'>Message de l&lsquo;évêque</h5>
-                        <p className='body-3 text-gray-200 line-clamp-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio facilis neque voluptatibus esse dolorum enim quo non. Ea, vel! Minus.</p>
+                        <div onClick={() => { navigateTo(`/messages/${message?.id}`) }} className='cursor-pointer'>
+                          {
+                            message ?
+                            <Text className='body max-w-xl line-clamp-2 rounded-md p-1 bg-white/20' labelEn={message?.message_en} labelFr={message?.message_fr} />
+                            : <p className='text-xs text-muted'>Chargement du message...</p>
+                          }
+                        </div>
                         <h5 className='text-[11px] text-white font-extrabold'>Mgr Guy Desrochers</h5>
                       </div>
                     </div>
