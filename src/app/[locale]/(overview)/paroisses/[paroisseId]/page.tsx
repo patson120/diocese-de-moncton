@@ -1,5 +1,6 @@
 
 import { fetchParoisses } from "@/_lib/data";
+import Text from "@/components/Text";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
 
@@ -76,7 +77,12 @@ export default async function Page(props: {
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <h1 className='heading-4 font-extrabold'>{paroisse.nom}</h1>
-                            <small className='text-gray uppercase mb-4'>Unité pastorale: {paroisse.type.intitule_fr} </small>
+                            <p className="flex flex-row gap-2">
+                                <small className='text-gray uppercase mb-4'>Unité pastorale: </small>
+                                <div className="text-sm">
+                                    <Text labelFr={paroisse.type.intitule_fr} labelEn={paroisse.type.intitule_en} />
+                                </div>
+                            </p>
                             <p className='body-2 text-gray'>{paroisse.histoire}</p>
                             {/* <span className='font-bold cursor-pointer'>voir plus</span> */}
                         </div>
