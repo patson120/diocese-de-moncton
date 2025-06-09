@@ -75,8 +75,8 @@ export default async function Page(props: {
                     </div>
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>{paroisse.nom}</h1>
-                            <small className='text-gray uppercase'>Unité pastorale: {paroisse.type.intitule_fr} </small>
+                            <h1 className='heading-4 font-extrabold'>{paroisse.nom}</h1>
+                            <small className='text-gray uppercase mb-4'>Unité pastorale: {paroisse.type.intitule_fr} </small>
                             <p className='body-2 text-gray'>{paroisse.histoire}</p>
                             {/* <span className='font-bold cursor-pointer'>voir plus</span> */}
                         </div>
