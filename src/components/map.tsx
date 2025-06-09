@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from '@/i18n/routing';
 import { Paroisse } from '@/types';
 import { Loader } from '@googlemaps/js-api-loader';
 import { useEffect, useRef, useState } from 'react';
@@ -15,6 +16,8 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
   const googleMapRef = useRef<google.maps.Map | null>(null);
   const markersRef = useRef<{ [key: number]: google.maps.Marker }>({});
   let map: google.maps.Map;
+
+  const router = useRouter();
 
   const [first, setfirst] = useState<Paroisse>(selectedParish!)
 
@@ -62,6 +65,9 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
           marker.addListener('click', () => {
             onParishSelect(parish);
+            // googleMapRef.current?.panTo(marker.getPosition()!);
+            // googleMapRef.current?.setZoom(15);
+            router.push(`/paroisses/${parish.id}`);
           });
 
           markersRef.current[parish?.id] = marker;
@@ -91,6 +97,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
           map,
           title: first.nom,
           animation: google.maps.Animation.DROP,
+          clickable: true,
         });
       }
       else {

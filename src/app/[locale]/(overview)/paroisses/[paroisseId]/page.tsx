@@ -63,12 +63,14 @@ export default async function Page(props: {
                                     Visiter le site internet
                                 </Button>
                             </Link>
-                            <a href={paroisse.lien_youtube} target="_blank">
-                                <Button variant='outline' size="sm" className="w-full md:w-auto text-xs lg:text-sm">
-                                    <Play className="mr-2 h-4 w-6" />
-                                    Voir la paroisse en vidéo
-                                </Button>
-                            </a>
+                            {/** 
+                                <a href={paroisse.lien_youtube} target="_blank">
+                                    <Button variant='outline' size="sm" className="w-full md:w-auto text-xs lg:text-sm">
+                                        <Play className="mr-2 h-4 w-6" />
+                                        Voir la paroisse en vidéo
+                                    </Button>
+                                </a>
+                             */}
                         </div>
                     </div>
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
