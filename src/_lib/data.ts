@@ -130,9 +130,9 @@ export async function sendMessage(body: any) {
     }
 }
 
-export async function fetchMembres() {
+export async function fetchMembres(params: string = '') {
     try {
-        let url = `${BASE_URL}/membres`;
+        let url = `${BASE_URL}/membres${params}`;
         const headers = {}
         const body = {}
         return await fetchAPI(url, 'GET', headers, body);

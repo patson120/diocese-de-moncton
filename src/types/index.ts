@@ -137,7 +137,10 @@ export type Membre = {
     prenom: string;
     poste: string;
     coordonnees: string;
+    description_fr: string;
+    description_en: string;
     etat: number;
+    unites: TypeParoisse[]
     created_at: string;
     updated_at: string;
     categorie: Category;
