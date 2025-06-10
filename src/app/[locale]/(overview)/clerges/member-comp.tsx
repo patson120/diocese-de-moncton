@@ -63,10 +63,10 @@ const PretresDialog = ({
     member?: Membre;
 }) => {
     return <Dialog open={open} onOpenChange={onOpenChange} >
-        <DialogContent className="w-full md:w-2/5">
+        <DialogContent className="w-full md:w-2/5 max-h-lvh overflow-y-scroll [&::-webkit-scrollbar]:w-2">
             <DialogDescription>
-                <div className="flex flex-row gap-4">
-                    <div className="w-[140px]">
+                <div className="flex flex-col md:flex-row gap-4">
+                    <div className="w-[140px] md:w-full flex flex-row md:flex-col gap-3 ">
                         <div className='h-[140px] w-[140px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
                             {
                                 member?.image ?
@@ -91,27 +91,29 @@ const PretresDialog = ({
                                 />
                             }
                         </div>
-                        <div className="mb-3 mt-2">
-                            <h5 className='body-2 text-black font-bold'>{member?.nom}</h5>
-                            <p className='body-3'>
-                                { member?.etat === 1 && "En activité" }
-                                { member?.etat === 0 && "En retraite" }
-                                { member?.etat === -1 && "Décédé" }
-                            </p>
-                        </div>
                         <div>
-                            <h5 className='body-2 text-black font-bold'>Coordonnées</h5>
-                            <p className='body-2'>{member?.coordonnees}</p>
-                        </div>
-                        <div>
-                            <h4 className="text-lg font-bold">Fonctions</h4>
-                            <p className="text-gray">{member?.poste}</p>
+                            <div className="mb-3 mt-2">
+                                <h5 className='body-2 text-black font-bold'>{member?.nom}</h5>
+                                <p className='body-3'>
+                                    { member?.etat === 1 && "En activité" }
+                                    { member?.etat === 0 && "En retraite" }
+                                    { member?.etat === -1 && "Décédé" }
+                                </p>
+                            </div>
+                            <div>
+                                <h5 className='body-2 text-black font-bold'>Coordonnées</h5>
+                                <p className='body-2'>{member?.coordonnees}</p>
+                            </div>
+                            <div>
+                                <h4 className="text-lg font-bold">Fonctions</h4>
+                                <p className="text-gray">{member?.poste}</p>
+                            </div>
                         </div>
                     </div>
-                    <div className="flex-1">
+                    <div className="w-full">
                         <div>
                             <h5 className='body-2 text-black font-bold'>Biographie</h5>
-                            <Text className='text-gray' labelEn={member?.description_en} labelFr={member?.description_fr}  />
+                            <Text className='text-gray w-full' labelEn={member?.description_en} labelFr={member?.description_fr}  />
                             </div>
                     </div>
                 </div>
