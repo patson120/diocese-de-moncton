@@ -63,7 +63,7 @@ const PretresDialog = ({
     member?: Membre;
 }) => {
     return <Dialog open={open} onOpenChange={onOpenChange} >
-        <DialogContent className="w-full md:w-2/5 max-h-lvh overflow-y-scroll [&::-webkit-scrollbar]:w-2">
+        <DialogContent className="w-full md:w-2/5 max-h-[540px] overflow-y-scroll [&::-webkit-scrollbar]:w-2">
             <DialogDescription>
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="w-[140px] md:w-full flex flex-row md:flex-col gap-3 ">
