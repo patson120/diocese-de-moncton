@@ -23,7 +23,7 @@ const slides = [
     image: './assets/img/hero-image-2.png',
     title: 'Trouvez une paroisse près de chez vous',
     description: 'Notre diocèse possède environ une vingtaine de paroisse partout à Moncton, trouvez la votre.',
-    cta: [{ text: 'Trouver une paroisser', icon: true, href: '/paroisses' }]
+    cta: [{ text: 'Trouver une paroisse', icon: true, href: '/paroisses' }]
   },
   {
     image: './assets/img/hero-image-1.png',
