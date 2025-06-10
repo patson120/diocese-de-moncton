@@ -67,7 +67,7 @@ const PretresDialog = ({
             <DialogDescription>
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="w-[140px] md:w-full flex flex-row md:flex-col gap-3 ">
-                        <div className='h-[140px] w-[140px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
+                        <div className='h-[140px] w-[140px] shrink-0 relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
                             {
                                 member?.image ?
                                 <Image
