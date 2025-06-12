@@ -67,7 +67,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
             onParishSelect(parish);
             // googleMapRef.current?.panTo(marker.getPosition()!);
             // googleMapRef.current?.setZoom(15);
-            if (parish?.id) {router.push(`/paroisses/${parish?.id}`)}
+            router.push(`/paroisses/${parish?.id}`)
           });
 
           markersRef.current[parish?.id] = marker;

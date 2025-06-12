@@ -53,7 +53,7 @@ export default async function Page(props: {
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
                                 alt="Image de détail de l'évènement"
-                                src={paroisse.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${paroisse.galerie[0].path}` : "/assets/img/paroisse-detail.png"}
+                                src={paroisse.galerie?.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${paroisse.galerie[0].path}` : "/assets/img/paroisse-detail.png"}
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
@@ -80,7 +80,7 @@ export default async function Page(props: {
                             <p className="flex flex-row gap-2">
                                 <small className='text-gray uppercase mb-4'>Unité pastorale: </small>
                                 <div className="text-sm">
-                                    <Text labelFr={paroisse.type.intitule_fr} labelEn={paroisse.type.intitule_en} />
+                                    <Text labelFr={paroisse.type?.intitule_fr!} labelEn={paroisse.type?.intitule_en!} />
                                 </div>
                             </p>
                             <p className='body-2 text-gray'>{paroisse.histoire}</p>
@@ -148,7 +148,7 @@ export default async function Page(props: {
                                             <div className="h-32 w-48 shrink-0 relative overflow-hidden rounded-md bg-gray-100">
                                                 <Image
                                                     alt={`${paroisse.nom}`}
-                                                    src={item.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.galerie[0].path}` : '/assets/img/paroisse-1.png'}
+                                                    src={item.galerie?.length  ? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.galerie[0].path}` : '/assets/img/paroisse-1.png'}
                                                     fill
                                                     style={{
                                                         objectFit: 'cover',
