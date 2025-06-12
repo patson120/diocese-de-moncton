@@ -139,7 +139,7 @@ export default async function Page(props: {
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
                             <MapSection paroisses={[paroisse]} />
                         </div>
-                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses</h1>
+                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses de l'unité</h1>
                         <div>
                             <div className="flex flex-nowrap overflow-x-scroll xl:overflow-x-hidden gap-4 pb-5">
                                 {
