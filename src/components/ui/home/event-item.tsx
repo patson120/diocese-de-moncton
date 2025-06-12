@@ -19,10 +19,13 @@ export default function EventItem({ data, row }: { data: TypeEvent, row?: boolea
                 <div className={`${row ? 'hidden' : 'flex'}`}></div>
                 <div className={`${row ? 'pl-4' : 'pt-2 pl-2 md:pl-3'}`}>
                     <h3 className='body-2 font-extrabold line-clamp-1'>
-                        <Text labelEn={data.titre_en} labelFr={data.titre_fr} />
+                        <Text labelEn={data?.titre_en} labelFr={data?.titre_fr} />
                     </h3>
                     <p className='legend text-gray-500'>Type:
-                        <Text labelEn={data.categorie.intitule_en} labelFr={data.categorie.intitule_fr} />
+                        <Text labelEn={data?.categorie?.intitule_en} labelFr={data?.categorie?.intitule_fr} />
+                    </p>
+                    <p className='legend text-gray-500'>Contact:
+                        <span className='font-semibold'> {data.contact} </span>
                     </p>
                 </div>
             </div>
