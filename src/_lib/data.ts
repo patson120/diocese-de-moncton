@@ -34,8 +34,8 @@ export async function fetchEvents(params: string = "") {
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);
-
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Database Error:', error);
         throw new Error('Failed to fetch evenements data.');
     }
