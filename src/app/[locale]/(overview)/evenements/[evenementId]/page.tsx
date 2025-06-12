@@ -5,7 +5,7 @@ import Text from '@/components/Text';
 import Breadcrumbs from '@/components/ui/breadcrumbs';
 import MapSection from '@/components/ui/shared/MapSection';
 import { TypeEvent } from '@/types';
-import { Calendar, Timer } from 'lucide-react';
+import { Calendar, PhoneIcon, Timer } from 'lucide-react';
 import Image from 'next/image';
 import Buttons from './Buttons';
 
@@ -79,6 +79,13 @@ export default async function Page(props: {
                                     </label>
                                 </div>
                                 <h1 className='text-base font-semibold'>{event.heure_event}</h1>
+                            </div>
+                            <div className='space-y-1'>
+                                <div className='flex items-center space-x-1'>
+                                    <PhoneIcon className="h-5 w-5 text-gray-400" />
+                                    <label htmlFor="date" className='text-gray'>Contact</label>
+                                </div>
+                                <h1 className='text-base font-semibold'>{event?.contact}</h1>
                             </div>
                         </div>
                         <div>
