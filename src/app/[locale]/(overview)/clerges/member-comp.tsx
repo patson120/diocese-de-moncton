@@ -38,7 +38,10 @@ export default function MemberComp( { membres }: { membres: Membre[]}){
                             }
                         </div>
                         <h1 className='body-2 font-bold'>{member.nom}</h1>
-                        <p className='body-2 text-gray'>{member.unites.length ? member.unites[0].intitule_fr : ''}</p>
+                        <Text className='body-2 text-gray' 
+                            labelEn={member?.unites.map((unite) => unite.intitule_en).join(', ')} 
+                            labelFr={member?.unites.map((unite) => unite.intitule_fr).join(', ')}
+                        />
                         <div className="">
                             <Button size={'sm'} variant={'link'} onClick={() => { setSelectedItem(member); setOpen(true) }} className="underline text-black px-0 ">
                                 Coordonnées
