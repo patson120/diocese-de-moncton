@@ -110,11 +110,20 @@ const PretresDialog = ({
                             </div>
                         </div>
                     </div>
-                    <div className="w-full">
+                    <div className="w-full flex-col gap-4">
+                        {
+                            member?.unites?.length &&
+                            <div>
+                                <h5 className='body-2 text-black font-bold'>Unités pastorales</h5>
+                                <Text className='text-gray w-full' 
+                                    labelEn={member?.unites.map((unite) => unite.intitule_en).join(', ')} 
+                                    labelFr={member?.unites.map((unite) => unite.intitule_fr).join(', ')}  />
+                            </div>
+                        }
                         <div>
                             <h5 className='body-2 text-black font-bold'>Biographie</h5>
                             <Text className='text-gray w-full' labelEn={member?.description_en} labelFr={member?.description_fr}  />
-                            </div>
+                        </div>
                     </div>
                 </div>
             </DialogDescription>
