@@ -36,7 +36,11 @@
         "pas_de_donnees": "No data available",
         "article_relatifs": "Related articles",
         "autres_msg": "Other messages",
-        "faire_don": "Make a donation"
+        "faire_don": "Make a donation",
+
+        "don_titre": "Support our mission",
+        "don_description": "Contribute to the life of our community by making an online donation. Every gesture counts!",
+        "don_btn": "Make a donation now"
     },
     "Index": {
         "hello": "Hello world"

@@ -37,7 +37,11 @@
         "pas_de_donnees": "Pas de donnees",
         "article_relatifs": "Articles relatifs",
         "autres_msg": "Autres messages",
-        "faire_don": "Faire un don"
+        "faire_don": "Faire un don",
+
+        "don_titre": "Soutenez notre mission",
+        "don_description": "Contribuez à la vie de notre communauté en faisant un don en ligne. Chaque geste compte!",
+        "don_btn": "Faire un don maintenant"
     },
     
     "Index": {
