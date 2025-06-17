@@ -22,7 +22,9 @@ const ActionGrace = () => {
                             <h1 className='heading-3 mb-2'>
                                 <Text className='text-inherit' keyString="don_titre" />
                             </h1>
-                            <p className="body-2 text-[#575757]">Contribuez à la vie de notre communauté en faisant un don en ligne. Chaque geste compte!</p>
+                            <p className="body-2 text-[#575757]">
+                                <Text className='text-inherit' keyString="don_description" />
+                            </p>
                         </div>
                         <div className='w-full md:w-auto flex'>
                             <Link href="/faire-un-don">
