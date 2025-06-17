@@ -15,42 +15,47 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
+import Text from '@/components/Text'
+import { useLocale } from 'next-intl'
 
-const sections = [
-    {
-        title: "Accueil",
-        items: [],
-        page: '/'
-    },
-    {
-        title: "Archidiocèse",
-        items: [...archidiocese]
-    },
-    {
-        title: "Sacrements",
-        items: [...sacrements]
-    },
-    {
-        title: "Evènements",
-        items: [],
-        // items: [...actualites]
-        page: '/evenements'
-    },
-    {
-        title: "Mouvements",
-        items: [...mouvements]
-    },
-    {
-        title: "Ressources",
-        items: [...ressources]
-    },
-]
+
 
 export default function Header() {
     const router = useRouter()
+    const localActive = useLocale()
 
     const [menus, setMenus] = useState<MenuType[]>([])
     const [isOpen, setIsOpen] = useState(false)
+
+    const sections = [
+        {
+            title: localActive == 'fr' ? "Accueil" : "Home",
+            items: [],
+            page: '/'
+        },
+        {
+            title: localActive == 'fr' ?  "Archidiocèse": "Archdiocese",
+            items: [...archidiocese]
+        },
+        {
+            title: localActive == 'fr' ?  "Sacrements": "Sacraments",
+            items: [...sacrements]
+        },
+        {
+            title: localActive == 'fr' ? "Evènements": "Events",
+            items: [],
+            // items: [...actualites]
+            page: '/evenements'
+        },
+        {
+            title: localActive == 'fr' ?  "Mouvements": "Movements",
+            items: [...mouvements]
+        },
+        {
+            title: localActive == 'fr' ?  "Ressources" : "Resources",
+            items: [...ressources]
+        },
+    ]
 
     const onMouseEvent = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, type: string): void => {
         const submenu = document.querySelector('#submenu') as HTMLDivElement
@@ -106,10 +111,10 @@ export default function Header() {
                             <div className='hidden md:flex justify-between'>
                                 <ul className='flex justify-center items-center space-x-3 text-xs md:text-sm lg:text-sm text-gray-500'>
                                     <li>
-                                        <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
+                                        <Link href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"><Text keyString={'adresse'} />: 224 St-George, Moncton, NB. E1C 0V1</Link>
                                     </li>
                                     <li className='info-section'>
-                                        <Link href="tel:+(506)857-9531">Tél: (506) 857-9531</Link>
+                                        <Link href="tel:+(506)857-9531"><Text keyString={'phone'} />: (506) 857-9531</Link>
                                     </li>
                                     <li className='info-section'>
                                         <Link href="mailto:webmestre@diocesemoncton.ca">Email: webmestre@diocesemoncton.ca</Link>
@@ -118,7 +123,7 @@ export default function Header() {
                                 <LanguageSelector />
                             </div>
                             <div className='md:hidden h-[50px] flex justify-center items-center'>
-                                <Link target='_blank' href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D">Adresse: 224 St-George, Moncton, NB. E1C 0V1</Link>
+                                <Link target='_blank' href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"><Text keyString={'adresse'} />: 224 St-George, Moncton, NB. E1C 0V1</Link>
                             </div>
                         </nav>
                     </div>
@@ -180,13 +185,25 @@ export default function Header() {
                             </Link>
 
                             <ul className='flex justify-center items-center space-x-4 body-3 text-gray-500'>
-                                <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/">Accueil</Link></li>
-                                <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Archidiocèse</li>
-                                <li onClick={()=> navigateTo("/sacrements")} onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Sacréments</li>
-                                <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'><Link href="/evenements">Évènements</Link></li>
+                                <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'>
+                                    <Link href="/"><Text className='text-inherit' keyString='accueil' /></Link>
+                                </li>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                    <Text className='text-inherit' keyString='archidiocese' />
+                                </li>
+                                <li onClick={()=> navigateTo("/sacrements")} onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                    <Text className='text-inherit' keyString='sacrements' />
+                                </li>
+                                <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'>
+                                    <Link href="/evenements"><Text className='text-inherit' keyString='evenements' /></Link>
+                                </li>
                                 {/* <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li> */}
-                                <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Mouvements</li>
-                                <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Ressources</li>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                    <Text className='text-inherit' keyString='mouvements' />
+                                </li>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                    <Text className='text-inherit' keyString='ressources' />
+                                </li>
                             </ul>
                             <div className='flex'>
                                 <Button onClick={() => {
@@ -195,7 +212,7 @@ export default function Header() {
                                 }}
                                     variant="outline" className='border border-primary hover:text-primary text-primary hover:bg-transparent bg-transparent body-3 font-extrabold py-2'>
                                     <Heart className="mr-2 h-4 w-4 xl:h-5 xl:w-5 text-primary" />
-                                    Faire un don
+                                    <Text className='text-inherit' keyString='faire_don' />
                                 </Button>
                                 {/* Contribuer à la mission */}
                             </div>

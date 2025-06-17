@@ -1,9 +1,25 @@
 {
     "app": {
-        "news": "News",
-        "events": "Our Events",
         "adresse": "Address",
         "phone": "Tel.",
+
+        "accueil": "Home",
+        "archidiocese": "Archdiocese",
+        "sacrements": "Sacraments",
+        "evenements": "Events",
+        "mouvements": "Movements",
+        "ressources": "Resources",
+        
+        "hero_first_paragraph": "Join us in our spiritual mission",
+
+        "news": "News",
+        "see_more_news": "See all the news",
+        "see_more": "See more",
+
+        "events": "Our Events",
+        "see_more_events":"See all the events",
+        "trouver_paroisse": "Find a parish",
+
         "msg_archeveque": "Archbishop's message",
         "publier_le": "Posted on",
         "next_msg": "Next message",
@@ -16,7 +32,8 @@
         "filtrer_resultat": "Filter results",
         "pas_de_donnees": "No data available",
         "article_relatifs": "Related articles",
-        "autres_msg": "Other messages"
+        "autres_msg": "Other messages",
+        "faire_don": "Make a donation"
     },
     "Index": {
         "hello": "Hello world"

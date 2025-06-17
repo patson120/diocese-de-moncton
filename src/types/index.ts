@@ -64,6 +64,7 @@ export type Paroisse = {
     etabli_le: number | null,
     ordonne_le: number | null,
     premier_cure: number | null,
+    statut: number,
 }
 
 export type TypeParoisse = {

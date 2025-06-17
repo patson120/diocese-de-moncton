@@ -61,8 +61,8 @@ export default async function Home(props: {
             <h1 className="heading-3"><Text keyString={"news"} /></h1>
             <Link href="/actualites">
               <Button variant='ghost' className="body-3 font-semibold p-0 hover:bg-transparent">
-                <span className="hidden md:block whitespace-nowrap">Voir toute l’actualité</span>
-                <span className="md:hidden">Voir plus</span>
+                <Text className="hidden md:block whitespace-nowrap" keyString="see_more_news"></Text>
+                <Text className="md:hidden" keyString="see_more"/>
                 <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
               </Button>
             </Link>
@@ -76,7 +76,8 @@ export default async function Home(props: {
           <h1 className="heading-3"><Text keyString={"events"} /></h1>
           <Link href='/evenements' className="hidden md:block" >
             <Button variant='ghost' className="body-3 font-semibold p-0 hover:bg-transparent">
-              Voir tous les évènements
+              <Text className="hidden md:block whitespace-nowrap" keyString="see_more_events"></Text>
+              <Text className="md:hidden" keyString="see_more"/>
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
           </Link>
@@ -92,7 +93,8 @@ export default async function Home(props: {
         </Suspense>
         <Link id="evenements" href='/evenements' className="block md:hidden mt-5" >
           <Button className="w-full md:py-6 text-sm md:text-base lg:text-xl">
-            Voir tous les évènements
+            <Text className="hidden md:block whitespace-nowrap" keyString="see_more_events"/>
+            <Text className="md:hidden" keyString="see_more"/>
             <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
           </Button>
         </Link>

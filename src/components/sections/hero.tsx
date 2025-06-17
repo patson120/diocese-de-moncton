@@ -2,42 +2,49 @@
 
 import { fetchMessages } from '@/_lib/data';
 import { Button } from '@/components/ui/shared/button';
-import { Link, useRouter } from '@/i18n/routing';
+import { useRouter } from '@/i18n/routing';
 import { Message } from '@/types';
 import { Search } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Text from '../Text';
+import { useLocale } from 'next-intl';
 
-const slides = [
-  {
-    image: './assets/img/image 2.png',
-    title: "Bienvenue à l'archidiocèse de Moncton",
-    description: 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.',
-    cta: [
-      { text: 'Trouver une paroisse', icon: true, href: '/paroisses' },
-      { text: 'Voir nos évènements', icon: false, href: '/evenements' }
-    ]
-  },
-  {
-    image: './assets/img/hero-image-2.png',
-    title: 'Trouvez une paroisse près de chez vous',
-    description: 'Notre diocèse possède environ une vingtaine de paroisse partout à Moncton, trouvez la votre.',
-    cta: [{ text: 'Trouver une paroisse', icon: true, href: '/paroisses' }]
-  },
-  {
-    image: './assets/img/hero-image-1.png',
-    title: 'Participez à nos activités',
-    description: 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.',
-    cta: [
-      { text: 'Voir nos évènements', icon: false, href: '/evenements' },
-    ]
-  }
-];
+
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter()
+  const localActive = useLocale()
+
+  const slides = [
+    {
+      image: './assets/img/image 2.png',
+      title: localActive == 'fr' ? "Bienvenue à l'archidiocèse de Moncton":"Welcome to the Archdiocese of Moncton",
+      description: localActive == 'fr' ? 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.':
+      "Discover our parishes, take part in our events, and explore our rich spiritual heritage.",
+      cta: [
+        { text: localActive == 'fr' ? 'Trouver une paroisse':'Find a parish', icon: true, href: '/paroisses' },
+        { text: localActive == 'fr' ? 'Voir nos évènements' : 'See our events', icon: false, href: '/evenements' }
+      ]
+    },
+    {
+      image: './assets/img/hero-image-2.png',
+      title: localActive == 'fr' ? 'Trouvez une paroisse près de chez vous': "Find a parish near you",
+      description: localActive == 'fr' ? 'Notre diocèse possède environ une vingtaine de paroisse partout à Moncton, trouvez la votre.': 
+      'Our diocese has about twenty parishes throughout Moncton. Find yours.',
+      cta: [{ text: localActive == 'fr' ? 'Trouver une paroisse':'Find a parish', icon: true, href: '/paroisses' }]
+    },
+    {
+      image: './assets/img/hero-image-1.png',
+      title: localActive == 'fr' ? 'Participez à nos activités' : 'Take part in our activities',
+      description: localActive == 'fr' ? 'Découvrez nos paroisses, participez à nos événements, et explorez notre riche héritage spirituel.':
+      "Discover our parishes, take part in our events, and explore our rich spiritual heritage.",
+      cta: [
+        { text: localActive == 'fr' ? 'Voir nos évènements' : 'See our events', icon: false, href: '/evenements' },
+      ]
+    }
+  ];
 
   const [message, setMessage] = useState<Message | null>(null);
 
@@ -91,7 +98,9 @@ export function HeroSection() {
                   <div className=' md:hidden' />
                   <div className="w-full md:w-3/4 flex flex-col justify-between">
                     <div className="w-full md:w-3/4 flex flex-col gap-3 md:gap-0">
-                      <p className='legend text-white'>Réjoinez-nous dans notre mission spirituelle</p>
+                      <p className='legend text-white'>
+                        <Text className='text-inherit' keyString='hero_first_paragraph'/>
+                      </p>
                       <h1 className="heading-1 font-extrabold text-white">
                         {slide.title}
                       </h1>
@@ -133,7 +142,9 @@ export function HeroSection() {
                         />
                       </div>
                       <div className='space-y-2 w-2/3'>
-                        <h5 className='text-xs text-white font-extrabold'>Message de l&lsquo;évêque</h5>
+                        <h5 className='text-xs text-white font-extrabold'>
+                          <Text className='text-inherit' keyString="msg_archeveque" />
+                        </h5>
                         <div onClick={() => { navigateTo(`/messages/${message?.id}`) }} className='cursor-pointer'>
                           {
                             message ?

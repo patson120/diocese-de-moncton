@@ -1,10 +1,26 @@
 {
 
     "app": {
-        "news": "Actualités",
-        "events": "Nos évènements",
         "adresse": "Adresse",
         "phone": "Tél.",
+
+        "accueil": "accueil",
+        "archidiocese": "Archidiocèse",
+        "sacrements": "Sacraments",
+        "evenements": "Evènements",
+        "mouvements": "Mouvements",
+        "ressources": "Ressources",
+
+        "hero_first_paragraph": "Réjoinez-nous dans notre mission spirituelle",
+
+        "news": "Actualités",
+        "see_more_news": "Voir toute l’actualité",
+        "see_more": "Voir plus",
+
+        "events": "Nos évènements",
+        "see_more_events":"Voir tous les évènements",
+        "trouver_paroisse": "Trouver une paroisse",
+
         "msg_archeveque": "Message de l'Archevêque",
         "publier_le": "Publié le",
         "next_msg": "Message suivant",
@@ -17,7 +33,8 @@
         "filtrer_resultat": "Filtrer les résultats",
         "pas_de_donnees": "Pas de donnees",
         "article_relatifs": "Articles relatifs",
-        "autres_msg": "Autres messages"
+        "autres_msg": "Autres messages",
+        "faire_don": "Faire un don"
     },
     
     "Index": {

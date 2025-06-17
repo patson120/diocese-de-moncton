@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 import MapSection from './MapSection'
 import SearchParoisses from './SearchParoisses'
 import { ParoisseItemSkeleton } from './skeletons'
+import Text from '@/components/Text'
 
 export default async function ParoisseSection({ query, gps}: { query: string, gps:string}) {
 
@@ -20,7 +21,9 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
     
     return (
         <div className="vertical-margin" >
-            <h1 className="heading-3 mb-3">Trouver une paroisse</h1>
+            <h1 className="heading-3 mb-3">
+                <Text className='text-inherit' keyString='trouver_paroisse' />
+            </h1>
             <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12">
                 <div className="min-h-96 md:h-auto col-span-3 md:col-span-2 rounded-2xl overflow-hidden bg-gray-50 relative">
                     <MapSection paroisses={paroisses.slice(0, 4)} />

@@ -21,9 +21,19 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
 
   const [first, setfirst] = useState<Paroisse>(selectedParish!)
 
+  const getIcon = (p: Paroisse) => {
+    switch (p.statut) {
+      case 0:
+        return './assets/icons/map-pin-close.svg'
+      case 1:
+        return './assets/icons/map-pin-open.svg'
+      default:
+        return './assets/icons/map-pin-close.svg'
+    }
+  }
+
   useEffect(() => {
     setfirst(prev => ({ ...prev, ...parishes[0] }))
-
     const loader = new Loader({
       apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API || '',
       version: 'weekly',
@@ -61,6 +71,11 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
             map,
             title: parish?.nom || '',
             animation: google.maps.Animation.DROP,
+            clickable: true,
+            icon: {
+              url:  getIcon(parish), // Chemin vers votre icône personnalisée
+              scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
+            },
           });
 
           marker.addListener('click', () => {
@@ -98,6 +113,10 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
           title: first.nom,
           animation: google.maps.Animation.DROP,
           clickable: true,
+          icon: {
+            url: getIcon(first), // Chemin vers votre icône personnalisée
+            scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
+          },
         });
       }
       else {
