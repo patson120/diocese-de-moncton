@@ -76,8 +76,7 @@ export default async function Home(props: {
           <h1 className="heading-3"><Text keyString={"events"} /></h1>
           <Link href='/evenements' className="hidden md:block" >
             <Button variant='ghost' className="body-3 font-semibold p-0 hover:bg-transparent">
-              <Text className="hidden md:block whitespace-nowrap" keyString="see_more_events"></Text>
-              <Text className="md:hidden" keyString="see_more"/>
+              <Text className="text-white hidden md:block whitespace-nowrap" keyString="see_more_events"></Text>
               <ArrowRight className="ml-1 h-4 w-6 hover:ml-2 hover:transition-all hover:duration-300 " />
             </Button>
           </Link>
