@@ -93,7 +93,7 @@ export default async function Home(props: {
         </Suspense>
         <Link id="evenements" href='/evenements' className="block md:hidden mt-5" >
           <Button className="w-full md:py-6 text-sm md:text-base lg:text-xl">
-            <Text className="md:hidden whitespace-nowrap text-white" keyString="see_more_events"/>
+            <Text className="whitespace-nowrap text-white" keyString="see_more_events"/>
             <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
           </Button>
         </Link>
