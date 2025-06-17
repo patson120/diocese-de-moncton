@@ -17,7 +17,7 @@ export default async function MessageArcheveque() {
                 <div className='order-1 md:order-last md:col-span-2 rounded-2xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-2 md:gap-4 xl:gap-7'>
                     <div className="space-y-1 lg:space-y-2">
                         <h1 className='heading-3 font-extrabold mb-3'>
-                            <Text keyString="msg_archeveque" />
+                            <Text className="text-inherit" keyString="msg_archeveque" />
                         </h1>
                         <Text className='heading-5 text-xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
                     </div>
@@ -36,13 +36,15 @@ export default async function MessageArcheveque() {
                             <Button
                                 variant="outline"
                                 className='font-bold w-full'
-                            >En savoir plus</Button>
+                            >
+                                <Text className="text-inherit" keyString="savoir_plus" />
+                            </Button>
                         </Link>
                         <Link href="/messages">
                             <Button
                                 variant="outline"
                                 className='w-full bg-transparent hover:bg-transparent border-black font-bold '
-                            >Voir tous les messages</Button>
+                            ><Text className="text-inherit" keyString="see_more_msg" /></Button>
                         </Link>
                     </div>
                 </div>

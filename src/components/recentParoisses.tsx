@@ -3,6 +3,7 @@ import { Paroisse } from "@/types";
 import { ArrowRight } from "lucide-react";
 import ParoisseItem from "./ui/home/paroisse-item";
 import { Button } from "./ui/shared/button";
+import Text from "./Text";
 
 export default function RecentParoisses({ paroisses, total }: { paroisses: Paroisse[], total: number }) {
     return (
@@ -24,7 +25,8 @@ export default function RecentParoisses({ paroisses, total }: { paroisses: Paroi
                     </div>
                     <Link href="/paroisses">
                         <Button className="w-full md:py-6 text-sm md:text-base lg:text-xl">
-                            Voir toutes les {total} paroisses
+                            <Text className='text-inherit' keyString='see_more_parish' />
+                            {/** Voir toutes les {total} paroisses  */}
                             <ArrowRight className="ml-2 h-4 w-6 hover:ml-4 hover:transition-all hover:duration-300 " />
                         </Button>
                     </Link>
