@@ -262,7 +262,7 @@ export default function Header() {
                             <a href='/'>
                                 <Image
                                     alt="Logo diocèse de Moncton"
-                                    src="/brand-logo.png"
+                                    src="/logo.jpeg"
                                     fill
                                     style={{ objectFit: 'contain' }}
                                 />
