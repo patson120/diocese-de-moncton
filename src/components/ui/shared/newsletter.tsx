@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/shared/button';
 import { subscribeToNewsletter } from '@/_lib/data';
 import { useToast } from '@/hooks/use-toast';
 import { toast } from 'sonner';
+import Text from '@/components/Text';
 
 export default function Newsletter() {
   const [email, setEmail] = useState('')
@@ -30,13 +31,16 @@ export default function Newsletter() {
       <div className='container max-margin py-0 flex flex-col md:flex-row justify-between gap-3'>
         <div className='text-black'>
           <h3 className='body-1 font-bold'>Newsletter</h3>
-          <p className='text-[#575757] body-2'>Abonnez-vous à notre newsletter pour obtenir les <br className='hidden lg:block' />nouveautés sur l&lsquo;église.</p>
+          <p className='text-[#575757] body-2'>
+            <Text className='text-inherit' keyString='newsletter_desc_1' /> <br className='hidden lg:block' />
+            <Text className='text-inherit' keyString='newsletter_desc_2' />
+          </p>
         </div>
         <div className='flex flex-col md:flex-row items-end md:items-center space-y-3 md:space-y-0 md:space-x-2'>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Adresse email" className="border-2 border-gray-200 p-2 rounded-[12px] w-full" />
 
           <Button onClick={handleSubmit} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
-            Je m&lsquo;abonne
+            <Text className='text-inherit' keyString='newsletter_subcribe' />
           </Button>
         </div>
       </div>

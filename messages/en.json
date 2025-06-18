@@ -57,7 +57,11 @@
         "documents_officiels": "Official documents",
         "a_propos": "About",
         "missions_valeurs": "Missions and values",
-        "clerge": "The Clergy"
+        "clerge": "The Clergy",
+
+        "newsletter_desc_1": "Subscribe to our newsletter to receive",
+        "newsletter_desc_2": "news about the church.",
+        "newsletter_subcribe": "I subscribe"
     },
     "Index": {
         "hello": "Hello world"

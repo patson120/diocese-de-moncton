@@ -128,7 +128,7 @@ export default function Footer() {
             <p className='body-3 text-center md:text-left text-[#B5B5B5]'>© {date.getFullYear()} <Text className='text-inherit' keyString='droit_reserver' /></p>
             <p className='body-3 text-center md:text-left text-[#B5B5B5] text-xs'>
               <Text className='text-inherit' keyString='developper_par' />
-              <a href="http://www.linkedin.com/in/hadriengayap/" target="_blank" rel="noopener noreferrer">Acadie Intelligent Inc.</a> E-mail: <a href="mailto:hadrien.gayap@acadieintelligent.ca">hadrien.gayap@acadieintelligent.ca</a> </p>
+              <a href="http://www.linkedin.com/in/hadriengayap/" target="_blank" rel="noopener noreferrer"> Acadie Intelligent Inc.</a> E-mail: <a href="mailto:hadrien.gayap@acadieintelligent.ca">hadrien.gayap@acadieintelligent.ca</a> </p>
           </div>
           <div className='md:order-2  flex justify-center items-center gap-4 lg:gap-6'>
             <FacebookIcon className="h-4 w-4 md:h-6 md:w-6 !text-[#B5B5B5]" />

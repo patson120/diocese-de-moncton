@@ -58,7 +58,11 @@
         "documents_officiels": "Documents officiels",
         "a_propos": "A propos",
         "missions_valeurs":  "Missions et valeurs",
-        "clerge": "Le Clergé"
+        "clerge": "Le Clergé",
+
+        "newsletter_desc_1": "Abonnez-vous à notre newsletter pour obtenir les",
+        "newsletter_desc_2": "nouveautés sur l'église.",
+        "newsletter_subcribe": "Je m'abonne"
     },
     
     "Index": {
