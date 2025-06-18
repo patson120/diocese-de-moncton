@@ -40,7 +40,24 @@
 
         "don_titre": "Support our mission",
         "don_description": "Contribute to the life of our community by making an online donation. Every gesture counts!",
-        "don_btn": "Make a donation now"
+        "don_btn": "Make a donation now",
+
+        "droit_reserver": "Diocèse Moncton - All rights reserved",
+        "developper_par": "Powered by",
+        "footer_notre_histoire": "Our history",
+        "footer_site_description": "Official website of the Archdiocese of Moncton",
+        "evenements_venir": "Upcoming events",
+        "horaires_messe": "Mass schedule",
+        "paroisse": "Parish",
+        "nouvelles_diocesaines": "Diocesan news",
+        "equipe_paroissiale": "Parish team",
+        "prieres": "Prayers",
+        "textes_religieux": "Religious texts",
+        "formations": "Training",
+        "documents_officiels": "Official documents",
+        "a_propos": "About",
+        "missions_valeurs": "Missions and values",
+        "clerge": "The Clergy"
     },
     "Index": {
         "hello": "Hello world"

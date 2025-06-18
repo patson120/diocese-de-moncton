@@ -4,7 +4,7 @@
         "adresse": "Adresse",
         "phone": "Tél.",
 
-        "accueil": "accueil",
+        "accueil": "Accueil",
         "archidiocese": "Archidiocèse",
         "sacrements": "Sacraments",
         "evenements": "Evènements",
@@ -41,7 +41,24 @@
 
         "don_titre": "Soutenez notre mission",
         "don_description": "Contribuez à la vie de notre communauté en faisant un don en ligne. Chaque geste compte!",
-        "don_btn": "Faire un don maintenant"
+        "don_btn": "Faire un don maintenant",
+
+        "droit_reserver": "Diocèse Moncton - Tous droits reservés",
+        "developper_par": "Développé par",
+        "footer_notre_histoire": "Notre histoire",
+        "footer_site_description": "Site officiel de l'Archidiocèse de Moncton",
+        "evenements_venir": "Evènements à venir",
+        "horaires_messe": "Horaires des messes",
+        "paroisse": "Paroisse",
+        "nouvelles_diocesaines": "Nouvelles diocésaines",
+        "equipe_paroissiale": "Equipe paroissiale",
+        "prieres": "Prières",
+        "textes_religieux": "Textes réligieux",
+        "formations": "Formations",
+        "documents_officiels": "Documents officiels",
+        "a_propos": "A propos",
+        "missions_valeurs":  "Missions et valeurs",
+        "clerge": "Le Clergé"
     },
     
     "Index": {
