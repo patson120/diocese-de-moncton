@@ -17,6 +17,8 @@ export default function Filter() {
         { label: 'Tous', value: null },
         { label: 'En activité', value: 1 },
         { label: 'Fermées', value: 0 },
+        { label: 'Francophone', value: 'fr' },
+        { label: 'Anglophone', value: 'en' },
     ]
     const [filter, setFilter] = useState<any>()
 
@@ -24,10 +26,16 @@ export default function Filter() {
         setFilter(item)
         const params = new URLSearchParams(searchParams)
         if (item.label !== 'Tous') {
-            params.set('statut', `${item.value}`)
+            if(item.value =='fr' || item.value =='en' ){
+                params.set('langue', `${item.value}`)
+            }
+            else{
+                params.set('statut', `${item.value}`)
+            }
         }
         else {
             params.delete('statut')
+            params.delete('langue')
         }
         // replace(`${pathname}?${params.toString()}`)
         window.location. href = `/${localActive}/${pathname}?${params.toString()}`
