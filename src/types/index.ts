@@ -56,6 +56,7 @@ export type Paroisse = {
     pretre_responsable: string;
     gps: string;
     histoire: string;
+    langue: string | null;
     created_at: string;
     updated_at: string;
     galerie: Image[];
