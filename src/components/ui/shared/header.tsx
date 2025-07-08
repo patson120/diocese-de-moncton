@@ -123,7 +123,7 @@ export default function Header() {
                                 <LanguageSelector />
                             </div>
                             <div className='md:hidden h-[50px] flex justify-center items-center'>
-                                <Link target='_blank' href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"><Text keyString={'adresse'} />: 224 St-George, Moncton, NB. E1C 0V1</Link>
+                                <Link target='_blank' href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.090801,-64.781807,17z/data=!3m1!4b1!4m6!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D"><Text className='text-xs md:text-base' keyString={'adresse'} />: 224 St-George, Moncton, NB. E1C 0V1</Link>
                             </div>
                         </nav>
                     </div>
