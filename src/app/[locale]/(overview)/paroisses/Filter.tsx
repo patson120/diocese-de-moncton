@@ -28,9 +28,11 @@ export default function Filter() {
         if (item.label !== 'Tous') {
             if(item.value =='fr' || item.value =='en' ){
                 params.set('langue', `${item.value}`)
+                params.delete('statut')
             }
             else{
                 params.set('statut', `${item.value}`)
+                params.delete('langue')
             }
         }
         else {
@@ -43,14 +45,13 @@ export default function Filter() {
 
     useEffect(() => {
         const statut = searchParams.get('statut')
-        if (statut) {
-            const foundFilter = filters.find(f => f.value === Number(statut))
-            if (foundFilter) {
-                setFilter(foundFilter)
-            }
-        } else {
-            setFilter(filters[0])
-        }
+        const langue = searchParams.get('langue')
+    
+        if (statut) 
+            setFilter(filters.find(f => f.value === Number(statut)))
+        else if (langue)
+            setFilter(filters.find(f => f.value === langue))
+        else setFilter(filters[0])
     }, [])
     
     return (
