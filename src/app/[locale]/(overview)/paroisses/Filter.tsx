@@ -1,6 +1,6 @@
 "use client"
 
-import { usePathname, useRouter } from '@/i18n/routing'
+import { usePathname } from '@/i18n/routing'
 import { SlidersHorizontalIcon } from 'lucide-react'
 import { useLocale } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
