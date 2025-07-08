@@ -10,6 +10,7 @@ import ParoisseSection from "@/components/ui/shared/ParoisseSection";
 import { ActualitesSkeleton, EventItemSkeleton, MessageArchevequeSkeleton } from "@/components/ui/shared/skeletons";
 import { Link } from "@/i18n/routing";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -20,7 +21,7 @@ export default async function Home(props: {
     page?: number;
   }>
 }) {
-  // const t = useTranslations("Index") 
+  const tn = useTranslations("navigation") 
 
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
@@ -45,11 +46,11 @@ export default async function Home(props: {
             />
           </div>
           <div className="p-5">
-            <h3 className='body-1 font-bold mt-2'>Horaires des messes</h3>
-            <p className='body-3 text-gray-500 mt-2 mb-8'>Découvrez les horaires des messes dans votre paroisse.</p>
+            <h3 className='body-1 font-bold mt-2'>{tn("horaires_messe_titre")}</h3>
+            <p className='body-3 text-gray-500 mt-2 mb-8'>{tn("horaires_messe_desc")}</p>
             <Link href="/horaires-messes">
               <Button className='w-full body-2 xl:text-xl'>
-                Voir les horaires
+                {tn("savoir_plus")}
               </Button>
             </Link>
           </div>

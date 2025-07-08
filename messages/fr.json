@@ -71,7 +71,13 @@
         "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse.",
         "savoir_plus": "En savoir plus"
     },
+    "search": {
+        "placeholder": "Entrez le nom de la paroisse",
+        "gps_btn": "Prendre ma position",
+        "gps_cancel_btn": "Annuler ma position"
+    },
     "About":{
         "title": "Page à propos"
     }
+
 }

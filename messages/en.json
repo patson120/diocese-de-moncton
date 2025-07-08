@@ -68,7 +68,11 @@
         "horaires_messe_titre": "Mass schedule",
         "horaires_messe_desc": "Find out about mass times in your parish.",
         "savoir_plus": "Read more"
-
+    },
+    "search": {
+        "placeholder": "Enter parish name",
+        "gps_btn": "Take my position",
+        "gps_cancel_btn": "Cancel my position"
     },
     "About": {
         "title": "About page"

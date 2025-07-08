@@ -6,12 +6,15 @@ import { useSearchParams } from 'next/navigation'
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useDebouncedCallback } from 'use-debounce'
 import { Button } from './button'
+import { useTranslations } from 'next-intl'
 
 export default function SearchParoisses() {
 
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const { replace } = useRouter()
+
+    const ts = useTranslations("search")
 
     const handleSearch = useDebouncedCallback((event: ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value
@@ -54,7 +57,6 @@ export default function SearchParoisses() {
         );
     }
 
-
     // Récupération de la position géographique de l'utilisateur
     useEffect(() => {
         if (isActive) {
@@ -73,7 +75,7 @@ export default function SearchParoisses() {
             <div className="px-5 w-[95%] flex gap-2">
                 <div className='relative flex-1'>
                     <input type="text"
-                        placeholder="Entrez le code postale ou la ville..."
+                        placeholder={ts("placeholder")}
                         onChange={handleSearch}
                         defaultValue={searchParams.get('query')?.toString()}
                         className="w-full border border-gray-100 bg-gray-50 rounded-lg pr-3 pl-10 py-2
@@ -87,7 +89,7 @@ export default function SearchParoisses() {
                 } } variant="secondary" className='bg-[#1D0104] text-[12px] text-white hover:bg-[#230105]'>
                     <MapPin className="md:mr-2 h-4 w-4 text-white" />
                     <span className='hidden md:flex !text-white'>
-                        { searchParams.get('gps')?.toString() ? 'Annuler ma position' : 'Prendre ma position' }
+                        { searchParams.get('gps')?.toString() ? ts("gps_cancel_btn") : ts("gps_btn") }
                     </span>
                 </Button>
             </div>
