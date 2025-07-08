@@ -65,8 +65,11 @@
         "newsletter_subcribe": "Je m'abonne"
     },
     
-    "Index": {
-        "hello": "Bonjour tout le monde"
+    "navigation": {
+        "fermer": "Fermer",
+        "horaires_messe_titre": "Horaires de messe",
+        "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse.",
+        "savoir_plus": "En savoir plus"
     },
     "About":{
         "title": "Page à propos"

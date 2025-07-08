@@ -16,13 +16,14 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import Text from '@/components/Text'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 
 
 export default function Header() {
     const router = useRouter()
     const localActive = useLocale()
+    const t = useTranslations("navigation")
 
     const [menus, setMenus] = useState<MenuType[]>([])
     const [isOpen, setIsOpen] = useState(false)
@@ -234,10 +235,10 @@ export default function Header() {
                                             }}
                                         />
                                     </div>
-                                    <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
-                                    <p className='body-3 text-gray-500 mt-2 mb-4'>Découvrez les horaires des messes dans votre paroisse.</p>
+                                    <h3 className='body-1 font-bold mt-2'>{t("horaires_messe_titre")}</h3>
+                                    <p className='body-3 text-gray-500 mt-2 mb-4'>{t("horaires_messe_desc")}</p>
                                     <Button className='w-full body-2' onClick={() => { navigateTo('/horaires-messes') }}>
-                                        En savoir plus
+                                        {t("savoir_plus")}
                                     </Button>
                                 </div>
                                 <div className='w-full p-6'>
@@ -280,7 +281,7 @@ export default function Header() {
                                 {/* Menu open: "block", Menu closed: "hidden" */}
 
                                 <div className={`flex justify-center items-center gap-2`}>
-                                    <p className='font-bold text-center'>Fermer</p>
+                                    <p className='font-bold text-center'>{t("fermer")}</p>
                                     <svg className=" h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
@@ -316,10 +317,10 @@ export default function Header() {
                             </Accordion>
                         </div>
                         <div className='p-6 bg-[#F9F4F5] mb-10 mt-6 rounded-xl'>
-                            <h3 className='body-1 font-bold mt-2'>Horaires de messe</h3>
-                            <p className='body-3 text-gray-500 mt-2 mb-6'>Découvrez les horaires des messes dans votre paroisse.</p>
+                            <h3 className='body-1 font-bold mt-2'>{t("horaires_messe_titre")}</h3>
+                            <p className='body-3 text-gray-500 mt-2 mb-6'>{t("horaires_messe_desc")}</p>
                             <Button className='w-full body-2' onClick={() => { navigateTo('/horaires-messes') }}>
-                                En savoir plus
+                                {t("savoir_plus")}
                             </Button>
                         </div>
                     </div>
