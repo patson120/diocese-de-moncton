@@ -107,6 +107,7 @@ export type Message = {
     prevId: number | null;
     nextId: number | null;
     etat: number;
+    image: string | null;
     created_at: string;
     updated_at: string;
     message: string;

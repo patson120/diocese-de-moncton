@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/shared/button";
 import MapSection from "@/components/ui/shared/MapSection";
 import { Link } from "@/i18n/routing";
 import { Paroisse } from "@/types";
-import { Mail, MapPin, PhoneCall, Play } from "lucide-react";
+import { Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 
 
@@ -18,7 +18,8 @@ export default async function Page(props: {
 
     const { paroisseId } = await props.params;
     const paroisse: Paroisse = await fetchParoisses(`/${paroisseId}`)
-    const paroisses: Paroisse[] = await fetchParoisses(`?type_paroisse_id=${paroisse.type_paroisse_id}`)
+    const response: any = await fetchParoisses(`?paginate=4&type_id=${paroisse.type_paroisse_id}`)
+    const paroisses: Paroisse[] = response.data;
 
     return (
         <>
@@ -77,12 +78,12 @@ export default async function Page(props: {
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <h1 className='heading-4 font-extrabold'>{paroisse.nom}</h1>
-                            <p className="flex flex-row gap-2">
+                            <div className="flex flex-row gap-2">
                                 <small className='text-gray uppercase mb-4'>Unité pastorale: </small>
                                 <div className="text-sm">
                                     <Text labelFr={paroisse.type?.intitule_fr!} labelEn={paroisse.type?.intitule_en!} />
                                 </div>
-                            </p>
+                            </div>
                             <p className='body-2 text-gray'>{paroisse.histoire}</p>
                             {/* <span className='font-bold cursor-pointer'>voir plus</span> */}
                         </div>
@@ -143,7 +144,7 @@ export default async function Page(props: {
                         <div>
                             <div className="flex flex-nowrap overflow-x-scroll xl:overflow-x-hidden gap-4 pb-5">
                                 {
-                                    paroisses.slice(0, 4).map((item, index) => (
+                                    paroisses.map((item, index) => (
                                         <Link href={`/paroisses/${item.id}`} key={index} className="max-w-48">
                                             <div className="h-32 w-48 shrink-0 relative overflow-hidden rounded-md bg-gray-100">
                                                 <Image
