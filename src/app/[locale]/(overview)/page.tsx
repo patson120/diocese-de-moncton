@@ -10,7 +10,6 @@ import ParoisseSection from "@/components/ui/shared/ParoisseSection";
 import { ActualitesSkeleton, EventItemSkeleton, MessageArchevequeSkeleton } from "@/components/ui/shared/skeletons";
 import { Link } from "@/i18n/routing";
 import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -21,16 +20,14 @@ export default async function Home(props: {
     page?: number;
   }>
 }) {
-  const tn = useTranslations("navigation") 
-
-  const searchParams = await props.searchParams;
-  const query = searchParams?.query || '';
-  const gps = searchParams?.gps || '';
+  
+  const searchParams = await props.searchParams
+  const query = searchParams?.query || ''
+  const gps = searchParams?.gps || ''
   
   return (
     <main className="bg-white">
       <HeroSection />
-      {/*  */}
       <div className='container max-margin md:hidden w-full sm:my-[30px]'>
         <div className="bg-[#F9F4F5] rounded-xl overflow-hidden">
           <div className='relative h-72 w-full bg-white overflow-hidden'>
@@ -44,11 +41,11 @@ export default async function Home(props: {
             />
           </div>
           <div className="p-5">
-            <h3 className='body-1 font-bold mt-2'>{tn("horaires_messe_titre")}</h3>
-            <p className='body-3 text-gray-500 mt-2 mb-8'>{tn("horaires_messe_desc")}</p>
+            <h3 className='body-1 font-bold mt-2'><Text keyString="horaires_messe_titre"/></h3>
+            <p className='body-3 text-gray-500 mt-2 mb-8'><Text keyString="horaires_messe_desc"/></p>
             <Link href="/horaires-messes">
               <Button className='w-full body-2 xl:text-xl'>
-                {tn("savoir_plus")}
+                <Text keyString="savoir_plus"/>
               </Button>
             </Link>
           </div>
@@ -70,7 +67,6 @@ export default async function Home(props: {
             <RecentActualites />
           </Suspense>
         </div>
-        {/* <div className="mt-10 lg:mt-20"/> */}
         <div className="mb-3 flex justify-between items-center">
           <h1 className="heading-3"><Text keyString={"events"} /></h1>
           <Link href='/evenements' className="hidden md:block" >
