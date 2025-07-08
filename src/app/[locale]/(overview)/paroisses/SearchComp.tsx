@@ -74,7 +74,7 @@ export default function SearchComp() {
             <div className='w-full lg:w-1/2 flex gap-2'>
                 <div className='relative flex-1'>
                     <input type="text"
-                        placeholder="Entrez le code postale ou la ville..."
+                        placeholder="Entrez le nom de la paroisse"
                         onChange={handleSearch}
                         defaultValue={searchParams.get('query')?.toString()}
                         className="w-full border border-gray-100 bg-gray-50 rounded-lg pr-3 pl-10 py-2
