@@ -73,8 +73,5 @@
         "placeholder": "Enter parish name",
         "gps_btn": "Take my position",
         "gps_cancel_btn": "Cancel my position"
-    },
-    "About": {
-        "title": "About page"
     }
 }

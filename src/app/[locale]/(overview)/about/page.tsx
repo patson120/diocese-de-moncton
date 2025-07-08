@@ -11,7 +11,6 @@ import { Loader } from "@googlemaps/js-api-loader";
 import { NEXT_PUBLIC_GOOGLE_MAPS_API_KEY } from '@/constants';
 
 export default function Page() {
-    const t = useTranslations("About")
 
 
     const mapRef = useRef(null)
@@ -57,7 +56,7 @@ export default function Page() {
     return (
         <>
             <div className='flex flex-col h-screen justify-center items-center'>
-                <p className=''>{t('title')}</p>
+                <p className=''>About</p>
                 <p className='my-5'>Une petite description de cette page </p>
                 <Link href='../' className='text-blue-600'>Retour à la page d&apos;accueil</Link>
             </div>

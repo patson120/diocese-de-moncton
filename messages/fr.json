@@ -1,5 +1,4 @@
 {
-
     "app": {
         "adresse": "Adresse",
         "phone": "Tél.",
@@ -75,9 +74,5 @@
         "placeholder": "Entrez le nom de la paroisse",
         "gps_btn": "Prendre ma position",
         "gps_cancel_btn": "Annuler ma position"
-    },
-    "About":{
-        "title": "Page à propos"
     }
-
 }
