@@ -66,25 +66,3 @@ export default function Page() {
         </>
     )
 }
-
-// const fetchGeoPosition = () => {
-//     navigator.geolocation.getCurrentPosition(
-//     position => { 
-//       if (isActive){
-
-//       setUserLatitude(position.coords.latitude);
-//       setUserLongitude(position.coords.longitude);
-//       setPositionError(null);
-
-
-//       console.log('Location Accessed')
-
-      
-//     } 
-//     setIsLoading(false)
-
-//   }, 
-
-//   error => isActive && setPositionError(error.message),
-//   {enableHighAccuracy: true, timeout: 0, maximumAge: 1000} 
-//   ); 

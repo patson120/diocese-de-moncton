@@ -32,8 +32,8 @@ export default function SearchBar({ placeholder }: { placeholder: string }) {
                     onChange={handleSearch}
                     defaultValue={searchParams.get('query')?.toString()}
                     className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
-              text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
-                placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
+                        text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
+                        placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>
                 <Search className="h-7 w-7 text-gray-300 absolute top-3 right-4 cursor-pointer" />
             </div>
         </div>
