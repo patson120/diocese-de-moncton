@@ -7,7 +7,6 @@ import { Suspense } from 'react'
 import Filter from './Filter'
 import Paroisses from './paroisses'
 import SearchComp from './SearchComp'
-import { log } from 'console'
 
 
 export default async function Page(props: {
@@ -30,9 +29,7 @@ export default async function Page(props: {
     if (gps) params = `${params}&gps=${gps}`
     if (statut) params = `${params}&statut=${statut}`
     if (langue) params = `${params}&langue=${langue}`
-    console.log(params);
     
-
     paroisses = await fetchParoisses(params)
 
     return (
