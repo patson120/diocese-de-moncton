@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import Evenements from "./evenements";
 import { Filter } from "./Filter";
 import SearchBar from "./SearchBar";
+import { useLocale } from "next-intl";
 
 
 
@@ -17,6 +18,8 @@ export default async function Page(props: {
         page?: number;
     }>
 }) {
+
+    const localActive = useLocale()
 
     const searchParams = await props.searchParams;
     const query = searchParams?.query || '';
@@ -106,7 +109,7 @@ export default async function Page(props: {
 
             <div className='container max-margin py-0 -translate-y-6'>
                 {/* Search bar */}
-                <SearchBar placeholder={"Rechercher un évènement"} />
+                <SearchBar placeholder={localActive === "fr" ? "Rechercher un évènement" : "Search an event"} />
             </div>
             <section className='container max-margin pt-0 pb-10'>
                 <div className='mt-2' />
