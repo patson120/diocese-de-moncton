@@ -1,6 +1,7 @@
 "use client"
 import { usePathname, useRouter } from '@/i18n/routing'
 import { Search } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useSearchParams } from 'next/navigation'
 import React, { ChangeEvent } from 'react'
 import { useDebouncedCallback } from 'use-debounce';
@@ -9,6 +10,8 @@ export default function SearchBar({ placeholder }: { placeholder: string }) {
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const { replace } = useRouter()
+
+    const t = useTranslations("app")
 
     const handleSearch = useDebouncedCallback((event: ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value
@@ -28,7 +31,7 @@ export default function SearchBar({ placeholder }: { placeholder: string }) {
         <div className='flex justify-center items-center -translate-y-6'>
             <div className='w-full md:w-3/4 lg:w-1/2 relative'>
                 <input type="text"
-                    placeholder={placeholder}
+                    placeholder={t(placeholder)}
                     onChange={handleSearch}
                     defaultValue={searchParams.get('query')?.toString()}
                     className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3

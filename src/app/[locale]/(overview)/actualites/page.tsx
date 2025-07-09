@@ -1,12 +1,13 @@
 
+import { fetchCategories } from '@/_lib/data'
+import Text from '@/components/Text'
 import { ActualitesSkeleton } from '@/components/ui/shared/skeletons'
+import { Category } from '@/types'
 import Image from 'next/image'
 import { Suspense } from 'react'
 import Actualites from './actualites'
 import Filter from './Filter'
 import SearchBar from './SearchBar'
-import { Category } from '@/types'
-import { fetchCategories } from '@/_lib/data'
 
 export default async function Page(props: {
     searchParams?: Promise<{
@@ -19,6 +20,7 @@ export default async function Page(props: {
   const query = searchParams?.query || '';
   const categorie_id = searchParams?.categorie_id || '';
   const currentPage = searchParams?.page || 1;
+
 
   // Fetch categories
   const categories: Category[] = await fetchCategories(`?menu=actualite`)
@@ -38,12 +40,14 @@ export default async function Page(props: {
           }}
         />
         <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-40'>
-          <h1 className='container max-margin py-0 md:w-1/2 heading-1 text-center text-white font-extrabold'>Découvrez toute notre actualité</h1>
+          <h1 className='container max-margin py-0 md:w-1/2 heading-1 text-center text-white font-extrabold'>
+            <Text className='text-inherit' keyString='event_hero_title' />
+          </h1>
         </div>
       </section>
       <div className='container max-margin py-0 -translate-y-2'>
         {/* Search bar */}
-        <SearchBar placeholder={"Rechercher un actualité..."} />
+        <SearchBar placeholder={"news_search_placeholder"} />
       </div>
       <section className='container max-margin py-0 pb-10 md:pb-20'>
 

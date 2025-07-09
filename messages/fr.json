@@ -66,7 +66,9 @@
         "horaires_messe_titre": "Horaires de messe",
         "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse.",
         
-        "mois_de": "Mois de"
+        "mois_de": "Mois de",
+        "event_hero_title": "Découvrez toute notre actualité",
+        "news_search_placeholder": "Rechercher une actualité..."
     },
 
 

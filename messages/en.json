@@ -67,7 +67,9 @@
         "horaires_messe_titre": "Mass schedule",
         "horaires_messe_desc": "Find out about mass times in your parish.",
 
-        "mois_de": "Month"
+        "mois_de": "Month",
+        "event_hero_title": "Discover all our news",
+        "news_search_placeholder": "Search a news item..."
     },
 
 
