@@ -19,7 +19,7 @@ export default async function Page(props: {
     }>
 }) {
 
-    const localActive = useLocale()
+    // const localActive = useLocale()
 
     const searchParams = await props.searchParams;
     const query = searchParams?.query || '';
@@ -30,6 +30,7 @@ export default async function Page(props: {
     return (
         <main>
             {/* Hero section */}
+        
             <section className='h-[25vh] md:h-[50vh] w-full bg-gray-100'>
                 <div className='w-full h-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6'>
                     <div className='w-full h-full relative overflow-hidden border-r border-gray-50 '>
@@ -108,9 +109,10 @@ export default async function Page(props: {
             </section>
 
             <div className='container max-margin py-0 -translate-y-6'>
-                {/* Search bar */}
-                <SearchBar placeholder={localActive === "fr" ? "Rechercher un évènement" : "Search an event"} />
+                {/* Search bar */} 
+                <SearchBar placeholder={"rechercher_event"} />
             </div>
+    
             <section className='container max-margin pt-0 pb-10'>
                 <div className='mt-2' />
                 <div className='lg:w-2/3 mx-auto flex flex-col justify-center'>

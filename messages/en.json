@@ -72,7 +72,9 @@
         "news_search_placeholder": "Search a news item...",
 
         "message_hero_titre": "Press releases from Mgr. Desrochers' office",
-        "message_hero_desc": "Please click on the following links to access our Archbishop Guy Desrochers' press releases."
+        "message_hero_desc": "Please click on the following links to access our Archbishop Guy Desrochers' press releases.",
+
+        "rechercher_event": "Search an event"
     },
 
 
@@ -82,11 +84,13 @@
         "horaires_messe_desc": "Find out about mass times in your parish.",
         "savoir_plus": "Read more"
     },
+
     "search": {
         "placeholder": "Enter parish name",
         "gps_btn": "Take my position",
         "gps_cancel_btn": "Cancel my position"
     },
+
     "paroisse": {
         "pas_de_paroisse": "No parish found"
     },
@@ -95,6 +99,7 @@
         "go_back": "Back page",
         "donation_text": "Your donation is not just a financial contribution. It's an act of faith that allows hope to shine where it's needed most. It's the opportunity to offer a meal, shelter, education, or the light of the Gospel to those who lack it."
     },
+    
     "news": {
         "article_prec": "Previous item",
         "article_suiv": "Next item"

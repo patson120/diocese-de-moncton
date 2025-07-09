@@ -71,7 +71,9 @@
         "news_search_placeholder": "Rechercher une actualité...",
 
         "message_hero_titre": "Communiqués du bureau de Mgr. Desrochers",
-        "message_hero_desc": "Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers."
+        "message_hero_desc": "Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers.",
+
+        "rechercher_event": "Rechercher un évènement"
     },
 
     "navigation": {
@@ -80,11 +82,13 @@
         "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse.",
         "savoir_plus": "En savoir plus"
     },
+
     "search": {
         "placeholder": "Entrez le nom de la paroisse",
         "gps_btn": "Prendre ma position",
         "gps_cancel_btn": "Annuler ma position"
     },
+    
     "paroisse": {
         "pas_de_paroisse": "Aucune paroisse trouvée"
     },
