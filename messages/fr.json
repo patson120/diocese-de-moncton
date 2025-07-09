@@ -64,7 +64,9 @@
         "newsletter_subcribe": "Je m'abonne",
 
         "horaires_messe_titre": "Horaires de messe",
-        "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse."
+        "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse.",
+        
+        "mois_de": "Mois de"
     },
 
 
@@ -82,5 +84,8 @@
     },
     "paroisse": {
         "pas_de_paroisse": "Aucune paroisse trouvée"
+    },
+    "evenement": {
+        "mois_de": "Mois de"
     }
 }

@@ -65,7 +65,9 @@
 
         "fermer": "Close",
         "horaires_messe_titre": "Mass schedule",
-        "horaires_messe_desc": "Find out about mass times in your parish."
+        "horaires_messe_desc": "Find out about mass times in your parish.",
+
+        "mois_de": "Month"
     },
 
 
@@ -82,5 +84,8 @@
     },
     "paroisse": {
         "pas_de_paroisse": "No parish found"
+    },
+    "evenement": {
+        "mois_de": "Month"
     }
 }

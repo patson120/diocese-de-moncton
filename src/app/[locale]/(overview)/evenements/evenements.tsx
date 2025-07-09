@@ -52,7 +52,7 @@ export default async function Evenements(
                             {
                                 (verifyDate(item, index - 1)) &&
                                 <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>
-                                    Mois de {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1]}
+                                    <Text className="text-inherit" keyString="mois_de" /> {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1]}
                                 </h3>
                             }
                             <Link href={`/evenements/${item.id}`} className="hidden md:block">
