@@ -14,11 +14,11 @@ export default function Filter() {
 
 
     const filters = [
-        { label: 'Tous', value: null },
-        { label: 'En activité', value: 1 },
-        { label: 'Fermées', value: 0 },
-        { label: 'Francophone', value: 'fr' },
-        { label: 'Anglophone', value: 'en' },
+        { label: 'Tous', text: localActive === "fr" ? "Tous" : "All", value: null },
+        { label: 'En activité', text: localActive === "fr" ? "En activité" : "In activity", value: 1 },
+        { label: 'Fermées', text: localActive === "fr" ? "Fermées" : "Close", value: 0 },
+        { label: 'Francophone', text: localActive === "fr" ? "Francophone" : "French-speaking", value: 'fr' },
+        { label: 'Anglophone', text: localActive === "fr" ? "Anglophone" : "English-speaking", value: 'en' },
     ]
     const [filter, setFilter] = useState<any>()
 
@@ -67,7 +67,7 @@ export default function Filter() {
                     <label key={index}
                         onClick={() => handleUpdateStatut(item)}
                         className={`body-2 px-2 py-1 rounded-xl cursor-pointer ${item.label === filter?.label ? "font-bold bg-[#1D0104] text-white" : "border border-gray-100"} `}>
-                        {item.label}
+                        {item.text}
                     </label>
                 ))
             }

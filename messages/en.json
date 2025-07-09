@@ -79,5 +79,8 @@
         "placeholder": "Enter parish name",
         "gps_btn": "Take my position",
         "gps_cancel_btn": "Cancel my position"
+    },
+    "paroisse": {
+        "pas_de_paroisse": "No parish found"
     }
 }
