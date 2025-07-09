@@ -86,5 +86,10 @@
     },
     "paroisse": {
         "pas_de_paroisse": "No parish found"
+    },
+
+    "donation": {
+        "go_back": "Back page",
+        "donation_text": "Your donation is not just a financial contribution. It's an act of faith that allows hope to shine where it's needed most. It's the opportunity to offer a meal, shelter, education, or the light of the Gospel to those who lack it."
     }
 }

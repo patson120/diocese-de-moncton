@@ -1,14 +1,15 @@
 'use client'
 
-import { createDon } from '@/_lib/data';
 import { Button } from '@/components/ui/shared/button';
 import { useRouter } from '@/i18n/routing';
-import { Description } from '@radix-ui/react-dialog';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 
 
 export default function Page() {
+
+    const t = useTranslations('donation')
 
     const router = useRouter()
     const types = ["Unique", "Mensuel", "En hommage"]
@@ -70,12 +71,12 @@ export default function Page() {
                                 <div className='container h-full max-margin flex flex-col justify-between'>
                                     <div>
                                         <Button size={'sm'} variant={'link'} onClick={() => { router.back() }} className="px-0 hidden md:block body-3 font-normal text-white/70">
-                                            Page retour
+                                            {t("go_back")}
                                         </Button>
                                     </div>
                                     <div className='bg-white rounded-xl p-5'>
                                         <p className='body-2 text-gray'>
-                                            Votre don n'est pas seulement une contribution financière. C'est un acte de foi qui permet à l'espoir de briller là où il y en a le plus besoin. C'est la possibilité d'offrir un repas, un abri, une éducation, ou la lumière de l'Évangile à ceux qui en sont privés.
+                                            {t("donation_text")}
                                         </p>
                                     </div>
                                 </div>
