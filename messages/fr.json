@@ -106,5 +106,42 @@
     "events": {
         "precedent": "Précédent",
         "suivant": "Suivant"
+    },
+
+    "contact": {
+        "retour": "Retour",
+        "back_to_home": "Retour à l’accueil",
+        "contactez_nous": "Contactez-nous",
+        "nom": "Nom",
+        "nom_placeholder": "Entrez votre nom complet",
+        "courriel": "Courriel",
+        "courriel_placeholder": "Entrez votre adresse électronique",
+        "sujet": "Sujet",
+        "sujet_placeholder": "Entrez le sujet",
+        "message": "Votre message",
+        "message_placeholder": "Ce que vous avez à dire",
+        "envoyer_message": "Envoyer le message",
+        "poste": "Poste",
+        "contacts_paroissiaux": "Contacts paroissiaux",
+        "poste_1_titre": "Archbishop of Moncton",
+        "poste_2_titre": "Vicar General",
+        "poste_3_titre": "Chef des opérations",
+        "poste_4_titre": "Comptable et fondation de l'Archevêché",
+        "poste_5_titre": "Secrétaire/réceptionniste",
+        "poste_6_titre": "Administration des cimetières N.D. du Calvaire & Shediac Road Cemetery",
+        "poste_7_titre": "Finances: fondations de la cathédrale",
+        "poste_8_titre": "Dosssiers justice et solidarité",
+        "poste_9_titre": "Catéchèse & Protection des personnes vulnérables",
+        "poste_10_titre": "Vice-chancelière & Notaire au tribunal matrimonial",
+        "poste_11_titre": "Auditeur au tribunal matrimonial",
+        "poste_12_titre": "Éducation de la foi des adultes",
+
+        "adresse": "Adresse",
+        "place_cathedrale": "Place de la cathédrale",
+        "telephone": "Téléphone",
+        "telecopieur": "Télécopieur",
+        "heures_bureau": "Heures de bureau",
+        "horaires": "Lundi à Jeudi, 08h-12h; 13h-16h",
+        "sur_la_map": "Sur la carte"
     }
 }

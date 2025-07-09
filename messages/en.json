@@ -105,5 +105,42 @@
     "news": {
         "article_prec": "Previous item",
         "article_suiv": "Next item"
+    },
+
+    "contact": {
+        "retour": "Back",
+        "back_to_home": "Back to homepage",
+        "contactez_nous": "Contact us",
+        "nom": "Name",
+        "nom_placeholder": "Enter your full name",
+        "courriel": "E-mail",
+        "courriel_placeholder": "Enter your e-mail address",
+        "sujet": "Subject",
+        "sujet_placeholder": "Enter the subject",
+        "message": "Your message",
+        "message_placeholder": "What you have to say",
+        "envoyer_message": "Send message",
+        "poste": "Post",
+        "contacts_paroissiaux": "Parish contacts",
+        "poste_1_titre": "Archbishop of Moncton",
+        "poste_2_titre": "Vicar General",
+        "poste_3_titre": "Head of Operations",
+        "poste_4_titre": "Accountant and Archbishop's Foundation",
+        "poste_5_titre": "Secretary/Receptionist",
+        "poste_6_titre": "N.D. du Calvaire & Shediac Road Cemetery Authority",
+        "poste_7_titre": "Finances: cathedral foundations",
+        "poste_8_titre": "Justice and solidarity files",
+        "poste_9_titre": "Catechesis & Protection of vulnerable persons",
+        "poste_10_titre": "Vice-Chancellor & Notary at the Matrimonial Court",
+        "poste_11_titre": "Matrimonial court auditor",
+        "poste_12_titre": "Adult faith education",
+
+        "adresse": "Address",
+        "place_cathedrale": "Cathedral Place",
+        "telephone": "Phone",
+        "telecopieur": "Fax",
+        "heures_bureau": "Office hours",
+        "horaires": "Monday to Thursday, 08h-12h; 13h-16h",
+        "sur_la_map": "On the map"
     }
 }
