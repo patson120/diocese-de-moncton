@@ -1,6 +1,7 @@
 
 'use client'
 
+import Text from "@/components/Text";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { Category } from "@/types"
 import { useSearchParams } from "next/navigation";
@@ -41,7 +42,9 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
     return (
         <div className='flex justify-center items-center gap-2'>
             <div className='flex items-center space-x-2 lg:w-[90%]'>
-                <h5 className='text-sm font-bold whitespace-nowrap'>Filtrer par</h5>
+                <h5 className='text-sm font-bold whitespace-nowrap'>
+                    <Text className="text-inherit" keyString="filtrer_par" />
+                </h5>
                 <div className="border border-gray-100 rounded-lg w-full">
                     <input
                         onChange={handleUpdateDate} type="month" 
@@ -67,7 +70,9 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
 
                 </select> */}
                 <select onChange={handleUpdateCategory} id="categorie" name="categorie" className="border border-gray-100 outline-primary outline-offset-1 px-3 py-2 rounded-lg w-full">
-                    <option value="" disabled>Par catégorie</option>
+                    <option value="" disabled>Par catégorie
+                        <Text className="text-inherit" keyString="par_categorie" />
+                    </option>
                     {
                         categories.map((category, index) => (
                             <option key={index} value={category.id}>{category.intitule_fr}</option>

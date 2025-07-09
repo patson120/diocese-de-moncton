@@ -15,8 +15,6 @@ export default async function Page(props: {
 }) {
     const { evenementId } = await props.params;
     const event: TypeEvent = await fetchEvents(`/${evenementId}`)
-    
-    // const paroisses: Paroisse[] = await fetchParoisses(`?type_paroisse_id=${paroisse.type_paroisse_id}`)
 
     return (
         <>
@@ -24,15 +22,30 @@ export default async function Page(props: {
                 <div className="container max-margin py-3 flex justify-between items-center ">
                     <Breadcrumbs
                         breadcrumbs={[
-                            { label: 'Accueil', href: '/' },
-                            {
-                                label: 'Evenements',
-                                href: '/evenements',
+                            { 
+                                label: '', 
+                                href: '/',
+                                data: {
+                                    labelEn: "Home",
+                                    labelFr: "Accueil"
+                                }
                             },
                             {
-                                label: event?.titre_fr ?? "",
+                                label: '',
+                                href: '/evenements',
+                                data: {
+                                    labelEn: "Events",
+                                    labelFr: "Evenements"
+                                }
+                            },
+                            {
+                                label: '',
                                 href: '',
                                 active: true,
+                                data: {
+                                    labelEn: event?.titre_en,
+                                    labelFr: event?.titre_fr
+                                }
                             },
                         ]}
                     />

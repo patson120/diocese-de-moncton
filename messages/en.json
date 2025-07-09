@@ -33,6 +33,8 @@
         "lieu_map": "On the map",
         "event_title": "Event title",
         "filtrer_resultat": "Filter results",
+        "filtrer_par": "Filter by",
+        "par_categorie": "By category",
         "pas_de_donnees": "No data available",
         "article_relatifs": "Related articles",
         "autres_msg": "Other messages",
