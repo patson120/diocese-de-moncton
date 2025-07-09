@@ -70,7 +70,7 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
 
                 </select> */}
                 <select onChange={handleUpdateCategory} id="categorie" name="categorie" className="border border-gray-100 outline-primary outline-offset-1 px-3 py-2 rounded-lg w-full">
-                    <option value="" disabled>Par catégorie
+                    <option value="" disabled>
                         <Text className="text-inherit" keyString="par_categorie" />
                     </option>
                     {
