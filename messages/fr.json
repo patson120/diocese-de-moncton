@@ -86,8 +86,5 @@
     },
     "paroisse": {
         "pas_de_paroisse": "Aucune paroisse trouvée"
-    },
-    "evenement": {
-        "mois_de": "Mois de"
     }
 }
