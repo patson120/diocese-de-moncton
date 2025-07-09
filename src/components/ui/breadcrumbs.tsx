@@ -2,6 +2,7 @@ import { Link } from '@/i18n/routing';
 import { clsx } from 'clsx';
 import { ChevronRight } from 'lucide-react';
 import Text from '../Text';
+import { useLocale } from 'next-intl';
 
 interface Breadcrumb {
   label: string;
@@ -18,6 +19,8 @@ export default function Breadcrumbs({
 }: {
   breadcrumbs: Breadcrumb[];
 }) {
+
+  const localActive = useLocale()
   return (
     <nav aria-label="Breadcrumb" className="block">
       <ol className='flex justify-center items-center body-2'>
@@ -31,7 +34,9 @@ export default function Breadcrumbs({
           >
             <Link className='' href={breadcrumb.href}>
               {
-                breadcrumb.active ? <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> : breadcrumb.label
+                breadcrumb.active ? 
+                <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> : 
+                localActive === 'fr' ? breadcrumb.data?.labelFr : breadcrumb.data?.labelEn
               }
             </Link>
             {index < breadcrumbs.length - 1 ? (

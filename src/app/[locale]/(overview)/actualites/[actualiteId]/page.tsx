@@ -7,6 +7,8 @@ import { Suspense } from 'react'
 import ActualiteDetail from './ActualiteDetail'
 import Buttons from './Buttons'
 import RelativesActualite from './RelativesActualite'
+import { useLocale } from 'next-intl'
+import { usePathname } from '@/i18n/routing'
 
 export default async function Page(
   props: {
@@ -16,21 +18,38 @@ export default async function Page(
   const actualite: TypeActualite = await fetchActualites(`/${actualiteId}`)
   const response = await fetchActualites(`?paginate=4&page=1&categorie_id=${actualite.categorie_id}`)
   const actualites = response.data
+
+
   return (
     <>
       <div className='flex justify-between items-center border-y border-y-gray-100 '>
         <div className="container max-margin py-3 flex justify-between items-center ">
           <Breadcrumbs
             breadcrumbs={[
-              { label: 'Accueil', href: '/' },
-              {
-                label: 'Actualités',
-                href: '/actualites',
+              { 
+                label:'', 
+                href: '/',
+                data: {
+                  labelEn: 'Home',
+                  labelFr: 'Accueil',
+                },
               },
               {
-                label: actualite?.titre_fr ?? "",
+                label: '',
+                href: '/actualites',
+                data: {
+                  labelEn: 'News',
+                  labelFr: 'Actualités',
+                },
+              },
+              {
+                label: "",
                 href: '',
                 active: true,
+                data: {
+                  labelEn: actualite?.titre_en.slice(0, 30) ?? "",
+                  labelFr: actualite?.titre_fr.slice(0, 30) ?? "",
+                },
               },
             ]}
           />

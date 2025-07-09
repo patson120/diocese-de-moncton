@@ -20,10 +20,21 @@ export default async function Page(props: {
                 <div className="container max-margin py-4 flex justify-between ">
                     <Breadcrumbs
                         breadcrumbs={[
-                            { label: 'Accueil', href: '/' },
+                            { 
+                                label: 'Accueil', 
+                                href: '/',
+                                data: {
+                                    labelEn: 'Home',
+                                    labelFr: 'Accueil',
+                                }
+                            },
                             {
                                 label: 'Messages',
                                 href: '/messages',
+                                data: {
+                                    labelEn: 'Messages',
+                                    labelFr: 'Messages',
+                                }
                             },
                             {
                                 label: "",

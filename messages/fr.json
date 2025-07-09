@@ -91,5 +91,9 @@
     "donation": {
         "go_back": "Page retour",
         "donation_text": "Votre don n'est pas seulement une contribution financière. C'est un acte de foi qui permet à l'espoir de briller là où il y en a le plus besoin. C'est la possibilité d'offrir un repas, un abri, une éducation, ou la lumière de l'Évangile à ceux qui en sont privés."
+    },
+    "news": {
+        "article_prec": "Article précédent",
+        "article_suiv": "Article suivant"
     }
 }
