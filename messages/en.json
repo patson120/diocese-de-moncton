@@ -61,8 +61,14 @@
 
         "newsletter_desc_1": "Subscribe to our newsletter to receive",
         "newsletter_desc_2": "news about the church.",
-        "newsletter_subcribe": "I subscribe"
+        "newsletter_subcribe": "I subscribe",
+
+        "fermer": "Close",
+        "horaires_messe_titre": "Mass schedule",
+        "horaires_messe_desc": "Find out about mass times in your parish."
     },
+
+
     "navigation": {
         "fermer": "Close",
         "horaires_messe_titre": "Mass schedule",

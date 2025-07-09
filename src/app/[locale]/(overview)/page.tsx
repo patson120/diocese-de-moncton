@@ -20,6 +20,7 @@ export default async function Home(props: {
     page?: number;
   }>
 }) {
+
   
   const searchParams = await props.searchParams
   const query = searchParams?.query || ''
@@ -45,12 +46,13 @@ export default async function Home(props: {
             <p className='body-3 text-gray-500 mt-2 mb-8'><Text keyString="horaires_messe_desc"/></p>
             <Link href="/horaires-messes">
               <Button className='w-full body-2 xl:text-xl'>
-                <Text keyString="savoir_plus"/>
+                <Text className="text-inherit" keyString="savoir_plus"/>
               </Button>
             </Link>
           </div>
         </div>
       </div>
+
       <div className="container max-margin py-0">
         <div className="vertical-margin">
           <div className="mb-3 flex justify-between items-center">
@@ -100,7 +102,7 @@ export default async function Home(props: {
       </Suspense>
 
       {/* Action de grace */}
-      <ActionGrace />
+      <ActionGrace /> 
     </main>
   );
 }

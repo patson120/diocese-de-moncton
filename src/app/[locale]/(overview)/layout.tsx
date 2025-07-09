@@ -46,8 +46,6 @@ export default async function RootLayout({
             <div className='mb-[130px]'>
               <Header />
             </div>
-            {/* <Navigation /> */}
-
             {children}
 
             {/* Newsletter */}
@@ -61,5 +59,5 @@ export default async function RootLayout({
         </NextIntlClientProvider>
       </body>
     </html>
-  );
+  )
 }

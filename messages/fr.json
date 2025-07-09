@@ -61,8 +61,13 @@
 
         "newsletter_desc_1": "Abonnez-vous à notre newsletter pour obtenir les",
         "newsletter_desc_2": "nouveautés sur l'église.",
-        "newsletter_subcribe": "Je m'abonne"
+        "newsletter_subcribe": "Je m'abonne",
+
+        "horaires_messe_titre": "Horaires de messe",
+        "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse."
     },
+
+
     
     "navigation": {
         "fermer": "Fermer",

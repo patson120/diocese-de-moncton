@@ -9,13 +9,9 @@ import Text from '@/components/Text'
 
 export default async function ParoisseSection({ query, gps}: { query: string, gps:string}) {
 
-    // let params = gps ? '?': '?paginate=4'
     let params = '?'
     if (query) params += `&nom=${query}`
     if (gps) params += `&gps=${gps}`
-
-    // const response = await fetchParoisses(`${params}`)
-    // const paroisses: Paroisse[] = response.data || []
 
     const paroisses: Paroisse[] = await fetchParoisses(`${params}`)
     
@@ -31,7 +27,7 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
                 </div>
                 <Suspense fallback={
                     <section className="col-span-3 md:col-span-1 flex flex-col gap-4">
-                        { [1, 2, 3, 4, 5].map(i => <ParoisseItemSkeleton key={i} />)}
+                        { [1, 2, 3, 4, 5].map(i => <ParoisseItemSkeleton key={i} />) }
                     </section>}>
                     <RecentParoisses paroisses={paroisses.slice(0, 4)} total={paroisses.length} />
                 </Suspense>
