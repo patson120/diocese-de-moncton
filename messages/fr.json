@@ -68,11 +68,12 @@
         
         "mois_de": "Mois de",
         "event_hero_title": "Découvrez toute notre actualité",
-        "news_search_placeholder": "Rechercher une actualité..."
+        "news_search_placeholder": "Rechercher une actualité...",
+
+        "message_hero_titre": "Communiqués du bureau de Mgr. Desrochers",
+        "message_hero_desc": "Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers."
     },
 
-
-    
     "navigation": {
         "fermer": "Fermer",
         "horaires_messe_titre": "Horaires de messe",

@@ -5,6 +5,7 @@ import { SlidersHorizontalIcon } from "lucide-react"
 import Image from 'next/image'
 import { Suspense } from 'react'
 import Messages from './messages'
+import Text from '@/components/Text'
 
 export default async function Page(
     props: {
@@ -52,8 +53,12 @@ export default async function Page(
                                     />
                                 </div>
                                 <div className='space-y-2 lg:w-1/2'>
-                                    <h5 className='heading-2 md:text-white font-extrabold'>Communiqués du bureau de Mgr. Desrochers</h5>
-                                    <p className='body-2 md:text-gray-200'>Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers</p>
+                                    <h5 className='heading-2 md:text-white font-extrabold'>
+                                        <Text className='text-inherit' keyString='message_hero_titre' />
+                                    </h5>
+                                    <p className='body-2 md:text-gray-200'>
+                                        <Text className='text-inherit' keyString='message_hero_desc' />
+                                    </p>
                                 </div>
                             </div>
                         </div>
