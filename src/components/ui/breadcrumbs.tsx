@@ -33,7 +33,7 @@ export default function Breadcrumbs({
             )}
           >
             <Link className='' href={breadcrumb.href}>
-              <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> :
+              <Text className='cursor-none text-sm md:text-base' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} />
             </Link>
             {index < breadcrumbs.length - 1 ? (
               <ChevronRight className="h-5 w-5 inline-block " />
