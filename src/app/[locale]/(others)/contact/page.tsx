@@ -6,6 +6,7 @@ import { useRouter } from "@/i18n/routing";
 import { ChevronLeft } from "lucide-react";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useState } from "react";
 import { toast } from 'sonner';
 
@@ -106,18 +107,33 @@ export default function Page() {
                             <div>
                                 <h1 className='body-1 font-extrabold'>{t("adresse")}</h1>
                                 <p className='body-2 text-gray'>{t("place_cathedrale")}</p>
-                                <p className='body-2 text-gray'>224 rue St-George, bureau 104</p>
-                                <p className='body-2 text-gray'>Moncton, N.-B. E1C 0V1</p>
-                                <p className='body-2 text-gray'>{t("courriel")}: annettel.diocese@gmail.com</p>
+                                
+                                <p className='body-2 text-gray'>
+                                    <a href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.0899093,-64.7828349,16.04z/data=!4m15!1m8!3m7!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!2s224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada!3b1!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                                        224 rue St-George, bureau 104
+                                    </a>
+                                </p>
+                                <p className='body-2 text-gray'>
+                                    <a href="https://www.google.com/maps/place/224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada/@46.0899093,-64.7828349,16.04z/data=!4m15!1m8!3m7!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!2s224+Rue+St.+George,+Moncton,+NB+E1C+5J4,+Canada!3b1!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7!3m5!1s0x4ca0b93b01f859a1:0xd74f8270dc13186e!8m2!3d46.090801!4d-64.781807!16s%2Fg%2F11c3q4b2z7?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                                        Moncton, N.-B. E1C 0V1
+                                    </a>
+                                </p>
+                                <p className='body-2 text-gray'>
+                                    <a href="mailto:annettel.diocese@gmail.com">{t("courriel")}: annettel.diocese@gmail.com</a>
+                                </p>
                             </div>
                             <div className="space-x-10 md:space-x-0 md:space-y-3 flex flex-row items-start md:items-center md:flex-col">
                                 <div>
                                     <h1 className='body-1 font-extrabold'>{t("telephone")}</h1>
-                                    <p className='body-2 text-gray'>(506) 857-9531</p>
+                                    <p className='body-2 text-gray'>
+                                        <a href="tel:(506) 857-9531">(506) 857-9531</a>
+                                    </p>
                                 </div>
                                 <div>
                                     <h1 className='body-1 font-extrabold'>{t("telecopieur")}</h1>
-                                    <p className='body-2 text-gray'>(506) 857-9533</p>
+                                    <p className='body-2 text-gray'>
+                                        <a href="tel:(506) 857-9533">(506) 857-9533</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -129,14 +145,16 @@ export default function Page() {
 
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-4">{t("sur_la_map")}</h1>
                         {/* Map */}
-                        <div className="h-64 w-full bg-gray-100 rounded-xl overflow-hidden">
-                            {/* <Map
-                                parishes={parishes}
-                                selectedParish={selectedParish}
-                                onParishSelect={setSelectedParish}
-                            /> */}
+                        <div className="h-80 w-full relative bg-gray-100 rounded-xl overflow-hidden">
+                            <Image
+                                alt="Localisation"
+                                src="/assets/img/localisation-contact.png"
+                                style={{ objectFit: 'cover' }}
+                                className="h-full w-full"
+                                fill
+                                priority
+                            />
                         </div>
-
 
                         <div className="mt-8 lg:mt-16"></div>
                         <h1 className='heading-3 font-extrabold mb-4'>{t("contacts_paroissiaux")}</h1>
