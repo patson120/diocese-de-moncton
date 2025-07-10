@@ -137,7 +137,7 @@
   }
 
   .heading-2 {
-    @apply font-bold text-3xl xl:text-4xl text-[#1D0104] lg:leading-[30px] xl:leading-[39.6px];
+    @apply font-bold text-xl md:text-3xl xl:text-4xl text-[#1D0104] lg:leading-[30px] xl:leading-[39.6px];
   }
 
   .heading-3 {
