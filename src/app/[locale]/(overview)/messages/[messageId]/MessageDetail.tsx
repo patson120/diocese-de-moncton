@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/shared/button'
 import { useRouter } from '@/i18n/routing'
 import { Message } from '@/types'
 import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 
 export default function MessageDetail({ message }: { message: Message }) {
     const { push } = useRouter()
@@ -19,6 +20,14 @@ export default function MessageDetail({ message }: { message: Message }) {
     return (
         <div className='col-span-full lg:col-span-4 pb-10 lg:pb-0 md:pr-10 lg:pr-20 border-b lg:border-r lg:border-r-[#E5E5E5] lg:border-b-transparent'>
             <div className='flex flex-col space-y-3'>
+                <div className='h-72 lg:h-96 xl:h-[560px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
+                    <Image
+                        alt='Image de couverture du message'
+                        src={message.image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${message.image}` : "/assets/img/placeholder-vector.png"}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                    />
+                </div>
                 <div className="heading-2 font-bold">
                     <Text className='text-2xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
                 </div>

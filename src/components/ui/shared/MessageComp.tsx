@@ -12,6 +12,18 @@ const MessageComp = ({ message }: { message: Message }) => {
                     <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString())}</span></div>
                 </div>
             </div>
+            {
+                message.image === null ? ( 
+                <div
+                    className="w-full h-[150px] rounded-xl bg-cover bg-center"
+                    style={{ backgroundImage: `url("/assets/img/placeholder-vector.png")` }}
+                />
+                ) : (
+                <div
+                    className="w-full h-[150px] rounded-xl bg-cover bg-center"
+                    style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}/${message.image})` }}
+                />
+            )}
             <div className='body-1 font-bold text-black line-clamp-2'>
                 <Text labelFr={message.titre_fr} labelEn={message.titre_en} />
             </div>
