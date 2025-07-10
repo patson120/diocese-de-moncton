@@ -33,11 +33,7 @@ export default function Breadcrumbs({
             )}
           >
             <Link className='' href={breadcrumb.href}>
-              {
-                breadcrumb.active ? 
-                <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> :
-                <span className='hidden md:inline-block'>{localActive === 'fr' ? breadcrumb.data?.labelFr : breadcrumb.data?.labelEn}</span> 
-              }
+              <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> :
             </Link>
             {index < breadcrumbs.length - 1 ? (
               <ChevronRight className="h-5 w-5 inline-block " />
