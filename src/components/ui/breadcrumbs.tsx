@@ -35,8 +35,8 @@ export default function Breadcrumbs({
             <Link className='' href={breadcrumb.href}>
               {
                 breadcrumb.active ? 
-                <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> : 
-                localActive === 'fr' ? breadcrumb.data?.labelFr : breadcrumb.data?.labelEn
+                <Text className='cursor-none' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} /> :
+                <span className='hidden md:inline-block'>{localActive === 'fr' ? breadcrumb.data?.labelFr : breadcrumb.data?.labelEn}</span> 
               }
             </Link>
             {index < breadcrumbs.length - 1 ? (

@@ -21,7 +21,7 @@ const MessageComp = ({ message }: { message: Message }) => {
                 ) : (
                 <div
                     className="w-full h-[150px] rounded-xl bg-cover bg-center"
-                    style={{ backgroundImage: `url(${process.env.NEXT_PUBLIC_API_URL}/${message.image})` }}
+                    style={{ backgroundImage: `url("${process.env.NEXT_PUBLIC_BASE_URL}/${message.image}")` }}
                 />
             )}
             <div className='body-1 font-bold text-black line-clamp-2'>
