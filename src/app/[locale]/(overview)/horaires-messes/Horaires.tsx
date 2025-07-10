@@ -2,17 +2,20 @@ import Text from '@/components/Text'
 import { Button } from '@/components/ui/shared/button'
 import { HoraireMesse } from '@/types'
 import { Plus } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'
 
 export default function Horaires({ horaires }: { horaires: HoraireMesse[]}) {
     const [selectedHour, setSelectedHour] = useState<HoraireMesse | null>()
+
+    const t = useTranslations("horaires_messe")
     return (
         <div className="mt-8 lg:mt-16 flex flex-col justify-center items-center">
             <div className='w-full md:w-3/4 lg:w-1/2 flex flex-col gap-4'>
                 {
                     horaires.length === 0 &&
                     <div>
-                        <p className='text-muted-foreground text-center'>Aucun horaire de messe disponible pour le moment.</p>
+                        <p className='text-muted-foreground text-center'>{t("aucune_horaire")}</p>
                     </div>
                 }
                 {
@@ -27,7 +30,7 @@ export default function Horaires({ horaires }: { horaires: HoraireMesse[]}) {
                                             size='sm'
                                             variant='ghost'
                                             className="pr-0">
-                                            Voir
+                                            {t("voir")}
                                             <Plus className="ml-2 h-4 w-6" />
                                         </Button>
                                     }
@@ -37,7 +40,7 @@ export default function Horaires({ horaires }: { horaires: HoraireMesse[]}) {
                                             size='sm'
                                             variant='ghost'
                                             className="pr-0">
-                                            Fermer
+                                            {t("fermer")}
                                             <Plus className="ml-2 h-4 w-6 rotate-45" />
                                         </Button>
                                     }

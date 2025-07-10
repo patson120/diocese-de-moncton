@@ -143,5 +143,13 @@
         "heures_bureau": "Heures de bureau",
         "horaires": "Lundi à Jeudi, 08h-12h; 13h-16h",
         "sur_la_map": "Sur la carte"
+    },
+    "horaires_messe": {
+        "aucune_horaire": "Aucun horaire de messe disponible pour le moment.",
+        "fermer": "Fermer",
+        "voir": "Voir",
+        "hero_titre": "Horaires des messes",
+        "hero_desc": "Consultez l'horaire des messes pour chaque jour de la semaine !",
+        "rechercher_paroisse": "Rechercher une paroisse..."
     }
 }

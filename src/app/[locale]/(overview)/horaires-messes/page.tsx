@@ -6,9 +6,11 @@ import { Search } from "lucide-react"
 import Image from 'next/image'
 import HorairesSection from './HorairesSection'
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function Page() {
   const [horaires, setHoraires] = useState<HoraireMesse[]>([])
+  const t = useTranslations("horaires_messe")
 
   const getHoraireMesses = async () => {
     const response: HoraireMesse[] = await fetchHoraireMesse()
@@ -36,8 +38,8 @@ export default function Page() {
         />
         <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-40'>
           <div className='container max-margin py-0 w-full px-4 md:px-0 md:w-1/2 md:space-y-3'>
-            <h1 className='heading-1 text-center text-white font-extrabold'>Horaires des messes</h1>
-            <p className='body-2 text-center text-white'>Consultez l'horaire des messes pour chaque jour de la semaine !</p>
+            <h1 className='heading-1 text-center text-white font-extrabold'>{t("hero_titre")}</h1>
+            <p className='body-2 text-center text-white'>{t("hero_desc")}</p>
           </div>
         </div>
       </section>
@@ -59,10 +61,11 @@ export default function Page() {
 
 
 const SearchBar = () => {
+  const t = useTranslations("horaires_messe")
   return (
     <div className='flex justify-center items-center -translate-y-6'>
       <div className='w-full md:w-3/4 lg:w-1/2 relative'>
-        <input type="text" placeholder="Rechercher une paroisse..."
+        <input type="text" placeholder={t("rechercher_paroisse")}
           className="w-full block flex-1 border border-gray-100 rounded-lg pl-3 pr-14 py-3
         text-gray-900 ring-1 ring-inset ring-gray-50 placeholder:text-gray-400
           placeholder:text-sm sm:text-sm sm:leading-6 outline-none"/>

@@ -142,5 +142,13 @@
         "heures_bureau": "Office hours",
         "horaires": "Monday to Thursday, 08h-12h; 13h-16h",
         "sur_la_map": "On the map"
+    },
+    "horaires_messe": {
+        "aucune_horaire": "No mass schedule available at the moment.",
+        "fermer": "Close",
+        "voir": "See",
+        "hero_titre": "Mass schedules",
+        "hero_desc": "Consult the Mass schedule for each day of the week!",
+        "rechercher_paroisse": "Search for a parish..."
     }
 }
