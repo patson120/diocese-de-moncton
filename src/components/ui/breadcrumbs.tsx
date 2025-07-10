@@ -29,7 +29,7 @@ export default function Breadcrumbs({
             key={breadcrumb.href}
             aria-current={breadcrumb.active}
             className={clsx(
-              breadcrumb.active ? 'font-semibold' : 'text-gray', "flex justify-center items-center"
+              breadcrumb.active ? 'font-semibold hidden md:inline-block' : 'text-gray', "flex justify-center items-center"
             )}
           >
             <Link className='' href={breadcrumb.href}>
