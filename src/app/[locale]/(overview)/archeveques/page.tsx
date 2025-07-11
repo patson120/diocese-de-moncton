@@ -94,24 +94,26 @@ export default function Page() {
                             },
                         ]}
                     />
-                    <div className='space-x-2'>
-                        <Button
-                            size={'sm'} 
-                            variant="outline"
-                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        > 
-                            <span className="hidden md:inline-block">Evêque précédent</span>
-                        <ChevronLeft className="md:hidden w-5 h-5" />
-                        </Button>
-                        <Button
-                            size={'sm'}
-                            variant="outline"
-                            className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        >
-                            <span className="hidden md:inline-block">Evêque suivant</span>
-                            <ChevronRight className="md:hidden w-5 h-5" />
-                        </Button>
-                    </div>
+                    {/* 
+                        <div className='space-x-2'>
+                            <Button
+                                size={'sm'} 
+                                variant="outline"
+                                className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                            > 
+                                <span className="hidden md:inline-block">Evêque précédent</span>
+                            <ChevronLeft className="md:hidden w-5 h-5" />
+                            </Button>
+                            <Button
+                                size={'sm'}
+                                variant="outline"
+                                className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
+                            >
+                                <span className="hidden md:inline-block">Evêque suivant</span>
+                                <ChevronRight className="md:hidden w-5 h-5" />
+                            </Button>
+                        </div>
+                    */}
                 </div>
             </div>
             <section className="md:container md:max-margin py-0">
