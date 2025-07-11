@@ -5,9 +5,10 @@ import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
 import { Membre } from "@/types";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import MemberComp from "../clerges/member-comp";
 import { useEffect, useState } from "react";
+import MemberComp from "../clerges/member-comp";
 
 // const items = [
 //     {
@@ -98,13 +99,17 @@ export default function Page() {
                             size={'sm'} 
                             variant="outline"
                             className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        >Evêque précédent
+                        > 
+                            <span className="hidden md:inline-block">Evêque précédent</span>
+                        <ChevronLeft className="md:hidden w-5 h-5" />
                         </Button>
                         <Button
                             size={'sm'}
                             variant="outline"
                             className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
-                        >Evêque suivant
+                        >
+                            <span className="hidden md:inline-block">Evêque suivant</span>
+                            <ChevronRight className="md:hidden w-5 h-5" />
                         </Button>
                     </div>
                 </div>
