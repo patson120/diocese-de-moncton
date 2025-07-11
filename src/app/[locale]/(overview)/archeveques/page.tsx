@@ -1,13 +1,14 @@
 
 
 
-import { fetchArcheveques } from "@/_lib/data";
+import { fetchArcheveques, fetchMembres } from "@/_lib/data";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
 import { Link } from "@/i18n/routing";
-import { Archeveque } from "@/types";
+import { Archeveque, Membre } from "@/types";
 import Image from "next/image";
+import MemberComp from "../clerges/member-comp";
 
 const items = [
     {
@@ -56,7 +57,8 @@ const items = [
 
 
 export default async function Page() {
-    const archeveques: Archeveque[] = await fetchArcheveques();
+    // const archeveques: Archeveque[] = await fetchArcheveques();
+    const members: Membre[] = await fetchMembres(`?categorie_id=21`)
 
     return (
         <>
@@ -64,17 +66,29 @@ export default async function Page() {
                 <div className="container max-margin py-4 flex justify-between ">
                     <Breadcrumbs
                         breadcrumbs={[
-                            { label: 'Accueil', href: '/' },
+                            { 
+                                label: '',
+                                href: '/',
+                                data: {
+                                    labelEn: "Home",
+                                    labelFr: "Accueil"
+                                }
+                                
+                            },
                             {
                                 label: 'Archeveques',
                                 href: '/archeveques',
                                 active: true,
+                                data: {
+                                    labelEn: "Archbishops",
+                                    labelFr: "Archeveques"
+                                }
                             },
                         ]}
                     />
                     <div className='space-x-2'>
                         <Button
-                            size={'sm'}
+                            size={'sm'} 
                             variant="outline"
                             className='w-min bg-transparent hover:bg-transparent border-gray-300 text-gray-500'
                         >Evêque précédent
@@ -94,7 +108,7 @@ export default async function Page() {
                         <div className='h-80 xl:h-[500px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
                                 alt="Image de l'archevèque"
-                                src="/assets/img/image.png"
+                                src={ members[0].image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${members[0].image}` : "/assets/img/clerge-1.png" }
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
@@ -103,7 +117,7 @@ export default async function Page() {
                     <div className='container max-margin px-4 md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <small className='text-gray uppercase'>Archevêque de Moncton</small>
-                            <h1 className='heading-4 font-extrabold mb-4'>{archeveques[0].name}</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{members[0].nom}</h1>
                             <div className="space-y-3 md:space-y-7 lg:space-y-10">
                                 <p className='body-2 text-gray'>Mgr Desrochers est né en 1956 dans le secteur de Hull à Gatineau (Québec). Après ses études secondaires, il est entré au collège Algonquin d’Ottawa où des études en beaux-arts et en art commercial l’ont préparé à travailler comme graphiste pendant sept ans au quotidien français d’Ottawa, Le Droit.</p>
                                 <p className='body-2 text-gray'>Sa vocation l’a ensuite conduit à la Congrégation du Très-Saint-Rédempteur (les Rédemptoristes) où il a été ordonné prêtre en 1989.</p>
@@ -119,34 +133,36 @@ export default async function Page() {
             <section className="container max-margin py-0">
                 <div>
                     <h2 className='heading-3 text-gray-900 mb-6'>Archevêques précédents</h2>
-                    <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-0 lg:pb-8 lg:space-x-6 grid gap-3 md:gap-6 lg:gap-0 grid-cols-2'>
-                        {
-                            archeveques.slice(1,).map((item: Archeveque) => (
-                                <div key={item.id} className='space-y-3'>
-                                    <div className='w-full lg:w-[240px] h-[240px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
-                                        <Image
-                                            alt="Célébration de baptême"
-                                            src="/assets/img/archeveque-1.png"
-                                            fill
-                                            style={{
-                                                objectFit: 'cover',
-                                                height: '100%',
-                                                width: '100%'
-                                            }}
-                                        />
+                    {/* 
+                        <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-0 lg:pb-8 lg:space-x-6 grid gap-3 md:gap-6 lg:gap-0 grid-cols-2'>
+                            {
+                                archeveques.slice(1,).map((item: Archeveque) => (
+                                    <div key={item.id} className='space-y-3'>
+                                        <div className='w-full lg:w-[240px] h-[240px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
+                                            <Image
+                                                alt="Célébration de baptême"
+                                                src="/assets/img/archeveque-1.png"
+                                                fill
+                                                style={{
+                                                    objectFit: 'cover',
+                                                    height: '100%',
+                                                    width: '100%'
+                                                }}
+                                            />
+                                        </div>
+                                        <h1 className='body-2 font-bold'>{item.name}</h1>
+                                        <p className='body-2 text-gray line-clamp-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cum?</p>
+                                        <div className="">
+                                            <Link href="" className="body-3 font-semibold underline">
+                                                Voir biographie
+                                            </Link>
+                                        </div>
                                     </div>
-                                    <h1 className='body-2 font-bold'>{item.name}</h1>
-                                    {/* <p className='body-2 text-gray'>{item.description}</p> */}
-                                    <p className='body-2 text-gray line-clamp-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, cum?</p>
-                                    <div className="">
-                                        <Link href="" className="body-3 font-semibold underline">
-                                            Voir biographie
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
+                                ))
+                            }
+                        </div>
+                    */}
+                    <MemberComp membres={members} />
                 </div>
             </section>
             <div className='mt-10 md:mt-20'></div>
