@@ -115,8 +115,8 @@ export default function Page() {
                         <div className='h-80 xl:h-[500px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
                                 alt="Image de l'archevèque"
-                                // src={ members[0].image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${members[0].image}` : "/assets/img/clerge-1.png" }
-                                src={"/assets/img/clerge-1.png" }
+                                src={ (members.length && members[0].image) ? `${process.env.NEXT_PUBLIC_BASE_URL}/${members[0].image}` : "/assets/img/clerge-1.png" }
+                                // src={"/assets/img/clerge-1.png" }
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
@@ -125,7 +125,7 @@ export default function Page() {
                     <div className='container max-margin px-4 md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <small className='text-gray uppercase'>Archevêque de Moncton</small>
-                            <h1 className='heading-4 font-extrabold mb-4'>{members[0].nom}</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{members.length ? members[0].nom : ""}</h1>
                             <div className="space-y-3 md:space-y-7 lg:space-y-10">
                                 <p className='body-2 text-gray'>Mgr Desrochers est né en 1956 dans le secteur de Hull à Gatineau (Québec). Après ses études secondaires, il est entré au collège Algonquin d’Ottawa où des études en beaux-arts et en art commercial l’ont préparé à travailler comme graphiste pendant sept ans au quotidien français d’Ottawa, Le Droit.</p>
                                 <p className='body-2 text-gray'>Sa vocation l’a ensuite conduit à la Congrégation du Très-Saint-Rédempteur (les Rédemptoristes) où il a été ordonné prêtre en 1989.</p>
