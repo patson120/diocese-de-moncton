@@ -115,7 +115,8 @@ export default function Page() {
                         <div className='h-80 xl:h-[500px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
                                 alt="Image de l'archevèque"
-                                src={ members[0].image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${members[0].image}` : "/assets/img/clerge-1.png" }
+                                // src={ members[0].image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${members[0].image}` : "/assets/img/clerge-1.png" }
+                                src={"/assets/img/clerge-1.png" }
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
