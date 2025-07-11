@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/shared/button";
 import { Membre } from "@/types";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from 'next-intl'
 
 export default function MemberComp( { membres }: { membres: Membre[]}){
     const [open, setOpen] = useState(false)
     const [selectedItem, setSelectedItem] = useState<any>({})
+    const t= useTranslations("membres")
     return <>
         <div className='grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
             {
@@ -44,7 +46,7 @@ export default function MemberComp( { membres }: { membres: Membre[]}){
                         />
                         <div className="">
                             <Button size={'sm'} variant={'link'} onClick={() => { setSelectedItem(member); setOpen(true) }} className="underline text-black px-0 ">
-                                Coordonnées
+                                {t("coordonnees")}
                             </Button>
                         </div>
                     </div>

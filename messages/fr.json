@@ -151,5 +151,9 @@
         "hero_titre": "Horaires des messes",
         "hero_desc": "Consultez l'horaire des messes pour chaque jour de la semaine !",
         "rechercher_paroisse": "Rechercher une paroisse..."
+    },
+
+    "membres": {
+        "coordonnees": "Coordonnées"
     }
 }

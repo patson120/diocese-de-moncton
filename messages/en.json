@@ -150,5 +150,9 @@
         "hero_titre": "Mass schedules",
         "hero_desc": "Consult the Mass schedule for each day of the week!",
         "rechercher_paroisse": "Search for a parish..."
+    },
+
+    "membres": {
+        "coordonnees": "Coordonnées"
     }
 }

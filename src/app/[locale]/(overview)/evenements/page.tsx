@@ -6,7 +6,6 @@ import { Suspense } from 'react';
 import Evenements from "./evenements";
 import { Filter } from "./Filter";
 import SearchBar from "./SearchBar";
-import { useLocale } from "next-intl";
 
 
 
