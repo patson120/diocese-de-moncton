@@ -154,5 +154,8 @@
 
     "membres": {
         "coordonnees": "Coordinates"
+    },
+    "archeveques": {
+        "autres_archeveques": "Previous archbishops"
     }
 }

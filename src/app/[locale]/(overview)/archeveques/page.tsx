@@ -1,15 +1,14 @@
 "use client"
 
 import { fetchMembres } from "@/_lib/data";
+import Text from "@/components/Text";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
-import { Button } from "@/components/ui/shared/button";
 import { Membre } from "@/types";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import MemberComp from "../clerges/member-comp";
-import Text from "@/components/Text";
 
 // const items = [
 //     {
@@ -60,12 +59,13 @@ import Text from "@/components/Text";
 export default function Page() {
     // const archeveques: Archeveque[] = await fetchArcheveques();
     const [members, setMembers] = useState<Membre[]>([])
+    const t = useTranslations("archeveques")
 
     useEffect(() => {
-      ( async () => {
-        const response: Membre[] = await fetchMembres(`?categorie_id=21`)
-        setMembers(response)
-      } )()
+        ( async () => {
+            const response: Membre[] = await fetchMembres(`?categorie_id=21`)
+            setMembers(response)
+        } )()
     }, [])
     
 
@@ -156,7 +156,7 @@ export default function Page() {
             <div className='md:mt-10 lg:mt-20'></div>
             <section className="container max-margin py-0">
                 <div>
-                    <h2 className='heading-3 text-gray-900 mb-6'>Archevêques précédents</h2>
+                    <h2 className='heading-3 text-gray-900 mb-6'>{t("autres_archeveques")}</h2>
                     {/* 
                         <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-0 lg:pb-8 lg:space-x-6 grid gap-3 md:gap-6 lg:gap-0 grid-cols-2'>
                             {

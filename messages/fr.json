@@ -155,5 +155,8 @@
 
     "membres": {
         "coordonnees": "Coordonnées"
+    },
+    "archeveques": {
+        "autres_archeveques": "Archevêques précédents"
     }
 }
