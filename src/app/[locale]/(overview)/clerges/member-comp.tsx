@@ -55,7 +55,6 @@ export default function MemberComp( { membres }: { membres: Membre[]}){
     </>
 }
 
-
 const PretresDialog = ({
     open,
     onOpenChange,

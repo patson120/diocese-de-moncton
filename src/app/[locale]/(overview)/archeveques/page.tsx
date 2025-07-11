@@ -1,59 +1,55 @@
-
-
-
-import { fetchArcheveques, fetchMembres } from "@/_lib/data";
+import { fetchMembres } from "@/_lib/data";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
-import { Link } from "@/i18n/routing";
-import { Archeveque, Membre } from "@/types";
+import { Membre } from "@/types";
 import Image from "next/image";
 import MemberComp from "../clerges/member-comp";
 
-const items = [
-    {
-        id: 1,
-        title: 'Mgr Arthur Melanson',
-        description: 'Premier archevêque de Moncton (1936-1942)',
-        link: '',
-        image: '/assets/img/archeveque-1.png'
-    },
-    {
-        id: 2,
-        title: 'Mgr Norbert Robichaud',
-        description: 'Deuxième archevêque de Moncton (1942 – 1972)',
-        link: '',
-        image: '/assets/img/archeveque-2.png'
-    },
-    {
-        id: 3,
-        title: 'Mgr Donat Chiasson',
-        description: 'Troisième archevêque de Moncton (1972 – 1997)',
-        link: '',
-        image: '/assets/img/archeveque-3.png'
-    },
-    {
-        id: 4,
-        title: 'Mgr Ernest Léger',
-        description: 'Quatrième archevêque de Moncton (1997-2002)',
-        link: '',
-        image: '/assets/img/archeveque-4.png'
-    },
-    {
-        id: 5,
-        title: 'Mgr André Richard, c.s.c.',
-        description: 'Cinquième archevêque de Moncton (2002-2012)',
-        link: '',
-        image: '/assets/img/archeveque-5.png'
-    },
-    {
-        id: 6,
-        title: 'Mgr Valéry Vienneau',
-        description: 'Sixième archevêque de Moncton (2012-2023)',
-        link: '',
-        image: '/assets/img/archeveque-6.png'
-    },
-]
+// const items = [
+//     {
+//         id: 1,
+//         title: 'Mgr Arthur Melanson',
+//         description: 'Premier archevêque de Moncton (1936-1942)',
+//         link: '',
+//         image: '/assets/img/archeveque-1.png'
+//     },
+//     {
+//         id: 2,
+//         title: 'Mgr Norbert Robichaud',
+//         description: 'Deuxième archevêque de Moncton (1942 – 1972)',
+//         link: '',
+//         image: '/assets/img/archeveque-2.png'
+//     },
+//     {
+//         id: 3,
+//         title: 'Mgr Donat Chiasson',
+//         description: 'Troisième archevêque de Moncton (1972 – 1997)',
+//         link: '',
+//         image: '/assets/img/archeveque-3.png'
+//     },
+//     {
+//         id: 4,
+//         title: 'Mgr Ernest Léger',
+//         description: 'Quatrième archevêque de Moncton (1997-2002)',
+//         link: '',
+//         image: '/assets/img/archeveque-4.png'
+//     },
+//     {
+//         id: 5,
+//         title: 'Mgr André Richard, c.s.c.',
+//         description: 'Cinquième archevêque de Moncton (2002-2012)',
+//         link: '',
+//         image: '/assets/img/archeveque-5.png'
+//     },
+//     {
+//         id: 6,
+//         title: 'Mgr Valéry Vienneau',
+//         description: 'Sixième archevêque de Moncton (2012-2023)',
+//         link: '',
+//         image: '/assets/img/archeveque-6.png'
+//     },
+// ]
 
 
 export default async function Page() {
