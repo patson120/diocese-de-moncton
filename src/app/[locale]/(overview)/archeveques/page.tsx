@@ -9,6 +9,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import MemberComp from "../clerges/member-comp";
+import Text from "@/components/Text";
 
 // const items = [
 //     {
@@ -123,7 +124,6 @@ export default function Page() {
                             <Image
                                 alt="Image de l'archevèque"
                                 src={ (members.length && members[0].image) ? `${process.env.NEXT_PUBLIC_BASE_URL}/${members[0].image}` : "/assets/img/clerge-1.png" }
-                                // src={"/assets/img/clerge-1.png" }
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
@@ -134,10 +134,19 @@ export default function Page() {
                             <small className='text-gray uppercase'>Archevêque de Moncton</small>
                             <h1 className='heading-4 font-extrabold mb-4'>{members.length ? members[0].nom : ""}</h1>
                             <div className="space-y-3 md:space-y-7 lg:space-y-10">
-                                <p className='body-2 text-gray'>Mgr Desrochers est né en 1956 dans le secteur de Hull à Gatineau (Québec). Après ses études secondaires, il est entré au collège Algonquin d’Ottawa où des études en beaux-arts et en art commercial l’ont préparé à travailler comme graphiste pendant sept ans au quotidien français d’Ottawa, Le Droit.</p>
-                                <p className='body-2 text-gray'>Sa vocation l’a ensuite conduit à la Congrégation du Très-Saint-Rédempteur (les Rédemptoristes) où il a été ordonné prêtre en 1989.</p>
-                                <p className='body-2 text-gray'>Après son ordination, il a collaboré à une mission d’évangélisation dans la région de Gaspé, au Québec. Il a ensuite servi pendant plusieurs années comme recteur de l’ancien monastère des Rédemptoristes à Aylmer-Gatineau, avant d’être nommé au Sanctuaire de Sainte-Anne-de-Beaupré.</p>
-                                <p className='body-2 text-gray'>Après avoir été brièvement supérieur d’une maison de retraite des Rédemptoristes près de la ville de Québec, il est retourné à Sainte-Anne-de-Beaupré en tant que directeur des Annales de Sainte-Anne, poste qu’il a occupé pendant trois ans. En juillet 2011, il est devenu recteur de la Basilique de Sainte-Anne-de-Beaupré. Il a consacré une partie de son temps à prêcher des retraites un peu partout en Amérique du Nord et, en juin 2015, il a repris ce ministère tout en étant directeur des vocations chez les Rédemptoristes.</p>
+                                <p className='body-2 text-gray'>{members.length ? members[0].coordonnees : ""}</p>
+                                <div>
+                                    <Text className='body-2 text-gray' 
+                                        labelEn={members.length ? members[0].description_en : ""} 
+                                        labelFr={members.length ? members[0].description_fr : ""} 
+                                    />
+                                </div>
+                                {/* 
+                                    <p className='body-2 text-gray'>Mgr Desrochers est né en 1956 dans le secteur de Hull à Gatineau (Québec). Après ses études secondaires, il est entré au collège Algonquin d’Ottawa où des études en beaux-arts et en art commercial l’ont préparé à travailler comme graphiste pendant sept ans au quotidien français d’Ottawa, Le Droit.</p>
+                                    <p className='body-2 text-gray'>Sa vocation l’a ensuite conduit à la Congrégation du Très-Saint-Rédempteur (les Rédemptoristes) où il a été ordonné prêtre en 1989.</p>
+                                    <p className='body-2 text-gray'>Après son ordination, il a collaboré à une mission d’évangélisation dans la région de Gaspé, au Québec. Il a ensuite servi pendant plusieurs années comme recteur de l’ancien monastère des Rédemptoristes à Aylmer-Gatineau, avant d’être nommé au Sanctuaire de Sainte-Anne-de-Beaupré.</p>
+                                    <p className='body-2 text-gray'>Après avoir été brièvement supérieur d’une maison de retraite des Rédemptoristes près de la ville de Québec, il est retourné à Sainte-Anne-de-Beaupré en tant que directeur des Annales de Sainte-Anne, poste qu’il a occupé pendant trois ans. En juillet 2011, il est devenu recteur de la Basilique de Sainte-Anne-de-Beaupré. Il a consacré une partie de son temps à prêcher des retraites un peu partout en Amérique du Nord et, en juin 2015, il a repris ce ministère tout en étant directeur des vocations chez les Rédemptoristes.</p>
+                                */}
                             </div>
                         </div>
                     </div>
