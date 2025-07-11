@@ -1,3 +1,5 @@
+"use client"
+
 import { fetchMembres } from "@/_lib/data";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
@@ -5,6 +7,7 @@ import { Button } from "@/components/ui/shared/button";
 import { Membre } from "@/types";
 import Image from "next/image";
 import MemberComp from "../clerges/member-comp";
+import { useEffect, useState } from "react";
 
 // const items = [
 //     {
@@ -54,7 +57,15 @@ import MemberComp from "../clerges/member-comp";
 
 export default async function Page() {
     // const archeveques: Archeveque[] = await fetchArcheveques();
-    const members: Membre[] = await fetchMembres(`?categorie_id=21`)
+    const [members, setMembers] = useState<Membre[]>([])
+
+    useEffect(() => {
+      ( async () => {
+        const response: Membre[] = await fetchMembres(`?categorie_id=21`)
+        setMembers(response)
+      } )()
+    }, [])
+    
 
     return (
         <>

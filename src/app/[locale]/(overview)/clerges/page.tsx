@@ -2,16 +2,9 @@
 
 import { fetchMembres } from "@/_lib/data";
 import { HeroSectionSecond } from "@/components/sections/hero-second";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription
-} from "@/components/ui/dialog";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
-import { Button } from "@/components/ui/shared/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Membre } from "@/types";
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import MemberComp from "./member-comp";
 
@@ -126,7 +119,6 @@ export default function Page() {
 
 
                         {/**
-
                             <TabsContent value="diacres">
                                 <Diacres membres={membres} />
                                 </TabsContent>
