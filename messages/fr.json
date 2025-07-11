@@ -158,5 +158,9 @@
     },
     "archeveques": {
         "autres_archeveques": "Archevêques précédents"
+    },
+    "baptemes_sacrements": {
+        "hero_title": "Le Baptême : Porte d'entrée dans la vie chrétienne",
+        "hero_desc": "Plonger dans l'amour inconditionnel de Dieu et rejoindre la communauté de l'Église"
     }
 }

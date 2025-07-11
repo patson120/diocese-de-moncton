@@ -2,16 +2,18 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { ArrowUpRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
+    const t = useTranslations("baptemes_sacrements")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond 
                 image='/assets/img/sacrements.png'
-                title="Le Baptême : Porte d'entrée dans la vie chrétienne"
-                subtitle="Plonger dans l'amour inconditionnel de Dieu et rejoindre la communauté de l'Église"
+                title={t("hero_title")}
+                subtitle={t("hero_desc")}
             />
             <div className='md:mt-10 lg:mt-20'></div>
             <section className='container max-margin py-0 pb-10 md:pb-20'>

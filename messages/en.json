@@ -157,5 +157,9 @@
     },
     "archeveques": {
         "autres_archeveques": "Previous archbishops"
+    },
+    "baptemes_sacrements": {
+        "hero_title": "Baptism: Gateway to Christian life",
+        "hero_desc": "Immerse yourself in God's unconditional love and join the Church community"
     }
 }
