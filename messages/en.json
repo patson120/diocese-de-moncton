@@ -160,6 +160,30 @@
     },
     "baptemes_sacrements": {
         "hero_title": "Baptism: Gateway to Christian life",
-        "hero_desc": "Immerse yourself in God's unconditional love and join the Church community"
+        "hero_desc": "Immerse yourself in God's unconditional love and join the Church community",
+
+        "section_1_titre": "Baptism, the foundation of the Christian life",
+        "section_1_p_1": "Baptism is the first sacrament of the Christian life. It marks entry into the Church and communion with God.",
+        "section_1_p_2": "Through baptism, we are freed from sin, become members of Christ and enter a new life guided by the love of the Father, Son and Holy Spirit.",
+        
+        "section_2_titre": "Why receive baptism?",
+        "section_2_sous_titre_1": "An act of love",
+        "section_2_p_1": "Baptism is a plunge into God's unconditional love.",
+        "section_2_sous_titre_2": "A new life",
+        "section_2_p_2": "It marks the beginning of a journey of faith and conversion.",
+        "section_2_sous_titre_3": "Belonging",
+        "section_2_p_3": "Baptism integrates us into the Christian community, where we grow with our brothers and sisters in Christ.",
+
+        "section_3_titre": "How does the christening work?",
+        "section_3_sous_titre_1": "The rite of water",
+        "section_3_p_1": "The priest or deacon pours water over the baptized person's head three times, saying: “I baptize you in the name of the Father, and of the Son, and of the Holy Spirit”.",
+        "section_3_sous_titre_2": "Signs and symbols",
+        "section_3_p_2": "Anointing: Together with holy chrism, it marks belonging to Christ. White habit: Symbolizes purity and new life. Baptismal candle: Lit with the Paschal candle, it represents the light of Christ.",
+
+        "section_4_titre": "Resources",
+        "section_4_sous_titre": "To deepen your understanding",
+        
+        "section_5_titre": "Do you have any questions?",
+        "section_5_p_1": "To find out more about the sacrament of Holy Orders, or to discuss a vocation, contact your parish or the diocesan vocations service."
     }
 }

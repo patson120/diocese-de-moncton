@@ -32,10 +32,10 @@ export default function Page() {
                     </div>
                     <div className='col-span-full md:col-span-7 py-10 space-y-6'>
                         <div>
-                            <h2 className='heading-3 text-gray-900 mb-4'>Le baptême, fondement de la vie chrétienne</h2>
+                            <h2 className='heading-3 text-gray-900 mb-4'>{t("section_1_titre")}</h2>
                             <div className='space-y-3'>
-                                <p className='body-2 text-gray'>Le baptême est le premier sacrement de la vie chrétienne. Il marque l'entrée dans l'Église et la communion avec Dieu. </p>
-                                <p className='body-2 text-gray'>Par le baptême, nous sommes libérés du péché, devenons membres du Christ et entrons dans une vie nouvelle guidée par l'amour du Père, du Fils et du Saint-Esprit.</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -44,32 +44,32 @@ export default function Page() {
                 <div className='mt-10 md:mt-20'></div>
                 <div className='space-y-6'>
                     <div className='w-full lg:w-1/2'>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Pourquoi recevoir le baptême ?</h2>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("section_2_titre")}</h2>
                     </div>
                     <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <div className='space-y-3'>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Un acte d'amour</h1>
-                                <p className='body-2 text-gray'>Le baptême est une plongée dans l'amour inconditionnel de Dieu.</p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_1")}</h1>
+                                <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
                             </div>
                         </div>
                         <div className='space-y-3'>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Une nouvelle vie</h1>
-                                <p className='body-2 text-gray'>Il marque le début d'un chemin de foi et de conversion.</p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_2")}</h1>
+                                <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                             </div>
                         </div>
                         <div className='space-y-3'>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Une appartenance</h1>
-                                <p className='body-2 text-gray'>Le baptême nous intègre à la communauté chrétienne, où nous grandissons avec nos frères et sœurs en Christ.</p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_3")}</h1>
+                                <p className='body-2 text-gray'>{t("section_2_p_3")}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='mt-10 md:mt-20'></div>
                 <div>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Comment se déroule le baptême ?</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_3_titre")}</h2>
                     <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-2'>
                         <div className='space-y-3'>
                             <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
@@ -84,8 +84,8 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>Le rite de l'eau</h1>
-                            <p className='body-2 text-gray'>Le prêtre ou le diacre verse trois fois de l'eau sur la tête du baptisé en disant : « Je te baptise au nom du Père, et du Fils, et du Saint-Esprit ».</p>
+                            <h1 className='heading-4'>{t("section_3_sous_titre_1")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
 
                         </div>
                         <div className='space-y-3'>
@@ -101,11 +101,8 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>Les signes et symboles</h1>
-                            <p className='body-2 text-gray'>L'onction : Avec le saint chrême, elle marque l'appartenance au Christ.
-                                L'habit blanc : Symbole de pureté et de vie nouvelle.
-                                Le cierge baptismal : Allumé au cierge pascal, il représente la lumière du Christ.</p>
-
+                            <h1 className='heading-4'>{t("section_3_sous_titre_2")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_2")}</p>
                         </div>
                     </div>
                 </div>
@@ -113,8 +110,8 @@ export default function Page() {
             <div className='mt-8 md:mt-16'></div>
             <section className='container max-margin py-0'>
                 <div className=''>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Ressources</h2>
-                    <p className='body-2 text-gray'>Pour approfondir votre compréhension</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_4_sous_titre")}</p>
                 </div>
                 <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                     <a href='#' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
@@ -139,8 +136,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Vous avez des questions ?</h2>
-                    <p className='body-2 text-gray'>Pour en savoir plus sur le sacrement de l'ordre ou pour discuter d'une vocation, contactez votre paroisse ou le service diocésain des vocations</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
             </section>
         </main>

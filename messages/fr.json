@@ -161,6 +161,30 @@
     },
     "baptemes_sacrements": {
         "hero_title": "Le Baptême : Porte d'entrée dans la vie chrétienne",
-        "hero_desc": "Plonger dans l'amour inconditionnel de Dieu et rejoindre la communauté de l'Église"
+        "hero_desc": "Plonger dans l'amour inconditionnel de Dieu et rejoindre la communauté de l'Église",
+
+        "section_1_titre": "Le baptême, fondement de la vie chrétienne",
+        "section_1_p_1": "Le baptême est le premier sacrement de la vie chrétienne. Il marque l'entrée dans l'Église et la communion avec Dieu.",
+        "section_1_p_2": "Par le baptême, nous sommes libérés du péché, devenons membres du Christ et entrons dans une vie nouvelle guidée par l'amour du Père, du Fils et du Saint-Esprit.",
+        
+        "section_2_titre": "Pourquoi recevoir le baptême ?",
+        "section_2_sous_titre_1": "Un acte d'amour",
+        "section_2_p_1": "Le baptême est une plongée dans l'amour inconditionnel de Dieu.",
+        "section_2_sous_titre_2": "Une nouvelle vie",
+        "section_2_p_2": "Il marque le début d'un chemin de foi et de conversion.",
+        "section_2_sous_titre_3": "Une appartenance",
+        "section_2_p_3": "Le baptême nous intègre à la communauté chrétienne, où nous grandissons avec nos frères et sœurs en Christ.",
+
+        "section_3_titre": "Comment se déroule le baptême ?",
+        "section_3_sous_titre_1": "Le rite de l'eau",
+        "section_3_p_1": "Le prêtre ou le diacre verse trois fois de l'eau sur la tête du baptisé en disant : « Je te baptise au nom du Père, et du Fils, et du Saint-Esprit ».",
+        "section_3_sous_titre_2": "Les signes et symboles",
+        "section_3_p_2": "L'onction : Avec le saint chrême, elle marque l'appartenance au Christ. L'habit blanc : Symbole de pureté et de vie nouvelle. Le cierge baptismal : Allumé au cierge pascal, il représente la lumière du Christ.",
+
+        "section_4_titre": "Ressources",
+        "section_4_sous_titre": "Pour approfondir votre compréhension",
+        
+        "section_5_titre": "Vous avez des questions ?",
+        "section_5_p_1": "Pour en savoir plus sur le sacrement de l'ordre ou pour discuter d'une vocation, contactez votre paroisse ou le service diocésain des vocations"
     }
 }
