@@ -153,6 +153,9 @@
     },
 
     "membres": {
+        "hero_titre": "Clergy",
+        "hero_desc": "Find all the members behind our diocese",
+        "section_1_titre": "Select the profile you are looking for",
         "coordonnees": "Coordinates"
     },
     "archeveques": {
@@ -303,5 +306,66 @@
         "section_4_p_5": "Telephone: (506) 857-9531 ext. 1228",
         "section_4_p_6": "Fax : (506) 388-2759",
         "section_4_p_7": "E-mail address"
+    },
+    "confirmation_sacrements": {
+        "hero_titre": "The sacrament of Confirmation",
+        "hero_desc": "Receive the Holy Spirit and become a witness to Christ.",
+
+        "section_1_titre": "What is confirmation?",
+        "section_1_p_1": "Confirmation is the sacrament that perfects baptism. Through the laying on of hands and the anointing with Holy Chrism, we receive the gift of the Holy Spirit.",
+        "section_1_p_2": "This sacrament gives us the strength to bear witness, in word and deed, to God's love and power. It makes us full and responsible members of the Catholic Church.",
+        
+        "section_2_titre": "The meaning of confirmation",
+        "section_2_p_1": "« Confirmation is like a «contract» with God. The confirmant says: «Yes, I believe in You, my God, give me Your Spirit so that I may belong to You totally, that I may never be separated from You, and that I may be Your witness throughout my life, with all my soul and body, in deed and word, in good days and bad.»",
+        "section_2_p_2": "And God replies, «I too believe in you, my child - and I will give you my Spirit, yes, give myself to you.»",
+
+        "section_3_titre": "How does confirmation work?",
+        "section_3_sous_titre_1": "Administrator",
+        "section_3_p_1": "The sacrament is usually administered by the bishop.",
+        "section_3_sous_titre_2": "Ritual",
+        "section_3_p_2": "The confirmant receives the anointing of the Holy Chrism on the forehead, accompanied by the words: «Be marked by the Holy Spirit, the gift of God».",
+        "section_3_sous_titre_3": "Context",
+        "section_3_p_3": "In the Diocese of Moncton, confirmation is celebrated with young people who have completed seven years of catechesis.",
+
+        "section_4_titre_1": "Preparing for Confirmation",
+        "section_4_p_1": "Preparing for confirmation involves",
+        "section_4_li_1": "A personal reflection on faith and Christian commitment.",
+        "section_4_li_2": "Support from the parish community and catechists.",
+        "section_4_li_3": "Active participation in the life of the Church.",
+        "section_4_p_2": "This preparation involves the whole Church community, because confirmation is a Church event that takes place in the Church's faith.",
+        "section_4_titre_2": "Living as a witness to Christ",
+        "section_4_p_3": "After confirmation, confirmands are called to :",
+        "section_4_li_4": "Witness to their faith in their daily lives.",
+        "section_4_li_5": "Take an active part in the Church's mission.",
+        "section_4_li_6": "Confirmation is not an end, but a new beginning for a life guided by the Holy Spirit.",
+
+        "section_5_titre": "Do you have any questions ?",
+        "section_5_desc": "For more information on confirmation preparation or to register a young person, contact your parish or the diocesan catechetical service."
+
+    },
+    "education_de_la_foi": {
+        "hero_titre": "Becoming a Christian: a journey of faith and conversion",
+        "hero_desc": "Accompanying young people on their faith journey",
+
+        "section_1_titre": "What is R.I.C.A. ?",
+        "section_1_p_1": "R.I.C.A. is a spiritual journey for adults who wish to receive the sacraments of Baptism, First Communion and Confirmation. Inspired by the Greek word Katêkhoumenos (“instructed by word of mouth”), this process is lived out in community, and enables people to discover God's presence in their lives.",
+        "section_1_p_2": "You don't become a Christian on your own: R.I.C.A. is a shared faith experience, accompanied by catechists and the parish community.",
+
+        "section_btn_1": "Registration",
+        "section_btn_2": "Register a child",
+
+        "section_2_titre": "The stages of the catechumenal journey",
+        "section_2_p_1": "R.I.C.A. is a progressive process that respects each adult's rhythm. It comprises several key stages:",
+        "section_2_li_1": "Welcome and first contact: Discovering the faith and the Christian community.",
+        "section_2_li_2": "Catechumenate: Teaching, praying and sharing to deepen the faith.",
+        "section_2_li_3": "Liturgical milestones: Celebrations marking important moments on the journey.",
+        "section_2_li_4": "Immediate preparation for the sacraments: Baptism, First Communion and Confirmation.",
+        "section_2_li_5": "Mystagogy: Integration into the life of the Church after reception of the sacraments.",
+
+        "section_3_titre": "Contact and registration",
+        "section_3_p_2": "For more information on R.I.C.A. or to get started, contact :",
+        "section_3_li_1": "Dianne Léger",
+        "section_3_li_2": "Diocesan Coordinator",
+        "section_3_li_3": "Telephone: (506) 857-9531, ext. 1229"
     }
 }

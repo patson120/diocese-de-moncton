@@ -1,16 +1,18 @@
 'use client'
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
+    const t = useTranslations("confirmation_sacrements")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/sacrements.png'
-                title="Le sacrement de la confirmation"
-                subtitle="Recevoir l'Esprit-Saint et devenir un témoin du Christ."
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
@@ -27,10 +29,10 @@ export default function Page() {
                     </div>
                     <div className='order-1 lg:order-2 col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Qu'est-ce que la confirmation ?</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-8'>
-                                <p className='body-2 text-gray'>La confirmation est le sacrement qui parfait le baptême. Par l'imposition des mains et l'onction du Saint-Chrême, nous recevons le don de l'Esprit-Saint.</p>
-                                <p className='body-2 text-gray'>Ce sacrement nous donne la force de témoigner, en paroles et en actes, de l'amour et de la puissance de Dieu. Il fait de nous des membres à part entière et responsables de l'Église catholique.</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -42,12 +44,10 @@ export default function Page() {
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Le sens de la confirmation</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_2_titre")}</h1>
                             <div className='space-y-4'>
-                                <p className='body-2 text-gray'>La confirmation est comme un « contrat » avec Dieu. Le confirmant dit :
-                                    « Oui, je crois en Toi, mon Dieu, donne-moi ton Esprit afin que je t’appartienne totalement, que je ne sois jamais séparé de toi, et que je sois ton témoin durant toute ma vie, de toute mon âme et de tout mon corps, en actes et en paroles, dans les bons et les mauvais jours. »</p>
-                                <p className='body-2 text-gray'>Et Dieu répond :
-                                    « Moi aussi je crois en toi, mon enfant – et je vais te donner mon Esprit, oui, me donner moi-même à toi. »</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -67,25 +67,25 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0 space-y-6" >
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Comment se déroule la confirmation ?</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_3_titre")}</h2>
                 </div>
                 <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <div className='space-y-3'>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Administrateur</h1>
-                            <p className='body-2 text-gray'>Le sacrement est ordinairement administré par l'évêque.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_3_sous_titre_1")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
                         </div>
                     </div>
                     <div className='space-y-3'>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Rituel</h1>
-                            <p className='body-2 text-gray'>Le confirmant reçoit l'onction du Saint-Chrême sur le front, accompagnée des paroles : « Sois marqué de l’Esprit Saint, le don de Dieu ».</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_3_sous_titre_2")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_2")}</p>
                         </div>
                     </div>
                     <div className='space-y-3'>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Contexte</h1>
-                            <p className='body-2 text-gray'>Dans le Diocèse de Moncton, la confirmation est célébrée avec les jeunes ayant complété sept années de catéchèse.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_3_sous_titre_3")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_3")}</p>
                         </div>
                     </div>
                 </div>
@@ -95,25 +95,25 @@ export default function Page() {
             <section className='container max-margin py-0'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16'>
                     <div className=''>
-                        <h2 className='heading-3 text-gray-900 mb-4'>La préparation à la confirmation</h2>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre_1")}</h2>
                         <div className='space-y-2'>
-                            <p className='body-2 text-gray'>La préparation à la confirmation implique</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Une réflexion personnelle sur la foi et l'engagement chrétien.</li>
-                                <li className='body-2 text-gray list-disc'>Un accompagnement par la communauté paroissiale et les catéchètes.</li>
-                                <li className='body-2 text-gray list-disc'>Une participation active à la vie de l'Église.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_1")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_2")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_3")}</li>
                             </ul>
-                            <p className='body-2 text-gray'>Cette préparation concerne toute la communauté ecclésiale, car la confirmation est un événement d'Église qui s’accomplit dans la foi de l'Église.</p>
+                            <p className='body-2 text-gray'>{t('section_4_p_2')}</p>
                         </div>
                     </div>
                     <div className=''>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Vivre en témoin du Christ</h2>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre_2")}</h2>
                         <div className='space-y-2'>
-                            <p className='body-2 text-gray'>Après la confirmation, les confirmants sont appelés à :</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_3")}</p>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Témoigner de leur foi dans leur vie quotidienne.</li>
-                                <li className='body-2 text-gray list-disc'>Participer activement à la mission de l'Église.</li>
-                                <li className='body-2 text-gray list-disc'>Grandir dans leur relation avec Dieu par la prière et les sacrements. La confirmation n'est pas une fin, mais un nouveau départ pour une vie guidée par l'Esprit-Saint.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_4")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_5")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_6")}</li>
                             </ul>
                         </div>
                     </div>
@@ -122,8 +122,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Vous avez des questions ?</h2>
-                    <p className='body-2 text-gray'>Pour plus d'informations sur la préparation à la confirmation ou pour inscrire un jeune, contactez votre paroisse ou le service diocésain de catéchèse.</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
+                    <p className='body-2 text-gray'>{t('section_5_desc')}</p>
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>

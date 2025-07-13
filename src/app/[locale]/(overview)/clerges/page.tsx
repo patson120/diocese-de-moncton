@@ -7,6 +7,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Membre } from "@/types";
 import { useEffect, useState } from 'react';
 import MemberComp from "./member-comp";
+import { useTranslations } from "next-intl";
 
 const items = [
     {
@@ -77,6 +78,7 @@ const menus = [
 
 
 export default function Page() {
+    const t = useTranslations('membres')
 
     const [selectedMenu, setSelectedMenu] = useState(menus[0])
     const [membres, setMembres] = useState<Membre[]>([])
@@ -95,13 +97,13 @@ export default function Page() {
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/clerges.png'
-                title="Clergé"
-                subtitle="Retrouvez tous les membres derrière notre diocèse"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 lg:mt-20'></div>
             <section className='container max-margin py-0 pb-10 md:pb-20'>
                 <div>
-                    <p className='body-2 text-gray mb-2'>Sélectionnez le profil recherché</p>
+                    <p className='body-2 text-gray mb-2'>{t("section_1_titre")}</p>
                     <Tabs defaultValue={menus[0].slug} className="space-y-4">
                         <TabsList className='bg-white h-auto flex flex-row justify-start overflow-x-scroll xl:overflow-x-hidden gap-3 pb-4'>
                             {

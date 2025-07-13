@@ -154,7 +154,11 @@
     },
 
     "membres": {
+        "hero_titre": "Clergé",
+        "hero_desc": "Retrouvez tous les membres derrière notre diocèse",
+        "section_1_titre": "Sélectionnez le profil recherché",
         "coordonnees": "Coordonnées"
+
     },
     "archeveques": {
         "autres_archeveques": "Archevêques précédents"
@@ -307,5 +311,66 @@
         "section_4_p_5": "Téléphone : (506) 857-9531 poste 1228",
         "section_4_p_6": "Fax : (506) 388-2759",
         "section_4_p_7": "Adresse couriel"
+    },
+    "confirmation_sacrements": {
+        "hero_titre": "Le sacrement de la confirmation",
+        "hero_desc": "Recevoir l'Esprit-Saint et devenir un témoin du Christ.",
+
+        "section_1_titre": "Qu'est-ce que la confirmation ?",
+        "section_1_p_1": "La confirmation est le sacrement qui parfait le baptême. Par l'imposition des mains et l'onction du Saint-Chrême, nous recevons le don de l'Esprit-Saint.",
+        "section_1_p_2": "Ce sacrement nous donne la force de témoigner, en paroles et en actes, de l'amour et de la puissance de Dieu. Il fait de nous des membres à part entière et responsables de l'Église catholique.",
+        
+        "section_2_titre": "Le sens de la confirmation",
+        "section_2_p_1": "La confirmation est comme un « contrat » avec Dieu. Le confirmant dit : « Oui, je crois en Toi, mon Dieu, donne-moi ton Esprit afin que je t’appartienne totalement, que je ne sois jamais séparé de toi, et que je sois ton témoin durant toute ma vie, de toute mon âme et de tout mon corps, en actes et en paroles, dans les bons et les mauvais jours. »",
+        "section_2_p_2": "Et Dieu répond : « Moi aussi je crois en toi, mon enfant – et je vais te donner mon Esprit, oui, me donner moi-même à toi. »",
+
+        "section_3_titre": "Comment se déroule la confirmation ?",
+        "section_3_sous_titre_1": "Administrateur",
+        "section_3_p_1": "Le sacrement est ordinairement administré par l'évêque.",
+        "section_3_sous_titre_2": "Rituel",
+        "section_3_p_2": "Le confirmant reçoit l'onction du Saint-Chrême sur le front, accompagnée des paroles : « Sois marqué de l’Esprit Saint, le don de Dieu ».",
+        "section_3_sous_titre_3": "Contexte",
+        "section_3_p_3": "Dans le Diocèse de Moncton, la confirmation est célébrée avec les jeunes ayant complété sept années de catéchèse.",
+
+        "section_4_titre_1": "La préparation à la confirmation",
+        "section_4_p_1": "La préparation à la confirmation implique",
+        "section_4_li_1": "Une réflexion personnelle sur la foi et l'engagement chrétien.",
+        "section_4_li_2": "Un accompagnement par la communauté paroissiale et les catéchètes.",
+        "section_4_li_3": "Une participation active à la vie de l'Église.",
+        "section_4_p_2": "Cette préparation concerne toute la communauté ecclésiale, car la confirmation est un événement d'Église qui s’accomplit dans la foi de l'Église.",
+        "section_4_titre_2": "Vivre en témoin du Christ",
+        "section_4_p_3": "Après la confirmation, les confirmants sont appelés à :",
+        "section_4_li_4": "Témoigner de leur foi dans leur vie quotidienne.",
+        "section_4_li_5": "Participer activement à la mission de l'Église.",
+        "section_4_li_6": "Grandir dans leur relation avec Dieu par la prière et les sacrements.La confirmation n'est pas une fin, mais un nouveau départ pour une vie guidée par l'Esprit-Saint.",
+
+        "section_5_titre": "Vous avez des questions ?",
+        "section_5_desc": "Pour plus d'informations sur la préparation à la confirmation ou pour inscrire un jeune, contactez votre paroisse ou le service diocésain de catéchèse."
+
+    },
+    "education_de_la_foi": {
+        "hero_titre": "Devenir chrétien : un cheminement de foi et de conversion",
+        "hero_desc": "Accompagner les jeunes dans leur cheminement de foi",
+
+        "section_1_titre": "Qu'est-ce que le R.I.C.A. ?",
+        "section_1_p_1": "Le R.I.C.A. est un cheminement spirituel pour les adultes qui souhaitent recevoir les sacrements du baptême, de la première communion et de la confirmation. Inspiré du mot grec Katêkhoumenos (« instruit de vive voix »), ce processus se vit en communauté et permet de découvrir la présence de Dieu dans sa vie.",
+        "section_1_p_2": "On ne devient pas chrétien seul : le R.I.C.A. est une expérience de foi partagée, accompagnée par des catéchètes et la communauté paroissiale.",
+
+        "section_btn_1": "Inscription",
+        "section_btn_2": "Inscrire un enfant",
+
+        "section_2_titre": "Les étapes du parcours catéchuménal",
+        "section_2_p_1": "Le R.I.C.A. est un processus progressif qui respecte le rythme de chaque adulte. Il comprend plusieurs étapes clés :",
+        "section_2_li_1": "Accueil et premier contact : Découverte de la foi et de la communauté chrétienne.",
+        "section_2_li_2": "Catéchuménat : Enseignement, prière et partage pour approfondir la foi.",
+        "section_2_li_3": "Étapes liturgiques : Célébrations marquant les moments importants du cheminement.",
+        "section_2_li_4": "Préparation immédiate aux sacrements : Baptême, première communion et confirmation.",
+        "section_2_li_5": "Mystagogie : Intégration dans la vie de l'Église après la réception des sacrements.",
+
+        "section_3_titre": "Contact et inscriptions",
+        "section_3_p_2": "Pour plus d'informations sur le R.I.C.A. ou pour entamer ce cheminement, contactez :",
+        "section_3_li_1": "Dianne Léger",
+        "section_3_li_2": "Coordonnatrice diocésaine",
+        "section_3_li_3": "Téléphone : (506) 857-9531, poste 1229"
     }
 }

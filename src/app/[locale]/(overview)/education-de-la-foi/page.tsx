@@ -2,32 +2,34 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Button } from '@/components/ui/shared/button'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 
 export default function Page() {
+    const t = useTranslations("education_de_la_foi")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/education.png'
-                title="Devenir chrétien : un cheminement de foi et de conversion"
-                subtitle="Accompagner les jeunes dans leur cheminement de foi"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 lg:mt-20'></div>
             <section className="container max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Qu'est-ce que le R.I.C.A. ?</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-4'>
-                                <p className='body-2 text-gray'>Le R.I.C.A. est un cheminement spirituel pour les adultes qui souhaitent recevoir les sacrements du baptême, de la première communion et de la confirmation. Inspiré du mot grec Katêkhoumenos (« instruit de vive voix »), ce processus se vit en communauté et permet de découvrir la présence de Dieu dans sa vie.</p>
-                                <p className='body-2 text-gray'>On ne devient pas chrétien seul : le R.I.C.A. est une expérience de foi partagée, accompagnée par des catéchètes et la communauté paroissiale.</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                             <div className='mt-6 mb-8 md:mb-0'>
                                 <Button size="sm" className="px-5 w-full md:w-auto">
-                                    <span className='hidden md:block'>Inscription</span>
-                                    <span className='md:hidden'>Inscrire un enfant</span>
+                                    <span className='hidden md:block'>{t("section_btn_1")}</span>
+                                    <span className='md:hidden'>{t("section_btn_1")}</span>
                                 </Button>
                             </div>
                         </div>
@@ -42,7 +44,6 @@ export default function Page() {
                             />
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -61,21 +62,21 @@ export default function Page() {
                     </div>
                     <div className='order-1 lg:order-2 col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Les étapes du parcours catéchuménal</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_2_titre")}</h1>
                             <div className='space-y-2'>
-                                <p className='body-2 text-gray'>Le R.I.C.A. est un processus progressif qui respecte le rythme de chaque adulte. Il comprend plusieurs étapes clés :</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
                                 <ul className='ml-5'>
-                                    <li className='body-2 text-gray list-disc'>Accueil et premier contact : Découverte de la foi et de la communauté chrétienne.</li>
-                                    <li className='body-2 text-gray list-disc'>Catéchuménat : Enseignement, prière et partage pour approfondir la foi.</li>
-                                    <li className='body-2 text-gray list-disc'>Étapes liturgiques : Célébrations marquant les moments importants du cheminement.</li>
-                                    <li className='body-2 text-gray list-disc'>Préparation immédiate aux sacrements : Baptême, première communion et confirmation.</li>
-                                    <li className='body-2 text-gray list-disc'>Mystagogie : Intégration dans la vie de l'Église après la réception des sacrements.</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_1")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_2")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_3")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_4")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_5")}</li>
                                 </ul>
                             </div>
                             <div className='mt-6 mb-8 md:mb-0'>
                                 <Button size="sm" className="px-5 w-full md:w-auto">
-                                    <span className='hidden md:block'>Inscription</span>
-                                    <span className='md:hidden'>Inscrire un enfant</span>
+                                    <span className='hidden md:block'>{t("section_btn_1")}</span>
+                                    <span className='md:hidden'>{t("section_btn_2")}</span>
                                 </Button>
                             </div>
                         </div>
@@ -86,13 +87,13 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Contact et inscriptions</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_3_titre")}</h2>
                     <div>
-                        <p className='body-2 text-gray'>Pour plus d'informations sur le R.I.C.A. ou pour entamer ce cheminement, contactez :</p>
+                        <p className='body-2 text-gray'>{t("section_3_p_2")}</p>
                         <ul>
-                            <li className='body-2 text-gray'>Dianne Léger</li>
-                            <li className='body-2 text-gray'>Coordonnatrice diocésaine</li>
-                            <li className='body-2 text-gray'>Téléphone : (506) 857-9531, poste 1229</li>
+                            <li className='body-2 text-gray'>{t("section_3_li_1")}</li>
+                            <li className='body-2 text-gray'>{t("section_3_li_2")}</li>
+                            <li className='body-2 text-gray'>{t("section_3_li_3")}</li>
                             <li className='body-2 text-gray'>Email : catechese.dianneleger@gmail.com</li>
                         </ul>
                     </div>
