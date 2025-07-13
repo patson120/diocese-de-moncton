@@ -2,16 +2,18 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { ArrowUpRight } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
+    const t = useTranslations("eucharistie_sacrements")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/sacrements.png'
-                title="L'Eucharistie, source et sommet de la vie chrétienne"
-                subtitle="Le sacrement qui unit les fidèles au sacrifice du Christ"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
@@ -28,11 +30,11 @@ export default function Page() {
                     </div>
                     <div className='order-1 lg:order-2 col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>L'Eucharistie, troisième sacrement de l'initiation chrétienne</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-6'>
-                                <p className='body-2 text-gray'>Après le baptême et la confirmation, l’eucharistie est le troisième sacrement de l’initiation chrétienne.</p>
-                                <p className='body-2 text-gray'>Elle est le centre mystérieux de la vie chrétienne, car elle rend présent le sacrifice historique de Jésus sur la croix de manière non sanglante.</p>
-                                <p className='body-2 text-gray'>Comme l’affirme le concile Vatican II, l’eucharistie est « source et sommet de toute la vie chrétienne » (Lumen Gentium, 11).</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_3")}</p>
                             </div>
                         </div>
                     </div>
@@ -41,7 +43,7 @@ export default function Page() {
 
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
-                <h2 className='heading-3 text-gray-900 mb-4'>Le cœur de la communion chrétienne</h2>
+                <h2 className='heading-3 text-gray-900 mb-4'>{t("section_2_titre")}</h2>
                 <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-3'>
                     <div className='space-y-3'>
                         <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
@@ -56,8 +58,8 @@ export default function Page() {
                                 }}
                             />
                         </div>
-                        <h1 className='heading-4'>La liturgie de la Parole</h1>
-                        <p className='body-2 text-gray'>Dieu nous parle à travers les lectures de l’Ancien et du Nouveau Testament, l’Évangile, la prédication et les prières universelles.</p>
+                        <h1 className='heading-4'>{t("section_2_sous_titre_1")}</h1>
+                        <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
                     </div>
                     <div className='space-y-3'>
                         <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
@@ -72,8 +74,8 @@ export default function Page() {
                                 }}
                             />
                         </div>
-                        <h1 className='heading-4'>La célébration eucharistique</h1>
-                        <p className='body-2 text-gray'>Elle comprend la présentation du pain et du vin, leur consécration, et la communion.</p>
+                        <h1 className='heading-4'>{t("section_2_sous_titre_2")}</h1>
+                        <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
 
                     </div>
                     <div className='space-y-3'>
@@ -89,8 +91,8 @@ export default function Page() {
                                 }}
                             />
                         </div>
-                        <h1 className='heading-4'>Le rôle du prêtre</h1>
-                        <p className='body-2 text-gray'>Le prêtre agit in persona Christi capitis (en la personne du Christ-Tête), rendant présent le sacrifice du Christ.</p>
+                        <h1 className='heading-4'>{t("section_2_sous_titre_3")}</h1>
+                        <p className='body-2 text-gray'>{t("section_2_p_3")}</p>
                     </div>
                 </div>
             </section>
@@ -100,12 +102,12 @@ export default function Page() {
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Préparation à la première communion</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_3_titre")}</h1>
                             <div className='space-y-4'>
-                                <p className='body-2 text-gray'>Dans le Diocèse de Moncton, les jeunes célèbrent leur première communion après avoir complété trois années de catéchèse. Cette étape marque leur pleine participation à la vie eucharistique de l’Église.</p>
+                                <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
                                 <ul className='ml-5 space-y-4'>
-                                    <li className='body-2 text-gray list-disc'>Processus de préparation : Enseignement sur la signification de l’eucharistie, participation aux célébrations liturgiques, et accompagnement spirituel.</li>
-                                    <li className='body-2 text-gray list-disc'>Engagement des familles : Les parents sont invités à soutenir leurs enfants dans ce cheminement de foi.</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_3_li_1")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_3_li_2")}</li>
                                 </ul>
                             </div>
                         </div>
@@ -126,8 +128,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className=''>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Ressources</h2>
-                    <p className='body-2 text-gray'>Pour approfondir votre compréhension</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                 </div>
                 <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                     <a href='https://www.vatican.va/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
@@ -144,8 +146,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Vous avez des questions ?</h2>
-                    <p className='body-2 text-gray'>Pour en savoir plus sur la préparation à la première communion ou sur la célébration de l’eucharistie, contactez votre paroisse ou le service diocésain de catéchèse</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>

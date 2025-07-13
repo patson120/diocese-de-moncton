@@ -372,5 +372,34 @@
         "section_3_li_1": "Dianne Léger",
         "section_3_li_2": "Coordonnatrice diocésaine",
         "section_3_li_3": "Téléphone : (506) 857-9531, poste 1229"
+    },
+    "eucharistie_sacrements": {
+        "hero_titre": "L'Eucharistie, source et sommet de la vie chrétienne",
+        "hero_desc": "Le sacrement qui unit les fidèles au sacrifice du Christ",
+
+        "section_1_titre": "L'Eucharistie, troisième sacrement de l'initiation chrétienne",
+        "section_1_p_1": "Après le baptême et la confirmation, l’eucharistie est le troisième sacrement de l’initiation chrétienne.",
+        "section_1_p_2": "Elle est le centre mystérieux de la vie chrétienne, car elle rend présent le sacrifice historique de Jésus sur la croix de manière non sanglante.",
+        "section_1_p_3": "Comme l’affirme le concile Vatican II, l’eucharistie est « source et sommet de toute la vie chrétienne » (Lumen Gentium, 11).",
+
+        "section_2_titre": "Le cœur de la communion chrétienne",
+        "section_2_sous_titre_1": "La liturgie de la Parole",
+        "section_2_p_1": "Dieu nous parle à travers les lectures de l’Ancien et du Nouveau Testament, l’Évangile, la prédication et les prières universelles.",
+        "section_2_sous_titre_2": "La célébration eucharistique",
+        "section_2_p_2": "Elle comprend la présentation du pain et du vin, leur consécration, et la communion.",
+        "section_2_sous_titre_3": "Le rôle du prêtre",
+        "section_2_p_3": "Le prêtre agit in persona Christi capitis (en la personne du Christ-Tête), rendant présent le sacrifice du Christ.",
+
+        "section_3_titre": "Préparation à la première communion",
+        "section_3_p_1": "Dans le Diocèse de Moncton, les jeunes célèbrent leur première communion après avoir complété trois années de catéchèse. Cette étape marque leur pleine participation à la vie eucharistique de l’Église.",
+        "section_3_li_1": "Processus de préparation : Enseignement sur la signification de l’eucharistie, participation aux célébrations liturgiques, et accompagnement spirituel.",
+        "section_3_li_2": "Engagement des familles : Les parents sont invités à soutenir leurs enfants dans ce cheminement de foi.",
+
+        "section_4_titre": "Ressources",
+        "section_4_p_1": "Pour approfondir votre compréhension",
+
+        "section_5_titre": "Vous avez des questions ?",
+        "section_5_p_1": "Pour en savoir plus sur la préparation à la première communion ou sur la célébration de l’eucharistie, contactez votre paroisse ou le service diocésain de catéchèse"
+
     }
 }

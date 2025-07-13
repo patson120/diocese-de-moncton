@@ -367,5 +367,34 @@
         "section_3_li_1": "Dianne Léger",
         "section_3_li_2": "Diocesan Coordinator",
         "section_3_li_3": "Telephone: (506) 857-9531, ext. 1229"
+    },
+    "eucharistie_sacrements": {
+        "hero_titre": "The Eucharist, source and summit of Christian life",
+        "hero_desc": "The sacrament that unites the faithful to Christ's sacrifice",
+
+        "section_1_titre": "The Eucharist, third sacrament of Christian initiation",
+        "section_1_p_1": "After baptism and confirmation, the Eucharist is the third sacrament of Christian initiation.",
+        "section_1_p_2": "It is the mysterious center of the Christian life, because it makes present the historic sacrifice of Jesus on the cross in an unbloody way.",
+        "section_1_p_3": "As stated by the Second Vatican Council, the Eucharist is «the source and summit of the whole Christian life» (Lumen Gentium, 11).",
+
+        "section_2_titre": "The heart of Christian communion",
+        "section_2_sous_titre_1": "Liturgy of the Word",
+        "section_2_p_1": "God speaks to us through the readings of the Old and New Testaments, the Gospel, preaching and universal prayers.",
+        "section_2_sous_titre_2": "The Eucharistic celebration",
+        "section_2_p_2": "It includes the presentation of the bread and wine, their consecration, and communion.",
+        "section_2_sous_titre_3": "The role of the priest",
+        "section_2_p_3": "The priest acts in persona Christi capitis (in the person of Christ-Head), making Christ's sacrifice present.",
+
+        "section_3_titre": "Preparing for First Communion",
+        "section_3_p_1": "In the Diocese of Moncton, young people celebrate their First Holy Communion after completing three years of catechesis. This marks their full participation in the Eucharistic life of the Church.",
+        "section_3_li_1": "Preparation process: Teaching on the meaning of the Eucharist, participation in liturgical celebrations, and spiritual accompaniment.",
+        "section_3_li_2": "Family involvement: Parents are invited to support their children in this faith journey.",
+
+        "section_4_titre": "Resources",
+        "section_4_p_1": "To deepen your understanding",
+
+        "section_5_titre": "Do you have any questions ?",
+        "section_5_p_1": "To find out more about preparing for First Communion or celebrating the Eucharist, contact your parish or the diocesan catechetical service."
+
     }
 }
