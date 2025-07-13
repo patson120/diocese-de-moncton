@@ -1,16 +1,19 @@
 'use client'
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
+
+    const t = useTranslations("chancellerie")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/hero-image-2.png'
-                title="Chancellerie diocésaine"
-                subtitle="Au service de l'Église de Moncton pour les questions canoniques et historiques"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
@@ -27,10 +30,10 @@ export default function Page() {
                     </div>
                     <div className='order-1 lg:order-2 col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>La chancellerie, un service essentiel pour l'Église</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-3'>
-                                <p className='body-2 text-gray'>La chancellerie est le bureau central de l'Archidiocèse de Moncton qui veille à répondre aux questions d'ordre canonique et historique. Elle assure la publication officielle des actes de la curie, en vérifiant leur exactitude et leur conformité au droit canonique.</p>
-                                <p className='body-2 text-gray'>Le chancelier et son équipe sont des conseillers clés pour l'archevêque et les paroisses, offrant un soutien précieux dans des domaines variés.</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -42,16 +45,16 @@ export default function Page() {
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Un rôle central dans la vie diocésaine</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_2_titre")}</h1>
                             <div className='space-y-2'>
-                                <p className='body-2 text-gray'>Objectif principal : Assurer la conformité des actes et des décisions de l'Église au droit canonique.</p>
-                                <p className='body-2 text-gray'>Fonctions clés :</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                                 <ul className='ml-10'>
-                                    <li className='body-2 text-gray list-disc'>Publication et conservation des actes officiels.</li>
-                                    <li className='body-2 text-gray list-disc'>Conseil en matière canonique et historique.</li>
-                                    <li className='body-2 text-gray list-disc'>Soutien aux paroisses et aux bureaux diocésains.</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_1")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_2")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_3")}</li>
                                 </ul>
-                                <p className='body-2 text-gray'>Valeurs : Exactitude, confidentialité, service et respect des traditions de l'Église.</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_3")}</p>
                             </div>
                         </div>
                     </div>
@@ -71,33 +74,33 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0 space-y-6'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-1'>Des services variés pour répondre aux besoins de l'Église</h2>
-                    <p className='body-2 text-gray'>La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine</p>
+                    <h2 className='heading-3 text-gray-900 mb-1'>{t("section_3_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
                 </div>
                 <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-3">
                     <div className='space-y-1'>
                         <div className='space-y-1'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Questions de droit canonique</h1>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_3_sous_titre_1")}</h1>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Droit liturgique et sacramentel.</li>
-                                <li className='body-2 text-gray list-disc'>Droit du mariage.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_1")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_2")}</li>
                             </ul>
                         </div>
                     </div>
                     <div className='space-y-1'>
                         <div className='space-y-1'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Préservation du patrimoine</h1>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_3_sous_titre_2")}</h1>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Conservation des biens culturels et historiques de l'Église.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_3")}</li>
                             </ul>
                         </div>
                     </div>
                     <div className='space-y-1'>
                         <div className='space-y-1'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Consultations et formations</h1>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_3_sous_titre_3")}</h1>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Consultations privées sur des questions spécifiques.</li>
-                                <li className='body-2 text-gray list-disc'>Sessions d'information sur des sujets canoniques et pastoraux.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_4")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_5")}</li>
                             </ul>
                         </div>
                     </div>
@@ -107,36 +110,36 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0 space-y-6'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-1'>Des acteurs clés dans la gouvernance diocésaine</h2>
-                    <p className='body-2 text-gray'>La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine</p>
+                    <h2 className='heading-3 text-gray-900 mb-1'>{t("section_4_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                 </div>
                 <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-3">
                     <div className='space-y-1'>
                         <div className='space-y-1'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Chancelier</h1>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_4_sous_titre_1")}</h1>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Conseiller de l'archevêque en matière canonique et historique.</li>
-                                <li className='body-2 text-gray list-disc'>Responsable de la rédaction, de l'expédition et de la conservation des actes de la curie.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_1")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_2")}</li>
                             </ul>
                         </div>
                     </div>
                     <div className='space-y-1'>
                         <div className='space-y-1'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Vice-chancelier</h1>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_4_sous_titre_2")}</h1>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Soutient le chancelier dans ses fonctions.</li>
-                                <li className='body-2 text-gray list-disc'>Assume le rôle de notaire et de secrétaire de la curie.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_3")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_4")}</li>
                             </ul>
                         </div>
                     </div>
                     <div className='space-y-1'>
                         <div className='space-y-1'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Références canoniques</h1>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_4_sous_titre_3")}</h1>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Can. 482,1 : Fonction du chancelier.</li>
-                                <li className='body-2 text-gray list-disc'>Can. 475,1 : Rôle du vicaire général.</li>
-                                <li className='body-2 text-gray list-disc'>Can. 482,2 : Possibilité de nommer un vice-chancelier.</li>
-                                <li className='body-2 text-gray list-disc'>Can. 482,3 : Statut de notaire et secrétaire de la curie.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_5")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_6")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_7")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_8")}</li>
                             </ul>
                         </div>
                     </div>
@@ -146,8 +149,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Contact</h2>
-                    <p className='body-2 text-gray'>Pour toute question ou demande de consultation, contactez : Patricia Niles, Vice-chancelière</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>

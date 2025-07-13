@@ -185,5 +185,123 @@
         
         "section_5_titre": "Do you have any questions?",
         "section_5_p_1": "To find out more about the sacrament of Holy Orders, or to discuss a vocation, contact your parish or the diocesan vocations service."
+    },
+    "catechese": {
+        "hero_titre": "Catechesis in the Diocese of Moncton",
+        "hero_desc": "Accompanying young people on their faith journey",
+
+        "section_1_titre": "Youth catechesis in the Diocese of Moncton",
+        "section_1_p_1": "« The ultimate goal of catechesis is to bring someone not only into contact, but into communion, into intimacy, with Jesus Christ. »",
+        "section_1_p_2": "Catechesis helps young people to know, celebrate, live and contemplate the mystery of Christ through faith, liturgy, morality, prayer, community life and mission.",
+        "section_btn": "Register a child",
+
+        "section_2_titre": "The family, the first place for catechesis",
+        "section_2_p_1": "Young people come into contact with Jesus' message through their parents' witness to the Christian life.",
+        "section_2_p_2": "Religious awakening in childhood, within the family, is “irreplaceable”. Family catechesis precedes, accompanies and enriches all other forms of catechesis.",
+
+        "section_3_titre": "Our catechesis programs",
+        "section_3_sous_titre_1": "Family catechesis ",
+        "section_3_sous_titre_2": "(children under 10)",
+        "section_3_p_1": "We promote family catechesis for families with young children. The Christian community provides the necessary materials and supports families in this task.",
+        "section_3_sous_titre_3": "Catechesis in small groups ",
+        "section_3_p_2": "For young people over 10, catechesis takes place in small groups to deepen their faith and prepare them for the sacraments.",
+
+        "section_4_titre": "Preparing for the sacraments",
+        "section_4_sous_titre_1": "First communion and the sacrament of forgiveness",
+        "section_4_p_1": "After two years of catechesis, young people are invited to prepare to receive the sacraments of forgiveness and the Eucharist for the first time.",
+        "section_4_sous_titre_2": "Sacrament of Confirmation",
+        "section_4_p_2": "In their seventh year of catechesis, young people reflect on the sacrament of Confirmation. They are invited to decide for themselves whether they are ready to be disciples of Jesus and part of the Church.",
+
+        "section_5_titre": "Materials used in catechesis",
+
+        "section_6_titre": "Registration fees for catechesis",
+        "section_6_p_1": "After several months of consultation, the minimum catechetical registration fees have been set at :", 
+        "section_6_li_1": "30$ per child", 
+        "section_6_li_2": "50$ per family", 
+        "section_6_p_2": "These fees apply to both family and parish catechesis. They come into effect from January 2013.",
+        "section_6_p_3": "No maximum amount is suggested, as parishes vary in their financial situation. These minimum fees are applied to avoid “shopping around” between neighboring parishes.",
+
+        "section_7_titre": "Contact and registration",
+        "section_7_p_1": "For more information about catechesis in your parish, or to register a child, contact your parish catechesis coordinator.",
+        "section_7_li_1": "Dianne Léger, Diocesan Coordinator",
+        "section_7_li_2": "Phone",
+        "section_7_li_3": "Email"
+    },
+    "chancellerie": {
+        "hero_titre": "Diocesan Chancellery",
+        "hero_desc": "Serving the Church of Moncton in canonical and historical matters",
+
+        "section_1_titre": "Chancellery, an essential service for the Church",
+        "section_1_p_1": "The Chancery is the central office of the Archdiocese of Moncton, responsible for answering questions of a canonical and historical nature. It ensures the official publication of curial acts, verifying their accuracy and conformity with canon law.",
+        "section_1_p_2": "The Chancellor and his team are key advisors to the Archbishop and the parishes, offering valuable support in a variety of areas.",
+    
+        "section_2_titre": "A central role in diocesan life",
+        "section_2_p_1": "Main objective: To ensure the conformity of the Church's acts and decisions with canon law.",
+        "section_2_p_2": "Key functions :",
+        "section_2_li_1": "Publication and conservation of official acts.",
+        "section_2_li_2": "Advice on canonical and historical matters.",
+        "section_2_li_3": "Support for parishes and diocesan offices.",
+        "section_2_p_3": "Values: Accuracy, confidentiality, service and respect for Church traditions.",
+
+        "section_3_titre": "A wide range of services to meet the needs of the Church",
+        "section_3_p_1": "The chancery offers a range of services to support members of the diocesan Church",
+        "section_3_sous_titre_1": "Canon law issues",
+        "section_3_li_1": "Liturgical and sacramental law.",
+        "section_3_li_2": "Marriage law.",
+        "section_3_sous_titre_2": "Heritage preservation",
+        "section_3_li_3": "Preservation of the Church's cultural and historical assets.",
+        "section_3_sous_titre_3": "Consultations and training",
+        "section_3_li_4": "Private consultations on specific issues.",
+        "section_3_li_5": "Information sessions on canonical and pastoral topics.",
+
+        "section_4_titre": "Key players in diocesan governance",
+        "section_4_p_1": "The chancery offers a range of services to support members of the diocesan Church",
+        "section_4_sous_titre_1": "Chancellor",
+        "section_4_li_1": "Advisor to the archbishop on canonical and historical matters.",
+        "section_4_li_2": "Responsible for the drafting, dispatch and preservation of curia acts.",
+        "section_4_sous_titre_2": "Vice-Chancellor",
+        "section_4_li_3": "Supports the Chancellor in his duties.",
+        "section_4_li_4": "Assumes the role of notary and secretary to the curia.",
+        "section_4_sous_titre_3": "Canonical references",
+        "section_4_li_5": "Can. 482,1: Function of the chancellor.",
+        "section_4_li_6": "Can. 475,1: Role of the vicar general.",
+        "section_4_li_7": "Can. 482,2: Possibility of appointing a vice-chancellor.",
+        "section_4_li_8": "Can. 482,3: Status of notary and secretary of the curia.",
+
+        "section_5_titre": "Contact",
+        "section_5_p_1": "For any questions or consultation requests, please contact : Patricia Niles, Vice-Chancellor"
+    },
+    "cimetiere": {
+        "hero_titre": "Notre-Dame du calvaire cemetery",
+        "hero_desc": "A place of remembrance and peace",
+
+        "section_1_titre": "Welcome to the diocesan cemetery",
+        "section_1_p_1": "The NOTRE-DAME DU CALVAIRE diocesan cemetery is a sacred place where the deceased rest in peace, surrounded by prayers and memories. Open to all, it offers a place of meditation and remembrance for families and loved ones.",
+        "section_1_p_2": "We are committed to preserving the dignity and respect of every buried person, in accordance with Christian values.",
+        "adresse": "Address",
+        "section_1_p_3": "480 Amirault Street, Dieppe NB E1A 1C8",
+        "section_1_btn_1": "Find a lot",
+        "section_1_btn_2": "See prices",
+
+        "section_2_titre": "A place of remembrance and prayer",
+        "section_2_desc": "The chancery offers a range of services to support members of the diocesan Church",
+        "section_2_sous_titre_1": "Peaceful environment",
+        "section_2_p_1": "A natural, soothing setting conducive to meditation and prayer.",
+        "section_2_sous_titre_2": "Monuments and commemorative areas",
+        "section_2_p_2": "Dedicated places to honor the memory of the deceased.",
+        "section_2_sous_titre_3": "Chapel and prayer areas",
+        "section_2_p_3": "Spaces for mass, prayer and meditation.",
+
+        "section_3_titre": "Rates and reservations",
+        "section_3_desc": "The chancery offers a range of services to support members of the diocesan Church",
+
+        "section_4_titre": "Contact",
+        "section_4_p_1": "Place de la Cathédrale",
+        "section_4_p_2": "224 St. George Street, Suite 104",
+        "section_4_p_3": "Moncton, New Brunswick",
+        "section_4_p_4": "E1C 0V1",
+        "section_4_p_5": "Telephone: (506) 857-9531 ext. 1228",
+        "section_4_p_6": "Fax : (506) 388-2759",
+        "section_4_p_7": "E-mail address"
     }
 }

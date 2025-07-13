@@ -186,5 +186,126 @@
         
         "section_5_titre": "Vous avez des questions ?",
         "section_5_p_1": "Pour en savoir plus sur le sacrement de l'ordre ou pour discuter d'une vocation, contactez votre paroisse ou le service diocésain des vocations"
+    },
+    "catechese": {
+        "hero_titre": "Catéchèse dans le Diocèse de Moncton",
+        "hero_desc": "Accompagner les jeunes dans leur cheminement de foi",
+
+        "section_1_titre": "La catéchèse des jeunes dans le Diocèse de Moncton",
+        "section_1_p_1": "« Le but définitif de la catéchèse est de mettre quelqu’un non seulement en contact mais en communion, en intimité, avec Jésus Christ. »",
+        "section_1_p_2": "La catéchèse aide les jeunes à connaître, célébrer, vivre et contempler le mystère du Christ à travers la foi, la liturgie, la morale, la prière, la vie communautaire et la mission.",
+        "section_btn": "Inscrire un enfant",
+
+        "section_2_titre": "La famille, premier lieu de la catéchèse",
+        "section_2_p_1": "Les jeunes entrent en contact avec le message de Jésus par le témoignage de vie chrétienne donné par leurs parents.",
+        "section_2_p_2": "L'éveil religieux dans l'enfance, au sein de la famille, a un caractère « irremplaçable ». La catéchèse familiale précède, accompagne et enrichit toute autre forme de catéchèse.",
+
+        "section_3_titre": "Nos programmes de catéchèse",
+        "section_3_sous_titre_1": "Catéchèse familiale ",
+        "section_3_sous_titre_2": "(enfants de moins de 10 ans)",
+        "section_3_p_1": "Nous favorisons une catéchèse familiale pour les familles avec de jeunes enfants. La communauté chrétienne fournit le matériel nécessaire et soutient les familles dans cette tâche.",
+        "section_3_sous_titre_3": "Catéchèse en petits groupes ",
+        "section_3_p_2": "Pour les jeunes de plus de 10 ans, la catéchèse se fait en petits groupes pour approfondir leur foi et les préparer aux sacrements.",
+
+        "section_4_titre": "Préparation aux sacrements",
+        "section_4_sous_titre_1": "Première communion et sacrement de pardon",
+        "section_4_p_1": "Après deux années de catéchèse, les jeunes sont invités à se préparer pour recevoir, pour la première fois, les sacrements de pardon et de l’eucharistie.",
+        "section_4_sous_titre_2": "Sacrement de confirmation",
+        "section_4_p_2": "En septième année de catéchèse, les jeunes réfléchissent au sacrement de la confirmation. Ils sont invités à décider personnellement s’ils sont prêts à être disciples de Jésus et à faire partie de l’Église.",
+
+        "section_5_titre": "Matériel utilisé en catéchèse",
+
+        "section_6_titre": "Frais d'inscription pour la catéchèse",
+        "section_6_p_1": "Après plusieurs mois de consultations, les frais minimums d’inscription à la catéchèse sont fixés à :", 
+        "section_6_li_1": "30$ par enfant", 
+        "section_6_li_2": "50$ par famille", 
+        "section_6_p_2": "Ces frais s’appliquent à la fois pour la catéchèse familiale et la catéchèse paroissiale. Ils entrent en vigueur à partir de janvier 2013.",
+        "section_6_p_3": "Aucun montant maximum n'est suggéré, car les situations financières des paroisses varient. Ces frais minimums sont appliqués pour éviter le « magasinage » entre paroisses avoisinantes.",
+
+        "section_7_titre": "Contact et inscriptions",
+        "section_7_p_1": "Pour plus d'informations sur la catéchèse offerte dans votre paroisse ou pour inscrire un enfant, contactez le coordinateur ou la coordinatrice de catéchèse de votre paroisse.",
+        "section_7_li_1": "Dianne Léger, Coordonatrice diocésaine",
+        "section_7_li_2": "Téléphone",
+        "section_7_li_3": "Email"
+
+
+
+    },
+    "chancellerie": {
+        "hero_titre": "Chancellerie diocésaine",
+        "hero_desc": "Au service de l'Église de Moncton pour les questions canoniques et historiques",
+
+        "section_1_titre": "La chancellerie, un service essentiel pour l'Église",
+        "section_1_p_1": "La chancellerie est le bureau central de l'Archidiocèse de Moncton qui veille à répondre aux questions d'ordre canonique et historique. Elle assure la publication officielle des actes de la curie, en vérifiant leur exactitude et leur conformité au droit canonique.",
+        "section_1_p_2": "Le chancelier et son équipe sont des conseillers clés pour l'archevêque et les paroisses, offrant un soutien précieux dans des domaines variés.",
+    
+        "section_2_titre": "Un rôle central dans la vie diocésaine",
+        "section_2_p_1": "Objectif principal : Assurer la conformité des actes et des décisions de l'Église au droit canonique.",
+        "section_2_p_2": "Fonctions clés :",
+        "section_2_li_1": "Publication et conservation des actes officiels.",
+        "section_2_li_2": "Conseil en matière canonique et historique.",
+        "section_2_li_3": "Soutien aux paroisses et aux bureaux diocésains.",
+        "section_2_p_3": "Valeurs : Exactitude, confidentialité, service et respect des traditions de l'Église.",
+
+        "section_3_titre": "Des services variés pour répondre aux besoins de l'Église",
+        "section_3_p_1": "La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine",
+        "section_3_sous_titre_1": "Questions de droit canonique",
+        "section_3_li_1": "Droit liturgique et sacramentel.",
+        "section_3_li_2": "Droit du mariage.",
+        "section_3_sous_titre_2": "Préservation du patrimoine",
+        "section_3_li_3": "Conservation des biens culturels et historiques de l'Église.",
+        "section_3_sous_titre_3": "Consultations et formations",
+        "section_3_li_4": "Consultations privées sur des questions spécifiques.",
+        "section_3_li_5": "Sessions d'information sur des sujets canoniques et pastoraux.",
+
+        "section_4_titre": "Des acteurs clés dans la gouvernance diocésaine",
+        "section_4_p_1": "La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine",
+        "section_4_sous_titre_1": "Chancelier",
+        "section_4_li_1": "Conseiller de l'archevêque en matière canonique et historique.",
+        "section_4_li_2": "Responsable de la rédaction, de l'expédition et de la conservation des actes de la curie.",
+        "section_4_sous_titre_2": "Vice-chancelier",
+        "section_4_li_3": "Soutient le chancelier dans ses fonctions.",
+        "section_4_li_4": "Assume le rôle de notaire et de secrétaire de la curie.",
+        "section_4_sous_titre_3": "Références canoniques",
+        "section_4_li_5": "Can. 482,1 : Fonction du chancelier.",
+        "section_4_li_6": "Can. 475,1 : Rôle du vicaire général.",
+        "section_4_li_7": "Can. 482,2 : Possibilité de nommer un vice-chancelier.",
+        "section_4_li_8": "Can. 482,3 : Statut de notaire et secrétaire de la curie.",
+
+        "section_5_titre": "Contact",
+        "section_5_p_1": "Pour toute question ou demande de consultation, contactez : Patricia Niles, Vice-chancelière"
+    },
+    "cimetiere": {
+        "hero_titre": "Cimetière Notre-Dame du calvaire",
+        "hero_desc": "Un lieu de recueillement, de mémoire et de paix",
+
+        "section_1_titre": "Bienvenue au cimetière diocésain",
+        "section_1_p_1": "Le cimetière diocésain de NOTRE-DAME DU CALVAIRE est un lieu sacré où les défunts reposent en paix, entourés de prières et de souvenirs. Ouvert à tous, il offre un espace de recueillement et de mémoire pour les familles et les proches.",
+        "section_1_p_2": "Nous nous engageons à préserver la dignité et le respect de chaque personne inhumée, en accord avec les valeurs chrétiennes.",
+        "adresse": "Adresse",
+        "section_1_p_3": "480 rue Amirault, Dieppe NB E1A 1C8",
+        "section_1_btn_1": "Trouver un lot",
+        "section_1_btn_2": "Voir les prix",
+
+        "section_2_titre": "Un lieu de mémoire et de prière",
+        "section_2_desc": "La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine",
+        "section_2_sous_titre_1": "Environnement paisible",
+        "section_2_p_1": "Un cadre naturel et apaisant, propice au recueillement et à la prière.",
+        "section_2_sous_titre_2": "Monuments et espaces commémoratifs",
+        "section_2_p_2": "Des lieux dédiés pour honorer la mémoire des défunts.",
+        "section_2_sous_titre_3": "Chapelle et espaces de prière",
+        "section_2_p_3": "Des espaces pour célébrer des messes, des prières ou des moments de méditation.",
+
+        "section_3_titre": "Tarifs et réservations",
+        "section_3_desc": "La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine",
+
+        "section_4_titre": "Contact",
+        "section_4_p_1": "Place de la Cathédrale",
+        "section_4_p_2": "224, rue St.George, Bureau 104",
+        "section_4_p_3": "Moncton, NB",
+        "section_4_p_4": "E1C 0V1",
+        "section_4_p_5": "Téléphone : (506) 857-9531 poste 1228",
+        "section_4_p_6": "Fax : (506) 388-2759",
+        "section_4_p_7": "Adresse couriel"
     }
 }
