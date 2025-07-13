@@ -468,5 +468,40 @@
 
         "section_5_titre": "Contact and registration",
         "section_5_p_1": "To find out more about liturgical formation or to get involved in the liturgical life of your parish, contact : Father Jean-Guy Dallaire Diocesan Coordinator and Chairman of the Diocesan Liturgy Commission."
+    },
+    "mariage_sacrements": {
+        "hero_titre": "The sacrament of marriage",
+        "hero_desc": "A covenant of love blessed by God",
+
+        "section_1_titre": "What is the sacrament of marriage?",
+        "section_1_p_1": "Sacramental marriage is a mutual gift between man and woman. It is celebrated in the presence of a priest or deacon, who represents the Church and calls down God's blessing on the couple.",
+        "section_1_p_2": "This sacrament is a covenant of love, a living image of Christ's love for his Church.",
+
+        "section_2_titre": "Conditions for receiving the sacrament of marriage",
+        "section_2_sous_titre_1": "Free consent",
+        "section_2_p_1": "The future spouses must say “I do” freely, without fear or coercion.",
+        "section_2_sous_titre_2": "Exclusive commitment for life",
+        "section_2_p_2": "Marriage is an indissoluble union, open to children.",
+        "section_2_sous_titre_3": "The absence of obstacles",
+        "section_2_p_3": "No natural or ecclesial impediment (such as a pre-existing marriage or vows of celibacy) should hinder the union.",
+
+        "section_3_titre": "The foundations of Christian marriage",
+        "section_3_sous_titre_1": "A free and conscious 'yes'",
+        "section_3_p_1": "The spouses make a voluntary commitment with full knowledge of the facts.",
+        "section_3_sous_titre_2": "An exclusive union for life",
+        "section_3_p_2": "Marriage is a promise of faithful and lasting love.",
+        "section_3_sous_titre_3": "Openness to life",
+        "section_3_p_3": "Spouses welcome children as a gift from God. These elements make marriage a living image of Christ's love for his Church.",
+
+
+        "section_4_titre": "Preparing for the sacrament of marriage",
+        "section_4_p_1": "Couples wishing to marry in the Church are invited to attend marriage preparation courses. These sessions provide :",
+        "section_4_li_1": "Understand the profound meaning of Christian marriage.",
+        "section_4_li_2": "Reflect on the challenges of married life.",
+        "section_4_li_3": "Strengthen the couple's communication and spirituality. Contact your parish for dates and details of preparation sessions.",
+
+        "section_5_titre": "Do you have any questions ?",
+        "section_5_p_1": "If you have any questions about the sacrament of reconciliation or would like to meet a priest for confession, please do not hesitate to contact us."
+
     }
 }

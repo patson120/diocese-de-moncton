@@ -475,5 +475,40 @@
 
         "section_5_titre": "Contact et inscriptions",
         "section_5_p_1": "Pour en savoir plus sur la formation liturgique ou pour vous engager dans la vie liturgique de votre paroisse, contactez : Père Jean-Guy Dallaire Responsable diocésain et président de la commission diocésaine de liturgie"
+    },
+    "mariage_sacrements": {
+        "hero_titre": "Le sacrement du mariage",
+        "hero_desc": "Une alliance d'amour bénie par Dieu",
+
+        "section_1_titre": "Qu'est-ce que le sacrement du mariage ?",
+        "section_1_p_1": "Le mariage sacramental est un don réciproque que se font l’homme et la femme. Il est célébré en présence d’un prêtre ou d’un diacre, qui représente l’Église et appelle la bénédiction de Dieu sur le couple.",
+        "section_1_p_2": "Ce sacrement est une alliance d’amour, une image vivante de l’amour du Christ pour son Église.",
+
+        "section_2_titre": "Les conditions pour recevoir le sacrement du mariage",
+        "section_2_sous_titre_1": "Le consentement libre",
+        "section_2_p_1": "Les futurs époux doivent dire 'oui' en toute liberté, sans crainte ni contrainte.",
+        "section_2_sous_titre_2": "L’engagement exclusif et pour la vie",
+        "section_2_p_2": "Le mariage est une union indissoluble, ouverte à l’accueil des enfants.",
+        "section_2_sous_titre_3": "L’absence d’obstacles",
+        "section_2_p_3": "Aucun empêchement naturel ou ecclésial (comme un mariage préexistant ou des vœux de célibat) ne doit entraver l’union.",
+
+        "section_3_titre": "Les fondements du mariage chrétien",
+        "section_3_sous_titre_1": "Un 'oui' libre et conscient",
+        "section_3_p_1": "Les époux s’engagent volontairement et en toute connaissance de cause.",
+        "section_3_sous_titre_2": "Une union exclusive et pour la vie",
+        "section_3_p_2": "Le mariage est une promesse d’amour fidèle et durable.",
+        "section_3_sous_titre_3": "L’ouverture à la vie",
+        "section_3_p_3": "Les époux accueillent les enfants comme un don de Dieu. Ces éléments font du mariage une image vivante de l’amour du Christ pour son Église.",
+
+
+        "section_4_titre": "Se préparer au sacrement du mariage",
+        "section_4_p_1": "Les couples qui désirent se marier à l'Église sont invités à suivre des cours de préparation au mariage. Ces sessions permettent de :",
+        "section_4_li_1": "Comprendre le sens profond du mariage chrétien.",
+        "section_4_li_2": "Réfléchir aux défis de la vie conjugale.",
+        "section_4_li_3": "Renforcer la communication et la spiritualité du couple. Contactez votre paroisse pour connaître les dates et les modalités des sessions de préparation.",
+
+        "section_5_titre": "Vous avez des questions ?",
+        "section_5_p_1": "Si vous avez des questions sur le sacrement de réconciliation ou si vous souhaitez rencontrer un prêtre pour une confession, n'hésitez pas à nous contacter."
+
     }
 }
