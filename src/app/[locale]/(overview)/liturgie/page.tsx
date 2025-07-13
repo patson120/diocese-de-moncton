@@ -1,26 +1,28 @@
 'use client'
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
+    const t = useTranslations("liturgie")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/clerges.png'
-                title="La liturgie dans l'Archidiocèse de Moncton"
-                subtitle="Formation et engagement des laïcs pour une liturgie vivante"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 lg:mt-20'></div>
             <section className="container max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>La liturgie selon Vatican II</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-4'>
-                                <p className='body-2 text-gray'>Le concile Vatican II a redéfini les principes fondamentaux de la liturgie, mettant en avant le rôle essentiel des laïcs baptisés. Ces derniers sont appelés à participer activement à la vie liturgique de l'Église.</p>
-                                <p className='body-2 text-gray'>Pour soutenir cette mission, l'Archidiocèse de Moncton propose une formation approfondie en liturgie, en collaboration avec la Conférence des évêques catholiques du Canada.</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -53,17 +55,17 @@ export default function Page() {
                     </div>
                     <div className='order-1 lg:order-2 col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Un parcours de formation unique</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_2_titre")}</h1>
                             <div className='space-y-2'>
-                                <p className='body-2 text-gray'>L'Archidiocèse de Moncton a mis en place un programme de formation en liturgie et sacrements, échelonné sur 24 mois et comprenant 10 étapes. Ce programme, offert en français, allie théorie et pratique pour une immersion complète dans la liturgie catholique.</p>
-                                <p className='body-2 text-gray'>Détails du programme :</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                                 <ul className='ml-5'>
-                                    <li className='body-2 text-gray list-disc'>Durée : 24 mois</li>
-                                    <li className='body-2 text-gray list-disc'>Nombre d'heures : 90 heures</li>
-                                    <li className='body-2 text-gray list-disc'>Nombre de participants : 39 (dont 35 laïcs)</li>
-                                    <li className='body-2 text-gray list-disc'>Financement : Pris en charge par la Fondation de l'Archidiocèse de Moncton</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_1")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_2")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_3")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_2_li_4")}</li>
                                 </ul>
-                                <p className='body-2 text-gray'>Objectif : Préparer les participants à jouer un rôle central dans la liturgie de leurs communautés.</p>
+                                <p className='body-2 text-gray'>{t("section_2_p_3")}</p>
                             </div>
                         </div>
                     </div>
@@ -76,17 +78,17 @@ export default function Page() {
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Qui sont les participants ?</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_3_titre")}</h1>
                             <div className='space-y-2'>
-                                <p className='body-2 text-gray'>Les 39 participants représentent toutes les unités pastorales francophones de l'Archidiocèse. Parmi eux, on trouve :</p>
+                                <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
                                 <ul className='ml-5'>
-                                    <li className='body-2 text-gray list-disc'>Des responsables de liturgie</li>
-                                    <li className='body-2 text-gray list-disc'>Des responsables de catéchèse</li>
-                                    <li className='body-2 text-gray list-disc'>Des prêtres et religieuses</li>
-                                    <li className='body-2 text-gray list-disc'>Des membres des comités de liturgie</li>
-                                    <li className='body-2 text-gray list-disc'>Quatre employés de l'Archidiocèse</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_3_li_1")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_3_li_2")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_3_li_3")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_3_li_4")}</li>
+                                    <li className='body-2 text-gray list-disc'>{t("section_3_li_5")}</li>
                                 </ul>
-                                <p className='body-2 text-gray pt-1'>Ces personnes seront mieux outillées pour diriger des célébrations de la Parole, des Assemblées dominicales en attente de Célébration Eucharistique (ADACE), et organiser des rencontres de prière.</p>
+                                <p className='body-2 text-gray pt-1'>{t("section_3_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -108,18 +110,18 @@ export default function Page() {
             <section className='container max-margin py-0'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16'>
                     <div className=''>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Des experts au service de la formation</h2>
-                        <p className='body-2 text-gray'>L'enseignement est assuré par une équipe de spécialistes de la liturgie, principalement des prêtres du Québec. Leur expertise garantit une formation de qualité, adaptée aux besoins des communautés locales.</p>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre")}</h2>
+                        <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                     </div>
                     <div className=''>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Les laïcs, acteurs essentiels de la liturgie</h2>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_sous_titre_1")}</h2>
                         <div className='space-y-2'>
-                            <p className='body-2 text-gray'>Avec la diminution du nombre de prêtres, les laïcs sont appelés à prendre une place prépondérante dans la vie liturgique. Grâce à cette formation, ils pourront :</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_2")}</p>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Animer des célébrations de la Parole</li>
-                                <li className='body-2 text-gray list-disc'>Organiser des ADACE</li>
-                                <li className='body-2 text-gray list-disc'>Encadrer des temps de prière communautaire</li>
-                                <li className='body-2 text-gray list-disc'>Soutenir la vie spirituelle de leurs paroisses</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_1")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_2")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_3")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_4_li_4")}</li>
                             </ul>
                         </div>
                     </div>
@@ -128,8 +130,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Contact et inscriptions</h2>
-                    <p className='body-2 text-gray'>Pour en savoir plus sur la formation liturgique ou pour vous engager dans la vie liturgique de votre paroisse, contactez : Père Jean-Guy Dallaire Responsable diocésain et président de la commission diocésaine de liturgie</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>

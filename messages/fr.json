@@ -401,5 +401,79 @@
         "section_5_titre": "Vous avez des questions ?",
         "section_5_p_1": "Pour en savoir plus sur la préparation à la première communion ou sur la célébration de l’eucharistie, contactez votre paroisse ou le service diocésain de catéchèse"
 
+    },
+    "justice_solidarite": {
+        "hero_titre": "Justice et solidarité dans l'Archidiocèse de Moncton",
+        "hero_desc": "Justice et solidarité dans l'Archidiocèse de Moncton",
+
+        "section_1_titre": "Notre mission",
+        "section_1_p_1": "L’Équipe diocésaine Justice et solidarité de l’Archidiocèse de Moncton a pour mission de promouvoir la justice sociale et la solidarité dans notre milieu de vie.",
+        "section_1_p_2": "Nous appuyons les efforts déployés pour aider les personnes démunies, défavorisées ou victimes d’injustice. Notre équipe est composée de représentants des différentes unités pastorales du diocèse, unis pour agir ensemble.",
+
+        "section_2_titre": "Agir pour les plus démunis",
+        "section_2_p_1": "Tout sacrement comporte trois dimensions: un signe, ce que l'on voit, une parole, ce que l'on entend et un symbole, ce que le signe et la parole expriment.",
+
+        "section_3_sous_titre_1": "Présence et accompagnement",
+        "section_3_p_1": "Nous assurons une présence auprès des personnes en difficulté pour les aider à trouver des solutions à leurs problèmes.",
+        "section_2_sous_titre_2": "Sensibilisation",
+        "section_3_p_2": "Nous informons les paroissiens et le public sur les réalités de la pauvreté et des injustices autour de nous.",
+        "section_2_sous_titre_3": "Soutien aux initiatives",
+        "section_3_p_3": "Nous appuyons les projets et initiatives d’entraide qui valorisent les personnes démunies.",
+        "section_2_sous_titre_4": "Solidarité au-delà des frontières",
+        "section_3_p_4": "Nous collaborons avec des organisations comme Développement et Paix-Caritas Canada et les Œuvres pontificales Missionnaires pour étendre notre action.",
+
+        "section_4_titre": "Les fondements de notre engagement",
+        "section_4_p_1": "Notre travail est indissociable de la foi. L'Église nous invite à vivre selon les sept principes fondamentaux de sa doctrine sociale, qui guident notre action :",
+        "section_4_li_1": "La dignité de la personne humaine",
+        "section_4_li_2": "Le bien commun",
+        "section_4_li_3": "La subsidiarité",
+        "section_4_li_4": "La solidarité",
+        "section_4_li_5": "L'option préférentielle pour les pauvres",
+        "section_4_li_6": "La destination universelle des biens",
+        "section_4_li_7":"Le respect de la vie humaine",
+
+        "section_5_sous_titre_1": "L'amour du prochain au cœur de notre action",
+        "section_5_p_1": "Jésus a aimé les pauvres d’un amour privilégié, et son enseignement nous rappelle que chaque personne humaine est égale aux yeux de Dieu. En priant et en faisant confiance à l'Esprit, nous trouvons la force de persévérer dans notre engagement pour la justice et la solidarité.",
+        "section_5_sous_titre_2": "Contact et inscriptions",
+        "section_5_p_2": "Pour en savoir plus sur nos actions, proposer un projet ou vous engager, contactez l’Équipe diocésaine Justice et solidarité."
+
+    },
+    "liturgie": {
+        "hero_titre": "La liturgie dans l'Archidiocèse de Moncton",
+        "hero_desc": "Formation et engagement des laïcs pour une liturgie vivante",
+
+        "section_1_titre": "La liturgie selon Vatican II",
+        "section_1_p_1": "Le concile Vatican II a redéfini les principes fondamentaux de la liturgie, mettant en avant le rôle essentiel des laïcs baptisés. Ces derniers sont appelés à participer activement à la vie liturgique de l'Église.",
+        "section_1_p_2": "Pour soutenir cette mission, l'Archidiocèse de Moncton propose une formation approfondie en liturgie, en collaboration avec la Conférence des évêques catholiques du Canada.",
+
+        "section_2_titre": "Un parcours de formation unique",
+        "section_2_p_1": "L'Archidiocèse de Moncton a mis en place un programme de formation en liturgie et sacrements, échelonné sur 24 mois et comprenant 10 étapes. Ce programme, offert en français, allie théorie et pratique pour une immersion complète dans la liturgie catholique.",
+        "section_2_p_2": "Détails du programme :",
+        "section_2_li_1": "Durée : 24 mois",
+        "section_2_li_2": "Nombre d'heures : 90 heures",
+        "section_2_li_3": "Nombre de participants : 39 (dont 35 laïcs)",
+        "section_2_li_4": "Financement : Pris en charge par la Fondation de l'Archidiocèse de Moncton",
+        "section_2_p_3": "Objectif : Préparer les participants à jouer un rôle central dans la liturgie de leurs communautés.",
+
+        "section_3_titre": "Qui sont les participants ?",
+        "section_3_p_1": "Les 39 participants représentent toutes les unités pastorales francophones de l'Archidiocèse. Parmi eux, on trouve :",
+        "section_3_li_1": "Des responsables de liturgie",
+        "section_3_li_2": "Des responsables de catéchèse",
+        "section_3_li_3": "Des prêtres et religieuses",
+        "section_3_li_4": "Des membres des comités de liturgie",
+        "section_3_li_5": "Quatre employés de l'Archidiocèse",
+        "section_3_p_2": "Ces personnes seront mieux outillées pour diriger des célébrations de la Parole, des Assemblées dominicales en attente de Célébration Eucharistique (ADACE), et organiser des rencontres de prière.",
+
+        "section_4_titre": "Des experts au service de la formation",
+        "section_4_p_1": "L'enseignement est assuré par une équipe de spécialistes de la liturgie, principalement des prêtres du Québec. Leur expertise garantit une formation de qualité, adaptée aux besoins des communautés locales.",
+        "section_4_sous_titre_1": "Les laïcs, acteurs essentiels de la liturgie",
+        "section_4_p_2": "Avec la diminution du nombre de prêtres, les laïcs sont appelés à prendre une place prépondérante dans la vie liturgique. Grâce à cette formation, ils pourront :",
+        "section_4_li_1": "Animer des célébrations de la Parole",
+        "section_4_li_2": "Organiser des ADACE",
+        "section_4_li_3": "Encadrer des temps de prière communautaire",
+        "section_4_li_4": "Soutenir la vie spirituelle de leurs paroisses",
+
+        "section_5_titre": "Contact et inscriptions",
+        "section_5_p_1": "Pour en savoir plus sur la formation liturgique ou pour vous engager dans la vie liturgique de votre paroisse, contactez : Père Jean-Guy Dallaire Responsable diocésain et président de la commission diocésaine de liturgie"
     }
 }

@@ -395,6 +395,78 @@
 
         "section_5_titre": "Do you have any questions ?",
         "section_5_p_1": "To find out more about preparing for First Communion or celebrating the Eucharist, contact your parish or the diocesan catechetical service."
+    },
+    "justice_solidarite": {
+        "hero_titre": "Justice and solidarity in the Archdiocese of Moncton",
+        "hero_desc": "Justice and solidarity in the Archdiocese of Moncton",
 
+        "section_1_titre": "Our mission",
+        "section_1_p_1": "The mission of the Archdiocese of Moncton's Diocesan Justice and Solidarity Team is to promote social justice and solidarity in our community.",
+        "section_1_p_2": "We support efforts to help those who are deprived, disadvantaged or victims of injustice. Our team is made up of representatives from the various pastoral units of the diocese, united to act together.",
+
+        "section_2_titre": "Acting for the most disadvantaged",
+        "section_2_p_1": "Every sacrament has three dimensions: a sign, what we see; a word, what we hear; and a symbol, what the sign and word express.",
+
+        "section_3_sous_titre_1": "Presence and support",
+        "section_3_p_1": "We work with people in difficulty to help them find solutions to their problems.",
+        "section_2_sous_titre_2": "Awareness",
+        "section_3_p_2": "We inform parishioners and the public about the realities of poverty and injustice around us.",
+        "section_2_sous_titre_3": "Support for initiatives",
+        "section_3_p_3": "We support self-help projects and initiatives that value people in need.",
+        "section_2_sous_titre_4": "Solidarity beyond borders",
+        "section_3_p_4": "We collaborate with organizations such as Development and Peace-Caritas Canada and the Pontifical Mission Societies to extend our action.",
+
+        "section_4_titre": "The foundations of our commitment",
+        "section_4_p_1": "Our work is inseparable from our faith. The Church invites us to live by the seven fundamental principles of her social doctrine, which guide our actions :",
+        "section_4_li_1": "The dignity of the human person",
+        "section_4_li_2": "The common good",
+        "section_4_li_3": "Subsidiarity",
+        "section_4_li_4": "Solidarity",
+        "section_4_li_5": "The preferential option for the poor",
+        "section_4_li_6": "The universal destination of goods",
+        "section_4_li_7": "Respect for human life",
+
+        "section_5_sous_titre_1": "Love of neighbor at the heart of our action",
+        "section_5_p_1": "Jesus loved the poor with a special love, and his teaching reminds us that every human person is equal in God's eyes. By praying and trusting the Spirit, we find the strength to persevere in our commitment to justice and solidarity.",
+        "section_5_sous_titre_2": "Contact and registration",
+        "section_5_p_2": "To find out more about our actions, propose a project or get involved, contact the Diocesan Justice and Solidarity Team."
+    },
+    "liturgie": {
+        "hero_titre": "Liturgy in the Archdiocese of Moncton",
+        "hero_desc": "Lay formation and commitment to a living liturgy",
+
+        "section_1_titre": "Liturgy according to Vatican II",
+        "section_1_p_1": "The Second Vatican Council redefined the fundamental principles of the liturgy, emphasizing the essential role of the baptized laity. They are called to participate actively in the liturgical life of the Church.",
+        "section_1_p_2": "To support this mission, the Archdiocese of Moncton, in collaboration with the Canadian Conference of Catholic Bishops, is offering in-depth training in liturgy.",
+
+        "section_2_titre": "A unique training path",
+        "section_2_p_1": "The Archdiocese of Moncton has launched a 24-month, 10-step training program in liturgy and sacraments. This program, offered in French, combines theory and practice for a complete immersion in Catholic liturgy.",
+        "section_2_p_2": "Program details :",
+        "section_2_li_1": "Duration: 24 months",
+        "section_2_li_2": "Number of hours: 90 hours",
+        "section_2_li_3": "Number of participants: 39 (including 35 lay people)",
+        "section_2_li_4": "Financing : Underwritten by the Archdiocese of Moncton Foundation",
+        "section_2_p_3": "Objective: Prepare participants to play a central role in the liturgy of their communities.",
+
+        "section_3_titre": "Who are the participants?",
+        "section_3_p_1": "The 39 participants represent all the French-speaking pastoral units of the Archdiocese. They include :",
+        "section_3_li_1": "Liturgy leaders",
+        "section_3_li_2": "Catechetical leaders",
+        "section_3_li_3": "Priests and nuns",
+        "section_3_li_4": "Liturgy committee members",
+        "section_3_li_5": "Four Archdiocesan employees",
+        "section_3_p_2": "These people will be better equipped to lead celebrations of the Word, Assemblées dominicales en attente de Célébration Eucharistique (ADACE), and organize prayer meetings.",
+
+        "section_4_titre": "Experts at the service of training",
+        "section_4_p_1": "Teaching is provided by a team of liturgical specialists, mainly priests from Quebec. Their expertise guarantees quality training adapted to the needs of local communities.",
+        "section_4_sous_titre_1": "Lay people, essential actors in the liturgy",
+        "section_4_p_2": "With the decline in the number of priests, lay people are called upon to take a leading role in liturgical life. Thanks to this training, they will be able to :",
+        "section_4_li_1": "Leading celebrations of the Word",
+        "section_4_li_2": "Organizing ADACE",
+        "section_4_li_3": "Leading times of community prayer",
+        "section_4_li_4": "Support the spiritual life of their parishes",
+
+        "section_5_titre": "Contact and registration",
+        "section_5_p_1": "To find out more about liturgical formation or to get involved in the liturgical life of your parish, contact : Father Jean-Guy Dallaire Diocesan Coordinator and Chairman of the Diocesan Liturgy Commission."
     }
 }

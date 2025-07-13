@@ -1,17 +1,19 @@
 'use client'
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 
 export default function Page() {
+    const t = useTranslations("justice_solidarite")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/clerges.png'
-                title="Justice et solidarité dans l'Archidiocèse de Moncton"
-                subtitle="Justice et solidarité dans l'Archidiocèse de Moncton"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 lg:mt-20'></div>
             <section className="container max-margin py-0">
@@ -28,11 +30,10 @@ export default function Page() {
                     </div>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Notre mission</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-4'>
-                                <p className='body-2 text-gray'>L’Équipe diocésaine Justice et solidarité de l’Archidiocèse de Moncton a pour mission de promouvoir la justice sociale et la solidarité dans notre milieu de vie.</p>
-                                <p className='body-2 text-gray'>Nous appuyons les efforts déployés pour aider les personnes démunies, défavorisées ou victimes d’injustice. Notre équipe est composée de représentants des différentes unités pastorales du diocèse, unis pour agir ensemble.</p>
-
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -41,8 +42,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <div className='container max-margin py-0 space-y-6'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Agir pour les plus démunis</h2>
-                    <p className='body-2 text-gray'>Tout sacrement comporte trois dimensions: un signe, ce que l'on voit, une parole, ce que l'on entend et un symbole, ce que le signe et la parole expriment.</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_2_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
                 </div>
                 <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     <div className='space-y-3'>
@@ -56,8 +57,8 @@ export default function Page() {
                             />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Présence et accompagnement</h1>
-                            <p className='body-2 text-gray'>Nous assurons une présence auprès des personnes en difficulté pour les aider à trouver des solutions à leurs problèmes.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_3_sous_titre_1")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
                         </div>
                     </div>
                     <div className='space-y-3'>
@@ -71,8 +72,8 @@ export default function Page() {
                             />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Sensibilisation</h1>
-                            <p className='body-2 text-gray'>Nous informons les paroissiens et le public sur les réalités de la pauvreté et des injustices autour de nous.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_2")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_2")}</p>
                         </div>
                     </div>
                     <div className='space-y-3'>
@@ -86,8 +87,8 @@ export default function Page() {
                             />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Soutien aux initiatives</h1>
-                            <p className='body-2 text-gray'>Nous appuyons les projets et initiatives d’entraide qui valorisent les personnes démunies.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_3")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_3")}</p>
                         </div>
                     </div>
                     <div className='space-y-3'>
@@ -101,8 +102,8 @@ export default function Page() {
                             />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Solidarité au-delà des frontières</h1>
-                            <p className='body-2 text-gray'>Nous collaborons avec des organisations comme Développement et Paix-Caritas Canada et les Œuvres pontificales Missionnaires pour étendre notre action.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_4")}</h1>
+                            <p className='body-2 text-gray'>{t("section_3_p_4")}</p>
                         </div>
                     </div>
                 </div>
@@ -122,17 +123,17 @@ export default function Page() {
                     </div>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Les fondements de notre engagement</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_4_titre")}</h1>
                             <div className='space-y-2'>
-                                <p className='body-2 text-gray'>Notre travail est indissociable de la foi. L'Église nous invite à vivre selon les sept principes fondamentaux de sa doctrine sociale, qui guident notre action :</p>
+                                <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                                 <ol className='ml-5'>
-                                    <li className='body-2 text-gray list-decimal'>La dignité de la personne humaine</li>
-                                    <li className='body-2 text-gray list-decimal'>Le bien commun</li>
-                                    <li className='body-2 text-gray list-decimal'>La subsidiarité</li>
-                                    <li className='body-2 text-gray list-decimal'>La solidarité</li>
-                                    <li className='body-2 text-gray list-decimal'>L'option préférentielle pour les pauvres</li>
-                                    <li className='body-2 text-gray list-decimal'>La destination universelle des biens</li>
-                                    <li className='body-2 text-gray list-decimal'>Le respect de la vie humaine</li>
+                                    <li className='body-2 text-gray list-decimal'>{t("section_4_li_1")}</li>
+                                    <li className='body-2 text-gray list-decimal'>{t("section_4_li_2")}</li>
+                                    <li className='body-2 text-gray list-decimal'>{t("section_4_li_3")}</li>
+                                    <li className='body-2 text-gray list-decimal'>{t("section_4_li_4")}</li>
+                                    <li className='body-2 text-gray list-decimal'>{t("section_4_li_5")}</li>
+                                    <li className='body-2 text-gray list-decimal'>{t('section_4_li_6')}</li>
+                                    <li className='body-2 text-gray list-decimal'>{t("section_4_li_7")}</li>
                                 </ol>
                             </div>
                         </div>
@@ -143,18 +144,18 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>L'amour du prochain au cœur de notre action</h2>
-                    <p className='body-2 text-gray'>Jésus a aimé les pauvres d’un amour privilégié, et son enseignement nous rappelle que chaque personne humaine est égale aux yeux de Dieu. En priant et en faisant confiance à l'Esprit, nous trouvons la force de persévérer dans notre engagement pour la justice et la solidarité.</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_sous_titre_1")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
                 <div className='mt-10 md:mt-20'></div>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Contact et inscriptions</h2>
-                    <p className='body-2 text-gray'>Pour en savoir plus sur nos actions, proposer un projet ou vous engager, contactez l’Équipe diocésaine Justice et solidarité :</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_sous_titre_2")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_2")}</p>
                 </div>
                 <div className='mt-10 md:mt-20'></div>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>L'amour du prochain au cœur de notre action</h2>
-                    <p className='body-2 text-gray'>Jésus a aimé les pauvres d’un amour privilégié, et son enseignement nous rappelle que chaque personne humaine est égale aux yeux de Dieu. En priant et en faisant confiance à l'Esprit, nous trouvons la force de persévérer dans notre engagement pour la justice et la solidarité.</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_sous_titre_1")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>
