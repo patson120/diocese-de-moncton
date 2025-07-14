@@ -2,16 +2,18 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Minus } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
+    const t = useTranslations("tribunal_matrimonial")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/clerges.png'
-                title="Tribunal matrimonial ecclésiastique"
-                subtitle="Un ministère de compassion et d'espérance pour les personnes séparées et divorcées"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">

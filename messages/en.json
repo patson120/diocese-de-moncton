@@ -493,7 +493,6 @@
         "section_3_sous_titre_3": "Openness to life",
         "section_3_p_3": "Spouses welcome children as a gift from God. These elements make marriage a living image of Christ's love for his Church.",
 
-
         "section_4_titre": "Preparing for the sacrament of marriage",
         "section_4_p_1": "Couples wishing to marry in the Church are invited to attend marriage preparation courses. These sessions provide :",
         "section_4_li_1": "Understand the profound meaning of Christian marriage.",
@@ -503,5 +502,103 @@
         "section_5_titre": "Do you have any questions ?",
         "section_5_p_1": "If you have any questions about the sacrament of reconciliation or would like to meet a priest for confession, please do not hesitate to contact us."
 
+    },
+    "onction_malade_sacrements": {
+        "hero_titre": "The sacrament of the anointing of the sick",
+        "hero_desc": "A sacrament of comfort, healing and hope",
+
+        "section_1_titre": "A Christian tradition of love and compassion",
+        "section_1_p_1": "From the earliest days of Christianity, the sick, the elderly and the needy have always occupied a central place in the life of the Church.",
+        "section_1_p_2": "Like Mother Teresa, Christians are called to see Christ in those who suffer, and to bring them comfort and support.",
+        "section_1_p_3": "The sacrament of the anointing of the sick is a gift of the Holy Spirit, a source of strength and healing for those going through the ordeal of illness.",
+
+        "section_2_titre": "A sacrament of comfort and hope",
+        "section_2_p_1": "The anointing of the sick is a sacrament intended to provide spiritual and physical support to the seriously ill or elderly. This sacrament is not a “death sentence”, but rather an “assurance of life”, uniting the sick person to Christ's passion for healing and salvation.",
+        "section_2_p_2": "Objectives of the sacrament :",
+        "section_2_li_1": "Giving strength and comfort in times of trial",
+        "section_2_li_2": "Forgive sins if the patient is unable to confess",
+        "section_2_li_3": "Preparing the sick to meet God in peace",
+
+        "section_3_titre": "Who can receive the anointing of the sick?",
+        "section_3_sous_titre_1": "Persons concerned",
+        "section_3_li_1": "Any loyal member whose health is seriously impaired (illness, old age, serious surgery)",
+        "section_3_li_2": "People of all ages, including young people in critical situations",
+        "section_3_sous_titre_2": "Frequency",
+        "section_3_p_1": "This sacrament can be received several times in a lifetime, particularly if the illness worsens.",
+        "section_3_sous_titre_3": "Association with confession",
+        "section_3_p_2": "Many of the faithful choose to go to confession before receiving the anointing of the sick, in order to present themselves before God with a purified conscience.",
+        
+        "section_4_titre": "How is the Anointing of the Sick celebrated ?",
+        "section_4_li_1": "Location ",
+        "section_4_li_2": "The sacrament is usually celebrated in a church, but can also be administered at home or in hospital.",
+        "section_4_li_3": "Essential ritual :",
+        "section_4_li_4": "The priest anoints the sick person's forehead and hands with holy oil, saying words of comfort and prayer.",
+        "section_4_li_5": "Support :",
+        "section_4_li_6": "The celebration is often accompanied by community prayers in support of the patient.",
+
+        "section_5_titre": "Do you have any questions ?",
+        "section_5_p_1": "If you have any questions about the sacrament of reconciliation or would like to meet a priest for confession, please do not hesitate to contact us."
+
+    },
+    "ordre_sacrements": {
+        "hero_titre": "The sacrament of order",
+        "hero_desc": "Understanding the three degrees: bishop, priest and deacon.",
+        
+        "section_1_titre": "What is the sacrament of Holy Orders?",
+        "section_1_p_1": "The sacrament of Holy Orders is one of the seven sacraments of the Catholic Church. It comprises three degrees: episcopate (bishop), presbyterate (priest) and diaconate (deacon).",
+        "section_1_p_2": "Each of these degrees confers a specific mission in the service of the Church and the Christian community.",
+        
+        "section_3_titre": "The three degrees of the sacrament of Holy Orders",
+        "section_3_sous_titre_1": "Bishop",
+        "section_3_p_1": "The episcopal ministry goes back to the apostles and perpetuates their pastoral mission. The Pope is the first among the bishops.",
+        "section_3_sous_titre_2": "Priest",
+        "section_3_p_2": "Through ordination, the priest receives a specific power and mission among his brothers and sisters in the faith.",
+        "section_3_sous_titre_3": "Deacon",
+        "section_3_p_3": "The diaconate is a ministry in its own right, focused on serving and assisting the bishops in pastoral and social works.",
+
+        "section_4_titre": "Their roles",
+        "section_4_sous_titre_1": "The bishop, successor to the apostles",
+        "section_4_p_1": "The bishop is the Church's true pastoral minister. His role goes back to the apostles, the first witnesses of Jesus. The Pope, as Bishop of Rome, is first among bishops and heads the College of Bishops.",
+        "section_4_sous_titre_2": "The priest, Christ's minister",
+        "section_4_p_2": "Being a priest is more than just a function or ministry. Through the sacrament of Holy Orders, the priest receives a specific power and mission. He acts in persona Christi (in the person of Christ), humbly serving the community and administering the sacraments.",
+        "section_4_sous_titre_3": "The deacon, servant of the Church",
+        "section_4_p_3": "The diaconate is a ministry in its own right, open to both single and married people. Deacons emphasize service, assisting bishops in pastoral and social works. Their ordination imparts an irrevocable sacramental character.",
+
+        "section_5_titre": "Resources",
+        "section_5_p_1": "To deepen your understanding",
+
+        "section_6_titre": "Do you have any questions ?",
+        "section_6_p_1": "To find out more about the sacrament of Holy Orders, or to discuss a vocation, contact your parish or the diocesan vocations service."
+    },
+    "reconcilliation_sacrements": {
+        "hero_titre": "The sacrament of penance and reconciliation",
+        "hero_desc": "A sacrament of healing and mercy",
+
+        "section_1_titre": "A sacrament of healing",
+        "section_1_p_1": "The Sacrament of Penance and Reconciliation is a gift of God's infinite love. Through this sacrament, Christ frees us from sin, heals us of our spiritual wounds and strengthens us in our weakness.",
+        "section_1_p_2": "It is a manifestation of divine mercy, as illustrated by the parable of the prodigal son.",
+
+        "secction_3_sous_titre_1": "God awaits us with love",
+        "section_3_p_1": "In the parable of the prodigal son, Jesus shows us a Father who is always waiting for us, ready to welcome us and forgive us, no matter what we do wrong.",
+        "section_3_p_2": "This sacrament is an invitation to return to God, who loves us with infinite love and wants to reconcile us with Him.",
+        "secction_3_sous_titre_2": "Jesus, the source of forgiveness",
+        "section_3_p_3": "Only God can forgive sins. Jesus, as the Son of God, has the power to say: “Your sins are forgiven you” (Mk 2:5). He passed this power on to his apostles and, through them, to the priests of the Church.",
+        "section_3_p_4": "So, at confession, it's Christ himself who acts through the priest to grant us his forgiveness.",
+
+        "section_4_titre":"How to prepare for confession",
+        "section_4_p_1": "There are five essential stages in the confession process:",
+        "section_4_li_1": "Examination of conscience :",
+        "section_4_li_2": "Reflect on our actions, words and thoughts in the light of the Gospel.",
+        "section_4_li_3": "Repentance :",
+        "section_4_li_4": "Have a heart sincerely sorry for our sins.",
+        "section_4_li_5": "Resolution :",
+        "section_4_li_6": "Make a firm decision not to do it again.",
+        "section_4_li_7": "Acknowledgement :",
+        "section_4_li_8": "Confess our sins to the priest with humility and sincerity.",
+        "section_4_li_9": "Penance :",
+        "section_4_li_10": "Perform the act of reparation proposed by the priest.",
+
+        "section_5_titre": "Do you have any questions ?",
+        "section_5_p_1": "If you have any questions about the sacrament of reconciliation or would like to meet a priest for confession, please do not hesitate to contact us."
     }
 }

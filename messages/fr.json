@@ -510,5 +510,107 @@
         "section_5_titre": "Vous avez des questions ?",
         "section_5_p_1": "Si vous avez des questions sur le sacrement de réconciliation ou si vous souhaitez rencontrer un prêtre pour une confession, n'hésitez pas à nous contacter."
 
+    },
+    "onction_malade_sacrements": {
+        "hero_titre": "Le sacrement de l'onction des malades",
+        "hero_desc": "Un sacrement de réconfort, de guérison et d'espérance",
+
+        "section_1_titre": "Une tradition chrétienne d'amour et de compassion",
+        "section_1_p_1": "Depuis les origines du christianisme, les malades, les vieillards et les nécessiteux ont toujours occupé une place centrale dans la vie de l'Église.",
+        "section_1_p_2": "Comme Sainte Mère Teresa, les chrétiens sont appelés à voir le Christ dans ceux qui souffrent et à leur apporter réconfort et soutien.",
+        "section_1_p_3": "Le sacrement de l'onction des malades est un don de l'Esprit Saint, une source de force et de guérison pour ceux qui traversent l'épreuve de la maladie.",
+
+        "section_2_titre": "Un sacrement de réconfort et d'espérance",
+        "section_2_p_1": "L'onction des malades est un sacrement destiné à apporter un soutien spirituel et physique aux personnes gravement malades ou âgées. Ce sacrement n'est pas une \"sentence de mort\", mais au contraire une \"assurance de vie\" qui unit le malade à la passion du Christ pour sa guérison et son salut.",
+        "section_2_p_2": "Objectifs du sacrement :",
+        "section_2_li_1": "Donner force et réconfort dans l'épreuve",
+        "section_2_li_2": "Pardonner les péchés si le malade ne peut se confesser",
+        "section_2_li_3": "Préparer le malade à rencontrer Dieu en paix",
+
+        "section_3_titre": "Qui peut recevoir l'onction des malades ?",
+        "section_3_sous_titre_1": "Personnes concernées",
+        "section_3_li_1": "Tout fidèle dont la santé est gravement atteinte (maladie, vieillesse, opération chirurgicale grave)",
+        "section_3_li_2": "Les personnes de tout âge, y compris les jeunes confrontés à une situation critique",
+        "section_3_sous_titre_2": "Fréquence",
+        "section_3_p_1": "Ce sacrement peut être reçu plusieurs fois dans la vie, notamment en cas d'aggravation de la maladie.",
+        "section_3_sous_titre_3": "Association avec la confession",
+        "section_3_p_2": "Beaucoup de fidèles choisissent de se confesser avant de recevoir l'onction des malades pour se présenter devant Dieu avec une conscience purifiée.",
+        
+        "section_4_titre": "Comment se célèbre l'onction des malades ?",
+        "section_4_li_1": "Lieu ",
+        "section_4_li_2": "Le sacrement est généralement célébré dans une église, mais il peut aussi être administré à domicile ou à l'hôpital.",
+        "section_4_li_3": "Rite essentiel :",
+        "section_4_li_4": "Le prêtre oint le front et les mains du malade avec de l'huile bénite, en prononçant des paroles de réconfort et de prière.",
+        "section_4_li_5": "Accompagnement :",
+        "section_4_li_6": "La célébration est souvent accompagnée de prières communautaires pour soutenir le malade.",
+
+        "section_5_titre": "Vous avez des questions ?",
+        "section_5_p_1": "Si vous avez des questions sur le sacrement de réconciliation ou si vous souhaitez rencontrer un prêtre pour une confession, n'hésitez pas à nous contacter."
+
+    },
+    "ordre_sacrements": {
+        "hero_titre": "Le sacrement de l'ordre",
+        "hero_desc": "Comprendre les trois degrés : évêque, prêtre et diacre.",
+        
+        "section_1_titre": "Qu'est-ce que le sacrement de l'ordre ?",
+        "section_1_p_1": "Le sacrement de l'ordre est l'un des sept sacrements de l'Église catholique. Il comporte trois degrés : l'épiscopat (évêque), le presbytérat (prêtre) et le diaconat (diacre)",
+        "section_1_p_2": "Chacun de ces degrés confère une mission spécifique au service de l'Église et de la communauté chrétienne.",
+        
+        "section_3_titre": "Les trois degrés du sacrement de l'ordre",
+        "section_3_sous_titre_1": "Évêque",
+        "section_3_p_1": "Le ministère épiscopal remonte aux apôtres et perpétue leur mission pastorale. Le Pape est le premier parmi les évêques.",
+        "section_3_sous_titre_2": "Prêtre",
+        "section_3_p_2": "Par l'ordination, le prêtre reçoit un pouvoir spécifique et une mission auprès de ses frères et sœurs dans la foi.",
+        "section_3_sous_titre_3": "Diacre",
+        "section_3_p_3": "Le diaconat est un ministère à part entière, axé sur le service et l'aide aux évêques dans les œuvres pastorales et sociales.",
+
+        "section_4_titre": "Leurs roles",
+        "section_4_sous_titre_1": "L'évêque, successeur des apôtres",
+        "section_4_p_1": "L'évêque est le véritable ministre pastoral dans l'Église. Son rôle remonte aux apôtres, les premiers témoins de Jésus. Le Pape, en tant qu'évêque de Rome, est le premier parmi les évêques et dirige le collège épiscopal.",
+        "section_4_sous_titre_2": "Le prêtre, ministre du Christ",
+        "section_4_p_2": "Être prêtre ne se limite pas à une fonction ou un ministère. Par le sacrement de l'ordre, le prêtre reçoit un pouvoir spécifique et une mission. Il agit in persona Christi (en la personne du Christ), servant humblement la communauté et administrant les sacrements.",
+        "section_4_sous_titre_3": "Le diacre, serviteur de l'Église",
+        "section_4_p_3": "Le diaconat est un ministère à part entière, ouvert aux célibataires et aux mariés. Les diacres mettent l'accent sur le service, aidant les évêques dans les œuvres pastorales et sociales. Leur ordination imprime un caractère sacramentel irrévocable.",
+
+        "section_5_titre": "Ressources",
+        "section_5_p_1": "Pour approfondir votre compréhension",
+
+        "section_6_titre": "Vous avez des questions ?",
+        "section_6_p_1": "Pour en savoir plus sur le sacrement de l'ordre ou pour discuter d'une vocation, contactez votre paroisse ou le service diocésain des vocations"
+    },
+    "reconcilliation_sacrements": {
+        "hero_titre": "Le sacrement de pénitence et de réconciliation",
+        "hero_desc": "Un sacrement de guérison et de miséricorde",
+
+        "section_1_titre": "Un sacrement de guérison",
+        "section_1_p_1": "Le sacrement de pénitence et de réconciliation est un don de l'amour infini de Dieu. Par ce sacrement, le Christ nous libère du péché, nous guérit de nos blessures spirituelles et nous fortifie dans notre faiblesse.",
+        "section_1_p_2": "Il est une manifestation de la miséricorde divine, comme l'illustre la parabole de l'enfant prodigue.",
+
+        "secction_3_sous_titre_1": "Dieu nous attend avec amour",
+        "section_3_p_1": "Dans la parabole de l'enfant prodigue, Jésus nous montre un Père qui nous attend toujours, prêt à nous accueillir et à nous pardonner, peu importe nos égarements.",
+        "section_3_p_2": "Ce sacrement est une invitation à revenir vers Dieu, qui nous aime d'un amour infini et qui désire nous réconcilier avec Lui.",
+        "secction_3_sous_titre_2": "Jésus, source du pardon",
+        "section_3_p_3": "Seul Dieu peut pardonner les péchés. Jésus, en tant que Fils de Dieu, a le pouvoir de dire : « Tes péchés te sont pardonnés » (Mc 2, 5). Il a transmis ce pouvoir à ses apôtres et, par eux, aux prêtres de l'Église.",
+        "section_3_p_4": "Ainsi, lors de la confession, c'est le Christ lui-même qui agit à travers le prêtre pour nous accorder son pardon.",
+
+        "section_4_titre":"Comment se préparer à la confession ?",
+        "section_4_p_1": "La confession comporte cinq étapes essentielles :",
+        "section_4_li_1": "Examen de conscience :",
+        "section_4_li_2": "Réfléchir à nos actions, paroles et pensées à la lumière de l'Évangile.",
+        "section_4_li_3": "Repentir :",
+        "section_4_li_4": "Avoir un cœur sincèrement désolé pour nos péchés.",
+        "section_4_li_5": "Résolution :",
+        "section_4_li_6": "Prendre la ferme décision de ne plus recommencer.",
+        "section_4_li_7": "Aveu :",
+        "section_4_li_8": "Confesser nos péchés au prêtre avec humilité et sincérité.",
+        "section_4_li_9": "Pénitence :",
+        "section_4_li_10": "Accomplir l'acte de réparation proposé par le prêtre.",
+
+        "section_5_titre": "Vous avez des questions ?",
+        "section_5_p_1": "Si vous avez des questions sur le sacrement de réconciliation ou si vous souhaitez rencontrer un prêtre pour une confession, n'hésitez pas à nous contacter."
+    },
+    "tribunal_matrimonial": {
+        "hero_titre": "Tribunal matrimonial ecclésiastique",
+        "hero_desc": "Un ministère de compassion et d'espérance pour les personnes séparées et divorcées"
     }
 }

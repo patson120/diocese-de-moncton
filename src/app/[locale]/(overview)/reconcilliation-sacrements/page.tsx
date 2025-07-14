@@ -1,15 +1,17 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
+    const t = useTranslations("reconcilliation_sacrements")
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/sacrements.png'
-                title="Le sacrement de pénitence et de réconciliation"
-                subtitle="Un sacrement de guérison et de miséricorde"
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
@@ -26,10 +28,10 @@ export default function Page() {
                     </div>
                     <div className='order-1 lg:order-2 col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Un sacrement de guérison</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-2'>
-                                <p className='body-2 text-gray'>Le sacrement de pénitence et de réconciliation est un don de l'amour infini de Dieu. Par ce sacrement, le Christ nous libère du péché, nous guérit de nos blessures spirituelles et nous fortifie dans notre faiblesse.</p>
-                                <p className='body-2 text-gray'>Il est une manifestation de la miséricorde divine, comme l'illustre la parabole de l'enfant prodigue.</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -40,17 +42,17 @@ export default function Page() {
             <section className='container max-margin py-0'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16'>
                     <div className=''>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Dieu nous attend avec amour</h2>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("secction_3_sous_titre_1")}</h2>
                         <div className='space-y-5'>
-                            <p className='body-2 text-gray'>Dans la parabole de l'enfant prodigue, Jésus nous montre un Père qui nous attend toujours, prêt à nous accueillir et à nous pardonner, peu importe nos égarements. </p>
-                            <p className='body-2 text-gray'>Ce sacrement est une invitation à revenir vers Dieu, qui nous aime d'un amour infini et qui désire nous réconcilier avec Lui.</p>
+                            <p className='body-2 text-gray'>{t("section_3_p_1")} </p>
+                            <p className='body-2 text-gray'>{t("section_3_p_2")}</p>
                         </div>
                     </div>
                     <div className=''>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Jésus, source du pardon</h2>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("secction_3_sous_titre_2")}</h2>
                         <div className='space-y-5'>
-                            <p className='body-2 text-gray'>Seul Dieu peut pardonner les péchés. Jésus, en tant que Fils de Dieu, a le pouvoir de dire : « Tes péchés te sont pardonnés » (Mc 2, 5). Il a transmis ce pouvoir à ses apôtres et, par eux, aux prêtres de l'Église. </p>
-                            <p className='body-2 text-gray'>Ainsi, lors de la confession, c'est le Christ lui-même qui agit à travers le prêtre pour nous accorder son pardon.</p>
+                            <p className='body-2 text-gray'>{t("section_3_p_3")} </p>
+                            <p className='body-2 text-gray'>{t("section_3_p_4")}</p>
                         </div>
                     </div>
                 </div>
@@ -61,15 +63,15 @@ export default function Page() {
                 <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Comment se préparer à la confession ?</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_4_titre")}</h1>
                             <div className='space-y-4'>
-                                <p className='body-2 text-gray'>La confession comporte cinq étapes essentielles :</p>
+                                <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                                 <ul className='ml-3'>
-                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>Examen de conscience :</span> Réfléchir à nos actions, paroles et pensées à la lumière de l'Évangile.</li>
-                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>Repentir :</span> Avoir un cœur sincèrement désolé pour nos péchés.</li>
-                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>Résolution :</span> Prendre la ferme décision de ne plus recommencer.</li>
-                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>Aveu :</span> Confesser nos péchés au prêtre avec humilité et sincérité.</li>
-                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>Pénitence :</span> Accomplir l'acte de réparation proposé par le prêtre.</li>
+                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>{t("section_4_li_1")}</span> {t("section_4_li_2")}</li>
+                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>{t("section_4_li_3")}</span> {t("section_4_li_4")}</li>
+                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>{t("section_4_li_5")}</span> {t("section_4_li_6")}</li>
+                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>{t("section_4_li_7")}</span> {t("section_4_li_8")}</li>
+                                    <li className='body-2 text-gray list-decimal'><span className='font-bold'>{t("section_4_li_9")}</span> {t("section_4_li_10")}</li>
                                 </ul>
                             </div>
                         </div>
@@ -90,8 +92,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Vous avez des questions ?</h2>
-                    <p className='body-2 text-gray'>Si vous avez des questions sur le sacrement de réconciliation ou si vous souhaitez rencontrer un prêtre pour une confession, n'hésitez pas à nous contacter.</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>
