@@ -30,10 +30,10 @@ export default function Page() {
                     </div>
                     <div className='order-1 lg:order-2 col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Un lieu d'accueil et d'écoute</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_1_titre")}</h1>
                             <div className='space-y-6'>
-                                <p className='body-2 text-gray'>Le tribunal matrimonial ecclésiastique est un ministère de l'Église qui offre un accompagnement compassionnel aux personnes séparées ou divorcées souhaitant demander une déclaration de nullité de leur mariage.</p>
-                                <p className='body-2 text-gray'>Dans une atmosphère de confiance, de confidentialité et de non-jugement, nous aidons les fidèles à cheminer vers la guérison et l'espérance.</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0 space-y-6'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Un ministère au service des familles</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_2_titre")}</h2>
                 </div>
                 <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     <div className='space-y-3'>
@@ -57,8 +57,8 @@ export default function Page() {
                             />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Objectif</h1>
-                            <p className='body-2 text-gray'>Offrir un soutien pastoral et juridique aux personnes en situation de séparation ou de divorce.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t('section_2_sous_titre_1')}</h1>
+                            <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                         </div>
                     </div>
                     <div className='space-y-3'>
@@ -72,8 +72,8 @@ export default function Page() {
                             />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Approche</h1>
-                            <p className='body-2 text-gray'>Accueillir chaque personne avec compassion, écouter son histoire sans jugement, et l'accompagner dans sa démarche spirituelle et canonique.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_2")}</h1>
+                            <p className='body-2 text-gray'>{t("section_2_p_3")}</p>
                         </div>
                     </div>
                     <div className='space-y-3'>
@@ -87,8 +87,8 @@ export default function Page() {
                             />
                         </div>
                         <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>Valeurs</h1>
-                            <p className='body-2 text-gray'>Confidentialité, respect, écoute active et accompagnement personnalisé.</p>
+                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_3")}</h1>
+                            <p className='body-2 text-gray'>{t("section_2_p_4")}</p>
                         </div>
                     </div>
                 </div>
@@ -109,13 +109,13 @@ export default function Page() {
                     </div>
                     <div className='col-span-full lg:col-span-3 flex flex-col justify-center items-center'>
                         <div>
-                            <h1 className='heading-4 font-extrabold mb-4'>Comment demander une déclaration de nullité ?</h1>
+                            <h1 className='heading-4 font-extrabold mb-4'>{t("section_3_titre")}</h1>
                             <ul className='ml-5'>
-                                <li className='body-2 text-gray list-disc'>Étape 1 : Prendre contact avec le tribunal matrimonial pour exprimer sa demande.</li>
-                                <li className='body-2 text-gray list-disc'>Étape 2 : Rencontrer un notaire ou un représentant du tribunal pour expliquer sa situation.</li>
-                                <li className='body-2 text-gray list-disc'>Étape 3 : Remplir les documents nécessaires et fournir les informations requises.</li>
-                                <li className='body-2 text-gray list-disc'>Étape 4 : Suivre le processus canonique, qui inclut l'examen du dossier par le tribunal.</li>
-                                <li className='body-2 text-gray list-disc'>Étape 5 : Recevoir une réponse du tribunal, accompagnée d'un accompagnement pastoral si nécessaire.</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_1")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_2")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_3")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_4")}</li>
+                                <li className='body-2 text-gray list-disc'>{t("section_3_li_5")}</li>
                             </ul>
                         </div>
                     </div>
@@ -126,35 +126,35 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-2/3'>
-                    <h2 className='heading-3 text-gray-900 mb-'>Questions fréquentes</h2>
-                    <p className='body-2 text-gray'>Réponses à vos questions</p>
+                    <h2 className='heading-3 text-gray-900 mb-'>{t("section_4_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                     <div className='mt-5 space-y-3'>
                         <div className='pb-4 border-b border-b-gray-300'>
                             <div className='flex justify-between items-center'>
-                                <h2 className='body-2 font-bold text-gray-900'>Qu'est-ce qu'une déclaration de nullité ?</h2>
+                                <h2 className='body-2 font-bold text-gray-900'>{t("section_4_sous_titre_1")}</h2>
                                 <div className='cursor-pointer'>
                                     <Minus className='h-5 w-5' />
                                 </div>
                             </div>
-                            <p className='body-2 text-gray'>C'est une décision de l'Église qui reconnaît qu'un mariage n'était pas valide selon les critères canoniques.</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_2")}</p>
                         </div>
                         <div className='pb-4 border-b border-b-gray-300'>
                             <div className='flex justify-between items-center'>
-                                <h2 className='body-2 font-bold text-gray-900'>Combien de temps dure le processus ?</h2>
+                                <h2 className='body-2 font-bold text-gray-900'>{t("section_4_sous_titre_2")}</h2>
                                 <div className='cursor-pointer'>
                                     <Minus className='h-5 w-5' />
                                 </div>
                             </div>
-                            <p className='body-2 text-gray'>La durée varie selon les cas, mais le tribunal s'efforce de traiter chaque dossier avec diligence.</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_3")}</p>
                         </div>
                         <div className='pb-4 border-b border-b-gray-300'>
                             <div className='flex justify-between items-center'>
-                                <h2 className='body-2 font-bold text-gray-900'>Dois-je engager un avocat ?</h2>
+                                <h2 className='body-2 font-bold text-gray-900'>{t("section_4_sous_titre_3")}</h2>
                                 <div className='cursor-pointer'>
                                     <Minus className='h-5 w-5' />
                                 </div>
                             </div>
-                            <p className='body-2 text-gray'>Non, le tribunal fournit tout le soutien nécessaire pour remplir les formalités.</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_4")}</p>
                         </div>
                     </div>
                 </div>
@@ -163,8 +163,8 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Contact</h2>
-                    <p className='body-2 text-gray'>Pour toute question ou pour entamer une démarche de déclaration de nullité, contactez : Patricia Niles, Notaire au tribunal matrimonial.</p>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
+                    <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>

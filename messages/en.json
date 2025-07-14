@@ -600,5 +600,79 @@
 
         "section_5_titre": "Do you have any questions ?",
         "section_5_p_1": "If you have any questions about the sacrament of reconciliation or would like to meet a priest for confession, please do not hesitate to contact us."
+    },
+    "tribunal_matrimonial": {
+        "hero_titre": "Ecclesiastical matrimonial court",
+        "hero_desc": "A ministry of compassion and hope for separated and divorced people",
+
+        "section_1_titre": "A place to welcome and listen",
+        "section_1_p_1": "The Ecclesiastical Matrimonial Tribunal is a Church ministry offering compassionate support to separated or divorced persons wishing to apply for a declaration of nullity of their marriage.",
+        "section_1_p_2": "In an atmosphere of trust, confidentiality and non-judgment, we help the faithful move towards healing and hope.",
+
+        "section_2_titre": "A ministry at the service of families",
+        "section_2_sous_titre_1": "Goal",
+        "section_2_p_2": "Offer pastoral and legal support to people experiencing separation or divorce.",
+        "section_2_sous_titre_2": "Approach",
+        "section_2_p_3": "Welcome each person with compassion, listen to their story without judgment, and accompany them on their spiritual and canonical journey.",
+        "section_2_sous_titre_3": "Values",
+        "section_2_p_4": "Confidentiality, respect, active listening and personalized support.",
+
+        "section_3_titre": "How do I request a declaration of nullity?",
+        "section_3_li_1": "Step 1: Contact the matrimonial court to express your request.",
+        "section_3_li_2": "Step 2: Meet with a notary or court representative to explain your situation.",
+        "section_3_li_3": "Step 3: Complete the necessary documents and provide the required information.",
+        "section_3_li_4": "Step 4: Follow the canonical process, which includes examination of the file by the court.",
+        "section_3_li_5": "Step 5: Receive a response from the court, accompanied by pastoral support if necessary.",
+
+        "section_4_titre": "Frequently asked questions",
+        "section_4_p_1": "Answers to your questions",
+        "section_4_sous_titre_1": "What is a declaration of nullity?",
+        "section_4_p_2": "This is a Church decision recognizing that a marriage was not valid according to canonical criteria.",
+        "section_4_sous_titre_2": "How long does the process take?",
+        "section_4_p_3": "The duration varies from case to case, but the court endeavors to handle each case with diligence.",
+        "section_4_sous_titre_3": "Do I need to hire a lawyer?",
+        "section_4_p_4": "No, the court provides all the support needed to complete the formalities.",
+
+        "section_5_titre": "Contact",
+        "section_5_p_1": "If you have any questions or would like to initiate a declaration of nullity, please contact : Patricia Niles, Notary in the Matrimonial Court."
+
+    },
+    "sacrements": {
+        "hero_titre": "The sacraments",
+        "hero_desc": "Find all sacraments and related information.",
+        "section_1_titre": "The sacraments of the Catholic Church",
+        "section_1_p_1": "The sacraments are visible signs of God's free gift (grace), instituted by Christ and entrusted to the Church. Through the sacraments, the believer enters and participates in divine life. The sacraments manifest our entire existence, in its various stages, called to be lived in Christ.",
+        "section_1_p_2": "The visible rites (water, laying on of hands, anointing, etc.) under which the sacraments are celebrated signify and realize the graces proper to each sacrament (God's forgiveness, God's life through baptism, service of the brethren through ordination, etc.).",
+        
+        "section_1_p_3": "The Holy Spirit prepares us for the sacraments through the Word of God. The sacraments strengthen us and express our faith.  Their fruit, though primarily personal, contributes to the communion of the whole Church: “a soul that lifts up lifts up the world”.",
+        
+        "section_2_titre": "The sacraments are of three kinds",
+        "section_2_p_1": "Every sacrament has three dimensions: a sign, what we see; a word, what we hear; and a symbol, what the sign and word express.",
+        "section_2_sous_titre_1": "The sacraments of initiation",
+        "section_2_p_2": "The visible rites (water, laying on of hands, anointing, etc.) under which the sacraments are celebrated,",
+        "section_2_sous_titre_2": "The sacraments of healing",
+        "section_2_p_3": "The visible rites (water, laying on of hands, anointing, etc.) under which the sacraments are celebrated,",
+        "section_2_sous_titre_3": "Sacraments of commitment",
+        "section_2_p_4": "The visible rites (water, laying on of hands, anointing, etc.) under which the sacraments are celebrated,",
+
+        "section_3_titre": "The sacraments of initiation",
+        "section_3_sous_titre_1": "Baptism",
+        "section_3_sous_titre_2": "Confirmation",
+        "section_3_sous_titre_3": "Eucharist",
+
+        "section_4_titre": "The sacraments of healing",
+        "section_4_sous_titre_1": "Reconciliation",
+        "section_4_sous_titre_2": "Anointing of the sick",
+        "section_4_savoir_plus": "Read more",
+
+        "section_5_titre": "Sacraments of commitment",
+        "section_5_sous_titre_1": "The Order",
+        "section_5_sous_titre_2": "The Wedding"
+    },
+    "mouvements": {
+        "hero_titre": "Movements",
+        "hero_desc": "Find all the diocesan movements and related information.",
+
+        "section_1_titre": "List of movements"
     }
 }

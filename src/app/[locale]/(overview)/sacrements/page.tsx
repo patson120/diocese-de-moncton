@@ -2,7 +2,8 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Button } from '@/components/ui/shared/button'
-import { Link, useRouter } from '@/i18n/routing'
+import { useRouter } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
@@ -10,13 +11,16 @@ export default function Page() {
     const navigateTo = (link: string) => {
         router.push(link)
     }
+
+    const t = useTranslations("sacrements")
+
     return (
         <main>
             {/* Hero section */}
             <HeroSectionSecond
                 image='/assets/img/sacrements.png'
-                title="Les sacrements"
-                subtitle="Retrouvez tous les sacrements et les informations associées."
+                title={t("hero_titre")}
+                subtitle={t("hero_desc")}
             />
             <div className='md:mt-10 lg:mt-20'></div>
             <section className='container max-margin py-0 pb-10 md:pb-20'>
@@ -35,8 +39,8 @@ export default function Page() {
                     </div>
                     <div className='col-span-full md:col-span-7 py-10 space-y-6'>
                         <div>
-                            <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements de l'Église catholique</h2>
-                            <p className='body-2 text-gray'>Les sacrements sont des signes visibles du don gratuit ( la grâce ) de Dieu, institués par le Christ et confiés à l’Eglise. Par les sacrements, le croyant entre et participe à la vie divine. Les sacrements manifestent toute notre existence, dans ses différentes étapes, appelées à être vécue dans le Christ.</p>
+                            <h2 className='heading-3 text-gray-900 mb-4'>{t("section_1_titre")}</h2>
+                            <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
                         </div>
                         <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
                             <div className='space-y-3'>
@@ -49,7 +53,7 @@ export default function Page() {
                                         style={{ objectFit: 'contain', }}
                                     />
                                 </div>
-                                <p className='body-2 text-gray'>Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, signifient et réalisent les grâces propres de chaque sacrement ( pardon de Dieu, vie de Dieu par le baptême, service des frères par l’ordination … )</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
                             <div className='space-y-3'>
                                 <div className='rounded-full overflow-hidden h-12 w-12 flex justify-center items-center relative bg-[#F9F4F5]'>
@@ -61,7 +65,7 @@ export default function Page() {
                                         style={{ objectFit: 'contain', }}
                                     />
                                 </div>
-                                <p className='body-2 text-gray'>L’Esprit Saint nous prépare aux sacrements par la Parole de Dieu. Les sacrements nous fortifient et expriment la foi.  Leur fruit, s’il est d’abord personnel, contribue à la communion de toute l’Église « une âme qui s’élève, élève le monde ».</p>
+                                <p className='body-2 text-gray'>{t("section_1_p_3")}</p>
                             </div>
                         </div>
                     </div>
@@ -70,8 +74,8 @@ export default function Page() {
                 <div className='mt-10 md:mt-20'></div>
                 <div className='space-y-6'>
                     <div className='w-full lg:w-1/2'>
-                        <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements sont de trois ordres</h2>
-                        <p className='body-2 text-gray'>Tout sacrement comporte trois dimensions: un signe, ce que l'on voit, une parole, ce que l'on entend et un symbole, ce que le signe et la parole expriment.</p>
+                        <h2 className='heading-3 text-gray-900 mb-4'>{t("section_2_titre")}</h2>
+                        <p className='body-2 text-gray'>{t("section_2_p_1")}</p>
                     </div>
                     <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                         <div className='space-y-3'>
@@ -85,8 +89,8 @@ export default function Page() {
                                 />
                             </div>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Les sacrements de l’initiation</h1>
-                                <p className='body-2 text-gray'>Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, </p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_1")}</h1>
+                                <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -100,8 +104,8 @@ export default function Page() {
                                 />
                             </div>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Les sacrements de guérison</h1>
-                                <p className='body-2 text-gray'>Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, </p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>{(t("section_2_sous_titre_2"))}</h1>
+                                <p className='body-2 text-gray'>{t("section_2_p_3")}</p>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -115,15 +119,15 @@ export default function Page() {
                                 />
                             </div>
                             <div className='space-y-2'>
-                                <h1 className='body-1 text-[#1D0104] font-bold'>Les sacrements d'engagement</h1>
-                                <p className='body-2 text-gray'>Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, </p>
+                                <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_3")}</h1>
+                                <p className='body-2 text-gray'>{t("section_2_p_4")}</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='mt-10 md:mt-20'></div>
                 <div>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements de l’initiation</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_3_titre")}</h2>
                     <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-3'>
                         <div className='space-y-3'>
                             <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
@@ -138,7 +142,7 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>Le Baptême</h1>
+                            <h1 className='heading-4'>{t("section_3_sous_titre_1")}</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
                                 <Button
@@ -161,7 +165,7 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>La Confirmation</h1>
+                            <h1 className='heading-4'>{t("section_3_sous_titre_2")}</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
                                 <Button
@@ -184,7 +188,7 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>L'Eucharistie</h1>
+                            <h1 className='heading-4'>{t("section_3_sous_titre_3")}</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
                                 <Button
@@ -199,7 +203,7 @@ export default function Page() {
 
                 <div className='mt-10 md:mt-20'></div>
                 <div>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements de guérison</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre")}</h2>
                     <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-2'>
                         <div className='space-y-3'>
                             <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
@@ -214,7 +218,7 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>La Réconciliation</h1>
+                            <h1 className='heading-4'>{t("section_4_sous_titre_1")}</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
                                 <Button
@@ -237,21 +241,21 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>L’onction des malades</h1>
+                            <h1 className='heading-4'>{t("section_4_sous_titre_2")}</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/onction-malade-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >En savoir plus</Button>
+                                >{t("section_4_savoir_plus")}</Button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className='mt-10 md:mt-20'></div>
                 <div>
-                    <h2 className='heading-3 text-gray-900 mb-4'>Les sacrements d'engagement</h2>
+                    <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
                     <div className='flex flex-row overflow-x-scroll lg:overflow-x-hidden pb-8 lg:pb-0 space-x-4 lg:grid lg:gap-6 lg:grid-cols-2'>
                         <div className='space-y-3'>
                             <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
@@ -266,14 +270,14 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>L’Ordre</h1>
+                            <h1 className='heading-4'>{t("section_5_sous_titre_1")}</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/ordre-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >En savoir plus</Button>
+                                >{t("section_4_savoir_plus")}</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -289,14 +293,14 @@ export default function Page() {
                                     }}
                                 />
                             </div>
-                            <h1 className='heading-4'>Le Mariage</h1>
+                            <h1 className='heading-4'>{t("section_5_sous_titre_2")}</h1>
                             <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/mariage-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >En savoir plus</Button>
+                                >{t("section_4_savoir_plus")}</Button>
                             </div>
                         </div>
                     </div>

@@ -80,7 +80,6 @@ const mouvements = [
 
 export default async function Mouvements() {
     const data = await fetchMouvements()
-    console.log({ data });
     
     return (
         <div className="grid gap-3 md:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

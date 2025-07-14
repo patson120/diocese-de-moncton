@@ -611,6 +611,76 @@
     },
     "tribunal_matrimonial": {
         "hero_titre": "Tribunal matrimonial ecclésiastique",
-        "hero_desc": "Un ministère de compassion et d'espérance pour les personnes séparées et divorcées"
+        "hero_desc": "Un ministère de compassion et d'espérance pour les personnes séparées et divorcées",
+
+        "section_1_titre": "Un lieu d'accueil et d'écoute",
+        "section_1_p_1": "Le tribunal matrimonial ecclésiastique est un ministère de l'Église qui offre un accompagnement compassionnel aux personnes séparées ou divorcées souhaitant demander une déclaration de nullité de leur mariage.",
+        "section_1_p_2": "Dans une atmosphère de confiance, de confidentialité et de non-jugement, nous aidons les fidèles à cheminer vers la guérison et l'espérance.",
+
+        "section_2_titre": "Un ministère au service des familles",
+        "section_2_sous_titre_1": "Objectif",
+        "section_2_p_2": "Offrir un soutien pastoral et juridique aux personnes en situation de séparation ou de divorce.",
+        "section_2_sous_titre_2": "Approche",
+        "section_2_p_3": "Accueillir chaque personne avec compassion, écouter son histoire sans jugement, et l'accompagner dans sa démarche spirituelle et canonique.",
+        "section_2_sous_titre_3": "Valeurs",
+        "section_2_p_4": "Confidentialité, respect, écoute active et accompagnement personnalisé.",
+
+        "section_3_titre": "Comment demander une déclaration de nullité ?",
+        "section_3_li_1": "Étape 1 : Prendre contact avec le tribunal matrimonial pour exprimer sa demande.",
+        "section_3_li_2": "Étape 2 : Rencontrer un notaire ou un représentant du tribunal pour expliquer sa situation.",
+        "section_3_li_3": "Étape 3 : Remplir les documents nécessaires et fournir les informations requises.",
+        "section_3_li_4": "Étape 4 : Suivre le processus canonique, qui inclut l'examen du dossier par le tribunal.",
+        "section_3_li_5": "Étape 5 : Recevoir une réponse du tribunal, accompagnée d'un accompagnement pastoral si nécessaire.",
+
+        "section_4_titre": "Questions fréquentes",
+        "section_4_p_1": "Réponses à vos questions",
+        "section_4_sous_titre_1": "Qu'est-ce qu'une déclaration de nullité ?",
+        "section_4_p_2": "C'est une décision de l'Église qui reconnaît qu'un mariage n'était pas valide selon les critères canoniques.",
+        "section_4_sous_titre_2": "Combien de temps dure le processus ?",
+        "section_4_p_3": "La durée varie selon les cas, mais le tribunal s'efforce de traiter chaque dossier avec diligence.",
+        "section_4_sous_titre_3": "Dois-je engager un avocat ?",
+        "section_4_p_4": "Non, le tribunal fournit tout le soutien nécessaire pour remplir les formalités.",
+
+        "section_5_titre": "Contact",
+        "section_5_p_1": "Pour toute question ou pour entamer une démarche de déclaration de nullité, contactez : Patricia Niles, Notaire au tribunal matrimonial."
+
+    },
+    "sacrements": {
+        "hero_titre": "Les sacrements",
+        "hero_desc": "Retrouvez tous les sacrements et les informations associées.",
+        "section_1_titre": "Les sacrements de l'Église catholique",
+        "section_1_p_1": "Les sacrements sont des signes visibles du don gratuit ( la grâce ) de Dieu, institués par le Christ et confiés à l’Eglise. Par les sacrements, le croyant entre et participe à la vie divine. Les sacrements manifestent toute notre existence, dans ses différentes étapes, appelées à être vécue dans le Christ.",
+        "section_1_p_2": "Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, signifient et réalisent les grâces propres de chaque sacrement ( pardon de Dieu, vie de Dieu par le baptême, service des frères par l’ordination … )",
+        
+        "section_1_p_3": "L’Esprit Saint nous prépare aux sacrements par la Parole de Dieu. Les sacrements nous fortifient et expriment la foi.  Leur fruit, s’il est d’abord personnel, contribue à la communion de toute l’Église « une âme qui s’élève, élève le monde ».",
+        
+        "section_2_titre": "Les sacrements sont de trois ordres",
+        "section_2_p_1": "Tout sacrement comporte trois dimensions: un signe, ce que l'on voit, une parole, ce que l'on entend et un symbole, ce que le signe et la parole expriment.",
+        "section_2_sous_titre_1": "Les sacrements de l’initiation",
+        "section_2_p_2": "Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, ",
+        "section_2_sous_titre_2": "Les sacrements de guérison",
+        "section_2_p_3": "Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, ",
+        "section_2_sous_titre_3": "Les sacrements d'engagement",
+        "section_2_p_4": "Les rites visibles ( eau, imposition des mains, onction … ) sous lesquels les sacrements sont célébrés, ",
+
+        "section_3_titre": "Les sacrements de l’initiation",
+        "section_3_sous_titre_1": "Le Baptême",
+        "section_3_sous_titre_2": "La Confirmation",
+        "section_3_sous_titre_3": "L'Eucharistie",
+
+        "section_4_titre": "Les sacrements de guérison",
+        "section_4_sous_titre_1": "La Réconciliation",
+        "section_4_sous_titre_2": "L’onction des malades",
+        "section_4_savoir_plus": "En savoir plus",
+
+        "section_5_titre": "Les sacrements d'engagement",
+        "section_5_sous_titre_1": "L’Ordre",
+        "section_5_sous_titre_2": "Le Mariage"
+    },
+    "mouvements": {
+        "hero_titre": "Les mouvements",
+        "hero_desc": "Retrouvez tous les mouvements du diocèse et les informations associées.",
+
+        "section_1_titre": "Liste des mouvements"
     }
 }
