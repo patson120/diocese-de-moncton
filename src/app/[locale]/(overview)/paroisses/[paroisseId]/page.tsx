@@ -87,19 +87,25 @@ export default async function Page(props: {
                             <p className='body-2 text-gray'>{paroisse.histoire}</p>
                             {/* <span className='font-bold cursor-pointer'>voir plus</span> */}
                         </div>
-                        <div className="flex flex-wrap gap-4 my-5 py-3 border-y border-y-[#E5E5E5]">
-                            <div className="flex flex-nowrap">
-                                <span className="text-gray-500 text-sm mr-2">Etabli en</span>
-                                <span className="text-sm font-extrabold">{paroisse.etabli_le}</span>
+                        {/* 
+                            <div className="flex flex-wrap gap-4 my-5 py-3 border-y border-y-[#E5E5E5]">
+                                <div className="flex flex-nowrap">
+                                    <span className="text-gray-500 text-sm mr-2">Etabli en</span>
+                                    <span className="text-sm font-extrabold">{paroisse.etabli_le}</span>
+                                </div>
+                                <div className="flex flex-nowrap">
+                                    <span className="text-gray-500 text-sm mr-2">Ordonné en</span>
+                                    <span className="text-sm font-extrabold">{paroisse.ordonne_le}</span>
+                                </div>
+                                <div className="flex flex-nowrap">
+                                    <span className="text-gray-500 text-sm mr-2">Premier curé</span>
+                                    <span className="text-sm font-extrabold">{paroisse.premier_cure}</span>
+                                </div>
                             </div>
-                            <div className="flex flex-nowrap">
-                                <span className="text-gray-500 text-sm mr-2">Ordonné en</span>
-                                <span className="text-sm font-extrabold">{paroisse.ordonne_le}</span>
-                            </div>
-                            <div className="flex flex-nowrap">
-                                <span className="text-gray-500 text-sm mr-2">Premier curé</span>
-                                <span className="text-sm font-extrabold">{paroisse.premier_cure}</span>
-                            </div>
+                        */}
+                        <div className="font-body-3 whitespace-nowrap mt-5">
+                            <span className="text[#575757] whitespace-nowrap font-bold my-2">Horaires de bureau</span>
+                            <Text className='text-sm text-gray' labelFr={paroisse?.horaire_bureau!} labelEn={paroisse?.horaire_bureau!} />  
                         </div>
                         <div className="">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Heures des messes</h1>
