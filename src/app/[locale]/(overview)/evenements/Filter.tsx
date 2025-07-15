@@ -89,7 +89,6 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
                         size={'sm'}
                         variant="outline"
                         className={`${currentMonth > 1 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
-                        {/* <Text className='hidden md:inline-block' keyString='prev_msg' /> */}
                         <ChevronLeft className="h-5 w-5" />
                     </Button>
                     <Button
@@ -97,7 +96,6 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
                         size={'sm'}
                         variant="outline"
                         className={`${ currentMonth < 12 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
-                            {/* <Text className='hidden md:inline-block' keyString='next_msg' /> */}
                             <ChevronRight className="h-5 w-5" />
                     </Button>
                 </div>
