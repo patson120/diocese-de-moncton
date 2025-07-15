@@ -1,15 +1,19 @@
 'use client'
 
 import Text from "@/components/Text";
+import { Button } from "@/components/ui/shared/button";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { Category } from "@/types"
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 export const Filter = ({ categories }: { categories: Category[] }) => {
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const { replace } = useRouter()
+
+    const [currentMonth, setCurrentMonth] = useState(0)
 
     const handleUpdateCategory = (e: ChangeEvent<HTMLSelectElement>) => {
         const cat_id = e.target.value
@@ -34,8 +38,14 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
         else {
             params.delete('month')
         }
+        setCurrentMonth(month)
         replace(`${pathname}?${params.toString()}`)
     }
+
+    useEffect(() => {
+        setCurrentMonth(Number(searchParams.get('month')))
+    }, [])
+    
 
     return (
         <div className='flex justify-center items-center gap-2'>
@@ -78,6 +88,26 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
                         ))
                     }
                 </select>
+                {/* 
+                    <div className='space-x-2'>
+                        <Button
+                            onClick={() => {}}
+                            size={'sm'}
+                            variant="outline"
+                            className={`${currentMonth > 1 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
+                            <Text className='hidden md:inline-block' keyString='prev_msg' />
+                            <ChevronLeft className="h-5 w-5 inline-block md:hidden" />
+                        </Button>
+                        <Button
+                            onClick={() => {}}
+                            size={'sm'}
+                            variant="outline"
+                            className={`${ currentMonth < 12 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
+                                <Text className='hidden md:inline-block' keyString='next_msg' />
+                                <ChevronRight className="h-5 w-5 inline-block md:hidden " />
+                        </Button>
+                    </div>
+                */}
             </div>
         </div>
     )

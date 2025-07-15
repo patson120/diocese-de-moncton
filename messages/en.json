@@ -106,7 +106,10 @@
         "article_prec": "Previous item",
         "article_suiv": "Next item"
     },
-
+    "events": {
+        "precedent": "Previous",
+        "suivant": "Next"
+    },
     "contact": {
         "retour": "Back",
         "back_to_home": "Back to homepage",
