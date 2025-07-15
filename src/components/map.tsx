@@ -72,10 +72,10 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
             title: parish?.nom || '',
             animation: google.maps.Animation.DROP,
             clickable: true,
-            // icon: {
-            //   url:  getIcon(parish), // Chemin vers votre icône personnalisée
-            //   scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
-            // },
+            icon: {
+              url:  getIcon(parish), // Chemin vers votre icône personnalisée
+              scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
+            },
           });
 
           marker.addListener('click', () => {
