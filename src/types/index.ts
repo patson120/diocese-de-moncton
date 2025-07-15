@@ -63,10 +63,7 @@ export type Paroisse = {
     galerie: Image[];
     bulletins: Bulletin[];
     type: TypeParoisse;
-    horaireparoisses: Horaire[];
-    etabli_le: number | null,
-    ordonne_le: number | null,
-    premier_cure: number | null,
+    horaireparoisses: Horaire[]
     statut: number,
 }
 export type Bulletin = {

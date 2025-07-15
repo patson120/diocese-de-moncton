@@ -28,15 +28,30 @@ export default async function Page(props: {
                 <div className="container max-margin py-3 flex justify-between items-center ">
                     <Breadcrumbs
                         breadcrumbs={[
-                            { label: 'Accueil', href: '/' },
+                            { 
+                                label: 'Accueil', 
+                                href: '/',
+                                data: {
+                                    labelEn: "Home",
+                                    labelFr: "Accueil"
+                                }
+                            },
                             {
-                                label: 'Paroisses',
+                                label: '',
                                 href: '/paroisses',
+                                data: {
+                                    labelEn: "Parishes",
+                                    labelFr: "Paroisses"
+                                }
                             },
                             {
                                 label: paroisse?.nom ?? "",
                                 href: '',
                                 active: true,
+                                data: {
+                                    labelEn: paroisse?.nom,
+                                    labelFr: paroisse.nom
+                                }
                             },
                         ]}
                     />
@@ -150,13 +165,13 @@ export default async function Page(props: {
                             <MapSection paroisses={[paroisse]} />
                         </div>
 
-                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Bulletin paroissiaux</h1>
+                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Bulletins paroissiaux</h1>
                         <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                                 {
                                     paroisse.bulletins.length && paroisse?.bulletins.map((item, index) => 
                                         <a key={index} href={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                                            <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-sm">{formatDateToLocal(item.created_at)}</span></p>
-                                            <ArrowUpRight className="h-4 w-6" />
+                                            <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at)}</span></p>
+                                            <ArrowUpRight className="h-6 w-10 ml-4" />
                                         </a>
                                     )
                                 }
