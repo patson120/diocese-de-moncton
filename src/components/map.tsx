@@ -73,7 +73,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
             animation: google.maps.Animation.DROP,
             clickable: true,
             icon: {
-              url:  getIcon(parish), // Chemin vers votre icône personnalisée
+              url: './assets/icons/map-pin-close.svg', // getIcon(parish), // Chemin vers votre icône personnalisée
               scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
             },
           });
@@ -114,7 +114,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
           animation: google.maps.Animation.DROP,
           clickable: true,
           icon: {
-            url: getIcon(first), // Chemin vers votre icône personnalisée
+            url: './assets/icons/map-pin-close.svg', // getIcon(first), // Chemin vers votre icône personnalisée
             scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
           },
         });
