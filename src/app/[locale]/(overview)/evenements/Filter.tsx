@@ -46,6 +46,28 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
         setCurrentMonth(Number(searchParams.get('month')))
     }, [])
     
+    const handleChangeMonth = (val: number) => {
+        const params = new URLSearchParams(searchParams)
+        params.set('page', '1');
+        if (val > 0 && currentMonth < 12){
+            params.set('month', `${currentMonth+val}`)
+            setCurrentMonth(currentMonth+val)
+        }
+        else if (val > 0 && currentMonth === 12){
+            params.set('month', `1`)
+            setCurrentMonth(1)
+        }
+        
+        if (val < 0 && currentMonth > 1) {
+            params.set('month', `${currentMonth+val}`)
+            setCurrentMonth(currentMonth+val)     
+        }
+        else if (val < 0 && currentMonth === 1){
+            params.set('month', `12`)
+            setCurrentMonth(12)
+        }
+        replace(`${pathname}?${params.toString()}`)
+    }
 
     return (
         <div className='flex justify-center items-center gap-2'>
@@ -61,23 +83,24 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
                         defaultValue={searchParams.get('month')?.toString()}
                         />
                 </div>
-                {/* 
-                    <select id="mois" name="mois" className="border border-gray-100 outline-primary outline-offset-1 px-3 py-2 rounded-lg w-full">
-                        <option value="" disabled>Par mois</option>
-                        <option value="janvier">Janvier</option>
-                        <option value="fevrier">Février</option>
-                        <option value="mars">Mars</option>
-                        <option value="avril">Avril</option>
-                        <option value="mai">Mai</option>
-                        <option value="juin">Juin</option>
-                        <option value="juillet">Juillet</option>
-                        <option value="aout">Août</option>
-                        <option value="septembre">Septembre</option>
-                        <option value="actobre">Octobre</option>
-                        <option value="novembre">Novembre</option>
-                        <option value="decembre">Décembre</option>
-                    </select> 
-                */}
+                <div className='flex space-x-2'>
+                    <Button
+                        onClick={() => handleChangeMonth(-1)}
+                        size={'sm'}
+                        variant="outline"
+                        className={`${currentMonth > 1 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
+                        {/* <Text className='hidden md:inline-block' keyString='prev_msg' /> */}
+                        <ChevronLeft className="h-5 w-5" />
+                    </Button>
+                    <Button
+                        onClick={() => handleChangeMonth(+1)}
+                        size={'sm'}
+                        variant="outline"
+                        className={`${ currentMonth < 12 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
+                            {/* <Text className='hidden md:inline-block' keyString='next_msg' /> */}
+                            <ChevronRight className="h-5 w-5" />
+                    </Button>
+                </div>
                 <select onChange={handleUpdateCategory} id="categorie" name="categorie" className="border border-gray-100 outline-primary outline-offset-1 px-3 py-2 rounded-lg w-full">
                     <option value="" disabled>
                         <Text className="text-inherit" keyString="par_categorie" />
@@ -88,26 +111,6 @@ export const Filter = ({ categories }: { categories: Category[] }) => {
                         ))
                     }
                 </select>
-                {/* 
-                    <div className='space-x-2'>
-                        <Button
-                            onClick={() => {}}
-                            size={'sm'}
-                            variant="outline"
-                            className={`${currentMonth > 1 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
-                            <Text className='hidden md:inline-block' keyString='prev_msg' />
-                            <ChevronLeft className="h-5 w-5 inline-block md:hidden" />
-                        </Button>
-                        <Button
-                            onClick={() => {}}
-                            size={'sm'}
-                            variant="outline"
-                            className={`${ currentMonth < 12 ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
-                                <Text className='hidden md:inline-block' keyString='next_msg' />
-                                <ChevronRight className="h-5 w-5 inline-block md:hidden " />
-                        </Button>
-                    </div>
-                */}
             </div>
         </div>
     )
