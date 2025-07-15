@@ -22,6 +22,25 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
   const [first, setfirst] = useState<Paroisse>(selectedParish!)
 
   const getIcon = (p: Paroisse) => {
+    if (p.statut === 0) {
+      return {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'red', // Couleur pour paroisses fermées
+        fillOpacity: 1,
+        scale: 10,
+        strokeColor: 'white',
+        strokeWeight: 1,
+      };
+    } else {
+      return {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'green', // Couleur pour paroisses ouvertes
+        fillOpacity: 1,
+        scale: 10,
+        strokeColor: 'white',
+        strokeWeight: 1,
+      };
+    }
     switch (p.statut) {
       case 0:
         return '/assets/icons/map-pin-close.svg'
@@ -72,10 +91,11 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
             title: parish?.nom || '',
             animation: google.maps.Animation.DROP,
             clickable: true,
-            icon: {
-              url: getIcon(parish), // Chemin vers votre icône personnalisée
-              scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
-            },
+            icon: getIcon(parish),
+            // icon: {
+            //   url: getIcon(parish), // Chemin vers votre icône personnalisée
+            //   scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
+            // },
           });
 
           marker.addListener('click', () => {
@@ -105,10 +125,11 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
           title: first.nom,
           animation: google.maps.Animation.DROP,
           clickable: true,
-          icon: {
-            url: getIcon(first), // Chemin vers votre icône personnalisée
-            scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
-          },
+          icon: getIcon(first),
+          // icon: {
+          //   url: getIcon(first), // Chemin vers votre icône personnalisée
+          //   scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
+          // },
         });
       }
       else {
