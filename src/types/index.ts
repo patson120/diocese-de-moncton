@@ -70,12 +70,12 @@ export type Paroisse = {
     statut: number,
 }
 export type Bulletin = {
-    id: Number;
+    id: number;
     paroisse_id: Number;
     titre_fr: string;
     titre_en: string;
     document: string;
-    mois: Number;
+    mois: number;
     created_at: string;
     updated_at: string;
 }

@@ -161,11 +161,12 @@ export default async function Page(props: {
                                         </a>
                                     )
                                 }
+                            */}
                                 {
                                     paroisse.bulletins.length === 0 &&
                                     <p className="text-center h-10 text-gray-300 text-sm">Aucun bulletin disponibles</p>
                                 }
-                            */}
+                            
                         </div>
 
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses de l'unité</h1>
