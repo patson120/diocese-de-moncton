@@ -174,11 +174,11 @@ export default async function Page(props: {
                                             <ArrowUpRight className="h-6 w-10 ml-4" />
                                         </a>
                                     )
-                                */}
+                                }
                                 {
                                     paroisse.bulletins.length === 0 &&
                                     <p className="text-center h-10 text-gray-400 text-sm">Aucun bulletin disponibles</p>
-                                }
+                                */}
                             
                         </div>
 
