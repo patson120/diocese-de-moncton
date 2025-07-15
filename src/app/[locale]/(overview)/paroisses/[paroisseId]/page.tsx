@@ -104,7 +104,7 @@ export default async function Page(props: {
                             </div>
                         */}
                         <div className="font-body-3 whitespace-nowrap mt-5">
-                            <span className="text[#575757] whitespace-nowrap font-bold my-2">Horaires de bureau</span>
+                        <   h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Heures de bureau</h1>
                             <Text className='text-sm text-gray' labelFr={paroisse?.horaire_bureau!} labelEn={paroisse?.horaire_bureau!} />  
                         </div>
                         <div className="">
