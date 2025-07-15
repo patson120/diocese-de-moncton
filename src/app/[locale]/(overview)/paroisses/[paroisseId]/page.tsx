@@ -153,7 +153,7 @@ export default async function Page(props: {
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses de l'unité</h1>
                         <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                             {
-                                paroisse.bulletins.map((item, index) => 
+                                paroisse.bulletins.length && paroisse?.bulletins.map((item, index) => 
                                     <a key={index} href={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
                                         <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-sm">{formatDateToLocal(item.created_at)}</span></p>
                                         <ArrowUpRight className="h-4 w-6" />
