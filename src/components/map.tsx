@@ -113,10 +113,10 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
           title: first.nom,
           animation: google.maps.Animation.DROP,
           clickable: true,
-          // icon: {
-          //   url: getIcon(first), // Chemin vers votre icône personnalisée
-          //   scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
-          // },
+          icon: {
+            url: getIcon(first), // Chemin vers votre icône personnalisée
+            scaledSize: new google.maps.Size(25, 25), // Taille de l'icône (largeur, hauteur)
+          },
         });
       }
       else {
