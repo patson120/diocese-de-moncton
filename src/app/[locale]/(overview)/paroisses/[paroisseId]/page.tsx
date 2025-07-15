@@ -150,9 +150,8 @@ export default async function Page(props: {
                             <MapSection paroisses={[paroisse]} />
                         </div>
 
-                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses de l'unité</h1>
+                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Bulletin paroissiaux</h1>
                         <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
-                            {/* 
                                 {
                                     paroisse.bulletins.length && paroisse?.bulletins.map((item, index) => 
                                         <a key={index} href={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
@@ -161,7 +160,6 @@ export default async function Page(props: {
                                         </a>
                                     )
                                 }
-                            */}
                                 {
                                     paroisse.bulletins.length === 0 &&
                                     <p className="text-center h-10 text-gray-300 text-sm">Aucun bulletin disponibles</p>
