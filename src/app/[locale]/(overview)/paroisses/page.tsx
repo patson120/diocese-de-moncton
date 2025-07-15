@@ -1,12 +1,12 @@
 
 import { fetchParoisses } from '@/_lib/data'
-import MapSection from '@/components/ui/shared/MapSection'
 import { ParoisseItemSkeleton } from '@/components/ui/shared/skeletons'
 import { Paroisse } from '@/types'
 import { Suspense } from 'react'
 import Filter from './Filter'
 import Paroisses from './paroisses'
 import SearchComp from './SearchComp'
+import MapSection from '@/components/ui/shared/MapSection'
 
 
 export default async function Page(props: {
