@@ -11,6 +11,7 @@ import { Link } from "@/i18n/routing";
 import { Paroisse } from "@/types";
 import { ArrowUpRight, Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
+import Carousel from "./carousel";
 
 
 export default async function Page(props: {
@@ -67,14 +68,15 @@ export default async function Page(props: {
             <section className="md:container md:max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-14 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2 space-y-4'>
-                        <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
+                        {/*<div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
                                 alt="Image de détail de l'évènement"
                                 src={paroisse.galerie?.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${paroisse.galerie[0].path}` : "/assets/img/paroisse-detail.png"}
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
-                        </div>
+                        </div>*/}
+                        <Carousel images={[ ...paroisse.galerie, ...paroisse.media ]} />
                         <div className='container max-margin md:w-full md:mx-0 md:px-0 py-0 flex gap-3'>
                             <Link href={paroisse.site_web} target="_blank">
                                 <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
@@ -211,6 +213,7 @@ export default async function Page(props: {
                     </div>
                 </div>
             </section>
+
             {/* Action de grace */}
             <ActionGrace />
         </>
