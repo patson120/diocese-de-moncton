@@ -82,7 +82,7 @@ export default function Carousel({ images=[] }: { images: Image[] }) {
         <section className="">
             {/* Main Carousel */}
             <div className="relative">
-                <Card className="relative overflow-hidden rounded-3xl shadow-2xl bg-black/20 backdrop-blur-sm border-white/10">
+                <Card className="relative overflow-hidden md:rounded-3xl shadow-2xl bg-black/20 backdrop-blur-sm border-white/10">
                 <div 
                     className="h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100"
                     onMouseEnter={() => setIsHovered(true)}
