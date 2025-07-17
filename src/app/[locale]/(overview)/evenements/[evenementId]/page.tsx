@@ -15,9 +15,6 @@ export default async function Page(props: {
 }) {
     const { evenementId } = await props.params;
     const event: TypeEvent = await fetchEvents(`/${evenementId}`)
-    console.log("-----------------------------------------");
-    
-    console.log(JSON.stringify(event, null, 2));
     
     return (
         <>
