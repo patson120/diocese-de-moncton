@@ -22,6 +22,7 @@ export type TypeEvent = {
     nextId: number | null;
     lieu: string;
     gps: string;
+    etat: number;
     contact: string;
     description_fr: string;
     description_en: string;

@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from "@/i18n/routing";
 import { holidays } from "@/lib/holidays";
 import { cn } from "@/lib/utils";
 import { TypeEvent } from "@/types";
@@ -9,7 +10,6 @@ import {
   endOfMonth,
   endOfWeek,
   format,
-  getDate,
   getDay,
   getHours,
   isSameDay,
@@ -20,10 +20,10 @@ import {
   setHours,
   setMinutes,
   startOfMonth,
-  startOfWeek,
+  startOfWeek
 } from "date-fns";
 import { fr } from "date-fns/locale";
-import React, { useState } from "react";
+import React from "react";
 
 interface CalendarGridProps {
   currentDate: Date;
@@ -33,11 +33,11 @@ interface CalendarGridProps {
 
 export function CalendarGrid({ 
   currentDate, 
-  events=[], 
+  events, 
   view
 }: CalendarGridProps) {
-  const [selectedEvent, setSelectedEvent] = useState<TypeEvent | null>(null);
-  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const router = useRouter()
 
   const days = (() => {
     if (view === "month") {
@@ -56,8 +56,7 @@ export function CalendarGrid({
   const hours = Array.from({ length: 24 }, (_, i) => i);
 
   const handleEventClick = (event: TypeEvent) => {
-    setSelectedEvent(event);
-    setDialogOpen(true);
+    router.push(`/evenements/${event.id}`)
   };
 
   const getEventStyle = (event: TypeEvent) => {
@@ -78,6 +77,8 @@ export function CalendarGrid({
   };
 
   const getDayEvents = (date: Date) => {
+    if (events.length){ return []}
+    
     return events.filter(event => {
       let start = new Date(`${event.date_event!}T00:00:00`);
       let end = new Date(`${event.date_event!}T23:59:59`);
