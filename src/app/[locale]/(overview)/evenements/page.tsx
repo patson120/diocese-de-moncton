@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import Evenements from "./evenements";
 import { Filter } from "./Filter";
 import SearchBar from "./SearchBar";
+import Calendrier from "./calendrier";
 
 
 
@@ -29,7 +30,6 @@ export default async function Page(props: {
     return (
         <main>
             {/* Hero section */}
-        
             <section className='h-[25vh] md:h-[50vh] w-full bg-gray-100'>
                 <div className='w-full h-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6'>
                     <div className='w-full h-full relative overflow-hidden border-r border-gray-50 '>
@@ -111,21 +111,29 @@ export default async function Page(props: {
                 {/* Search bar */} 
                 <SearchBar placeholder={"rechercher_event"} />
             </div>
+
+            {/*
+                <section className='container max-margin pt-0 pb-10'>
+                    <div className='mt-2' />
+                    <div className='lg:w-2/3 mx-auto flex flex-col justify-center'>
+                        {/* filter 
+                        <Filter categories={categories} />
+                        <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
+                            <Evenements
+                                currentPage={currentPage}
+                                query={query}
+                                month={searchParams?.month || 0}
+                                categorie_id={searchParams?.categorie_id || ''}
+                            />
+                        </Suspense>
+                    </div>
+                </section>
+            */}
     
             <section className='container max-margin pt-0 pb-10'>
-                <div className='mt-2' />
-                <div className='lg:w-2/3 mx-auto flex flex-col justify-center'>
-                    {/* filter */}
-                    <Filter categories={categories} />
-                    <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
-                        <Evenements
-                            currentPage={currentPage}
-                            query={query}
-                            month={searchParams?.month || 0}
-                            categorie_id={searchParams?.categorie_id || ''}
-                        />
-                    </Suspense>
-                </div>
+                <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
+                    <Calendrier />
+                </Suspense>
             </section>
         </main>
     )
