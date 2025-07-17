@@ -47,7 +47,7 @@ export function CalendarHeader({ currentDate, view, onDateChange, onViewChange }
   };
 
   return (
-    <Tabs value={view} className="flex items-center justify-between">
+    <Tabs value={view} className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0">
       <div className="flex justify-between items-center">
         <TabsList className="justify-start h-12 p-0 bg-[#F1F3F6] rounded-md px-3 py-2">
           <TabsTrigger
