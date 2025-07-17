@@ -77,8 +77,7 @@ export function CalendarGrid({
   };
 
   const getDayEvents = (date: Date) => {
-    if (events.length){ return []}
-    
+
     return events.filter(event => {
       let start = new Date(`${event.date_event!}T00:00:00`);
       let end = new Date(`${event.date_event!}T23:59:59`);
