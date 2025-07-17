@@ -77,7 +77,6 @@ export function CalendarGrid({
   };
 
   const getDayEvents = (date: Date) => {
-
     return events.filter(event => {
       let start = new Date(`${event.date_event!}T00:00:00`);
       let end = new Date(`${event.date_event!}T23:59:59`);
@@ -87,11 +86,11 @@ export function CalendarGrid({
 
   const isHoliday = (date: Date) => {
     return holidays.some(holiday => isSameDay(parseISO(holiday.date), date));
-  };
+  }
 
   const getHolidayName = (date: Date) => {
     return holidays.find(holiday => isSameDay(parseISO(holiday.date), date))?.name;
-  };
+  }
 
   if ( view === 'day') {
     return (
@@ -209,11 +208,13 @@ export function CalendarGrid({
   return (
     <>
       <div className="grid grid-cols-7">
-        {["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((day) => (
-          <div key={day} className="p-2 text-center font-semibold bg-muted">
-            {day}
-          </div>
-        ))}
+        {
+          ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((day) => (
+            <div key={day} className="p-2 text-center font-semibold bg-muted">
+              {day}
+            </div>
+          ))
+        }
         { EmptyBox() }
         {
           days.map((day) => {

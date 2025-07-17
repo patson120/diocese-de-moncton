@@ -3,10 +3,8 @@ import { EventsSkeleton } from "@/components/ui/shared/skeletons";
 import { Category } from "@/types";
 import Image from 'next/image';
 import { Suspense } from 'react';
-import Evenements from "./evenements";
-import { Filter } from "./Filter";
-import SearchBar from "./SearchBar";
 import Calendrier from "./calendrier";
+import SearchBar from "./SearchBar";
 
 
 
@@ -112,11 +110,11 @@ export default async function Page(props: {
                 <SearchBar placeholder={"rechercher_event"} />
             </div>
 
-            
+            {/*
                 <section className='container max-margin pt-0 pb-10'>
                     <div className='mt-2' />
                     <div className='lg:w-2/3 mx-auto flex flex-col justify-center'>
-                        {/* filter */}
+                        {/* filter 
                         <Filter categories={categories} />
                         <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
                             <Evenements
@@ -128,14 +126,13 @@ export default async function Page(props: {
                         </Suspense>
                     </div>
                 </section>
-            
+            */}
     
-            {/* <section className='container max-margin pt-0 pb-10'>
-                <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>
+            <section className='container max-margin pt-0 pb-10'>
+                <Suspense fallback={<div className="mt-12"><EventsSkeleton items={4} /></div>}>        
                     <Calendrier />
                 </Suspense>
             </section>
-            */}
         </main>
     )
 }

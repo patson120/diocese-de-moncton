@@ -1,10 +1,11 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
-import { CalendarHeader } from './components/calendar/calendar-header'
-import { CalendarGrid } from './components/calendar/calendar-grid'
 import { fetchEvents } from '@/_lib/data'
+import { EventsSkeleton } from '@/components/ui/shared/skeletons'
 import { TypeEvent } from '@/types'
+import { useEffect, useState } from 'react'
+import { CalendarGrid } from './components/calendar/calendar-grid'
+import { CalendarHeader } from './components/calendar/calendar-header'
 
 export default function Calendrier() {
     
@@ -13,8 +14,8 @@ export default function Calendrier() {
     const [view, setView] = useState<"day" | "week" | "month">("month");
 
     const getEvents = async () => {
-        const response: any = await fetchEvents()
-        setEvenements(response.data)
+        const response = await fetchEvents()
+        setEvenements(response)
     }
 
     useEffect(() => {
@@ -23,6 +24,7 @@ export default function Calendrier() {
 
     return (
         <div>
+            
             <CalendarHeader
                 currentDate={currentDate}
                 view={view}
