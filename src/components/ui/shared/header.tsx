@@ -307,7 +307,7 @@ export default function Header() {
                                             section.items?.map((item, i) => (
                                                 <AccordionContent key={i} className="text-muted-foreground px-0 ">
                                                     <Button variant='ghost' onClick={() => { navigateTo(item.link) }} className="body-2 pl-0 hover:bg-transparent">
-                                                        <span className='text-muted-foreground'> {item.title}</span>
+                                                        <span className='text-muted-foreground'> {localActive === 'fr' ? item.titre_fr: item.titre_en}</span>
                                                     </Button>
                                                 </AccordionContent>
                                             ))
@@ -332,6 +332,7 @@ export default function Header() {
 
 const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     const router = useRouter()
+    const localActive = useLocale()
 
     const handleClick = () => {
         if (menu.link) {
@@ -354,8 +355,8 @@ const SubmenuItem = ({ menu }: { menu: MenuType }) => {
                 </div>
             </div>
             <div>
-                <h4 className='body-3 font-semibold lg:font-bold'>{menu.title}</h4>
-                <p className='legend text-gray-500 line-clamp-2'>{menu.description}</p>
+                <h4 className='body-3 font-semibold lg:font-bold'>{localActive === 'fr' ? menu.titre_fr : menu.titre_en}</h4>
+                <p className='legend text-gray-500 line-clamp-2'>{localActive === 'fr' ?  menu.description_fr : menu.description_en}</p>
             </div>
         </div>
     )

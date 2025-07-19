@@ -5,8 +5,10 @@ export type Language = "fr" | 'en'
 export type MenuType = {
     id: number;
     image: string;
-    title: string;
-    description: string;
+    titre_fr: string;
+    titre_en: string;
+    description_fr: string;
+    description_en: string;
     link: string;
 }
 
