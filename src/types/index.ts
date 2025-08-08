@@ -4,6 +4,7 @@ export type Language = "fr" | 'en'
 
 export type MenuType = {
     id: number;
+    menu?: string;
     image: string;
     titre_fr: string;
     titre_en: string;
@@ -188,6 +189,44 @@ export type Image = {
     label: string;
     value: number;
     comment: string;
+    created_at: string;
+    updated_at: string;
+}
+
+export type Menu = {
+    id: number;
+    intitule_fr: string;
+    intitule_en: string;
+    label: string | null;
+    created_at: string;
+    updated_at: string;
+    liens: Lien[]
+}
+
+export type Lien = {
+    id: number;
+    pages_id: number;
+    menu_id: number;
+    intitule_fr: string;
+    intitule_en: string | null;
+    statut: number;
+    menu: Menu,
+    lapage: Page[],
+    created_at: string;
+    updated_at: string;
+}
+
+export type Page = {
+    id: number;
+    titre: string;
+    is_planifier: number;
+    is_publier: number;
+    description: string;
+    data: string;
+    contenu_html: string | null;
+    contenu_json: string | null;
+    date_planification: string | null;
+    contenus: any[],
     created_at: string;
     updated_at: string;
 }

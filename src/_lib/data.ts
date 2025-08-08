@@ -1,5 +1,5 @@
-import { BASE_URL } from "@/constants";
 import { fetchAPI } from "@/_lib";
+import { BASE_URL } from "@/constants";
 
 
 export async function fetchActualites(params: string = "") {
@@ -153,5 +153,43 @@ export async function fetchHoraireMesse() {
     } catch (error) {
         console.error('Database Error:', error);
         throw new Error('Failed to fetch horaire messes');
+    }
+}
+
+export async function fetchMenuByCategory(params?: string){
+    try {
+        let url = `${BASE_URL}/menus${params}`;
+        const headers = {}
+        const body = {}
+        return await fetchAPI(url, 'GET', headers, body);
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch pages');
+    }
+}
+
+export async function fetchLinksByMenu(params?: string){
+    try {
+        let url = `${BASE_URL}/liens${params}`;
+        const headers = {}
+        const body = {}
+        return await fetchAPI(url, 'GET', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch links');
+    }
+}
+
+export async function fetchPageById(params?: string){
+    try {
+        let url = `${BASE_URL}/pages${params}`;
+        const headers = {}
+        const body = {}
+        return await fetchAPI(url, 'GET', headers, body);
+
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch pages');
     }
 }

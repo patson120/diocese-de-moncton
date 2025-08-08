@@ -2,20 +2,21 @@
 
 import { LanguageSelector } from '@/components/language-selector'
 import { Button } from '@/components/ui/shared/button'
-import { actualites, archidiocese, mouvements, ressources, sacrements } from '@/constants'
+import { archidiocese, mouvements, ressources, sacrements } from '@/constants'
 import { Link, useRouter } from '@/i18n/routing'
-import { MenuType } from '@/types'
+import { Lien, MenuType } from '@/types'
 import { Heart } from "lucide-react"
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
+import { fetchLinksByMenu } from '@/_lib/data'
+import Text from '@/components/Text'
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
-import Text from '@/components/Text'
 import { useLocale, useTranslations } from 'next-intl'
 
 
@@ -26,6 +27,7 @@ export default function Header() {
     const t = useTranslations("navigation")
 
     const [menus, setMenus] = useState<MenuType[]>([])
+    const [linksRegistry, setLinksRegistry] = useState<MenuType[]>([])
     const [isOpen, setIsOpen] = useState(false)
 
     const sections = [
@@ -36,49 +38,48 @@ export default function Header() {
         },
         {
             title: localActive == 'fr' ?  "Archidiocèse": "Archdiocese",
-            items: [...archidiocese]
+            items: [...archidiocese, ...linksRegistry.filter(item => item.menu! === '2')]
         },
         {
             title: localActive == 'fr' ?  "Sacrements": "Sacraments",
-            items: [...sacrements]
+            items: [...sacrements, ...linksRegistry.filter(item => item.menu! === '1')]
         },
         {
             title: localActive == 'fr' ? "Evènements": "Events",
             items: [],
-            // items: [...actualites]
             page: '/evenements'
         },
         {
             title: localActive == 'fr' ?  "Mouvements": "Movements",
-            items: [...mouvements]
+            items: [...mouvements, ...linksRegistry.filter(item => item.menu! === '3')]
         },
         {
             title: localActive == 'fr' ?  "Ressources" : "Resources",
-            items: [...ressources]
+            items: [...ressources, ...linksRegistry.filter(item => item.menu! === '4')]
         },
     ]
 
-    const onMouseEvent = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, type: string): void => {
+    const onMouseEvent =  async (event: React.MouseEvent<HTMLLIElement, globalThis.MouseEvent>, type: string) => {
+        if (event.type === "mouseleave"){
+            // setMenus([])
+            return
+        }
         const submenu = document.querySelector('#submenu') as HTMLDivElement
+        
         switch (type) {
             case 'archidiocese':
-                setMenus([...archidiocese])
+                setMenus([...archidiocese, ...linksRegistry.filter(item => item.menu! === '2')])
                 break;
             case 'sacrements':
-                setMenus([...sacrements])
-                break;
-            case 'actualites':
-                setMenus([...actualites])
+                setMenus([...sacrements, ...linksRegistry.filter(item => item.menu! === '1')])
                 break;
             case 'mouvements':
-                setMenus([...mouvements])
+                setMenus([...mouvements, ...linksRegistry.filter(item => item.menu! === '3') ])
                 break;
             case 'ressources':
-                setMenus([...ressources])
+                setMenus([...ressources, ...linksRegistry.filter(item => item.menu! === '4') ])
                 break;
-
             default:
-                alert('Unknown')
                 setMenus([])
                 break;
         }
@@ -90,6 +91,7 @@ export default function Header() {
     const onMouseEnter = () => {
         document.querySelector('#submenu')?.classList.remove("hidden")
     }
+
     const onMouseLeave = () => {
         setTimeout(() => {
             document.querySelector('#submenu')?.classList.add("hidden")
@@ -102,6 +104,28 @@ export default function Header() {
         router.push(link)
 
     }
+
+    const fetchLinks = useCallback(
+        async (params: string = '') => {
+            const response: Lien[] = await fetchLinksByMenu(params)
+            const data = response.map( item => ({
+                id: item.id,
+                menu: `${item.menu_id}`,
+                image: '/assets/icons/noun-eucharist-7479333 1.png',
+                titre_fr: item.intitule_fr,
+                titre_en: item.intitule_en,
+                description_fr: item.lapage[0].titre,
+                description_en: item.intitule_en,
+                link: `/pages/${item.pages_id}`
+            })) as MenuType[]
+            setLinksRegistry(data)
+        },
+    [])
+
+    useEffect(() => {
+        fetchLinks()
+    }, [])
+
 
     return (
         <>
@@ -189,20 +213,19 @@ export default function Header() {
                                 <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'>
                                     <Link href="/"><Text className='text-inherit' keyString='accueil' /></Link>
                                 </li>
-                                <li onMouseEnter={(e) => onMouseEvent(e, 'archidiocese')} onMouseLeave={(e) => onMouseEvent(e, 'archidiocese')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                <li onMouseEnter={(e) => onMouseEvent(e,'archidiocese')} onMouseLeave={(e) => {onMouseEvent(e, 'archidiocese')}} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
                                     <Text className='text-inherit' keyString='archidiocese' />
                                 </li>
-                                <li onClick={()=> navigateTo("/sacrements")} onMouseEnter={(e) => onMouseEvent(e, 'sacrements')} onMouseLeave={(e) => onMouseEvent(e, 'sacrements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                <li onClick={()=> navigateTo("/sacrements")} onMouseEnter={(e) => onMouseEvent(e,'sacrements')} onMouseLeave={(e) => {onMouseEvent(e, 'sacrements')}} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
                                     <Text className='text-inherit' keyString='sacrements' />
                                 </li>
                                 <li onMouseEnter={onMouseLeave} className='hover:text-black hover:font-extrabold'>
                                     <Link href="/evenements"><Text className='text-inherit' keyString='evenements' /></Link>
                                 </li>
-                                {/* <li onMouseEnter={(e) => onMouseEvent(e, 'actualites')} onMouseLeave={(e) => onMouseEvent(e, 'actualites')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>Actualités</li> */}
-                                <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => onMouseEvent(e, 'mouvements')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'mouvements')} onMouseLeave={(e) => {onMouseEvent(e,'mouvements')}} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
                                     <Text className='text-inherit' keyString='mouvements' />
                                 </li>
-                                <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => onMouseEvent(e, 'ressources')} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => {onMouseEvent(e, 'ressources')}} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
                                     <Text className='text-inherit' keyString='ressources' />
                                 </li>
                             </ul>
