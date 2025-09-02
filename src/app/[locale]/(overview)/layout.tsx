@@ -3,15 +3,16 @@ import { inter } from '@/app/fonts/fonts';
 import Footer from '@/components/ui/shared/footer';
 import Header from '@/components/ui/shared/header';
 import Newsletter from '@/components/ui/shared/newsletter';
+import { Toaster as SonnerToaster } from '@/components/ui/sonner';
+import { Toaster } from '@/components/ui/toaster';
 import { routing } from '@/i18n/routing';
 import { Language } from '@/types';
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import "../globals.css";
-import { Toaster } from '@/components/ui/toaster';
-import { Toaster as SonnerToaster } from '@/components/ui/sonner';
 
 
 export const metadata: Metadata = {
@@ -41,19 +42,17 @@ export default async function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}></Script>
+        <Script id='google-analytics'>
+          { `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
               });
-            `,
-          }}
-        />
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.className} antialiased select-none`}>
