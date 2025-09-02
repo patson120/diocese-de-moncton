@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: 'Archidiocèse de Moncton',
@@ -31,6 +32,21 @@ export default async function RootLayout({
   
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}></Script>
+        <Script id='google-analytics'>
+          { `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.GA_MEASUREMENT_ID}', {
+                page_path: window.location.pathname,
+              });
+          `}
+        </Script>
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
