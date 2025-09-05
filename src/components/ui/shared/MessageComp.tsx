@@ -2,14 +2,18 @@ import { formatDateToLocal } from "@/_lib/utils"
 import Text from "@/components/Text"
 import { Message } from "@/types"
 import { Calendar } from "lucide-react"
+import { cookies } from "next/headers"
 
 const MessageComp = ({ message }: { message: Message }) => {
+    const cookieStore = cookies();
+    const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
+      
     return (
         <div className='border border-[#E5E5E5] rounded-xl flex flex-col gap-[10px] px-5 py-6'>
             <div className='flex'>
                 <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
                     <Calendar className="h-4 w-4 text-gray-600" />
-                    <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString())}</span></div>
+                    <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString(),userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></div>
                 </div>
             </div>
             {

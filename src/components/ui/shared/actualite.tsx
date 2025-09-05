@@ -2,10 +2,12 @@
 import { formatDateToLocal } from '@/_lib/utils'
 import Text from '@/components/Text'
 import { TypeActualite } from '@/types'
+import { cookies } from 'next/headers';
 import Image from 'next/image'
 
 export default function Actualite({ data }: { data: TypeActualite }) {
-
+    const cookieStore = cookies();
+    const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
     return (
         <div className='w-full flex flex-col space-y-2'>
             <div className='relative h-56 md:h-64 w-full rounded-2xl overflow-hidden bg-gray-100'>
@@ -25,7 +27,7 @@ export default function Actualite({ data }: { data: TypeActualite }) {
             <div className='body-2 line-clamp-2 text-[#575757]'>
                 <Text labelEn={data.description_en} labelFr={data.description_fr} />
             </div>
-            <div className='legend text-[#575757] text-xs md:text-sm'><Text keyString='publier_le' /> { formatDateToLocal((new Date(data?.date_publication ? data?.date_publication : data?.created_at)).toISOString()) }</div>
+            <div className='legend text-[#575757] text-xs md:text-sm'><Text keyString='publier_le' /> { formatDateToLocal((new Date(data?.date_publication ? data?.date_publication : data?.created_at)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR') }</div>
         </div>
     )
 }

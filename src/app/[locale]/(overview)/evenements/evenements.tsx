@@ -5,6 +5,7 @@ import EventItem from "@/components/ui/home/event-item";
 import Pagination from "@/components/ui/shared/pagination";
 import { Link } from "@/i18n/routing";
 import { TypeEvent } from "@/types";
+import { cookies } from "next/headers";
 
 
 export default async function Evenements(
@@ -27,6 +28,10 @@ export default async function Evenements(
     events = response.data
     const totalPages = response.last_page
 
+    const cookieStore = cookies();
+    const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
+    
+
     if (!events) {
         return (
             <div className="h-44 mt-10 rounded-lg border-2 border-gray-400 border-dashed border-spacing-4  flex justify-center items-center">
@@ -38,8 +43,8 @@ export default async function Evenements(
     const verifyDate = (item: TypeEvent, index: number): boolean => {
         if (index < 0) return true
         return (
-            formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1] !==
-            formatDateToLocal((new Date(events[index].date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1]
+            formatDateToLocal((new Date(item.date_event)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR', 'long').split(" ")[1] !==
+            formatDateToLocal((new Date(events[index].date_event)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR', 'long').split(" ")[1]
         )
     }
 
@@ -52,7 +57,7 @@ export default async function Evenements(
                             {
                                 (verifyDate(item, index - 1)) &&
                                 <h3 className='text-lg text-center font-extrabold my-4 border border-gray-200 rounded-md py-3'>
-                                    <Text className="text-inherit" keyString="mois_de" /> {formatDateToLocal((new Date(item.date_event)).toISOString(), 'fr-FR', 'long').split(" ")[1]}
+                                    <Text className="text-inherit" keyString="mois_de" /> {formatDateToLocal((new Date(item.date_event)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR', 'long').split(" ")[1]}
                                 </h3>
                             }
                             <Link href={`/evenements/${item.id}`} className="hidden md:block">

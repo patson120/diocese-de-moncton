@@ -6,10 +6,14 @@ import { Message } from "@/types";
 import Text from "./Text";
 import { Calendar } from "lucide-react";
 import { formatDateToLocal } from "@/_lib/utils";
+import { cookies } from "next/headers";
 
 export default async function MessageArcheveque() {
     const response = await fetchMessages(`?paginate=1&etat=1`)
     const message: Message = response.data[0];
+
+    const cookieStore = cookies();
+    const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
 
     return (
         <section className='vertical-margin bg-yellow100 text-[#1D0104]'>
@@ -27,7 +31,7 @@ export default async function MessageArcheveque() {
                     <div className='flex justify-end'>
                         <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
                             <Calendar className="h-4 w-4 text-gray-600" />
-                            <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString())}</span></div>
+                            <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString(),  userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></div>
                         </div>
                     </div>
 

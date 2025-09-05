@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,8 +7,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/shared/button";
-import { Globe, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { ChevronDown, Globe } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
 const languages = [
@@ -25,6 +24,7 @@ export function LanguageSelector() {
     if (localActive === lang) return
     // set language to cookies
     document.cookie = `NEXT_LOCALE=${lang}`
+    window.localStorage.setItem("NEXT_LOCALE", lang)
     window.location.href = window.location.href.replace(`/${localActive}`, `/${lang}`)
   };
 

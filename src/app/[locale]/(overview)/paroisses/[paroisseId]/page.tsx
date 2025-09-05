@@ -12,6 +12,7 @@ import { Paroisse } from "@/types";
 import { ArrowUpRight, Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Carousel from "./carousel";
+import { cookies } from "next/headers";
 
 
 export default async function Page(props: {
@@ -22,6 +23,9 @@ export default async function Page(props: {
     const paroisse: Paroisse = await fetchParoisses(`/${paroisseId}`)
     const response: any = await fetchParoisses(`?paginate=4&type_id=${paroisse.type_paroisse_id}`)
     const paroisses: Paroisse[] = response.data;
+
+    const cookieStore = cookies();
+    const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
 
     return (
         <>
@@ -172,7 +176,7 @@ export default async function Page(props: {
                                     {
                                         paroisse?.bulletins.map((item, index) => 
                                             <a key={index} href={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                                                <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at)}</span></p>
+                                                <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></p>
                                                 <ArrowUpRight className="h-6 w-10 ml-4" />
                                             </a>
                                         )

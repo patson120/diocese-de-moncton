@@ -8,6 +8,7 @@ import { TypeEvent } from '@/types';
 import { Calendar, PhoneIcon, Timer } from 'lucide-react';
 import Image from 'next/image';
 import Buttons from './Buttons';
+import { cookies } from 'next/headers';
 
 
 export default async function Page(props: {
@@ -15,6 +16,9 @@ export default async function Page(props: {
 }) {
     const { evenementId } = await props.params;
     const event: TypeEvent = await fetchEvents(`/${evenementId}`)
+
+    const cookieStore = cookies();
+    const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
     
     return (
         <>
@@ -82,7 +86,7 @@ export default async function Page(props: {
                                     <Calendar className="h-5 w-5 text-gray-400" />
                                     <label htmlFor="date" className='text-gray'>Date</label>
                                 </div>
-                                <h1 className='text-base font-semibold'>{formatDateToLocal((new Date(event.date_event)).toISOString())}</h1>
+                                <h1 className='text-base font-semibold'>{formatDateToLocal((new Date(event.date_event)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR')}</h1>
                             </div>
                             <div className='space-y-1'> 
                                 <div className='flex space-x-1'>
