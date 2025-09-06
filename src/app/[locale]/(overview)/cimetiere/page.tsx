@@ -2,11 +2,15 @@
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Button } from '@/components/ui/shared/button'
+import { useRouter } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 export default function Page() {
     const t = useTranslations("cimetiere")
+    const router = useRouter()
+
+
     return (
         <main>
             {/* Hero section */}
@@ -38,12 +42,16 @@ export default function Page() {
                                     <p className='body-2 text-gray'>{t("adresse")} : <span className='text-gray-800 font-bold'>{t("section_1_p_3")}</span></p>
                                 </div>
                                 <div className='flex space-x-3'>
-                                    <Button size="sm" className="px-5 w-full md:w-auto">
-                                        <span className='text-inherit'>{t("section_1_btn_1")}</span>
-                                    </Button>
-                                    <Button variant="outline" size="sm" className="px-5 w-full md:w-auto">
-                                        <span className='text-inherit'>{t("section_1_btn_2")}</span>
-                                    </Button>
+                                    <a href='https://www.sitescapers.com/FindPlot/' target='_blank' rel="noopener noreferrer" >
+                                        <Button size="sm" className="px-5 w-full md:w-auto">
+                                            <span className='text-inherit'>{t("section_1_btn_1")}</span>
+                                        </Button>
+                                    </a>
+                                    <a href="#tarifs-reservations">
+                                        <Button variant="outline" size="sm" className="px-5 w-full md:w-auto">
+                                            <span className='text-inherit'>{t("section_1_btn_2")}</span>
+                                        </Button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +76,7 @@ export default function Page() {
             </section>
 
             <div className='mt-10 md:mt-20'></div>
-            <section className='container max-margin py-0 space-y-6'>
+            <section id='tarifs-reservations' className='container max-margin py-0 space-y-6'>
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_2_titre")}</h2>
                     <p className='body-2 text-gray'>{t("section_2_desc")}</p>
