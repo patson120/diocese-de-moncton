@@ -1,12 +1,15 @@
 import Text from '@/components/Text'
 import { Button } from '@/components/ui/shared/button'
+import { mapper } from '@/constants'
 import { HoraireMesse } from '@/types'
 import { Plus } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import React, { useState } from 'react'
 
 export default function Horaires({ horaires }: { horaires: HoraireMesse[]}) {
     const [selectedHour, setSelectedHour] = useState<HoraireMesse | null>()
+
+    const localActive = useLocale()
 
     const t = useTranslations("horaires_messe")
     return (
@@ -22,7 +25,7 @@ export default function Horaires({ horaires }: { horaires: HoraireMesse[]}) {
                     horaires.map((item, index) => (
                         <div key={`${item.id}-${index}`}>
                             <div className={`${selectedHour?.id === item.id ? 'bg-[#F9F4F5]' : ''} rounded-[8px] h-12 border border-[#D9D9D9] p-3 flex justify-between items-center`}>
-                                <h1 className='body-1 font-bold'><span className='mr-3 font-normal'>{item.jour}</span>{item.heure}</h1>
+                                <h1 className='body-1 font-bold'><span className='mr-3 font-normal'>{localActive === 'fr' ? item.jour : mapper[item.jour.toLocaleLowerCase()]}</span>{item.heure}</h1>
                                 <div>
                                     {
                                         (selectedHour?.id !== item.id) &&

@@ -1,7 +1,6 @@
 "use client"
 
 import { fetchEvents } from '@/_lib/data'
-import { EventsSkeleton } from '@/components/ui/shared/skeletons'
 import { TypeEvent } from '@/types'
 import { useEffect, useState } from 'react'
 import { CalendarGrid } from './components/calendar/calendar-grid'

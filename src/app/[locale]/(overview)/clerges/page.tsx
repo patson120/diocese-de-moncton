@@ -7,78 +7,44 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Membre } from "@/types";
 import { useEffect, useState } from 'react';
 import MemberComp from "./member-comp";
-import { useTranslations } from "next-intl";
-
-const items = [
-    {
-        id: 1,
-        title: 'ALLARD, Dc. Louis',
-        description: 'Unité pastorale Providence',
-        link: '',
-        image: '/assets/img/clerge-1.png'
-    },
-    {
-        id: 2,
-        title: 'DEVEAUX, Dc. André',
-        description: "Unité pastorale Marie-Reine-de-l'Acadie",
-        link: '',
-        image: '/assets/img/clerge-2.png'
-    },
-    {
-        id: 3,
-        title: 'DUPUIS, Dc. Jules',
-        description: 'Unité pastorale Sainte-Famille',
-        link: '',
-        image: '/assets/img/clerge-3.png'
-    },
-    {
-        id: 4,
-        title: 'LEBLANC, Dc. Armand',
-        description: 'Unité pastorale Saint-Jean-Paul II',
-        link: '',
-        image: '/assets/img/clerge-4.png'
-    },
-    {
-        id: 5,
-        title: 'LEBLANC, Dc. Calixte',
-        description: 'Unité pastorale Saint-Jean XXIII',
-        link: '',
-        image: '/assets/img/clerge-5.png'
-    },
-]
+import { useLocale, useTranslations } from "next-intl";
 
 
-const menus = [
-    {
-        id: '21',
-        title: 'Archevêque',
-        slug: 'archeveque',
-    },
-    {
-        id: '19',
-        title: 'Diacres',
-        slug: 'diacres',
-    },
-    {
-        id: '20',
-        title: 'Prêtres',
-        slug: 'pretres',
-    },
-    {
-        id: '22',
-        title: 'Religieux',
-        slug: 'religieux',
-    },
-    {
-        id: '23',
-        title: 'Autres',
-        slug: 'autres',
-    },
-]
+
 
 
 export default function Page() {
     const t = useTranslations('membres')
+
+    const localActive = useLocale()
+
+    const menus = [
+        {
+            id: '21',
+            title: localActive === "en" ? "Archbishop" : 'Archevêque',
+            slug: 'archeveque',
+        },
+        {
+            id: '19',
+            title: localActive === "en" ? "Deacons" : 'Diacres',
+            slug: 'diacres',
+        },
+        {
+            id: '20',
+            title: localActive === "en" ? "Priests" : 'Prêtres',
+            slug: 'pretres',
+        },
+        {
+            id: '22',
+            title: localActive === "en" ? "Religious" : 'Religieux',
+            slug: 'religieux',
+        },
+        {
+            id: '23',
+            title: localActive === "en" ? "Others" : 'Autres',
+            slug: 'autres',
+        },
+    ]
 
     const [selectedMenu, setSelectedMenu] = useState(menus[0])
     const [membres, setMembres] = useState<Membre[]>([])

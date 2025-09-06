@@ -3,8 +3,9 @@
 import { Button } from "@/components/ui/shared/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { format } from "date-fns";
-import { fr } from "date-fns/locale";
+import { enUS, fr } from "date-fns/locale";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useLocale } from "next-intl";
 
 interface CalendarHeaderProps {
   currentDate: Date;
@@ -14,6 +15,7 @@ interface CalendarHeaderProps {
 }
 
 export function CalendarHeader({ currentDate, view, onDateChange, onViewChange }: CalendarHeaderProps) {
+  const localActive = useLocale()
   const handlePrevious = () => {
     const newDate = new Date(currentDate);
     switch (view) {
@@ -57,7 +59,7 @@ export function CalendarHeader({ currentDate, view, onDateChange, onViewChange }
             }}
             className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray">
             <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
-              Jours
+              {localActive === 'fr' ? "Jours": "Days"}
             </span>
           </TabsTrigger>
           <TabsTrigger
@@ -66,7 +68,7 @@ export function CalendarHeader({ currentDate, view, onDateChange, onViewChange }
             className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray"
           >
             <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
-              Semaines
+              {localActive === 'fr' ? "Semaines": "Weeks"}
             </span>
           </TabsTrigger>
           <TabsTrigger
@@ -75,19 +77,19 @@ export function CalendarHeader({ currentDate, view, onDateChange, onViewChange }
             className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray"
           >
             <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
-              Mois
+              {localActive === 'fr' ? "Mois": "Months"}
             </span>
           </TabsTrigger>
         </TabsList>
       </div>
       <h2 className="text-xl font-semibold text-blue">
-        {format(currentDate, "dd MMMM yyyy", { locale: fr })}
+        {format(currentDate, "dd MMMM yyyy", { locale: localActive === 'fr' ? fr : enUS })}
       </h2>
       <div className="flex items-center gap-2">
         <Button variant={'outline'} className="" onClick={() => {
           onViewChange('day')
           onDateChange(new Date())
-        }}>Aujourd'hui</Button>
+        }}>{localActive === 'fr' ? "Aujourd'hui": "Today"}</Button>
         <Button variant="outline" size="icon" onClick={handlePrevious}>
           <ChevronLeft className="h-4 w-4" />
         </Button>

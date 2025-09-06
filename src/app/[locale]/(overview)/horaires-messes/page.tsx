@@ -43,10 +43,10 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <div className='container max-margin py-0 -translate-y-2'>
-        {/* Search bar */}
+      {/* <div className='container max-margin py-0 -translate-y-2'>
+        Search bar 
         <SearchBar />
-      </div>
+      </div> */}
       <section className='container max-margin py-0 pb-10 md:pb-20'>
 
         <div className='mt-6 lg:mt-12'></div>

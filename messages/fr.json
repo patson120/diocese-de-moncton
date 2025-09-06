@@ -78,6 +78,10 @@
         "rechercher_event": "Rechercher un évènement"
     },
 
+    "newsletter": {
+        "placeholder": "Adresse email"
+    },
+
     "navigation": {
         "fermer": "Fermer",
         "horaires_messe_titre": "Horaires de messe",
@@ -157,10 +161,17 @@
         "hero_titre": "Clergé",
         "hero_desc": "Retrouvez tous les membres derrière notre diocèse",
         "section_1_titre": "Sélectionnez le profil recherché",
-        "coordonnees": "Coordonnées"
+        "coordonnees": "Coordonnées",
+        "fonction_membre": "Fonctions",
+        "en_activite": "En activité",
+        "en_retraite": "En retraite",
+        "decede": "Décédé",
+        "unite_pastorale": "Unités pastorales",
+        "biographie": "Biographie"
 
     },
     "archeveques": {
+        "subtitle": "Archevêque de Moncton",
         "autres_archeveques": "Archevêques précédents"
     },
     "baptemes_sacrements": {

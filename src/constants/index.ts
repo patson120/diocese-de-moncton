@@ -572,3 +572,13 @@ export const menusNavigation: MenuType[] = [
     },
 
 ]
+
+export const mapper: any = {
+    "dimanche": "Sunday",
+    "lundi": "Monday",
+    "mardi": "Tuesday",
+    "mercredi": "Wednesday",
+    "jeudi": "Thursday",
+    "vendredi": "Friday",
+    "samedi": "Saturday"
+}

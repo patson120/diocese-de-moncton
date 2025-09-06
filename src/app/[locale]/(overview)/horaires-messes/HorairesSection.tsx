@@ -17,6 +17,7 @@ export default function HorairesSection({ horaires}: { horaires: HoraireMesse[]}
             setHours(horaires.filter(h => h.jour === newDay))
         }
     }, [day, horaires])
+    
     return (
         <>
             {/* filter */}

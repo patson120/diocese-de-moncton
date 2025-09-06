@@ -22,7 +22,8 @@ import {
   startOfMonth,
   startOfWeek
 } from "date-fns";
-import { fr } from "date-fns/locale";
+import { fr, enUS } from "date-fns/locale";
+import { useLocale } from "next-intl";
 import React from "react";
 
 interface CalendarGridProps {
@@ -38,6 +39,7 @@ export function CalendarGrid({
 }: CalendarGridProps) {
 
   const router = useRouter()
+  const localActive = useLocale()
 
   const days = (() => {
     if (view === "month") {
@@ -83,6 +85,10 @@ export function CalendarGrid({
       return isWithinInterval(date, { start, end });
     });
   };
+
+  const weekDays = localActive === 'fr' ? 
+  ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"] :
+  ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
   const isHoliday = (date: Date) => {
     return holidays.some(holiday => isSameDay(parseISO(holiday.date), date));
@@ -151,7 +157,7 @@ export function CalendarGrid({
                   isToday(day) && "bg-blue-50 dark:bg-blue-900/20"
                 )}
               >
-                <div className="font-medium">{format(day, "EEE", { locale: fr })}</div>
+                <div className="font-medium">{format(day, "EEE", { locale: localActive === 'fr' ? fr : enUS })}</div>
                 <div className="text-sm text-muted-foreground">{format(day, "d", { locale: fr })}</div>
               </div>
             ))}
@@ -177,7 +183,7 @@ export function CalendarGrid({
                         >
                           <div className="flex flex-col items-center">
                             <p className="w-full overflow-hidden truncate">
-                              <span className="truncate text-base">{event.titre_fr}</span> <br />
+                              <span className="truncate text-base">{localActive == 'fr' ? event.titre_fr: event.titre_en}</span> <br />
                               <span className="truncate text-base font-bold">{event.heure_event} </span>
                             </p>
                             {isMultiDayEvent(event) && (
@@ -209,7 +215,7 @@ export function CalendarGrid({
     <>
       <div className="grid grid-cols-7">
         {
-          ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"].map((day) => (
+          weekDays.map((day) => (
             <div key={day} className="p-2 text-center font-semibold bg-muted">
               {day}
             </div>

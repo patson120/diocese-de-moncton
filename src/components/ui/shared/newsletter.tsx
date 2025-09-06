@@ -1,15 +1,16 @@
 'use client'
 
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/shared/button';
 import { subscribeToNewsletter } from '@/_lib/data';
-import { useToast } from '@/hooks/use-toast';
-import { toast } from 'sonner';
 import Text from '@/components/Text';
+import { Button } from '@/components/ui/shared/button';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 export default function Newsletter() {
   const [email, setEmail] = useState('')
-  const { toast: hookToast } = useToast();
+
+  const t = useTranslations("newsletter")
 
   const handleSubmit = async () => {
     // Send email to the server
@@ -37,7 +38,7 @@ export default function Newsletter() {
           </p>
         </div>
         <div className='flex flex-col md:flex-row items-end md:items-center space-y-3 md:space-y-0 md:space-x-2'>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Adresse email" className="border-2 border-gray-200 p-2 rounded-[12px] w-full" />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t("placeholder")} className="border-2 border-gray-200 p-2 rounded-[12px] w-full" />
 
           <Button onClick={handleSubmit} className="w-full md:w-auto px-3 md:px-6 py-2 body-3">
             <Text className='text-inherit' keyString='newsletter_subcribe' />

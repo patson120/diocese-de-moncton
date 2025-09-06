@@ -66,6 +66,7 @@ const PretresDialog = ({
     onOpenChange: (open: boolean) => void;
     member?: Membre;
 }) => {
+    const t = useTranslations("membres")
     return <Dialog open={open} onOpenChange={onOpenChange} >
         <DialogContent className="w-full md:w-2/5 max-h-[540px] overflow-y-scroll [&::-webkit-scrollbar]:w-2">
             <DialogDescription>
@@ -99,26 +100,26 @@ const PretresDialog = ({
                             <div className="mb-3 mt-2">
                                 <h5 className='body-2 text-black font-bold'>{member?.nom}</h5>
                                 <p className='body-3'>
-                                    { member?.etat === 1 && "En activité" }
-                                    { member?.etat === 0 && "En retraite" }
-                                    { member?.etat === -1 && "Décédé" }
+                                    { member?.etat === 1 && t("en_activite") }
+                                    { member?.etat === 0 && t("en_retraite") }
+                                    { member?.etat === -1 && t("decede") }
                                 </p>
                             </div>
                             <div>
-                                <h5 className='body-2 text-black font-bold'>Coordonnées</h5>
+                                <h5 className='body-2 text-black font-bold'>{t("coordonnees")}</h5>
                                 <p className='body-2'>{member?.coordonnees}</p>
                             </div>
                             <div>
-                                <h4 className="text-lg font-bold">Fonctions</h4>
+                                <h4 className="text-lg font-bold">{t("fonction_membre")}</h4>
                                 <p className="text-gray">{member?.poste}</p>
                             </div>
                         </div>
                     </div>
                     <div className="w-full flex-col gap-4">
                         {
-                            member?.unites?.length &&
+                            member?.unites?.length! > 0  &&
                             <div>
-                                <h5 className='body-2 text-black font-bold'>Unités pastorales</h5>
+                                <h5 className='body-2 text-black font-bold'>{t("unite_pastorale")}</h5>
                                 <Text className='text-gray w-full' 
                                     labelEn={member?.unites.map((unite) => unite.intitule_en).join(', ')} 
                                     labelFr={member?.unites.map((unite) => unite.intitule_fr).join(', ')}  />

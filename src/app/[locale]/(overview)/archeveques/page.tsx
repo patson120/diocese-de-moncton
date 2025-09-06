@@ -131,7 +131,7 @@ export default function Page() {
                     </div>
                     <div className='container max-margin px-4 md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
-                            <small className='text-gray uppercase'>Archevêque de Moncton</small>
+                            <small className='text-gray uppercase'>{t("subtitle")}</small>
                             <h1 className='heading-4 font-extrabold mb-4'>{members.length ? members[0].nom : ""}</h1>
                             <div className="space-y-3 md:space-y-7 lg:space-y-10">
                                 <p className='body-2 text-gray'>{members.length ? members[0].coordonnees : ""}</p>

@@ -78,7 +78,9 @@
 
         "rechercher_event": "Search an event"
     },
-
+    "newsletter": {
+        "placeholder": "Email address"
+    },
 
     "navigation": {
         "fermer": "Close",
@@ -159,9 +161,16 @@
         "hero_titre": "Clergy",
         "hero_desc": "Find all the members behind our diocese",
         "section_1_titre": "Select the profile you are looking for",
-        "coordonnees": "Coordinates"
+        "coordonnees": "Coordinates",
+        "fonction_membre": "Functions",
+        "en_activite": "Active",
+        "en_retraite": "Retired",
+        "decede": "Deceased",
+        "unite_pastorale": "Pastoral units",
+        "biographie": "Biography"
     },
     "archeveques": {
+        "subtitle": "Archbishop of Moncton",
         "autres_archeveques": "Previous archbishops"
     },
     "baptemes_sacrements": {
