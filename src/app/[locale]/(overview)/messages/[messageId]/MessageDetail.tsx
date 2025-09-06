@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/shared/button'
 import { useRouter } from '@/i18n/routing'
 import { Message } from '@/types'
 import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react'
-import { cookies } from 'next/headers'
 import Image from 'next/image'
 
 export default function MessageDetail({ message }: { message: Message }) {
@@ -17,9 +16,7 @@ export default function MessageDetail({ message }: { message: Message }) {
         if (i < 0 && message.prevId) push(`/messages/${message.prevId}`)
     }
 
-    const cookieStore = cookies();
-    const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
-
+    const userLanguage = window.location.pathname.startsWith("/fr") ? 'fr' : "en";
 
     return (
         <div className='col-span-full lg:col-span-4 pb-10 lg:pb-0 md:pr-10 lg:pr-20 border-b lg:border-r lg:border-r-[#E5E5E5] lg:border-b-transparent'>

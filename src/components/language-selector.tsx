@@ -18,13 +18,11 @@ const languages = [
 
 export function LanguageSelector() {
   const localActive = useLocale()
-  const t = useTranslations();
 
   const changeLanguage = (lang: string) => {
     if (localActive === lang) return
     // set language to cookies
     document.cookie = `NEXT_LOCALE=${lang}`
-    window.localStorage.setItem("NEXT_LOCALE", lang)
     window.location.href = window.location.href.replace(`/${localActive}`, `/${lang}`)
   };
 
