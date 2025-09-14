@@ -13,6 +13,7 @@ import { ArrowUpRight, Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Carousel from "./carousel";
 import { cookies } from "next/headers";
+import { VideoPlayer } from "./components/VideoPlayer";
 
 
 export default async function Page(props: {
@@ -63,7 +64,7 @@ export default async function Page(props: {
                     <div className='space-x-2'>
                         <Link href={paroisse.site_web} target="_blank">
                             <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
-                                Visiter le site internet
+                                <Text keyString="visit_parish" />
                             </Button>
                         </Link>
                     </div>
@@ -72,36 +73,34 @@ export default async function Page(props: {
             <section className="md:container md:max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-14 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2 space-y-4'>
-                        {/*<div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
-                            <Image
-                                alt="Image de détail de l'évènement"
-                                src={paroisse.galerie?.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${paroisse.galerie[0].path}` : "/assets/img/paroisse-detail.png"}
-                                fill
-                                style={{ objectFit: 'cover' }}
-                            />
-                        </div>*/}
+                        {/*
+                            <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
+                                <Image
+                                    alt="Image de détail de l'évènement"
+                                    src={paroisse.galerie?.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${paroisse.galerie[0].path}` : "/assets/img/paroisse-detail.png"}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </div>
+                        */}
                         <Carousel images={[ ...paroisse.galerie, ...paroisse.media ]} />
                         <div className='container max-margin md:w-full md:mx-0 md:px-0 py-0 flex gap-3'>
                             <Link href={paroisse.site_web} target="_blank">
                                 <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
-                                    Visiter le site internet
+                                    <Text keyString="visit_parish" />
                                 </Button>
                             </Link>
-                            {/** 
-                                <a href={paroisse.lien_youtube} target="_blank">
-                                    <Button variant='outline' size="sm" className="w-full md:w-auto text-xs lg:text-sm">
-                                        <Play className="mr-2 h-4 w-6" />
-                                        Voir la paroisse en vidéo
-                                    </Button>
-                                </a>
-                             */}
+                            {
+                                (paroisse.lien_youtube != null) &&
+                                <VideoPlayer video={paroisse.lien_youtube} /> 
+                            }
                         </div>
                     </div>
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
                             <h1 className='heading-4 font-extrabold'>{paroisse.nom}</h1>
                             <div className="flex flex-row gap-2">
-                                <small className='text-gray uppercase mb-4'>Unité pastorale: </small>
+                                <small className='text-gray uppercase mb-4'><Text keyString="unite_pastorale" />: </small>
                                 <div className="text-sm">
                                     <Text labelFr={paroisse.type?.intitule_fr!} labelEn={paroisse.type?.intitule_en!} />
                                 </div>
@@ -109,28 +108,13 @@ export default async function Page(props: {
                             <p className='body-2 text-gray'>{paroisse.histoire}</p>
                             {/* <span className='font-bold cursor-pointer'>voir plus</span> */}
                         </div>
-                        {/* 
-                            <div className="flex flex-wrap gap-4 my-5 py-3 border-y border-y-[#E5E5E5]">
-                                <div className="flex flex-nowrap">
-                                    <span className="text-gray-500 text-sm mr-2">Etabli en</span>
-                                    <span className="text-sm font-extrabold">{paroisse.etabli_le}</span>
-                                </div>
-                                <div className="flex flex-nowrap">
-                                    <span className="text-gray-500 text-sm mr-2">Ordonné en</span>
-                                    <span className="text-sm font-extrabold">{paroisse.ordonne_le}</span>
-                                </div>
-                                <div className="flex flex-nowrap">
-                                    <span className="text-gray-500 text-sm mr-2">Premier curé</span>
-                                    <span className="text-sm font-extrabold">{paroisse.premier_cure}</span>
-                                </div>
-                            </div>
-                        */}
+                        
                         <div className="font-body-3 whitespace-nowrap mt-5">
-                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Heures de bureau</h1>
+                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="heures_bureau" /></h1>
                             <Text className='text-sm text-gray' labelFr={paroisse?.horaire_bureau!} labelEn={paroisse?.horaire_bureau!} />  
                         </div>
                         <div className="">
-                            <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Heures des messes</h1>
+                            <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="heures_messes" /></h1>
                             <div className="flex flex-col gap-y-3">
                                 {
                                     paroisse.horaireparoisses.map((horaire) => (
@@ -147,7 +131,7 @@ export default async function Page(props: {
                             </div>
                         </div>
                         <div className="">
-                            <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Secrétariat paroissial</h1>
+                            <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="secretariat_paroissial" /></h1>
                             <div className="space-y-2 mt-4 body-2">
                                 <div className="flex items-center gap-2">
                                     <MapPin className="h-4 w-6 font-extrabold" />
@@ -165,13 +149,13 @@ export default async function Page(props: {
                         </div>
 
 
-                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Sur la carte</h1>
+                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="sur_la_map" /></h1>
                         {/* Map */}
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
                             <MapSection paroisses={[paroisse]} />
                         </div>
                         <div>
-                           <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Bulletins paroissiaux</h1>
+                           <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="bulletin_paroissiaux" /></h1>
                             <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                                     {
                                         paroisse?.bulletins.map((item, index) => 
@@ -183,13 +167,13 @@ export default async function Page(props: {
                                     }
                                     {
                                         !paroisse.bulletins.length &&
-                                        <p className="text-center h-10 text-gray-400 text-sm">Aucun bulletin disponibles</p>
+                                        <p className="text-center h-10 text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
                                     }
                                 
                             </div>
                         </div>
 
-                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2">Autres paroisses de l'unité</h1>
+                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="autres_paroisses" /></h1>
                         <div>
                             <div className="flex flex-nowrap overflow-x-scroll xl:overflow-x-hidden gap-4 pb-5">
                                 {

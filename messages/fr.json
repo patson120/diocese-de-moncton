@@ -75,7 +75,18 @@
         "message_hero_titre": "Communiqués du bureau de Mgr. Desrochers",
         "message_hero_desc": "Veuillez cliquer sur les liens suivants pour accéder aux communiqués de notre archevêque, Mgr Guy Desrochers.",
 
-        "rechercher_event": "Rechercher un évènement"
+        "rechercher_event": "Rechercher un évènement",
+        "visit_parish": "Visiter le site internet",
+        "visit_parish_video": "Voir la paroisse en vidéo",
+        "unite_pastorale":"Unité pastorale",
+        "heures_bureau": "Heures de bureau",
+        "heures_messes": "Heures des messes",
+        "secretariat_paroissial": "Secrétariat paroissial",
+        "sur_la_map":"Sur la carte",
+        "bulletin_paroissiaux": "Bulletins paroissiaux",
+        "aucun_bulletin": "Aucun bulletin disponibles",
+        "autres_paroisses": "Autres paroisses de l'unité"
+
     },
 
     "newsletter": {
