@@ -5,53 +5,20 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/shared/button'
 import { Image } from '@/types'
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-interface ImageData {
-    id: number;
-    url: string;
-    title: string;
-    description: string;
-    photographer: string;
-  }
-  
-  const images: ImageData[] = [
-    {
-      id: 1,
-      url: 'https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Paysage Montagneux',
-      description: 'Une vue spectaculaire des montagnes au coucher du soleil',
-      photographer: 'Simon Berger'
-    },
-    {
-      id: 2,
-      url: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Océan Tropical',
-      description: 'Eaux cristallines et plage de sable blanc',
-      photographer: 'Jeremy Bishop'
-    },
-    {
-      id: 3,
-      url: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Forêt Mystique',
-      description: 'Sentier enchanteur à travers la forêt dense',
-      photographer: 'Johannes Plenio'
-    },
-    {
-      id: 4,
-      url: 'https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Aurore Boréale',
-      description: 'Spectacle magique des lumières du nord',
-      photographer: 'Tobias Bjørkli'
-    },
-    {
-      id: 5,
-      url: 'https://images.pexels.com/photos/1209798/pexels-photo-1209798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'Désert Doré',
-      description: 'Dunes de sable ondulantes sous le soleil',
-      photographer: 'Taryn Elliott'
-    }
-  ];
+
+const defaultImage: Image = {
+    comment: "",
+    created_at: "",
+    id: 1,
+    path: "/assets/img/paroisse.jpeg",
+    path_en: "/assets/img/paroisse.jpeg",
+    titre: "",
+    value: 0,
+    label: "",
+    updated_at: ""
+}
 
 export default function Carousel({ images=[] }: { images: Image[] }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -89,7 +56,9 @@ export default function Carousel({ images=[] }: { images: Image[] }) {
                     onMouseLeave={() => setIsHovered(false)}>
                     {/* Image Container */}
                     <div className="relative w-full h-full">
-                        { images.map((image, index) => (
+                        { 
+                            images.length > 0 ? 
+                            images.map((image, index) => (
                             <div
                                 key={image.id}
                                 className={`absolute inset-0 transition-all duration-700 ease-in-out ${
@@ -104,7 +73,18 @@ export default function Carousel({ images=[] }: { images: Image[] }) {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                             </div>
-                        ))}
+                            
+                            )):
+                            <div
+                                className={`absolute inset-0 transition-all duration-700 ease-in-outopacity-100 scale-100 `}>
+                                <img
+                                    src={`${defaultImage.path}`}
+                                    alt={defaultImage.titre!}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                            </div>
+                        }
                     </div>
 
                     {/* Navigation Buttons */}

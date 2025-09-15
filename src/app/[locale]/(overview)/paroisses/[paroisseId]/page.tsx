@@ -61,13 +61,16 @@ export default async function Page(props: {
                             },
                         ]}
                     />
-                    <div className='space-x-2'>
-                        <Link href={paroisse.site_web} target="_blank">
-                            <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
-                                <Text keyString="visit_parish" />
-                            </Button>
-                        </Link>
-                    </div>
+                    {
+                        paroisse.site_web &&
+                        <div className='space-x-2'>
+                            <Link href={paroisse.site_web} target="_blank">
+                                <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
+                                    <Text keyString="visit_parish" />
+                                </Button>
+                            </Link>
+                        </div>
+                    }
                 </div>
             </div>
             <section className="md:container md:max-margin py-0">
@@ -85,11 +88,14 @@ export default async function Page(props: {
                         */}
                         <Carousel images={[ ...paroisse.galerie, ...paroisse.media ]} />
                         <div className='container max-margin md:w-full md:mx-0 md:px-0 py-0 flex gap-3'>
-                            <Link href={paroisse.site_web} target="_blank">
-                                <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
-                                    <Text keyString="visit_parish" />
-                                </Button>
-                            </Link>
+                            {
+                                paroisse.site_web &&
+                                <Link href={paroisse.site_web} target="_blank">
+                                    <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
+                                        <Text keyString="visit_parish" />
+                                    </Button>
+                                </Link>
+                            }
                             {
                                 (paroisse.lien_youtube != null) &&
                                 <VideoPlayer video={paroisse.lien_youtube} /> 
