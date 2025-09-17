@@ -38,7 +38,7 @@ export default async function Page(props: {
             <div className='my-10' />
             <div className='border-t border-gray-100'>
                 <div className='h-[100vh] md:h-[50vh] lg:h-[60vh] grid grid-cols-1 md:grid-cols-3 gap-4 gap-x-0 md:gap-6 lg:gap-10 xl:gap-12 '>
-                    <div className='col-span-1 flex flex-col gap-3 pb-3 overflow-y-scroll v-scroll pr-3'>
+                    <div className='col-span-1 flex flex-col gap-3 pb-3 overflow-y-scroll pr-3'>
                         <div className='sticky top-0 bg-white z-20 py-3'>
                             <Filter />
                         </div>

@@ -86,7 +86,8 @@
         "sur_la_map":"On the map",
         "bulletin_paroissiaux": "Parish bulletins",
         "aucun_bulletin": "No bulletins available",
-        "autres_paroisses": "Other parishes in the unit"
+        "autres_paroisses": "Other parishes in the unit",
+        "parish_history": "History"
     },
     "newsletter": {
         "placeholder": "Email address"

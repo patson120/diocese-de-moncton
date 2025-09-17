@@ -111,15 +111,8 @@ export default async function Page(props: {
                                     <Text labelFr={paroisse.type?.intitule_fr!} labelEn={paroisse.type?.intitule_en!} />
                                 </div>
                             </div>
-                            <p className='body-2 text-gray'>{paroisse.histoire}</p>
-                            {/* <span className='font-bold cursor-pointer'>voir plus</span> */}
                         </div>
-                        
-                        <div className="font-body-3 whitespace-nowrap mt-5">
-                        <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="heures_bureau" /></h1>
-                            <Text className='text-sm text-gray' labelFr={paroisse?.horaire_bureau!} labelEn={paroisse?.horaire_bureau!} />  
-                        </div>
-                        <div className="">
+                        <div className="mt-5">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="heures_messes" /></h1>
                             <div className="flex flex-col gap-y-3">
                                 {
@@ -136,6 +129,31 @@ export default async function Page(props: {
                                 }
                             </div>
                         </div>
+
+                        <div>
+                           <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="bulletin_paroissiaux" /></h1>
+                            <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
+                                    {
+                                        paroisse?.bulletins.map((item, index) => 
+                                            <a key={index} href={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
+                                                <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></p>
+                                                <ArrowUpRight className="h-6 w-10 ml-4" />
+                                            </a>
+                                        )
+                                    }
+                                    {
+                                        !paroisse.bulletins.length &&
+                                        <p className="text-center h-10 text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
+                                    }
+                                
+                            </div>
+                        </div>
+                        
+                        <div className="font-body-3 whitespace-nowrap">
+                            <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="heures_bureau" /></h1>
+                            <Text className='text-sm text-gray' labelFr={paroisse?.horaire_bureau!} labelEn={paroisse?.horaire_bureau!} />  
+                        </div>
+                        
                         <div className="">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="secretariat_paroissial" /></h1>
                             <div className="space-y-2 mt-4 body-2">
@@ -160,23 +178,10 @@ export default async function Page(props: {
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
                             <MapSection paroisses={[paroisse]} />
                         </div>
-                        <div>
-                           <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="bulletin_paroissiaux" /></h1>
-                            <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
-                                    {
-                                        paroisse?.bulletins.map((item, index) => 
-                                            <a key={index} href={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                                                <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></p>
-                                                <ArrowUpRight className="h-6 w-10 ml-4" />
-                                            </a>
-                                        )
-                                    }
-                                    {
-                                        !paroisse.bulletins.length &&
-                                        <p className="text-center h-10 text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
-                                    }
-                                
-                            </div>
+                        
+                        <div className="mt-10">
+                            <h1 className="heading-4 font-extrabold text-blac mb-2"><Text keyString="parish_history" /></h1>
+                            <p className='body-2 text-gray'>{paroisse.histoire}</p>
                         </div>
 
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="autres_paroisses" /></h1>
