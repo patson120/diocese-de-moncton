@@ -86,7 +86,8 @@
         "bulletin_paroissiaux": "Bulletins paroissiaux",
         "aucun_bulletin": "Aucun bulletin disponibles",
         "autres_paroisses": "Autres paroisses de l'unité",
-        "parish_history": "Histoire"
+        "parish_history": "Histoire",
+        "aucun_evenement_en_vu": "Aucun évènement à venir planifié !"
 
     },
 

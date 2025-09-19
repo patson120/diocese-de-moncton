@@ -86,7 +86,13 @@ export default async function Page(props: {
                                     <Calendar className="h-5 w-5 text-gray-400" />
                                     <label htmlFor="date" className='text-gray'>Date</label>
                                 </div>
-                                <h1 className='text-base font-semibold'>{formatDateToLocal((new Date(event.date_event)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR')}</h1>
+                                <p className='font-semibold flex flex-col'>
+                                    <span>{formatDateToLocal((new Date(event.date_event)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR')}</span>
+                                    {
+                                        event.date_fin &&
+                                        <span>{formatDateToLocal((new Date(event.date_fin)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR')}</span>
+                                    }
+                                </p>
                             </div>
                             <div className='space-y-1'> 
                                 <div className='flex space-x-1'>

@@ -87,7 +87,8 @@
         "bulletin_paroissiaux": "Parish bulletins",
         "aucun_bulletin": "No bulletins available",
         "autres_paroisses": "Other parishes in the unit",
-        "parish_history": "History"
+        "parish_history": "History",
+        "aucun_evenement_en_vu": "No events scheduled at this time!"
     },
     "newsletter": {
         "placeholder": "Email address"

@@ -21,6 +21,7 @@ export type TypeEvent = {
     titre_en: string;
     heure_event: string;
     date_event: string;
+    date_fin: string | null;
     prevId: number | null;
     nextId: number | null;
     lieu: string;
