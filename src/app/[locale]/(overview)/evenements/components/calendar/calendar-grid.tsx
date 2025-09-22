@@ -249,25 +249,26 @@ export function CalendarGrid({
                   )}
                 </div>
                 <div className="mt-1 space-y-1">
-                  {dayEvents.map((event) => (
-                    <div
-                      key={event.id}
-                      className={cn("text-xs p-1.5 min-h-[80px]", getEventStyle(event))}
-                      onClick={() => handleEventClick(event)}
-                    >
-                      <div className="flex flex-col items-center">
-                        <p className="w-full overflow-hidden truncate">
-                          <span className="truncate text-base">{event.titre_fr}</span> <br />
-                          <span className="truncate text-base font-bold">{event.heure_event}</span>
-                        </p>
-                        {isMultiDayEvent(event) && (
-                          <span className="text-xs opacity-75 ml-1 shrink-0">
-                            {getEventDurationLabel(event)}
-                          </span>
-                        )}
+                  {
+                    dayEvents.map((event) => (
+                      <div
+                        key={event.id}
+                        className={cn("text-xs p-1.5 min-h-[80px]", getEventStyle(event))}
+                        onClick={() => handleEventClick(event)}>
+                        <div className="flex flex-col items-center">
+                          <p className="w-full overflow-hidden truncate">
+                            <span className="truncate text-base">{event.titre_fr}</span> <br />
+                            <span className="truncate text-base font-bold">{event.heure_event}</span>
+                          </p>
+                          {isMultiDayEvent(event) && (
+                            <span className="text-xs opacity-75 ml-1 shrink-0">
+                              {getEventDurationLabel(event)}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))
+                  }
                 </div>
               </div>
             );
