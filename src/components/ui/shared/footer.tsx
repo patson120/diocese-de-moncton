@@ -92,7 +92,9 @@ export default function Footer() {
             </h2>
             <ul className='space-y-2 lg:space-y-4 body-3'>
               <li className='text-[#B5B5B5]'>
-                <Text className='text-inherit' keyString='footer_notre_histoire' />
+                <Link href="/histoire">
+                  <Text className='text-inherit' keyString='footer_notre_histoire' />
+                </Link>
               </li>
               <li className='text-[#B5B5B5]'>
                 <Text className='text-inherit' keyString='missions_valeurs' />
