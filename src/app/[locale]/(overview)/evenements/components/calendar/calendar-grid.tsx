@@ -70,18 +70,18 @@ export function CalendarGrid({
   };
 
   const isMultiDayEvent = (event: TypeEvent) => {
-    return differenceInDays(new Date(event.date_event), new Date(event.date_event)) > 0;
+    return differenceInDays(new Date(event.date_fin ? event.date_fin : event.date_event), new Date(event.date_event)) > 0;
   };
 
   const getEventDurationLabel = (event: TypeEvent) => {
-    const days = differenceInDays(new Date(event.date_event), new Date(event.date_event)) + 1;
+    const days = differenceInDays(new Date(event.date_fin ? event.date_fin : event.date_event), new Date(event.date_event)) + 1;
     return days > 1 ? `(${days} jours)` : '';
   };
 
   const getDayEvents = (date: Date) => {
     return events.filter(event => {
       let start = new Date(`${event.date_event!}T00:00:00`);
-      let end = new Date(`${event.date_event!}T23:59:59`);
+      let end = new Date(`${event.date_fin ? event.date_fin : event.date_event!}T23:59:59`);
       return isWithinInterval(date, { start, end });
     });
   };
@@ -105,11 +105,12 @@ export function CalendarGrid({
           <div className="grid grid-cols-1 gap-1">
             {hours.map((hour) => {
               const currentHourEvents = events.filter(event => {
-                const eventDate = new Date(`${event.date_event}T${event.heure_event}`);
-                return isSameDay(eventDate, currentDate) && getHours(eventDate) === hour;
+                const start = new Date(`${event.date_event}T${event.heure_event}`);
+                const end = event.date_fin ? new Date(`${event.date_fin}T${event.heure_event}`): start;
+                return (isSameDay(start, currentDate) && getHours(start) === hour) ||
+                  (isWithinInterval(currentDate, { start, end }) && getHours(end) === hour);
               });
               
-
               return (
                 <div key={hour} className="min-h-[60px] grid grid-cols-[80px_1fr] border-b">
                   <div className="p-2 text-sm text-muted-foreground">
@@ -169,8 +170,10 @@ export function CalendarGrid({
                 </div>
                 {days.map((day) => {
                   const dayEvents = events.filter(event => {
-                    const eventDate = new Date(`${event.date_event}T${event.heure_event}`);
-                    return isSameDay(eventDate, day) && getHours(eventDate) === hour;
+                    const start = new Date(`${event.date_event}T${event.heure_event}`);
+                    const end = event.date_fin ? new Date(`${event.date_fin}T${event.heure_event}`) : start;
+                    return (isSameDay(start, day) && getHours(start) === hour) ||
+                      (isWithinInterval(day, { start, end }) && getHours(end) === hour);
                   });
 
                   return (
