@@ -1,5 +1,5 @@
 
-import { fetchParoisses } from "@/_lib/data";
+import { fetchMembres, fetchParoisses } from "@/_lib/data";
 import { formatDateToLocal } from "@/_lib/utils";
 import Text from "@/components/Text";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
@@ -8,7 +8,7 @@ import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Button } from "@/components/ui/shared/button";
 import MapSection from "@/components/ui/shared/MapSection";
 import { Link } from "@/i18n/routing";
-import { Paroisse } from "@/types";
+import { Membre, Paroisse } from "@/types";
 import { ArrowUpRight, Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Carousel from "./carousel";
@@ -25,6 +25,8 @@ export default async function Page(props: {
     const response: any = await fetchParoisses(`?paginate=4&type_id=${paroisse.type_paroisse_id}`)
     const paroisses: Paroisse[] = response.data;
 
+    const responsable: Membre = await fetchMembres(`/${paroisse.pretre_responsable}`)
+    
     const cookieStore = cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
 
@@ -101,6 +103,14 @@ export default async function Page(props: {
                                 <VideoPlayer video={paroisse.lien_youtube} /> 
                             }
                         </div>
+                        {
+                            responsable.nom &&
+                            <div className="container max-margin md:w-full md:mx-0 md:px-0 py-0 gap-3">
+                                <p>Prêtre responsable</p>
+                                <h3 className="font-semibold">{responsable.nom}</h3>
+                            </div>
+                        }
+
                     </div>
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
