@@ -106,7 +106,7 @@ export default async function Page(props: {
                         {
                             responsable.nom &&
                             <div className="container max-margin md:w-full md:mx-0 md:px-0 py-0 gap-3">
-                                <p>Prêtre responsable</p>
+                                <p><Text keyString="pretre_responsable" /></p>
                                 <h3 className="font-semibold">{responsable.nom}</h3>
                             </div>
                         }
