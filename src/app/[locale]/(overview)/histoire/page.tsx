@@ -23,8 +23,8 @@ export default function Page() {
             />
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
-                <div className='grid grid-cols-1 lg:grid-cols-5 gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8 sticky top-10'>
-                    <div className='col-span-full lg:col-span-3 flex flex-col gap-3'>
+                <div className='h-screen overflow-y-scroll h-scroll [&::-webkit-scrollbar]:w-0 flex gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8 relative'>
+                    <div className='w-2/3 flex flex-col gap-3'>
                         <h3 className='text-left text-xl font-bold'>1- Les premières structures diocésaines (1604-1817)</h3>
                         <p className='leading-8'>
                             C'est dès la fondation de l'Acadie, avec l'arrivée des premiers colons acadiens en 1604, que débute, l'implantation du christianisme dans cette petite partie de l'Amérique du nord. En fait, l'histoire nous apprend qu'un prêtre catholique et un pasteur protestant accompagnent la première expédition des Sieurs DeMonts et Champlain.
@@ -78,19 +78,12 @@ export default function Page() {
                             NOTE:  Une adaptation moderne des armoiries a été produite en octobre 2024 par Mgr Guy Desrochers, archevêque de Moncton, conformément aux nouvelles normes héraldiques.
                         </p>
                     </div>
-                    <div className='col-span-full lg:col-span-2'>
-                        <div className='h-72 xl:h-80 relative rounded-xl md:rounded-[18px] overflow-hidden bg-gray-100'>
-                            <Image
-                                alt="Image de cimetière"
-                                src="/assets/img/cimetiere-1.png"
-                                fill
-                                style={{ objectFit: 'cover' }}
-                            />
-                        </div>
+                    <div className='w-1/3 sticky top-0 leading-8'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iure repudiandae, dolor repellat, laboriosam animi qui delectus neque quod commodi eos, assumenda odio mollitia porro itaque. Sunt, quas at atque ipsum obcaecati velit ducimus doloremque consequuntur. Error facilis id soluta modi labore non mollitia voluptas magni. Voluptates facilis fugiat placeat odio ab. Fugiat aperiam quam nulla quod ab veniam natus incidunt, deserunt ipsam, sint aut placeat quo non doloremque consequatur cupiditate eum dolore sit? Voluptas quae tempore corrupti similique quasi, vero odit?
                     </div>
                     
                 </div>
-            </section>
+            </section> 
 
             <div className='mt-10 lg:mt-20'></div>
         </main>
