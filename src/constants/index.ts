@@ -23,7 +23,7 @@ export const archidiocese: MenuType[] = [
         titre_en: 'Our history',
         description_fr: 'Découvrez l’histoire du diocèse.',
         description_en: 'Discover the history of the diocese.',
-        link: ''
+        link: '/histoire'
     },
     {
         id: 3,
@@ -273,6 +273,15 @@ export const ressources: MenuType[] = [
         description_fr: 'Accompagnement aux personnes divorcées ',
         description_en: 'Support for divorced people ',
         link: '/tribunal-matrimonial'
+    },
+    {
+        id: 5,
+        image: '/assets/icons/note.png',
+        titre_fr: 'Bulletins pastoraux',
+        titre_en: 'Pastoral bulletins',
+        description_fr: 'Ensemble des bulletins pastoraux du diocèse',
+        description_en: 'All pastoral bulletins of the diocese',
+        link: ''
     },
 ]
 

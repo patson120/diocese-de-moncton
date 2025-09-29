@@ -34,11 +34,9 @@ export default function Page() {
             <div className='mt-10 md:mt-20'></div>
             <section className="container max-margin py-0">
                 <div className='h-screen overflow-y-scroll h-scroll [&::-webkit-scrollbar]:w-0 flex flex-col-reverse md:flex-row gap-7 md:gap-6 lg:gap-12 md:py-4 lg:py-8 relative'>
-                    <div className='w-full md:w-2/3 flex flex-col gap-3'>
+                    <div className='w-full md:w-2/3 h-full overflow-y-scroll flex flex-col gap-3'>
                         <h3 id='paragraph-1' className='text-left text-xl font-bold'>{t("sommaire_title_1")}</h3>
-                        <p className='leading-8'>
-                            {t("paragraph_1")}
-                        </p>
+                        <p className='leading-8'>{t("paragraph_1")}</p>
                         <h3 id='paragraph-2' className='text-left text-xl font-bold'>{t("sommaire_title_2")}</h3>
                         <p className='leading-8'>
                            {t("paragraph_2")}
@@ -97,7 +95,6 @@ export default function Page() {
                             </h3>
                         </div>
                     </div>
-                    
                 </div>
 
                 <div className='mt-20'>
