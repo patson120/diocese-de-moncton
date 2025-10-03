@@ -42,7 +42,7 @@ export default async function Page(
                             <div className='flex flex-col sm:-translate-y-3 md:translate-y-0 md:flex-row justify-start items-center gap-5 md:gap-8 xl:gap-10'>
                                 <div className='h-64 w-64 shrink-0 relative overflow-hidden border-2 border-gray-400'>
                                     <Image
-                                        src="/assets/img/image.png"
+                                        src="/assets/img/archeveque.jpeg"
                                         alt="Photo de l&lsquo;évêque"
                                         fill
                                         style={{

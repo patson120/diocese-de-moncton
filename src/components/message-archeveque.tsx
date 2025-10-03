@@ -55,7 +55,7 @@ export default async function MessageArcheveque() {
                 <div className='md:order-last min-h-80 md:h-auto md:col-span-1 relative rounded-2xl overflow-hidden bg-gray-200'>
                     <Image
                         alt="Image de la l'archevèque"
-                        src="/assets/img/image.png"
+                        src="/assets/img/archeveque.jpeg"
                         fill
                         style={{
                             objectFit: 'cover'
