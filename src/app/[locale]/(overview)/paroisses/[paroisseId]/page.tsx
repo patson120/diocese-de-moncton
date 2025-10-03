@@ -145,8 +145,9 @@ export default async function Page(props: {
                             <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                                     {
                                         paroisse?.bulletins.map((item, index) => 
-                                            <a key={index} href={`${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                                                <p>{item.titre_fr ?? item.titre_en} <br /><span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></p>
+                                            <a key={index} href={ item.lien_externe ?? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
+                                                <p>{ item.lien_externe ? item.lien_externe.split("/")[item.lien_externe.split("/").length -1].split(".")[0] : (item.titre_fr ?? item.titre_en)} <br />
+                                                <span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></p>
                                                 <ArrowUpRight className="h-6 w-10 ml-4" />
                                             </a>
                                         )
