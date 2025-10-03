@@ -78,16 +78,6 @@ export default async function Page(props: {
             <section className="md:container md:max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-14 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2 space-y-4'>
-                        {/*
-                            <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
-                                <Image
-                                    alt="Image de détail de l'évènement"
-                                    src={paroisse.galerie?.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${paroisse.galerie[0].path}` : "/assets/img/paroisse-detail.png"}
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                />
-                            </div>
-                        */}
                         <Carousel images={[ ...paroisse.galerie, ...paroisse.media ]} />
                         <div className='container max-margin md:w-full md:mx-0 md:px-0 py-0 flex gap-3'>
                             {
@@ -182,7 +172,6 @@ export default async function Page(props: {
                                 </div>
                             </div>
                         </div>
-
 
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="sur_la_map" /></h1>
                         {/* Map */}

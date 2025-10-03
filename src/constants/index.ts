@@ -281,7 +281,7 @@ export const ressources: MenuType[] = [
         titre_en: 'Pastoral bulletins',
         description_fr: 'Ensemble des bulletins pastoraux du diocèse',
         description_en: 'All pastoral bulletins of the diocese',
-        link: ''
+        link: '/bulletins'
     },
 ]
 
