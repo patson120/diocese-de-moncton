@@ -737,5 +737,12 @@
         "list_element_8": "La colombe nimbée avec sept rayons « rappelle que l'Esprit saint veille sur 1'Eglise, l'inspire par ses dons et la dirige »;",
         "list_element_9": "La devise Ut videntes jesum peut se rendre en français par « Comme si l'on voyait Jésus ». Mgr Donat Chiasson (1930­-2003), troisième archevêque de Moncton, en donnait l'explication suivante à l'été de 1986 : « Elle peut vouloir dire : «Marchons ensemble dans la foi — comme si l'on voyait Jésus.» Elle peut signifier également : «Vivez comme de vrais témoins, car en vous regardant — c'est comme si l'on voyait Jésus» ;",
         "paragraph_last": "On notera que le symbolisme des trois mats est devenu caduc depuis la création d'un quatrième diocèse, celui d'Edmundston, érigé le 16 décembre 1944."
+    },
+    "bulletins": {
+        "bulletin_paroissiaux": "Bulletins paroissiaux",
+        "hero_desc": "Retrouvez tous les bulletins du diocèse et les informations associées.",
+        "unite_placehplder": "Sélectionner une unité",
+        "filtrer_resultats": "Filtrer les résultats"
+
     }
 }

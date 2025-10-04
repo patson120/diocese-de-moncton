@@ -81,7 +81,9 @@ export default function Footer() {
                 <Text className='text-inherit' keyString='formations' />
               </li>
               <li className='text-[#B5B5B5]'>
-                <Text className='text-inherit' keyString='documents_officiels' />
+                <Link href="/bulletins">
+                  <Text className='text-inherit' keyString='documents_officiels' />
+                </Link>
               </li>
             </ul>
           </div>

@@ -729,5 +729,12 @@
         "list_element_8": "The dove with seven rays “reminds us that the Holy Spirit watches over the Church, inspires it with his gifts, and guides it.”",
         "list_element_9": "The motto Ut videntes jesum can be translated into English as “As if we saw Jesus.” Bishop Donat Chiasson (1930-2003), third Archbishop of Moncton, gave the following explanation in the summer of 1986: “It can mean: ‘Let us walk together in faith—as if we were seeing Jesus.’ It can also mean: ‘Live as true witnesses, for when we look at you, it is as if we were seeing Jesus.’”",
         "paragraph_last": "It should be noted that the symbolism of the three masts became obsolete with the creation of a fourth diocese, that of Edmundston, established on December 16, 1944."
+    },
+    "bulletins": {
+        "bulletin_paroissiaux": "Parish bulletins",
+        "hero_desc": "Find all the diocese bulletins and related information.",
+        "unite_placehplder": "Select a unit",
+        "filtrer_resultats": "Filter results"
+
     }
 }

@@ -94,6 +94,26 @@ export async function fetchCategories(params: string = "") {
     }
 }
 
+export async function fetchBulletins(params: string = "") {
+    try {
+        let url = `${BASE_URL}/bulletin_paroissial${params}`;
+        return await fetchAPI(url, 'GET', {}, {});
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch bulletin data.');
+    }
+}
+
+export async function fetchUnitesPastorales(params: string = "") {
+    try {
+        let url = `${BASE_URL}/type_paroisses${params}`;
+        return await fetchAPI(url, 'GET', {}, {});
+    } catch (error) {
+        console.error('Database Error:', error);
+        throw new Error('Failed to fetch units data.');
+    }
+}
+
 export async function createDon(body: any) {
     try {
         let url = `${BASE_URL}/dons`;
