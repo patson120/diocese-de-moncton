@@ -4,12 +4,10 @@ import { fetchBulletins, fetchUnitesPastorales } from '@/_lib/data'
 import { formatDateToLocal } from '@/_lib/utils'
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import Text from '@/components/Text'
-import { FormControl } from '@/components/ui/form'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Bulletin, TypeParoisse } from '@/types'
 import { ArrowUpRight, SlidersHorizontalIcon } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
-import { cookies } from "next/headers";
 import { useEffect, useState } from 'react'
 
 export default function Page() {
