@@ -10,10 +10,11 @@ import MapSection from "@/components/ui/shared/MapSection";
 import { Link } from "@/i18n/routing";
 import { Membre, Paroisse } from "@/types";
 import { ArrowUpRight, Mail, MapPin, PhoneCall } from "lucide-react";
+import { cookies } from "next/headers";
 import Image from "next/image";
 import Carousel from "./carousel";
-import { cookies } from "next/headers";
 import { VideoPlayer } from "./components/VideoPlayer";
+import MembreCard from "./components/MemberCard";
 
 
 export default async function Page(props: {
@@ -96,11 +97,21 @@ export default async function Page(props: {
                         {
                             responsable.nom &&
                             <div className="container max-margin md:w-full md:mx-0 md:px-0 py-0 gap-3">
-                                <p><Text keyString="pretre_responsable" /></p>
-                                <h3 className="font-semibold">{responsable.nom}</h3>
+                                <h1 className="heading-4 font-extrabold text-black mt-10 mb-4"><Text keyString="pretre_responsable" /></h1>
+                                <MembreCard membre={responsable} />
                             </div>
                         }
-
+                        {
+                            paroisse.pretre.length > 0 &&
+                            <div className="mt-5">
+                                <h1 className="heading-4 font-extrabold text-black mt-10 mb-4"><Text keyString="autres_membres" /></h1>
+                                {
+                                    paroisse.pretre.filter(membre => membre.id !== responsable.id).map((membre) => (
+                                        <MembreCard  key={membre.id} membre={membre} />
+                                    ))  
+                                }
+                            </div>
+                        }
                     </div>
                     <div className='container max-margin md:px-0 md:mx-0 col-span-full lg:col-span-3'>
                         <div>
@@ -218,4 +229,3 @@ export default async function Page(props: {
         </>
     )
 }
-

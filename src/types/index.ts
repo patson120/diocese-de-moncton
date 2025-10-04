@@ -68,6 +68,7 @@ export type Paroisse = {
     galerie: Image[];
     media: Image[];
     bulletins: Bulletin[];
+    pretre: Membre[];
     type: TypeParoisse;
     horaireparoisses: Horaire[]
     statut: number,

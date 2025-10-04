@@ -89,7 +89,8 @@
         "autres_paroisses": "Other parishes in the unit",
         "parish_history": "History",
         "aucun_evenement_en_vu": "No events scheduled at this time!",
-        "pretre_responsable": "Priest in charge"
+        "pretre_responsable": "Priest in charge",
+        "autres_membres": "Other members"
     },
     "newsletter": {
         "placeholder": "Email address"
