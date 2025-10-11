@@ -37,6 +37,7 @@ export default function Page() {
         ( async () => {
             // Fetch Bulletins
             if (selectedUnitesPastorales?.id){
+                setisFetching(true)
                 try {
                     const params = `?unite_id=${selectedUnitesPastorales.id}&paginate=4`
                     const response = await fetchBulletins(params)
@@ -85,7 +86,7 @@ export default function Page() {
                 </div>
                 {
                     isFetching ?
-                    <div className='h-96 w-full flex justify-center items-center'>
+                    <div className='h-44 w-full flex justify-center items-center'>
                         <LoadingSpinner />
                     </div> :
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-5'>
@@ -106,12 +107,12 @@ export default function Page() {
                                 </a>
                             )
                         }
-                        {
-                            bulletins.length === 0 &&
-                            <div className='h-96 w-full flex justify-center items-center'>
-                                <p className="text-center text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
-                            </div>
-                        }
+                    </div>
+                }
+                {
+                    ( !isFetching && bulletins.length === 0) &&
+                    <div className='h-44 w-full flex justify-center items-center'>
+                        <p className="text-center text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
                     </div>
                 }
             </section> 
