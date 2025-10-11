@@ -734,7 +734,7 @@
     "bulletins": {
         "bulletin_paroissiaux": "Parish bulletins",
         "hero_desc": "Find all the diocese bulletins and related information.",
-        "unite_placehplder": "Select a unit",
+        "unite_placeholder": "Select a unit",
         "filtrer_resultats": "Filter results"
 
     }

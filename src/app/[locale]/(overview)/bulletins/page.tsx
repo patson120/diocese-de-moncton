@@ -4,6 +4,7 @@ import { fetchBulletins, fetchUnitesPastorales } from '@/_lib/data'
 import { formatDateToLocal } from '@/_lib/utils'
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import Text from '@/components/Text'
+import { LoadingSpinner } from '@/components/ui/loading-spinner'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Bulletin, TypeParoisse } from '@/types'
 import { ArrowUpRight, SlidersHorizontalIcon } from 'lucide-react'
@@ -14,32 +15,36 @@ export default function Page() {
     const t = useTranslations("bulletins")
     const userLanguage = useLocale();
 
+    const [isFetching, setisFetching] = useState(false)
+
     const [bulletins, setBulletins] = useState<Bulletin[]>([])
     const [unitesPastorales, setUnitesPastorales] = useState<TypeParoisse[]>([])
     const [selectedUnitesPastorales, setSelectedUnitesPastorales] = useState<TypeParoisse | undefined>(undefined)
     
     useEffect(() => {
         ( async () => {
-            // Fetch Bulletins
-            const response: Bulletin[] = await fetchBulletins()
-            setBulletins(response)
-        })();
-
-        ( async () => {
             // Fetch Unités Pastorales
+            setisFetching(true)
             const unitesPastorales: TypeParoisse[] = await fetchUnitesPastorales()
             setUnitesPastorales(unitesPastorales)
+            if (unitesPastorales.length){
+                setSelectedUnitesPastorales(unitesPastorales[0])
+            }
         })();
-
     }, [])
 
-    useEffect(() => {
-        /* ( async () => {
+    useEffect(() => {        
+        ( async () => {
             // Fetch Bulletins
-            let params = selectedUnitesPastorales ? `?type_paroisse=${selectedUnitesPastorales.id}` : ""
-            const response: Bulletin[] = await fetchBulletins(params)
-            setBulletins(response)
-        })(); */
+            if (selectedUnitesPastorales?.id){
+                try {
+                    const params = `?unite_id=${selectedUnitesPastorales.id}&paginate=4`
+                    const response = await fetchBulletins(params)
+                    setBulletins(response.data)                    
+                } catch (error: any) { console.log(error.message) }
+                finally{ setisFetching(false) }
+            }
+        })();
     }, [ selectedUnitesPastorales?.id])
     
     return (
@@ -65,7 +70,7 @@ export default function Page() {
                         }}
                         defaultValue={selectedUnitesPastorales ? `${selectedUnitesPastorales.id}` : undefined}>
                         <SelectTrigger>
-                            <SelectValue placeholder={t("unite_placehplder")} />
+                            <SelectValue placeholder={t("unite_placeholder")} />
                         </SelectTrigger>
                         <SelectContent>
                         {
@@ -78,29 +83,37 @@ export default function Page() {
                         </SelectContent>
                     </Select>
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-5'>
-                    {
-                        bulletins.map((item, index) => 
-                            <a key={index} href={ item.lien_externe ?? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' 
-                            className='border border-[#D9D9D9] rounded-lg p-5 flex justify-between items-start space-x-2'>
-                                <p className='truncate'>{ 
-                                    item.lien_externe ? 
-                                    item.lien_externe.split("/")[item.lien_externe.split("/").length -1].split(".")[0] : 
-                                    (item.titre_fr ?? item.titre_en)} 
-                                    <br />
-                                    <span className="text-gray-400 text-xs">
-                                        { formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR') }
-                                    </span>
-                                </p>
-                                <ArrowUpRight className="h-6 w-10 shrink-0 ml-4" />
-                            </a>
-                        )
-                    }
-                    {
-                        !bulletins.length &&
-                        <p className="text-center h-10 text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
-                    }
-                </div>
+                {
+                    isFetching ?
+                    <div className='h-96 w-full flex justify-center items-center'>
+                        <LoadingSpinner />
+                    </div> :
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-5'>
+                        {
+                            bulletins.length > 0 && bulletins.map((item, index) => 
+                                <a key={index} href={ item.lien_externe ?? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' 
+                                className='border border-[#D9D9D9] rounded-lg p-5 flex justify-between items-start space-x-2'>
+                                    <p className='truncate'>{ 
+                                        item.lien_externe ? 
+                                        item.lien_externe.split("/")[item.lien_externe.split("/").length -1].split(".")[0] : 
+                                        (item.titre_fr ?? item.titre_en)} 
+                                        <br />
+                                        <span className="text-gray-400 text-xs">
+                                            { formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR') }
+                                        </span>
+                                    </p>
+                                    <ArrowUpRight className="h-6 w-10 shrink-0 ml-4" />
+                                </a>
+                            )
+                        }
+                        {
+                            bulletins.length === 0 &&
+                            <div className='h-96 w-full flex justify-center items-center'>
+                                <p className="text-center text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
+                            </div>
+                        }
+                    </div>
+                }
             </section> 
             <div className='mt-10 lg:mt-20'></div>
         </main>
