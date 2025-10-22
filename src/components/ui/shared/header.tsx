@@ -108,24 +108,29 @@ export default function Header() {
     const fetchLinks = useCallback(
         async (params: string = '') => {
             const response: Lien[] = await fetchLinksByMenu(params)
-            const data = response.map( item => ({
-                id: item.id,
-                menu: `${item.menu_id}`,
-                image: '/assets/icons/noun-eucharist-7479333 1.png',
-                titre_fr: item.intitule_fr,
-                titre_en: item.intitule_en,
-                description_fr: item.lapage[0].titre,
-                description_en: item.intitule_en,
-                link: `/pages/${item.pages_id}`
-            })) as MenuType[]
+            let data: MenuType[] = []
+            for (let index = 0; index < response.length; index++) {
+                const item = response[index];
+                if (item.lapage.length){
+                    data.push({
+                        id: item.id,
+                        menu: `${item.menu_id}`,
+                        image: '/assets/icons/noun-eucharist-7479333 1.png',
+                        titre_fr: item.intitule_fr,
+                        titre_en: item.intitule_en ?? "",
+                        description_fr: item.lapage[0]!.titre_fr ?? item.lapage[0]!.titre_en,
+                        description_en: item.lapage[0]!.titre_en ?? "",
+                        link: `/pages/${item.pages_id}`
+                    })
+                }   
+            }
             setLinksRegistry(data)
         },
     [])
 
-    useEffect(() => {
+    useEffect(() => {        
         fetchLinks()
     }, [])
-
 
     return (
         <>

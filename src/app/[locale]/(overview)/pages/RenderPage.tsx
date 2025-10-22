@@ -4,11 +4,13 @@ import { fetchPageById } from '@/_lib/data'
 import { HTMLContent } from '@/components/html-content'
 import { LoadingSpinner } from '@/components/ui/loading-spinner'
 import { Page } from '@/types'
+import { useLocale } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 export default function RenderPage({pageId}: { pageId: string }) {
     const [page, setPage] = useState<Page | null>(null)
     const [isLoading, setIsLoading] = useState(false)
+    const localActive = useLocale()
 
     useEffect(() => {
         ( async () =>{
@@ -33,7 +35,7 @@ export default function RenderPage({pageId}: { pageId: string }) {
                         <p className='text-center text-gray'>Chargement...</p>
                     </div>
                 </div> :
-                <HTMLContent html={page?.contenu_html!} className={`w-full`} />
+                <HTMLContent html={localActive === "fr" ? page?.contenu_html_fr! : page?.contenu_html_en!} className={`w-full`} />
             }
         </>
     )
