@@ -106,7 +106,7 @@ export default function Header() {
     }
 
     const fetchLinks = useCallback(
-        async (params: string = '') => {
+        async (params: string = '?statut=1') => {
             const response: Lien[] = await fetchLinksByMenu(params)
             let data: MenuType[] = []
             for (let index = 0; index < response.length; index++) {
