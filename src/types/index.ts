@@ -168,20 +168,18 @@ export type Membre = {
 
 export type HoraireMesse = {
     id: number;
+    paroisse_id: number,
     jour: string;
     heure: string;
     created_at: string;
     updated_at: string;
-    activites: Activite[];
+    paroisse: ParoisseLiee;
 }
 
-export type Activite = {
+export type ParoisseLiee = {
     id: number;
-    horaire_messe_id: number;
-    intitule_fr: string;
-    intitule_en: string | null;
-    created_at: string;
-    updated_at: string;
+    nom: string;
+    nom_en: string | null;
 }
 
 export type Image = {

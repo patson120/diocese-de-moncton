@@ -9,11 +9,11 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function Page() {
-  const [horaires, setHoraires] = useState<HoraireMesse[]>([])
+  const [horaires, setHoraires] = useState<any>()
   const t = useTranslations("horaires_messe")
 
   const getHoraireMesses = async () => {
-    const response: HoraireMesse[] = await fetchHoraireMesse()
+    const response: any = await fetchHoraireMesse()
     setHoraires(response)
   }
 
