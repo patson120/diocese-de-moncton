@@ -106,6 +106,11 @@ export default function Footer() {
                   <Text className='text-inherit' keyString='clerge' />
                 </Link>
               </li>
+              <li className='text-[#B5B5B5]'>
+                <Link href="/contact">
+                  <Text className='text-inherit' keyString='contact_us' />
+                </Link>
+              </li>
 
             </ul>
           </div>

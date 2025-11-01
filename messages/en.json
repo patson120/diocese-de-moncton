@@ -90,7 +90,8 @@
         "parish_history": "History",
         "aucun_evenement_en_vu": "No events scheduled at this time!",
         "pretre_responsable": "Priest in charge",
-        "autres_membres": "Other members"
+        "autres_membres": "Other members",
+        "contact_us": "Contact us"
     },
     "newsletter": {
         "placeholder": "Email address"
