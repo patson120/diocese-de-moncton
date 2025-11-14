@@ -90,7 +90,7 @@ export default async function Page(props: {
                                 </Link>
                             }
                             {
-                                (paroisse.lien_youtube != null) &&
+                                (paroisse.lien_youtube) &&
                                 <VideoPlayer video={paroisse.lien_youtube} /> 
                             }
                         </div>
