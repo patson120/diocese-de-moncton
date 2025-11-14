@@ -102,6 +102,7 @@ export default async function Page(props: {
                             </div>
                         }
                         {
+                            paroisse.pretre &&
                             paroisse.pretre.length > 0 &&
                             <div className="mt-5">
                                 <h1 className="heading-4 font-extrabold text-black mt-10 mb-4"><Text keyString="autres_membres" /></h1>
