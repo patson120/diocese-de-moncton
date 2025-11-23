@@ -22,7 +22,6 @@ export default function Page() {
         }
     }
     
-    
     return (
         <main>
             {/* Hero section */}
@@ -96,7 +95,6 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-
                 <div className='mt-20'>
                     <p className='font-medium leading-8'>{t("list_title")}</p>
                     <ul className='flex flex-col space-y-2 mt-4 pl-5 leading-8'>
