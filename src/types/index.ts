@@ -61,6 +61,7 @@ export type Paroisse = {
     pretre_responsable: string;
     gps: string;
     histoire: string;
+    histoire_en: string;
     langue: string | null;
     horaire_bureau: string | null;
     created_at: string;

@@ -15,7 +15,7 @@ import Image from "next/image";
 import Carousel from "./carousel";
 import { VideoPlayer } from "./components/VideoPlayer";
 import MembreCard from "./components/MemberCard";
-import { HTMLContent } from "@/components/html-content";
+import ParishHistory from "./components/parishHistory";
 
 
 export default async function Page(props: {
@@ -196,11 +196,10 @@ export default async function Page(props: {
                             <h1 className="heading-4 font-extrabold text-blac mb-2"><Text keyString="parish_history" /></h1>
                             {
                                 paroisse.histoire.includes('<') ?
-                                <HTMLContent html={userLanguage === "fr" ? paroisse.histoire! : paroisse.histoire!} /> :
-                                <p className='body-2 text-gray'>{paroisse.histoire}</p>
+                                <ParishHistory html={userLanguage === "fr" ? paroisse.histoire! : paroisse.histoire_en! } /> :
+                                <p className='body-2 text-gray'>{userLanguage === "fr" ? paroisse.histoire! : paroisse.histoire_en!}</p>
                             }
                         </div>
-
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="autres_paroisses" /></h1>
                         <div>
                             <div className="flex flex-nowrap overflow-x-scroll xl:overflow-x-hidden gap-4 pb-5">
