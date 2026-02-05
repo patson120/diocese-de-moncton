@@ -1,17 +1,12 @@
-import Text from '@/components/Text'
-import { Button } from '@/components/ui/shared/button'
-import { mapper } from '@/constants'
 import { Link } from '@/i18n/routing'
 import { HoraireMesse } from '@/types'
 import { Plus } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-export default function Horaires({ horaires }: { horaires: HoraireMesse[]}) {
+export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
     const [selectedHour, setSelectedHour] = useState<HoraireMesse | null>()
-
     const localActive = useLocale()
-
     const t = useTranslations("horaires_messe")
     return (
         <div className="mt-8 lg:mt-16 flex flex-col justify-center items-center">
