@@ -22,7 +22,7 @@ export default function Text<T extends HTMLElement>({ labelFr, labelEn, keyStrin
   }
   const label = localActive === "fr" ? labelFr : labelEn;
   if (label?.startsWith("\u003C")) {
-     return <HTMLContent html={label} className={`prose max-w-none ${className}`} />
+    return <HTMLContent html={label} className={`prose max-w-none ${className}`} />
   }
   return <span {...props} className={`w-auto ${className}`}>{label}</span>;
 }

@@ -25,9 +25,9 @@ export default async function MessageArcheveque() {
                         </h1>
                         <Text className='heading-5 text-xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
                     </div>
-                    <p className='body-2 leading-[25.9px]'>
+                    <div className='body-2 leading-[25.9px]'>
                         <Text className="line-clamp-6" labelEn={message.message_en} labelFr={message.message_fr} />
-                    </p>
+                    </div>
                     <div className='flex justify-end'>
                         <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
                             <Calendar className="h-4 w-4 text-gray-600" />

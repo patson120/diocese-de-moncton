@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
@@ -25,19 +26,16 @@
       "@/*": [
         "./src/*"
       ]
-    },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./custom_typings"
-    ],
-    "target": "ES2017"
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+, "next.config.js"  ],
   "exclude": [
     "node_modules"
   ]

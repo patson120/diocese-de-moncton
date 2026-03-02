@@ -11,7 +11,7 @@ export function HTMLContent({ html, className = '' }: HTMLContentProps) {
   const sanitizedHtml = DOMPurify.sanitize(html);
   
   return (
-    <div 
+    <div
       className={className}
       dangerouslySetInnerHTML={{ __html: sanitizedHtml }} 
     />
