@@ -22,7 +22,7 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
             </h1>
             <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12">
                 <div className="min-h-96 md:h-auto col-span-3 md:col-span-2 rounded-2xl overflow-hidden bg-gray-50 relative">
-                    <MapSection paroisses={paroisses.slice(0, 4)} />
+                    <MapSection paroisses={paroisses.length? paroisses.slice(0, 4):[]} />
                     <SearchParoisses />
                 </div>
                 <Suspense fallback={
