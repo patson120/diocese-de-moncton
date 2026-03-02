@@ -16,11 +16,13 @@ export const metadata: Metadata = {
 };
 export default async function RootLayout({
   children,
-  params: { locale }
+  params
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
    // Ensure that the incoming `locale` is valid
     if (!routing.locales.includes(locale as Language)) {
       notFound();
