@@ -13,7 +13,7 @@ export default function Actualite({ data }: { data: TypeActualite }) {
             <div className='relative h-56 md:h-64 w-full rounded-2xl overflow-hidden bg-gray-100'>
                 <Image
                     alt={data.titre_fr}
-                    src={ data.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${data.galerie[0].path}` : '/assets/img/new-1.png' }
+                    src={ data.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${data.galerie[0].path}` : '/assets/img/vector.svg' }
                     fill
                     style={{ objectFit: 'cover' }}
                 />

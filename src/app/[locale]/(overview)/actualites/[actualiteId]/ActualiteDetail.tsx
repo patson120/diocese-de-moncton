@@ -13,7 +13,7 @@ export default async function ActualiteDetail({ actualite }: { actualite: TypeAc
             <div className='h-72 lg:h-96 xl:h-[560px] relative md:rounded-[18px] overflow-hidden bg-gray-100'>
                 <Image
                     alt='image'
-                    src={actualite.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${actualite.galerie[0].path}` :'/assets/img/new-1.png'}
+                    src={actualite.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${actualite.galerie[0].path}` :'/assets/img/vector.svg'}
                     fill
                     style={{ objectFit: 'cover' }}
                 />
