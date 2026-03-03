@@ -5,7 +5,7 @@ import { cookies } from 'next/headers';
 import Image from 'next/image'
 
 export default async function ActualiteDetail({ actualite }: { actualite: TypeActualite }) {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
         
     return (
