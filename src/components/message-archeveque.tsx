@@ -12,7 +12,7 @@ export default async function MessageArcheveque() {
     const response = await fetchMessages(`?paginate=1&etat=1`)
     const message: Message = response.data[0];
 
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
 
     return (

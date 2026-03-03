@@ -29,7 +29,7 @@ export default async function Page(props: {
 
     const responsable: Membre = await fetchMembres(`/${paroisse.pretre_responsable}`)
     
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
 
     return (

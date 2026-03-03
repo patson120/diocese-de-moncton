@@ -4,8 +4,8 @@ import { Message } from "@/types"
 import { Calendar } from "lucide-react"
 import { cookies } from "next/headers"
 
-const MessageComp = ({ message }: { message: Message }) => {
-    const cookieStore = cookies();
+const MessageComp = async ({ message }: { message: Message }) => {
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
       
     return (

@@ -17,7 +17,7 @@ export default async function Page(props: {
     const { evenementId } = await props.params;
     const event: TypeEvent = await fetchEvents(`/${evenementId}`)
 
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
     
     return (

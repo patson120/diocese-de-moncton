@@ -5,8 +5,8 @@ import { TypeActualite } from '@/types'
 import { cookies } from 'next/headers';
 import Image from 'next/image'
 
-export default function Actualite({ data }: { data: TypeActualite }) {
-    const cookieStore = cookies();
+export default async function Actualite({ data }: { data: TypeActualite }) {
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
     return (
         <div className='w-full flex flex-col space-y-2'>

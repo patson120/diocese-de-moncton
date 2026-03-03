@@ -28,7 +28,7 @@ export default async function Evenements(
     events = response.data
     const totalPages = response.last_page
 
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
     
 

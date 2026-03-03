@@ -3,8 +3,8 @@ import Text from '@/components/Text'
 import { TypeEvent } from '@/types'
 import { cookies } from 'next/headers';
 
-export default function EventItem({ data, row }: { data: TypeEvent, row?: boolean }) {
-    const cookieStore = cookies();
+export default async function EventItem({ data, row }: { data: TypeEvent, row?: boolean }) {
+    const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
     return (
         <div className={`${row ? 'flex flex-row' : 'flex flex-col'}   p-2 md:p-3 space-y-3 rounded-xl text-black border border-gray-200 hover:bg-[#EEDEE1]`}>
