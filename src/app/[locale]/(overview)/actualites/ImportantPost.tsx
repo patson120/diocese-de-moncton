@@ -10,7 +10,6 @@ import React from 'react'
 export default async function ImportantPost() {
     const response = await fetchActualites(`?paginate=1`)
     const actualite: TypeActualite = response.data[0]
-
     const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
   
