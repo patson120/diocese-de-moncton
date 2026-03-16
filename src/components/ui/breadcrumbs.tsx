@@ -16,11 +16,10 @@ interface Breadcrumb {
 
 export default function Breadcrumbs({
   breadcrumbs,
-}: {
-  breadcrumbs: Breadcrumb[];
-}) {
+  }: {
+    breadcrumbs: Breadcrumb[];
+  }) {
 
-  const localActive = useLocale()
   return (
     <nav aria-label="Breadcrumb" className="block">
       <ol className='flex justify-center items-center body-2'>
@@ -30,10 +29,9 @@ export default function Breadcrumbs({
             aria-current={breadcrumb.active}
             className={clsx(
               breadcrumb.active ? 'font-semibold hidden md:inline-block' : 'text-gray', "flex justify-center items-center"
-            )}
-          >
+            )}>
             <Link className='' href={breadcrumb.href}>
-              <Text className='cursor-none text-sm md:text-base' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} />
+              <Text className='text-sm md:text-base' labelEn={breadcrumb.data?.labelEn} labelFr={breadcrumb.data?.labelFr} />
             </Link>
             {index < breadcrumbs.length - 1 ? (
               <ChevronRight className="h-5 w-5 inline-block " />

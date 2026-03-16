@@ -14,9 +14,9 @@ export default function Filter() {
 
 
     const filters = [
-        { label: 'Tous', text: localActive === "fr" ? "Tous" : "All", value: null },
+        { label: 'Tous', text: localActive === "fr" ? "Toutes" : "All", value: null },
         { label: 'En activité', text: localActive === "fr" ? "En activité" : "In activity", value: 1 },
-        { label: 'Fermées', text: localActive === "fr" ? "Fermées" : "Close", value: 0 },
+        { label: 'Fermées', text: localActive === "fr" ? "Fermées" : "Closed", value: 0 },
         { label: 'Francophone', text: localActive === "fr" ? "Francophone" : "French-speaking", value: 'fr' },
         { label: 'Anglophone', text: localActive === "fr" ? "Anglophone" : "English-speaking", value: 'en' },
     ]
@@ -59,7 +59,7 @@ export default function Filter() {
             <div className='flex items-center gap-[6px]'>
                 <SlidersHorizontalIcon className="h-4 w-4 text-gray-600" />
                 <label className='font-bold xl:text-sm whitespace-nowrap flex' htmlFor="filter">
-                    Filtrer <span className='hidden md:block ml-1'>les résultats</span>
+                    {localActive === "fr" ? "Filtrer" : "Filter"} <span className='hidden md:block ml-1'>{localActive === "fr" ? "les résultats" : "results"}</span>
                 </label>
             </div>
             {

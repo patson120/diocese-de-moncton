@@ -30,9 +30,9 @@ export function HeroSection() {
     },
     {
       image: './assets/img/hero-image-2.png',
-      title: localActive == 'fr' ? 'Trouvez une paroisse près de chez vous': "Find a parish near you",
-      description: localActive == 'fr' ? 'Notre diocèse possède environ une vingtaine de paroisse partout à Moncton, trouvez la votre.': 
-      'Our diocese has about twenty parishes throughout Moncton. Find yours.',
+      title: localActive == 'fr' ? 'Trouvez une paroisse près de vous': "Find a parish near you",
+      description: localActive == 'fr' ? 'Notre diocèse possède 47 paroisse partout à Moncton, trouvez la votre.': 
+      'Our diocese has 47 parishes throughout Moncton. Find yours.',
       cta: [{ text: localActive == 'fr' ? 'Trouver une paroisse':'Find a parish', icon: true, href: '/paroisses' }]
     },
     {

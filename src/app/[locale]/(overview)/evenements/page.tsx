@@ -105,10 +105,11 @@ export default async function Page(props: {
                 </div>
             </section>
 
-            <div className='container max-margin py-0 -translate-y-6'>
-                {/* Search bar */} 
+            {/* <div className='container max-margin py-0 -translate-y-6'>
+                Search bar 
                 <SearchBar placeholder={"rechercher_event"} />
-            </div>
+            </div> */}
+            <div className="mt-16"></div>
 
             {/*
                 <section className='container max-margin pt-0 pb-10'>
