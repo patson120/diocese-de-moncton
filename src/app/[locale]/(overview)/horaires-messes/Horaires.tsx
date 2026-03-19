@@ -8,6 +8,39 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
     const [selectedHour, setSelectedHour] = useState<HoraireMesse | null>()
     const localActive = useLocale()
     const t = useTranslations("horaires_messe")
+
+    const days = {
+        "dimanche": localActive === 'fr' ? "Dimanche" : "Sunday",
+        "lundi": localActive === 'fr' ? 'Lundi' : "Monday",
+        "mardi": localActive === 'fr' ? 'Mardi' : "Tuesday",
+        "mercredi": localActive === 'fr' ? 'Mercredi' : "Wednesday",
+        "jeudi": localActive === 'fr' ? 'Jeudi' : "Thursday",
+        "vendredi": localActive === 'fr' ? 'Vendredi' : 'Friday',
+        "samedi": localActive === 'fr' ? 'Samedi' : "Saturday"
+    }
+    function formatFrenchTimeToEnglish(frenchTime: string): string {
+
+        if (!frenchTime.includes(':')) {
+          return frenchTime; // Retourne la chaîne d'origine si elle ne contient pas 'h'
+        }
+        // Extraire les heures et les minutes
+        const [hours, minutes] = frenchTime.split(':').map(Number);
+      
+        // Créer un objet Date pour formater l'heure
+        const date = new Date();
+        date.setHours(hours);
+        date.setMinutes(minutes);
+      
+        // Options pour formater l'heure en anglais
+        const options: Intl.DateTimeFormatOptions = {
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true, // Format 12 heures (AM/PM)
+        };
+      
+        // Formatter l'heure en anglais
+        return new Intl.DateTimeFormat('en-US', options).format(date);
+    }
     return (
         <div className="mt-8 lg:mt-16 flex flex-col justify-center items-center">
             <div className='w-full md:w-3/4 lg:w-1/2 flex flex-col gap-4'>
@@ -32,10 +65,10 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
                                             
                                         </h1>
                                         <div className='flex flex-wrap items-end gap-2 mt-2'>
-                                        <p className="text-gray capitalize">{item.jour}</p>
+                                        <p className="text-gray capitalize">{days[item?.jour!.toLowerCase() as keyof typeof days]}</p>
                                         {
                                             item.heure.split(';').map((heure, i) => (
-                                                <p key={`${i}-${heure}`} className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">{heure}</p>
+                                                <p key={`${i}-${heure}`} className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">{ localActive === "fr" ? heure : formatFrenchTimeToEnglish(heure!)}</p>
                                             ))
                                         }
                                         </div>
