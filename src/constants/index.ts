@@ -143,7 +143,7 @@ export const sacrements: MenuType[] = [
         description_en: 'A sacrament of healing and mercy',
         link: '/reconcilliation-sacrements'
     },
-    {
+    /* {
         id: 6,
         image: '/assets/icons/plus.png',
         titre_fr: 'Onction des malades',
@@ -151,7 +151,7 @@ export const sacrements: MenuType[] = [
         description_fr: 'Un sacrement de réconfort, de guérison et d\'espérance',
         description_en: 'A sacrament of comfort, healing and hope',
         link: '/onction-malade-sacrements'
-    },
+    }, */
     {
         id: 7,
         image: '/assets/icons/noun-religion-7293616 1.png',
@@ -176,84 +176,103 @@ export const mouvements: MenuType[] = [
     {
         id: 1,
         image: '/assets/icons/people.png',
-        titre_fr: 'Chevalier de Colomb',
+        titre_fr: 'Chevaliers de Colomb',
         titre_en: 'Knights of Columbus',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: ''
     },
     {
         id: 2,
         image: '/assets/icons/people.png',
-        titre_fr: 'Comité diocésain de l...',
-        titre_en: 'Diocesan Committee of l...',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
+        titre_fr: 'Mouvements des Femmes Chrétiennes',
+        titre_en: 'Catholic Women\'s League (C.W.L)',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: '/mouvements'
     },
     {
         id: 3,
         image: '/assets/icons/people.png',
-        titre_fr: 'Mouvements des fem...',
-        titre_en: 'Women\'s movements...',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: '/mouvements'
+        titre_fr: 'Laudato Si',
+        titre_en: 'Laudato Si',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: ''
     },
     {
         id: 4,
         image: '/assets/icons/people.png',
         titre_fr: 'Cursillo',
         titre_en: 'Cursillo',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: ''
     },
     {
         id: 5,
         image: '/assets/icons/people.png',
-        titre_fr: 'Développement et pai...',
-        titre_en: 'Development and...',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        titre_fr: 'Développement et paix',
+        titre_en: 'Development and peace',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: ''
     },
     {
         id: 6,
         image: '/assets/icons/people.png',
-        titre_fr: 'La vie montante',
-        titre_en: 'Life on the rise',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        link: ''
-    },
-    {
-        id: 7,
-        image: '/assets/icons/people.png',
         titre_fr: 'Legion de Marie',
         titre_en: 'Marie\'s Legion',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: ''
     },
     {
         id: 8,
         image: '/assets/icons/people.png',
-        titre_fr: 'Renouveau charismat...',
-        titre_en: 'Charismatic renewal...',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        titre_fr: "Propagation de la foi et services d'animation missionnaire",
+        titre_en: "Spreading the Faith and Missionary Outreach Services",
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: ''
     },
     {
         id: 9,
         image: '/assets/icons/people.png',
-        titre_fr: "Service d'animation",
-        titre_en: "Animation service",
-        description_fr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        titre_fr: 'Renouveau charismatique',
+        titre_en: 'Charismatic renewal',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: ''
-    }
+    },
+    {
+        id: 10,
+        image: '/assets/icons/people.png',
+        titre_fr: 'Service de préparation au mariage',
+        titre_en: 'Pre-marriage counseling service',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: ''
+    },
+    {
+        id: 11,
+        image: '/assets/icons/people.png',
+        titre_fr: 'Société St. Vincent de Paul',
+        titre_en: 'St. Vincent de Paul Society',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: ''
+    },
+    {
+        id: 12,
+        image: '/assets/icons/people.png',
+        titre_fr: 'Vivre et aimer - Rencontre conjugale',
+        titre_en: 'Live and love - Rencontre conjugale',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: ''
+    },
+    
 ]
 
 export const ressources: MenuType[] = [
