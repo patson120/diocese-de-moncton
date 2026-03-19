@@ -115,26 +115,26 @@ export default function Page() {
                 </div>
                 <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
                     <a href='#' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p>Introduction et historique</p>
+                        <p>{t("section_4_btn_1")}</p>
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                     <a href='#' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p>Le sens de l'eau</p>
+                        <p>{t("section_4_btn_2")}</p>
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                     <a href='#' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p>Le baptême d'un enfant</p>
+                        <p>{t("section_4_btn_3")}</p>
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                     <a href='#' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p>Parrainage et conclusion</p>
+                        <p>{t("section_4_btn_4")}</p>
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                 </div>
             </section>
 
             <div className='mt-10 md:mt-20'></div>
-            <section className='container max-margin py-0'>
+            <section className='container max-margin py-0 pb-10'>
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
                     <p className='body-2 text-gray'>{t("section_5_p_1")}</p>

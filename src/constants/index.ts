@@ -85,38 +85,57 @@ export const archidiocese: MenuType[] = [
         description_en: 'Accompanying people in their faith.',
         link: '/catechumenat'
     },
+    {
+        id: 9,
+        menu: "archidiocese",
+        image: '/assets/icons/noun-liturgy-5166501 1.png',
+        titre_fr: 'Pastorale jeunesse',
+        titre_en: 'Youth Ministry',
+        description_fr: 'Accompagnement des jeunes dans la foi.',
+        description_en: 'Guiding young people in their faith.',
+        link: ''
+    },
 ]
 
 export const sacrements: MenuType[] = [
     {
         id: 1,
+        image: '/assets/icons/Frame.png',
+        titre_fr: 'Sacrement',
+        titre_en: 'Sacrament',
+        description_fr: 'Sacrement et eucharistie',
+        description_en: 'Sacrament and Eucharist',
+        link: '/sacrements'
+    }, 
+    {
+        id: 2,
         image: '/assets/icons/noun-baptism-2786507 1.png',
-        titre_fr: 'Baptêmes',
-        titre_en: 'Baptisms',
+        titre_fr: 'Baptême',
+        titre_en: 'Baptism',
         description_fr: 'Porte d’entrée dans la vie chrétienne.',
         description_en: 'Gateway to the Christian life.',
         link: '/bapteme-sacrements'
     },
     {
-        id: 2,
+        id: 3,
         image: '/assets/icons/sang.png',
-        titre_fr: 'Confirmations',
-        titre_en: 'Confirmations',
+        titre_fr: 'Confirmation',
+        titre_en: 'Confirmation',
         description_fr: 'Recevoir l\'Esprit-Saint et devenir un témoin du Christ',
         description_en: 'Receive the Holy Spirit and become a witness to Christ',
         link: '/confirmation-sacrements'
     },
     {
-        id: 3,
+        id: 4,
         image: '/assets/icons/noun-eucharist-7479333 1.png',
-        titre_fr: 'Eucharisties',
+        titre_fr: 'Eucharistie',
         titre_en: 'Eucharist',
         description_fr: 'Le sacrement qui unit les fidèles au sacrifice du Christ.',
         description_en: 'The sacrament that unites the faithful to Christ\'s sacrifice.',
         link: '/eucharistie-sacrements'
     },
     {
-        id: 4,
+        id: 5,
         image: '/assets/icons/noun-confession-886364 1.png',
         titre_fr: 'Reconcilliation',
         titre_en: 'Reconciliation',
@@ -124,15 +143,6 @@ export const sacrements: MenuType[] = [
         description_en: 'A sacrament of healing and mercy',
         link: '/reconcilliation-sacrements'
     },
-   /*  {
-        id: 5,
-        image: '/assets/icons/Frame.png',
-        titre_fr: 'Mariages',
-        titre_en: 'Weddings',
-        description_fr: 'Une alliance d\'amour bénie par Dieu',
-        description_en: 'A covenant of love blessed by God',
-        link: '/mariage-sacrements'
-    }, */
     {
         id: 6,
         image: '/assets/icons/plus.png',
@@ -150,7 +160,16 @@ export const sacrements: MenuType[] = [
         description_fr: 'L’évêque, le prête et le diacre: mieux comprendre.',
         description_en: 'The bishop, the priest and the deacon: better understanding.',
         link: '/ordre-sacrements'
-    }
+    },
+    /* {
+        id: 8,
+        image: '/assets/icons/Frame.png',
+        titre_fr: 'Mariages',
+        titre_en: 'Weddings',
+        description_fr: 'Une alliance d\'amour bénie par Dieu',
+        description_en: 'A covenant of love blessed by God',
+        link: '/mariage-sacrements'
+    }, */ 
 ]
 
 export const mouvements: MenuType[] = [

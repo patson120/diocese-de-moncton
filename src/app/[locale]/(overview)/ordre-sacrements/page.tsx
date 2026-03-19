@@ -144,7 +144,7 @@ export default function Page() {
                 </div>
             </section>
             <div className='mt-10 md:mt-20'></div>
-            <section className='container max-margin py-0'>
+            <section className='container max-margin py-0 pb-10'>
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_6_titre")}</h2>
                     <p className='body-2 text-gray'>{t("section_6_p_1")}</p>
