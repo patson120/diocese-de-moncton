@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl'
 export default function MemberComp( { membres }: { membres: Membre[]}){
     const [open, setOpen] = useState(false)
     const [selectedItem, setSelectedItem] = useState<any>({})
-    const t= useTranslations("membres")
+    const t = useTranslations("membres")
     return <>
         <div className='grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
             {

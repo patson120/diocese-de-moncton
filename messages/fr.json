@@ -175,7 +175,7 @@
 
     "membres": {
         "hero_titre": "Clergé",
-        "hero_desc": "Retrouvez tous les membres derrière notre diocèse",
+        "hero_desc": "Retrouvez le clergé de notre diocèse",
         "section_1_titre": "Sélectionnez le profil recherché",
         "details": "Détails",
         "fonction_membre": "Fonctions",
@@ -183,7 +183,8 @@
         "en_retraite": "En retraite",
         "decede": "Décédé",
         "unite_pastorale": "Unités pastorales",
-        "biographie": "Biographie"
+        "biographie": "Biographie",
+        "coordonnees": "Coordonnées"
 
     },
     "archeveques": {

@@ -8,6 +8,7 @@ import { Membre } from "@/types";
 import { useEffect, useState } from 'react';
 import MemberComp from "./member-comp";
 import { useLocale, useTranslations } from "next-intl";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 
 
 
@@ -16,6 +17,7 @@ import { useLocale, useTranslations } from "next-intl";
 export default function Page() {
     const t = useTranslations('membres')
 
+    const [isFetching, setIsFetching] = useState(false)
     const localActive = useLocale()
 
     const menus = [
@@ -50,8 +52,12 @@ export default function Page() {
     const [membres, setMembres] = useState<Membre[]>([])
 
     const getMembres = async () => {
+        setIsFetching(true)
         const response: Membre[] = await fetchMembres(`?categorie_id=${selectedMenu.id}`)
+        // Classer les membres par ordre alphabétique
+        response.sort((a, b) => a.nom.localeCompare(b.nom))
         setMembres(response)
+        setIsFetching(false)
     }
 
     useEffect(() => {
@@ -83,7 +89,14 @@ export default function Page() {
                                 ))
                             }
                         </TabsList>
-                        <MemberComp membres={membres} />
+
+                        {
+                            isFetching ?
+                            <div className='h-44 w-full flex justify-center items-center'>
+                                <LoadingSpinner />
+                            </div> :
+                            <MemberComp membres={membres} />    
+                        }
 
 
                         {/**

@@ -171,7 +171,7 @@
 
     "membres": {
         "hero_titre": "Clergy",
-        "hero_desc": "Find all the members behind our diocese",
+        "hero_desc": "Meet the clergy of our diocese.",
         "section_1_titre": "Select the profile you are looking for",
         "details": "Details",
         "fonction_membre": "Functions",
@@ -179,7 +179,8 @@
         "en_retraite": "Retired",
         "decede": "Deceased",
         "unite_pastorale": "Pastoral units",
-        "biographie": "Biography"
+        "biographie": "Biography",
+        "coordonnees": "Address and contact information"
     },
     "archeveques": {
         "subtitle": "Archbishop of Moncton",
