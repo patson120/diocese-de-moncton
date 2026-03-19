@@ -298,7 +298,7 @@ export const ressources: MenuType[] = [
         id: 3,
         image: '/assets/icons/noun-law-7399804 1.png',
         titre_fr: 'Chancellerie',
-        titre_en: 'Chancellery',
+        titre_en: 'Chancery',
         description_fr: 'Pour les questions canoniques et historiques.',
         description_en: 'For canonical and historical questions.',
         link: '/chancellerie'
@@ -307,7 +307,7 @@ export const ressources: MenuType[] = [
         id: 4,
         image: '/assets/icons/note.png',
         titre_fr: 'Tribunal matrimonial',
-        titre_en: 'Matrimonial court',
+        titre_en: 'Marriage Tribunal',
         description_fr: 'Accompagnement aux personnes divorcées ',
         description_en: 'Support for divorced people ',
         link: '/tribunal-matrimonial'
@@ -315,8 +315,8 @@ export const ressources: MenuType[] = [
     {
         id: 5,
         image: '/assets/icons/note.png',
-        titre_fr: 'Bulletins pastoraux',
-        titre_en: 'Pastoral bulletins',
+        titre_fr: 'Bulletins paroissiaux',
+        titre_en: 'Parish bulletins',
         description_fr: 'Ensemble des bulletins pastoraux du diocèse',
         description_en: 'All pastoral bulletins of the diocese',
         link: '/bulletins'
