@@ -66,7 +66,7 @@ export default async function RootLayout({
             {children}
 
             {/* Newsletter */}
-            <Newsletter />
+            {/* <Newsletter /> */}
 
             {/* Footer */}
             <Footer />
