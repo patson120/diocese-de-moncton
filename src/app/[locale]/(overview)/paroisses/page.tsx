@@ -31,6 +31,10 @@ export default async function Page(props: {
     if (langue) params = `${params}&langue=${langue}`
     
     paroisses = await fetchParoisses(params)
+    if (paroisses.length){
+        // Classer les paroisses par ordre alphabétique
+        paroisses.sort((a, b) => a.nom.localeCompare(b.adresse))
+    }
 
     return (
         <section className='container max-margin vertical-margin pt-5 mt-0'>

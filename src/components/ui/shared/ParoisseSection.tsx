@@ -13,7 +13,11 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
     if (query) params += `&nom=${query}`
     if (gps) params += `&gps=${gps}`
 
-    const paroisses: Paroisse[] = await fetchParoisses(`${params}`)
+    let paroisses: Paroisse[] = await fetchParoisses(`${params}`)
+    if (paroisses.length){
+        // Classer les paroisses par ordre alphabétique
+        paroisses.sort((a, b) => a.nom.localeCompare(b.adresse))
+    }
     
     return (
         <div className="vertical-margin" >
