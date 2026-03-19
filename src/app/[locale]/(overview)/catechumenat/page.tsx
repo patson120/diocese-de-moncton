@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 
 export default function Page() {
-    const t = useTranslations("education_de_la_foi")
+    const t = useTranslations("catechumenat")
     return (
         <main>
             {/* Hero section */}
@@ -26,12 +26,12 @@ export default function Page() {
                                 <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
                                 <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
-                            <div className='mt-6 mb-8 md:mb-0'>
+                            {/* <div className='mt-6 mb-8 md:mb-0'>
                                 <Button size="sm" className="px-5 w-full md:w-auto">
                                     <span className='hidden md:block'>{t("section_btn_1")}</span>
                                     <span className='md:hidden'>{t("section_btn_1")}</span>
                                 </Button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className='col-span-full lg:col-span-2 '>
@@ -73,12 +73,12 @@ export default function Page() {
                                     <li className='body-2 text-gray list-disc'>{t("section_2_li_5")}</li>
                                 </ul>
                             </div>
-                            <div className='mt-6 mb-8 md:mb-0'>
+                            {/* <div className='mt-6 mb-8 md:mb-0'>
                                 <Button size="sm" className="px-5 w-full md:w-auto">
                                     <span className='hidden md:block'>{t("section_btn_1")}</span>
                                     <span className='md:hidden'>{t("section_btn_2")}</span>
                                 </Button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

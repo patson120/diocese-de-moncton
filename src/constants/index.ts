@@ -53,7 +53,7 @@ export const archidiocese: MenuType[] = [
         titre_en: 'Faith education from ...',
         description_fr: 'Accompagner les jeunes dans leur cheminement de foi.',
         description_en: 'Accompanying young people on their faith journey.',
-        link: '/education-de-la-foi'
+        link: ''
     },
     {
         id: 6,
@@ -83,7 +83,7 @@ export const archidiocese: MenuType[] = [
         titre_en: 'Catechumenate',
         description_fr: 'Accompagner les personnes dans la foi.',
         description_en: 'Accompanying people in their faith.',
-        link: '/education-de-la-foi'
+        link: '/catechumenat'
     },
 ]
 
@@ -124,7 +124,7 @@ export const sacrements: MenuType[] = [
         description_en: 'A sacrament of healing and mercy',
         link: '/reconcilliation-sacrements'
     },
-    {
+   /*  {
         id: 5,
         image: '/assets/icons/Frame.png',
         titre_fr: 'Mariages',
@@ -132,7 +132,7 @@ export const sacrements: MenuType[] = [
         description_fr: 'Une alliance d\'amour bénie par Dieu',
         description_en: 'A covenant of love blessed by God',
         link: '/mariage-sacrements'
-    },
+    }, */
     {
         id: 6,
         image: '/assets/icons/plus.png',

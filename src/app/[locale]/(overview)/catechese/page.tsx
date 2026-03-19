@@ -59,11 +59,11 @@ export default function Page() {
                                 <p className='body-2 text-gray'>{t("section_1_p_1")}</p>
                                 <p className='body-2 text-gray'>{t("section_1_p_2")}</p>
                             </div>
-                            <div className='mt-6 mb-8 md:mb-0'>
+                            {/* <div className='mt-6 mb-8 md:mb-0'>
                                 <Button size="sm" className="px-5 w-full md:w-auto">
                                     <span className='text-inherit'>{t("section_btn")}</span>
                                 </Button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className='col-span-full lg:col-span-2 '>
@@ -99,11 +99,11 @@ export default function Page() {
                                 <p className='body-2 text-gray'>{t("section_2_p_1")} </p>
                                 <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                             </div>
-                            <div className='mt-6 mb-8 md:mb-0'>
+                            {/* <div className='mt-6 mb-8 md:mb-0'>
                                 <Button size="sm" className="px-5 w-full md:w-auto">
                                     <span className='text-inherit'>{t("section_btn")}</span>
                                 </Button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -128,11 +128,11 @@ export default function Page() {
                         </div>
                         <h1 className='heading-4'>{t("section_3_sous_titre_1")} <span className='text-base font-normal'>{t("section_3_sous_titre_2")}</span></h1>
                         <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
-                        <div className='pt-6 mb-8 md:mb-0'>
+                        {/* <div className='pt-6 mb-8 md:mb-0'>
                             <Button size="sm" className="px-5 w-full md:w-auto">
                                 <span className='text-inherit'>{t("section_btn")}</span>
                             </Button>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='space-y-3'>
                         <div className='h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
@@ -149,11 +149,11 @@ export default function Page() {
                         </div>
                         <h1 className='heading-4'>{t("section_3_sous_titre_3")} <span className='text-base font-normal'>{t("section_3_sous_titre_2")}</span></h1>
                         <p className='body-2 text-gray'>{t("section_3_p_2")}</p>
-                        <div className='pt-6 mb-8 md:mb-0'>
+                        {/* <div className='pt-6 mb-8 md:mb-0'>
                             <Button size="sm" className="px-5 w-full md:w-auto">
                                 <span className='text-inherit'>{t("section_btn")}</span>
                             </Button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
@@ -164,20 +164,20 @@ export default function Page() {
                     <div className='space-y-3 rounded-xl lg:rounded-3xl border px-5 py-8'>
                         <h1 className='heading-4'>{t("section_4_sous_titre_1")}</h1>
                         <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
-                        <div className='pt-4 lg:pt-8 md:mb-0'>
+                        {/* <div className='pt-4 lg:pt-8 md:mb-0'>
                             <Button size="sm" className="px-5 w-full md:w-auto">
                                 <span className='text-inherit'>{t("section_btn")}</span>
                             </Button>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='space-y-3 rounded-xl lg:rounded-3xl border px-5 py-8'>
                         <h1 className='heading-4'>{t("section_4_sous_titre_2")}</h1>
                         <p className='body-2 text-gray'>{t("section_4_p_2")}</p>
-                        <div className='pt-4 lg:pt-8 md:mb-0'>
+                        {/* <div className='pt-4 lg:pt-8 md:mb-0'>
                             <Button size="sm" className="px-5 w-full md:w-auto">
                                 <span className='text-inherit'>{t("section_btn")}</span>
                             </Button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
