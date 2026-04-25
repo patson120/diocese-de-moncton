@@ -33,7 +33,10 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
                     <section className="col-span-3 md:col-span-1 flex flex-col gap-4">
                         { [1, 2, 3, 4, 5].map(i => <ParoisseItemSkeleton key={i} />) }
                     </section>}>
-                    <RecentParoisses paroisses={paroisses.slice(0, 4)} total={paroisses.length} />
+                    <RecentParoisses 
+                        paroisses={paroisses.slice(0, 4)}
+                        total={paroisses.length} 
+                    />
                 </Suspense>
             </section>
         </ div>

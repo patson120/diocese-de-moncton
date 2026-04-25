@@ -32,14 +32,16 @@ export default function Footer() {
             </h2>
             <ul className='space-y-2 lg:space-y-4 body-3'>
               <li className='text-[#B5B5B5]'>
-                <Text className='text-inherit' keyString='nouvelles_diocesaines' />
+                <Link href="/actualites">
+                  <Text className='text-inherit' keyString='nouvelles_diocesaines' />
+                </Link>
               </li>
               <li className='text-[#B5B5B5]'>
                 <Link href="/evenements">
                   <Text className='text-inherit' keyString='evenements_venir' />
                 </Link>
               </li>
-              <li className='text-[#B5B5B5]'>Archives</li>
+              {/* <li className='text-[#B5B5B5]'>Archives</li> */}
             </ul>
           </div>
 
@@ -71,15 +73,15 @@ export default function Footer() {
                 <Text className='text-inherit' keyString='ressources' />
             </h2>
             <ul className='space-y-2 lg:space-y-4 body-3 '>
-              <li className='text-[#B5B5B5]'>
+              {/* <li className='text-[#B5B5B5]'>
                 <Text className='text-inherit' keyString='prieres' />
-              </li>
-              <li className='text-[#B5B5B5]'>
+              </li> */}
+              {/* <li className='text-[#B5B5B5]'>
                 <Text className='text-inherit' keyString='textes_religieux' />
-              </li>
-              <li className='text-[#B5B5B5]'>
+              </li> */}
+              {/* <li className='text-[#B5B5B5]'>
                 <Text className='text-inherit' keyString='formations' />
-              </li>
+              </li> */}
               <li className='text-[#B5B5B5]'>
                 <Link href="/bulletins">
                   <Text className='text-inherit' keyString='documents_officiels' />
@@ -98,9 +100,9 @@ export default function Footer() {
                   <Text className='text-inherit' keyString='footer_notre_histoire' />
                 </Link>
               </li>
-              <li className='text-[#B5B5B5]'>
+              {/* <li className='text-[#B5B5B5]'>
                 <Text className='text-inherit' keyString='missions_valeurs' />
-              </li>
+              </li> */}
               <li className='text-[#B5B5B5]'>
                 <Link href="/clerges">
                   <Text className='text-inherit' keyString='clerge' />

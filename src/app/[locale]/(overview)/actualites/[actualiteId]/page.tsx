@@ -47,8 +47,8 @@ export default async function Page(
                 href: '',
                 active: true,
                 data: {
-                  labelEn: actualite?.titre_en.slice(0, 30) ?? "",
-                  labelFr: actualite?.titre_fr.slice(0, 30) ?? "",
+                  labelEn: actualite?.titre_en?.slice(0, 30) ?? "",
+                  labelFr: actualite?.titre_fr?.slice(0, 30) ?? "",
                 },
               },
             ]}
