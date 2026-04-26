@@ -25,30 +25,42 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
     if (p.statut === 0) {
       return {
         path: google.maps.SymbolPath.CIRCLE,
-        fillColor: 'red', // Couleur pour paroisses fermées
+        fillColor: 'black', // Couleur pour paroisses fermées
         fillOpacity: 1,
         scale: 10,
         strokeColor: 'white',
         strokeWeight: 1,
       };
-    } else {
+    } 
+    else if (p.statut === 1 && p.langue === "fr") {
       return {
         path: google.maps.SymbolPath.CIRCLE,
-        fillColor: 'green', // Couleur pour paroisses ouvertes
+        fillColor: 'blue', // Couleur pour paroisses ouvertes et francophones
         fillOpacity: 1,
         scale: 10,
         strokeColor: 'white',
         strokeWeight: 1,
       };
     }
-    switch (p.statut) {
+    else if (p.statut === 1 && p.langue === "en") {
+      return {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'red', // Couleur pour paroisses ouvertes et anglophones
+        fillOpacity: 1,
+        scale: 10,
+        strokeColor: 'white',
+        strokeWeight: 1,
+      }
+    }
+
+    /* switch (p.statut) {
       case 0:
         return '/assets/icons/map-pin-close.svg'
       case 1:
         return '/assets/icons/map-pin-open.svg'
       default:
         return '/assets/icons/map-pin-close.svg'
-    }
+    } */
   }
 
   useEffect(() => {
