@@ -89,7 +89,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
             lat: 46.091091, // first ? parseFloat(first!.gps?.split(";")[0]) : 46.091091,
             lng: -64.781880, // first ? parseFloat(first!.gps?.split(";")[1]) : -64.781880
           },
-          zoom: 9,
+          zoom: 10,
           styles: [
             {
               featureType: 'poi.business',

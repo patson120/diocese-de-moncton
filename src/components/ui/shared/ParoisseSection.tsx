@@ -16,7 +16,7 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
     let paroisses: Paroisse[] = await fetchParoisses(`${params}`)
     if (paroisses.length){
         // Classer les paroisses par ordre alphabétique
-        paroisses.sort((a, b) => a.nom.localeCompare(b.adresse))
+        paroisses.sort((a, b) => a.nom.localeCompare(b.nom))
     }
     
     return (
@@ -26,7 +26,7 @@ export default async function ParoisseSection({ query, gps}: { query: string, gp
             </h1>
             <section className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12">
                 <div className="min-h-96 md:h-auto col-span-3 md:col-span-2 rounded-2xl overflow-hidden bg-gray-50 relative">
-                    <MapSection paroisses={paroisses.length? paroisses:[]} />
+                    <MapSection paroisses={paroisses.length? paroisses :[]} />
                     <SearchParoisses />
                 </div>
                 <Suspense fallback={

@@ -2,7 +2,6 @@
 import { inter } from '@/app/fonts/fonts';
 import Footer from '@/components/ui/shared/footer';
 import Header from '@/components/ui/shared/header';
-import Newsletter from '@/components/ui/shared/newsletter';
 import { Toaster as SonnerToaster } from '@/components/ui/sonner';
 import { Toaster } from '@/components/ui/toaster';
 import { routing } from '@/i18n/routing';
