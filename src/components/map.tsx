@@ -3,6 +3,7 @@
 import { useRouter } from '@/i18n/routing';
 import { Paroisse } from '@/types';
 import { Loader } from '@googlemaps/js-api-loader';
+import { useLocale } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 
 interface MapProps {
@@ -18,6 +19,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
   let map: google.maps.Map;
 
   const router = useRouter();
+  // const localActive = useLocale();
 
   const [first, setfirst] = useState<Paroisse>(selectedParish!)
 
@@ -52,6 +54,16 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
         strokeWeight: 1,
       }
     }
+    else if (p.statut === 1) {
+      return {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: 'red', // Couleur pour paroisses ouvertes et anglophones
+        fillOpacity: 1,
+        scale: 10,
+        strokeColor: 'white',
+        strokeWeight: 1,
+      }
+    }
 
     /* switch (p.statut) {
       case 0:
@@ -74,10 +86,10 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
       if (mapRef.current && !googleMapRef.current) {
         map = new google.maps.Map(mapRef.current, {
           center: { 
-            lat: first ? parseFloat(first!.gps?.split(";")[0]) : 46.091091,
-            lng: first ? parseFloat(first!.gps?.split(";")[1]) : -64.781880
+            lat: 46.091091, // first ? parseFloat(first!.gps?.split(";")[0]) : 46.091091,
+            lng: -64.781880, // first ? parseFloat(first!.gps?.split(";")[1]) : -64.781880
           },
-          zoom: 12,
+          zoom: 9,
           styles: [
             {
               featureType: 'poi.business',

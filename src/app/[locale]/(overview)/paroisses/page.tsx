@@ -7,6 +7,7 @@ import Filter from './Filter'
 import Paroisses from './paroisses'
 import SearchComp from './SearchComp'
 import MapSection from '@/components/ui/shared/MapSection'
+import { useLocale } from 'next-intl'
 
 
 export default async function Page(props: {
@@ -29,11 +30,12 @@ export default async function Page(props: {
     if (gps) params = `${params}&gps=${gps}`
     if (statut) params = `${params}&statut=${statut}`
     if (langue) params = `${params}&langue=${langue}`
+
     
     paroisses = await fetchParoisses(params)
     if (paroisses.length){
         // Classer les paroisses par ordre alphabétique
-        paroisses.sort((a, b) => a.nom.localeCompare(b.adresse))
+        paroisses.sort((a, b) => a.nom.localeCompare(b.nom))
     }
 
     return (
