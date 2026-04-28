@@ -9,6 +9,13 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
     const localActive = useLocale()
     const t = useTranslations("horaires_messe")
 
+    // Classe les horaire par ordre croissant de nom de paroisse
+    horaires = horaires.sort((a, b) => {
+        const nameA = localActive === 'fr' ? a.paroisse.nom : a.paroisse.nom_en || '';
+        const nameB = localActive === 'fr' ? b.paroisse.nom : b.paroisse.nom_en || '';
+        return nameA.localeCompare(nameB);
+    });
+
     const days = {
         "dimanche": localActive === 'fr' ? "Dimanche" : "Sunday",
         "lundi": localActive === 'fr' ? 'Lundi' : "Monday",
