@@ -180,25 +180,25 @@ export const mouvements: MenuType[] = [
         titre_en: 'Knights of Columbus',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/chevaliers-de-colomb'
     },
     {
         id: 2,
+        image: '/assets/icons/people.png',
+        titre_fr: 'Comité diocésain de la bible (Société biblique)',
+        titre_en: 'Diocesan Bible Committee (Bible Society)',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: 'https://www.diocesemoncton.ca/fr/comite-diocesain-de-la-bible-societe-biblique'
+    },
+    {
+        id: 3,
         image: '/assets/icons/people.png',
         titre_fr: 'Mouvements des Femmes Chrétiennes',
         titre_en: 'Catholic Women\'s League (C.W.L)',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: '/mouvements'
-    },
-    {
-        id: 3,
-        image: '/assets/icons/people.png',
-        titre_fr: 'Laudato Si',
-        titre_en: 'Laudato Si',
-        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/mouvement-des-femmes-chretiennes'
     },
     {
         id: 4,
@@ -207,7 +207,7 @@ export const mouvements: MenuType[] = [
         titre_en: 'Cursillo',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/cursillo'
     },
     {
         id: 5,
@@ -216,63 +216,89 @@ export const mouvements: MenuType[] = [
         titre_en: 'Development and peace',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/developpement-et-paix'
     },
     {
         id: 6,
+        image: '/assets/icons/people.png',
+        titre_fr: 'La vie montante',
+        titre_en: 'Life on the rise',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: 'https://www.diocesemoncton.ca/fr/la-vie-montante'
+    },
+    {
+        id: 7,
         image: '/assets/icons/people.png',
         titre_fr: 'Legion de Marie',
         titre_en: 'Marie\'s Legion',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/legion-de-marie'
     },
     {
         id: 8,
-        image: '/assets/icons/people.png',
-        titre_fr: "Propagation de la foi et services d'animation missionnaire",
-        titre_en: "Spreading the Faith and Missionary Outreach Services",
-        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
-        description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
-    },
-    {
-        id: 9,
         image: '/assets/icons/people.png',
         titre_fr: 'Renouveau charismatique',
         titre_en: 'Charismatic renewal',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/renouveau-charistmatique'
+    },
+    {
+        id: 9,
+        image: '/assets/icons/people.png',
+        titre_fr: 'Service d\'animation missionnaire',
+        titre_en: 'Missionary animation service',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: 'https://www.diocesemoncton.ca/fr/service-danimation-missionnaire'
     },
     {
         id: 10,
+        image: '/assets/icons/people.png',
+        titre_fr: 'Protocole de minsitère responsable',
+        titre_en: 'Responsible Ministry Protocol',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: 'https://www.diocesemoncton.ca/fr/responsible-ministry-protocol'
+    },
+    {
+        id: 11,
+        image: '/assets/icons/people.png',
+        titre_fr: 'Scouts',
+        titre_en: 'Scouts',
+        description_fr: 'Lorem ipsum dolor sit amet consectetur.',
+        description_en: 'Lorem ipsum dolor sit amet consectetur.',
+        link: 'https://www.diocesemoncton.ca/fr/scouts'
+    },
+    {
+        id: 12,
         image: '/assets/icons/people.png',
         titre_fr: 'Service de préparation au mariage',
         titre_en: 'Pre-marriage counseling service',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/service-de-preparation-au-mariage'
     },
     {
-        id: 11,
+        id: 13,
         image: '/assets/icons/people.png',
         titre_fr: 'Société St. Vincent de Paul',
         titre_en: 'St. Vincent de Paul Society',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/societe-st-vincent-de-paul'
     },
     {
-        id: 12,
+        id: 14,
         image: '/assets/icons/people.png',
         titre_fr: 'Vivre et aimer - Rencontre conjugale',
         titre_en: 'Live and love - Rencontre conjugale',
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
-        link: ''
+        link: 'https://www.diocesemoncton.ca/fr/vivre-et-aimer'
     },
-    
 ]
 
 export const ressources: MenuType[] = [
