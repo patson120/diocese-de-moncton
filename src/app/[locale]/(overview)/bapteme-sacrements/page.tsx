@@ -107,7 +107,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <div className='mt-8 md:mt-16'></div>
+            {/* <div className='mt-8 md:mt-16'></div>
             <section className='container max-margin py-0'>
                 <div className=''>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre")}</h2>
@@ -131,7 +131,7 @@ export default function Page() {
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                 </div>
-            </section>
+            </section> */}
 
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0 pb-10'>

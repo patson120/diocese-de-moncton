@@ -329,13 +329,21 @@
         "section_3_desc": "The chancery offers a range of services to support members of the diocesan Church",
 
         "section_4_titre": "Contact",
-        "section_4_p_1": "Place de la Cathédrale",
+        "section_4_p_1": "Cathedral Square",
         "section_4_p_2": "224 St. George Street, Suite 104",
         "section_4_p_3": "Moncton, New Brunswick",
         "section_4_p_4": "E1C 0V1",
-        "section_4_p_5": "Telephone: (506) 857-9531 ext. 1228",
+        "section_4_p_5": "Phone: (506) 857-9531 ext. 1228",
         "section_4_p_6": "Fax : (506) 388-2759",
-        "section_4_p_7": "E-mail address"
+        "section_4_p_7": "E-mail address",
+        "tax": "Tax",
+        "data_1": "Single lot",
+        "data_2": "Double pack",
+        "data_3": "3-pack",
+        "data_4": "Small lot (2 urns)",
+        "data_5": "Niche",
+        "data_6": "Opening, closing, and ongoing maintenance for a coffin",
+        "data_7": "Opening, closing, and ongoing maintenance for an urn"
     },
     "confirmation_sacrements": {
         "hero_titre": "The sacrament of Confirmation",

@@ -343,7 +343,15 @@
         "section_4_p_4": "E1C 0V1",
         "section_4_p_5": "Téléphone : (506) 857-9531 poste 1228",
         "section_4_p_6": "Fax : (506) 388-2759",
-        "section_4_p_7": "Adresse couriel"
+        "section_4_p_7": "Adresse couriel",
+        "tax": "Taxe",
+        "data_1": "Lot simple",
+        "data_2": "Lot double",
+        "data_3": "Lot triple",
+        "data_4": "Petit lot (2 urnes)",
+        "data_5": "Niche",
+        "data_6": "Ouverture, fermeture et entretien perpétuel pour cercueil",
+        "data_7": "Ouverture, fermeture et entretien perpétual pour urne"
     },
     "confirmation_sacrements": {
         "hero_titre": "Le sacrement de la confirmation",

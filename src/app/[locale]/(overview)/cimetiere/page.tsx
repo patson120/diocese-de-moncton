@@ -109,32 +109,32 @@ export default function Page() {
                     <p className='body-2 text-gray'>{t("section_3_desc")}</p>
                     <div className='mt-10 space-y-4'>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
-                            <h2 className='body-2 text-gray'>Lot simple</h2>
-                            <p className='body-2 font-bold whitespace-nowrap'>1,000.00 + taxe</p>
+                            <h2 className='body-2 text-gray'>{t("data_1")}</h2>
+                            <p className='body-2 font-bold whitespace-nowrap'>1,000.00 + {t("tax")}</p>
                         </div>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
-                            <h2 className='body-2 text-gray'>Lot double</h2>
-                            <p className='body-2 font-bold whitespace-nowrap'>2,000.00 + taxe</p>
+                            <h2 className='body-2 text-gray'>{t("data_2")}</h2>
+                            <p className='body-2 font-bold whitespace-nowrap'>2,000.00 + {t("tax")}</p>
                         </div>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
-                            <h2 className='body-2 text-gray'>Lot triple</h2>
-                            <p className='body-2 font-bold whitespace-nowrap'>2,800.00 + taxe</p>
+                            <h2 className='body-2 text-gray'>{t("data_3")}</h2>
+                            <p className='body-2 font-bold whitespace-nowrap'>2,800.00 + {t("tax")}</p>
                         </div>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
-                            <h2 className='body-2 text-gray'>Petit lot (2 urnes)</h2>
-                            <p className='body-2 font-bold whitespace-nowrap'>800.00 + taxe</p>
+                            <h2 className='body-2 text-gray'>{t("data_4")}</h2>
+                            <p className='body-2 font-bold whitespace-nowrap'>800.00 + {t("tax")}</p>
                         </div>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
-                            <h2 className='body-2 text-gray'>Niche</h2>
-                            <p className='body-2 font-bold whitespace-nowrap'>2,500.00 + taxe</p>
+                            <h2 className='body-2 text-gray'>{t("data_5")}</h2>
+                            <p className='body-2 font-bold whitespace-nowrap'>2,500.00 + {t("tax")}</p>
                         </div>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
-                            <h2 className='body-2 text-gray'>Ouverture, fermeture et entretien perpétuel pour cercueil</h2>
-                            <p className='body-2 font-bold whitespace-nowrap'>1,000.00 + taxe</p>
+                            <h2 className='body-2 text-gray'>{t("data_6")}</h2>
+                            <p className='body-2 font-bold whitespace-nowrap'>1,000.00 + {t("tax")}</p>
                         </div>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
-                            <h2 className='body-2 text-gray'>Ouverture, fermeture et entretien perpétual pour urne</h2>
-                            <p className='body-2 font-bold whitespace-nowrap'>600.00 + taxe</p>
+                            <h2 className='body-2 text-gray'>{t("data_7")}</h2>
+                            <p className='body-2 font-bold whitespace-nowrap'>600.00 + {t("tax")}</p>
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ export default function Page() {
                         <p className='body-2 text-gray'>{t("section_4_p_4")}</p>
                         <p className='body-2 text-gray'>{t("section_4_p_5")}</p>
                         <p className='body-2 text-gray'>{t("section_4_p_6")}</p>
-                        <p className='body-2 text-gray'>{t("section_4_p_7")} ; cimetiere@diocesemoncton.ca</p>
+                        <p className='body-2 text-gray'>{t("section_4_p_7")} : cimetiere@diocesemoncton.ca</p>
                     </div>
                 </div>
             </section>
