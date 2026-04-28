@@ -57,6 +57,11 @@ export default function Header() {
             title: localActive == 'fr' ?  "Ressources" : "Resources",
             items: [...ressources, ...linksRegistry.filter(item => item.menu! === '4')]
         },
+        {
+            title: localActive == 'fr' ?  "Contact" : "Contact",
+            items: [],
+            page: '/contact'
+        },
     ]
 
     const onMouseEvent =  async (event: React.MouseEvent<HTMLLIElement, globalThis.MouseEvent>, type: string) => {
