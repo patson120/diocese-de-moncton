@@ -145,7 +145,7 @@ export default function Page() {
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_4_titre")}</h2>
                     <div>
-                        <p className='body-2 text-gray'>Rachel Vienneau</p>
+                        <p className='body-2 text-gray'>Julien Okou</p>
                         <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                         <p className='body-2 text-gray'>{t("section_4_p_2")}</p>
                         <p className='body-2 text-gray'>{t("section_4_p_3")}</p>
