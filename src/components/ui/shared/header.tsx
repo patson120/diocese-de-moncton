@@ -66,7 +66,6 @@ export default function Header() {
 
     const onMouseEvent =  async (event: React.MouseEvent<HTMLLIElement, globalThis.MouseEvent>, type: string) => {
         if (event.type === "mouseleave"){
-            // setMenus([])
             return
         }
         const submenu = document.querySelector('#submenu') as HTMLDivElement
@@ -237,6 +236,9 @@ export default function Header() {
                                 </li>
                                 <li onMouseEnter={(e) => onMouseEvent(e, 'ressources')} onMouseLeave={(e) => {onMouseEvent(e, 'ressources')}} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
                                     <Text className='text-inherit' keyString='ressources' />
+                                </li>
+                                <li onMouseEnter={onMouseLeave} className='px-2 py-1 cursor-pointer hover:text-black hover:extrabold'>
+                                <Link href="/contact"><Text className='text-inherit' keyString='contact' /></Link>
                                 </li>
                             </ul>
                             <div className='flex'>
