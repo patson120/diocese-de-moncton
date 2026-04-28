@@ -182,7 +182,7 @@ export const mouvements: MenuType[] = [
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: 'https://www.diocesemoncton.ca/fr/chevaliers-de-colomb'
     },
-    {
+   /*  {
         id: 2,
         image: '/assets/icons/people.png',
         titre_fr: 'Comité diocésain de la bible (Société biblique)',
@@ -190,7 +190,7 @@ export const mouvements: MenuType[] = [
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: 'https://www.diocesemoncton.ca/fr/comite-diocesain-de-la-bible-societe-biblique'
-    },
+    }, */
     {
         id: 3,
         image: '/assets/icons/people.png',
@@ -218,7 +218,7 @@ export const mouvements: MenuType[] = [
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: 'https://www.diocesemoncton.ca/fr/developpement-et-paix'
     },
-    {
+    /* {
         id: 6,
         image: '/assets/icons/people.png',
         titre_fr: 'La vie montante',
@@ -226,7 +226,7 @@ export const mouvements: MenuType[] = [
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: 'https://www.diocesemoncton.ca/fr/la-vie-montante'
-    },
+    }, */
     {
         id: 7,
         image: '/assets/icons/people.png',
@@ -263,7 +263,7 @@ export const mouvements: MenuType[] = [
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: 'https://www.diocesemoncton.ca/fr/responsible-ministry-protocol'
     },
-    {
+    /* {
         id: 11,
         image: '/assets/icons/people.png',
         titre_fr: 'Scouts',
@@ -271,7 +271,7 @@ export const mouvements: MenuType[] = [
         description_fr: 'Lorem ipsum dolor sit amet consectetur.',
         description_en: 'Lorem ipsum dolor sit amet consectetur.',
         link: 'https://www.diocesemoncton.ca/fr/scouts'
-    },
+    }, */
     {
         id: 12,
         image: '/assets/icons/people.png',
