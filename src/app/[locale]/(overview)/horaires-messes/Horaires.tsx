@@ -25,6 +25,7 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
         "vendredi": localActive === 'fr' ? 'Vendredi' : 'Friday',
         "samedi": localActive === 'fr' ? 'Samedi' : "Saturday"
     }
+    
     function formatFrenchTimeToEnglish(frenchTime: string): string {
 
         if (!frenchTime.includes(':')) {
@@ -48,6 +49,7 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
         // Formatter l'heure en anglais
         return new Intl.DateTimeFormat('en-US', options).format(date);
     }
+
     return (
         <div className="mt-8 lg:mt-16 flex flex-col justify-center items-center">
             <div className='w-full md:w-3/4 lg:w-1/2 flex flex-col gap-4'>

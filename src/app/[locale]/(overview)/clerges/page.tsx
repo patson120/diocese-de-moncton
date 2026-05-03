@@ -3,12 +3,14 @@
 import { fetchMembres } from "@/_lib/data";
 import { HeroSectionSecond } from "@/components/sections/hero-second";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Membre } from "@/types";
 import { useEffect, useState } from 'react';
 import MemberComp from "./member-comp";
 import { useLocale, useTranslations } from "next-intl";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 
 
@@ -19,6 +21,7 @@ export default function Page() {
 
     const [isFetching, setIsFetching] = useState(false)
     const localActive = useLocale()
+    const [etat, setEtat] = useState("1")
 
     const menus = [
         {
@@ -53,7 +56,7 @@ export default function Page() {
 
     const getMembres = async () => {
         setIsFetching(true)
-        const response: Membre[] = await fetchMembres(`?categorie_id=${selectedMenu.id}`)
+        const response: Membre[] = await fetchMembres(`?categorie_id=${selectedMenu.id}&etat=${etat}`)
         // Classer les membres par ordre alphabétique
         response.sort((a, b) => a.nom.localeCompare(b.nom))
         setMembres(response)
@@ -62,7 +65,7 @@ export default function Page() {
 
     useEffect(() => {
         getMembres()
-    }, [selectedMenu])
+    }, [selectedMenu, etat])
 
     return (
         <main>
@@ -81,7 +84,10 @@ export default function Page() {
                             {
                                 menus.map((menu, index) => (
                                     <TabsTrigger
-                                        onClick={() => setSelectedMenu(menu)}
+                                        onClick={() => {
+                                            setEtat("1")
+                                            setSelectedMenu(menu)
+                                        }}
                                         key={index} value={menu.slug}
                                         className={`${selectedMenu.id === menu.id ? '!bg-[#1D0104] !text-white !font-bold' : 'bg-[#F5F5F5]'}  rounded-[8px] py-2`}>
                                         {menu.title}
@@ -89,289 +95,75 @@ export default function Page() {
                                 ))
                             }
                         </TabsList>
+                        <TabsContent
+                            value={selectedMenu.slug}
+                            className="border-none">
+                            <Tabs defaultValue="actif" className="w-full">
+                                <div className="flex justify-between items-center">
+                                    <TabsList className="justify-start h-12 p-0 bg-[#F1F3F6] rounded-md px-3 py-2">
+                                        <TabsTrigger
+                                            onClick={() => setEtat('1')}
+                                            value="actif"
+                                            className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray">
+                                            <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
+                                                Actif
+                                            </span>
+                                        </TabsTrigger>
+                                        <TabsTrigger
+                                            value="en-retraite"
+                                            onClick={() => setEtat('0')}
+                                            className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray">
+                                            <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
+                                                En retraite
+                                            </span>
+                                        </TabsTrigger>
+                                        <TabsTrigger
+                                            value="decedes"
+                                            onClick={() => setEtat('-1')}
+                                            className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray">
+                                            <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
+                                                Décédés
+                                            </span>
+                                        </TabsTrigger>
+                                    </TabsList>
+                                </div>
 
-                        {
-                            isFetching ?
-                            <div className='h-44 w-full flex justify-center items-center'>
-                                <LoadingSpinner />
-                            </div> :
-                            <MemberComp membres={membres} />    
-                        }
-
-
-                        {/**
-                            <TabsContent value="diacres">
-                                <Diacres membres={membres} />
+                                <TabsContent value="actif" className="mt-6 space-y-6">
+                                    {
+                                        isFetching ?
+                                            <div className='h-44 w-full flex justify-center items-center'>
+                                                <LoadingSpinner />
+                                            </div> : membres.length === 0 ?
+                                                <p className="text-gray h-[200px] flex justify-center items-center">Aucune donnée trouvée</p> :
+                                                <MemberComp membres={membres} />
+                                    }
                                 </TabsContent>
-                                <TabsContent value="les-peres-redemptoristes">
-                                    <Autres />
-                                    <div className='mt-10 md:mt-20'></div>
-                                    <section>
-                                        <div className='w-full lg:w-1/2'>
-                                            <h2 className='heading-5 text-gray-900 mb-4'>Retrouvez les pères rédemptoristes</h2>
-                                            <p className='body-2 text-gray'>Paroisse St-Louis-des-Français, 10565, rue Principale, St-Louis-de-Kent,  (NB)   E4X 1E9</p>
-                                            <p className='body-2 text-gray'>site web : http://www.redemptoristes.ca/</p>
-                                        </div>
-                                    </section>
+
+                                <TabsContent
+                                    value="en-retraite"
+                                    className="mt-6 p-0 border-none">
+                                    {
+                                        isFetching ?
+                                            <div className='h-44 w-full flex justify-center items-center'>
+                                                <LoadingSpinner />
+                                            </div> : membres.length === 0 ?
+                                                <p className="text-gray h-[200px] flex justify-center items-center">Aucune donnée trouvée</p> :
+                                                <MemberComp membres={membres} />
+                                    }
                                 </TabsContent>
-                                <TabsContent value="clerge-diocesains">
-                                    <Autres />
+
+                                <TabsContent value="decedes" className="mt-6 p-0 border-none">
+                                    {
+                                        isFetching ?
+                                            <div className='h-44 w-full flex justify-center items-center'>
+                                                <LoadingSpinner />
+                                            </div> : membres.length === 0 ?
+                                                <p className="text-gray h-[200px] flex justify-center items-center">Aucune donnée trouvée</p> :
+                                                <MemberComp membres={membres} />
+                                    }
                                 </TabsContent>
-                                <TabsContent value="congregations-des-saintes-croix">
-                                <Autres />
-                                <div className='mt-10 md:mt-20'></div>
-                                <section>
-                                    <div className='w-full lg:w-1/2'>
-                                        <h2 className='heading-5 text-gray-900 mb-4'>Retrouvez la congrégation des Sainte-Croix, c.s.c.Faubourg du Mascaret, pavillon LeBlanc</h2>
-                                        <p className='body-2 text-gray'>171, avenue Morton, Moncton, NB, E1A 9V7</p>
-                                        <p className='body-2 text-gray'>Téléphone/Télécopieur: 506 854-6498(salle communautaire)</p>
-                                        <p className='body-2 text-gray'>site web : ste-croix.qc.ca/</p>
-                                    </div>
-                                </section>
-                            </TabsContent>
-
-                            const Diacres = ( {membres}: { membres: Membre[]} ) => {
-                                const [open,  setOpen ] = useState(false)
-                                const [selectedItem, setSelectedItem] = useState<Membre | undefined>()
-                                
-                                return <>
-                                    <div className='lg:flex lg:flex-row lg:overflow-x-scroll h-scroll pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
-                                        {
-                                            membres.map((member: Membre) => (
-                                                <div key={member.id} className='space-y-3 w-full' >
-                                                    <div className='h-[240px] min-w-[240px] relative rounded-xl overflow-hidden'>
-                                                        <Image
-                                                            alt={`Image ${member.nom}`}
-                                                            src={ member.image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${member.image}` : "/assets/img/clerge-1.png" }
-                                                            fill
-                                                            style={{
-                                                                objectFit: 'cover',
-                                                                height: '100%',
-                                                                width: '100%'
-                                                            }}
-                                                        />
-                                                    </div>
-                                                    <h1 className='body-2 font-bold'>{member.nom}</h1>
-                                                    <p className='body-2 text-gray'>{member.poste}</p>
-                                                    <div className="">
-                                                        <Button size={'sm'} variant={'link'} onClick={() => { setSelectedItem(member); setOpen(true) }} className="underline text-black px-0 ">
-                                                            Coordonnées
-                                                        </Button>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
-                                    <DiacresDialog open={open} onOpenChange={setOpen} item={selectedItem} />
-                                </>
-                            }
-
-                            const Pretres = ( {membres}: { membres: Membre[]} ) => {
-                                const [open, setOpen] = useState(false)
-                                const [selectedItem, setSelectedItem] = useState<any>({})
-                                return <>
-                                    <div className='lg:flex lg:flex-row pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
-                                        {
-                                            membres.map((member: Membre) => (
-                                                <div key={member.id} className='space-y-3 w-full' >
-                                                    <div className='h-[240px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
-                                                        <Image
-                                                            alt="Célébration de baptême"
-                                                            src="/assets/img/placeholder-vector.png"
-                                                            width={60}
-                                                            height={60}
-                                                            style={{
-                                                                objectFit: 'cover',
-                                                            }}
-                                                        />
-                                                    </div>
-                                                    <h1 className='body-2 font-bold'>{member.nom}</h1>
-                                                    <p className='body-2 text-gray'>{member.coordonnees}</p>
-                                                    <div className="">
-                                                        <Button size={'sm'} variant={'link'} onClick={() => { setSelectedItem(member); setOpen(true) }} className="underline text-black px-0 ">
-                                                            Coordonnées
-                                                        </Button>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
-                                    <PretresDialog open={open} onOpenChange={setOpen} item={selectedItem} />
-                                </>
-                            }
-
-                            const DiacresDialog = ({
-                                open,
-                                onOpenChange,
-                                item
-                            }: {
-                                open: boolean;
-                                onOpenChange: (open: boolean) => void;
-                                item?: Membre;
-                            }) => {
-                                return <Dialog open={open} onOpenChange={onOpenChange}>
-                                    <DialogContent className="w-full md:max-w-lg">
-                                        <DialogDescription>
-                                            <div className="flex flex-row gap-4">
-                                                <div className='h-[160px] w-[160px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
-                                                    <Image
-                                                        alt="Célébration de baptême"
-                                                        src={items[0].image}
-                                                        fill
-                                                        style={{
-                                                            objectFit: 'cover',
-                                                            height: '100%',
-                                                            width: '100%'
-                                                        }}
-                                                    />
-                                                </div>
-                                                <div className="flex-1 space-y-4">
-                                                    <div className="mt-4">
-                                                        <h5 className='body-2 text-black font-bold'>{item?.nom}</h5>
-                                                        <p className='body-3'>{item?.poste}</p>
-                                                    </div>
-                                                    <div>
-                                                        <h5 className='body-2 text-black font-bold'>Coordonnées</h5>
-                                                        <p className='body-3'>415, rue Main</p>
-                                                        <p className='body-3'>Shediac, NB E4P 2B6</p>
-                                                        <p className='body-3'>506-532-3281</p>
-                                                        <p className='body-3'>FAX : 506-532-8371</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </DialogDescription>
-                                    </DialogContent>
-                                </Dialog>
-                            }
-
-                            const PretresDialog = ({
-                                open,
-                                onOpenChange,
-                                item
-                            }: {
-                                open: boolean;
-                                onOpenChange: (open: boolean) => void;
-                                item?: any;
-                            }) => {
-                                return <Dialog open={open} onOpenChange={onOpenChange} >
-                                    <DialogContent className="w-full md:w-2/5">
-                                        <DialogDescription>
-                                            <div className="flex flex-row gap-4">
-                                                <div className="w-[140px]">
-                                                    <div className='h-[140px] w-[140px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
-                                                        <Image
-                                                            alt="Célébration de baptême"
-                                                            src="/assets/img/placeholder-vector.png"
-                                                            width={60}
-                                                            height={60}
-                                                            style={{
-                                                                objectFit: 'cover',
-                                                            }}
-                                                        />
-                                                    </div>
-                                                    <div className="mb-3 mt-2">
-                                                        <h5 className='body-2 text-black font-bold'>{item.nom}</h5>
-                                                        <p className='body-3'>En activité</p>
-                                                    </div>
-                                                    <div>
-                                                        <h5 className='body-2 text-black font-bold'>Coordonnées</h5>
-                                                        <p className='body-2'>415, rue Main</p>
-                                                    </div>
-                                                </div>
-                                                <div className="flex-1">
-                                                    <div>
-                                                        <h5 className='body-2 text-black font-bold'>Biographie</h5>
-                                                        <p className='body-2'>Né le 12 avril 1966 à Moncton ; fils d’Ernest Belliveau et Louina LeBlanc.</p>
-                                                        <p className='body-2'>Études : Collège Dominicain, Ottawa, Bruxelles.</p>
-                                                        <p className='body-2'>Ordination : le 13 octobre 1992 à Memramcook par Mgr Donat Chiasson.</p>
-                                                        <p className='body-2'>Ministère : vicaire : Shédiac (1992) ; curé : Pointe-Sapin (1994-1998), Ste-Marie et St-Norbert (1998-2000), Rogersville (2000-2004), Études à Bruxelles (2004-2005), Aumônier assistant aux hôpitaux de Moncton et prêtre assistant aux paroisses St. Bernard et St. Augustin (2006-2007), Aumônier des hôpitaux de Moncton et du Foyer pour les vétérans (2007-).</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </DialogDescription>
-                                    </DialogContent>
-                                </Dialog>
-                            }
-
-                            const Autres = () => {
-                                const [open, setOpen] = useState(false)
-                                const [selectedItem, setSelectedItem] = useState<any>({})
-                                return <>
-                                    <div className='lg:flex lg:flex-row pb-8 lg:pb-0 grid gap-6 grid-cols-2 md:grid-cols-3'>
-                                        {
-                                            items.map(item => (
-                                                <div key={item.id} className='space-y-3 w-full' >
-                                                    <div className='h-[240px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
-                                                        <Image
-                                                            alt="Célébration de baptême"
-                                                            src="/assets/img/placeholder-vector.png"
-                                                            width={60}
-                                                            height={60}
-                                                            style={{
-                                                                objectFit: 'cover',
-                                                            }}
-                                                        />
-                                                    </div>
-                                                    <h1 className='body-2 font-bold'>{item.title}</h1>
-                                                    <p className='body-2 text-gray'>{item.description}</p>
-                                                    <div className="">
-                                                        <Button size={'sm'} variant={'link'} onClick={() => { setSelectedItem(item); setOpen(true) }} className="underline text-black px-0 ">
-                                                            Coordonnées
-                                                        </Button>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                    </div>
-                                    <AlertDialog open={open} onOpenChange={setOpen} item={selectedItem} />
-                                </>
-                            }
-
-                            const AlertDialog = ({
-                                open,
-                                onOpenChange,
-                                item
-                            }: {
-                                open: boolean;
-                                onOpenChange: (open: boolean) => void;
-                                item?: any;
-                            }) => {
-                                return <Dialog open={open} onOpenChange={onOpenChange}>
-                                    <DialogContent className="w-full md:max-w-lg">
-                                        <DialogDescription>
-                                            <div className="flex flex-row gap-4">
-                                                <div className='h-[140px] w-[140px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
-                                                    <Image
-                                                        alt="Célébration de baptême"
-                                                        src="/assets/img/placeholder-vector.png"
-                                                        width={60}
-                                                        height={60}
-                                                        style={{
-                                                            objectFit: 'cover',
-                                                        }}
-                                                    />
-                                                </div>
-                                                <div className="flex-1 space-y-4">
-                                                    <div className="mt-4">
-                                                        <h5 className='body-2 text-black font-bold'>{item.title}</h5>
-                                                        <p className='body-3'>{item.description}</p>
-                                                    </div>
-                                                    <div>
-                                                        <h5 className='body-2 text-black font-bold'>Coordonnées</h5>
-                                                        <p className='body-3'>415, rue Main</p>
-                                                        <p className='body-3'>Shediac, NB E4P 2B6</p>
-                                                        <p className='body-3'>506-532-3281</p>
-                                                        <p className='body-3'>FAX : 506-532-8371</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </DialogDescription>
-                                    </DialogContent>
-                                </Dialog>
-                            }
-
-
-                        */}
+                            </Tabs>
+                        </TabsContent>
                     </Tabs>
                 </div>
             </section>
