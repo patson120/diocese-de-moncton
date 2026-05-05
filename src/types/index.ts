@@ -131,6 +131,9 @@ export type Message = {
     updated_at: string;
     message: string;
     archeveque: Archeveque;
+    type_contenu: "document" | "text";
+    ressource_fr: Ressource | null;
+    ressource_en: Ressource | null;
 }
 
 export type Archeveque = {
@@ -166,6 +169,20 @@ export type Membre = {
     created_at: string;
     updated_at: string;
     categorie: Category;
+}
+
+export type Ressource = {
+    id: number;
+    categorie_id: number | null;
+    titre_fr: string;
+    titre_en: string | null;
+    type: string;
+    media: string;
+    description_fr: string | null;
+    description_en: string | null;
+    created_at: string;
+    updated_at: string;
+    categorie: any;
 }
 
 export type HoraireMesse = {

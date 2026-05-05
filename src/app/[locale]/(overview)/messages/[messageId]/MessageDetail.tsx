@@ -3,9 +3,9 @@
 import { formatDateToLocal } from '@/_lib/utils'
 import Text from '@/components/Text'
 import { Button } from '@/components/ui/shared/button'
-import { useRouter } from '@/i18n/routing'
+import { Link, useRouter } from '@/i18n/routing'
 import { Message } from '@/types'
-import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Calendar, ChevronLeft, ChevronRight, Download } from 'lucide-react'
 import Image from 'next/image'
 
 export default function MessageDetail({ message }: { message: Message }) {
@@ -38,19 +38,35 @@ export default function MessageDetail({ message }: { message: Message }) {
                 <div>
                     <Text labelFr={message?.message_fr} labelEn={message?.message_en} />
                 </div>
-                {/* <Text labelEn={message.titre_en} labelFr={message.titre_fr} />
-                <Text labelEn={message.message_en} labelFr={message.message_fr} /> */}
-                {/* <h1 className='heading-2 font-bold'><Text labelEn={message.titre_en} labelFr={message.titre_fr} /></h1>
-                <p className='body-2 text-[#575757]'><Text labelEn={message.message_en} labelFr={message.message_fr} /></p> */}
+                {
+                    (message.ressource_en && message.ressource_fr) && 
+                    <div className="flex gap-1 text-gray-600 text-sm">
+                        Document :
+                        <Text className="line-clamp-6 text-gray-600" labelEn={message.ressource_en?.titre_en!} labelFr={message.ressource_fr?.titre_fr!} />
+                    </div>
+
+                }
             </div>
-            <div className='flex justify-end mt-8'>
-                <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
+            <div className='flex justify-end gap-3 mt-8'>
+            <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
                     <Calendar className="h-4 w-4 text-gray-600" />
                     <div className='body-3 whitespace-nowrap flex justify-center items-center'>
                         <Text keyString="publier_le" />
-                        <span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR')}</span>
+                        <span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString(), userLanguage === 'en' ? "en-EN" : 'fr-FR')}</span>
                     </div>
                 </div>
+                {
+
+                    (message.ressource_en && message.ressource_fr) && (
+                        <Link download href={`${process.env.NEXT_PUBLIC_BASE_URL}/${userLanguage === "fr" ? message.ressource_fr?.media : message.ressource_en?.media}`} target="_blank" rel="noopener noreferrer" className="flex justify-end">
+                            <Button variant="outline" className='font-bold w-min'>
+                                <Download className="h-4 w-4 text-gray-600 mr-2" />
+                                <Text className="text-inherit !text-gray-600 !font-medium" keyString="download_msg" />
+                            </Button>
+                        </Link>
+                    )
+                }
+                
             </div>
             <div className='flex justify-end space-x-2 pt-20'>
                 <Button

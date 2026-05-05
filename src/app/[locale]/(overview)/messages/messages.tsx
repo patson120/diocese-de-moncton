@@ -14,9 +14,7 @@ export default async function Messages({ currentPage }: { currentPage: number })
             <div className="grid gap-6 md:gap-[34px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
                     messages.map((item, index) => (
-                        <Link key={index} href={`/messages/${item.id}`}>
-                            <MessageComp message={item} />
-                        </Link>
+                        <MessageComp message={item} key={index} />
                     ))
                 }
             </div>

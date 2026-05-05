@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Button } from "./ui/shared/button";
 import { Message } from "@/types";
 import Text from "./Text";
-import { Calendar } from "lucide-react";
+import { Calendar, Download } from "lucide-react";
 import { formatDateToLocal } from "@/_lib/utils";
 import { cookies } from "next/headers";
 
@@ -27,23 +27,44 @@ export default async function MessageArcheveque() {
                     </div>
                     <div className='body-2 leading-[25.9px]'>
                         <Text className="line-clamp-6" labelEn={message.message_en} labelFr={message.message_fr} />
+                        {
+                            (message.ressource_en && message.ressource_fr) && 
+                            <div className="flex gap-1 text-gray-600 text-sm">
+                                Document :
+                                <Text className="line-clamp-6 text-gray-600" labelEn={message.ressource_en?.titre_en!} labelFr={message.ressource_fr?.titre_fr!} />
+                            </div>
+                        }
                     </div>
                     <div className='flex justify-end'>
                         <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
                             <Calendar className="h-4 w-4 text-gray-600" />
-                            <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString(),  userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></div>
+                            <div className='body-3 whitespace-nowrap flex justify-center items-center'><Text keyString="publier_le" /><span className="ml-2">{formatDateToLocal((new Date(message.created_at)).toISOString(), userLanguage === 'en' ? "en-EN" : 'fr-FR')}</span></div>
                         </div>
                     </div>
 
                     <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
-                        <Link href={`/messages/${message.id}`}>
-                            <Button
-                                variant="outline"
-                                className='font-bold w-full'
-                            >
-                                <Text className="text-inherit" keyString="savoir_plus" />
-                            </Button>
-                        </Link>
+                        {
+                            (message.ressource_en && message.ressource_fr) ? (
+                                <Link download href={`${process.env.NEXT_PUBLIC_BASE_URL}/${userLanguage === "fr" ? message.ressource_fr?.media : message.ressource_en?.media}`} target="_blank" rel="noopener noreferrer">
+                                    <Button
+                                        variant="outline"
+                                        className='font-bold w-full'
+                                    >
+                                        <Download className="h-4 w-4 text-gray-600 mr-2" />
+                                        <Text className="text-inherit" keyString="download_msg" />
+                                    </Button>
+                                </Link>
+                            ) : (
+                                <Link href={`/messages/${message.id}`}>
+                                    <Button
+                                        variant="outline"
+                                        className='font-bold w-full'
+                                    >
+                                        <Text className="text-inherit" keyString="savoir_plus" />
+                                    </Button>
+                                </Link>
+                            )
+                        }
                         <Link href="/messages">
                             <Button
                                 variant="outline"
