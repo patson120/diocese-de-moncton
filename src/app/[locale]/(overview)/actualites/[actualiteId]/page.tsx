@@ -7,8 +7,6 @@ import { Suspense } from 'react'
 import ActualiteDetail from './ActualiteDetail'
 import Buttons from './Buttons'
 import RelativesActualite from './RelativesActualite'
-import { useLocale } from 'next-intl'
-import { usePathname } from '@/i18n/routing'
 
 export default async function Page(
   props: {
