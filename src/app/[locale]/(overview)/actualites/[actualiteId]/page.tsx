@@ -17,7 +17,6 @@ export default async function Page(
   const response = await fetchActualites(`?paginate=4&page=1&categorie_id=${actualite.categorie_id}`)
   const actualites = response.data
 
-
   return (
     <>
       <div className='flex justify-between items-center border-y border-y-gray-100 '>

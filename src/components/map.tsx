@@ -54,7 +54,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
         strokeWeight: 1,
       }
     }
-    else if (p.statut === 1) {
+    else if (p.statut === 1 && !["en", "fr"].includes(p.langue!) ) {
       return {
         path: google.maps.SymbolPath.CIRCLE,
         fillColor: 'red', // Couleur pour paroisses ouvertes et anglophones
