@@ -4,7 +4,8 @@ import { BASE_URL } from "@/constants";
 
 export async function fetchActualites(params: string = "") {
     try {
-        let url = `${BASE_URL}/actualites${params}?is_actif=1`;
+        params = params.includes("is_actif") ? params : `${params}&is_actif=1`
+        let url = `${BASE_URL}/actualites${params}`;
         let body = {}
         const headers = {}
         return await fetchAPI(url, 'GET', headers, body);

@@ -13,7 +13,7 @@ export default async function Page(
     params: Promise<{ actualiteId: string }>,
   }) {
   const { actualiteId } = await props.params;
-  const actualite: TypeActualite = await fetchActualites(`/${actualiteId}`)
+  const actualite: TypeActualite = await fetchActualites(`/${actualiteId}?is_actif=1`)
   const response = await fetchActualites(`?paginate=4&page=1&categorie_id=${actualite.categorie_id}`)
   const actualites = response.data
 
