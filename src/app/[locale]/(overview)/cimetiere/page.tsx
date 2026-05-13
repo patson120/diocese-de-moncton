@@ -79,9 +79,8 @@ export default function Page() {
             <section id='tarifs-reservations' className='container max-margin py-0 space-y-6'>
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_2_titre")}</h2>
-                    <p className='body-2 text-gray'>{t("section_2_desc")}</p>
                 </div>
-                <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                     <div className='space-y-3'>
                         <div className='space-y-2'>
                             <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_1")}</h1>
@@ -94,19 +93,12 @@ export default function Page() {
                             <p className='body-2 text-gray'>{t("section_2_p_2")}</p>
                         </div>
                     </div>
-                    <div className='space-y-3'>
-                        <div className='space-y-2'>
-                            <h1 className='body-1 text-[#1D0104] font-bold'>{t("section_2_sous_titre_3")}</h1>
-                            <p className='body-2 text-gray'>{t("section_2_p_3")}</p>
-                        </div>
-                    </div>
                 </div>
             </section>
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-1'>{t("section_3_titre")}</h2>
-                    <p className='body-2 text-gray'>{t("section_3_desc")}</p>
                     <div className='mt-10 space-y-4'>
                         <div className='pb-4 flex justify-between items-center border-b border-b-gray-200'>
                             <h2 className='body-2 text-gray'>{t("data_1")}</h2>

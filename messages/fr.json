@@ -317,8 +317,8 @@
         "hero_titre": "Cimetière Notre-Dame du calvaire",
         "hero_desc": "Un lieu de recueillement, de mémoire et de paix",
 
-        "section_1_titre": "Bienvenue au cimetière diocésain",
-        "section_1_p_1": "Le cimetière diocésain de NOTRE-DAME DU CALVAIRE est un lieu sacré où les défunts reposent en paix, entourés de prières et de souvenirs. Ouvert à tous, il offre un espace de recueillement et de mémoire pour les familles et les proches.",
+        "section_1_titre": "Bienvenue au cimetière",
+        "section_1_p_1": "Le cimetière de NOTRE-DAME DU CALVAIRE est un lieu sacré où les défunts reposent en paix, entourés de prières et de souvenirs. Il offre un espace de recueillement et de mémoire pour les familles et les proches.",
         "section_1_p_2": "Nous nous engageons à préserver la dignité et le respect de chaque personne inhumée, en accord avec les valeurs chrétiennes.",
         "adresse": "Adresse",
         "section_1_p_3": "480 rue Amirault, Dieppe NB E1A 1C8",
@@ -326,16 +326,12 @@
         "section_1_btn_2": "Voir les prix",
 
         "section_2_titre": "Un lieu de mémoire et de prière",
-        "section_2_desc": "La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine",
         "section_2_sous_titre_1": "Environnement paisible",
         "section_2_p_1": "Un cadre naturel et apaisant, propice au recueillement et à la prière.",
         "section_2_sous_titre_2": "Monuments et espaces commémoratifs",
         "section_2_p_2": "Des lieux dédiés pour honorer la mémoire des défunts.",
-        "section_2_sous_titre_3": "Chapelle et espaces de prière",
-        "section_2_p_3": "Des espaces pour célébrer des messes, des prières ou des moments de méditation.",
 
         "section_3_titre": "Tarifs et réservations",
-        "section_3_desc": "La chancellerie offre une gamme de services pour soutenir les membres de l'Église diocésaine",
 
         "section_4_titre": "Contact",
         "section_4_p_1": "Place de la Cathédrale",

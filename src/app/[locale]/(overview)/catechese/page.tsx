@@ -1,8 +1,7 @@
 'use client'
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
-import { Button } from '@/components/ui/shared/button'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 const items = [
@@ -41,6 +40,7 @@ const items = [
 
 export default function Page() {
     const t = useTranslations("catechese")
+    const localActive = useLocale()
     return (
         <main>
             {/* Hero section */}
@@ -182,32 +182,37 @@ export default function Page() {
                 </div>
             </section>
 
-            <div className='md:mt-10 lg:mt-20'></div>
-            <section className="container max-margin py-0">
-                <div>
-                    <h2 className='heading-3 text-gray-900 mb-6'>{t("section_5_titre")}</h2>
-                    <div className='flex flex-row overflow-x-scroll xl:overflow-hidden h-scroll pb-8 space-x-6'>
-                        {
-                            items.map(item => (
-                                <div key={item.id} className='space-y-3'>
-                                    <div className='w-[175px] h-[250px] relative overflow-hidden'>
-                                        <Image
-                                            alt={item.title}
-                                            src={item.image}
-                                            fill
-                                            style={{
-                                                objectFit: 'cover',
-                                                height: '100%',
-                                                width: '100%'
-                                            }}
-                                        />
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                </div>
-            </section>
+            {
+                localActive === "fr" &&
+                <>
+                    <div className='md:mt-10 lg:mt-20'></div>
+                    <section className="container max-margin py-0">
+                        <div>
+                            <h2 className='heading-3 text-gray-900 mb-6'>{t("section_5_titre")}</h2>
+                            <div className='flex flex-row overflow-x-scroll xl:overflow-hidden h-scroll pb-8 space-x-6'>
+                                {
+                                    items.map(item => (
+                                        <div key={item.id} className='space-y-3'>
+                                            <div className='w-[175px] h-[250px] relative overflow-hidden'>
+                                                <Image
+                                                    alt={item.title}
+                                                    src={item.image}
+                                                    fill
+                                                    style={{
+                                                        objectFit: 'cover',
+                                                        height: '100%',
+                                                        width: '100%'
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </section>
+                </>
+            }
 
             <div className='mt-10 md:mt-20'></div>
             <section className='container max-margin py-0'>

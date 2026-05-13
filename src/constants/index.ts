@@ -45,7 +45,7 @@ export const archidiocese: MenuType[] = [
         description_en: 'All the members of our diocese.',
         link: '/clerges'
     },
-    {
+    /* {
         id: 5,
         menu: "archidiocese",
         image: '/assets/icons/noun-flame-122214 1.png',
@@ -54,7 +54,7 @@ export const archidiocese: MenuType[] = [
         description_fr: 'Accompagner les jeunes dans leur cheminement de foi.',
         description_en: 'Accompanying young people on their faith journey.',
         link: ''
-    },
+    }, */
     {
         id: 6,
         menu: "archidiocese",
