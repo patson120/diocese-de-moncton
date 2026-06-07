@@ -132,7 +132,7 @@ export const PretresDialog = ({
                             </div>
                         }
                         <div>
-                            <h5 className='body-2 text-black font-bold'>{t("biography")}</h5>
+                            <h5 className='body-2 text-black font-bold'>{t("biographie")}</h5>
                             <Text className='text-gray w-full' labelEn={member?.description_en} labelFr={member?.description_fr}  />
                         </div>
                     </div>
