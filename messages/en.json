@@ -148,8 +148,8 @@
         "poste_7_titre": "Finances: cathedral foundations",
         "poste_8_titre": "Justice and solidarity files",
         "poste_9_titre": "Catechesis & Protection of vulnerable persons",
-        "poste_10_titre": "Vice-Chancellor & Notary at the Matrimonial Court",
-        "poste_11_titre": "Matrimonial court auditor",
+        "poste_10_titre": "Vice-Chancellor & Notary at the Marriage Tribunal",
+        "poste_11_titre": "Marriage Tribunal auditor",
         "poste_12_titre": "Adult faith education",
 
         "adresse": "Address",
@@ -641,7 +641,7 @@
         "section_5_p_1": "If you have any questions about the sacrament of reconciliation or would like to meet a priest for confession, please do not hesitate to contact us."
     },
     "tribunal_matrimonial": {
-        "hero_titre": "Ecclesiastical matrimonial court",
+        "hero_titre": "Ecclesiastical marriage tribunal",
         "hero_desc": "A ministry of compassion and hope for separated and divorced people",
 
         "section_1_titre": "A place to welcome and listen",
@@ -657,7 +657,7 @@
         "section_2_p_4": "Confidentiality, respect, active listening and personalized support.",
 
         "section_3_titre": "How do I request a declaration of nullity?",
-        "section_3_li_1": "Step 1: Contact the matrimonial court to express your request.",
+        "section_3_li_1": "Step 1: Contact the Marriage Tribunal to express your request.",
         "section_3_li_2": "Step 2: Meet with a notary or court representative to explain your situation.",
         "section_3_li_3": "Step 3: Complete the necessary documents and provide the required information.",
         "section_3_li_4": "Step 4: Follow the canonical process, which includes examination of the file by the court.",
@@ -673,7 +673,7 @@
         "section_4_p_4": "No, the court provides all the support needed to complete the formalities.",
 
         "section_5_titre": "Contact",
-        "section_5_p_1": "If you have any questions or would like to initiate a declaration of nullity, please contact : Patricia Niles, Notary in the Matrimonial Court."
+        "section_5_p_1": "If you have any questions or would like to initiate a declaration of nullity, please contact : Patricia Niles, Notary in the Marriage Tribunal."
 
     },
     "sacrements": {
