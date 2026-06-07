@@ -2,18 +2,13 @@
 
 import { fetchMembres } from "@/_lib/data";
 import { HeroSectionSecond } from "@/components/sections/hero-second";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import ActionGrace from "@/components/ui/shared/ActionGrace";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Membre } from "@/types";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from 'react';
 import MemberComp from "./member-comp";
-import { useLocale, useTranslations } from "next-intl";
-import { LoadingSpinner } from "@/components/ui/loading-spinner";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
-
-
-
 
 
 export default function Page() {
