@@ -111,12 +111,12 @@ export const PretresDialog = ({
                             </div>
                             <div>
                                 <h4 className="text-lg font-bold">{t("fonction_membre")}</h4>
-                                {/* <p className="text-gray">{member?.poste}</p> */}
                                 {
-                                    member?.categorie &&
+                                    member?.categorie ?
                                     <Text className='text-gray w-full' 
-                                        labelEn={member?.categorie?.intitule_en} 
-                                        labelFr={member?.categorie?.intitule_fr}  />
+                                        labelEn={member?.categorie?.intitule_en!} 
+                                        labelFr={member?.categorie?.intitule_fr!}  /> :
+                                    <p className="text-gray">{member?.poste}</p>
                                 }
                             </div>
                         </div>
@@ -132,7 +132,7 @@ export const PretresDialog = ({
                             </div>
                         }
                         <div>
-                            <h5 className='body-2 text-black font-bold'>Biographie</h5>
+                            <h5 className='body-2 text-black font-bold'>{t("biography")}</h5>
                             <Text className='text-gray w-full' labelEn={member?.description_en} labelFr={member?.description_fr}  />
                         </div>
                     </div>
