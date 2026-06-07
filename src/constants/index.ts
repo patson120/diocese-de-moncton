@@ -223,7 +223,7 @@ export const mouvements: MenuType[] = [
         id: 6,
         image: '/assets/icons/people.png',
         titre_fr: 'Legion de Marie',
-        titre_en: 'Marie\'s Legion',
+        titre_en: 'Legion of Mary',
         description_fr: "L'étendard de la Légion de Marie est dressé aux quatre coins du globe grâce à son fondateur Frank Duff",
         description_en: "The banner of the Legion of Mary flies in every corner of the globe thanks to its founder, Frank Duff",
         link: 'https://legionofmary.ie/'
