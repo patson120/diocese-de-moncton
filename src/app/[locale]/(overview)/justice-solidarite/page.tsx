@@ -1,12 +1,32 @@
 'use client'
 
 import { HeroSectionSecond } from '@/components/sections/hero-second'
+import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 
 export default function Page() {
     const t = useTranslations("justice_solidarite")
+
+    const organizations = [
+        {
+            name: t("org_1"),
+            logo: "https://devp.org/wp-content/uploads/2020/11/logo-devp.svg",
+            url: "https://devp.org/fr/",
+        },
+        {
+            name: t("org_2"),
+            logo: "https://opmcanada.ca/wp-content/uploads/2021/09/logo_opm_canada.png",
+            url: "https://opmcanada.ca/"
+        },
+        {
+            name: t("org_3"),
+            logo: "https://images.squarespace-cdn.com/content/v1/62ded95156ea222ee9ed041c/aa786bce-be68-4f7a-b263-c92e69320696/CommonFront_Logo_RGB_FullColour.png?format=1500w",
+            url: "https://www.frontnb.ca/"
+        },
+        // Add more organizations here
+    ]
     return (
         <main>
             {/* Hero section */}
@@ -156,6 +176,29 @@ export default function Page() {
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_sous_titre_1")}</h2>
                     <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
+                </div>
+            </section>
+
+            <div className='mt-10 md:mt-20'></div>
+            <section className='container max-margin py-0'>
+                <h2 className='heading-3 text-gray-900 mb-8'>{t("few_orgnizations")}</h2>
+                <div className='flex flex-wrap justify-start items-start gap-10'>
+                    {
+                        organizations.map((org, index) => (
+                            <Link target='_blank' href={org.url} key={index}>
+                                <div className='h-12 w-auto relative'>
+                                    <Image
+                                        alt="logo"
+                                        src={org.logo}
+                                        fill
+                                        style={{ objectFit: 'contain' }}
+                                    />
+                                </div>
+                                <p className='mt-2'>{org.name}</p>
+                            </Link>
+                        ))
+                    }
+
                 </div>
             </section>
             <div className='mt-5 md:mt-10'></div>
