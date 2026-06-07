@@ -111,7 +111,10 @@ export const PretresDialog = ({
                             </div>
                             <div>
                                 <h4 className="text-lg font-bold">{t("fonction_membre")}</h4>
-                                <p className="text-gray">{member?.poste}</p>
+                                {/* <p className="text-gray">{member?.poste}</p> */}
+                                <Text className='text-gray w-full' 
+                                    labelEn={member?.categorie.intitule_en} 
+                                    labelFr={member?.categorie.intitule_fr}  />
                             </div>
                         </div>
                     </div>
