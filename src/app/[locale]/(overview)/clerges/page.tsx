@@ -25,25 +25,27 @@ export default function Page() {
             slug: 'archeveque',
         },
         {
-            id: '19',
-            title: localActive === "en" ? "Deacons" : 'Diacres',
-            slug: 'diacres',
-        },
-        {
             id: '20',
             title: localActive === "en" ? "Priests" : 'Prêtres',
             slug: 'pretres',
+        },
+        {
+            id: '19',
+            title: localActive === "en" ? "Deacons" : 'Diacres',
+            slug: 'diacres',
         },
         {
             id: '22',
             title: localActive === "en" ? "Religious" : 'Religieux',
             slug: 'religieux',
         },
+        /* 
         {
             id: '23',
             title: localActive === "en" ? "Others" : 'Autres',
             slug: 'autres',
-        },
+        }, 
+        */
     ]
 
     const [selectedMenu, setSelectedMenu] = useState(menus[0])
