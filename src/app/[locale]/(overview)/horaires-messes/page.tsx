@@ -1,12 +1,11 @@
 'use client'
 import { fetchHoraireMesse } from '@/_lib/data'
 import ActionGrace from '@/components/ui/shared/ActionGrace'
-import { HoraireMesse } from '@/types'
 import { Search } from "lucide-react"
-import Image from 'next/image'
-import HorairesSection from './HorairesSection'
-import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import HorairesSection from './HorairesSection'
 
 export default function Page() {
   const [horaires, setHoraires] = useState<any>()
