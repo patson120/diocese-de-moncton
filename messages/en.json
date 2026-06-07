@@ -180,7 +180,8 @@
         "decede": "Deceased",
         "unite_pastorale": "Pastoral units",
         "biographie": "Biography",
-        "coordonnees": "Address and contact information"
+        "coordonnees": "Address and contact information",
+        "data_not_found": "No data found"
     },
     "archeveques": {
         "subtitle": "Archbishop of Moncton",

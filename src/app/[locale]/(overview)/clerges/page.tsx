@@ -103,7 +103,7 @@ export default function Page() {
                                             value="actif"
                                             className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray">
                                             <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
-                                                Actif
+                                                {t("en_activite")}
                                             </span>
                                         </TabsTrigger>
                                         <TabsTrigger
@@ -111,7 +111,7 @@ export default function Page() {
                                             onClick={() => setEtat('0')}
                                             className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray">
                                             <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
-                                                En retraite
+                                            {t("en_retraite")}
                                             </span>
                                         </TabsTrigger>
                                         <TabsTrigger
@@ -119,7 +119,7 @@ export default function Page() {
                                             onClick={() => setEtat('-1')}
                                             className="h-8 px-2.5 py-2.5 rounded-none data-[state=active]:bg-white data-[state=active]:rounded-md data-[state=active]:shadow-none data-[state=active]:text-blue data-[state=active]:font-bold data-[state=inactive]:text-gray">
                                             <span className="font-body-3 text-[length:var(--body-3-font-size)] tracking-[var(--body-3-letter-spacing)] leading-[var(--body-3-line-height)]">
-                                                Décédés
+                                            {t("decede")}
                                             </span>
                                         </TabsTrigger>
                                     </TabsList>
@@ -131,7 +131,7 @@ export default function Page() {
                                             <div className='h-44 w-full flex justify-center items-center'>
                                                 <LoadingSpinner />
                                             </div> : membres.length === 0 ?
-                                                <p className="text-gray h-[200px] flex justify-center items-center">Aucune donnée trouvée</p> :
+                                                <p className="text-gray h-[200px] flex justify-center items-center">{t("data_not_found")}</p> :
                                                 <MemberComp membres={membres} />
                                     }
                                 </TabsContent>
@@ -144,7 +144,7 @@ export default function Page() {
                                             <div className='h-44 w-full flex justify-center items-center'>
                                                 <LoadingSpinner />
                                             </div> : membres.length === 0 ?
-                                                <p className="text-gray h-[200px] flex justify-center items-center">Aucune donnée trouvée</p> :
+                                                <p className="text-gray h-[200px] flex justify-center items-center">{t("data_not_found")}</p> :
                                                 <MemberComp membres={membres} />
                                     }
                                 </TabsContent>
@@ -155,7 +155,7 @@ export default function Page() {
                                             <div className='h-44 w-full flex justify-center items-center'>
                                                 <LoadingSpinner />
                                             </div> : membres.length === 0 ?
-                                                <p className="text-gray h-[200px] flex justify-center items-center">Aucune donnée trouvée</p> :
+                                                <p className="text-gray h-[200px] flex justify-center items-center">{t("data_not_found")}</p> :
                                                 <MemberComp membres={membres} />
                                     }
                                 </TabsContent>
