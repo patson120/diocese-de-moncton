@@ -5,18 +5,6 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 
-export const getDays = (localActive: string) => {
-    return {
-        "dimanche": localActive === 'fr' ? "Dimanche" : "Sunday",
-        "lundi": localActive === 'fr' ? 'Lundi' : "Monday",
-        "mardi": localActive === 'fr' ? 'Mardi' : "Tuesday",
-        "mercredi": localActive === 'fr' ? 'Mercredi' : "Wednesday",
-        "jeudi": localActive === 'fr' ? 'Jeudi' : "Thursday",
-        "vendredi": localActive === 'fr' ? 'Vendredi' : 'Friday',
-        "samedi": localActive === 'fr' ? 'Samedi' : "Saturday"
-    }
-}
-
 export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
     const [selectedHour, setSelectedHour] = useState<HoraireMesse | null>()
     const localActive = useLocale()
@@ -29,7 +17,15 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
         return nameA.localeCompare(nameB);
     });
 
-    const days = getDays(localActive)
+    const days = {
+        "dimanche": localActive === 'fr' ? "Dimanche" : "Sunday",
+        "lundi": localActive === 'fr' ? 'Lundi' : "Monday",
+        "mardi": localActive === 'fr' ? 'Mardi' : "Tuesday",
+        "mercredi": localActive === 'fr' ? 'Mercredi' : "Wednesday",
+        "jeudi": localActive === 'fr' ? 'Jeudi' : "Thursday",
+        "vendredi": localActive === 'fr' ? 'Vendredi' : 'Friday',
+        "samedi": localActive === 'fr' ? 'Samedi' : "Saturday"
+    }
     
     function formatFrenchTimeToEnglish(frenchTime: string): string {
 

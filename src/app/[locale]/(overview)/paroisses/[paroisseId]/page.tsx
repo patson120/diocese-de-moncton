@@ -16,7 +16,6 @@ import Carousel from "./carousel";
 import { VideoPlayer } from "./components/VideoPlayer";
 import MembreCard from "./components/MemberCard";
 import ParishHistory from "./components/parishHistory";
-import { getDays } from "../../horaires-messes/Horaires";
 
 
 export default async function Page(props: {
@@ -33,7 +32,15 @@ export default async function Page(props: {
     const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
 
-    const days = getDays(userLanguage)
+    const days = {
+        "dimanche": userLanguage === 'fr' ? "Dimanche" : "Sunday",
+        "lundi": userLanguage === 'fr' ? 'Lundi' : "Monday",
+        "mardi": userLanguage === 'fr' ? 'Mardi' : "Tuesday",
+        "mercredi": userLanguage === 'fr' ? 'Mercredi' : "Wednesday",
+        "jeudi": userLanguage === 'fr' ? 'Jeudi' : "Thursday",
+        "vendredi": userLanguage === 'fr' ? 'Vendredi' : 'Friday',
+        "samedi": userLanguage === 'fr' ? 'Samedi' : "Saturday"
+    }
 
     return (
         <>
@@ -134,7 +141,7 @@ export default async function Page(props: {
                                 {
                                     paroisse.horaireparoisses.map((horaire) => (
                                         <div key={`${horaire.id}-${paroisse.id}`} className="w-min flex justify-center items-center gap-2 border border-[#E5E5E5] rounded-xl py-[6px] px-2">
-                                            <p className="text-gray capitalize">{days[horaire?.jour! as keyof typeof days]}</p>
+                                            <p className="text-gray capitalize">{days[horaire.jour as keyof typeof days]}</p>
                                             {
                                                 horaire.heure.split(';').map((heure, i) => (
                                                     <p key={`${i}-${heure}`} className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">{heure}</p>
