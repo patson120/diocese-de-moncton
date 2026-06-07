@@ -33,7 +33,7 @@ export default function Footer() {
             <ul className='space-y-2 lg:space-y-4 body-3'>
               <li className='text-[#B5B5B5]'>
                 <Link href="/actualites">
-                  <Text className='text-inherit' keyString='nouvelles_diocesaines' />
+                  <Text className='text-inherit' keyString='news' />
                 </Link>
               </li>
               <li className='text-[#B5B5B5]'>
@@ -62,7 +62,7 @@ export default function Footer() {
               </li>
               <li className='text-[#B5B5B5]'>
                 <Link href="/clerges">
-                  <Text className='text-inherit' keyString='equipe_paroissiale' />
+                  <Text className='text-inherit' keyString='clerge' />
                 </Link>
               </li>
             </ul>
