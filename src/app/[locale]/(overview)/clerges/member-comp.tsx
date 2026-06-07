@@ -112,9 +112,12 @@ export const PretresDialog = ({
                             <div>
                                 <h4 className="text-lg font-bold">{t("fonction_membre")}</h4>
                                 {/* <p className="text-gray">{member?.poste}</p> */}
-                                <Text className='text-gray w-full' 
-                                    labelEn={member?.categorie.intitule_en} 
-                                    labelFr={member?.categorie.intitule_fr}  />
+                                {
+                                    member?.categorie &&
+                                    <Text className='text-gray w-full' 
+                                        labelEn={member?.categorie?.intitule_en} 
+                                        labelFr={member?.categorie?.intitule_fr}  />
+                                }
                             </div>
                         </div>
                     </div>
