@@ -4,6 +4,19 @@ import { Plus } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
 import { useState } from 'react'
 
+
+export const getDays = (localActive: string) => {
+    return {
+        "dimanche": localActive === 'fr' ? "Dimanche" : "Sunday",
+        "lundi": localActive === 'fr' ? 'Lundi' : "Monday",
+        "mardi": localActive === 'fr' ? 'Mardi' : "Tuesday",
+        "mercredi": localActive === 'fr' ? 'Mercredi' : "Wednesday",
+        "jeudi": localActive === 'fr' ? 'Jeudi' : "Thursday",
+        "vendredi": localActive === 'fr' ? 'Vendredi' : 'Friday',
+        "samedi": localActive === 'fr' ? 'Samedi' : "Saturday"
+    }
+}
+
 export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
     const [selectedHour, setSelectedHour] = useState<HoraireMesse | null>()
     const localActive = useLocale()
@@ -16,15 +29,7 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
         return nameA.localeCompare(nameB);
     });
 
-    const days = {
-        "dimanche": localActive === 'fr' ? "Dimanche" : "Sunday",
-        "lundi": localActive === 'fr' ? 'Lundi' : "Monday",
-        "mardi": localActive === 'fr' ? 'Mardi' : "Tuesday",
-        "mercredi": localActive === 'fr' ? 'Mercredi' : "Wednesday",
-        "jeudi": localActive === 'fr' ? 'Jeudi' : "Thursday",
-        "vendredi": localActive === 'fr' ? 'Vendredi' : 'Friday',
-        "samedi": localActive === 'fr' ? 'Samedi' : "Saturday"
-    }
+
     
     function formatFrenchTimeToEnglish(frenchTime: string): string {
 
@@ -74,7 +79,7 @@ export default function Horaires({ horaires=[] }: { horaires: HoraireMesse[]}) {
                                             
                                         </h1>
                                         <div className='flex flex-wrap items-end gap-2 mt-2'>
-                                        <p className="text-gray capitalize">{days[item?.jour!.toLowerCase() as keyof typeof days]}</p>
+                                        <p className="text-gray capitalize">{getDays(localActive)[item?.jour!.toLowerCase() as keyof ReturnType<typeof getDays>]}</p>
                                         {
                                             item.heure.split(';').map((heure, i) => (
                                                 <p key={`${i}-${heure}`} className="text-gray px-[10px] py-[6px] rounded-[8px] bg-[#F9F4F5]">{ localActive === "fr" ? heure : formatFrenchTimeToEnglish(heure!)}</p>
