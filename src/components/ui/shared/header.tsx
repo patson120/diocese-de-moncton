@@ -155,7 +155,7 @@ export default function Header() {
                                     </li>
                                 </ul>
                                 <div className='flex justify-end items-center gap-4'>
-                                    <Link target='_blank' href="https://www.diocesegatineau.org/informations-sur-la-gestion-des-plaintes/">{t("diocesan_policy")}</Link>
+                                    <Link className='text-sm' target='_blank'  href="https://www.diocesegatineau.org/informations-sur-la-gestion-des-plaintes/">{t("diocesan_policy")}</Link>
                                     <LanguageSelector />
                                 </div>
                             </div>
