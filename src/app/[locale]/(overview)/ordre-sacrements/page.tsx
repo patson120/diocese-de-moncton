@@ -110,7 +110,8 @@ export default function Page() {
                             <div className='w-[260px] md:w-[416px] lg:w-full h-[280px] md:h-[400px] relative rounded-xl lg:rounded-3xl overflow-hidden'>
                                 <Image
                                     alt="Rôle"
-                                    src="/assets/img/role-3.png"
+                                    // src="/assets/img/role-3.png"
+                                    src="/assets/img/diacres.jpeg"
                                     fill
                                     style={{
                                         objectFit: 'cover',
