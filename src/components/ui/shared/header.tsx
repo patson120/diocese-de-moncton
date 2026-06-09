@@ -373,7 +373,11 @@ const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     const localActive = useLocale()
 
     const handleClick = () => {
-        if (menu.link) {
+        if (menu.link ) {
+            if (menu.link.startsWith("http")) {
+                window.open(menu.link, '_blank')
+                return
+            }
             router.push(`${menu.link}`)
         }
         document.querySelector('#submenu')?.classList.add("hidden")
