@@ -101,7 +101,8 @@
         "fermer": "Close",
         "horaires_messe_titre": "Mass schedule",
         "horaires_messe_desc": "Find out about mass times in your parish.",
-        "savoir_plus": "Read more"
+        "savoir_plus": "Read more",
+        "diocesan_policy": "Politique diocésaine"
     },
 
     "search": {
