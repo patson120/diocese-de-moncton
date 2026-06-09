@@ -26,6 +26,8 @@ export default function Page() {
             // Fetch Unités Pastorales
             setisFetching(true)
             const unitesPastorales: TypeParoisse[] = await fetchUnitesPastorales()
+            // order by intitule_fr            
+            unitesPastorales.sort((a, b) => a.intitule_fr.localeCompare(userLanguage == "fr" ? b.intitule_fr : b.intitule_en ?? b.intitule_fr))
             setUnitesPastorales(unitesPastorales)
             if (unitesPastorales.length){
                 setSelectedUnitesPastorales(unitesPastorales[0])
