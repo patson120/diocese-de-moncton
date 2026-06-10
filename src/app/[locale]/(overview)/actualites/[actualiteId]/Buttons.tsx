@@ -20,14 +20,14 @@ export default function Buttons({ actualite }: { actualite: TypeActualite }) {
                 onClick={() => handleSearch(-1)}
                 size={'sm'}
                 variant="outline"
-                className={`${ actualite.prevId ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300' } w-min bg-transparent hover:bg-transparent`}>
+                className={`${ actualite.prevId ? 'border-gray-600 text-gray-600' : 'border-gray-100 text-gray-300' } w-min bg-transparent ${ actualite.prevId ? 'hover:bg-transparent' : 'hover:text-gray-300' }`}>
                 {t("article_prec")}
             </Button>
             <Button
                 onClick={() => handleSearch(1)}
                 size={'sm'}
                 variant="outline"
-                className={`${actualite.nextId ? 'border-gray-300 text-gray-500' : 'border-gray-100 text-gray-300'} w-min bg-transparent hover:bg-transparent`}>
+                className={`${actualite.nextId ? 'border-gray-600 text-gray-600' : 'border-gray-100 text-gray-300'} w-min bg-transparent ${ actualite.nextId ? 'hover:bg-transparent' : 'hover:text-gray-300' }`}>
                 {t("article_suiv")}
             </Button>
         </div>
