@@ -87,6 +87,11 @@ export default function Footer() {
                   <Text className='text-inherit' keyString='documents_officiels' />
                 </Link>
               </li>
+              <li className='text-[#B5B5B5]'>
+                <Link href="#">
+                  <Text className='text-inherit' keyString='cultiver_sa_foi' />
+                </Link>
+              </li>
             </ul>
           </div>
 
