@@ -5,26 +5,10 @@ import { Button } from "@/components/ui/shared/button";
 import { useRouter } from "@/i18n/routing";
 import { ChevronLeft } from "lucide-react";
 import { useTranslations } from "next-intl";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from 'sonner';
 
-
-// Import Map component dynamically to avoid SSR issues
-const Map = dynamic(() => import('@/components/map'), { ssr: false })
-
-const parishes = [
-    {
-        id: 1,
-        name: "Cathédrale Notre-Dame de l'Assomption",
-        address: '220 St George St, Moncton, NB E1C 1V8',
-        phone: '+1 506-857-4223',
-        email: 'cathedrale@diocesemoncton.ca',
-        website: 'https://www.cathedralemoncton.ca',
-        location: { lat: 46.0878, lng: -64.7782 }
-    }
-];
 
 
 export default function Page() {
