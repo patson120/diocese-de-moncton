@@ -378,7 +378,7 @@ export const ressources: MenuType[] = [
         link: '/bulletins'
     },
     // New
-    {
+    /* {
         id: 6,
         image: '/assets/icons/noun-cemetery-6767879 1.png',
         titre_fr: "Cultiver sa foi chaque jour",
@@ -386,7 +386,7 @@ export const ressources: MenuType[] = [
         description_fr: '',
         description_en: '',
         link: '#'
-    },
+    }, */
     {
         id: 7,
         image: '/assets/icons/noun-cemetery-6767879 1.png',
