@@ -108,11 +108,11 @@ export default function Footer() {
               {/* <li className='text-[#B5B5B5]'>
                 <Text className='text-inherit' keyString='missions_valeurs' />
               </li> */}
-              <li className='text-[#B5B5B5]'>
+              {/* <li className='text-[#B5B5B5]'>
                 <Link href="/clerges">
                   <Text className='text-inherit' keyString='clerge' />
                 </Link>
-              </li>
+              </li> */}
               <li className='text-[#B5B5B5]'>
                 <Link href="/contact">
                   <Text className='text-inherit' keyString='contact_us' />
