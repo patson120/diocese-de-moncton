@@ -29,15 +29,16 @@ export default function Page() {
             title: localActive === "en" ? "Priests" : 'Prêtres',
             slug: 'pretres',
         },
-        {
-            id: '19',
-            title: localActive === "en" ? "Deacons" : 'Diacres',
-            slug: 'diacres',
-        },
+        
         {
             id: '22',
             title: localActive === "en" ? "Religious" : 'Religieux',
             slug: 'religieux',
+        },
+        {
+            id: '19',
+            title: localActive === "en" ? "Deacons" : 'Diacres',
+            slug: 'diacres',
         },
         /* 
         {
