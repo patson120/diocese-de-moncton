@@ -95,6 +95,16 @@ export const archidiocese: MenuType[] = [
         description_en: 'Guiding young people in their faith.',
         link: ''
     },
+    {
+        id: 9,
+        menu: "archidiocese",
+        image: '/assets/icons/noun-liturgy-5166501 1.png',
+        titre_fr: 'Communautés religieuses',
+        titre_en: 'Religious communities',
+        description_fr: 'Découvrez les communautés religieuses de notre diocèse.',
+        description_en: 'Discover the religious communities in our diocese.',
+        link: ''
+    },
 ]
 
 export const sacrements: MenuType[] = [
