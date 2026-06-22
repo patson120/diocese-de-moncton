@@ -59,7 +59,6 @@
         "a_propos": "About",
         "missions_valeurs": "Missions and values",
         "clerge": "The Clergy",
-        "cultiver_sa_foi": "Nurturing your faith in daily life",
 
         "newsletter_desc_1": "Subscribe to our newsletter to receive",
         "newsletter_desc_2": "news about the church.",
@@ -708,7 +707,7 @@
 
         "section_5_titre": "Sacraments of commitment",
         "section_5_sous_titre_1": "The Order",
-        "section_5_sous_titre_2": "The Wedding"
+        "section_5_sous_titre_2": "The Marriage"
     },
     "mouvements": {
         "hero_titre": "Movements",
