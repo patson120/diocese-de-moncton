@@ -129,35 +129,24 @@ export default function Page() {
                 </div>
             </section>
             <div className='mt-8 md:mt-16'></div>
-            <section className='container max-margin py-0'>
+            {/* <section className='container max-margin py-0'>
                 <div className=''>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_5_titre")}</h2>
                     <p className='body-2 text-gray'>{t("section_5_p_1")}</p>
                 </div>
                 <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
-                    {/* <a href='https://www.vatican.va/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
+                    <a href='https://www.vatican.va/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
                         <p className='whitespace-nowrap'>Site officiel du Vatican</p>
                         <ArrowUpRight className="h-4 w-6" />
                     </a>
                     <a href='https://eglise.catholique.fr/' target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
                         <p className='whitespace-nowrap'>Conférence des Evêques de France</p>
                         <ArrowUpRight className="h-4 w-6" />
-                    </a> */}
-                    <a href={ localActive === "fr" ? 'https://www.cecc.ca/' : 'https://www.cccb.ca/'} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p className='whitespace-nowrap'>CECC</p>
-                        <ArrowUpRight className="h-4 w-6" />
                     </a>
-                    <a href={ localActive === "fr" ? 'https://www.vatican.va/content/vatican/fr.html' : 'https://www.vatican.va/content/vatican/en.html'} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p className='whitespace-nowrap'>Vatican</p>
-                        <ArrowUpRight className="h-4 w-6" />
-                    </a>
-                    <a href={ localActive === "fr" ? 'https://slmedia.org/fr' : 'https://slmedia.org'} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                        <p className='whitespace-nowrap'>Sel et lumière</p>
-                        <ArrowUpRight className="h-4 w-6" />
-                    </a>
+                   
                 </div>
             </section>
-            <div className='mt-10 md:mt-20'></div> 
+            <div className='mt-10 md:mt-20'></div>  */}
             <section className='container max-margin py-0 pb-10'>
                 <div className='w-full lg:w-1/2'>
                     <h2 className='heading-3 text-gray-900 mb-4'>{t("section_6_titre")}</h2>

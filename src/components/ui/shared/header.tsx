@@ -371,14 +371,19 @@ export default function Header() {
 const SubmenuItem = ({ menu }: { menu: MenuType }) => {
     const router = useRouter()
     const localActive = useLocale()
+    let link = menu.link
+    if (!menu.link && menu.link_fr){
+        link = localActive === "fr" ? menu.link_fr! : menu.link_en!
+    }
+
 
     const handleClick = () => {
-        if (menu.link ) {
-            if (menu.link.startsWith("http")) {
-                window.open(menu.link, '_blank')
+        if (link ) {
+            if (link.startsWith("http")) {
+                window.open(link, '_blank')
                 return
             }
-            router.push(`${menu.link}`)
+            router.push(link)
         }
         document.querySelector('#submenu')?.classList.add("hidden")
     }

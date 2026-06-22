@@ -11,6 +11,8 @@ export type MenuType = {
     description_fr: string;
     description_en: string;
     link: string;
+    link_fr?: string;
+    link_en?: string;
 }
 
 export type TypeEvent = {

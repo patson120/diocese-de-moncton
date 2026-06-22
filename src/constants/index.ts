@@ -89,8 +89,8 @@ export const archidiocese: MenuType[] = [
         id: 9,
         menu: "archidiocese",
         image: '/assets/icons/noun-liturgy-5166501 1.png',
-        titre_fr: 'Pastorale jeunesse',
-        titre_en: 'Youth Ministry',
+        titre_fr: 'Jeunesse et Pastorale vocationnelle',
+        titre_en: 'Youth and Vocational Ministry',
         description_fr: 'Accompagnement des jeunes dans la foi.',
         description_en: 'Guiding young people in their faith.',
         link: ''
@@ -376,6 +376,39 @@ export const ressources: MenuType[] = [
         description_fr: '',
         description_en: '',
         link: '#'
+    },
+    {
+        id: 7,
+        image: '/assets/icons/noun-cemetery-6767879 1.png',
+        titre_fr: "CECC",
+        titre_en: "CECC",
+        description_fr: '',
+        description_en: '',
+        link: '',
+        link_en: "https://www.cccb.ca/",
+        link_fr: "https://www.cecc.ca/"
+    },
+    {
+        id: 8,
+        image: '/assets/icons/noun-cemetery-6767879 1.png',
+        titre_fr: "Vatican",
+        titre_en: "Vatican",
+        description_fr: '',
+        description_en: '',
+        link: '',
+        link_en: "https://www.vatican.va/content/vatican/en.html",
+        link_fr: "https://www.vatican.va/content/vatican/fr.html"
+    },
+    {
+        id: 9,
+        image: '/assets/icons/noun-cemetery-6767879 1.png',
+        titre_fr: "Sel et Lumière",
+        titre_en: "Salt and Light",
+        description_fr: '',
+        description_en: '',
+        link: '',
+        link_en: "https://slmedia.org/",
+        link_fr: "https://slmedia.org/fr "
     },
 ]
 
