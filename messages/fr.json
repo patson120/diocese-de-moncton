@@ -10,6 +10,7 @@
         "mouvements": "Mouvements",
         "ressources": "Ressources",
         "contact": "Contact",
+        "diocesan_policy": "Politique diocésaine",
 
         "hero_first_paragraph": "Réjoignez-nous dans notre mission d'evangélisation",
 
@@ -102,8 +103,7 @@
         "fermer": "Fermer",
         "horaires_messe_titre": "Horaires de messe",
         "horaires_messe_desc": "Découvrez les horaires des messes dans votre paroisse.",
-        "savoir_plus": "En savoir plus",
-        "diocesan_policy": "Politique diocésaine"
+        "savoir_plus": "En savoir plus"
     },
 
     "search": {

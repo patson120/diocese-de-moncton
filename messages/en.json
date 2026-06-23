@@ -10,6 +10,7 @@
         "mouvements": "Movements",
         "ressources": "Resources",
         "contact": "Contact",
+        "diocesan_policy": "Diocesan Policy",
         
         "hero_first_paragraph": "Join us in our mission to spread the Gospel",
 
@@ -101,8 +102,7 @@
         "fermer": "Close",
         "horaires_messe_titre": "Mass schedule",
         "horaires_messe_desc": "Find out about mass times in your parish.",
-        "savoir_plus": "Read more",
-        "diocesan_policy": "Diocesan Policy"
+        "savoir_plus": "Read more"
     },
 
     "search": {
