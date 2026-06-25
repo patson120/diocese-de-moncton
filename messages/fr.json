@@ -707,17 +707,26 @@
 
         "section_3_titre": "Les sacrements de l’initiation",
         "section_3_sous_titre_1": "Le Baptême",
+        "section_3_p_1": "Le baptême est le premier sacrement de la vie chrétienne. Il marque l'entrée dans l'Église et la communion avec Dieu.",
         "section_3_sous_titre_2": "La Confirmation",
+        "section_3_p_2": "La confirmation est le sacrement qui parfait le baptême. Par l'imposition des mains et l'onction du Saint-Chrême, nous recevons le don de l'Esprit-Saint.",
         "section_3_sous_titre_3": "L'Eucharistie",
+        "section_3_p_3": "Après le baptême et la confirmation, l’eucharistie est le troisième sacrement de l’initiation chrétienne.",
+
+        "learn_more": "En savoir plus",
 
         "section_4_titre": "Les sacrements de guérison",
         "section_4_sous_titre_1": "La Réconciliation",
+        "section_4_p_1": "Le sacrement de pénitence et de réconciliation est un don de l'amour infini de Dieu. Par ce sacrement, le Christ nous libère du péché, nous guérit de nos blessures spirituelles et nous fortifie dans notre faiblesse.",
         "section_4_sous_titre_2": "L’onction des malades",
+        "section_4_p_2": "Depuis les origines du christianisme, les malades, les vieillards et les nécessiteux ont toujours occupé une place centrale dans la vie de l'Église.",
         "section_4_savoir_plus": "En savoir plus",
 
         "section_5_titre": "Les sacrements d'engagement",
         "section_5_sous_titre_1": "L’Ordre",
-        "section_5_sous_titre_2": "Le Mariage"
+        "section_5_p_1": "Le sacrement de l'ordre est l'un des sept sacrements de l'Église catholique. Il comporte trois degrés : l'épiscopat (évêque), le presbytérat (prêtre) et le diaconat (diacre).",
+        "section_5_sous_titre_2": "Le Mariage",
+        "section_5_p_2": "Le mariage sacramental est un don réciproque que se font l’homme et la femme. Il est célébré en présence d’un prêtre ou d’un diacre, qui représente l’Église et appelle la bénédiction de Dieu sur le couple."
     },
     "mouvements": {
         "hero_titre": "Les mouvements",

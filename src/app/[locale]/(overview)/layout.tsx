@@ -55,7 +55,7 @@ export default async function RootLayout({
         </Script>
       </head>
       <body
-        className={`${inter.className} antialiased select-none`}>
+        className={`${inter.className} antialiased select-nones`}>
         <NextIntlClientProvider messages={messages}>
           <main className='overflow-x-hidden'>
             {/* Header */}

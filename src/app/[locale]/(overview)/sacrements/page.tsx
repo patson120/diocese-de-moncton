@@ -143,13 +143,13 @@ export default function Page() {
                                 />
                             </div>
                             <h1 className='heading-4'>{t("section_3_sous_titre_1")}</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className='body-2 text-gray'>{t("section_3_p_1")}</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/bapteme-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >En savoir plus</Button>
+                                >{t("learn_more")}</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -166,13 +166,13 @@ export default function Page() {
                                 />
                             </div>
                             <h1 className='heading-4'>{t("section_3_sous_titre_2")}</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className='body-2 text-gray'>{t("section_3_p_2")}</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/confirmation-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >En savoir plus</Button>
+                                >{t("learn_more")}</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -189,13 +189,13 @@ export default function Page() {
                                 />
                             </div>
                             <h1 className='heading-4'>{t("section_3_sous_titre_3")}</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className='body-2 text-gray'>{t("section_3_p_3")}</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/eucharistie-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >En savoir plus</Button>
+                                >{t("learn_more")}</Button>
                             </div>
                         </div>
                     </div>
@@ -219,13 +219,13 @@ export default function Page() {
                                 />
                             </div>
                             <h1 className='heading-4'>{t("section_4_sous_titre_1")}</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_1")}</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/reconcilliation-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >En savoir plus</Button>
+                                >{t("learn_more")}</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -242,13 +242,13 @@ export default function Page() {
                                 />
                             </div>
                             <h1 className='heading-4'>{t("section_4_sous_titre_2")}</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className='body-2 text-gray'>{t("section_4_p_2")}</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/onction-malade-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >{t("section_4_savoir_plus")}</Button>
+                                >{t("learn_more")}</Button>
                             </div>
                         </div>
                     </div>
@@ -271,13 +271,13 @@ export default function Page() {
                                 />
                             </div>
                             <h1 className='heading-4'>{t("section_5_sous_titre_1")}</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className='body-2 text-gray'>{t('section_5_p_1')}</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/ordre-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >{t("section_4_savoir_plus")}</Button>
+                                >{t("learn_more")}</Button>
                             </div>
                         </div>
                         <div className='space-y-3'>
@@ -294,13 +294,13 @@ export default function Page() {
                                 />
                             </div>
                             <h1 className='heading-4'>{t("section_5_sous_titre_2")}</h1>
-                            <p className='body-2 text-gray'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className='body-2 text-gray'>{t('section_5_p_2')}</p>
                             <div>
                                 <Button
                                     variant="outline"
                                     onClick={() => navigateTo("/mariage-sacrements")}
                                     className='font-bold border-[#1D0104] rounded-[8px] mt-3'
-                                >{t("section_4_savoir_plus")}</Button>
+                                >{t("learn_more")}</Button>
                             </div>
                         </div>
                     </div>

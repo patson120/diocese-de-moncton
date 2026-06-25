@@ -697,17 +697,27 @@
 
         "section_3_titre": "The sacraments of initiation",
         "section_3_sous_titre_1": "Baptism",
+        "section_3_p_1": "Baptism is the first sacrament of the Christian life. It marks entry into the Church and communion with God.",
         "section_3_sous_titre_2": "Confirmation",
+        "section_3_p_2": "Confirmation is the sacrament that perfects baptism. Through the laying on of hands and the anointing with Holy Chrism, we receive the gift of the Holy Spirit.",
         "section_3_sous_titre_3": "Eucharist",
+        "section_3_p_3": "After baptism and confirmation, the Eucharist is the third sacrament of Christian initiation.",
+
+
+        "learn_more": "Learn more",
 
         "section_4_titre": "The sacraments of healing",
         "section_4_sous_titre_1": "Reconciliation",
+        "section_4_p_1": "The Sacrament of Penance and Reconciliation is a gift of God's infinite love. Through this sacrament, Christ frees us from sin, heals us of our spiritual wounds and strengthens us in our weakness.",
         "section_4_sous_titre_2": "Anointing of the sick",
+        "section_4_p_2": "From the earliest days of Christianity, the sick, the elderly and the needy have always occupied a central place in the life of the Church.",
         "section_4_savoir_plus": "Read more",
 
         "section_5_titre": "Sacraments of commitment",
         "section_5_sous_titre_1": "The Order",
-        "section_5_sous_titre_2": "The Marriage"
+        "section_5_p_1": "The sacrament of Holy Orders is one of the seven sacraments of the Catholic Church. It comprises three degrees: episcopate (bishop), presbyterate (priest) and diaconate (deacon).",
+        "section_5_sous_titre_2": "The Marriage",
+        "section_5_p_2": "Sacramental marriage is a mutual gift between man and woman. It is celebrated in the presence of a priest or deacon, who represents the Church and calls down God's blessing on the couple."
     },
     "mouvements": {
         "hero_titre": "Movements",
