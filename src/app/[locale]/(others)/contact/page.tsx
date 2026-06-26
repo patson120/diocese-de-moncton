@@ -13,9 +13,7 @@ import { toast } from 'sonner';
 
 export default function Page() {
     const router = useRouter()
-
     const t = useTranslations("contact")
-
     const [isSending, setIsSending] = useState(false);
     const [message, setMessage] = useState('');
     const [email, setEmail] = useState('');
@@ -144,89 +142,153 @@ export default function Page() {
                         <h1 className='heading-3 font-extrabold mb-4'>{t("contacts_paroissiaux")}</h1>
                         <div className="space-y-4">
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Mgr Guy Desrochers</h1>
-                                    <p className='body-3 text-gray'>{t("poste_1_titre")}</p>
-                                </div>
-                                <p className='body-2 text-gray'>507-743-2494</p>
+                                <a href="mailto:arch@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Mgr Guy Desrochers</h1>
+                                        <p className='body-3 font-semibold'>{t("poste_1_titre")}</p>
+                                    </div>
+                                </a>
+                                <p className='body-2 text-gray'></p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Père Jean-Gyu Dallaire</h1>
-                                    <p className='body-3 text-gray'>{t("poste_2_titre")}</p>
-                                </div>
-                                <p className='body-2 text-gray'>507-743-2494</p>
+                                <a href="mailto:mpyritho@hotmail.com">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>P. Pyritho Marcelin c.s.c.</h1>
+                                        <p className='body-3 font-semibold'>{t("poste_2_titre")}</p>
+                                    </div>
+                                </a>
+                                <p className='body-2 text-gray'>506-523-4230</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Ronald Drisdelle</h1>
-                                    <p className='body-3 text-gray'>{t("poste_3_titre")}</p>
-                                </div>
+                                <a href="mailto:econome@diocesemoncton.ca">
+
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Ronald Drisdelle</h1>
+                                        <p className='body-3 font-semibold'>{t("poste_3_titre")}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1234</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>François Siewe</h1>
-                                    <p className='body-3 text-gray'>{t('poste_4_titre')}</p>
-                                </div>
+                                <a href="mailto:comptable@diocesemoncton.ca">
+
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Josette Arsenault</h1>
+                                        <p className='body-3 font-semibold'>{t("poste_4_titre")}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1264</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Annette Leblanc</h1>
-                                    <p className='body-3 text-gray'>{t('poste_5_titre')}</p>
-                                </div>
+                                <a href="mailto:reception@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Annette Leblanc</h1>
+                                        <p className='body-3 font-semibold'>{t('poste_5_titre')}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1222</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Rachel Vienneau</h1>
-                                    <p className='body-3 text-gray'>{t('poste_6_titre')}</p>
-                                </div>
+                                <a href="mailto:cimetiere@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Julien Okou</h1>
+                                        <p className='body-3 font-semibold'>{t("poste_6_titre")}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1228</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Nathalie Leblanc</h1>
-                                    <p className='body-3 text-gray'>{t('poste_7_titre')}</p>
-                                </div>
+                                <a href="mailto:comptabilite@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Angèla LeBlanc</h1>
+                                        <p className='body-3 font-semibold'>{t("poste_7_titre")}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1292</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Gladys Leblanc</h1>
-                                    <p className='body-3 text-gray'>{t('poste_8_titre')}</p>
-                                </div>
+                                <a href="mailto:jus&sol@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Gladys Leblanc</h1>
+                                        <p className='body-3 font-semibold'>{t('poste_8_titre')}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1230</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Diane Léger</h1>
-                                    <p className='body-3 text-gray'>{t('poste_9_titre')}</p>
-                                </div>
+                                <a href="mailto:catechese@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Dianne Léger</h1>
+                                        <p className='body-3 font-semibold'>{t('poste_9_titre')}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1229</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Patricia Niles</h1>
-                                    <p className='body-3 text-gray'>{t('poste_10_titre')}</p>
-                                </div>
+                                <a href="mailto:rasamimananagilbert@gmail.com">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>P. Gilbert Augustin Rasamimanana</h1>
+                                        <p className='body-3 font-semibold'>{t("poste_13_titre")}</p>
+                                    </div>
+                                </a>
+                                <p className='body-2 text-gray'>506-655-7166</p>
+                            </div>
+                            <div className="flex items-center space-x-10">
+                                <a href="mailto:chancellerie.moncton@gmail.com">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Patricia Niles</h1>
+                                        <p className='body-3 font-semibold'>{t('poste_10_titre')}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1236</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Diacre Louis Allard</h1>
-                                    <p className='body-3 text-gray'>{t('poste_11_titre')}</p>
-                                </div>
+                                <a href="mailto:auditor@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Diacre Louis Allard</h1>
+                                        <p className='body-3 font-semibold'>{t('poste_11_titre')}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1236</p>
                             </div>
                             <div className="flex items-center space-x-10">
-                                <div>
-                                    <h1 className='font-extrabold'>Mario Robichaud</h1>
-                                    <p className='body-3 text-gray'>{t('poste_12_titre')}</p>
-                                </div>
+                                <a href="mailto:efa@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Mario Robichaud</h1>
+                                        <p className='body-3 font-semibold'>{t('poste_12_titre')}</p>
+                                    </div>
+                                </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1242</p>
                             </div>
+                            {/* <div className="flex items-center space-x-10">
+                                <div>
+                                    <h1 className='body-3 text-gray'>Père Jean-Gyu Dallaire</h1>
+                                    <p className='body-3 font-semibold'>{t("poste_2_titre")}</p>
+                                </div>
+                                <p className='body-2 text-gray'>507-743-2494</p>
+                            </div> */}
+                           {/*  <div className="flex items-center space-x-10">
+                                <div>
+                                    <h1 className='body-3 text-gray'>François Siewe</h1>
+                                    <p className='body-3 font-semibold'>{t('poste_4_titre')}</p>
+                                </div>
+                                <p className='body-2 text-gray'>{t("poste")} 1264</p>
+                            </div> */}
+                            
+                            {/* <div className="flex items-center space-x-10">
+                                <div>
+                                    <h1 className='body-3 text-gray'>Rachel Vienneau</h1>
+                                    <p className='body-3 font-semibold'>{t('poste_6_titre')}</p>
+                                </div>
+                                <p className='body-2 text-gray'>{t("poste")} 1228</p>
+                            </div> */}
+                            {/* <div className="flex items-center space-x-10">
+                                <div>
+                                    <h1 className='font-extrabold'>Nathalie Leblanc</h1>
+                                    <p className='body-3 font-semibold'>{t('poste_7_titre')}</p>
+                                </div>
+                                <p className='body-2 text-gray'>{t("poste")} 1292</p>
+                            </div> */}
                         </div>
                     </div>
                 </div>

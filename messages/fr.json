@@ -144,8 +144,8 @@
         "envoyer_message": "Envoyer le message",
         "poste": "Poste",
         "contacts_paroissiaux": "Contacts diocésain",
-        "poste_1_titre": "Archbishop of Moncton",
-        "poste_2_titre": "Vicar General",
+        "poste_1_titre": "Archevêque de Moncton",
+        "poste_2_titre": "Vicaire général",
         "poste_3_titre": "Chef des opérations",
         "poste_4_titre": "Comptable et fondation de l'Archevêché",
         "poste_5_titre": "Secrétaire/réceptionniste",
@@ -156,6 +156,7 @@
         "poste_10_titre": "Vice-chancelière & Notaire au tribunal matrimonial",
         "poste_11_titre": "Auditeur au tribunal matrimonial",
         "poste_12_titre": "Éducation de la foi des adultes",
+        "poste_13_titre": "Chancelier",
 
         "adresse": "Adresse",
         "place_cathedrale": "Place de la cathédrale",
