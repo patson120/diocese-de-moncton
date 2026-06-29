@@ -2,7 +2,11 @@ import { fetchAPI } from "@/_lib";
 import { BASE_URL } from "@/constants";
 
 
+
 export async function fetchActualites(params: string = "") {
+
+    console.log("**********", process.env.NEXT_PUBLIC_BASE_URL);
+    
     try {
         params = params.includes("is_actif") ? params : `${params}&is_actif=1`
         let url = `${BASE_URL}/actualites${params}`;

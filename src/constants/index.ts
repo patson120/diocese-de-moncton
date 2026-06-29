@@ -1,7 +1,7 @@
 import { MenuType } from "@/types"
 
 export const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = 'AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVWyJnYlg'
-export const BASE_URL = "https://diocese.wds-project.com/api"
+export const BASE_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/api`
 
 
 export const archidiocese: MenuType[] = [
@@ -368,14 +368,32 @@ export const ressources: MenuType[] = [
         description_en: 'Support for divorced people ',
         link: '/tribunal-matrimonial'
     },
-    {
+{
         id: 5,
         image: '/assets/icons/note.png',
-        titre_fr: 'Bulletins paroissiaux',
+        titre_fr: 'Bulletinsparoissiaux',
         titre_en: 'Parish bulletins',
-        description_fr: 'Ensemble des bulletins pastoraux du diocèse',
+        description_fr: 'Ensemble des bulletins pastoraux du diocese',
         description_en: 'All pastoral bulletins of the diocese',
         link: '/bulletins'
+    },
+    {
+        id: 10,
+        image: '/assets/icons/shield.png',
+        titre_fr: 'Deposer une plainte',
+        titre_en: 'Report Misconduct',
+        description_fr: 'Signalez toute inconduite ou abus en toute confidentialite',
+        description_en: 'Report any misconduct or abuse in confidence',
+        link: '/deposer-plainte'
+    },
+    {
+        id: 11,
+        image: '/assets/icons/noun-communaute-1234567 1.png',
+        titre_fr: 'Communautes religieuses',
+        titre_en: 'Religious Communities',
+        description_fr: 'Decouvrez les communautes religieuses feminines et masculines',
+        description_en: 'Discover the feminine and masculine religious communities',
+        link: '/communautes-religieuses'
     },
     // New
     /* {

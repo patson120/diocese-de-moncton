@@ -3,7 +3,6 @@
 import { useRouter } from '@/i18n/routing';
 import { Paroisse } from '@/types';
 import { Loader } from '@googlemaps/js-api-loader';
-import { useLocale } from 'next-intl';
 import { useEffect, useRef, useState } from 'react';
 
 interface MapProps {
