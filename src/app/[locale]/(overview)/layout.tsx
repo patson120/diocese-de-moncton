@@ -42,13 +42,13 @@ export default async function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}></Script>
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}></Script>
         <Script id='google-analytics'>
           { `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
+              gtag('config', '${process.env.GA_MEASUREMENT_ID}', {
                 page_path: window.location.pathname,
               });
           `}
