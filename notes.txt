@@ -1,1 +1,0 @@
-Je veux qu'en te basant sur la structure des pages déjà existantes dans ce projet, tu m'ajoutes une nouvelle pour "Déposer une plainte" et te servant du modèle mais toute fois garder le design que nous avons dans ce projet et utiliser le contenu de ce lien: https://halifaxyarmouth.org/report-misconduct N'hesites pas à améliorer le design bien evidement 
