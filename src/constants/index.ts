@@ -371,7 +371,7 @@ export const ressources: MenuType[] = [
 {
         id: 5,
         image: '/assets/icons/note.png',
-        titre_fr: 'Bulletinsparoissiaux',
+        titre_fr: 'Bulletins paroissiaux',
         titre_en: 'Parish bulletins',
         description_fr: 'Ensemble des bulletins pastoraux du diocese',
         description_en: 'All pastoral bulletins of the diocese',
@@ -379,7 +379,7 @@ export const ressources: MenuType[] = [
     },
     {
         id: 10,
-        image: '/assets/icons/shield.png',
+        image: '/assets/icons/note.png',
         titre_fr: 'Deposer une plainte',
         titre_en: 'Report Misconduct',
         description_fr: 'Signalez toute inconduite ou abus en toute confidentialite',
@@ -388,10 +388,10 @@ export const ressources: MenuType[] = [
     },
     {
         id: 11,
-        image: '/assets/icons/noun-communaute-1234567 1.png',
-        titre_fr: 'Communautes religieuses',
+        image: '/assets/icons/note.png',
+        titre_fr: 'Communautés réligieuses',
         titre_en: 'Religious Communities',
-        description_fr: 'Decouvrez les communautes religieuses feminines et masculines',
+        description_fr: 'Découvrez les communautés réligieuses féminines et masculines',
         description_en: 'Discover the feminine and masculine religious communities',
         link: '/communautes-religieuses'
     },
