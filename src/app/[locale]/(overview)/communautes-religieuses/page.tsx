@@ -3,7 +3,6 @@
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { ArrowUpRight } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Page() {
