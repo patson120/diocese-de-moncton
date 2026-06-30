@@ -91,7 +91,8 @@
         "pretre_responsable": "Prêtre responsable",
         "autres_membres": "Autres membres",
         "contact_us": "Contactez-nous",
-        "download_msg": "Télécharger le message"
+        "download_msg": "Télécharger le message",
+        "deposer_plainte": "Déposer une plainte"
 
     },
 
@@ -812,6 +813,20 @@
         "section_5_titre": "Confidentialité",
         "section_5_p_1": "Toutes les plaintes sont traitées de manière confidentielle. Nous nous engageons à protéger votre vie privée et à ne pas prendre de mesures rétaliatoires contre vous pour avoir signalé une inconduite de bonne foi.",
         "section_5_p_2": "Cependant, en raison des exigences légales, nous ne pouvons pas garantir un anonymat complet dans tous les cas.",
+        "letter_titre": "Une lettre de l'Archevêque",
+        "letter_date": "26 janvier 2021",
+        "letter_salutation": "Chers frères et sœurs en Christ,",
+        "letter_p_1": "En février 2010, le protocole de ministère responsable et d'environnement sûr a été mis en œuvre dans le Diocèse de Moncton. Son intention était d'améliorer et de maintenir un environnement sûr pour un ministère plus responsable. Il visait également à développer un processus efficace de responsabilité, pour une Église plus transparente et responsable.",
+        "letter_p_2": "En 2018, la Conférence des évêques catholique du Canada a approuvé une série de recommandations pour leur mise en œuvre dans les diocèses du Canada. L'une d'entre elles étant que chaque diocese mettrait en œuvre/mettre à jour une politique de sauvegarde diocésaine conforms aux normes les plus élevées du ministère responsable.",
+        "letter_p_3": "Au cours des derniers mois, nous avons examiné et mis à jour notre protocole de ministère responsable et d'environnement sûr pour refléter les leçons apprises en gardant l'engagement des évêques du Canada. Cela visait à fournir un environnement sûr et sain pour tous ceux que nous sommes appelés à servir, ainsi que pour ceux qui travaillent et bénévole au sein de notre Église.",
+        "letter_desc": "Lire la lettre de l'Archevêque Brian Dunn concernant notre engagement envers un environnement sûr.",
+        "letter_btn": "Continuer la lecture",
+        "report_form_titre": "Signaler une inconduite",
+        "report_form_desc": "Pour signaler une inconduite, veuillez cliquer sur le formulaire ci-dessous:",
+        "report_form_btn": "Formulaire de signalement d'inconduite",
+        "bishop_report_titre": "Système de signalement des évêques",
+        "bishop_report_desc": "Pour signaler une inconduite par un évêque canadien, cliquez ici.",
+        "bishop_report_btn": "Signaler une inconduite d'évêque",
         "retour": "Retour",
         "back_to_home": "Retour à l'accueil"
     },

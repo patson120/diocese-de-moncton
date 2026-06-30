@@ -383,7 +383,7 @@ export const ressources: MenuType[] = [
         titre_en: 'Report Misconduct',
         description_fr: 'Signalez toute inconduite ou abus en toute confidentialite',
         description_en: 'Report any misconduct or abuse in confidence',
-        link: '/deposer-plainte'
+        link: '/signaler-inconduite' // '/deposer-plainte'
     },
     
     // New

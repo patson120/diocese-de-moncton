@@ -92,7 +92,8 @@
         "pretre_responsable": "Priest in charge",
         "autres_membres": "Other members",
         "contact_us": "Contact us",
-        "download_msg": "Download the message"
+        "download_msg": "Download the message",
+        "deposer_plainte": "File a complaint"
     },
     "newsletter": {
         "placeholder": "Email address"
@@ -802,6 +803,20 @@
         "section_5_titre": "Confidentiality",
         "section_5_p_1": "All complaints are handled confidentially. We are committed to protecting your privacy and will not take retaliatory measures against you for reporting misconduct in good faith.",
         "section_5_p_2": "However, due to legal requirements, we cannot guarantee complete anonymity in all cases.",
+        "letter_titre": "A Letter from the Archbishop",
+        "letter_date": "January 26, 2021",
+        "letter_salutation": "Dear Brothers and Sisters in Christ,",
+        "letter_p_1": "In February 2010, the Responsible Ministry and Safe Environment protocol was implemented in the Diocese of Moncton. Its intent was to improve and maintain a safe environment for a more responsible ministry. It was also meant to develop an effective process of accountability, for a more transparent, open and accountable Church.",
+        "letter_p_2": "In 2018, the Canadian Conference of Catholic Bishops approved a series of recommendations for implementation in the dioceses of Canada. One of these being that each diocese would implement/update a diocesan safeguarding policy conforming to the highest standards of responsible ministry.",
+        "letter_p_3": "Over the past months, we have reviewed and updated our Responsible Ministry & Safe Environment Protocol to reflect lessons learned in keeping with the commitment of the Bishops of Canada. This was meant to provide a safe and healthy environment for all we are called to serve, as well as those who work and volunteer within our Church.",
+        "letter_desc": "Read Archbishop Brian Dunn's letter regarding our commitment to a safe environment.",
+        "letter_btn": "Continue Reading",
+        "report_form_titre": "Report Misconduct",
+        "report_form_desc": "To report misconduct, please click on the form below:",
+        "report_form_btn": "Report of Misconduct form",
+        "bishop_report_titre": "Bishop Reporting System",
+        "bishop_report_desc": "To report misconduct by a Canadian Bishop, click here.",
+        "bishop_report_btn": "Report Bishop Misconduct",
         "retour": "Back",
         "back_to_home": "Back to homepage"
     },
