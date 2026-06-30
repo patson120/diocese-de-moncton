@@ -380,7 +380,7 @@ export const ressources: MenuType[] = [
     {
         id: 10,
         image: '/assets/icons/note.png',
-        titre_fr: 'Deposer une plainte',
+        titre_fr: 'Déposer une plainte',
         titre_en: 'Report Misconduct',
         description_fr: 'Signalez toute inconduite ou abus en toute confidentialite',
         description_en: 'Report any misconduct or abuse in confidence',
