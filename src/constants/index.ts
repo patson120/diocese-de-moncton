@@ -97,13 +97,12 @@ export const archidiocese: MenuType[] = [
     },
     {
         id: 9,
-        menu: "archidiocese",
         image: '/assets/icons/noun-liturgy-5166501 1.png',
-        titre_fr: 'Communautés religieuses',
-        titre_en: 'Religious communities',
-        description_fr: 'Découvrez les communautés religieuses de notre diocèse.',
-        description_en: 'Discover the religious communities in our diocese.',
-        link: ''
+        titre_fr: 'Communautés réligieuses',
+        titre_en: 'Religious Communities',
+        description_fr: 'Découvrez les communautés réligieuses féminines et masculines',
+        description_en: 'Discover the feminine and masculine religious communities',
+        link: '/communautes-religieuses'
     },
 ]
 
@@ -386,15 +385,7 @@ export const ressources: MenuType[] = [
         description_en: 'Report any misconduct or abuse in confidence',
         link: '/deposer-plainte'
     },
-    {
-        id: 11,
-        image: '/assets/icons/note.png',
-        titre_fr: 'Communautés réligieuses',
-        titre_en: 'Religious Communities',
-        description_fr: 'Découvrez les communautés réligieuses féminines et masculines',
-        description_en: 'Discover the feminine and masculine religious communities',
-        link: '/communautes-religieuses'
-    },
+    
     // New
     /* {
         id: 6,
