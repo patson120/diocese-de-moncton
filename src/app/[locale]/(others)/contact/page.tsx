@@ -151,6 +151,15 @@ export default function Page() {
                                 <p className='body-2 text-gray'></p>
                             </div>
                             <div className="flex items-center space-x-10">
+                                <a href="mailto:reception@diocesemoncton.ca">
+                                    <div>
+                                        <h1 className='body-3 text-gray'>Annette Leblanc</h1>
+                                        <p className='body-3 font-semibold'>{t('poste_5_titre')}</p>
+                                    </div>
+                                </a>
+                                <p className='body-2 text-gray'>{t("poste")} 1222</p>
+                            </div>
+                            <div className="flex items-center space-x-10">
                                 <a href="mailto:mpyritho@hotmail.com">
                                     <div>
                                         <h1 className='body-3 text-gray'>P. Pyritho Marcelin c.s.c.</h1>
@@ -179,15 +188,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1264</p>
                             </div>
-                            <div className="flex items-center space-x-10">
-                                <a href="mailto:reception@diocesemoncton.ca">
-                                    <div>
-                                        <h1 className='body-3 text-gray'>Annette Leblanc</h1>
-                                        <p className='body-3 font-semibold'>{t('poste_5_titre')}</p>
-                                    </div>
-                                </a>
-                                <p className='body-2 text-gray'>{t("poste")} 1222</p>
-                            </div>
+                            
                             <div className="flex items-center space-x-10">
                                 <a href="mailto:cimetiere@diocesemoncton.ca">
                                     <div>

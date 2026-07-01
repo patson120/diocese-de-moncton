@@ -88,7 +88,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='text-[#B5B5B5]'>
-                <Link href="https://www.diocesegatineau.org/informations-sur-la-gestion-des-plaintes/">
+                <Link href="/politique-diocesaine">
                   <Text className='text-inherit' keyString='diocesan_policy' />
                 </Link>
               </li>

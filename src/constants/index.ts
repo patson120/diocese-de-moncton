@@ -436,7 +436,7 @@ export const ressources: MenuType[] = [
         titre_en: "Diocesan Policy",
         description_fr: 'Règles officielles guidant le Diocèse et les paroisses selon le droit canon.',
         description_en: 'Official rules guiding the Diocese and parishes according to Canon Law.',
-        link: 'https://www.diocesegatineau.org/informations-sur-la-gestion-des-plaintes',
+        link: '/politique-diocesaine',
     },
     {
         id: 11,

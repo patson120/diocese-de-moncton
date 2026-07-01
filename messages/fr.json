@@ -856,5 +856,29 @@
         "eudistes_titre": "Les Pères Eudistes (c.j.m.)",
         "eudistes_desc": "Les Pères Eudistes sont présents dans notre diocese et contribuent à la mission de l'Eglise.",
         "visiter_site": "Visiter le site web"
+    },
+    "politique_diocesaine": {
+        "hero_title": "Politique diocésaine pour la gestion des abus sexuels",
+        "hero_subtitle": "Politique diocésaine pour la gestion des abus sexuels sur des personnes vulnérables dans le diocèse de Moncton",
+        "section_principes_titre": "Principes fondamentaux",
+        "section_principes_p1": "L'Église est appelée à défendre, entre autres, les droits des petits, des faibles, des pauvres et les personnes vulnérables. Elle doit avoir, en matière d'intégrité et de droits de la personne, un comportement irréprochable, au-dessus de tout soupçon.",
+        "section_principes_p2": "C'est pourquoi, ceux et celles qui exercent la Mission en son nom et au nom du Christ doivent faire preuve d'un comportement qui confirme cette intégrité.",
+        "section_eglise_titre": "L'engagement de l'Église",
+        "section_eglise_p1": "Les abus sexuels sont des actes intolérables et inacceptables. Lorsque de tels abus sont commis par des membres du clergé ou des laïcs engagés au sein de l'Église, ils ont des impacts catastrophiques sur les victimes, sur toute l'Église.",
+        "section_eglise_p2": "À cause des abus sexuels, l'Église est blessée, souffrante et elle porte encore une blessure incurable.",
+        "section_eglise_p3": "Depuis l'éclatement de cette crise, l'Église Catholique en général et le diocèse de Moncton en particulier ont fait de la protection des personnes mineures ou vulnérables une priorité importante.",
+        "section_eglise_p4": "La présente politique s'inscrit dans la lignée des réformes apportées par l'Église catholique afin de faire ce qui est possible, comme disait le Pape François, pour déraciner de l'Église la plaie des abus sexuels sur les personnes mineures et ouvrir une voie de réconciliation et de guérison en faveur de ceux qui ont été abusés.",
+        "section_portee_titre": "Portée de la politique",
+        "section_portee_p1": "Le diocese de Moncton traite les inconduites sexuelles par l'entremise du Comité consultatif nommé par l'archevêque. Cette politique diocésaine présente les procédures canoniques à suivre pour le traitement d'une allégation d'inconduite sexuelle sur des personnes mineures ou vulnérables.",
+        "section_portee_li_1": "Les évêques, prêtres et diacres",
+        "section_portee_li_2": "Les personnes laïques mandatées ou bénévoles",
+        "section_portee_li_3": "Les membres non ordonnés d'un institut de vie consacrée",
+        "section_portee_li_4": "Les personnes travaillant dans des structures d'Église, Chapelle, Aumônerie sous supervision du diocese de Moncton",
+        "engagement_titre": "Notre engagement",
+        "engagement_p1": "En promulguant cette politique sur la gestion des abus sexuels sur des personnes mineures et vulnérables, je m'engage à mettre en œuvre tous les éléments qui y sont contenus.",
+        "engagement_p2": "J'invite aussi tous les fidèles du diocese de Moncton à prendre cet engagement avec moi.",
+        "section_appel_titre": "Un appel à la collaboration",
+        "section_appel_p1": "J'en appelle à la collaboration de tous et de toutes, pour que nos communautés soient des espaces d'amour, de respect et de fraternité et que l'Évangelogique de Jésus y soit annoncé et vécu dans un environnement sécuritaire.",
+        "section_appel_p2": "Ensemble, engageons-nous à faire de nos communautés des lieux d'amour, de respect et de fraternité, où l'Évangile de Jésus est annoncé et vécu dans un environnement sécuritaire."
     }
 }

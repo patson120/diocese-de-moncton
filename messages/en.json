@@ -846,5 +846,29 @@
         "eudistes_titre": "Eudist Fathers (c.j.m.)",
         "eudistes_desc": "The Eudist Fathers are present in our diocese and contribute to the mission of the Church.",
         "visiter_site": "Visit the website"
+    },
+    "politique_diocesaine": {
+        "hero_title": "Diocesan Policy on Sexual Abuse",
+        "hero_subtitle": "Diocesan Policy for the Management of Sexual Abuse of Vulnerable Persons in the Archdiocese of Moncton",
+        "section_principes_titre": "Fundamental Principles",
+        "section_principes_p1": "The Church is called upon to defend, among other things, the rights of the little ones, the weak, the poor and the vulnerable. It must have, in matters of integrity and human rights, a behavior irreproachable, above all suspicion.",
+        "section_principes_p2": "This is why, those who exercise the Mission in its name and in the name of Christ must demonstrate behavior that confirms this integrity.",
+        "section_eglise_titre": "The Church's Commitment",
+        "section_eglise_p1": "Sexual abuse is intolerable and unacceptable. When such abuse is committed by members of the clergy or committed lay people within the Church, it has a catastrophic impact on the victims, on the whole Church.",
+        "section_eglise_p2": "Because of sexual abuse, the Church is hurt, suffering and still carrying an incurable wound.",
+        "section_eglise_p3": "Since the outbreak of this crisis, the Catholic Church in general and the Archdiocese of Moncton in particular have made the protection of minors and vulnerable persons an important priority.",
+        "section_eglise_p4": "The present policy is in line with the reforms made by the Catholic Church to do what is possible, as Pope Francis said, to uproot from the Church the wound of sexual abuse of minors and open a path of reconciliation and healing in favor of those who have been abused.",
+        "section_portee_titre": "Scope of the Policy",
+        "section_portee_p1": "The Archdiocese of Moncton deals with sexual misconduct through the Archbishop's appointed Advisory Committee. This diocesan policy outlines the canonical procedures to be followed when dealing with an allegation of sexual misconduct involving minors or vulnerable persons.",
+        "section_portee_li_1": "Bishops, priests and deacons",
+        "section_portee_li_2": "Mandated or volunteer lay persons",
+        "section_portee_li_3": "Non-ordained members of an institute of consecrated life",
+        "section_portee_li_4": "Persons working in Church structures, Chapels or Chaplaincies under the supervision of the Archdiocese of Moncton",
+        "engagement_titre": "Our Commitment",
+        "engagement_p1": "In promulgating this policy on the management of sexual abuse of minors and vulnerable persons, I commit myself to implementing all the elements contained herein.",
+        "engagement_p2": "I also invite all the faithful of the Archdiocese of Moncton to make this commitment with me.",
+        "section_appel_titre": "A Call for Collaboration",
+        "section_appel_p1": "I call on everyone to work together to ensure that our communities are places of love, respect and fraternity, and that the Gospel of Jesus is proclaimed and lived in a safe environment.",
+        "section_appel_p2": ""
     }
 }
