@@ -3,12 +3,20 @@
 import { Button } from '@/components/ui/shared/button'
 import { HeroSectionSecond } from '@/components/sections/hero-second'
 import { Mail, Phone, FileText } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 
 
 export default function Page() {
     const t = useTranslations("deposer_plainte")
+    const localeActive =  useLocale()
+
+    const handleOpenReportForm = () => {
+        const reportFormUrl = localeActive === 'fr' ? 
+        'https://docs.google.com/forms/d/e/1FAIpQLScAMxpcZa_yN_3dHEauvcDu9EMKrb5XzQf-yxLAH6hMkbm9NQ/viewform' : 
+        'https://docs.google.com/forms/d/e/1FAIpQLSdUOalmyK8mxiS6wNbSIaGVe7z1kGpFXQ-Yj_bOVTStDTEI5g/viewform'
+        window.open(reportFormUrl, '_blank')
+    }
 
     return (
         <main>
@@ -77,7 +85,7 @@ export default function Page() {
                             </div>
                             <h2 className="heading-4 font-extrabold mb-4 text-center">{t("report_form_titre")}</h2>
                             <p className="body-2 text-gray mb-4 text-center">{t("report_form_desc")}</p>
-                            <Button variant="default" className="body-2 w-full md:w-auto">
+                            <Button onClick={handleOpenReportForm} variant="default" className="body-2 w-full md:w-auto">
                                 {t("report_form_btn")}
                             </Button>
                         </div>
