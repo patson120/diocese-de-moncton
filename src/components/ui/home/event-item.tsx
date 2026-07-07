@@ -28,7 +28,7 @@ export default async function EventItem({ data, row }: { data: TypeEvent, row?: 
             <div className={`${row ? 'divide-x flex-1' : 'divide-y space-y-2'}`}>
                 <div className={`${row ? 'hidden' : 'flex'}`}></div>
                 <div className={`${row ? 'pl-4' : 'pt-2 pl-2 md:pl-3'}`}>
-                    <h3 className='body-2 font-extrabold'>{data.heure_event}</h3>
+                    <h3 className='body-2 font-extrabold'>{data.heure_event.slice(0, 5)}</h3>
                     <p className='body-3 text-gray-500'>{data.lieu}</p>
                 </div>
             </div>

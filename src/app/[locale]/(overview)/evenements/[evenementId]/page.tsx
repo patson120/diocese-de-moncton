@@ -86,7 +86,7 @@ export default async function Page(props: {
                                     <Calendar className="h-5 w-5 text-gray-400" />
                                     <label htmlFor="date" className='text-gray'>Date</label>
                                 </div>
-                                <p className='font-semibold flex flex-col'>
+                                <p className='text-sm flex flex-col'>
                                     <span>{formatDateToLocal((new Date(event.date_event)).toISOString(), userLanguage === 'en' ? "en-EN": 'fr-FR')}</span>
                                     {
                                         event.date_fin &&
@@ -101,7 +101,7 @@ export default async function Page(props: {
                                         <Text keyString='heure' />
                                     </label>
                                 </div>
-                                <h1 className='text-base font-semibold'>{event.heure_event}</h1>
+                                <h1 className='text-base font-semibold'>{event.heure_event.slice(0,5)}</h1>
                             </div>
                             <div className='space-y-1'>
                                 <div className='flex items-center space-x-1'>
