@@ -29,8 +29,8 @@ export default function Page() {
                     <div className='col-span-full lg:col-span-2 '>
                         <div className='h-72 xl:h-80 relative rounded-xl md:rounded-[18px] overflow-hidden bg-gray-100'>
                             <Image
-                                alt="Image de détail de l'évènement"
-                                src="/assets/img/liturgie-1.png"
+                                alt="Photo du pape Leon XIV"
+                                src="/assets/img/liturgie-1.jpeg"
                                 fill
                                 style={{ objectFit: 'cover' }}
                             />
