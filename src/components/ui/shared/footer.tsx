@@ -1,6 +1,6 @@
 import Text from '@/components/Text'
 import { Link } from '@/i18n/routing'
-import { FacebookIcon, YoutubeIcon } from 'lucide-react'
+import { YoutubeIcon } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Footer() {
@@ -61,6 +61,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='text-[#B5B5B5]'>
+                <Link href="/bulletins">
+                  <Text className='text-inherit' keyString='bulletin_paroissiaux' />
+                </Link>
+              </li>
+              <li className='text-[#B5B5B5]'>
                 <Link href="/clerges">
                   <Text className='text-inherit' keyString='clerge' />
                 </Link>
@@ -82,11 +87,11 @@ export default function Footer() {
               {/* <li className='text-[#B5B5B5]'>
                 <Text className='text-inherit' keyString='formations' />
               </li> */}
-              <li className='text-[#B5B5B5]'>
+              {/* <li className='text-[#B5B5B5]'>
                 <Link href="/bulletins">
                   <Text className='text-inherit' keyString='documents_officiels' />
                 </Link>
-              </li>
+              </li> */}
               <li className='text-[#B5B5B5]'>
                 <Link href="/politique-diocesaine">
                   <Text className='text-inherit' keyString='diocesan_policy' />
