@@ -9,16 +9,16 @@ interface MapProps {
   parishes: Paroisse[];
   selectedParish: Paroisse | null;
   onParishSelect: (parish: Paroisse) => void;
+  lieu?: string
 }
 
-export default function Map({ parishes, selectedParish, onParishSelect }: MapProps) {
+export default function Map({ parishes, selectedParish, onParishSelect, lieu }: MapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const googleMapRef = useRef<google.maps.Map | null>(null);
   const markersRef = useRef<{ [key: number]: google.maps.Marker }>({});
   let map: google.maps.Map;
 
   const router = useRouter();
-  // const localActive = useLocale();
 
   const [first, setfirst] = useState<Paroisse>(selectedParish!)
 
@@ -111,7 +111,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
               lng: parish?.gps ? parseFloat(parish?.gps.split(";")[1]) : -64.781880
             },
             map,
-            title: parish?.nom || '',
+            title: lieu ?? parish?.nom!,
             animation: google.maps.Animation.DROP,
             clickable: true,
             icon: getIcon(parish),
@@ -145,7 +145,7 @@ export default function Map({ parishes, selectedParish, onParishSelect }: MapPro
         marker = new google.maps.Marker({
           position: { lat: parseFloat(first.gps.split(";")[0]), lng: parseFloat(first.gps.split(";")[1]) },
           map,
-          title: first.nom,
+          title: lieu ?? first.nom,
           animation: google.maps.Animation.DROP,
           clickable: true,
           icon: getIcon(first),

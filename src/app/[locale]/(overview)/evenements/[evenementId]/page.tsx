@@ -119,7 +119,7 @@ export default async function Page(props: {
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString='lieu_map' /></h1>
                         {/* Map */}
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
-                             <MapSection paroisses={[event.paroisse]} />
+                             <MapSection paroisses={[event.paroisse]} lieu={event.lieu ?? null} />
                         </div>
                     </div>
                 </div>
