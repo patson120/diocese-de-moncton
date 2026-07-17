@@ -19,22 +19,26 @@ export default async function MessageArcheveque() {
         <section className='vertical-margin bg-yellow100 text-[#1D0104]'>
             <div className='container max-margin py-0 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 xl:gap-12'>
                 <div className='order-1 md:order-last md:col-span-2 rounded-2xl bg-yellowColor px-5 md:px-14 py-5 md:py-8 flex flex-col gap-2 md:gap-4 xl:gap-7'>
-                    <div className="space-y-1 lg:space-y-2">
-                        <h1 className='heading-3 font-extrabold mb-3'>
-                            <Text className="text-inherit" keyString="msg_archeveque" />
-                        </h1>
-                        <Text className='heading-5 text-xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
-                    </div>
-                    <div className='body-2 leading-[25.9px]'>
-                        <Text className="line-clamp-6" labelEn={message.message_en} labelFr={message.message_fr} />
-                        {
-                            (message.ressource_en && message.ressource_fr) && 
-                            <div className="flex gap-1 text-gray-600 text-sm">
-                                Document :
-                                <Text className="line-clamp-6 text-gray-600" labelEn={message.ressource_en?.titre_en!} labelFr={message.ressource_fr?.titre_fr!} />
-                            </div>
-                        }
-                    </div>
+                    <Link href={`/messages/${message.id}`}>
+                        <div className="space-y-1 lg:space-y-2">
+                            <h1 className='heading-3 font-extrabold mb-3'>
+                                <Text className="text-inherit" keyString="msg_archeveque" />
+                            </h1>
+                            <Text className='heading-5 text-xl' labelEn={message.titre_en} labelFr={message.titre_fr} />
+                        </div>
+                    </Link>
+                    <Link href={`/messages/${message.id}`}>
+                        <div className='body-2 leading-[25.9px]'>
+                            <Text className="line-clamp-6" labelEn={message.message_en} labelFr={message.message_fr} />
+                            {
+                                (message.ressource_en && message.ressource_fr) && 
+                                <div className="flex gap-1 text-gray-600 text-sm">
+                                    Document :
+                                    <Text className="line-clamp-6 text-gray-600" labelEn={message.ressource_en?.titre_en!} labelFr={message.ressource_fr?.titre_fr!} />
+                                </div>
+                            }
+                        </div>
+                    </Link>
                     <div className='flex justify-end'>
                         <div className='flex justify-center items-center gap-2 bg-[#8B22360D] rounded-[8px] px-3 py-[5px]'>
                             <Calendar className="h-4 w-4 text-gray-600" />
