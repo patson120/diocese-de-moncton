@@ -47,6 +47,7 @@ export type Category = {
     menu: string;
     created_at: string;
     updated_at: string;
+    hascontenu: boolean;
 }
 
 export type Paroisse = {
