@@ -15,9 +15,17 @@ export default async function Actualite({ data }: { data: TypeActualite }) {
                     alt={data.titre_fr}
                     src={ data.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${data.galerie[0].path}` : '/assets/img/vector.svg' }
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', filter: 'blur(20px)', transform: 'scale(1.1)' }}
+                    aria-hidden
+                />
+                <Image
+                    alt={data.titre_fr}
+                    src={ data.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${data.galerie[0].path}` : '/assets/img/vector.svg' }
+                    fill
+                    style={{ objectFit: 'contain' }}
                 />
             </div>
+
             <span className='legend font-bold text-primary !-mb-2'>
                 <Text labelEn={data.categorie.intitule_en} labelFr={data.categorie.intitule_fr}  />
             </span>
