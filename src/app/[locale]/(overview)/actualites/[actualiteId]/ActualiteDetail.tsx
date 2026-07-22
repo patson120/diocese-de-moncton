@@ -15,7 +15,14 @@ export default async function ActualiteDetail({ actualite }: { actualite: TypeAc
                     alt='image'
                     src={actualite?.galerie?.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${actualite.galerie[0].path}` :'/assets/img/vector.svg'}
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'cover', filter: 'blur(20px)', transform: 'scale(1.1)' }}
+                    aria-hidden
+                />
+                <Image
+                    alt='image'
+                    src={actualite?.galerie?.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${actualite.galerie[0].path}` :'/assets/img/vector.svg'}
+                    fill
+                    style={{ objectFit: 'contain' }}
                 />
             </div>
 
