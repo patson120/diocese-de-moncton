@@ -148,7 +148,7 @@ export function HeroSection() {
                         <div onClick={() => { navigateTo(`/messages/${message?.id}`) }} className='cursor-pointer'>
                           {
                             message ?
-                            <Text className='body max-w-xl line-clamp-2 rounded-md p-1 bg-white/20' labelEn={message?.message_en} labelFr={message?.message_fr} />
+                            <Text className='body max-w-xl line-clamp-2 rounded-md p-1 bg-white' labelEn={message?.message_en} labelFr={message?.message_fr} />
                             : <p className='text-xs text-muted'>Chargement du message...</p>
                           }
                         </div>
