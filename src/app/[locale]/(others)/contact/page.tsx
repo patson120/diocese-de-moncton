@@ -150,7 +150,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'></p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:reception@diocesemoncton.ca">
                                     <div>
                                         <h1 className='body-3 text-gray'>Annette Leblanc</h1>
@@ -159,7 +159,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1222</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:mpyritho@hotmail.com">
                                     <div>
                                         <h1 className='body-3 text-gray'>P. Pyritho Marcelin c.s.c.</h1>
@@ -168,7 +168,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>506-523-4230</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:econome@diocesemoncton.ca">
 
                                     <div>
@@ -178,7 +178,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1234</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:comptable@diocesemoncton.ca">
 
                                     <div>
@@ -189,7 +189,7 @@ export default function Page() {
                                 <p className='body-2 text-gray'>{t("poste")} 1264</p>
                             </div>
                             
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:cimetiere@diocesemoncton.ca">
                                     <div>
                                         <h1 className='body-3 text-gray'>Julien Okou</h1>
@@ -198,7 +198,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1228</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:comptabilite@diocesemoncton.ca">
                                     <div>
                                         <h1 className='body-3 text-gray'>Angèla LeBlanc</h1>
@@ -207,7 +207,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1292</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:jus&sol@diocesemoncton.ca">
                                     <div>
                                         <h1 className='body-3 text-gray'>Gladys Leblanc</h1>
@@ -216,7 +216,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1230</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:catechese@diocesemoncton.ca">
                                     <div>
                                         <h1 className='body-3 text-gray'>Dianne Léger</h1>
@@ -225,7 +225,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1229</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:rasamimananagilbert@gmail.com">
                                     <div>
                                         <h1 className='body-3 text-gray'>P. Gilbert Augustin Rasamimanana</h1>
@@ -234,7 +234,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>506-655-7166</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:chancellerie.moncton@gmail.com">
                                     <div>
                                         <h1 className='body-3 text-gray'>Patricia Niles</h1>
@@ -243,7 +243,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1236</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:auditor@diocesemoncton.ca">
                                     <div>
                                         <h1 className='body-3 text-gray'>Diacre Louis Allard</h1>
@@ -252,7 +252,7 @@ export default function Page() {
                                 </a>
                                 <p className='body-2 text-gray'>{t("poste")} 1236</p>
                             </div>
-                            <div className="flex items-center space-x-10">
+                            <div className="flex justify-between items-end space-x-10 pb-3 border-b-2 border-gray-50">
                                 <a href="mailto:efa@diocesemoncton.ca">
                                     <div>
                                         <h1 className='body-3 text-gray'>Mario Robichaud</h1>
