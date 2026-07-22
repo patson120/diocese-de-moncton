@@ -80,7 +80,7 @@ export default async function Page(props: {
                         <div>
                             <small className='text-gray'><Text keyString='event_title' /></small>
                             <h1 className='heading-4 font-extrabold mb-4'><Text labelEn={event.titre_en} labelFr={event.titre_fr} /></h1>
-                            <p className='body-2 text-gray line-clamp-4'><Text labelEn={event.description_en} labelFr={event.description_fr} /></p>
+                            <p className='body-2 text-gray'><Text labelEn={event.description_en} labelFr={event.description_fr} /></p>
                         </div>
                         <div className='flex flex-wrap gap-3 items-center font-light text-xs my-4'>
                             <label htmlFor="type_evenement" className='body-2 font-bold w-full md:w-auto'><Text keyString='type_event' /></label>
