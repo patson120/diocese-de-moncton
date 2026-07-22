@@ -85,8 +85,8 @@ export default function Map({ parishes, selectedParish, onParishSelect, lieu }: 
       if (mapRef.current && !googleMapRef.current) {
         map = new google.maps.Map(mapRef.current, {
           center: { 
-            lat: 46.091091, // first ? parseFloat(first!.gps?.split(";")[0]) : 46.091091,
-            lng: -64.781880, // first ? parseFloat(first!.gps?.split(";")[1]) : -64.781880
+            lat: first ? parseFloat(first!.gps?.split(";")[0]) : 46.091091,
+            lng: first ? parseFloat(first!.gps?.split(";")[1]) : -64.781880
           },
           zoom: 10,
           styles: [

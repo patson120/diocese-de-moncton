@@ -61,18 +61,18 @@ export default async function Page(props: {
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-12 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2'>
                         <div className='h-80 xl:h-96 relative md:rounded-[18px] overflow-hidden bg-gray-100'>
-                            <Image
+                            {/* <Image
                                 alt={`${event.titre_fr}/${event.titre_en}`}
                                 src={ event.galerie && event.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${event.galerie[0].path}` : "/assets/img/vector.svg"}
                                 fill
                                 style={{ objectFit: 'cover', filter: 'blur(20px)', transform: 'scale(1.1)' }}
                                 aria-hidden
-                            />
+                            /> */}
                             <Image
                                 alt={`${event.titre_fr}/${event.titre_en}`}
                                 src={ event.galerie && event.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${event.galerie[0].path}` : "/assets/img/vector.svg"}
                                 fill
-                                style={{ objectFit: 'contain' }}
+                                style={{ objectFit: 'cover' }}
                             />
                         </div>
                     </div>
@@ -126,7 +126,11 @@ export default async function Page(props: {
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString='lieu_map' /></h1>
                         {/* Map */}
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
-                             <MapSection paroisses={[event.paroisse]} lieu={event.lieu ?? null} />
+                             <MapSection paroisses={[{
+                                ...event.paroisse, 
+                                gps: event.gps,
+                                adresse: event.lieu
+                             }]} lieu={event.lieu ?? null} />
                         </div>
                     </div>
                 </div>
