@@ -211,6 +211,7 @@ export default async function Page(props: {
                             }
                         </div>
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="autres_paroisses" /></h1>
+                        {/* <p> {`${process.env.NEXT_PUBLIC_BASE_URL}/${paroisses![0].galerie[0].path}`} </p> */}
                         <div>
                             <div className="flex flex-nowrap overflow-x-scroll xl:overflow-x-hidden gap-4 pb-5">
                                 {
@@ -219,7 +220,7 @@ export default async function Page(props: {
                                             <div className="h-32 w-48 shrink-0 relative overflow-hidden rounded-md bg-gray-100">
                                                 <Image
                                                     alt={`${paroisse.nom}`}
-                                                    src={item.galerie?.length  ? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.galerie[0].path}` : '/assets/img/paroisse-1.png'}
+                                                    src={item.galerie?.length > 0  ? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.galerie[0].path}` : '/assets/img/paroisse.jpeg'}
                                                     fill
                                                     style={{
                                                         objectFit: 'cover',
