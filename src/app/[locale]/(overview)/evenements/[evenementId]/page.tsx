@@ -65,7 +65,14 @@ export default async function Page(props: {
                                 alt={`${event.titre_fr}/${event.titre_en}`}
                                 src={ event.galerie && event.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${event.galerie[0].path}` : "/assets/img/vector.svg"}
                                 fill
-                                style={{ objectFit: 'cover' }}
+                                style={{ objectFit: 'cover', filter: 'blur(20px)', transform: 'scale(1.1)' }}
+                                aria-hidden
+                            />
+                            <Image
+                                alt={`${event.titre_fr}/${event.titre_en}`}
+                                src={ event.galerie && event.galerie.length ? `${process.env.NEXT_PUBLIC_BASE_URL}/${event.galerie[0].path}` : "/assets/img/vector.svg"}
+                                fill
+                                style={{ objectFit: 'contain' }}
                             />
                         </div>
                     </div>
