@@ -1,10 +1,13 @@
 'use client'
 
+import { Button } from '@/components/ui/shared/button'
 import { HeroSectionSecond } from '@/components/sections/hero-second'
+import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 
 export default function Page() {
     const t = useTranslations("politique_diocesaine")
+    const tApp = useTranslations("app")
 
     return (
         <main>
@@ -67,6 +70,9 @@ export default function Page() {
                         <div className="border-t border-gray-200 pt-8">
                             <h2 className="heading-4 font-extrabold mb-4">{t("section_appel_titre")}</h2>
                             <p className="body-2 text-gray">{t("section_appel_p1")}</p>
+                            <Button asChild className="body-2 mt-6">
+                                <Link href="/signaler-inconduite">{tApp("deposer_plainte")}</Link>
+                            </Button>
                         </div>
                     </div>
                 </div>

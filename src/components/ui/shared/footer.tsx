@@ -94,12 +94,7 @@ export default function Footer() {
               </li> */}
               <li className='text-[#B5B5B5]'>
                 <Link href="/politique-diocesaine">
-                  <Text className='text-inherit' keyString='diocesan_policy' />
-                </Link>
-              </li>
-              <li className='text-[#B5B5B5]'>
-                <Link href="/signaler-inconduite">
-                  <Text className='text-inherit' keyString='deposer_plainte' />
+                  <Text className='text-inherit' keyString='ministere_responsable' />
                 </Link>
               </li>
             </ul>
