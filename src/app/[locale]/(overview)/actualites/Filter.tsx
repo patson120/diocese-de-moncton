@@ -25,7 +25,7 @@ export default function Filter({ categories, categorie_id }: { categories: Categ
             updated_at: "",
         },
         ...categories
-    ]
+    ] as Category[]
     const [seletedCategory, setSeletedCategory] = useState<Category>(categories[0])
 
     const handleChangedCategory = (cat: Category) => {
