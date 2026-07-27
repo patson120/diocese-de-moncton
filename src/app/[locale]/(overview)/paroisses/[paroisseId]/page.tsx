@@ -17,7 +17,6 @@ import { VideoPlayer } from "./components/VideoPlayer";
 import MembreCard from "./components/MemberCard";
 import ParishHistory from "./components/parishHistory";
 
-
 export default async function Page(props: {
     params: Promise<{ paroisseId: string }>,
 }) {
