@@ -164,8 +164,8 @@ export const sacrements: MenuType[] = [
     {
         id: 7,
         image: '/assets/icons/noun-religion-7293616 1.png',
-        titre_fr: 'Ordre',
-        titre_en: 'Order',
+        titre_fr: 'Ordres',
+        titre_en: 'Holy Orders',
         description_fr: 'L’évêque, le prête et le diacre: mieux comprendre.',
         description_en: 'The bishop, the priest and the deacon: better understanding.',
         link: '/ordre-sacrements'

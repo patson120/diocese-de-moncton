@@ -128,7 +128,7 @@ export default async function Page(props: {
                         <div>
                             <h1 className='heading-4 font-extrabold'>{paroisse.nom}</h1>
                             <div className="flex flex-row gap-2">
-                                <small className='text-gray uppercase mb-4'><Text keyString="unite_pastorale" />: </small>
+                                {/* <small className='text-gray uppercase mb-4'><Text keyString="unite_pastorale" />: </small> */}
                                 <div className="text-sm">
                                     <Text labelFr={paroisse.type?.intitule_fr!} labelEn={paroisse.type?.intitule_en!} />
                                 </div>
