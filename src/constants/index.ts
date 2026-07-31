@@ -3,7 +3,6 @@ import { MenuType } from "@/types"
 export const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = 'AIzaSyApdnBLqJeVW4c5tlZ32v8BzVBVWyJnYlg'
 export const BASE_URL = `${process.env.NEXT_PUBLIC_BASE_URL}/api`
 
-
 export const archidiocese: MenuType[] = [
     {
         id: 1,
@@ -189,7 +188,9 @@ export const mouvements: MenuType[] = [
         titre_en: 'Knights of Columbus',
         description_fr: "Une vie de foi  en action, une vie d'audace dans la fraternité, une vie qui vaut d'être véçu.",
         description_en: "A life of faith in action, a life of courage in fellowship, a life worth living.",
-        link: 'https://www2.kofc.org/un/fr/index.html'
+        link: '',
+        link_fr: 'https://www2.kofc.org/un/fr/index.html',
+        link_en: 'https://www.kofc.org/'
     },
    
     {
@@ -208,7 +209,9 @@ export const mouvements: MenuType[] = [
         titre_en: 'Laudato Si',
         description_fr: '',
         description_en: '',
-        link: 'https://laudatosimovement.org/fr'
+        link: '',
+        link_fr: 'https://laudatosimovement.org/fr',
+        link_en: "https://laudatosimovement.org/",
     },
     {
         id: 4,
@@ -217,7 +220,9 @@ export const mouvements: MenuType[] = [
         titre_en: 'Cursillo',
         description_fr: "Faire vivre dans l'espace de deux ou trois jours l'enseignement fondamental du Christ.",
         description_en: "To bring Christ's fundamental teachings to life over the course of two or three days.",
-        link: 'https://www.cursillos.ca/indexfr.php'
+        link: '',
+        link_fr: 'https://www.cursillos.ca/indexfr.php',
+        link_en: 'https://www.cursillos.ca/en/index.htm',
     },
     {
         id: 5,
@@ -226,7 +231,9 @@ export const mouvements: MenuType[] = [
         titre_en: 'Development and peace',
         description_fr: "Organisme officiel de solidarité internationale de l'Eglise catholique.",
         description_en: "The official international solidarity organization of the Catholic Church.",
-        link: 'https://devp.org/fr/'
+        link: '',
+        link_fr: 'https://devp.org/fr/',
+        link_en: 'https://devp.org/en/',
     },
     {
         id: 6,
@@ -244,7 +251,9 @@ export const mouvements: MenuType[] = [
         titre_en: 'Spreading the Faith and Missionary Outreach Services',
         description_fr: "Comité qui coordonne les différents intervenants de l'action missionnaire.",
         description_en: "A committee that coordinates the various stakeholders involved in missionary work.",
-        link: 'https://opmcanada.ca/oppf'
+        link: '',
+        link_fr: 'https://opmcanada.ca/oppf',
+        link_en: 'https://www.missionsocieties.ca/',
     },
     {
         id: 8,
@@ -271,7 +280,9 @@ export const mouvements: MenuType[] = [
         titre_en: 'St. Vincent de Paul Society',
         description_fr: "Notre travail est fondé sur l'amour du prochain et la justice.",
         description_en: 'Our work is based on love for others and justice.',
-        link: 'https://ssvp.ca/fr/'
+        link: '',
+        link_fr: 'https://ssvp.ca/fr/',
+        link_en: 'https://ssvp.ca/',
     },
     {
         id: 11,
@@ -504,7 +515,6 @@ export const ressources: MenuType[] = [
         link: 'https://opmcanada.ca/',
     },
 ]
-
 
 export const menusNavigation: MenuType[] = [
     {
