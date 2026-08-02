@@ -10,10 +10,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from 'react';
 import MemberComp from "./member-comp";
 
-
 export default function Page() {
     const t = useTranslations('membres')
-
     const [isFetching, setIsFetching] = useState(false)
     const localActive = useLocale()
     const [etat, setEtat] = useState("1")
