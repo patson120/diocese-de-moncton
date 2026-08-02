@@ -18,24 +18,27 @@ export default function MemberComp( { membres }: { membres: Membre[]}){
                         <div className='h-[240px] relative rounded-xl overflow-hidden flex justify-center items-center bg-[#F5F5F5]'>
                             {
                                 member.image ?
-                                <Image
-                                    alt={`Image ${member.nom}`}
-                                    src={ member.image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${member.image}` : "/assets/img/clerge-1.png" }
-                                    fill
-                                    style={{
-                                        objectFit: 'cover',
-                                        height: '100%',
-                                        width: '100%'
-                                    }}
-                                /> :
+                                <>
+                                    <Image
+                                        alt={`Image ${member.nom}`}
+                                        src={ member.image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${member.image}` : "/assets/img/clerge-1.png" }
+                                        fill
+                                        style={{ objectFit: 'cover', filter: 'blur(20px)', transform: 'scale(1.1)' }}
+                                        aria-hidden
+                                    />
+                                    <Image
+                                        alt={`Image ${member.nom}`}
+                                        src={ member.image ? `${process.env.NEXT_PUBLIC_BASE_URL}/${member.image}` : "/assets/img/clerge-1.png" }
+                                        fill
+                                        style={{ objectFit: 'contain' }}
+                                    /> 
+                                </> :
                                 <Image
                                     alt="Célébration de baptême"
                                     src="/assets/img/placeholder-vector.png"
                                     width={60}
                                     height={60}
-                                    style={{
-                                        objectFit: 'cover',
-                                    }}
+                                    style={{ objectFit: 'cover' }}
                                 />
                             }
                         </div>
