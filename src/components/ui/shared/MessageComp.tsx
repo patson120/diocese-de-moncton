@@ -2,13 +2,16 @@ import { formatDateToLocal } from "@/_lib/utils"
 import Text from "@/components/Text"
 import { Link } from "@/i18n/routing"
 import { Message } from "@/types"
-import { Calendar, Download } from "lucide-react"
+import { Calendar } from "lucide-react"
 import { cookies } from "next/headers"
-import { Button } from "./button"
+import DownloadButton from "./DownloadButton"
 
 const MessageComp = async ({ message }: { message: Message }) => {
     const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
+    const resource = userLanguage === "fr"
+        ? message.ressource_fr ?? message.ressource_en
+        : message.ressource_en ?? message.ressource_fr;
 
     return (
         <div className='border border-[#E5E5E5] rounded-xl px-5 py-6'>
@@ -47,13 +50,10 @@ const MessageComp = async ({ message }: { message: Message }) => {
             </Link>
 
             {
-                (message.ressource_en && message.ressource_fr) && (
-                    <Link download href={`${process.env.NEXT_PUBLIC_BASE_URL}/${userLanguage === "fr" ? message.ressource_fr?.media : message.ressource_en?.media}`} target="_blank" rel="noopener noreferrer" className="mt-3 flex justify-end">
-                        <Button variant="outline" className='font-bold w-min'>
-                            <Download className="h-4 w-4 text-gray-600 mr-2" />
-                            <Text className="text-inherit !text-gray-600 !font-medium" keyString="download_msg" />
-                        </Button>
-                    </Link>
+                resource && (
+                    <div className="mt-3 flex justify-end">
+                        <DownloadButton url={`${process.env.NEXT_PUBLIC_BASE_URL}/${resource.media}`} />
+                    </div>
                 )
             }
         </div>
