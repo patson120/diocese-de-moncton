@@ -7,6 +7,7 @@ import Text from "./Text";
 import { Calendar, Download } from "lucide-react";
 import { formatDateToLocal } from "@/_lib/utils";
 import { cookies } from "next/headers";
+import DownloadButton from "./ui/shared/DownloadButton";
 
 export default async function MessageArcheveque() {
     const response = await fetchMessages(`?paginate=1&etat=1`)
@@ -49,26 +50,16 @@ export default async function MessageArcheveque() {
                     <div className='flex flex-col md:flex-row space-y-3 md:space-x-2 md:space-y-0'>
                         {
                             (message.ressource_en && message.ressource_fr) ? (
-                                <Link download href={`${process.env.NEXT_PUBLIC_BASE_URL}/${userLanguage === "fr" ? message.ressource_fr?.media : message.ressource_en?.media}`} target="_blank" rel="noopener noreferrer">
-                                    <Button
-                                        variant="outline"
-                                        className='font-bold w-full'
-                                    >
-                                        <Download className="h-4 w-4 text-gray-600 mr-2" />
-                                        <Text className="text-inherit" keyString="download_msg" />
-                                    </Button>
-                                </Link>
+                                <DownloadButton url={`${process.env.NEXT_PUBLIC_BASE_URL}/${userLanguage === "fr" ? message.ressource_fr?.media : message.ressource_en?.media}`} />
                             ) : (
                                 <Link href={`/messages/${message.id}`}>
-                                    <Button
-                                        variant="outline"
-                                        className='font-bold w-full'
-                                    >
+                                    <Button variant="outline" className='font-bold w-full' >
                                         <Text className="text-inherit" keyString="savoir_plus" />
                                     </Button>
                                 </Link>
                             )
                         }
+
                         <Link href="/messages">
                             <Button
                                 variant="outline"
@@ -78,19 +69,10 @@ export default async function MessageArcheveque() {
                     </div>
                 </div>
                 <div className='md:order-last min-h-80 md:h-auto md:col-span-1 relative rounded-2xl overflow-hidden bg-gray-200'>
-                    <Image
-                        alt="Image de la l'archevèque"
-                        src="/assets/img/archeveque.jpeg"
-                        fill
-                        style={{
-                            objectFit: 'cover'
-                        }}
-                    />
+                    <Image alt="Image de la l'archevèque" src="/assets/img/archeveque.jpeg" fill style={{ objectFit: 'cover' }} />
                     <div className="absolute inset-0 bg-black/40 md:bg-black/30 " />
                     <div className="absolute bottom-0 left-0 right-0">
                         <div className="p-4">
-                            {/* <h3 className="text-white body-1 font-semibold">Mgr Guy Desrochers</h3>
-                            <p className=" text-white body-2">Archevêque du diocèse de Moncton</p> */}
                             <h3 className="text-white body-1 font-semibold">{message.archeveque.name}</h3>
                             <p className=" text-white body-2">Archevêque du diocèse de Moncton</p>
                         </div>
