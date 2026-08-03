@@ -122,8 +122,8 @@ export default function Header() {
                         image: '/assets/icons/noun-eucharist-7479333 1.png',
                         titre_fr: item.intitule_fr,
                         titre_en: item.intitule_en ?? "",
-                        description_fr: item.lapage[0]!.titre_fr ?? item.lapage[0]!.titre_en,
-                        description_en: item.lapage[0]!.titre_en ?? "",
+                        description_fr: item.description_fr ?? "",
+                        description_en: item.description_en ?? "",
                         link: `/pages/${item.pages_id}`
                     })
                 }   
