@@ -6,7 +6,7 @@ import { Button } from "./button"
 
 const DownloadButton = ({ url }: { url: string }) => {
     const downloadFile = async () => {
-        const response = await fetch(url)
+        const response = await fetch(url, { method: "GET"})
         if (!response.ok) {
             throw new Error("Unable to download file")
         }
