@@ -27,7 +27,7 @@ export default async function Page(props: {
     const paroisses: Paroisse[] = response.data;
 
     const responsable: Membre = await fetchMembres(`/${paroisse.pretre_responsable}`)
-    
+
     const cookieStore = await cookies();
     const userLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'fr';
 
@@ -47,8 +47,8 @@ export default async function Page(props: {
                 <div className="container max-margin py-3 flex justify-between items-center ">
                     <Breadcrumbs
                         breadcrumbs={[
-                            { 
-                                label: 'Accueil', 
+                            {
+                                label: 'Accueil',
                                 href: '/',
                                 data: {
                                     labelEn: "Home",
@@ -89,7 +89,7 @@ export default async function Page(props: {
             <section className="md:container md:max-margin py-0">
                 <div className='grid grid-cols-1 lg:grid-cols-5 md:gap-6 lg:gap-14 md:py-4 lg:py-8'>
                     <div className='col-span-full lg:col-span-2 space-y-4'>
-                        <Carousel images={[ ...paroisse.galerie, ...paroisse.media ]} />
+                        <Carousel images={[...paroisse.galerie, ...paroisse.media]} />
                         <div className='container max-margin md:w-full md:mx-0 md:px-0 py-0 flex gap-3'>
                             {
                                 paroisse.site_web &&
@@ -101,7 +101,7 @@ export default async function Page(props: {
                             }
                             {
                                 (paroisse.lien_youtube) &&
-                                <VideoPlayer video={paroisse.lien_youtube} /> 
+                                <VideoPlayer video={paroisse.lien_youtube} />
                             }
                         </div>
                         {
@@ -118,8 +118,8 @@ export default async function Page(props: {
                                 <h1 className="heading-4 font-extrabold text-black mt-10 mb-4"><Text keyString="autres_membres" /></h1>
                                 {
                                     paroisse.pretre.filter(membre => membre.id !== responsable.id).map((membre) => (
-                                        <MembreCard  key={membre.id} membre={membre} />
-                                    ))  
+                                        <MembreCard key={membre.id} membre={membre} />
+                                    ))
                                 }
                             </div>
                         }
@@ -153,42 +153,41 @@ export default async function Page(props: {
                         </div>
 
                         <div>
-                           <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="bulletin_paroissiaux" /></h1>
+                            <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="bulletin_paroissiaux" /></h1>
                             <div className='flex flex-row flex-wrap gap-3 items-center mt-5'>
-                                    {
-                                        paroisse?.bulletins.map((item, index) => 
-                                            <a key={index} href={ item.lien_externe ?? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
-                                                <p>{ item.lien_externe ? item.lien_externe.split("/")[item.lien_externe.split("/").length -1].split(".")[0] : (item.titre_fr ?? item.titre_en)} <br />
-                                                <span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN": 'fr-FR')}</span></p>
-                                                <ArrowUpRight className="h-6 w-10 ml-4" />
-                                            </a>
-                                        )
-                                    }
-                                    {
-                                        !paroisse.bulletins.length &&
-                                        <div className="text-center text-gray-400 text-sm space-y-4">
-                                            <Text keyString="aucun_bulletin" />
+                                {
+                                    paroisse?.bulletins.map((item, index) =>
+                                        <a key={index} href={item.lien_externe ?? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.document}`} target='_blank' className='border border-[#D9D9D9] rounded-full px-4 py-3 flex justify-center items-center space-x-2'>
+                                            <p>{item.lien_externe ? item.lien_externe.split("/")[item.lien_externe.split("/").length - 1].split(".")[0] : (item.titre_fr ?? item.titre_en)} <br />
+                                                <span className="text-gray-400 text-xs">{formatDateToLocal(item.created_at, userLanguage === 'en' ? "en-EN" : 'fr-FR')}</span></p>
+                                            <ArrowUpRight className="h-6 w-10 ml-4" />
+                                        </a>
+                                    )
+                                }
+                                {
+                                    !paroisse.bulletins.length &&
+                                    <div className="text-center text-gray-400 text-sm space-y-4">
+                                        <Text keyString="aucun_bulletin" />
 
-                                            { paroisse.site_web &&
-                                                <div>
-                                                    <Link href={paroisse.site_web} target="_blank">
-                                                        <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
-                                                            <Text keyString="visit_parish" />
-                                                        </Button>
-                                                    </Link>
-                                                </div>
-                                            }
-                                        </div>
-                                    }
-                                
+                                        {paroisse.site_web &&
+                                            <div>
+                                                <Link href={paroisse.site_web} target="_blank">
+                                                    <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
+                                                        <Text keyString="visit_parish" />
+                                                    </Button>
+                                                </Link>
+                                            </div>
+                                        }
+                                    </div>
+                                }
                             </div>
                         </div>
-                        
+
                         <div className="font-body-3 whitespace-nowrap">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="heures_bureau" /></h1>
-                            <Text className='text-sm text-gray' labelFr={paroisse?.horaire_bureau!} labelEn={paroisse?.horaire_bureau!} />  
+                            <Text className='text-sm text-gray' labelFr={paroisse?.horaire_bureau!} labelEn={paroisse?.horaire_bureau!} />
                         </div>
-                        
+
                         <div className="">
                             <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="secretariat_paroissial" /></h1>
                             <div className="space-y-2 mt-4 body-2">
@@ -212,13 +211,13 @@ export default async function Page(props: {
                         <div className="h-80 w-full bg-gray-100 rounded-xl overflow-hidden">
                             <MapSection paroisses={[paroisse]} />
                         </div>
-                        
+
                         <div className="mt-10">
                             <h1 className="heading-4 font-extrabold text-blac mb-2"><Text keyString="parish_history" /></h1>
                             {
                                 paroisse.histoire.includes('<') ?
-                                <ParishHistory html={userLanguage === "fr" ? paroisse.histoire! : paroisse.histoire_en! } /> :
-                                <p className='body-2 text-gray'>{userLanguage === "fr" ? paroisse.histoire! : paroisse.histoire_en!}</p>
+                                    <ParishHistory html={userLanguage === "fr" ? paroisse.histoire! : paroisse.histoire_en!} /> :
+                                    <p className='body-2 text-gray'>{userLanguage === "fr" ? paroisse.histoire! : paroisse.histoire_en!}</p>
                             }
                         </div>
                         <h1 className="heading-4 font-extrabold text-black mt-10 mb-2"><Text keyString="autres_paroisses" /></h1>
@@ -231,7 +230,7 @@ export default async function Page(props: {
                                             <div className="h-32 w-48 shrink-0 relative overflow-hidden rounded-md bg-gray-100">
                                                 <Image
                                                     alt={`${paroisse.nom}`}
-                                                    src={item.galerie?.length > 0  ? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.galerie[0].path}` : '/assets/img/paroisse.jpeg'}
+                                                    src={item.galerie?.length > 0 ? `${process.env.NEXT_PUBLIC_BASE_URL}/${item.galerie[0].path}` : '/assets/img/paroisse.jpeg'}
                                                     fill
                                                     style={{
                                                         objectFit: 'cover',
