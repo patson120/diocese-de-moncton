@@ -166,7 +166,19 @@ export default async function Page(props: {
                                     }
                                     {
                                         !paroisse.bulletins.length &&
-                                        <p className="text-center h-10 text-gray-400 text-sm"><Text keyString="aucun_bulletin" /></p>
+                                        <div className="text-center text-gray-400 text-sm space-y-4">
+                                            <Text keyString="aucun_bulletin" />
+
+                                            { paroisse.site_web &&
+                                                <div>
+                                                    <Link href={paroisse.site_web} target="_blank">
+                                                        <Button variant='outline' size="sm" className="hidden md:flex text-xs lg:text-sm">
+                                                            <Text keyString="visit_parish" />
+                                                        </Button>
+                                                    </Link>
+                                                </div>
+                                            }
+                                        </div>
                                     }
                                 
                             </div>
